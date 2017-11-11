@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Provider;
+namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\User;
 
 /**
  * User info provider interface.
  *
  * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Provider
+ * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\User
  */
 interface UserInfoProviderInterface {
 
