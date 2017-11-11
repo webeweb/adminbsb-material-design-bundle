@@ -15,7 +15,6 @@ use PHPUnit_Framework_TestCase;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Navigation\Node\NavigationNodeEvent;
 
 /**
-  /**
  * Navigation node "Event" test.
  *
  * @author NdC/WBW <https://github.com/webeweb/>

@@ -15,7 +15,6 @@ use PHPUnit_Framework_TestCase;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Navigation\Node\NavigationNodeSettings;
 
 /**
-  /**
  * Navigation node "Settings" test.
  *
  * @author NdC/WBW <https://github.com/webeweb/>
