@@ -21,6 +21,13 @@ namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Color;
 final class DefaultColorProvider implements ColorProviderInterface {
 
 	/**
+	 * Constructor.
+	 */
+	public function __construct() {
+		// NOTHING TO DO.
+	}
+
+	/**
 	 * {@inheritdoc}
 	 */
 	public function getColorAmber() {
@@ -165,6 +172,38 @@ final class DefaultColorProvider implements ColorProviderInterface {
 	 */
 	public function getColorWhite() {
 		return ["white" => ["500" => "#FFFFFF"]];
+	}
+
+	/**
+	 * Color choices.
+	 *
+	 * @return array Returns the color choices.
+	 */
+	public static function getColors() {
+		$provider = new DefaultColorProvider();
+		return [
+			$provider->getColorRed(),
+			$provider->getColorPink(),
+			$provider->getColorPurple(),
+			$provider->getColorDeepPurple(),
+			$provider->getColorIndigo(),
+			$provider->getColorBlue(),
+			$provider->getColorLightBlue(),
+			$provider->getColorCyan(),
+			$provider->getColorTeal(),
+			$provider->getColorGreen(),
+			$provider->getColorLightGreen(),
+			$provider->getColorLime(),
+			$provider->getColorYellow(),
+			$provider->getColorAmber(),
+			$provider->getColorOrange(),
+			$provider->getColorDeepOrange(),
+			$provider->getColorBrown(),
+			$provider->getColorGrey(),
+			$provider->getColorBlueGrey(),
+			$provider->getColorBlack(),
+			$provider->getColorWhite(),
+		];
 	}
 
 }

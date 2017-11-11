@@ -53,6 +53,8 @@ final class DefaultColorProviderTest extends PHPUnit_Framework_TestCase {
 		$this->assertEquals(["teal" => ["500" => "#009688"]], $obj->getColorTeal(), "The method getColorTeal() does not return the expected value");
 		$this->assertEquals(["yellow" => ["500" => "#FFEB3B"]], $obj->getColorYellow(), "The method getColorYellow() does not return the expected value");
 		$this->assertEquals(["white" => ["500" => "#FFFFFF"]], $obj->getColorWhite(), "The method getColorWhite() does not return the expected value");
+
+		$this->assertCount(21, $obj->getColors(), "The method getColors() does not return the expected value");
 	}
 
 }
