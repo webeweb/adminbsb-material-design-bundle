@@ -26,7 +26,7 @@ use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI\AlertUITwigExtensi
 final class AlertUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 
 	/**
-	 * Tests the basicAlertDangerFunction() ethod.
+	 * Tests the basicAlertDangerFunction() method.
 	 *
 	 * @return void
 	 */
@@ -44,15 +44,15 @@ final class AlertUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 
 		$arg2	 = ["dismissible" => true];
 		$res2	 = '<div class="alert alert-danger alert-dismissible"><button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>&nbsp;</div>';
-		$this->assertEquals($res2, $obj->basicAlertDangerFunction($arg2), "The method basicAlertDangerFunction() does not return the expected value with dismissible");
+		$this->assertEquals($res2, $obj->basicAlertDangerFunction($arg2), "The method basicAlertDangerFunction() does not return the expected value with dissmisible");
 
-		$arg3	 = ["content" => "content", "dismissible" => true];
-		$res3	 = '<div class="alert alert-danger alert-dismissible"><button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>content</div>';
-		$this->assertEquals($res3, $obj->basicAlertDangerFunction($arg3), "The method basicAlertDangerFunction() does not return the expected value with content and dismissible");
+		$arg9	 = ["content" => "content", "dismissible" => true];
+		$res9	 = '<div class="alert alert-danger alert-dismissible"><button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>content</div>';
+		$this->assertEquals($res9, $obj->basicAlertDangerFunction($arg9), "The method basicAlertDangerFunction() does not return the expected value with content and dissmisible");
 	}
 
 	/**
-	 * Tests the basicAlertInfoFunction() ethod.
+	 * Tests the basicAlertInfoFunction() method.
 	 *
 	 * @return void
 	 */
@@ -70,15 +70,15 @@ final class AlertUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 
 		$arg2	 = ["dismissible" => true];
 		$res2	 = '<div class="alert alert-info alert-dismissible"><button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>&nbsp;</div>';
-		$this->assertEquals($res2, $obj->basicAlertInfoFunction($arg2), "The method basicAlertInfoFunction() does not return the expected value with dismissible");
+		$this->assertEquals($res2, $obj->basicAlertInfoFunction($arg2), "The method basicAlertInfoFunction() does not return the expected value with dissmisible");
 
-		$arg3	 = ["content" => "content", "dismissible" => true];
-		$res3	 = '<div class="alert alert-info alert-dismissible"><button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>content</div>';
-		$this->assertEquals($res3, $obj->basicAlertInfoFunction($arg3), "The method basicAlertInfoFunction() does not return the expected value with content and dismissible");
+		$arg9	 = ["content" => "content", "dismissible" => true];
+		$res9	 = '<div class="alert alert-info alert-dismissible"><button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>content</div>';
+		$this->assertEquals($res9, $obj->basicAlertInfoFunction($arg9), "The method basicAlertInfoFunction() does not return the expected value with content and dissmisible");
 	}
 
 	/**
-	 * Tests the basicAlertSuccessFunction() ethod.
+	 * Tests the basicAlertSuccessFunction() method.
 	 *
 	 * @return void
 	 */
@@ -96,15 +96,15 @@ final class AlertUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 
 		$arg2	 = ["dismissible" => true];
 		$res2	 = '<div class="alert alert-success alert-dismissible"><button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>&nbsp;</div>';
-		$this->assertEquals($res2, $obj->basicAlertSuccessFunction($arg2), "The method basicAlertSuccessFunction() does not return the expected value with dismissible");
+		$this->assertEquals($res2, $obj->basicAlertSuccessFunction($arg2), "The method basicAlertSuccessFunction() does not return the expected value with dissmisible");
 
-		$arg3	 = ["content" => "content", "dismissible" => true];
-		$res3	 = '<div class="alert alert-success alert-dismissible"><button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>content</div>';
-		$this->assertEquals($res3, $obj->basicAlertSuccessFunction($arg3), "The method basicAlertSuccessFunction() does not return the expected value with content and dismissible");
+		$arg9	 = ["content" => "content", "dismissible" => true];
+		$res9	 = '<div class="alert alert-success alert-dismissible"><button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>content</div>';
+		$this->assertEquals($res9, $obj->basicAlertSuccessFunction($arg9), "The method basicAlertSuccessFunction() does not return the expected value with content and dissmisible");
 	}
 
 	/**
-	 * Tests the basicAlertWarningFunction() ethod.
+	 * Tests the basicAlertWarningFunction() method.
 	 *
 	 * @return void
 	 */
@@ -122,11 +122,11 @@ final class AlertUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 
 		$arg2	 = ["dismissible" => true];
 		$res2	 = '<div class="alert alert-warning alert-dismissible"><button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>&nbsp;</div>';
-		$this->assertEquals($res2, $obj->basicAlertWarningFunction($arg2), "The method basicAlertWarningFunction() does not return the expected value with dismissible");
+		$this->assertEquals($res2, $obj->basicAlertWarningFunction($arg2), "The method basicAlertWarningFunction() does not return the expected value with dissmisible");
 
-		$arg3	 = ["content" => "content", "dismissible" => true];
-		$res3	 = '<div class="alert alert-warning alert-dismissible"><button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>content</div>';
-		$this->assertEquals($res3, $obj->basicAlertWarningFunction($arg3), "The method basicAlertWarningFunction() does not return the expected value with content and dismissible");
+		$arg9	 = ["content" => "content", "dismissible" => true];
+		$res9	 = '<div class="alert alert-warning alert-dismissible"><button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>content</div>';
+		$this->assertEquals($res9, $obj->basicAlertWarningFunction($arg9), "The method basicAlertWarningFunction() does not return the expected value with content and dissmisible");
 	}
 
 	/**
@@ -172,7 +172,7 @@ final class AlertUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * Tests the linkAlertFunction() ethod.
+	 * Tests the linkAlertFunction() method.
 	 *
 	 * @return void
 	 */
@@ -190,7 +190,7 @@ final class AlertUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 
 		$arg2	 = ["dismissible" => true];
 		$res2	 = '<div class="alert bg-red alert-dismissible"><button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>&nbsp;</div>';
-		$this->assertEquals($res2, $obj->linkAlertFunction($arg2), "The method linkAlertFunction() does not return the expected value with dismissible");
+		$this->assertEquals($res2, $obj->linkAlertFunction($arg2), "The method linkAlertFunction() does not return the expected value with dissmisible");
 
 		$arg3	 = ["color" => "exception"];
 		$res3	 = '<div class="alert bg-red">&nbsp;</div>';
@@ -200,13 +200,13 @@ final class AlertUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 		$res4	 = '<div class="alert bg-black">&nbsp;</div>';
 		$this->assertEquals($res4, $obj->linkAlertFunction($arg4), "The method linkAlertFunction() does not return the expected value with color");
 
-		$arg5	 = ["content" => "content", "dismissible" => true, "color" => "black"];
-		$res5	 = '<div class="alert bg-black alert-dismissible"><button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>content</div>';
-		$this->assertEquals($res5, $obj->linkAlertFunction($arg5), "The method linkAlertFunction() does not return the expected value with content and dismissible");
+		$arg9	 = ["content" => "content", "dismissible" => true, "color" => "black"];
+		$res9	 = '<div class="alert bg-black alert-dismissible"><button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>content</div>';
+		$this->assertEquals($res9, $obj->linkAlertFunction($arg9), "The method linkAlertFunction() does not return the expected value with content, dissmisible and color");
 	}
 
 	/**
-	 * Tests the materialDesignAlertFunction() ethod.
+	 * Tests the materialDesignAlertFunction() method.
 	 *
 	 * @return void
 	 */
@@ -224,7 +224,7 @@ final class AlertUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 
 		$arg2	 = ["dismissible" => true];
 		$res2	 = '<div class="alert bg-red alert-dismissible"><button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>&nbsp;</div>';
-		$this->assertEquals($res2, $obj->materialDesignAlertFunction($arg2), "The method materialDesignAlertFunction() does not return the expected value with dismissible");
+		$this->assertEquals($res2, $obj->materialDesignAlertFunction($arg2), "The method materialDesignAlertFunction() does not return the expected value with dissmisible");
 
 		$arg3	 = ["color" => "exception"];
 		$res3	 = '<div class="alert bg-red">&nbsp;</div>';
@@ -236,7 +236,7 @@ final class AlertUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 
 		$arg5	 = ["content" => "content", "dismissible" => true, "color" => "black"];
 		$res5	 = '<div class="alert bg-black alert-dismissible"><button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>content</div>';
-		$this->assertEquals($res5, $obj->materialDesignAlertFunction($arg5), "The method materialDesignAlertFunction() does not return the expected value with content and dismissible");
+		$this->assertEquals($res5, $obj->materialDesignAlertFunction($arg5), "The method materialDesignAlertFunction() does not return the expected value with content, dissmisible and color");
 	}
 
 }
