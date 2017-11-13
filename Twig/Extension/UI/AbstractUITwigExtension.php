@@ -170,4 +170,28 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
 		return $this->_replace($template, ["%attributes%", "%name%"], [StringUtility::parseArray($_attr), $_name]);
 	}
 
+	/**
+	 * Displays a label.
+	 *
+	 * @param string $content The label content.
+	 * @param string $class The label class.
+	 * @return string Returns a label.
+	 */
+	protected final function label($content, $class) {
+
+		// Initialize the template.
+		$template = "<span %attributes%>%content%</span>";
+
+		// Initializa the attributes.
+		$_attr = [];
+
+		$_attr["class"] = ["label", $class];
+
+		// Initialize the parameters.
+		$_content = (!is_null($content) ? $content : self::DEFAULT_CONTENT);
+
+		// Return the HTML.
+		return $this->_replace($template, ["%attributes%", '%content%'], [StringUtility::parseArray($_attr), $_content]);
+	}
+
 }
