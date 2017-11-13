@@ -102,4 +102,72 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
 		return $this->_replace($template, ["%attributes%", "%content%", "%label%", "%link%"], [StringUtility::parseArray($_attr), $_content, $_label, $_link]);
 	}
 
+	/**
+	 * Displays a button.
+	 *
+	 * @param string $content The button content.
+	 * @param string $title The button title.
+	 * @param string $size The button size.
+	 * @param boolean $block Block button ?
+	 * @param booelan $disable Disable button ?
+	 * @param string $class The button class.
+	 * @param string $icon The button icon.
+	 * @param boolean $circle Circle button ?
+	 * @return string Returns a button.
+	 */
+	protected final function button($content, $title, $size, $block, $disable, $class, $icon, $circle) {
+
+		// Disable the parameters.
+		$circle	 = (!is_null($content) ? false : $circle);
+		$style	 = (!is_null($content) ? "margin: -4px 2px 0; vertical-align: sub;" : "");
+
+		// Initialize the template.
+		$template = "<button %attributes%>%icon%%content%</button>";
+
+		// Initialize the attributes.
+		$_attr = [];
+
+		$_attr["class"]			 = ["btn", $class, "waves-effect"];
+		$_attr["class"][]		 = ($block ? "btn-block" : null);
+		$_attr["class"][]		 = ($circle ? "btn-circle" . ($size === "lg" ? "-lg" : "") . " waves-circle waves-float" : null);
+		$_attr["class"][]		 = (!$circle && in_array($size, ["lg", "sm", "xs"]) ? "btn-" . $size : null);
+		$_attr["title"]			 = $title;
+		$_attr["type"]			 = "button";
+		$_attr["data-toggle"]	 = (!is_null($title) ? "tooltip" : null);
+		$_attr["disabled"]		 = ($disable ? "disabled" : null);
+
+		// Handle the parameters.
+		$_content	 = (!is_null($content) ? $content : self::DEFAULT_CONTENT);
+		$_icon		 = (!is_null($icon) ? $this->icon($icon, "", $style) : "");
+
+		// Return the HTML.
+		return $this->_replace($template, ["%attributes%", "%icon%", "%content%"], [StringUtility::parseArray($_attr), $_icon, $_content]);
+	}
+
+	/**
+	 * Displays an icon.
+	 *
+	 * @param string $name The icon name.
+	 * @param string $class The icon class.
+	 * @param string $style The icon style.
+	 * @return string Returns an icon.
+	 */
+	protected final function icon($name = null, $class = null, $style = null) {
+
+		// Initialize the template.
+		$template = "<i %attributes%>%name%</i>";
+
+		// Initialize the attributes.
+		$_attr = [];
+
+		$_attr["class"]	 = ["material-icons", $class];
+		$_attr["style"]	 = $style;
+
+		// Initialize the parameters.
+		$_name = (!is_null($name) ? $name : "home");
+
+		// Return the HTML.
+		return $this->_replace($template, ["%attributes%", "%name%"], [StringUtility::parseArray($_attr), $_name]);
+	}
+
 }
