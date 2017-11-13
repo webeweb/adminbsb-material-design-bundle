@@ -28,60 +28,60 @@ final class BadgeUITwigExtension extends AbstractUITwigExtension {
 	const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.ui.badge";
 
 	/**
-	 * Displays a button badge Danger.
+	 * Displays a button badge "Danger".
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns a button badge Danger.
+	 * @return string Returns a button badge "Danger".
 	 */
 	public function buttonBadgeDangerFunction(array $args = []) {
 		return $this->badge($this->_arg($args, "content"), $this->_arg($args, "label"), $this->_arg($args, "large", false), "btn-danger");
 	}
 
 	/**
-	 * Displays a button badge Default.
+	 * Displays a button badge "Default".
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns a button badge Default.
+	 * @return string Returns a button badge "Default".
 	 */
 	public function buttonBadgeDefaultFunction(array $args = []) {
 		return $this->badge($this->_arg($args, "content"), $this->_arg($args, "label"), $this->_arg($args, "large", false), "btn-default");
 	}
 
 	/**
-	 * Displays a button badge Info.
+	 * Displays a button badge "Info".
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns a button badge Info.
+	 * @return string Returns a button badge "Info".
 	 */
 	public function buttonBadgeInfoFunction(array $args = []) {
 		return $this->badge($this->_arg($args, "content"), $this->_arg($args, "label"), $this->_arg($args, "large", false), "btn-info");
 	}
 
 	/**
-	 * Displays a button badge Primary.
+	 * Displays a button badge "Primary".
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns a button badge Primary.
+	 * @return string Returns a button badge "Primary".
 	 */
 	public function buttonBadgePrimaryFunction(array $args = []) {
 		return $this->badge($this->_arg($args, "content"), $this->_arg($args, "label"), $this->_arg($args, "large", false), "btn-primary");
 	}
 
 	/**
-	 * Displays a button badge Success.
+	 * Displays a button badge "Success".
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns a button badge Success.
+	 * @return string Returns a button badge "Success".
 	 */
 	public function buttonBadgeSuccessFunction(array $args = []) {
 		return $this->badge($this->_arg($args, "content"), $this->_arg($args, "label"), $this->_arg($args, "large", false), "btn-success");
 	}
 
 	/**
-	 * Displays a button badge Warning.
+	 * Displays a button badge "Warning".
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns a button badge Warning.
+	 * @return string Returns a button badge "Warning".
 	 */
 	public function buttonBadgeWarningFunction(array $args = []) {
 		return $this->badge($this->_arg($args, "content"), $this->_arg($args, "label"), $this->_arg($args, "large", false), "btn-warning");

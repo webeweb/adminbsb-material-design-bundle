@@ -28,40 +28,40 @@ final class AlertUITwigExtension extends AbstractUITwigExtension {
 	const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.ui.alert";
 
 	/**
-	 * Displays a basic alert Danger.
+	 * Displays a basic alert "Danger".
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns a basic alert Danger.
+	 * @return string Returns a basic alert "Danger".
 	 */
 	public function basicAlertDangerFunction(array $args = []) {
 		return $this->alert($this->_arg($args, "content"), $this->_arg($args, "dismissible"), "alert-danger");
 	}
 
 	/**
-	 * Displays a basic alert Info.
+	 * Displays a basic alert "Info".
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns a basic alert Info.
+	 * @return string Returns a basic alert "Info".
 	 */
 	public function basicAlertInfoFunction(array $args = []) {
 		return $this->alert($this->_arg($args, "content"), $this->_arg($args, "dismissible"), "alert-info");
 	}
 
 	/**
-	 * Displays a basic alert Success.
+	 * Displays a basic alert "Success".
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns a basic alert Success.
+	 * @return string Returns a basic alert "Success".
 	 */
 	public function basicAlertSuccessFunction(array $args = []) {
 		return $this->alert($this->_arg($args, "content"), $this->_arg($args, "dismissible"), "alert-success");
 	}
 
 	/**
-	 * Displays a basic alert Warning.
+	 * Displays a basic alert "Warning".
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns a basic alert Warning.
+	 * @return string Returns a basic alert "Warning".
 	 */
 	public function basicAlertWarningFunction(array $args = []) {
 		return $this->alert($this->_arg($args, "content"), $this->_arg($args, "dismissible"), "alert-warning");
