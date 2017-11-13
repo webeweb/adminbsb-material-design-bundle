@@ -37,18 +37,6 @@ final class AlertUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 		$arg0	 = [];
 		$res0	 = '<div class="alert alert-danger">&nbsp;</div>';
 		$this->assertEquals($res0, $obj->basicAlertDangerFunction($arg0), "The method basicAlertDangerFunction() does not return the expected value");
-
-		$arg1	 = ["content" => "content"];
-		$res1	 = '<div class="alert alert-danger">content</div>';
-		$this->assertEquals($res1, $obj->basicAlertDangerFunction($arg1), "The method basicAlertDangerFunction() does not return the expected value with content");
-
-		$arg2	 = ["dismissible" => true];
-		$res2	 = '<div class="alert alert-danger alert-dismissible"><button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>&nbsp;</div>';
-		$this->assertEquals($res2, $obj->basicAlertDangerFunction($arg2), "The method basicAlertDangerFunction() does not return the expected value with dissmisible");
-
-		$arg9	 = ["content" => "content", "dismissible" => true];
-		$res9	 = '<div class="alert alert-danger alert-dismissible"><button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>content</div>';
-		$this->assertEquals($res9, $obj->basicAlertDangerFunction($arg9), "The method basicAlertDangerFunction() does not return the expected value with content and dissmisible");
 	}
 
 	/**
@@ -63,18 +51,6 @@ final class AlertUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 		$arg0	 = [];
 		$res0	 = '<div class="alert alert-info">&nbsp;</div>';
 		$this->assertEquals($res0, $obj->basicAlertInfoFunction($arg0), "The method basicAlertInfoFunction() does not return the expected value");
-
-		$arg1	 = ["content" => "content"];
-		$res1	 = '<div class="alert alert-info">content</div>';
-		$this->assertEquals($res1, $obj->basicAlertInfoFunction($arg1), "The method basicAlertInfoFunction() does not return the expected value with content");
-
-		$arg2	 = ["dismissible" => true];
-		$res2	 = '<div class="alert alert-info alert-dismissible"><button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>&nbsp;</div>';
-		$this->assertEquals($res2, $obj->basicAlertInfoFunction($arg2), "The method basicAlertInfoFunction() does not return the expected value with dissmisible");
-
-		$arg9	 = ["content" => "content", "dismissible" => true];
-		$res9	 = '<div class="alert alert-info alert-dismissible"><button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>content</div>';
-		$this->assertEquals($res9, $obj->basicAlertInfoFunction($arg9), "The method basicAlertInfoFunction() does not return the expected value with content and dissmisible");
 	}
 
 	/**
@@ -89,18 +65,6 @@ final class AlertUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 		$arg0	 = [];
 		$res0	 = '<div class="alert alert-success">&nbsp;</div>';
 		$this->assertEquals($res0, $obj->basicAlertSuccessFunction($arg0), "The method basicAlertSuccessFunction() does not return the expected value");
-
-		$arg1	 = ["content" => "content"];
-		$res1	 = '<div class="alert alert-success">content</div>';
-		$this->assertEquals($res1, $obj->basicAlertSuccessFunction($arg1), "The method basicAlertSuccessFunction() does not return the expected value with content");
-
-		$arg2	 = ["dismissible" => true];
-		$res2	 = '<div class="alert alert-success alert-dismissible"><button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>&nbsp;</div>';
-		$this->assertEquals($res2, $obj->basicAlertSuccessFunction($arg2), "The method basicAlertSuccessFunction() does not return the expected value with dissmisible");
-
-		$arg9	 = ["content" => "content", "dismissible" => true];
-		$res9	 = '<div class="alert alert-success alert-dismissible"><button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>content</div>';
-		$this->assertEquals($res9, $obj->basicAlertSuccessFunction($arg9), "The method basicAlertSuccessFunction() does not return the expected value with content and dissmisible");
 	}
 
 	/**
@@ -115,18 +79,6 @@ final class AlertUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 		$arg0	 = [];
 		$res0	 = '<div class="alert alert-warning">&nbsp;</div>';
 		$this->assertEquals($res0, $obj->basicAlertWarningFunction($arg0), "The method basicAlertWarningFunction() does not return the expected value");
-
-		$arg1	 = ["content" => "content"];
-		$res1	 = '<div class="alert alert-warning">content</div>';
-		$this->assertEquals($res1, $obj->basicAlertWarningFunction($arg1), "The method basicAlertWarningFunction() does not return the expected value with content");
-
-		$arg2	 = ["dismissible" => true];
-		$res2	 = '<div class="alert alert-warning alert-dismissible"><button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>&nbsp;</div>';
-		$this->assertEquals($res2, $obj->basicAlertWarningFunction($arg2), "The method basicAlertWarningFunction() does not return the expected value with dissmisible");
-
-		$arg9	 = ["content" => "content", "dismissible" => true];
-		$res9	 = '<div class="alert alert-warning alert-dismissible"><button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>content</div>';
-		$this->assertEquals($res9, $obj->basicAlertWarningFunction($arg9), "The method basicAlertWarningFunction() does not return the expected value with content and dissmisible");
 	}
 
 	/**
@@ -138,37 +90,39 @@ final class AlertUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new AlertUITwigExtension();
 
-		$this->assertCount(6, $obj->getFunctions(), "The method getFunctions() does not return the expected count");
+		$res = $obj->getFunctions();
 
-		$this->assertInstanceOf(Twig_SimpleFunction::class, $obj->getFunctions()[0], "The method getFunctions() does not return the expected object on item 0");
-		$this->assertEquals("basicAlertDanger", $obj->getFunctions()[0]->getName(), "The method getName() does not return the expected name on item 0");
-		$this->assertEquals([$obj, "basicAlertDangerFunction"], $obj->getFunctions()[0]->getCallable(), "The method getCallable() does not return the expected callable on item 0");
-		$this->assertEquals(["html"], $obj->getFunctions()[0]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 0");
+		$this->assertCount(6, $res, "The method getFunctions() does not return the expected count");
 
-		$this->assertInstanceOf(Twig_SimpleFunction::class, $obj->getFunctions()[1], "The method getFunctions() does not return the expected object on item 1");
-		$this->assertEquals("basicAlertInfo", $obj->getFunctions()[1]->getName(), "The method getName() does not return the expected name on item 1");
-		$this->assertEquals([$obj, "basicAlertInfoFunction"], $obj->getFunctions()[1]->getCallable(), "The method getCallable() does not return the expected callable on item 1");
-		$this->assertEquals(["html"], $obj->getFunctions()[1]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 1");
+		$this->assertInstanceOf(Twig_SimpleFunction::class, $res[0], "The method getFunctions() does not return the expected object on item 0");
+		$this->assertEquals("basicAlertDanger", $res[0]->getName(), "The method getName() does not return the expected name on item 0");
+		$this->assertEquals([$obj, "basicAlertDangerFunction"], $res[0]->getCallable(), "The method getCallable() does not return the expected callable on item 0");
+		$this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 0");
 
-		$this->assertInstanceOf(Twig_SimpleFunction::class, $obj->getFunctions()[2], "The method getFunctions() does not return the expected object on item 2");
-		$this->assertEquals("basicAlertSuccess", $obj->getFunctions()[2]->getName(), "The method getName() does not return the expected name on item 2");
-		$this->assertEquals([$obj, "basicAlertSuccessFunction"], $obj->getFunctions()[2]->getCallable(), "The method getCallable() does not return the expected callable on item 2");
-		$this->assertEquals(["html"], $obj->getFunctions()[2]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 2");
+		$this->assertInstanceOf(Twig_SimpleFunction::class, $res[1], "The method getFunctions() does not return the expected object on item 1");
+		$this->assertEquals("basicAlertInfo", $res[1]->getName(), "The method getName() does not return the expected name on item 1");
+		$this->assertEquals([$obj, "basicAlertInfoFunction"], $res[1]->getCallable(), "The method getCallable() does not return the expected callable on item 1");
+		$this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 1");
 
-		$this->assertInstanceOf(Twig_SimpleFunction::class, $obj->getFunctions()[3], "The method getFunctions() does not return the expected object on item 3");
-		$this->assertEquals("basicAlertWarning", $obj->getFunctions()[3]->getName(), "The method getName() does not return the expected name on item 3");
-		$this->assertEquals([$obj, "basicAlertWarningFunction"], $obj->getFunctions()[3]->getCallable(), "The method getCallable() does not return the expected callable on item 3");
-		$this->assertEquals(["html"], $obj->getFunctions()[3]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 3");
+		$this->assertInstanceOf(Twig_SimpleFunction::class, $res[2], "The method getFunctions() does not return the expected object on item 2");
+		$this->assertEquals("basicAlertSuccess", $res[2]->getName(), "The method getName() does not return the expected name on item 2");
+		$this->assertEquals([$obj, "basicAlertSuccessFunction"], $res[2]->getCallable(), "The method getCallable() does not return the expected callable on item 2");
+		$this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 2");
 
-		$this->assertInstanceOf(Twig_SimpleFunction::class, $obj->getFunctions()[4], "The method getFunctions() does not return the expected object on item 4");
-		$this->assertEquals("linkAlert", $obj->getFunctions()[4]->getName(), "The method getName() does not return the expected name on item 4");
-		$this->assertEquals([$obj, "linkAlertFunction"], $obj->getFunctions()[4]->getCallable(), "The method getCallable() does not return the expected callable on item 4");
-		$this->assertEquals(["html"], $obj->getFunctions()[4]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 4");
+		$this->assertInstanceOf(Twig_SimpleFunction::class, $res[3], "The method getFunctions() does not return the expected object on item 3");
+		$this->assertEquals("basicAlertWarning", $res[3]->getName(), "The method getName() does not return the expected name on item 3");
+		$this->assertEquals([$obj, "basicAlertWarningFunction"], $res[3]->getCallable(), "The method getCallable() does not return the expected callable on item 3");
+		$this->assertEquals(["html"], $res[3]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 3");
 
-		$this->assertInstanceOf(Twig_SimpleFunction::class, $obj->getFunctions()[5], "The method getFunctions() does not return the expected object on item 5");
-		$this->assertEquals("materialDesignAlert", $obj->getFunctions()[5]->getName(), "The method getName() does not return the expected name on item 5");
-		$this->assertEquals([$obj, "materialDesignAlertFunction"], $obj->getFunctions()[5]->getCallable(), "The method getCallable() does not return the expected callable on item 5");
-		$this->assertEquals(["html"], $obj->getFunctions()[5]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 5");
+		$this->assertInstanceOf(Twig_SimpleFunction::class, $res[4], "The method getFunctions() does not return the expected object on item 4");
+		$this->assertEquals("linkAlert", $res[4]->getName(), "The method getName() does not return the expected name on item 4");
+		$this->assertEquals([$obj, "linkAlertFunction"], $res[4]->getCallable(), "The method getCallable() does not return the expected callable on item 4");
+		$this->assertEquals(["html"], $res[4]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 4");
+
+		$this->assertInstanceOf(Twig_SimpleFunction::class, $res[5], "The method getFunctions() does not return the expected object on item 5");
+		$this->assertEquals("materialDesignAlert", $res[5]->getName(), "The method getName() does not return the expected name on item 5");
+		$this->assertEquals([$obj, "materialDesignAlertFunction"], $res[5]->getCallable(), "The method getCallable() does not return the expected callable on item 5");
+		$this->assertEquals(["html"], $res[5]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 5");
 	}
 
 	/**
