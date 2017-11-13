@@ -181,29 +181,9 @@ final class DefaultColorProvider implements ColorProviderInterface {
 	 */
 	public static function getColors() {
 		$provider = new DefaultColorProvider();
-		return [
-			$provider->getColorRed(),
-			$provider->getColorPink(),
-			$provider->getColorPurple(),
-			$provider->getColorDeepPurple(),
-			$provider->getColorIndigo(),
-			$provider->getColorBlue(),
-			$provider->getColorLightBlue(),
-			$provider->getColorCyan(),
-			$provider->getColorTeal(),
-			$provider->getColorGreen(),
-			$provider->getColorLightGreen(),
-			$provider->getColorLime(),
-			$provider->getColorYellow(),
-			$provider->getColorAmber(),
-			$provider->getColorOrange(),
-			$provider->getColorDeepOrange(),
-			$provider->getColorBrown(),
-			$provider->getColorGrey(),
-			$provider->getColorBlueGrey(),
-			$provider->getColorBlack(),
-			$provider->getColorWhite(),
-		];
+		return array_merge(
+			$provider->getColorRed(), $provider->getColorPink(), $provider->getColorPurple(), $provider->getColorDeepPurple(), $provider->getColorIndigo(), $provider->getColorBlue(), $provider->getColorLightBlue(), $provider->getColorCyan(), $provider->getColorTeal(), $provider->getColorGreen(), $provider->getColorLightGreen(), $provider->getColorLime(), $provider->getColorYellow(), $provider->getColorAmber(), $provider->getColorOrange(), $provider->getColorDeepOrange(), $provider->getColorBrown(), $provider->getColorGrey(), $provider->getColorBlueGrey(), $provider->getColorBlack(), $provider->getColorWhite()
+		);
 	}
 
 }
