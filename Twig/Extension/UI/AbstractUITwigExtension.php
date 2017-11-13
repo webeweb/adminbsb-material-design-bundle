@@ -152,7 +152,7 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
 	 * @param string $style The icon style.
 	 * @return string Returns an icon.
 	 */
-	protected final function icon($name = null, $class = null, $style = null) {
+	protected final function icon($name, $class, $style) {
 
 		// Initialize the template.
 		$template = "<i %attributes%>%name%</i>";
