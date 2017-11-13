@@ -45,7 +45,7 @@ final class IconUITwigExtension extends AbstractUITwigExtension {
 	 * @return string Returns a material design icon.
 	 */
 	public function materialDesignIconFunction(array $args = []) {
-		return $this->icon($this->_arg($args, "name"), $this->_color($this->_arg($args, "color"), "col-"), $this->_arg($args, "style"));
+		return $this->icon($this->getArg($args, "name"), $this->getColor($this->getArg($args, "color"), "col-"), $this->getArg($args, "style"));
 	}
 
 }

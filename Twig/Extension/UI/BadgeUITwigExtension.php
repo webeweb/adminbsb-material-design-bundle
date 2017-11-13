@@ -34,7 +34,7 @@ final class BadgeUITwigExtension extends AbstractUITwigExtension {
 	 * @return string Returns a button badge "Danger".
 	 */
 	public function buttonBadgeDangerFunction(array $args = []) {
-		return $this->badge($this->_arg($args, "content"), $this->_arg($args, "label"), $this->_arg($args, "large", false), "btn-danger");
+		return $this->badge($this->getArg($args, "content"), $this->getArg($args, "label"), $this->getArg($args, "large", false), "btn-danger");
 	}
 
 	/**
@@ -44,7 +44,7 @@ final class BadgeUITwigExtension extends AbstractUITwigExtension {
 	 * @return string Returns a button badge "Default".
 	 */
 	public function buttonBadgeDefaultFunction(array $args = []) {
-		return $this->badge($this->_arg($args, "content"), $this->_arg($args, "label"), $this->_arg($args, "large", false), "btn-default");
+		return $this->badge($this->getArg($args, "content"), $this->getArg($args, "label"), $this->getArg($args, "large", false), "btn-default");
 	}
 
 	/**
@@ -54,7 +54,7 @@ final class BadgeUITwigExtension extends AbstractUITwigExtension {
 	 * @return string Returns a button badge "Info".
 	 */
 	public function buttonBadgeInfoFunction(array $args = []) {
-		return $this->badge($this->_arg($args, "content"), $this->_arg($args, "label"), $this->_arg($args, "large", false), "btn-info");
+		return $this->badge($this->getArg($args, "content"), $this->getArg($args, "label"), $this->getArg($args, "large", false), "btn-info");
 	}
 
 	/**
@@ -64,7 +64,7 @@ final class BadgeUITwigExtension extends AbstractUITwigExtension {
 	 * @return string Returns a button badge "Primary".
 	 */
 	public function buttonBadgePrimaryFunction(array $args = []) {
-		return $this->badge($this->_arg($args, "content"), $this->_arg($args, "label"), $this->_arg($args, "large", false), "btn-primary");
+		return $this->badge($this->getArg($args, "content"), $this->getArg($args, "label"), $this->getArg($args, "large", false), "btn-primary");
 	}
 
 	/**
@@ -74,7 +74,7 @@ final class BadgeUITwigExtension extends AbstractUITwigExtension {
 	 * @return string Returns a button badge "Success".
 	 */
 	public function buttonBadgeSuccessFunction(array $args = []) {
-		return $this->badge($this->_arg($args, "content"), $this->_arg($args, "label"), $this->_arg($args, "large", false), "btn-success");
+		return $this->badge($this->getArg($args, "content"), $this->getArg($args, "label"), $this->getArg($args, "large", false), "btn-success");
 	}
 
 	/**
@@ -84,7 +84,7 @@ final class BadgeUITwigExtension extends AbstractUITwigExtension {
 	 * @return string Returns a button badge "Warning".
 	 */
 	public function buttonBadgeWarningFunction(array $args = []) {
-		return $this->badge($this->_arg($args, "content"), $this->_arg($args, "label"), $this->_arg($args, "large", false), "btn-warning");
+		return $this->badge($this->getArg($args, "content"), $this->getArg($args, "label"), $this->getArg($args, "large", false), "btn-warning");
 	}
 
 	/**
@@ -112,7 +112,7 @@ final class BadgeUITwigExtension extends AbstractUITwigExtension {
 	 * @return string Returns a list badge.
 	 */
 	public function listBadgeFunction(array $args = []) {
-		return $this->badge($this->_arg($args, "content"), $this->_arg($args, "label"), false, $this->_color($this->_arg($args, "color", "red"), "bg-"), true, $this->_arg($args, "link"));
+		return $this->badge($this->getArg($args, "content"), $this->getArg($args, "label"), false, $this->getColor($this->getArg($args, "color", "red"), "bg-"), true, $this->getArg($args, "link"));
 	}
 
 	/**
@@ -122,7 +122,7 @@ final class BadgeUITwigExtension extends AbstractUITwigExtension {
 	 * @return string Returns a material design button badge.
 	 */
 	public function materialDesignButtonBadgeFunction(array $args = []) {
-		return $this->badge($this->_arg($args, "content"), $this->_arg($args, "label"), $this->_arg($args, "large", false), $this->_color($this->_arg($args, "color", "red"), "bg-"));
+		return $this->badge($this->getArg($args, "content"), $this->getArg($args, "label"), $this->getArg($args, "large", false), $this->getColor($this->getArg($args, "color", "red"), "bg-"));
 	}
 
 }

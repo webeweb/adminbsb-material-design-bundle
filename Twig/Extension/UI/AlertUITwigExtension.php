@@ -34,7 +34,7 @@ final class AlertUITwigExtension extends AbstractUITwigExtension {
 	 * @return string Returns a basic alert "Danger".
 	 */
 	public function basicAlertDangerFunction(array $args = []) {
-		return $this->alert($this->_arg($args, "content"), $this->_arg($args, "dismissible"), "alert-danger");
+		return $this->alert($this->getArg($args, "content"), $this->getArg($args, "dismissible"), "alert-danger");
 	}
 
 	/**
@@ -44,7 +44,7 @@ final class AlertUITwigExtension extends AbstractUITwigExtension {
 	 * @return string Returns a basic alert "Info".
 	 */
 	public function basicAlertInfoFunction(array $args = []) {
-		return $this->alert($this->_arg($args, "content"), $this->_arg($args, "dismissible"), "alert-info");
+		return $this->alert($this->getArg($args, "content"), $this->getArg($args, "dismissible"), "alert-info");
 	}
 
 	/**
@@ -54,7 +54,7 @@ final class AlertUITwigExtension extends AbstractUITwigExtension {
 	 * @return string Returns a basic alert "Success".
 	 */
 	public function basicAlertSuccessFunction(array $args = []) {
-		return $this->alert($this->_arg($args, "content"), $this->_arg($args, "dismissible"), "alert-success");
+		return $this->alert($this->getArg($args, "content"), $this->getArg($args, "dismissible"), "alert-success");
 	}
 
 	/**
@@ -64,7 +64,7 @@ final class AlertUITwigExtension extends AbstractUITwigExtension {
 	 * @return string Returns a basic alert "Warning".
 	 */
 	public function basicAlertWarningFunction(array $args = []) {
-		return $this->alert($this->_arg($args, "content"), $this->_arg($args, "dismissible"), "alert-warning");
+		return $this->alert($this->getArg($args, "content"), $this->getArg($args, "dismissible"), "alert-warning");
 	}
 
 	/**
@@ -90,7 +90,7 @@ final class AlertUITwigExtension extends AbstractUITwigExtension {
 	 * @return string Returns a link alert.
 	 */
 	public function linkAlertFunction(array $args = []) {
-		return $this->alert($this->_arg($args, "content"), $this->_arg($args, "dismissible"), $this->_color($this->_arg($args, "color", "red"), "bg-"));
+		return $this->alert($this->getArg($args, "content"), $this->getArg($args, "dismissible"), $this->getColor($this->getArg($args, "color", "red"), "bg-"));
 	}
 
 	/**
@@ -100,7 +100,7 @@ final class AlertUITwigExtension extends AbstractUITwigExtension {
 	 * @return string Returns a material design alert.
 	 */
 	public function materialDesignAlertFunction(array $args = []) {
-		return $this->alert($this->_arg($args, "content"), $this->_arg($args, "dismissible"), $this->_color($this->_arg($args, "color", "red"), "bg-"));
+		return $this->alert($this->getArg($args, "content"), $this->getArg($args, "dismissible"), $this->getColor($this->getArg($args, "color", "red"), "bg-"));
 	}
 
 }

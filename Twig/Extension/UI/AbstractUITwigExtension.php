@@ -60,7 +60,7 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
 		$_content = ($dismissible === true ? $subtemplate : "") . (!is_null($content) ? $content : self::DEFAULT_CONTENT);
 
 		// Return the HTML.
-		return $this->_replace($template, ["%attributes%", "%content%"], [StringUtility::parseArray($_attr), $_content]);
+		return $this->replace($template, ["%attributes%", "%content%"], [StringUtility::parseArray($_attr), $_content]);
 	}
 
 	/**
@@ -99,7 +99,7 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
 		$_link		 = (!is_null($link) ? $link : self::DEFAULT_HREF);
 
 		// Return the HTML.
-		return $this->_replace($template, ["%attributes%", "%content%", "%label%", "%link%"], [StringUtility::parseArray($_attr), $_content, $_label, $_link]);
+		return $this->replace($template, ["%attributes%", "%content%", "%label%", "%link%"], [StringUtility::parseArray($_attr), $_content, $_label, $_link]);
 	}
 
 	/**
@@ -141,7 +141,7 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
 		$_icon		 = (!is_null($icon) ? $this->icon($icon, "", $style) : "");
 
 		// Return the HTML.
-		return $this->_replace($template, ["%attributes%", "%icon%", "%content%"], [StringUtility::parseArray($_attr), $_icon, $_content]);
+		return $this->replace($template, ["%attributes%", "%icon%", "%content%"], [StringUtility::parseArray($_attr), $_icon, $_content]);
 	}
 
 	/**
@@ -167,7 +167,7 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
 		$_name = (!is_null($name) ? $name : "home");
 
 		// Return the HTML.
-		return $this->_replace($template, ["%attributes%", "%name%"], [StringUtility::parseArray($_attr), $_name]);
+		return $this->replace($template, ["%attributes%", "%name%"], [StringUtility::parseArray($_attr), $_name]);
 	}
 
 	/**
@@ -191,7 +191,7 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
 		$_content = (!is_null($content) ? $content : self::DEFAULT_CONTENT);
 
 		// Return the HTML.
-		return $this->_replace($template, ["%attributes%", '%content%'], [StringUtility::parseArray($_attr), $_content]);
+		return $this->replace($template, ["%attributes%", '%content%'], [StringUtility::parseArray($_attr), $_content]);
 	}
 
 }
