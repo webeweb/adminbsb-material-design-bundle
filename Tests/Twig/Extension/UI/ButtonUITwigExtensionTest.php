@@ -239,7 +239,7 @@ final class ButtonUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 
 		$arg8	 = ["color" => "black"];
 		$res8	 = '<button class="btn bg-black waves-effect" type="button">&nbsp;</button>';
-		$this->assertEquals($res8, $obj->materialDesignButtonFunction($arg8), "The method materialDesignButtonFunction() does not return the expected value with circle");
+		$this->assertEquals($res8, $obj->materialDesignButtonFunction($arg8), "The method materialDesignButtonFunction() does not return the expected value with color");
 
 		$arg9	 = ["content" => "content", "title" => "title", "size" => "lg", "disable" => true, "icon" => "person", "color" => "black"];
 		$res9	 = '<button class="btn bg-black waves-effect btn-lg" title="title" type="button" data-toggle="tooltip" disabled="disabled"><i class="material-icons" style="margin: -4px 2px 0; vertical-align: sub;">person</i>content</button>';
