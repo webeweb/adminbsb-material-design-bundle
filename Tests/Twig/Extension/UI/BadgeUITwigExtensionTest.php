@@ -37,22 +37,6 @@ final class BadgeUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 		$arg0	 = [];
 		$res0	 = '<button class="btn btn-danger btn-block waves-effect" type="button">&nbsp;<span class="badge">&nbsp;</span></button>';
 		$this->assertEquals($res0, $obj->buttonBadgeDangerFunction($arg0), "The method buttonBadgeDangerFunction() does not return the expected value");
-
-		$arg1	 = ["content" => "content"];
-		$res1	 = '<button class="btn btn-danger btn-block waves-effect" type="button">content<span class="badge">&nbsp;</span></button>';
-		$this->assertEquals($res1, $obj->buttonBadgeDangerFunction($arg1), "The method buttonBadgeDangerFunction() does not return the expected value with content");
-
-		$arg2	 = ["label" => "label"];
-		$res2	 = '<button class="btn btn-danger btn-block waves-effect" type="button">&nbsp;<span class="badge">label</span></button>';
-		$this->assertEquals($res2, $obj->buttonBadgeDangerFunction($arg2), "The method buttonBadgeDangerFunction() does not return the expected value with label");
-
-		$arg3	 = ["large" => true];
-		$res3	 = '<button class="btn btn-danger btn-block waves-effect btn-lg" type="button">&nbsp;<span class="badge">&nbsp;</span></button>';
-		$this->assertEquals($res3, $obj->buttonBadgeDangerFunction($arg3), "The method buttonBadgeDangerFunction() does not return the expected value with large");
-
-		$arg9	 = ["content" => "content", "label" => "label", "large" => true];
-		$res9	 = '<button class="btn btn-danger btn-block waves-effect btn-lg" type="button">content<span class="badge">label</span></button>';
-		$this->assertEquals($res9, $obj->buttonBadgeDangerFunction($arg9), "The method buttonBadgeDangerFunction() does not return the expected value with content, label and large");
 	}
 
 	/**
@@ -67,22 +51,6 @@ final class BadgeUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 		$arg0	 = [];
 		$res0	 = '<button class="btn btn-default btn-block waves-effect" type="button">&nbsp;<span class="badge">&nbsp;</span></button>';
 		$this->assertEquals($res0, $obj->buttonBadgeDefaultFunction($arg0), "The method buttonBadgeDefaultFunction() does not return the expected value");
-
-		$arg1	 = ["content" => "content"];
-		$res1	 = '<button class="btn btn-default btn-block waves-effect" type="button">content<span class="badge">&nbsp;</span></button>';
-		$this->assertEquals($res1, $obj->buttonBadgeDefaultFunction($arg1), "The method buttonBadgeDefaultFunction() does not return the expected value with content");
-
-		$arg2	 = ["label" => "label"];
-		$res2	 = '<button class="btn btn-default btn-block waves-effect" type="button">&nbsp;<span class="badge">label</span></button>';
-		$this->assertEquals($res2, $obj->buttonBadgeDefaultFunction($arg2), "The method buttonBadgeDefaultFunction() does not return the expected value with label");
-
-		$arg3	 = ["large" => true];
-		$res3	 = '<button class="btn btn-default btn-block waves-effect btn-lg" type="button">&nbsp;<span class="badge">&nbsp;</span></button>';
-		$this->assertEquals($res3, $obj->buttonBadgeDefaultFunction($arg3), "The method buttonBadgeDefaultFunction() does not return the expected value with large");
-
-		$arg9	 = ["content" => "content", "label" => "label", "large" => true];
-		$res9	 = '<button class="btn btn-default btn-block waves-effect btn-lg" type="button">content<span class="badge">label</span></button>';
-		$this->assertEquals($res9, $obj->buttonBadgeDefaultFunction($arg9), "The method buttonBadgeDefaultFunction() does not return the expected value with content, label and large");
 	}
 
 	/**
@@ -97,22 +65,6 @@ final class BadgeUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 		$arg0	 = [];
 		$res0	 = '<button class="btn btn-info btn-block waves-effect" type="button">&nbsp;<span class="badge">&nbsp;</span></button>';
 		$this->assertEquals($res0, $obj->buttonBadgeInfoFunction($arg0), "The method buttonBadgeInfoFunction() does not return the expected value");
-
-		$arg1	 = ["content" => "content"];
-		$res1	 = '<button class="btn btn-info btn-block waves-effect" type="button">content<span class="badge">&nbsp;</span></button>';
-		$this->assertEquals($res1, $obj->buttonBadgeInfoFunction($arg1), "The method buttonBadgeInfoFunction() does not return the expected value with content");
-
-		$arg2	 = ["label" => "label"];
-		$res2	 = '<button class="btn btn-info btn-block waves-effect" type="button">&nbsp;<span class="badge">label</span></button>';
-		$this->assertEquals($res2, $obj->buttonBadgeInfoFunction($arg2), "The method buttonBadgeInfoFunction() does not return the expected value with label");
-
-		$arg3	 = ["large" => true];
-		$res3	 = '<button class="btn btn-info btn-block waves-effect btn-lg" type="button">&nbsp;<span class="badge">&nbsp;</span></button>';
-		$this->assertEquals($res3, $obj->buttonBadgeInfoFunction($arg3), "The method buttonBadgeInfoFunction() does not return the expected value with large");
-
-		$arg9	 = ["content" => "content", "label" => "label", "large" => true];
-		$res9	 = '<button class="btn btn-info btn-block waves-effect btn-lg" type="button">content<span class="badge">label</span></button>';
-		$this->assertEquals($res9, $obj->buttonBadgeInfoFunction($arg9), "The method buttonBadgeInfoFunction() does not return the expected value with content, label and large");
 	}
 
 	/**
@@ -127,22 +79,6 @@ final class BadgeUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 		$arg0	 = [];
 		$res0	 = '<button class="btn btn-primary btn-block waves-effect" type="button">&nbsp;<span class="badge">&nbsp;</span></button>';
 		$this->assertEquals($res0, $obj->buttonBadgePrimaryFunction($arg0), "The method buttonBadgePrimaryFunction() does not return the expected value");
-
-		$arg1	 = ["content" => "content"];
-		$res1	 = '<button class="btn btn-primary btn-block waves-effect" type="button">content<span class="badge">&nbsp;</span></button>';
-		$this->assertEquals($res1, $obj->buttonBadgePrimaryFunction($arg1), "The method buttonBadgePrimaryFunction() does not return the expected value with content");
-
-		$arg2	 = ["label" => "label"];
-		$res2	 = '<button class="btn btn-primary btn-block waves-effect" type="button">&nbsp;<span class="badge">label</span></button>';
-		$this->assertEquals($res2, $obj->buttonBadgePrimaryFunction($arg2), "The method buttonBadgePrimaryFunction() does not return the expected value with label");
-
-		$arg3	 = ["large" => true];
-		$res3	 = '<button class="btn btn-primary btn-block waves-effect btn-lg" type="button">&nbsp;<span class="badge">&nbsp;</span></button>';
-		$this->assertEquals($res3, $obj->buttonBadgePrimaryFunction($arg3), "The method buttonBadgePrimaryFunction() does not return the expected value with large");
-
-		$arg9	 = ["content" => "content", "label" => "label", "large" => true];
-		$res9	 = '<button class="btn btn-primary btn-block waves-effect btn-lg" type="button">content<span class="badge">label</span></button>';
-		$this->assertEquals($res9, $obj->buttonBadgePrimaryFunction($arg9), "The method buttonBadgePrimaryFunction() does not return the expected value with content, label and large");
 	}
 
 	/**
@@ -157,22 +93,6 @@ final class BadgeUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 		$arg0	 = [];
 		$res0	 = '<button class="btn btn-success btn-block waves-effect" type="button">&nbsp;<span class="badge">&nbsp;</span></button>';
 		$this->assertEquals($res0, $obj->buttonBadgeSuccessFunction($arg0), "The method buttonBadgeSuccessFunction() does not return the expected value");
-
-		$arg1	 = ["content" => "content"];
-		$res1	 = '<button class="btn btn-success btn-block waves-effect" type="button">content<span class="badge">&nbsp;</span></button>';
-		$this->assertEquals($res1, $obj->buttonBadgeSuccessFunction($arg1), "The method buttonBadgeSuccessFunction() does not return the expected value with content");
-
-		$arg2	 = ["label" => "label"];
-		$res2	 = '<button class="btn btn-success btn-block waves-effect" type="button">&nbsp;<span class="badge">label</span></button>';
-		$this->assertEquals($res2, $obj->buttonBadgeSuccessFunction($arg2), "The method buttonBadgeSuccessFunction() does not return the expected value with label");
-
-		$arg3	 = ["large" => true];
-		$res3	 = '<button class="btn btn-success btn-block waves-effect btn-lg" type="button">&nbsp;<span class="badge">&nbsp;</span></button>';
-		$this->assertEquals($res3, $obj->buttonBadgeSuccessFunction($arg3), "The method buttonBadgeSuccessFunction() does not return the expected value with large");
-
-		$arg9	 = ["content" => "content", "label" => "label", "large" => true];
-		$res9	 = '<button class="btn btn-success btn-block waves-effect btn-lg" type="button">content<span class="badge">label</span></button>';
-		$this->assertEquals($res9, $obj->buttonBadgeSuccessFunction($arg9), "The method buttonBadgeSuccessFunction() does not return the expected value with content, label and large");
 	}
 
 	/**
@@ -187,22 +107,6 @@ final class BadgeUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 		$arg0	 = [];
 		$res0	 = '<button class="btn btn-warning btn-block waves-effect" type="button">&nbsp;<span class="badge">&nbsp;</span></button>';
 		$this->assertEquals($res0, $obj->buttonBadgeWarningFunction($arg0), "The method buttonBadgeWarningFunction() does not return the expected value");
-
-		$arg1	 = ["content" => "content"];
-		$res1	 = '<button class="btn btn-warning btn-block waves-effect" type="button">content<span class="badge">&nbsp;</span></button>';
-		$this->assertEquals($res1, $obj->buttonBadgeWarningFunction($arg1), "The method buttonBadgeWarningFunction() does not return the expected value with content");
-
-		$arg2	 = ["label" => "label"];
-		$res2	 = '<button class="btn btn-warning btn-block waves-effect" type="button">&nbsp;<span class="badge">label</span></button>';
-		$this->assertEquals($res2, $obj->buttonBadgeWarningFunction($arg2), "The method buttonBadgeWarningFunction() does not return the expected value with label");
-
-		$arg3	 = ["large" => true];
-		$res3	 = '<button class="btn btn-warning btn-block waves-effect btn-lg" type="button">&nbsp;<span class="badge">&nbsp;</span></button>';
-		$this->assertEquals($res3, $obj->buttonBadgeWarningFunction($arg3), "The method buttonBadgeWarningFunction() does not return the expected value with large");
-
-		$arg9	 = ["content" => "content", "label" => "label", "large" => true];
-		$res9	 = '<button class="btn btn-warning btn-block waves-effect btn-lg" type="button">content<span class="badge">label</span></button>';
-		$this->assertEquals($res9, $obj->buttonBadgeWarningFunction($arg9), "The method buttonBadgeWarningFunction() does not return the expected value with content, label and large");
 	}
 
 	/**
@@ -214,47 +118,49 @@ final class BadgeUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new BadgeUITwigExtension();
 
-		$this->assertCount(8, $obj->getFunctions(), "The method getFunctions() does not return the expected count");
+		$res = $obj->getFunctions();
 
-		$this->assertInstanceOf(Twig_SimpleFunction::class, $obj->getFunctions()[0], "The method getFunctions() does not return the expected object on item 0");
-		$this->assertEquals("buttonBadgeDanger", $obj->getFunctions()[0]->getName(), "The method getName() does not return the expected name on item 0");
-		$this->assertEquals([$obj, "buttonBadgeDangerFunction"], $obj->getFunctions()[0]->getCallable(), "The method getCallable() does not return the expected callable on item 0");
-		$this->assertEquals(["html"], $obj->getFunctions()[0]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 0");
+		$this->assertCount(8, $res, "The method getFunctions() does not return the expected count");
 
-		$this->assertInstanceOf(Twig_SimpleFunction::class, $obj->getFunctions()[1], "The method getFunctions() does not return the expected object on item 1");
-		$this->assertEquals("buttonBadgeDefault", $obj->getFunctions()[1]->getName(), "The method getName() does not return the expected name on item 1");
-		$this->assertEquals([$obj, "buttonBadgeDefaultFunction"], $obj->getFunctions()[1]->getCallable(), "The method getCallable() does not return the expected callable on item 1");
-		$this->assertEquals(["html"], $obj->getFunctions()[1]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 1");
+		$this->assertInstanceOf(Twig_SimpleFunction::class, $res[0], "The method getFunctions() does not return the expected object on item 0");
+		$this->assertEquals("buttonBadgeDanger", $res[0]->getName(), "The method getName() does not return the expected name on item 0");
+		$this->assertEquals([$obj, "buttonBadgeDangerFunction"], $res[0]->getCallable(), "The method getCallable() does not return the expected callable on item 0");
+		$this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 0");
 
-		$this->assertInstanceOf(Twig_SimpleFunction::class, $obj->getFunctions()[2], "The method getFunctions() does not return the expected object on item 2");
-		$this->assertEquals("buttonBadgeInfo", $obj->getFunctions()[2]->getName(), "The method getName() does not return the expected name on item 2");
-		$this->assertEquals([$obj, "buttonBadgeInfoFunction"], $obj->getFunctions()[2]->getCallable(), "The method getCallable() does not return the expected callable on item 2");
-		$this->assertEquals(["html"], $obj->getFunctions()[2]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 2");
+		$this->assertInstanceOf(Twig_SimpleFunction::class, $res[1], "The method getFunctions() does not return the expected object on item 1");
+		$this->assertEquals("buttonBadgeDefault", $res[1]->getName(), "The method getName() does not return the expected name on item 1");
+		$this->assertEquals([$obj, "buttonBadgeDefaultFunction"], $res[1]->getCallable(), "The method getCallable() does not return the expected callable on item 1");
+		$this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 1");
 
-		$this->assertInstanceOf(Twig_SimpleFunction::class, $obj->getFunctions()[3], "The method getFunctions() does not return the expected object on item 3");
-		$this->assertEquals("buttonBadgePrimary", $obj->getFunctions()[3]->getName(), "The method getName() does not return the expected name on item 3");
-		$this->assertEquals([$obj, "buttonBadgePrimaryFunction"], $obj->getFunctions()[3]->getCallable(), "The method getCallable() does not return the expected callable on item 3");
-		$this->assertEquals(["html"], $obj->getFunctions()[3]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 3");
+		$this->assertInstanceOf(Twig_SimpleFunction::class, $res[2], "The method getFunctions() does not return the expected object on item 2");
+		$this->assertEquals("buttonBadgeInfo", $res[2]->getName(), "The method getName() does not return the expected name on item 2");
+		$this->assertEquals([$obj, "buttonBadgeInfoFunction"], $res[2]->getCallable(), "The method getCallable() does not return the expected callable on item 2");
+		$this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 2");
 
-		$this->assertInstanceOf(Twig_SimpleFunction::class, $obj->getFunctions()[4], "The method getFunctions() does not return the expected object on item 4");
-		$this->assertEquals("buttonBadgeSuccess", $obj->getFunctions()[4]->getName(), "The method getName() does not return the expected name on item 4");
-		$this->assertEquals([$obj, "buttonBadgeSuccessFunction"], $obj->getFunctions()[4]->getCallable(), "The method getCallable() does not return the expected callable on item 4");
-		$this->assertEquals(["html"], $obj->getFunctions()[4]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 4");
+		$this->assertInstanceOf(Twig_SimpleFunction::class, $res[3], "The method getFunctions() does not return the expected object on item 3");
+		$this->assertEquals("buttonBadgePrimary", $res[3]->getName(), "The method getName() does not return the expected name on item 3");
+		$this->assertEquals([$obj, "buttonBadgePrimaryFunction"], $res[3]->getCallable(), "The method getCallable() does not return the expected callable on item 3");
+		$this->assertEquals(["html"], $res[3]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 3");
 
-		$this->assertInstanceOf(Twig_SimpleFunction::class, $obj->getFunctions()[5], "The method getFunctions() does not return the expected object on item 5");
-		$this->assertEquals("buttonBadgeWarning", $obj->getFunctions()[5]->getName(), "The method getName() does not return the expected name on item 5");
-		$this->assertEquals([$obj, "buttonBadgeWarningFunction"], $obj->getFunctions()[5]->getCallable(), "The method getCallable() does not return the expected callable on item 5");
-		$this->assertEquals(["html"], $obj->getFunctions()[5]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 5");
+		$this->assertInstanceOf(Twig_SimpleFunction::class, $res[4], "The method getFunctions() does not return the expected object on item 4");
+		$this->assertEquals("buttonBadgeSuccess", $res[4]->getName(), "The method getName() does not return the expected name on item 4");
+		$this->assertEquals([$obj, "buttonBadgeSuccessFunction"], $res[4]->getCallable(), "The method getCallable() does not return the expected callable on item 4");
+		$this->assertEquals(["html"], $res[4]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 4");
 
-		$this->assertInstanceOf(Twig_SimpleFunction::class, $obj->getFunctions()[6], "The method getFunctions() does not return the expected object on item 6");
-		$this->assertEquals("listBadge", $obj->getFunctions()[6]->getName(), "The method getName() does not return the expected name on item 6");
-		$this->assertEquals([$obj, "listBadgeFunction"], $obj->getFunctions()[6]->getCallable(), "The method getCallable() does not return the expected callable on item 6");
-		$this->assertEquals(["html"], $obj->getFunctions()[6]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 6");
+		$this->assertInstanceOf(Twig_SimpleFunction::class, $res[5], "The method getFunctions() does not return the expected object on item 5");
+		$this->assertEquals("buttonBadgeWarning", $res[5]->getName(), "The method getName() does not return the expected name on item 5");
+		$this->assertEquals([$obj, "buttonBadgeWarningFunction"], $res[5]->getCallable(), "The method getCallable() does not return the expected callable on item 5");
+		$this->assertEquals(["html"], $res[5]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 5");
 
-		$this->assertInstanceOf(Twig_SimpleFunction::class, $obj->getFunctions()[7], "The method getFunctions() does not return the expected object on item 7");
-		$this->assertEquals("materialDesignButtonBadge", $obj->getFunctions()[7]->getName(), "The method getName() does not return the expected name on item 7");
-		$this->assertEquals([$obj, "materialDesignButtonBadgeFunction"], $obj->getFunctions()[7]->getCallable(), "The method getCallable() does not return the expected callable on item 7");
-		$this->assertEquals(["html"], $obj->getFunctions()[7]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 7");
+		$this->assertInstanceOf(Twig_SimpleFunction::class, $res[6], "The method getFunctions() does not return the expected object on item 6");
+		$this->assertEquals("listBadge", $res[6]->getName(), "The method getName() does not return the expected name on item 6");
+		$this->assertEquals([$obj, "listBadgeFunction"], $res[6]->getCallable(), "The method getCallable() does not return the expected callable on item 6");
+		$this->assertEquals(["html"], $res[6]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 6");
+
+		$this->assertInstanceOf(Twig_SimpleFunction::class, $res[7], "The method getFunctions() does not return the expected object on item 7");
+		$this->assertEquals("materialDesignButtonBadge", $res[7]->getName(), "The method getName() does not return the expected name on item 7");
+		$this->assertEquals([$obj, "materialDesignButtonBadgeFunction"], $res[7]->getCallable(), "The method getCallable() does not return the expected callable on item 7");
+		$this->assertEquals(["html"], $res[7]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 7");
 	}
 
 	/**
