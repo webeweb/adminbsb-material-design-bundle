@@ -25,11 +25,6 @@ use WBW\Library\Core\Utility\StringUtility;
 abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension implements NavigationInterface {
 
 	/**
-	 * Default content.
-	 */
-	const DEFAULT_CONTENT = "&nbsp;";
-
-	/**
 	 * Constructor.
 	 */
 	public final function __construct() {
@@ -72,7 +67,7 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
 	 * @param string $class The badge class.
 	 * @param boolean $list List badge ?
 	 * @param string $link The badge link.
-	 * @return string Returns a badge.
+	 * @return string Returns the badge.
 	 */
 	protected final function badge($content, $label, $large, $class, $list = false, $link = false) {
 
@@ -113,7 +108,7 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
 	 * @param string $class The button class.
 	 * @param string $icon The button icon.
 	 * @param boolean $circle Circle button ?
-	 * @return string Returns a button.
+	 * @return string Returns the button.
 	 */
 	protected final function button($content, $title, $size, $block, $disable, $class, $icon, $circle) {
 
@@ -138,7 +133,7 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
 
 		// Handle the parameters.
 		$_content	 = (!is_null($content) ? $content : self::DEFAULT_CONTENT);
-		$_icon		 = (!is_null($icon) ? $this->icon($icon, "", $style) : "");
+		$_icon		 = (!is_null($icon) ? $this->icon($icon, $style) : "");
 
 		// Return the HTML.
 		return $this->replace($template, ["%attributes%", "%icon%", "%content%"], [StringUtility::parseArray($_attr), $_icon, $_content]);
@@ -148,11 +143,11 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
 	 * Displays an icon.
 	 *
 	 * @param string $name The icon name.
-	 * @param string $class The icon class.
 	 * @param string $style The icon style.
-	 * @return string Returns an icon.
+	 * @param string $class The icon class.
+	 * @return string Returns the icon.
 	 */
-	protected final function icon($name, $class, $style) {
+	protected final function icon($name, $style, $class = null) {
 
 		// Initialize the template.
 		$template = "<i %attributes%>%name%</i>";
@@ -175,14 +170,14 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
 	 *
 	 * @param string $content The label content.
 	 * @param string $class The label class.
-	 * @return string Returns a label.
+	 * @return string Returns the label.
 	 */
 	protected final function label($content, $class) {
 
 		// Initialize the template.
 		$template = "<span %attributes%>%content%</span>";
 
-		// Initializa the attributes.
+		// Initialize the attributes.
 		$_attr = [];
 
 		$_attr["class"] = ["label", $class];
