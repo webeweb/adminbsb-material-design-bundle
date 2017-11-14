@@ -24,6 +24,11 @@ use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Color\DefaultColorProvider;
 abstract class AbstractABSBMDTwigExtension extends Twig_Extension {
 
 	/**
+	 * Default content.
+	 */
+	const DEFAULT_CONTENT = "&nbsp;";
+
+	/**
 	 * Constructor.
 	 */
 	protected function __construct() {
