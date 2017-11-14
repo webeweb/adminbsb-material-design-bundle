@@ -15,7 +15,7 @@ use Twig_SimpleFilter;
 use Twig_SimpleFunction;
 
 /**
- * ButtonUITwigExtension
+ * Button UI Twig extension.
  *
  * @author NdC/WBW <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI
