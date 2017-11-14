@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI;
 
+use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Color\DefaultColorProvider;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\AbstractABSBMDTwigExtension;
 use WBW\Library\Core\Navigation\NavigationInterface;
 use WBW\Library\Core\Utility\StringUtility;
@@ -137,6 +138,24 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
 
 		// Return the HTML.
 		return $this->replace($template, ["%attributes%", "%icon%", "%content%"], [StringUtility::parseArray($_attr), $_icon, $_content]);
+	}
+
+	/**
+	 * Displays a color.
+	 *
+	 * @param string $name The color name.
+	 * @param string $code The color code.
+	 * @param string $output The output.
+	 * @return string Returns the color.
+	 */
+	protected final function color($name, $code, $output) {
+
+		// Initialize the parameters.
+		$_name	 = $this->getColor($name, "");
+		$_code	 = (!is_null($code) ? $code : "500");
+
+		// Return the HTML.
+		return $output === "hex" ? DefaultColorProvider::getColors()[$_name][$_code] : "col-" . $_name;
 	}
 
 	/**
