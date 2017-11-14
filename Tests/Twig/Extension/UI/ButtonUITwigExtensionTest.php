@@ -27,90 +27,6 @@ use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI\ButtonUITwigExtens
 final class ButtonUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 
 	/**
-	 * Tests the buttonDangerFunction() method.
-	 *
-	 * @return void
-	 */
-	public function testButtonDangerFunction() {
-
-		$obj = new ButtonUITwigExtension();
-
-		$arg0	 = [];
-		$res0	 = '<button class="btn btn-danger waves-effect" type="button">&nbsp;</button>';
-		$this->assertEquals($res0, $obj->buttonDangerFunction($arg0), "The method buttonDangerFunction() does not return the expected value");
-	}
-
-	/**
-	 * Tests the buttonDefaultFunction() method.
-	 *
-	 * @return void
-	 */
-	public function testButtonDefaultFunction() {
-
-		$obj = new ButtonUITwigExtension();
-
-		$arg0	 = [];
-		$res0	 = '<button class="btn btn-default waves-effect" type="button">&nbsp;</button>';
-		$this->assertEquals($res0, $obj->buttonDefaultFunction($arg0), "The method buttonDefaultFunction() does not return the expected value");
-	}
-
-	/**
-	 * Tests the buttonInfoFunction() method.
-	 *
-	 * @return void
-	 */
-	public function testButtonInfoFunction() {
-
-		$obj = new ButtonUITwigExtension();
-
-		$arg0	 = [];
-		$res0	 = '<button class="btn btn-info waves-effect" type="button">&nbsp;</button>';
-		$this->assertEquals($res0, $obj->buttonInfoFunction($arg0), "The method buttonInfoFunction() does not return the expected value");
-	}
-
-	/**
-	 * Tests the buttonPrimaryFunction() method.
-	 *
-	 * @return void
-	 */
-	public function testButtonPrimaryFunction() {
-
-		$obj = new ButtonUITwigExtension();
-
-		$arg0	 = [];
-		$res0	 = '<button class="btn btn-primary waves-effect" type="button">&nbsp;</button>';
-		$this->assertEquals($res0, $obj->buttonPrimaryFunction($arg0), "The method buttonPrimaryFunction() does not return the expected value");
-	}
-
-	/**
-	 * Tests the buttonSuccessFunction() method.
-	 *
-	 * @return void
-	 */
-	public function testButtonSuccessFunction() {
-
-		$obj = new ButtonUITwigExtension();
-
-		$arg0	 = [];
-		$res0	 = '<button class="btn btn-success waves-effect" type="button">&nbsp;</button>';
-		$this->assertEquals($res0, $obj->buttonSuccessFunction($arg0), "The method buttonSuccessFunction() does not return the expected value");
-	}
-
-	/**
-	 * Tests the buttonSuccessFunction() method.
-	 *
-	 * @return void
-	 */
-	public function testButtonWarningFunction() {
-
-		$obj = new ButtonUITwigExtension();
-
-		$arg0	 = [];
-		$res0	 = '<button class="btn btn-warning waves-effect" type="button">&nbsp;</button>';
-		$this->assertEquals($res0, $obj->buttonWarningFunction($arg0), "The method buttonWarningFunction() does not return the expected value");
-	}
-
-	/**
 	 * Tests the getFilters() method.
 	 *
 	 * @return void
@@ -179,9 +95,100 @@ final class ButtonUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 	}
 
 	/**
+	 * Tests the buttonDangerFunction() method.
+	 *
+	 * @return void
+	 * @depends testGetFunctions
+	 */
+	public function testButtonDangerFunction() {
+
+		$obj = new ButtonUITwigExtension();
+
+		$arg0	 = [];
+		$res0	 = '<button class="btn btn-danger waves-effect" type="button">&nbsp;</button>';
+		$this->assertEquals($res0, $obj->buttonDangerFunction($arg0), "The method buttonDangerFunction() does not return the expected value");
+	}
+
+	/**
+	 * Tests the buttonDefaultFunction() method.
+	 *
+	 * @return void
+	 * @depends testGetFunctions
+	 */
+	public function testButtonDefaultFunction() {
+
+		$obj = new ButtonUITwigExtension();
+
+		$arg0	 = [];
+		$res0	 = '<button class="btn btn-default waves-effect" type="button">&nbsp;</button>';
+		$this->assertEquals($res0, $obj->buttonDefaultFunction($arg0), "The method buttonDefaultFunction() does not return the expected value");
+	}
+
+	/**
+	 * Tests the buttonInfoFunction() method.
+	 *
+	 * @return void
+	 * @depends testGetFunctions
+	 */
+	public function testButtonInfoFunction() {
+
+		$obj = new ButtonUITwigExtension();
+
+		$arg0	 = [];
+		$res0	 = '<button class="btn btn-info waves-effect" type="button">&nbsp;</button>';
+		$this->assertEquals($res0, $obj->buttonInfoFunction($arg0), "The method buttonInfoFunction() does not return the expected value");
+	}
+
+	/**
+	 * Tests the buttonPrimaryFunction() method.
+	 *
+	 * @return void
+	 * @depends testGetFunctions
+	 */
+	public function testButtonPrimaryFunction() {
+
+		$obj = new ButtonUITwigExtension();
+
+		$arg0	 = [];
+		$res0	 = '<button class="btn btn-primary waves-effect" type="button">&nbsp;</button>';
+		$this->assertEquals($res0, $obj->buttonPrimaryFunction($arg0), "The method buttonPrimaryFunction() does not return the expected value");
+	}
+
+	/**
+	 * Tests the buttonSuccessFunction() method.
+	 *
+	 * @return void
+	 * @depends testGetFunctions
+	 */
+	public function testButtonSuccessFunction() {
+
+		$obj = new ButtonUITwigExtension();
+
+		$arg0	 = [];
+		$res0	 = '<button class="btn btn-success waves-effect" type="button">&nbsp;</button>';
+		$this->assertEquals($res0, $obj->buttonSuccessFunction($arg0), "The method buttonSuccessFunction() does not return the expected value");
+	}
+
+	/**
+	 * Tests the buttonSuccessFunction() method.
+	 *
+	 * @return void
+	 * @depends testGetFunctions
+	 */
+	public function testButtonWarningFunction() {
+
+		$obj = new ButtonUITwigExtension();
+
+		$arg0	 = [];
+		$res0	 = '<button class="btn btn-warning waves-effect" type="button">&nbsp;</button>';
+		$this->assertEquals($res0, $obj->buttonWarningFunction($arg0), "The method buttonWarningFunction() does not return the expected value");
+	}
+
+	/**
 	 * Tests the linkButtonFilter() method.
 	 *
 	 * @return void
+	 * @depends testGetFilters
 	 */
 	public function testLinkButtonFilter() {
 
@@ -200,6 +207,7 @@ final class ButtonUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 	 * Tests the materialDesignButtonFunction() method.
 	 *
 	 * @return void
+	 * @depends testGetFunctions
 	 */
 	public function testMaterialDesignButtonFunction() {
 

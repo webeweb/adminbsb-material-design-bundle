@@ -26,90 +26,6 @@ use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI\LabelUITwigExtensi
 final class LabelUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 
 	/**
-	 * Tests the labelDangerFunction() method.
-	 *
-	 * @return void
-	 */
-	public function testLabelDangerFunction() {
-
-		$obj = new LabelUITwigExtension();
-
-		$arg0	 = [];
-		$res0	 = '<span class="label label-danger">&nbsp;</span>';
-		$this->assertEquals($res0, $obj->labelDangerFunction($arg0), "The method labelDangerFunction() does not return the expected value");
-	}
-
-	/**
-	 * Tests the labelDefaultFunction() method.
-	 *
-	 * @return void
-	 */
-	public function testLabelDefaultFunction() {
-
-		$obj = new LabelUITwigExtension();
-
-		$arg0	 = [];
-		$res0	 = '<span class="label label-default">&nbsp;</span>';
-		$this->assertEquals($res0, $obj->labelDefaultFunction($arg0), "The method labelDefaultFunction() does not return the expected value");
-	}
-
-	/**
-	 * Tests the labelInfoFunction() method.
-	 *
-	 * @return void
-	 */
-	public function testLabelInfoFunction() {
-
-		$obj = new LabelUITwigExtension();
-
-		$arg0	 = [];
-		$res0	 = '<span class="label label-info">&nbsp;</span>';
-		$this->assertEquals($res0, $obj->labelInfoFunction($arg0), "The method labelInfoFunction() does not return the expected value");
-	}
-
-	/**
-	 * Tests the labelPrimaryFunction() method.
-	 *
-	 * @return void
-	 */
-	public function testLabelPrimaryFunction() {
-
-		$obj = new LabelUITwigExtension();
-
-		$arg0	 = [];
-		$res0	 = '<span class="label label-primary">&nbsp;</span>';
-		$this->assertEquals($res0, $obj->labelPrimaryFunction($arg0), "The method labelPrimaryFunction() does not return the expected value");
-	}
-
-	/**
-	 * Tests the labelSuccessFunction() method.
-	 *
-	 * @return void
-	 */
-	public function testLabelSuccessFunction() {
-
-		$obj = new LabelUITwigExtension();
-
-		$arg0	 = [];
-		$res0	 = '<span class="label label-success">&nbsp;</span>';
-		$this->assertEquals($res0, $obj->labelSuccessFunction($arg0), "The method labelSuccessFunction() does not return the expected value");
-	}
-
-	/**
-	 * Tests the labelSuccessFunction() method.
-	 *
-	 * @return void
-	 */
-	public function testLabelWarningFunction() {
-
-		$obj = new LabelUITwigExtension();
-
-		$arg0	 = [];
-		$res0	 = '<span class="label label-warning">&nbsp;</span>';
-		$this->assertEquals($res0, $obj->labelWarningFunction($arg0), "The method labelWarningFunction() does not return the expected value");
-	}
-
-	/**
 	 * Tests the getFunctions() method.
 	 *
 	 * @return void
@@ -159,9 +75,100 @@ final class LabelUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 	}
 
 	/**
+	 * Tests the labelDangerFunction() method.
+	 *
+	 * @return void
+	 * @depends testGetFunctions
+	 */
+	public function testLabelDangerFunction() {
+
+		$obj = new LabelUITwigExtension();
+
+		$arg0	 = [];
+		$res0	 = '<span class="label label-danger">&nbsp;</span>';
+		$this->assertEquals($res0, $obj->labelDangerFunction($arg0), "The method labelDangerFunction() does not return the expected value");
+	}
+
+	/**
+	 * Tests the labelDefaultFunction() method.
+	 *
+	 * @return void
+	 * @depends testGetFunctions
+	 */
+	public function testLabelDefaultFunction() {
+
+		$obj = new LabelUITwigExtension();
+
+		$arg0	 = [];
+		$res0	 = '<span class="label label-default">&nbsp;</span>';
+		$this->assertEquals($res0, $obj->labelDefaultFunction($arg0), "The method labelDefaultFunction() does not return the expected value");
+	}
+
+	/**
+	 * Tests the labelInfoFunction() method.
+	 *
+	 * @return void
+	 * @depends testGetFunctions
+	 */
+	public function testLabelInfoFunction() {
+
+		$obj = new LabelUITwigExtension();
+
+		$arg0	 = [];
+		$res0	 = '<span class="label label-info">&nbsp;</span>';
+		$this->assertEquals($res0, $obj->labelInfoFunction($arg0), "The method labelInfoFunction() does not return the expected value");
+	}
+
+	/**
+	 * Tests the labelPrimaryFunction() method.
+	 *
+	 * @return void
+	 * @depends testGetFunctions
+	 */
+	public function testLabelPrimaryFunction() {
+
+		$obj = new LabelUITwigExtension();
+
+		$arg0	 = [];
+		$res0	 = '<span class="label label-primary">&nbsp;</span>';
+		$this->assertEquals($res0, $obj->labelPrimaryFunction($arg0), "The method labelPrimaryFunction() does not return the expected value");
+	}
+
+	/**
+	 * Tests the labelSuccessFunction() method.
+	 *
+	 * @return void
+	 * @depends testGetFunctions
+	 */
+	public function testLabelSuccessFunction() {
+
+		$obj = new LabelUITwigExtension();
+
+		$arg0	 = [];
+		$res0	 = '<span class="label label-success">&nbsp;</span>';
+		$this->assertEquals($res0, $obj->labelSuccessFunction($arg0), "The method labelSuccessFunction() does not return the expected value");
+	}
+
+	/**
+	 * Tests the labelSuccessFunction() method.
+	 *
+	 * @return void
+	 * @depends testGetFunctions
+	 */
+	public function testLabelWarningFunction() {
+
+		$obj = new LabelUITwigExtension();
+
+		$arg0	 = [];
+		$res0	 = '<span class="label label-warning">&nbsp;</span>';
+		$this->assertEquals($res0, $obj->labelWarningFunction($arg0), "The method labelWarningFunction() does not return the expected value");
+	}
+
+	/**
 	 * Tests the materialDesignLabelFunction() method.
 	 *
 	 * @return void
+	 * @depends testGetFunctions
 	 */
 	public function testMaterialDesignLabelFunction() {
 

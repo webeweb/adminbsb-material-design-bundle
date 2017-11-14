@@ -26,90 +26,6 @@ use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI\BadgeUITwigExtensi
 final class BadgeUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 
 	/**
-	 * Tests the buttonBadgeDangerFunction() method.
-	 *
-	 * @return void
-	 */
-	public function testButtonBadgeDangerFunction() {
-
-		$obj = new BadgeUITwigExtension();
-
-		$arg0	 = [];
-		$res0	 = '<button class="btn btn-danger btn-block waves-effect" type="button">&nbsp;<span class="badge">&nbsp;</span></button>';
-		$this->assertEquals($res0, $obj->buttonBadgeDangerFunction($arg0), "The method buttonBadgeDangerFunction() does not return the expected value");
-	}
-
-	/**
-	 * Tests the buttonBadgeDefaultFunction() method.
-	 *
-	 * @return void
-	 */
-	public function testButtonBadgeDefaultFunction() {
-
-		$obj = new BadgeUITwigExtension();
-
-		$arg0	 = [];
-		$res0	 = '<button class="btn btn-default btn-block waves-effect" type="button">&nbsp;<span class="badge">&nbsp;</span></button>';
-		$this->assertEquals($res0, $obj->buttonBadgeDefaultFunction($arg0), "The method buttonBadgeDefaultFunction() does not return the expected value");
-	}
-
-	/**
-	 * Tests the buttonBadgeInfoFunction() method.
-	 *
-	 * @return void
-	 */
-	public function testButtonBadgeInfoFunction() {
-
-		$obj = new BadgeUITwigExtension();
-
-		$arg0	 = [];
-		$res0	 = '<button class="btn btn-info btn-block waves-effect" type="button">&nbsp;<span class="badge">&nbsp;</span></button>';
-		$this->assertEquals($res0, $obj->buttonBadgeInfoFunction($arg0), "The method buttonBadgeInfoFunction() does not return the expected value");
-	}
-
-	/**
-	 * Tests the buttonBadgePrimaryFunction() method.
-	 *
-	 * @return void
-	 */
-	public function testButtonBadgePrimaryFunction() {
-
-		$obj = new BadgeUITwigExtension();
-
-		$arg0	 = [];
-		$res0	 = '<button class="btn btn-primary btn-block waves-effect" type="button">&nbsp;<span class="badge">&nbsp;</span></button>';
-		$this->assertEquals($res0, $obj->buttonBadgePrimaryFunction($arg0), "The method buttonBadgePrimaryFunction() does not return the expected value");
-	}
-
-	/**
-	 * Tests the buttonBadgeSuccessFunction() method.
-	 *
-	 * @return void
-	 */
-	public function testButtonBadgeSuccessFunction() {
-
-		$obj = new BadgeUITwigExtension();
-
-		$arg0	 = [];
-		$res0	 = '<button class="btn btn-success btn-block waves-effect" type="button">&nbsp;<span class="badge">&nbsp;</span></button>';
-		$this->assertEquals($res0, $obj->buttonBadgeSuccessFunction($arg0), "The method buttonBadgeSuccessFunction() does not return the expected value");
-	}
-
-	/**
-	 * Tests the buttonBadgeWarningFunction() method.
-	 *
-	 * @return void
-	 */
-	public function testButtonBadgeWarningFunction() {
-
-		$obj = new BadgeUITwigExtension();
-
-		$arg0	 = [];
-		$res0	 = '<button class="btn btn-warning btn-block waves-effect" type="button">&nbsp;<span class="badge">&nbsp;</span></button>';
-		$this->assertEquals($res0, $obj->buttonBadgeWarningFunction($arg0), "The method buttonBadgeWarningFunction() does not return the expected value");
-	}
-
-	/**
 	 * Tests the getFunctions() method.
 	 *
 	 * @return void
@@ -164,9 +80,100 @@ final class BadgeUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 	}
 
 	/**
+	 * Tests the buttonBadgeDangerFunction() method.
+	 *
+	 * @return void
+	 * @depends testGetFunctions
+	 */
+	public function testButtonBadgeDangerFunction() {
+
+		$obj = new BadgeUITwigExtension();
+
+		$arg0	 = [];
+		$res0	 = '<button class="btn btn-danger btn-block waves-effect" type="button">&nbsp;<span class="badge">&nbsp;</span></button>';
+		$this->assertEquals($res0, $obj->buttonBadgeDangerFunction($arg0), "The method buttonBadgeDangerFunction() does not return the expected value");
+	}
+
+	/**
+	 * Tests the buttonBadgeDefaultFunction() method.
+	 *
+	 * @return void
+	 * @depends testGetFunctions
+	 */
+	public function testButtonBadgeDefaultFunction() {
+
+		$obj = new BadgeUITwigExtension();
+
+		$arg0	 = [];
+		$res0	 = '<button class="btn btn-default btn-block waves-effect" type="button">&nbsp;<span class="badge">&nbsp;</span></button>';
+		$this->assertEquals($res0, $obj->buttonBadgeDefaultFunction($arg0), "The method buttonBadgeDefaultFunction() does not return the expected value");
+	}
+
+	/**
+	 * Tests the buttonBadgeInfoFunction() method.
+	 *
+	 * @return void
+	 * @depends testGetFunctions
+	 */
+	public function testButtonBadgeInfoFunction() {
+
+		$obj = new BadgeUITwigExtension();
+
+		$arg0	 = [];
+		$res0	 = '<button class="btn btn-info btn-block waves-effect" type="button">&nbsp;<span class="badge">&nbsp;</span></button>';
+		$this->assertEquals($res0, $obj->buttonBadgeInfoFunction($arg0), "The method buttonBadgeInfoFunction() does not return the expected value");
+	}
+
+	/**
+	 * Tests the buttonBadgePrimaryFunction() method.
+	 *
+	 * @return void
+	 * @depends testGetFunctions
+	 */
+	public function testButtonBadgePrimaryFunction() {
+
+		$obj = new BadgeUITwigExtension();
+
+		$arg0	 = [];
+		$res0	 = '<button class="btn btn-primary btn-block waves-effect" type="button">&nbsp;<span class="badge">&nbsp;</span></button>';
+		$this->assertEquals($res0, $obj->buttonBadgePrimaryFunction($arg0), "The method buttonBadgePrimaryFunction() does not return the expected value");
+	}
+
+	/**
+	 * Tests the buttonBadgeSuccessFunction() method.
+	 *
+	 * @return void
+	 * @depends testGetFunctions
+	 */
+	public function testButtonBadgeSuccessFunction() {
+
+		$obj = new BadgeUITwigExtension();
+
+		$arg0	 = [];
+		$res0	 = '<button class="btn btn-success btn-block waves-effect" type="button">&nbsp;<span class="badge">&nbsp;</span></button>';
+		$this->assertEquals($res0, $obj->buttonBadgeSuccessFunction($arg0), "The method buttonBadgeSuccessFunction() does not return the expected value");
+	}
+
+	/**
+	 * Tests the buttonBadgeWarningFunction() method.
+	 *
+	 * @return void
+	 * @depends testGetFunctions
+	 */
+	public function testButtonBadgeWarningFunction() {
+
+		$obj = new BadgeUITwigExtension();
+
+		$arg0	 = [];
+		$res0	 = '<button class="btn btn-warning btn-block waves-effect" type="button">&nbsp;<span class="badge">&nbsp;</span></button>';
+		$this->assertEquals($res0, $obj->buttonBadgeWarningFunction($arg0), "The method buttonBadgeWarningFunction() does not return the expected value");
+	}
+
+	/**
 	 * Tests the listBadgeFunction() method.
 	 *
 	 * @return void
+	 * @depends testGetFunctions
 	 */
 	public function testListBadgeFunction() {
 
@@ -201,6 +208,7 @@ final class BadgeUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 	 * Tests the materialDesignButtonBadgeFunction() method.
 	 *
 	 * @return void
+	 * @depends testGetFunctions
 	 */
 	public function testMaterialDesignButtonBadgeFunction() {
 

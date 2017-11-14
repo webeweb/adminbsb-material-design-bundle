@@ -26,62 +26,6 @@ use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI\AlertUITwigExtensi
 final class AlertUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 
 	/**
-	 * Tests the basicAlertDangerFunction() method.
-	 *
-	 * @return void
-	 */
-	public function testBasicAlertDangerFunction() {
-
-		$obj = new AlertUITwigExtension();
-
-		$arg0	 = [];
-		$res0	 = '<div class="alert alert-danger">&nbsp;</div>';
-		$this->assertEquals($res0, $obj->basicAlertDangerFunction($arg0), "The method basicAlertDangerFunction() does not return the expected value");
-	}
-
-	/**
-	 * Tests the basicAlertInfoFunction() method.
-	 *
-	 * @return void
-	 */
-	public function testBasicAlertInfoFunction() {
-
-		$obj = new AlertUITwigExtension();
-
-		$arg0	 = [];
-		$res0	 = '<div class="alert alert-info">&nbsp;</div>';
-		$this->assertEquals($res0, $obj->basicAlertInfoFunction($arg0), "The method basicAlertInfoFunction() does not return the expected value");
-	}
-
-	/**
-	 * Tests the basicAlertSuccessFunction() method.
-	 *
-	 * @return void
-	 */
-	public function testBasicAlertSuccessFunction() {
-
-		$obj = new AlertUITwigExtension();
-
-		$arg0	 = [];
-		$res0	 = '<div class="alert alert-success">&nbsp;</div>';
-		$this->assertEquals($res0, $obj->basicAlertSuccessFunction($arg0), "The method basicAlertSuccessFunction() does not return the expected value");
-	}
-
-	/**
-	 * Tests the basicAlertWarningFunction() method.
-	 *
-	 * @return void
-	 */
-	public function testBasicAlertWarningFunction() {
-
-		$obj = new AlertUITwigExtension();
-
-		$arg0	 = [];
-		$res0	 = '<div class="alert alert-warning">&nbsp;</div>';
-		$this->assertEquals($res0, $obj->basicAlertWarningFunction($arg0), "The method basicAlertWarningFunction() does not return the expected value");
-	}
-
-	/**
 	 * Tests the getFunctions() method.
 	 *
 	 * @return void
@@ -126,9 +70,70 @@ final class AlertUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 	}
 
 	/**
+	 * Tests the basicAlertDangerFunction() method.
+	 *
+	 * @return void
+	 * @depends testGetFunctions
+	 */
+	public function testBasicAlertDangerFunction() {
+
+		$obj = new AlertUITwigExtension();
+
+		$arg0	 = [];
+		$res0	 = '<div class="alert alert-danger">&nbsp;</div>';
+		$this->assertEquals($res0, $obj->basicAlertDangerFunction($arg0), "The method basicAlertDangerFunction() does not return the expected value");
+	}
+
+	/**
+	 * Tests the basicAlertInfoFunction() method.
+	 *
+	 * @return void
+	 * @depends testGetFunctions
+	 */
+	public function testBasicAlertInfoFunction() {
+
+		$obj = new AlertUITwigExtension();
+
+		$arg0	 = [];
+		$res0	 = '<div class="alert alert-info">&nbsp;</div>';
+		$this->assertEquals($res0, $obj->basicAlertInfoFunction($arg0), "The method basicAlertInfoFunction() does not return the expected value");
+	}
+
+	/**
+	 * Tests the basicAlertSuccessFunction() method.
+	 *
+	 * @return void
+	 * @depends testGetFunctions
+	 */
+	public function testBasicAlertSuccessFunction() {
+
+		$obj = new AlertUITwigExtension();
+
+		$arg0	 = [];
+		$res0	 = '<div class="alert alert-success">&nbsp;</div>';
+		$this->assertEquals($res0, $obj->basicAlertSuccessFunction($arg0), "The method basicAlertSuccessFunction() does not return the expected value");
+	}
+
+	/**
+	 * Tests the basicAlertWarningFunction() method.
+	 *
+	 * @return void
+	 * @depends testGetFunctions
+	 */
+	public function testBasicAlertWarningFunction() {
+
+		$obj = new AlertUITwigExtension();
+
+		$arg0	 = [];
+		$res0	 = '<div class="alert alert-warning">&nbsp;</div>';
+		$this->assertEquals($res0, $obj->basicAlertWarningFunction($arg0), "The method basicAlertWarningFunction() does not return the expected value");
+	}
+
+	/**
 	 * Tests the linkAlertFunction() method.
 	 *
 	 * @return void
+	 * @depends testGetFunctions
 	 */
 	public function testLinkAlertFunction() {
 
@@ -163,6 +168,7 @@ final class AlertUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 	 * Tests the materialDesignAlertFunction() method.
 	 *
 	 * @return void
+	 * @depends testGetFunctions
 	 */
 	public function testMaterialDesignAlertFunction() {
 
