@@ -28,12 +28,23 @@ final class IconUITwigExtension extends AbstractUITwigExtension {
 	const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.ui.icon";
 
 	/**
+	 * Displays a basic icon.
+	 *
+	 * @param array $args The arguments.
+	 * @return string Returns a material design icon.
+	 */
+	public function basicIconFunction(array $args = []) {
+		return $this->icon($this->getArg($args, "name"), $this->getArg($args, "style"));
+	}
+
+	/**
 	 * Get the Twig functions.
 	 *
 	 * @return array Returns the Twig functions.
 	 */
 	public function getFunctions() {
 		return [
+			new Twig_SimpleFunction("basicIcon", [$this, "basicIconFunction"], ["is_safe" => ["html"]]),
 			new Twig_SimpleFunction("materialDesignIcon", [$this, "materialDesignIconFunction"], ["is_safe" => ["html"]]),
 		];
 	}
@@ -45,7 +56,7 @@ final class IconUITwigExtension extends AbstractUITwigExtension {
 	 * @return string Returns a material design icon.
 	 */
 	public function materialDesignIconFunction(array $args = []) {
-		return $this->icon($this->getArg($args, "name"), $this->getColor($this->getArg($args, "color"), "col-"), $this->getArg($args, "style"));
+		return $this->icon($this->getArg($args, "name"), $this->getArg($args, "style"), $this->getColor($this->getArg($args, "color"), "col-"));
 	}
 
 }
