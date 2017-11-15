@@ -90,9 +90,9 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
 		}
 
 		// Initialize the parameters.
-		$_content	 = (!is_null($content) ? $content : self::DEFAULT_CONTENT);
-		$_label		 = (!is_null($label) ? $label : self::DEFAULT_CONTENT);
-		$_link		 = (!is_null($link) ? $link : self::DEFAULT_HREF);
+		$_content	 = !is_null($content) ? $content : self::DEFAULT_CONTENT;
+		$_label		 = !is_null($label) ? $label : self::DEFAULT_CONTENT;
+		$_link		 = !is_null($link) ? $link : self::DEFAULT_HREF;
 
 		// Return the HTML.
 		return $this->replace($template, ["%attributes%", "%content%", "%label%", "%link%"], [StringUtility::parseArray($_attr), $_content, $_label, $_link]);
@@ -124,17 +124,17 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
 		$_attr = [];
 
 		$_attr["class"]			 = ["btn", $class, "waves-effect"];
-		$_attr["class"][]		 = ($block ? "btn-block" : null);
-		$_attr["class"][]		 = ($circle ? "btn-circle" . ($size === "lg" ? "-lg" : "") . " waves-circle waves-float" : null);
-		$_attr["class"][]		 = (!$circle && in_array($size, ["lg", "sm", "xs"]) ? "btn-" . $size : null);
+		$_attr["class"][]		 = $block === true ? "btn-block" : null;
+		$_attr["class"][]		 = $circle === true ? "btn-circle" . ($size === "lg" ? "-lg" : "") . " waves-circle waves-float" : null;
+		$_attr["class"][]		 = $circle !== true && in_array($size, ["lg", "sm", "xs"]) ? "btn-" . $size : null;
 		$_attr["title"]			 = $title;
 		$_attr["type"]			 = "button";
-		$_attr["data-toggle"]	 = (!is_null($title) ? "tooltip" : null);
-		$_attr["disabled"]		 = ($disable ? "disabled" : null);
+		$_attr["data-toggle"]	 = !is_null($title) ? "tooltip" : null;
+		$_attr["disabled"]		 = $disable === true ? "disabled" : null;
 
 		// Handle the parameters.
-		$_content	 = (!is_null($content) ? $content : self::DEFAULT_CONTENT);
-		$_icon		 = (!is_null($icon) ? $this->icon($icon, $style) : "");
+		$_content	 = !is_null($content) ? $content : self::DEFAULT_CONTENT;
+		$_icon		 = !is_null($icon) ? $this->icon($icon, $style) : "";
 
 		// Return the HTML.
 		return $this->replace($template, ["%attributes%", "%icon%", "%content%"], [StringUtility::parseArray($_attr), $_icon, $_content]);
@@ -152,7 +152,7 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
 
 		// Initialize the parameters.
 		$_name	 = $this->getColor($name, "");
-		$_code	 = (!is_null($code) ? $code : "500");
+		$_code	 = !is_null($code) ? $code : "500";
 
 		// Return the HTML.
 		return $output === "hex" ? DefaultColorProvider::getColors()[$_name][$_code] : "col-" . $_name;
@@ -178,7 +178,7 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
 		$_attr["style"]	 = $style;
 
 		// Initialize the parameters.
-		$_name = (!is_null($name) ? $name : "home");
+		$_name = !is_null($name) ? $name : "home";
 
 		// Return the HTML.
 		return $this->replace($template, ["%attributes%", "%name%"], [StringUtility::parseArray($_attr), $_name]);
@@ -202,10 +202,68 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
 		$_attr["class"] = ["label", $class];
 
 		// Initialize the parameters.
-		$_content = (!is_null($content) ? $content : self::DEFAULT_CONTENT);
+		$_content = !is_null($content) ? $content : self::DEFAULT_CONTENT;
 
 		// Return the HTML.
 		return $this->replace($template, ["%attributes%", '%content%'], [StringUtility::parseArray($_attr), $_content]);
+	}
+
+	/**
+	 * Displays a preloader.
+	 *
+	 * @param string $class The preloader class.
+	 * @param string $size The preloader size.
+	 * @return string Returns the preloader.
+	 */
+	protected final function preloader($class, $size) {
+
+		// Initialize the template.
+		$template = '<div %attributes1%><div %attributes2%><div class="circle-clipper left"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>';
+
+		// Initialize the attributes.
+		$_attr = [];
+
+		$_attr["preloader"]["class"] = ["preloader", in_array($size, ["xs", "sm", "l", "xl"]) ? "pl-size-" . $size : null];
+		$_attr["spinner"]["class"]	 = ["spinner-layer", $class];
+
+		// Return the HTML.
+		return $this->replace($template, ["%attributes1%", "%attributes2%"], [StringUtility::parseArray($_attr["preloader"]), StringUtility::parseArray($_attr["spinner"])]);
+	}
+
+	/**
+	 * Displays a progress bar.
+	 *
+	 * @param string $label The progress bar label.
+	 * @param integer $value The progress bar value.
+	 * @param integer $min The progress bar min.
+	 * @param integer $max The progress bar max.
+	 * @param boolean $striped Progress bar striped ?
+	 * @param boolean $animated Progress bar animated ?
+	 * @param string $class The progress bar class.
+	 * @return string Returns the progress bar.
+	 */
+	protected final function progressBar($label, $value, $min, $max, $striped, $animated, $class = null) {
+
+		// Initialize the template.
+		$template = '<div class="progress"><div %attributes%>%label%</div></div>';
+
+		// Initialize the attributes.
+		$_attr = [];
+
+		$_attr["class"]			 = ["progress-bar", $class];
+		$_attr["class"][]		 = $striped === true ? "progress-bar-striped" : null;
+		$_attr["class"][]		 = $animated === true ? "active" : null;
+		$_attr["style"]			 = "width: " . $value . "%;";
+		$_attr["role"]			 = "progressbar";
+		$_attr["aria-valuenow"]	 = $value;
+		$_attr["aria-valuemin"]	 = $min;
+		$_attr["aria-valuemax"]	 = $max . "%";
+
+		// Initialize the parameters.
+		$_label = !is_null($label) ? $label . '<span class="sr-only">' . $value . ' %</span>' : self::DEFAULT_CONTENT;
+
+		// Return the HTML.
+		return $this->replace($template, ["%attributes%", "%label%"], [StringUtility::parseArray($_attr), $_label]);
 	}
 
 }
