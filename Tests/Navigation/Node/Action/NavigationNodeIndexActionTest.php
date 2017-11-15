@@ -32,9 +32,9 @@ final class NavigationNodeIndexActionTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new NavigationNodeIndexAction("route");
 
-		$this->assertEquals("navigation.node.action.index", $obj->getId(), "The method getId() does not return the expecetd value");
-		$this->assertEquals("view_list", $obj->getIcon(), "The method getIcon() does not return the expecetd value");
-		$this->assertEquals("route", $obj->getRoute(), "The method getRoute() does not return the expecetd value");
+		$this->assertEquals("navigation.node.action.index", $obj->getId());
+		$this->assertEquals("view_list", $obj->getIcon());
+		$this->assertEquals("route", $obj->getRoute());
 	}
 
 }

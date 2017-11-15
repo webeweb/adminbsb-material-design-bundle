@@ -33,8 +33,8 @@ final class DefaultDropDownTasksProviderTest extends PHPUnit_Framework_TestCase 
 
 		$obj = new DefaultDropDownTasksProvider();
 
-		$this->assertEquals([], $obj->getTasks(), "The method getTasks() does not return the expected value");
-		$this->assertEquals(DropDownTasksProviderInterface::DEFAULT_TEMPLATE, $obj->getTemplate(), "The method getTemplate() does not return the expected value");
+		$this->assertEquals([], $obj->getTasks());
+		$this->assertEquals(DropDownTasksProviderInterface::DEFAULT_TEMPLATE, $obj->getTemplate());
 	}
 
 }

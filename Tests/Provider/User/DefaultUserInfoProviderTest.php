@@ -33,9 +33,9 @@ final class DefaultUserInfoProviderTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new DefaultUserInfoProvider();
 
-		$this->assertEquals(UserInfoProviderInterface::DEFAULT_TEMPLATE, $obj->getTemplate(), "The method getTemplate() does not return the expected value");
-		$this->assertEquals(false, $obj->provideRegisterLink(), "The method provideRegisterLink() does not return the expected value");
-		$this->assertEquals(false, $obj->provideResettingLink(), "The method provideResettingLink() does not return the expected value");
+		$this->assertEquals(UserInfoProviderInterface::DEFAULT_TEMPLATE, $obj->getTemplate());
+		$this->assertEquals(false, $obj->provideRegisterLink());
+		$this->assertEquals(false, $obj->provideResettingLink());
 	}
 
 }

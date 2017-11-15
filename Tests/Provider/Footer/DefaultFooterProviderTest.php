@@ -33,7 +33,7 @@ final class DefaultFooterProviderTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new DefaultFooterProvider();
 
-		$this->assertEquals(FooterProviderInterface::DEFAULT_TEMPLATE, $obj->getTemplate(), "The method getTemplate() does not return the expected value");
+		$this->assertEquals(FooterProviderInterface::DEFAULT_TEMPLATE, $obj->getTemplate());
 	}
 
 }

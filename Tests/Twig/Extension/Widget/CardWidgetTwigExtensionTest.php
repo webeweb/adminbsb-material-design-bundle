@@ -36,12 +36,12 @@ final class CardWidgetTwigExtensionTest extends PHPUnit_Framework_TestCase {
 
 		$res = $obj->getFunctions();
 
-		$this->assertCount(1, $res, "The method getFunctions() does not return the expected count");
+		$this->assertCount(1, $res);
 
-		$this->assertInstanceOf(Twig_SimpleFunction::class, $res[0], "The method getFunctions() does not return the expected object on item 0");
-		$this->assertEquals("cardHeader", $res[0]->getName(), "The method getName() does not return the expected name on item 0");
-		$this->assertEquals([$obj, "cardHeaderFunction"], $res[0]->getCallable(), "The method getCallable() does not return the expected callable on item 0");
-		$this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 0");
+		$this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
+		$this->assertEquals("cardHeader", $res[0]->getName());
+		$this->assertEquals([$obj, "cardHeaderFunction"], $res[0]->getCallable());
+		$this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
 	}
 
 	/**
@@ -56,23 +56,23 @@ final class CardWidgetTwigExtensionTest extends PHPUnit_Framework_TestCase {
 
 		$arg0	 = [];
 		$res0	 = '<h2 class="card-header">&nbsp;</h2>';
-		$this->assertEquals($res0, $obj->cardHeaderFunction($arg0), "The method cardHeaderFunction() does not return the expecetd value");
+		$this->assertEquals($res0, $obj->cardHeaderFunction($arg0));
 
 		$arg1	 = ["content" => "content"];
 		$res1	 = '<h2 class="card-header">content</h2>';
-		$this->assertEquals($res1, $obj->cardHeaderFunction($arg1), "The method cardHeaderFunction() does not return the expecetd value with content");
+		$this->assertEquals($res1, $obj->cardHeaderFunction($arg1));
 
 		$arg2	 = ["description" => "description"];
 		$res2	 = '<h2 class="card-header">&nbsp;<small>description</small></h2>';
-		$this->assertEquals($res2, $obj->cardHeaderFunction($arg2), "The method cardHeaderFunction() does not return the expecetd value with description");
+		$this->assertEquals($res2, $obj->cardHeaderFunction($arg2));
 
 		$arg3	 = ["icon" => "person"];
 		$res3	 = '<h2 class="card-header"><i class="material-icons" style="margin: -4px 0; vertical-align: sub;">person</i>&nbsp;</h2>';
-		$this->assertEquals($res3, $obj->cardHeaderFunction($arg3), "The method cardHeaderFunction() does not return the expecetd value with icon");
+		$this->assertEquals($res3, $obj->cardHeaderFunction($arg3));
 
 		$arg9	 = ["content" => "content", "description" => "description", "icon" => "person"];
 		$res9	 = '<h2 class="card-header"><i class="material-icons" style="margin: -4px 0; vertical-align: sub;">person</i>content<small>description</small></h2>';
-		$this->assertEquals($res9, $obj->cardHeaderFunction($arg9), "The method cardHeaderFunction() does not return the expecetd value with content, description and icon");
+		$this->assertEquals($res9, $obj->cardHeaderFunction($arg9));
 	}
 
 }

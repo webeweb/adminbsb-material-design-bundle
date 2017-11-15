@@ -33,7 +33,7 @@ final class DefaultSearchProviderTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new DefaultSearchProvider();
 
-		$this->assertEquals(SearchProviderInterface::DEFAULT_TEMPLATE, $obj->getTemplate(), "The method getTemplate() does not return the expected value");
+		$this->assertEquals(SearchProviderInterface::DEFAULT_TEMPLATE, $obj->getTemplate());
 	}
 
 }

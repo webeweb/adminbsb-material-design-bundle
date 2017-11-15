@@ -36,12 +36,12 @@ final class ColorUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 
 		$res = $obj->getFunctions();
 
-		$this->assertCount(1, $res, "The method getFunctions() does not return the expected count");
+		$this->assertCount(1, $res);
 
-		$this->assertInstanceOf(Twig_SimpleFunction::class, $res[0], "The method getFunctions() does not return the expected object on item 0");
-		$this->assertEquals("materialDesignColor", $res[0]->getName(), "The method getName() does not return the expected name on item 0");
-		$this->assertEquals([$obj, "materialDesignColorFunction"], $res[0]->getCallable(), "The method getCallable() does not return the expected callable on item 0");
-		$this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 0");
+		$this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
+		$this->assertEquals("materialDesignColor", $res[0]->getName());
+		$this->assertEquals([$obj, "materialDesignColorFunction"], $res[0]->getCallable());
+		$this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
 	}
 
 	/**
@@ -56,19 +56,19 @@ final class ColorUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 
 		$arg0	 = [];
 		$res0	 = "col-red";
-		$this->assertEquals($res0, $service->materialDesignColorFunction($arg0), "The mesthod materialDesignColorFunction() does not return the expected value");
+		$this->assertEquals($res0, $service->materialDesignColorFunction($arg0));
 
 		$arg1	 = ["out" => "hex"];
 		$res1	 = "#F44336";
-		$this->assertEquals($res1, $service->materialDesignColorFunction($arg1), "The method materialDesignColorFunction() does not return the expected value with name");
+		$this->assertEquals($res1, $service->materialDesignColorFunction($arg1));
 
 		$arg2	 = ["name" => "black"];
 		$res2	 = "col-black";
-		$this->assertEquals($res2, $service->materialDesignColorFunction($arg2), "The method materialDesignColorFunction() does not return the expected value with name and code");
+		$this->assertEquals($res2, $service->materialDesignColorFunction($arg2));
 
 		$arg9	 = ["name" => "black", "code" => "500", "out" => "hex"];
 		$res9	 = "#000000";
-		$this->assertEquals($res9, $service->materialDesignColorFunction($arg9), "The method materialDesignColorFunction() does not return the expected value with name, color and style");
+		$this->assertEquals($res9, $service->materialDesignColorFunction($arg9));
 	}
 
 }

@@ -32,9 +32,9 @@ final class NavigationNodeUserGroupTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new NavigationNodeUserGroup("route");
 
-		$this->assertEquals("navigation.node.userGroup", $obj->getId(), "The method getId() does not return the expecetd value");
-		$this->assertEquals("group", $obj->getIcon(), "The method getIcon() does not return the expecetd value");
-		$this->assertEquals("route", $obj->getRoute(), "The method getRoute() does not return the expecetd value");
+		$this->assertEquals("navigation.node.userGroup", $obj->getId());
+		$this->assertEquals("group", $obj->getIcon());
+		$this->assertEquals("route", $obj->getRoute());
 	}
 
 }

@@ -32,9 +32,9 @@ final class NavigationNodeEventTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new NavigationNodeEvent("route");
 
-		$this->assertEquals("navigation.node.event", $obj->getId(), "The method getId() does not return the expecetd value");
-		$this->assertEquals("event", $obj->getIcon(), "The method getIcon() does not return the expecetd value");
-		$this->assertEquals("route", $obj->getRoute(), "The method getRoute() does not return the expecetd value");
+		$this->assertEquals("navigation.node.event", $obj->getId());
+		$this->assertEquals("event", $obj->getIcon());
+		$this->assertEquals("route", $obj->getRoute());
 	}
 
 }

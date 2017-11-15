@@ -32,9 +32,9 @@ final class NavigationNodeImportActionTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new NavigationNodeImportAction("route");
 
-		$this->assertEquals("navigation.node.action.import", $obj->getId(), "The method getId() does not return the expecetd value");
-		$this->assertEquals("file_download", $obj->getIcon(), "The method getIcon() does not return the expecetd value");
-		$this->assertEquals("route", $obj->getRoute(), "The method getRoute() does not return the expecetd value");
+		$this->assertEquals("navigation.node.action.import", $obj->getId());
+		$this->assertEquals("file_download", $obj->getIcon());
+		$this->assertEquals("route", $obj->getRoute());
 	}
 
 }

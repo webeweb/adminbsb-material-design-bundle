@@ -33,8 +33,8 @@ final class DefaultDropDownNotificationsProviderTest extends PHPUnit_Framework_T
 
 		$obj = new DefaultDropDownNotificationsProvider();
 
-		$this->assertEquals([], $obj->getNotifications(), "The method getNotifications() does not return the expected value");
-		$this->assertEquals(DropDownNotificationsProviderInterface::DEFAULT_TEMPLATE, $obj->getTemplate(), "The method getTemplate() does not return the expected value");
+		$this->assertEquals([], $obj->getNotifications());
+		$this->assertEquals(DropDownNotificationsProviderInterface::DEFAULT_TEMPLATE, $obj->getTemplate());
 	}
 
 }

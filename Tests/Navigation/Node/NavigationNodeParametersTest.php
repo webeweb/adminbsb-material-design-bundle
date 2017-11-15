@@ -32,9 +32,9 @@ final class NavigationNodeParametersTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new NavigationNodeParameters("route");
 
-		$this->assertEquals("navigation.node.parameters", $obj->getId(), "The method getId() does not return the expecetd value");
-		$this->assertEquals("build", $obj->getIcon(), "The method getIcon() does not return the expecetd value");
-		$this->assertEquals("route", $obj->getRoute(), "The method getRoute() does not return the expecetd value");
+		$this->assertEquals("navigation.node.parameters", $obj->getId());
+		$this->assertEquals("build", $obj->getIcon());
+		$this->assertEquals("route", $obj->getRoute());
 	}
 
 }

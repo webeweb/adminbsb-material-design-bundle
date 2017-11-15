@@ -33,8 +33,8 @@ final class DefaultDropDownHookProviderTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new DefaultDropDownHookProvider();
 
-		$this->assertEquals([], $obj->getItems(), "The method getItems() does not return the expected value");
-		$this->assertEquals(DropDownHookProviderInterface::DEFAULT_TEMPLATE, $obj->getTemplate(), "The method getTemplate() does not return the expected value");
+		$this->assertEquals([], $obj->getItems());
+		$this->assertEquals(DropDownHookProviderInterface::DEFAULT_TEMPLATE, $obj->getTemplate());
 	}
 
 }

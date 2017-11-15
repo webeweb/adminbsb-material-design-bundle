@@ -32,13 +32,13 @@ final class DefaultApplicationProviderTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new DefaultApplicationProvider();
 
-		$this->assertEquals("AdminBSB Material Design", $obj->getDescription(), "The method getDescription() does not return the expected value");
-		$this->assertEquals("/", $obj->getHome(), "The method getHome() does not return the expected value");
-		$this->assertEquals("AdminBSB<b>MaterialDesign</b>", $obj->getName(), "The method getName() does not return the expected value");
-		$this->assertEquals("/", $obj->getRoute(), "The method getRoute() does not return the expected value");
-		$this->assertEquals("AdminBSB Material Design", $obj->getTitle(), "The method getTitle() does not return the expected value");
-		$this->assertEquals("~1.0@dev", $obj->getVersion(), "The method getVersion() does not return the expected value");
-		$this->assertEquals("2017", $obj->getYear(), "The method getYear() does not return the expected value");
+		$this->assertEquals("AdminBSB Material Design", $obj->getDescription());
+		$this->assertEquals("/", $obj->getHome());
+		$this->assertEquals("AdminBSB<b>MaterialDesign</b>", $obj->getName());
+		$this->assertEquals("/", $obj->getRoute());
+		$this->assertEquals("AdminBSB Material Design", $obj->getTitle());
+		$this->assertEquals("~1.0@dev", $obj->getVersion());
+		$this->assertEquals("2017", $obj->getYear());
 	}
 
 }

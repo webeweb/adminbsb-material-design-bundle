@@ -32,9 +32,9 @@ final class NavigationNodeNewActionTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new NavigationNodeNewAction("route");
 
-		$this->assertEquals("navigation.node.action.new", $obj->getId(), "The method getId() does not return the expecetd value");
-		$this->assertEquals("add_circle_outline", $obj->getIcon(), "The method getIcon() does not return the expecetd value");
-		$this->assertEquals("route", $obj->getRoute(), "The method getRoute() does not return the expecetd value");
+		$this->assertEquals("navigation.node.action.new", $obj->getId());
+		$this->assertEquals("add_circle_outline", $obj->getIcon());
+		$this->assertEquals("route", $obj->getRoute());
 	}
 
 }

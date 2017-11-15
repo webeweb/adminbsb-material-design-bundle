@@ -33,7 +33,7 @@ final class DefaultBreadcrumbsProviderTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new DefaultBreadcrumbsProvider();
 
-		$this->assertEquals(BreadcrumbsProviderInterface::DEFAULT_TEMPLATE, $obj->getTemplate(), "The method getTemplate() does not return the expected value");
+		$this->assertEquals(BreadcrumbsProviderInterface::DEFAULT_TEMPLATE, $obj->getTemplate());
 	}
 
 }
