@@ -31,7 +31,7 @@ final class IconUITwigExtension extends AbstractUITwigExtension {
 	 * Displays a basic icon.
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns a material design icon.
+	 * @return string Returns the material design icon.
 	 */
 	public function basicIconFunction(array $args = []) {
 		return $this->icon($this->getArg($args, "name"), $this->getArg($args, "style"));
@@ -53,7 +53,7 @@ final class IconUITwigExtension extends AbstractUITwigExtension {
 	 * Displays a material design icon.
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns a material design icon.
+	 * @return string Returns the material design icon.
 	 */
 	public function materialDesignIconFunction(array $args = []) {
 		return $this->icon($this->getArg($args, "name"), $this->getArg($args, "style"), $this->getColor($this->getArg($args, "color"), "col-"));

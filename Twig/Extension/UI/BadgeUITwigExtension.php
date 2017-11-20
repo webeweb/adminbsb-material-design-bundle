@@ -31,7 +31,7 @@ final class BadgeUITwigExtension extends AbstractUITwigExtension {
 	 * Displays a button badge "Danger".
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns a button badge "Danger".
+	 * @return string Returns the button badge "Danger".
 	 */
 	public function buttonBadgeDangerFunction(array $args = []) {
 		return $this->badge($this->getArg($args, "content"), $this->getArg($args, "label"), $this->getArg($args, "large", false), "btn-danger");
@@ -41,7 +41,7 @@ final class BadgeUITwigExtension extends AbstractUITwigExtension {
 	 * Displays a button badge "Default".
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns a button badge "Default".
+	 * @return string Returns the button badge "Default".
 	 */
 	public function buttonBadgeDefaultFunction(array $args = []) {
 		return $this->badge($this->getArg($args, "content"), $this->getArg($args, "label"), $this->getArg($args, "large", false), "btn-default");
@@ -51,7 +51,7 @@ final class BadgeUITwigExtension extends AbstractUITwigExtension {
 	 * Displays a button badge "Info".
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns a button badge "Info".
+	 * @return string Returns the button badge "Info".
 	 */
 	public function buttonBadgeInfoFunction(array $args = []) {
 		return $this->badge($this->getArg($args, "content"), $this->getArg($args, "label"), $this->getArg($args, "large", false), "btn-info");
@@ -61,7 +61,7 @@ final class BadgeUITwigExtension extends AbstractUITwigExtension {
 	 * Displays a button badge "Primary".
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns a button badge "Primary".
+	 * @return string Returns the button badge "Primary".
 	 */
 	public function buttonBadgePrimaryFunction(array $args = []) {
 		return $this->badge($this->getArg($args, "content"), $this->getArg($args, "label"), $this->getArg($args, "large", false), "btn-primary");
@@ -71,7 +71,7 @@ final class BadgeUITwigExtension extends AbstractUITwigExtension {
 	 * Displays a button badge "Success".
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns a button badge "Success".
+	 * @return string Returns the button badge "Success".
 	 */
 	public function buttonBadgeSuccessFunction(array $args = []) {
 		return $this->badge($this->getArg($args, "content"), $this->getArg($args, "label"), $this->getArg($args, "large", false), "btn-success");
@@ -81,7 +81,7 @@ final class BadgeUITwigExtension extends AbstractUITwigExtension {
 	 * Displays a button badge "Warning".
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns a button badge "Warning".
+	 * @return string Returns the button badge "Warning".
 	 */
 	public function buttonBadgeWarningFunction(array $args = []) {
 		return $this->badge($this->getArg($args, "content"), $this->getArg($args, "label"), $this->getArg($args, "large", false), "btn-warning");
@@ -109,7 +109,7 @@ final class BadgeUITwigExtension extends AbstractUITwigExtension {
 	 * Displays a list badge.
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns a list badge.
+	 * @return string Returns the list badge.
 	 */
 	public function listBadgeFunction(array $args = []) {
 		return $this->badge($this->getArg($args, "content"), $this->getArg($args, "label"), false, $this->getColor($this->getArg($args, "color", "red"), "bg-"), true, $this->getArg($args, "link"));
@@ -119,7 +119,7 @@ final class BadgeUITwigExtension extends AbstractUITwigExtension {
 	 * Displays a material design button badge.
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns a material design button badge.
+	 * @return string Returns the material design button badge.
 	 */
 	public function materialDesignButtonBadgeFunction(array $args = []) {
 		return $this->badge($this->getArg($args, "content"), $this->getArg($args, "label"), $this->getArg($args, "large", false), $this->getColor($this->getArg($args, "color", "red"), "bg-"));

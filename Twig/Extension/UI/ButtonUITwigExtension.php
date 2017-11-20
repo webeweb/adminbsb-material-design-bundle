@@ -32,7 +32,7 @@ final class ButtonUITwigExtension extends AbstractUITwigExtension {
 	 * Displays a button "Danger".
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns a button "Danger".
+	 * @return string Returns the button "Danger".
 	 */
 	public function buttonDangerFunction(array $args = []) {
 		return $this->button($this->getArg($args, "content"), $this->getArg($args, "title"), $this->getArg($args, "size", false), $this->getArg($args, "block", false), $this->getArg($args, "disable", false), "btn-danger", $this->getArg($args, "icon"), $this->getArg($args, "circle", false));
@@ -42,7 +42,7 @@ final class ButtonUITwigExtension extends AbstractUITwigExtension {
 	 * Displays a button "Default".
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns a button "Default".
+	 * @return string Returns the button "Default".
 	 */
 	public function buttonDefaultFunction(array $args = []) {
 		return $this->button($this->getArg($args, "content"), $this->getArg($args, "title"), $this->getArg($args, "size", false), $this->getArg($args, "block", false), $this->getArg($args, "disable", false), "btn-default", $this->getArg($args, "icon"), $this->getArg($args, "circle", false));
@@ -52,7 +52,7 @@ final class ButtonUITwigExtension extends AbstractUITwigExtension {
 	 * Displays a button "Info".
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns a button "Info".
+	 * @return string Returns the button "Info".
 	 */
 	public function buttonInfoFunction(array $args = []) {
 		return $this->button($this->getArg($args, "content"), $this->getArg($args, "title"), $this->getArg($args, "size", false), $this->getArg($args, "block", false), $this->getArg($args, "disable", false), "btn-info", $this->getArg($args, "icon"), $this->getArg($args, "circle", false));
@@ -62,7 +62,7 @@ final class ButtonUITwigExtension extends AbstractUITwigExtension {
 	 * Displays a button "Primary".
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns a button "Primary".
+	 * @return string Returns the button "Primary".
 	 */
 	public function buttonPrimaryFunction(array $args = []) {
 		return $this->button($this->getArg($args, "content"), $this->getArg($args, "title"), $this->getArg($args, "size", false), $this->getArg($args, "block", false), $this->getArg($args, "disable", false), "btn-primary", $this->getArg($args, "icon"), $this->getArg($args, "circle", false));
@@ -72,7 +72,7 @@ final class ButtonUITwigExtension extends AbstractUITwigExtension {
 	 * Displays a button "Success".
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns a button "Success".
+	 * @return string Returns the button "Success".
 	 */
 	public function buttonSuccessFunction(array $args = []) {
 		return $this->button($this->getArg($args, "content"), $this->getArg($args, "title"), $this->getArg($args, "size", false), $this->getArg($args, "block", false), $this->getArg($args, "disable", false), "btn-success", $this->getArg($args, "icon"), $this->getArg($args, "circle", false));
@@ -82,7 +82,7 @@ final class ButtonUITwigExtension extends AbstractUITwigExtension {
 	 * Displays a button "Warning".
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns a button "Warning".
+	 * @return string Returns the button "Warning".
 	 */
 	public function buttonWarningFunction(array $args = []) {
 		return $this->button($this->getArg($args, "content"), $this->getArg($args, "title"), $this->getArg($args, "size", false), $this->getArg($args, "block", false), $this->getArg($args, "disable", false), "btn-warning", $this->getArg($args, "icon"), $this->getArg($args, "circle", false));
@@ -130,7 +130,7 @@ final class ButtonUITwigExtension extends AbstractUITwigExtension {
 	 * Displays a material design button.
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns a material design button.
+	 * @return string Returns the material design button.
 	 */
 	public function materialDesignButtonFunction(array $args = []) {
 		return $this->button($this->getArg($args, "content"), $this->getArg($args, "title"), $this->getArg($args, "size", false), $this->getArg($args, "block", false), $this->getArg($args, "disable", false), $this->getColor($this->getArg($args, "color", "red"), "bg-"), $this->getArg($args, "icon"), $this->getArg($args, "circle", false));

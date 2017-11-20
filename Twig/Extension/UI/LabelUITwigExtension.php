@@ -45,60 +45,60 @@ final class LabelUITwigExtension extends AbstractUITwigExtension {
 	}
 
 	/**
-	 * Displays a label Danger.
+	 * Displays a label "Danger".
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns a label Danger.
+	 * @return string Returns the label "Danger".
 	 */
 	public function labelDangerFunction(array $args = []) {
 		return $this->label($this->getArg($args, "content"), "label-danger");
 	}
 
 	/**
-	 * Displays a label Default.
+	 * Displays a label "Default".
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns a label Default.
+	 * @return string Returns the label "Default".
 	 */
 	public function labelDefaultFunction(array $args = []) {
 		return $this->label($this->getArg($args, "content"), "label-default");
 	}
 
 	/**
-	 * Displays a label Info.
+	 * Displays a label "Info".
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns a label Info.
+	 * @return string Returns the label "Info".
 	 */
 	public function labelInfoFunction(array $args = []) {
 		return $this->label($this->getArg($args, "content"), "label-info");
 	}
 
 	/**
-	 * Displays a label Primary.
+	 * Displays a label "Primary".
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns a label Primary.
+	 * @return string Returns the label "Primary".
 	 */
 	public function labelPrimaryFunction(array $args = []) {
 		return $this->label($this->getArg($args, "content"), "label-primary");
 	}
 
 	/**
-	 * Displays a label Success.
+	 * Displays a label "Success".
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns a label Success.
+	 * @return string Returns the label "Success".
 	 */
 	public function labelSuccessFunction(array $args = []) {
 		return $this->label($this->getArg($args, "content"), "label-success");
 	}
 
 	/**
-	 * Displays a label Warning.
+	 * Displays a label "Warning".
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns a label Warning.
+	 * @return string Returns the label "Warning".
 	 */
 	public function labelWarningFunction(array $args = []) {
 		return $this->label($this->getArg($args, "content"), "label-warning");
@@ -108,7 +108,7 @@ final class LabelUITwigExtension extends AbstractUITwigExtension {
 	 * Displays a material design label.
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns a material design label.
+	 * @return string Returns the material design label.
 	 */
 	public function materialDesignLabelFunction(array $args = []) {
 		return $this->label($this->getArg($args, "content"), $this->getColor($this->getArg($args, "color", "red"), "bg-"));

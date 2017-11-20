@@ -205,7 +205,7 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
 		$_content = !is_null($content) ? $content : self::DEFAULT_CONTENT;
 
 		// Return the HTML.
-		return $this->replace($template, ["%attributes%", '%content%'], [StringUtility::parseArray($_attr), $_content]);
+		return $this->replace($template, ["%attributes%", "%content%"], [StringUtility::parseArray($_attr), $_content]);
 	}
 
 	/**

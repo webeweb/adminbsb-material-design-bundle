@@ -25,7 +25,7 @@ final class ProgressBarUITwigExtension extends AbstractUITwigExtension {
 	/**
 	 * Service name.
 	 */
-	const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.ui.progress-bar";
+	const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.ui.progressbar";
 
 	/**
 	 * Displays a basic progress bar.
@@ -64,40 +64,40 @@ final class ProgressBarUITwigExtension extends AbstractUITwigExtension {
 	}
 
 	/**
-	 * Displays a progress bar Danger.
+	 * Displays a progress bar "Danger".
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns the progress bar Danger.
+	 * @return string Returns the progress bar "Danger".
 	 */
 	public function progressBarDangerFunction(array $args = []) {
 		return $this->progressBar($this->getArg($args, "content"), $this->getArg($args, "value", 50), $this->getArg($args, "min", 0), $this->getArg($args, "max", 100), $this->getArg($args, "striped", false), $this->getArg($args, "animated", false), "progress-bar-danger");
 	}
 
 	/**
-	 * Displays a progress bar Info.
+	 * Displays a progress bar "Info".
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns the progress bar Info.
+	 * @return string Returns the progress bar "Info".
 	 */
 	public function progressBarInfoFunction(array $args = []) {
 		return $this->progressBar($this->getArg($args, "content"), $this->getArg($args, "value", 50), $this->getArg($args, "min", 0), $this->getArg($args, "max", 100), $this->getArg($args, "striped", false), $this->getArg($args, "animated", false), "progress-bar-info");
 	}
 
 	/**
-	 * Displays a progress bar Success.
+	 * Displays a progress bar "Success".
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns the progress bar Success.
+	 * @return string Returns the progress bar "Success".
 	 */
 	public function progressBarSuccessFunction(array $args = []) {
 		return $this->progressBar($this->getArg($args, "content"), $this->getArg($args, "value", 50), $this->getArg($args, "min", 0), $this->getArg($args, "max", 100), $this->getArg($args, "striped", false), $this->getArg($args, "animated", false), "progress-bar-success");
 	}
 
 	/**
-	 * Displays a progress bar Warning.
+	 * Displays a progress bar "Warning".
 	 *
 	 * @param array $args The arguments.
-	 * @return string Returns the progress bar Warning.
+	 * @return string Returns the progress bar "Warning".
 	 */
 	public function progressBarWarningFunction(array $args = []) {
 		return $this->progressBar($this->getArg($args, "content"), $this->getArg($args, "value", 50), $this->getArg($args, "min", 0), $this->getArg($args, "max", 100), $this->getArg($args, "striped", false), $this->getArg($args, "animated", false), "progress-bar-warning");
