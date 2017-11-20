@@ -20,6 +20,6 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  * @package WBW\Bundle\AdminBSBMaterialDesignBundle
  * @final
  */
-final class AdminBSBMaterialDesignBundle extends Bundle {
+final class ABSBMDBundle extends Bundle {
 
 }
