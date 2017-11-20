@@ -1,0 +1,72 @@
+# Resources/config/services.yml
+services:
+
+  webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.form.checkbox:
+    class: WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Form\CheckboxFormTwigExtension
+    tags:
+      - { name: twig.extension }
+
+  webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.form.radiobutton:
+    class: WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Form\RadioButtonFormTwigExtension
+    tags:
+      - { name: twig.extension }
+
+  webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.form.switchbutton:
+    class: WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Form\SwitchButtonFormTwigExtension
+    tags:
+      - { name: twig.extension }
+
+  webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.typography.heading:
+    class: WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Typography\HeadingTypographyTwigExtension
+    tags:
+      - { name: twig.extension }
+
+  webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.ui.alert:
+    class: WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI\AlertUITwigExtension
+    tags:
+      - { name: twig.extension }
+
+  webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.ui.badge:
+    class: WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI\BadgeUITwigExtension
+    tags:
+      - { name: twig.extension }
+
+  webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.ui.color:
+    class: WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI\ColorUITwigExtension
+    tags:
+      - { name: twig.extension }
+
+  webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.ui.button:
+    class: WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI\ButtonUITwigExtension
+    tags:
+      - { name: twig.extension }
+
+  webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.ui.icon:
+    class: WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI\IconUITwigExtension
+    tags:
+      - { name: twig.extension }
+
+  webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.ui.label:
+    class: WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI\LabelUITwigExtension
+    tags:
+      - { name: twig.extension }
+
+  webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.ui.modal:
+    class: WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI\ModalUITwigExtension
+    tags:
+      - { name: twig.extension }
+
+  webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.ui.preloader:
+    class: WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI\PreloaderUITwigExtension
+    tags:
+      - { name: twig.extension }
+
+  webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.ui.progressbar:
+    class: WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI\ProgressBarUITwigExtension
+    tags:
+      - { name: twig.extension }
+
+  webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.widget.card:
+    class: WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Widget\CardWidgetTwigExtension
+    tags:
+      - { name: twig.extension }
