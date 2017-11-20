@@ -34,7 +34,7 @@ final class CheckboxFormTwigExtension extends AbstractFormTwigExtension {
 	 * @return string Returns the basic checkbox.
 	 */
 	public function basicCheckboxFunction(array $args = []) {
-		return $this->checkbox($this->getArg($args, "content"), $this->getArg($args, "name"), $this->getArg($args, "id"), $this->getArg($args, "checked", false), $this->getArg($args, "disabled", false), $this->getArg($args, "filled-in", false), $this->getArg($args, "class"));
+		return $this->checkbox($this->getArg($args, "content"), $this->getArg($args, "name"), $this->getArg($args, "id"), $this->getArg($args, "checked", false), $this->getArg($args, "disabled", false), $this->getArg($args, "filledIn", false), $this->getArg($args, "class"));
 	}
 
 	/**
@@ -56,7 +56,7 @@ final class CheckboxFormTwigExtension extends AbstractFormTwigExtension {
 	 * @return string Returns the material design checkbox.
 	 */
 	public function materialDesignCheckboxFunction(array $args = []) {
-		return $this->checkbox($this->getArg($args, "content"), $this->getArg($args, "name"), $this->getArg($args, "id"), $this->getArg($args, "checked", false), $this->getArg($args, "disabled", false), $this->getArg($args, "filled-in", false), $this->getArg($args, "class", "") . $this->getColor($this->getArg($args, "color", "red"), " chk-col-"));
+		return $this->checkbox($this->getArg($args, "content"), $this->getArg($args, "name"), $this->getArg($args, "id"), $this->getArg($args, "checked", false), $this->getArg($args, "disabled", false), $this->getArg($args, "filledIn", false), $this->getArg($args, "class", "") . $this->getColor($this->getArg($args, "color", "red"), " chk-col-"));
 	}
 
 }

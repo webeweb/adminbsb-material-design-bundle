@@ -17,7 +17,7 @@ use Twig_SimpleFunction;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Form\CheckboxFormTwigExtension;
 
 /**
- * CheckboxFormTwigExtensionTest
+ * Checkbox form Twig extension test.
  *
  * @author NdC/WBW <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Twig\Extension\Form
@@ -98,7 +98,7 @@ final class CheckboxFormTwigExtensionTest extends PHPUnit_Framework_TestCase {
 		$res5	 = '<input class="chk-col-red" type="checkbox" disabled="disabled"><label for="">&nbsp;</label>';
 		$this->assertEquals($res5, $obj->materialDesignCheckboxFunction($arg5));
 
-		$arg6	 = ["filled-in" => true];
+		$arg6	 = ["filledIn" => true];
 		$res6	 = '<input class="filled-in chk-col-red" type="checkbox"><label for="">&nbsp;</label>';
 		$this->assertEquals($res6, $obj->materialDesignCheckboxFunction($arg6));
 
@@ -110,7 +110,7 @@ final class CheckboxFormTwigExtensionTest extends PHPUnit_Framework_TestCase {
 		$res8	 = '<input class="chk-col-black" type="checkbox"><label for="">&nbsp;</label>';
 		$this->assertEquals($res8, $obj->materialDesignCheckboxFunction($arg8));
 
-		$arg9	 = ["content" => "content", "name" => "name", "id" => "id", "checked" => true, "disabled" => true, "filled-in" => true, "class" => "class", "color" => "black"];
+		$arg9	 = ["content" => "content", "name" => "name", "id" => "id", "checked" => true, "disabled" => true, "filledIn" => true, "class" => "class", "color" => "black"];
 		$res9	 = '<input class="filled-in class chk-col-black" name="name" type="checkbox" id="id" checked="checked" disabled="disabled"><label for="id">content</label>';
 		$this->assertEquals($res9, $obj->materialDesignCheckboxFunction($arg9));
 	}
