@@ -1,6 +1,6 @@
 <?php
 
-/*
+/**
  * This file is part of the adminbsb-material-design-bundle package.
  *
  * (c) 2017 NdC/WBW
@@ -120,6 +120,7 @@ final class ButtonUITwigExtension extends AbstractUITwigExtension {
 	 * Displays a link button.
 	 *
 	 * @param string $button The button.
+	 * @param string $link The link.
 	 * @return string Returns the link button.
 	 */
 	public function linkButtonFilter($button, $link = self::DEFAULT_HREF) {
