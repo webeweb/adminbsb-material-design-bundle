@@ -27,7 +27,7 @@ interface BreadcrumbsProviderInterface {
 	/**
 	 * Service name.
 	 */
-	const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.provider.breadcrumb";
+	const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.provider.breadcrumbs";
 
 	/**
 	 * Get the template.
