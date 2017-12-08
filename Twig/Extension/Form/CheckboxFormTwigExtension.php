@@ -23,7 +23,7 @@ use Twig_SimpleFunction;
 final class CheckboxFormTwigExtension extends AbstractFormTwigExtension {
 
 	/**
-	 * Checkbox form Twig extension service name.
+	 * Service name.
 	 */
 	const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.form.checkbox";
 
