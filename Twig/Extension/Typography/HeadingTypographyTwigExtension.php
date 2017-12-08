@@ -23,7 +23,7 @@ use Twig_SimpleFunction;
 final class HeadingTypographyTwigExtension extends AbstractTypographyTwigExtension {
 
 	/**
-	 * Heading typography Twig extension service name.
+	 * Service name.
 	 */
 	const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.typography.heading";
 
