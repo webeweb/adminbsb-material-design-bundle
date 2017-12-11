@@ -1,6 +1,19 @@
 # Resources/config/services.yml
 services:
 
+  webeweb.bundle.adminbsb-materialdesignbundle.provider.setter:
+    class: WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Setter\ProvidersSetter
+    arguments: ["@twig"]
+    calls:
+      - [setApplicationProvider, ["@?webeweb.bundle.adminbsbmaterialdesignbundle.provider.application"]]
+      - [setBreadcrumbsProvider, ["@?webeweb.bundle.adminbsbmaterialdesignbundle.provider.breadcrumbs"]]
+      - [setDropDownHookProvider, ["@?webeweb.bundle.adminbsbmaterialdesignbundle.provider.drop_down_hook"]]
+      - [setDropDownNotificationsProvider, ["@?webeweb.bundle.adminbsbmaterialdesignbundle.provider.drop_down_notifications"]]
+      - [setDropDownTasksProvider, ["@?webeweb.bundle.adminbsbmaterialdesignbundle.provider.drop_down_tasks"]]
+      - [setFooterProvider, ["@?webeweb.bundle.adminbsbmaterialdesignbundle.provider.footer"]]
+      - [setSearchProvider, ["@?webeweb.bundle.adminbsbmaterialdesignbundle.provider.search"]]
+      - [setUserInfoProvider, ["@?webeweb.bundle.adminbsbmaterialdesignbundle.provider.user_info"]]
+
   webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.form.checkbox:
     class: WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Form\CheckboxFormTwigExtension
     tags:

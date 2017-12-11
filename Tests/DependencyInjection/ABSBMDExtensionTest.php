@@ -15,7 +15,10 @@ use PHPUnit_Framework_TestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
 use Symfony\Component\HttpKernel\Kernel;
+use Twig_Environment;
+use Twig_LoaderInterface;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\DependencyInjection\ABSBMDExtension;
+use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Setter\ProvidersSetter;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Form\CheckboxFormTwigExtension;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Form\RadioButtonFormTwigExtension;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Form\SwitchButtonFormTwigExtension;
@@ -47,15 +50,19 @@ final class ABSBMDExtensionTest extends PHPUnit_Framework_TestCase {
 	public function testLoad() {
 
 		// Set the mocks.
-		$kernel = $this->getMockBuilder(Kernel::class)->setConstructorArgs(["dev", false])->getMock();
+		$kernel			 = $this->getMockBuilder(Kernel::class)->setConstructorArgs(["dev", false])->getMock();
+		$twigLoader		 = $this->getMockBuilder(Twig_LoaderInterface::class)->getMock();
+		$twigEnvironment = $this->getMockBuilder(Twig_Environment::class)->setConstructorArgs([$twigLoader, []])->getMock();
 
 		// We set a container builder with only the necessary.
 		$container = new ContainerBuilder(new ParameterBag(["kernel.environment" => "dev"]));
 		$container->set("kernel", $kernel);
+		$container->set("twig", $twigEnvironment);
 
 		$obj = new ABSBMDExtension();
 
 		$obj->load([], $container);
+		$this->assertInstanceOf(ProvidersSetter::class, $container->get(ProvidersSetter::SERVICE_NAME));
 		$this->assertInstanceOf(CheckboxFormTwigExtension::class, $container->get(CheckboxFormTwigExtension::SERVICE_NAME));
 		$this->assertInstanceOf(RadioButtonFormTwigExtension::class, $container->get(RadioButtonFormTwigExtension::SERVICE_NAME));
 		$this->assertInstanceOf(SwitchButtonFormTwigExtension::class, $container->get(SwitchButtonFormTwigExtension::SERVICE_NAME));
