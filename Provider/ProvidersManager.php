@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Setter;
+namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Provider;
 
 use Twig_Environment;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Application\ApplicationProviderInterface;
@@ -32,18 +32,18 @@ use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\User\DefaultUserInfoProvide
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\User\UserInfoProviderInterface;
 
 /**
- * Providers setter.
+ * Providers manager.
  *
  * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Setter
+ * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Provider
  * @final
  */
-final class ProvidersSetter {
+final class ProvidersManager {
 
 	/**
 	 * Service name.
 	 */
-	const SERVICE_NAME = "webeweb.bundle.adminbsb-materialdesignbundle.provider.setter";
+	const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.provider.manager";
 
 	/**
 	 * Application provider.
@@ -203,6 +203,23 @@ final class ProvidersSetter {
 	 */
 	public function getUserInfoProvider() {
 		return !is_null($this->userInfoProvider) ? $this->userInfoProvider : new DefaultUserInfoProvider();
+	}
+
+	/**
+	 * Register the providers into Twig.
+	 *
+	 * @return void.
+	 */
+	public function register() {
+		$this->twig->addGlobal("ApplicationProvider", $this->getApplicationProvider());
+		$this->twig->addGlobal("BreadcrumbsProvider", $this->getBreadcrumbsProvider());
+		$this->twig->addGlobal("DropDownHookProvider", $this->getDropDownHookProvider());
+		$this->twig->addGlobal("DropDownNotificationsProvider", $this->getDropDownNotificationsProvider());
+		$this->twig->addGlobal("DropDownTasksProvider", $this->getDropDownTasksProvider());
+		$this->twig->addGlobal("FooterProvider", $this->getFooterProvider());
+		$this->twig->addGlobal("NavigationProvider", $this->getNavigationProvider());
+		$this->twig->addGlobal("SearchProvider", $this->getSearchProvider());
+		$this->twig->addGlobal("UserInfoProvider", $this->getUserInfoProvider());
 	}
 
 	/**

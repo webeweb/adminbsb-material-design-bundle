@@ -1,8 +1,8 @@
 # Resources/config/services.yml
 services:
 
-  webeweb.bundle.adminbsb-materialdesignbundle.provider.setter:
-    class: WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Setter\ProvidersSetter
+  webeweb.bundle.adminbsbmaterialdesignbundle.provider.manager:
+    class: WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\ProvidersManager
     arguments: ["@twig"]
     calls:
       - [setApplicationProvider, ["@?webeweb.bundle.adminbsbmaterialdesignbundle.provider.application"]]

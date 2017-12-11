@@ -18,7 +18,7 @@ use Symfony\Component\HttpKernel\Kernel;
 use Twig_Environment;
 use Twig_LoaderInterface;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\DependencyInjection\ABSBMDExtension;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Setter\ProvidersSetter;
+use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\ProvidersManager;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Form\CheckboxFormTwigExtension;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Form\RadioButtonFormTwigExtension;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Form\SwitchButtonFormTwigExtension;
@@ -62,7 +62,7 @@ final class ABSBMDExtensionTest extends PHPUnit_Framework_TestCase {
 		$obj = new ABSBMDExtension();
 
 		$obj->load([], $container);
-		$this->assertInstanceOf(ProvidersSetter::class, $container->get(ProvidersSetter::SERVICE_NAME));
+		$this->assertInstanceOf(ProvidersManager::class, $container->get(ProvidersManager::SERVICE_NAME));
 		$this->assertInstanceOf(CheckboxFormTwigExtension::class, $container->get(CheckboxFormTwigExtension::SERVICE_NAME));
 		$this->assertInstanceOf(RadioButtonFormTwigExtension::class, $container->get(RadioButtonFormTwigExtension::SERVICE_NAME));
 		$this->assertInstanceOf(SwitchButtonFormTwigExtension::class, $container->get(SwitchButtonFormTwigExtension::SERVICE_NAME));

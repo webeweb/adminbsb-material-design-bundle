@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Provider\Setter;
+namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Provider;
 
 use PHPUnit_Framework_TestCase;
 use Twig_Environment;
@@ -28,20 +28,20 @@ use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Footer\DefaultFooterProvide
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Footer\FooterProviderInterface;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Navigation\DefaultNavigationProvider;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Navigation\NavigationProviderInterface;
+use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\ProvidersManager;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Search\DefaultSearchProvider;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Search\SearchProviderInterface;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Setter\ProvidersSetter;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\User\DefaultUserInfoProvider;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\User\UserInfoProviderInterface;
 
 /**
- * Providers setter test.
+ * Providers manager test.
  *
  * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Provider\Setter
+ * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Provider
  * @final
  */
-final class ProvidersSetterTest extends PHPUnit_Framework_TestCase {
+final class ProvidersManagerTest extends PHPUnit_Framework_TestCase {
 
 	/**
 	 * Twiog environment.
@@ -74,7 +74,7 @@ final class ProvidersSetterTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testConstructor() {
 
-		$obj = new ProvidersSetter($this->twigEnvironment);
+		$obj = new ProvidersManager($this->twigEnvironment);
 
 		$this->assertInstanceOf(DefaultApplicationProvider::class, $obj->getApplicationProvider());
 		$this->assertInstanceOf(DefaultBreadcrumbsProvider::class, $obj->getBreadcrumbsProvider());
@@ -98,7 +98,7 @@ final class ProvidersSetterTest extends PHPUnit_Framework_TestCase {
 		// Set the mocks.
 		$provider = $this->getMockBuilder(ApplicationProviderInterface::class)->getMock();
 
-		$obj = new ProvidersSetter($this->twigEnvironment);
+		$obj = new ProvidersManager($this->twigEnvironment);
 
 		$obj->setApplicationProvider($provider);
 		$this->assertEquals($provider, $obj->getApplicationProvider());
@@ -115,7 +115,7 @@ final class ProvidersSetterTest extends PHPUnit_Framework_TestCase {
 		// Set the mocks.
 		$provider = $this->getMockBuilder(BreadcrumbsProviderInterface::class)->getMock();
 
-		$obj = new ProvidersSetter($this->twigEnvironment);
+		$obj = new ProvidersManager($this->twigEnvironment);
 
 		$obj->setBreadcrumbsProvider($provider);
 		$this->assertEquals($provider, $obj->getBreadcrumbsProvider());
@@ -132,7 +132,7 @@ final class ProvidersSetterTest extends PHPUnit_Framework_TestCase {
 		// Set the mocks.
 		$provider = $this->getMockBuilder(DropDownHookProviderInterface::class)->getMock();
 
-		$obj = new ProvidersSetter($this->twigEnvironment);
+		$obj = new ProvidersManager($this->twigEnvironment);
 
 		$obj->setDropDownHookProvider($provider);
 		$this->assertEquals($provider, $obj->getDropDownHookProvider());
@@ -149,7 +149,7 @@ final class ProvidersSetterTest extends PHPUnit_Framework_TestCase {
 		// Set the mocks.
 		$provider = $this->getMockBuilder(DropDownNotificationsProviderInterface::class)->getMock();
 
-		$obj = new ProvidersSetter($this->twigEnvironment);
+		$obj = new ProvidersManager($this->twigEnvironment);
 
 		$obj->setDropDownNotificationsProvider($provider);
 		$this->assertEquals($provider, $obj->getDropDownNotificationsProvider());
@@ -166,7 +166,7 @@ final class ProvidersSetterTest extends PHPUnit_Framework_TestCase {
 		// Set the mocks.
 		$provider = $this->getMockBuilder(DropDownTasksProviderInterface::class)->getMock();
 
-		$obj = new ProvidersSetter($this->twigEnvironment);
+		$obj = new ProvidersManager($this->twigEnvironment);
 
 		$obj->setDropDownTasksProvider($provider);
 		$this->assertEquals($provider, $obj->getDropDownTasksProvider());
@@ -183,7 +183,7 @@ final class ProvidersSetterTest extends PHPUnit_Framework_TestCase {
 		// Set the mocks.
 		$provider = $this->getMockBuilder(FooterProviderInterface::class)->getMock();
 
-		$obj = new ProvidersSetter($this->twigEnvironment);
+		$obj = new ProvidersManager($this->twigEnvironment);
 
 		$obj->setFooterProvider($provider);
 		$this->assertEquals($provider, $obj->getFooterProvider());
@@ -200,7 +200,7 @@ final class ProvidersSetterTest extends PHPUnit_Framework_TestCase {
 		// Set the mocks.
 		$provider = $this->getMockBuilder(NavigationProviderInterface::class)->getMock();
 
-		$obj = new ProvidersSetter($this->twigEnvironment);
+		$obj = new ProvidersManager($this->twigEnvironment);
 
 		$obj->setNavigationProvider($provider);
 		$this->assertEquals($provider, $obj->getNavigationProvider());
@@ -217,7 +217,7 @@ final class ProvidersSetterTest extends PHPUnit_Framework_TestCase {
 		// Set the mocks.
 		$provider = $this->getMockBuilder(SearchProviderInterface::class)->getMock();
 
-		$obj = new ProvidersSetter($this->twigEnvironment);
+		$obj = new ProvidersManager($this->twigEnvironment);
 
 		$obj->setSearchProvider($provider);
 		$this->assertEquals($provider, $obj->getSearchProvider());
@@ -234,7 +234,7 @@ final class ProvidersSetterTest extends PHPUnit_Framework_TestCase {
 		// Set the mocks.
 		$provider = $this->getMockBuilder(UserInfoProviderInterface::class)->getMock();
 
-		$obj = new ProvidersSetter($this->twigEnvironment);
+		$obj = new ProvidersManager($this->twigEnvironment);
 
 		$obj->setUserInfoProvider($provider);
 		$this->assertEquals($provider, $obj->getUserInfoProvider());
