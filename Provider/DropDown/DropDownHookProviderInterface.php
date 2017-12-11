@@ -39,7 +39,7 @@ interface DropDownHookProviderInterface {
 	/**
 	 * Get the template.
 	 *
-	 * @return string Returns the template name.
+	 * @return string Returns the template.
 	 */
 	public function getTemplate();
 }
