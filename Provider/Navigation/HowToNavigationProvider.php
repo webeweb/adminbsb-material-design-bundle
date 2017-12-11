@@ -50,7 +50,7 @@ final class HowToNavigationProvider {
 		$tableContents = $this->getTableContents();
 
 		// Create the breadcrumb node.
-		$breadcrumbRoot = new BreadcrumbNode("How-to", "book");
+		$breadcrumbRoot = new BreadcrumbNode("navigation.how-to", "book");
 
 		// Initialize the route.
 		$route = "absbmd_howto_index";
