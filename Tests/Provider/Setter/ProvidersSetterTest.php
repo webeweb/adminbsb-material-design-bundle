@@ -73,6 +73,7 @@ final class ProvidersSetterTest extends PHPUnit_Framework_TestCase {
 	public function testConstructor() {
 
 		$obj = new ProvidersSetter($this->twigEnvironment);
+
 		$this->assertInstanceOf(DefaultApplicationProvider::class, $obj->getApplicationProvider());
 		$this->assertInstanceOf(DefaultBreadcrumbsProvider::class, $obj->getBreadcrumbsProvider());
 		$this->assertInstanceOf(DefaultDropDownHookProvider::class, $obj->getDropDownHookProvider());
@@ -95,6 +96,7 @@ final class ProvidersSetterTest extends PHPUnit_Framework_TestCase {
 		$provider = $this->getMockBuilder(ApplicationProviderInterface::class)->getMock();
 
 		$obj = new ProvidersSetter($this->twigEnvironment);
+
 		$obj->setApplicationProvider($provider);
 		$this->assertEquals($provider, $obj->getApplicationProvider());
 	}
@@ -111,6 +113,7 @@ final class ProvidersSetterTest extends PHPUnit_Framework_TestCase {
 		$provider = $this->getMockBuilder(BreadcrumbsProviderInterface::class)->getMock();
 
 		$obj = new ProvidersSetter($this->twigEnvironment);
+
 		$obj->setBreadcrumbsProvider($provider);
 		$this->assertEquals($provider, $obj->getBreadcrumbsProvider());
 	}
@@ -127,6 +130,7 @@ final class ProvidersSetterTest extends PHPUnit_Framework_TestCase {
 		$provider = $this->getMockBuilder(DropDownHookProviderInterface::class)->getMock();
 
 		$obj = new ProvidersSetter($this->twigEnvironment);
+
 		$obj->setDropDownHookProvider($provider);
 		$this->assertEquals($provider, $obj->getDropDownHookProvider());
 	}
@@ -143,6 +147,7 @@ final class ProvidersSetterTest extends PHPUnit_Framework_TestCase {
 		$provider = $this->getMockBuilder(DropDownNotificationsProviderInterface::class)->getMock();
 
 		$obj = new ProvidersSetter($this->twigEnvironment);
+
 		$obj->setDropDownNotificationsProvider($provider);
 		$this->assertEquals($provider, $obj->getDropDownNotificationsProvider());
 	}
@@ -159,6 +164,7 @@ final class ProvidersSetterTest extends PHPUnit_Framework_TestCase {
 		$provider = $this->getMockBuilder(DropDownTasksProviderInterface::class)->getMock();
 
 		$obj = new ProvidersSetter($this->twigEnvironment);
+
 		$obj->setDropDownTasksProvider($provider);
 		$this->assertEquals($provider, $obj->getDropDownTasksProvider());
 	}
@@ -175,6 +181,7 @@ final class ProvidersSetterTest extends PHPUnit_Framework_TestCase {
 		$provider = $this->getMockBuilder(FooterProviderInterface::class)->getMock();
 
 		$obj = new ProvidersSetter($this->twigEnvironment);
+
 		$obj->setFooterProvider($provider);
 		$this->assertEquals($provider, $obj->getFooterProvider());
 	}
@@ -191,6 +198,7 @@ final class ProvidersSetterTest extends PHPUnit_Framework_TestCase {
 		$provider = $this->getMockBuilder(SearchProviderInterface::class)->getMock();
 
 		$obj = new ProvidersSetter($this->twigEnvironment);
+
 		$obj->setSearchProvider($provider);
 		$this->assertEquals($provider, $obj->getSearchProvider());
 	}
@@ -207,6 +215,7 @@ final class ProvidersSetterTest extends PHPUnit_Framework_TestCase {
 		$provider = $this->getMockBuilder(UserInfoProviderInterface::class)->getMock();
 
 		$obj = new ProvidersSetter($this->twigEnvironment);
+
 		$obj->setUserInfoProvider($provider);
 		$this->assertEquals($provider, $obj->getUserInfoProvider());
 	}
