@@ -11,6 +11,8 @@
 
 namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Navigation;
 
+use WBW\Library\Core\Navigation\Tree\NavigationTree;
+
 /**
  * Default navigation provider.
  *
@@ -31,6 +33,13 @@ final class DefaultNavigationProvider implements NavigationProviderInterface {
 	 */
 	public function getTemplate() {
 		return self::DEFAULT_TEMPLATE;
+	}
+
+	/**
+	 * {@inheritdoc}
+	 */
+	public function getTree() {
+		return new NavigationTree();
 	}
 
 }
