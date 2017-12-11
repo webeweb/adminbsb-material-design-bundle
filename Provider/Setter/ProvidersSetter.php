@@ -24,6 +24,8 @@ use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\DropDown\DropDownNotificati
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\DropDown\DropDownTasksProviderInterface;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Footer\DefaultFooterProvider;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Footer\FooterProviderInterface;
+use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Navigation\DefaultNavigationProvider;
+use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Navigation\NavigationProviderInterface;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Search\DefaultSearchProvider;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Search\SearchProviderInterface;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\User\DefaultUserInfoProvider;
@@ -84,6 +86,13 @@ final class ProvidersSetter {
 	 * @var FooterProviderInterface
 	 */
 	private $footerProvider;
+
+	/**
+	 * Navigation provider.
+	 *
+	 * @var NavigationProviderInterface
+	 */
+	private $navigationProvider;
 
 	/**
 	 * Search provider.
@@ -170,6 +179,15 @@ final class ProvidersSetter {
 	}
 
 	/**
+	 * Get the navigation provider.
+	 *
+	 * @return NavigationProviderInterface Returns the navigation provider.
+	 */
+	public function getNavigationProvider() {
+		return !is_null($this->navigationProvider) ? $this->navigationProvider : new DefaultNavigationProvider();
+	}
+
+	/**
 	 * Get the search provider.
 	 *
 	 * @return SearchProviderInterface Returns the search provider.
@@ -250,6 +268,17 @@ final class ProvidersSetter {
 	 */
 	public function setFooterProvider(FooterProviderInterface $footerProvider) {
 		$this->footerProvider = $footerProvider;
+		return $this;
+	}
+
+	/**
+	 * Set the navigation provider.
+	 *
+	 * @param NavigationProviderInterface $navigationProvider The navigation provider.
+	 * @return ProvidersSetter Returns the providers setter.
+	 */
+	public function setNavigationProvider(NavigationProviderInterface $navigationProvider) {
+		$this->navigationProvider = $navigationProvider;
 		return $this;
 	}
 

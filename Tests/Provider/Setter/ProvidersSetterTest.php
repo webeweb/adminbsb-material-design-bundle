@@ -26,6 +26,8 @@ use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\DropDown\DropDownNotificati
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\DropDown\DropDownTasksProviderInterface;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Footer\DefaultFooterProvider;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Footer\FooterProviderInterface;
+use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Navigation\DefaultNavigationProvider;
+use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Navigation\NavigationProviderInterface;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Search\DefaultSearchProvider;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Search\SearchProviderInterface;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Setter\ProvidersSetter;
@@ -80,6 +82,7 @@ final class ProvidersSetterTest extends PHPUnit_Framework_TestCase {
 		$this->assertInstanceOf(DefaultDropDownNotificationsProvider::class, $obj->getDropDownNotificationsProvider());
 		$this->assertInstanceOf(DefaultDropDownTasksProvider::class, $obj->getDropDownTasksProvider());
 		$this->assertInstanceOf(DefaultFooterProvider::class, $obj->getFooterProvider());
+		$this->assertInstanceOf(DefaultNavigationProvider::class, $obj->getNavigationProvider());
 		$this->assertInstanceOf(DefaultSearchProvider::class, $obj->getSearchProvider());
 		$this->assertInstanceOf(DefaultUserInfoProvider::class, $obj->getUserInfoProvider());
 	}
@@ -184,6 +187,23 @@ final class ProvidersSetterTest extends PHPUnit_Framework_TestCase {
 
 		$obj->setFooterProvider($provider);
 		$this->assertEquals($provider, $obj->getFooterProvider());
+	}
+
+	/**
+	 * Tests the setNavigationProvider() method.
+	 *
+	 * @return void
+	 * @depends testConstructor
+	 */
+	public function testSetNavigationProvider() {
+
+		// Set the mocks.
+		$provider = $this->getMockBuilder(NavigationProviderInterface::class)->getMock();
+
+		$obj = new ProvidersSetter($this->twigEnvironment);
+
+		$obj->setNavigationProvider($provider);
+		$this->assertEquals($provider, $obj->getNavigationProvider());
 	}
 
 	/**
