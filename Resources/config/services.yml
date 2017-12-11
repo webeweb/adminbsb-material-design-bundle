@@ -11,6 +11,7 @@ services:
       - [setDropDownNotificationsProvider, ["@?webeweb.bundle.adminbsbmaterialdesignbundle.provider.drop_down_notifications"]]
       - [setDropDownTasksProvider, ["@?webeweb.bundle.adminbsbmaterialdesignbundle.provider.drop_down_tasks"]]
       - [setFooterProvider, ["@?webeweb.bundle.adminbsbmaterialdesignbundle.provider.footer"]]
+      - [setNavigationProvider, ["@?webeweb.bundle.adminbsbmaterialdesignbundle.provider.navigation"]]
       - [setSearchProvider, ["@?webeweb.bundle.adminbsbmaterialdesignbundle.provider.search"]]
       - [setUserInfoProvider, ["@?webeweb.bundle.adminbsbmaterialdesignbundle.provider.user_info"]]
 
