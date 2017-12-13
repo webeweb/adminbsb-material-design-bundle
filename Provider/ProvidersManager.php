@@ -206,9 +206,9 @@ final class ProvidersManager {
 	}
 
 	/**
-	 * Register the providers into Twig.
+	 * Register the providers.
 	 *
-	 * @return void.
+	 * @return void
 	 */
 	public function register() {
 		$this->twig->addGlobal("ApplicationProvider", $this->getApplicationProvider());
