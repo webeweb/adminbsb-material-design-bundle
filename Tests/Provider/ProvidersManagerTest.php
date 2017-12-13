@@ -44,11 +44,11 @@ use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\User\UserInfoProviderInterf
 final class ProvidersManagerTest extends PHPUnit_Framework_TestCase {
 
 	/**
-	 * Twig environment.
+	 * Mock "Twig environment".
 	 *
 	 * @var Twig_Environment
 	 */
-	private $twigEnvironment;
+	private $mockTwigEnvironment;
 
 	/**
 	 * Twig globals.
@@ -65,14 +65,14 @@ final class ProvidersManagerTest extends PHPUnit_Framework_TestCase {
 	public function setUp() {
 
 		// Set the mocks.
-		$twigLoader				 = $this->getMockBuilder(Twig_LoaderInterface::class)->getMock();
-		$this->twigEnvironment	 = $this->getMockBuilder(Twig_Environment::class)->setConstructorArgs([$twigLoader, []])->getMock();
-		$this->twigEnvironment->expects($this->any())
+		$mockTwigLoader				 = $this->getMockBuilder(Twig_LoaderInterface::class)->getMock();
+		$this->mockTwigEnvironment	 = $this->getMockBuilder(Twig_Environment::class)->setConstructorArgs([$mockTwigLoader, []])->getMock();
+		$this->mockTwigEnvironment->expects($this->any())
 			->method("addGlobal")
 			->willReturnCallback(function($name, $value) {
 				$this->twigGlobals[$name] = $value;
 			});
-		$this->twigEnvironment->expects($this->any())
+		$this->mockTwigEnvironment->expects($this->any())
 			->method("getGlobals")
 			->willReturnCallback(function() {
 				return $this->twigGlobals;
@@ -86,7 +86,7 @@ final class ProvidersManagerTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testConstructor() {
 
-		$obj = new ProvidersManager($this->twigEnvironment);
+		$obj = new ProvidersManager($this->mockTwigEnvironment);
 
 		$this->assertInstanceOf(DefaultApplicationProvider::class, $obj->getApplicationProvider());
 		$this->assertInstanceOf(DefaultBreadcrumbsProvider::class, $obj->getBreadcrumbsProvider());
@@ -107,10 +107,10 @@ final class ProvidersManagerTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testRegister() {
 
-		$obj = new ProvidersManager($this->twigEnvironment);
+		$obj = new ProvidersManager($this->mockTwigEnvironment);
 		$obj->register();
 
-		$res = $this->twigEnvironment->getGlobals();
+		$res = $this->mockTwigEnvironment->getGlobals();
 		$this->assertCount(9, $res);
 		$this->assertArrayHasKey("ApplicationProvider", $res);
 		$this->assertInstanceOf(ApplicationProviderInterface::class, $res["ApplicationProvider"]);
@@ -143,7 +143,7 @@ final class ProvidersManagerTest extends PHPUnit_Framework_TestCase {
 		// Set the mocks.
 		$provider = $this->getMockBuilder(ApplicationProviderInterface::class)->getMock();
 
-		$obj = new ProvidersManager($this->twigEnvironment);
+		$obj = new ProvidersManager($this->mockTwigEnvironment);
 
 		$obj->setApplicationProvider($provider);
 		$this->assertEquals($provider, $obj->getApplicationProvider());
@@ -160,7 +160,7 @@ final class ProvidersManagerTest extends PHPUnit_Framework_TestCase {
 		// Set the mocks.
 		$provider = $this->getMockBuilder(BreadcrumbsProviderInterface::class)->getMock();
 
-		$obj = new ProvidersManager($this->twigEnvironment);
+		$obj = new ProvidersManager($this->mockTwigEnvironment);
 
 		$obj->setBreadcrumbsProvider($provider);
 		$this->assertEquals($provider, $obj->getBreadcrumbsProvider());
@@ -177,7 +177,7 @@ final class ProvidersManagerTest extends PHPUnit_Framework_TestCase {
 		// Set the mocks.
 		$provider = $this->getMockBuilder(DropDownHookProviderInterface::class)->getMock();
 
-		$obj = new ProvidersManager($this->twigEnvironment);
+		$obj = new ProvidersManager($this->mockTwigEnvironment);
 
 		$obj->setDropDownHookProvider($provider);
 		$this->assertEquals($provider, $obj->getDropDownHookProvider());
@@ -194,7 +194,7 @@ final class ProvidersManagerTest extends PHPUnit_Framework_TestCase {
 		// Set the mocks.
 		$provider = $this->getMockBuilder(DropDownNotificationsProviderInterface::class)->getMock();
 
-		$obj = new ProvidersManager($this->twigEnvironment);
+		$obj = new ProvidersManager($this->mockTwigEnvironment);
 
 		$obj->setDropDownNotificationsProvider($provider);
 		$this->assertEquals($provider, $obj->getDropDownNotificationsProvider());
@@ -211,7 +211,7 @@ final class ProvidersManagerTest extends PHPUnit_Framework_TestCase {
 		// Set the mocks.
 		$provider = $this->getMockBuilder(DropDownTasksProviderInterface::class)->getMock();
 
-		$obj = new ProvidersManager($this->twigEnvironment);
+		$obj = new ProvidersManager($this->mockTwigEnvironment);
 
 		$obj->setDropDownTasksProvider($provider);
 		$this->assertEquals($provider, $obj->getDropDownTasksProvider());
@@ -228,7 +228,7 @@ final class ProvidersManagerTest extends PHPUnit_Framework_TestCase {
 		// Set the mocks.
 		$provider = $this->getMockBuilder(FooterProviderInterface::class)->getMock();
 
-		$obj = new ProvidersManager($this->twigEnvironment);
+		$obj = new ProvidersManager($this->mockTwigEnvironment);
 
 		$obj->setFooterProvider($provider);
 		$this->assertEquals($provider, $obj->getFooterProvider());
@@ -245,7 +245,7 @@ final class ProvidersManagerTest extends PHPUnit_Framework_TestCase {
 		// Set the mocks.
 		$provider = $this->getMockBuilder(NavigationProviderInterface::class)->getMock();
 
-		$obj = new ProvidersManager($this->twigEnvironment);
+		$obj = new ProvidersManager($this->mockTwigEnvironment);
 
 		$obj->setNavigationProvider($provider);
 		$this->assertEquals($provider, $obj->getNavigationProvider());
@@ -262,7 +262,7 @@ final class ProvidersManagerTest extends PHPUnit_Framework_TestCase {
 		// Set the mocks.
 		$provider = $this->getMockBuilder(SearchProviderInterface::class)->getMock();
 
-		$obj = new ProvidersManager($this->twigEnvironment);
+		$obj = new ProvidersManager($this->mockTwigEnvironment);
 
 		$obj->setSearchProvider($provider);
 		$this->assertEquals($provider, $obj->getSearchProvider());
@@ -279,7 +279,7 @@ final class ProvidersManagerTest extends PHPUnit_Framework_TestCase {
 		// Set the mocks.
 		$provider = $this->getMockBuilder(UserInfoProviderInterface::class)->getMock();
 
-		$obj = new ProvidersManager($this->twigEnvironment);
+		$obj = new ProvidersManager($this->mockTwigEnvironment);
 
 		$obj->setUserInfoProvider($provider);
 		$this->assertEquals($provider, $obj->getUserInfoProvider());
