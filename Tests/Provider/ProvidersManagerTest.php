@@ -55,7 +55,7 @@ final class ProvidersManagerTest extends PHPUnit_Framework_TestCase {
 	 *
 	 * @var array
 	 */
-	private $twigGlobals;
+	private $twigGlobals = [];
 
 	/**
 	 * Set up.
