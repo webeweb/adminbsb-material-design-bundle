@@ -44,7 +44,7 @@ use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\User\UserInfoProviderInterf
 final class ProvidersManagerTest extends PHPUnit_Framework_TestCase {
 
 	/**
-	 * Twiog environment.
+	 * Twig environment.
 	 *
 	 * @var Twig_Environment
 	 */
@@ -58,32 +58,25 @@ final class ProvidersManagerTest extends PHPUnit_Framework_TestCase {
 	private $twigGlobals;
 
 	/**
-	 * Twig loader.
-	 *
-	 * @var Twig_Loader
-	 */
-	private $twigLoader;
-
-	/**
 	 * Set up.
 	 *
 	 * @return void.
 	 */
 	public function setUp() {
 
-		// Define the necessary callback functions.
-		$addGlobal = function($name, $value) {
-			$this->twigGlobals[$name] = $value;
-		};
-		$getGlobals = function() {
-			return $this->twigGlobals;
-		};
-
 		// Set the mocks.
-		$this->twigLoader		 = $this->getMockBuilder(Twig_LoaderInterface::class)->getMock();
-		$this->twigEnvironment	 = $this->getMockBuilder(Twig_Environment::class)->setConstructorArgs([$this->twigLoader, []])->getMock();
-		$this->twigEnvironment->expects($this->any())->method("addGlobal")->willReturnCallback($addGlobal);
-		$this->twigEnvironment->expects($this->any())->method("getGlobals")->willReturnCallback($getGlobals);
+		$twigLoader				 = $this->getMockBuilder(Twig_LoaderInterface::class)->getMock();
+		$this->twigEnvironment	 = $this->getMockBuilder(Twig_Environment::class)->setConstructorArgs([$twigLoader, []])->getMock();
+		$this->twigEnvironment->expects($this->any())
+			->method("addGlobal")
+			->willReturnCallback(function($name, $value) {
+				$this->twigGlobals[$name] = $value;
+			});
+		$this->twigEnvironment->expects($this->any())
+			->method("getGlobals")
+			->willReturnCallback(function() {
+				return $this->twigGlobals;
+			});
 	}
 
 	/**
