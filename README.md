@@ -5,6 +5,8 @@ adminbsb-material-design-bundle
 
 Integrate AdminBSB Material Design theme with Symfony2.
 
+<img src="https://raw.githubusercontent.com/webeweb/adminbsb-material-design-bundle/master/Resources/doc/images/adminbsb-material-design_promo.png" alt="AdminBSB Material Design bundle" align="right" />
+
 > IMPORTANT NOTICE: This package is still under development. Any changes will be
 > done without prior notice to consumers of this package. Of course this code
 > will become stable at a certain point, but for now, use at your own risk.
