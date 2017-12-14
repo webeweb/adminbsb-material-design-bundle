@@ -11,6 +11,14 @@ Integrate AdminBSB Material Design theme with Symfony2.
 
 ---
 
+## Compatibility
+
+[![PHP 5.6](https://img.shields.io/badge/PHP-5.6-blue.svg)](http://php.net) [![PHP 7.0](https://img.shields.io/badge/PHP-7.0-blue.svg)](http://php.net)  [![PHP 7.1](https://img.shields.io/badge/PHP-7.1-blue.svg)](http://php.net)
+
+[![Symfony 2.6](https://img.shields.io/badge/Symfony-2.6-brightgreen.svg)](https://symfony.com) [![Symfony 2.7](https://img.shields.io/badge/Symfony-2.7-brightgreen.svg)](https://symfony.com) [![Symfony 2.8](https://img.shields.io/badge/Symfony-2.8-brightgreen.svg)](https://symfony.com) [![Symfony 3.0](https://img.shields.io/badge/Symfony-3.0-brightgreen.svg)](https://symfony.com) [![Symfony 3.1](https://img.shields.io/badge/Symfony-3.1-brightgreen.svg)](https://symfony.com) [![Symfony 3.2](https://img.shields.io/badge/Symfony-3.2-brightgreen.svg)](https://symfony.com) [![Symfony 3.3](https://img.shields.io/badge/Symfony-3.3-brightgreen.svg)](https://symfony.com) [![Symfony 3.4](https://img.shields.io/badge/Symfony-3.4-brightgreen.svg)](https://symfony.com)
+
+---
+
 ## Installation
 
 Open a command console, enter your project directory and execute the following
