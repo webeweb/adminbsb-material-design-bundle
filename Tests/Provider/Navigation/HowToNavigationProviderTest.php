@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Provider\Navigation;
 
 use PHPUnit_Framework_TestCase;
 use Symfony\Component\Config\Loader\LoaderInterface;
-use Symfony\Component\Routing\Router;
+use Symfony\Component\Routing\RouterInterface;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Navigation\HowToNavigationProvider;
 use WBW\Library\Core\Navigation\Node\BreadcrumbNode;
 
@@ -34,8 +34,7 @@ final class HowToNavigationProviderTest extends PHPUnit_Framework_TestCase {
 	public function testGetBreadcrumb() {
 
 		// Set the mocks.
-		$loader	 = $this->getMockBuilder(LoaderInterface::class)->getMock();
-		$router	 = $this->getMockBuilder(Router::class)->setConstructorArgs([$loader, ""])->getMock();
+		$router = $this->getMockBuilder(RouterInterface::class)->getMock();
 
 		$obj = new HowToNavigationProvider($router);
 

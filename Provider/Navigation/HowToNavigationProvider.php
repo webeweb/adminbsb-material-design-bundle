@@ -12,6 +12,7 @@
 namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Navigation;
 
 use Symfony\Component\Routing\Router;
+use Symfony\Component\Routing\RouterInterface;
 use WBW\Library\Core\Navigation\Node\BreadcrumbNode;
 
 /**
@@ -33,9 +34,9 @@ final class HowToNavigationProvider {
 	/**
 	 * Constructor.
 	 *
-	 * @param Router $router The router service.
+	 * @param RouterInterface $router The router service.
 	 */
-	public function __construct(Router $router) {
+	public function __construct(RouterInterface $router) {
 		$this->router = $router;
 	}
 
