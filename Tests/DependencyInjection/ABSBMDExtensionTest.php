@@ -50,7 +50,7 @@ final class ABSBMDExtensionTest extends PHPUnit_Framework_TestCase {
 	public function testLoad() {
 
 		// Set the mocks.
-		$kernel			 = $this->getMockBuilder(Kernel::class)->setConstructorArgs(["dev", false])->getMock();
+		$kernel			 = $this->getMockBuilder(KernelInterface::class)->getMock();
 		$twigLoader		 = $this->getMockBuilder(Twig_LoaderInterface::class)->getMock();
 		$twigEnvironment = $this->getMockBuilder(Twig_Environment::class)->setConstructorArgs([$twigLoader, []])->getMock();
 
