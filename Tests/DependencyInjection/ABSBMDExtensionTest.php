@@ -14,7 +14,7 @@ namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\DependencyInjection;
 use PHPUnit_Framework_TestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
-use Symfony\Component\HttpKernel\Kernel;
+use Symfony\Component\HttpKernel\KernelInterface;
 use Twig_Environment;
 use Twig_LoaderInterface;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\DependencyInjection\ABSBMDExtension;
