@@ -21,11 +21,15 @@ interface UserInfoProviderInterface {
 
 	/**
 	 * Default template.
+	 *
+	 * @var string
 	 */
 	const DEFAULT_TEMPLATE = "@ABSBMD/html/body/section/aside/div.user-info.html.twig";
 
 	/**
 	 * Service name.
+	 *
+	 * @var string
 	 */
 	const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.provider.user_info";
 

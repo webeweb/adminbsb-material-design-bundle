@@ -21,11 +21,15 @@ interface FooterProviderInterface {
 
 	/**
 	 * Default template.
+	 *
+	 * @var string
 	 */
 	const DEFAULT_TEMPLATE = "@ABSBMD/html/body/section/aside/div.legal.html.twig";
 
 	/**
 	 * Service name.
+	 *
+	 * @var string
 	 */
 	const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.provider.footer";
 

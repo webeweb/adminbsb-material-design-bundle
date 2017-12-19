@@ -21,11 +21,15 @@ interface BreadcrumbsProviderInterface {
 
 	/**
 	 * Default template.
+	 *
+	 * @var string
 	 */
 	const DEFAULT_TEMPLATE = "@ABSBMD/html/body/section/div/div.block-header.html.twig";
 
 	/**
 	 * Service name.
+	 *
+	 * @var string
 	 */
 	const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.provider.breadcrumbs";
 

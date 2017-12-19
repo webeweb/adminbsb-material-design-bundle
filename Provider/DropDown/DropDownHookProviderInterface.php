@@ -21,11 +21,15 @@ interface DropDownHookProviderInterface {
 
 	/**
 	 * Default template.
+	 *
+	 * @var string
 	 */
 	const DEFAULT_TEMPLATE = "@ABSBMD/html/body/nav/div/div/ul/li.dropdown_hook.html.twig";
 
 	/**
 	 * Service name.
+	 *
+	 * @var string
 	 */
 	const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.provider.drop_down_hook";
 

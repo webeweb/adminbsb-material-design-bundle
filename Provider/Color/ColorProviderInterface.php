@@ -21,6 +21,8 @@ interface ColorProviderInterface {
 
 	/**
 	 * Service name.
+	 *
+	 * @var string
 	 */
 	const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.provider.color";
 

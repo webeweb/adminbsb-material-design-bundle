@@ -28,6 +28,8 @@ final class KernelEventListener {
 
 	/**
 	 * Service name.
+	 *
+	 * @var string
 	 */
 	const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.eventlistener.kernel";
 

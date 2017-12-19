@@ -25,6 +25,8 @@ abstract class AbstractABSBMDTwigExtension extends Twig_Extension {
 
 	/**
 	 * Default content.
+	 *
+	 * @var string
 	 */
 	const DEFAULT_CONTENT = "&nbsp;";
 

@@ -21,11 +21,15 @@ interface DropDownTasksProviderInterface {
 
 	/**
 	 * Default template.
+	 *
+	 * @var string
 	 */
 	const DEFAULT_TEMPLATE = "@ABSBMD/html/body/nav/div/div/ul/li.dropdown_tasks.html.twig";
 
 	/**
 	 * Drop down tasks provider service name.
+	 *
+	 * @var string
 	 */
 	const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.provider.drop_down_tasks";
 
