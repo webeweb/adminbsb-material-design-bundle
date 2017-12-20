@@ -58,11 +58,9 @@ final class ProvidersManagerTest extends PHPUnit_Framework_TestCase {
 	private $twigGlobals = [];
 
 	/**
-	 * Set up.
-	 *
-	 * @return void.
+	 * {@inheritdoc}
 	 */
-	public function setUp() {
+	protected function setUp() {
 
 		// Set the mocks.
 		$mockTwigLoader				 = $this->getMockBuilder(Twig_LoaderInterface::class)->getMock();

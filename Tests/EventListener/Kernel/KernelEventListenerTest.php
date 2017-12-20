@@ -63,7 +63,7 @@ final class KernelEventListenerTest extends PHPUnit_Framework_TestCase {
 	/**
 	 * {@inheritdoc}
 	 */
-	public function setUp() {
+	protected function setUp() {
 
 		// Set the mocks.
 		$mockTwigLoader		 = $this->getMockBuilder(Twig_LoaderInterface::class)->getMock();
