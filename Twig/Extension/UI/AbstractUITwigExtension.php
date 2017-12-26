@@ -28,7 +28,7 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
 	/**
 	 * Constructor.
 	 */
-	public final function __construct() {
+	final public function __construct() {
 		parent::__construct();
 	}
 
@@ -40,7 +40,7 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
 	 * @param string $class The alert class.
 	 * @return string Returns the alert.
 	 */
-	protected final function alert($content, $dismissible, $class) {
+	final protected function alert($content, $dismissible, $class) {
 
 		// Initialize the templates.
 		$template	 = "<div %attributes%>%content%</div>";
@@ -70,7 +70,7 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
 	 * @param string $link The badge link.
 	 * @return string Returns the badge.
 	 */
-	protected final function badge($content, $label, $large, $class, $list = false, $link = false) {
+	final protected function badge($content, $label, $large, $class, $list = false, $link = false) {
 
 		// Initialize the template.
 		$template = '<button %attributes%>%content%<span class="badge">%label%</span></button>';
@@ -111,7 +111,7 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
 	 * @param boolean $circle Circle button ?
 	 * @return string Returns the button.
 	 */
-	protected final function button($content, $title, $size, $block, $disable, $class, $icon, $circle) {
+	final protected function button($content, $title, $size, $block, $disable, $class, $icon, $circle) {
 
 		// Disable the parameters.
 		$circle	 = (!is_null($content) ? false : $circle);
@@ -148,7 +148,7 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
 	 * @param string $output The output.
 	 * @return string Returns the color.
 	 */
-	protected final function color($name, $code, $output) {
+	final protected function color($name, $code, $output) {
 
 		// Initialize the parameters.
 		$_name	 = $this->getColor($name, "");
@@ -166,7 +166,7 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
 	 * @param string $class The icon class.
 	 * @return string Returns the icon.
 	 */
-	protected final function icon($name, $style, $class = null) {
+	final protected function icon($name, $style, $class = null) {
 
 		// Initialize the template.
 		$template = "<i %attributes%>%name%</i>";
@@ -191,7 +191,7 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
 	 * @param string $class The label class.
 	 * @return string Returns the label.
 	 */
-	protected final function label($content, $class) {
+	final protected function label($content, $class) {
 
 		// Initialize the template.
 		$template = "<span %attributes%>%content%</span>";
@@ -215,7 +215,7 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
 	 * @param string $size The preloader size.
 	 * @return string Returns the preloader.
 	 */
-	protected final function preloader($class, $size) {
+	final protected function preloader($class, $size) {
 
 		// Initialize the template.
 		$template = '<div %attributes1%><div %attributes2%><div class="circle-clipper left"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>';
@@ -242,7 +242,7 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
 	 * @param string $class The progress bar class.
 	 * @return string Returns the progress bar.
 	 */
-	protected final function progressBar($label, $value, $min, $max, $striped, $animated, $class = null) {
+	final protected function progressBar($label, $value, $min, $max, $striped, $animated, $class = null) {
 
 		// Initialize the template.
 		$template = '<div class="progress"><div %attributes%>%label%</div></div>';

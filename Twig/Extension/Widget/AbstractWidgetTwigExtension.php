@@ -25,7 +25,7 @@ abstract class AbstractWidgetTwigExtension extends AbstractABSBMDTwigExtension {
 	/**
 	 * Constructor.
 	 */
-	public final function __construct() {
+	final public function __construct() {
 		parent::__construct();
 	}
 

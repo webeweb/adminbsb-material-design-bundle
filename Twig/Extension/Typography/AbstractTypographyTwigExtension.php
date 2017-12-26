@@ -26,7 +26,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractABSBMDTwigExtensi
 	/**
 	 * Constructor.
 	 */
-	public final function __construct() {
+	final public function __construct() {
 		parent::__construct();
 	}
 
@@ -38,7 +38,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractABSBMDTwigExtensi
 	 * @param string $class The heading class.
 	 * @return string Returns the heading.
 	 */
-	protected final function h($size, $content, $class) {
+	final protected function h($size, $content, $class) {
 
 		// Initialize the template.
 		$template = "<h%size%%attributes%>%content%</h%size%>";

@@ -45,7 +45,7 @@ abstract class AbstractABSBMDTwigExtension extends Twig_Extension {
 	 * @param mixed $default The default value.
 	 * @return mixed Returns the value in case of success, $default otherwise.
 	 */
-	protected final function getArg(array $arguments, $name, $default = null) {
+	final protected function getArg(array $arguments, $name, $default = null) {
 		return isset($arguments[$name]) ? $arguments[$name] : $default;
 	}
 
@@ -56,7 +56,7 @@ abstract class AbstractABSBMDTwigExtension extends Twig_Extension {
 	 * @param string $prefix The color prefix.
 	 * @return string Returns the color in case of success, "" otherwise.
 	 */
-	protected final function getColor($name, $prefix = "") {
+	final protected function getColor($name, $prefix = "") {
 		if (!array_key_exists($name, DefaultColorProvider::getColors())) {
 			$name = "red";
 		}
@@ -71,7 +71,7 @@ abstract class AbstractABSBMDTwigExtension extends Twig_Extension {
 	 * @param array $replaces The replaces.
 	 * @return string Returns the replaced string.
 	 */
-	protected final function replace($subject, array $searches, array $replaces) {
+	final protected function replace($subject, array $searches, array $replaces) {
 		return str_replace($searches, $replaces, $subject);
 	}
 

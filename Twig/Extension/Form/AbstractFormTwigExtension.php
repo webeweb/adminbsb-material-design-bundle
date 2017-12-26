@@ -26,7 +26,7 @@ abstract class AbstractFormTwigExtension extends AbstractABSBMDTwigExtension {
 	/**
 	 * Constructor.
 	 */
-	public final function __construct() {
+	final public function __construct() {
 		parent::__construct();
 	}
 
@@ -42,7 +42,7 @@ abstract class AbstractFormTwigExtension extends AbstractABSBMDTwigExtension {
 	 * @param string $class The checkbox class.
 	 * @return string Returns the checkbox.
 	 */
-	protected final function checkbox($content, $name, $id, $checked, $disabled, $filledIn, $class) {
+	final protected function checkbox($content, $name, $id, $checked, $disabled, $filledIn, $class) {
 
 		// Initialize the template.
 		$template = '<input %attributes%><label for="%id%">%content%</label>';
@@ -76,7 +76,7 @@ abstract class AbstractFormTwigExtension extends AbstractABSBMDTwigExtension {
 	 * @param string $class The radio button class.
 	 * @return string Returns the radio button.
 	 */
-	protected final function radioButton($content, $name, $id, $checked, $disabled, $withGap, $class) {
+	final protected function radioButton($content, $name, $id, $checked, $disabled, $withGap, $class) {
 
 		// Initialize the template.
 		$template = '<input %attributes%><label for="%id%">%content%</label>';
@@ -110,7 +110,7 @@ abstract class AbstractFormTwigExtension extends AbstractABSBMDTwigExtension {
 	 * @param string $class The switch button class.
 	 * @return string Returns the switch button.
 	 */
-	protected final function switchButton($offLabel, $name, $checked, $disabled, $onLabel, array $attributes, $class = null) {
+	final protected function switchButton($offLabel, $name, $checked, $disabled, $onLabel, array $attributes, $class = null) {
 
 		// Initialize the template.
 		$template = '<div class="switch"><label>%offLabel%<input %attributes%><span class="lever%class%"></span>%onLabel%</label></div>';
