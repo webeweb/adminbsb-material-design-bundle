@@ -2,7 +2,7 @@
 services:
 
   webeweb.bundle.adminbsbmaterialdesignbundle.provider.manager:
-    class: WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\ProvidersManager
+    class:     WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\ProvidersManager
     arguments: ["@twig"]
     calls:
       - [setApplicationProvider, ["@?webeweb.bundle.adminbsbmaterialdesignbundle.provider.application"]]
