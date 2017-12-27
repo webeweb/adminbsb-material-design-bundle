@@ -50,15 +50,15 @@ abstract class AbstractFormTwigExtension extends AbstractABSBMDTwigExtension {
 		// Initialize the attributes.
 		$_attr = [];
 
-		$_attr["class"]		 = [$filledIn === true ? "filled-in" : null, $class];
+		$_attr["class"]		 = [true === $filledIn ? "filled-in" : null, $class];
 		$_attr["name"]		 = $name;
 		$_attr["type"]		 = "checkbox";
 		$_attr["id"]		 = $id;
-		$_attr["checked"]	 = $checked === true ? "checked" : null;
-		$_attr["disabled"]	 = $disabled === true ? "disabled" : null;
+		$_attr["checked"]	 = true === $checked ? "checked" : null;
+		$_attr["disabled"]	 = true === $disabled ? "disabled" : null;
 
 		// Check the parameters.
-		$_content = !is_null($content) ? $content : self::DEFAULT_CONTENT;
+		$_content = null !== $content ? $content : self::DEFAULT_CONTENT;
 
 		// Return the HTML.
 		return $this->replace($template, ["%attributes%", "%id%", "%content%"], [StringUtility::parseArray($_attr), $_attr["id"], $_content]);
@@ -84,15 +84,15 @@ abstract class AbstractFormTwigExtension extends AbstractABSBMDTwigExtension {
 		// Initialize the attributes.
 		$_attr = [];
 
-		$_attr["class"]		 = [$withGap === true ? "with-gap" : null, $class];
+		$_attr["class"]		 = [true === $withGap ? "with-gap" : null, $class];
 		$_attr["name"]		 = $name;
 		$_attr["type"]		 = "radio";
 		$_attr["id"]		 = $id;
-		$_attr["checked"]	 = $checked === true ? "checked" : null;
-		$_attr["disabled"]	 = $disabled === true ? "disabled" : null;
+		$_attr["checked"]	 = true === $checked ? "checked" : null;
+		$_attr["disabled"]	 = true === $disabled ? "disabled" : null;
 
 		// Check the parameters.
-		$_content = !is_null($content) ? $content : self::DEFAULT_CONTENT;
+		$_content = null !== $content ? $content : self::DEFAULT_CONTENT;
 
 		// Return the HTML.
 		return $this->replace($template, ["%attributes%", "%id%", "%content%"], [StringUtility::parseArray($_attr), $_attr["id"], $_content]);
@@ -120,13 +120,13 @@ abstract class AbstractFormTwigExtension extends AbstractABSBMDTwigExtension {
 
 		$_attr["name"]		 = $name;
 		$_attr["type"]		 = "checkbox";
-		$_attr["checked"]	 = $checked === true ? "checked" : null;
-		$_attr["disabled"]	 = $disabled === true ? "disabled" : null;
+		$_attr["checked"]	 = true === $checked ? "checked" : null;
+		$_attr["disabled"]	 = true === $disabled ? "disabled" : null;
 
 		// Check the parameters.
-		$_offLabel	 = !is_null($offLabel) ? $offLabel : "";
-		$_class		 = !is_null($class) ? " " . trim($class) : "";
-		$_onLabel	 = !is_null($onLabel) ? $onLabel : "";
+		$_offLabel	 = null !== $offLabel ? $offLabel : "";
+		$_class		 = null !== $class ? " " . trim($class) : "";
+		$_onLabel	 = null !== $onLabel ? $onLabel : "";
 
 		// Return the HTML.
 		return $this->replace($template, ["%offLabel%", "%attributes%", "%class%", "%onLabel%"], [$_offLabel, StringUtility::parseArray($_attr), $_class, $_onLabel]);

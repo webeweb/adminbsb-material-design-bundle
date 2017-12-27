@@ -50,10 +50,10 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
 		$_attr = [];
 
 		$_attr["class"]		 = ["alert", $class];
-		$_attr["class"][]	 = $dismissible === true ? "alert-dismissible" : null;
+		$_attr["class"][]	 = true === $dismissible ? "alert-dismissible" : null;
 
 		// Initialize the parameters.
-		$_content = ($dismissible === true ? $subtemplate : "") . (!is_null($content) ? $content : self::DEFAULT_CONTENT);
+		$_content = (true === $dismissible ? $subtemplate : "") . (null !== $content ? $content : self::DEFAULT_CONTENT);
 
 		// Return the HTML.
 		return $this->replace($template, ["%attributes%", "%content%"], [StringUtility::parseArray($_attr), $_content]);
@@ -81,18 +81,18 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
 		// Initialize the attributes.
 		$_attr = [];
 
-		if ($list === true) {
+		if (true === $list) {
 			$_attr["class"] = ["badge", $class];
 		} else {
 			$_attr["class"]		 = ["btn", $class, "btn-block", "waves-effect"];
-			$_attr["class"][]	 = $large === true ? "btn-lg" : null;
+			$_attr["class"][]	 = true === $large ? "btn-lg" : null;
 			$_attr["type"]		 = "button";
 		}
 
 		// Initialize the parameters.
-		$_content	 = !is_null($content) ? $content : self::DEFAULT_CONTENT;
-		$_label		 = !is_null($label) ? $label : self::DEFAULT_CONTENT;
-		$_link		 = !is_null($link) ? $link : self::DEFAULT_HREF;
+		$_content	 = null !== $content ? $content : self::DEFAULT_CONTENT;
+		$_label		 = null !== $label ? $label : self::DEFAULT_CONTENT;
+		$_link		 = null !== $link ? $link : self::DEFAULT_HREF;
 
 		// Return the HTML.
 		return $this->replace($template, ["%attributes%", "%content%", "%label%", "%link%"], [StringUtility::parseArray($_attr), $_content, $_label, $_link]);
@@ -114,8 +114,8 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
 	final protected function button($content, $title, $size, $block, $disable, $class, $icon, $circle) {
 
 		// Disable the parameters.
-		$circle	 = (!is_null($content) ? false : $circle);
-		$style	 = (!is_null($content) ? "margin: -4px 2px 0; vertical-align: sub;" : "");
+		$circle	 = null !== $content ? false : $circle;
+		$style	 = null !== $content ? "margin: -4px 2px 0; vertical-align: sub;" : "";
 
 		// Initialize the template.
 		$template = "<button %attributes%>%icon%%content%</button>";
@@ -124,13 +124,13 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
 		$_attr = [];
 
 		$_attr["class"]			 = ["btn", $class, "waves-effect"];
-		$_attr["class"][]		 = $block === true ? "btn-block" : null;
-		$_attr["class"][]		 = $circle === true ? "btn-circle" . ($size === "lg" ? "-lg" : "") . " waves-circle waves-float" : null;
-		$_attr["class"][]		 = $circle !== true && in_array($size, ["lg", "sm", "xs"]) ? "btn-" . $size : null;
+		$_attr["class"][]		 = true === $block ? "btn-block" : null;
+		$_attr["class"][]		 = true === $circle ? "btn-circle" . ("lg" === $size ? "-lg" : "") . " waves-circle waves-float" : null;
+		$_attr["class"][]		 = true !== $circle && true === in_array($size, ["lg", "sm", "xs"]) ? "btn-" . $size : null;
 		$_attr["title"]			 = $title;
 		$_attr["type"]			 = "button";
 		$_attr["data-toggle"]	 = !is_null($title) ? "tooltip" : null;
-		$_attr["disabled"]		 = $disable === true ? "disabled" : null;
+		$_attr["disabled"]		 = true === $disable ? "disabled" : null;
 
 		// Handle the parameters.
 		$_content	 = !is_null($content) ? $content : self::DEFAULT_CONTENT;
@@ -152,10 +152,10 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
 
 		// Initialize the parameters.
 		$_name	 = $this->getColor($name, "");
-		$_code	 = !is_null($code) ? $code : "500";
+		$_code	 = null !== $code ? $code : "500";
 
 		// Return the HTML.
-		return $output === "hex" ? DefaultColorProvider::getColors()[$_name][$_code] : "col-" . $_name;
+		return "hex" === $output ? DefaultColorProvider::getColors()[$_name][$_code] : "col-" . $_name;
 	}
 
 	/**
@@ -251,8 +251,8 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
 		$_attr = [];
 
 		$_attr["class"]			 = ["progress-bar", $class];
-		$_attr["class"][]		 = $striped === true ? "progress-bar-striped" : null;
-		$_attr["class"][]		 = $animated === true ? "active" : null;
+		$_attr["class"][]		 = true === $striped ? "progress-bar-striped" : null;
+		$_attr["class"][]		 = true === $animated ? "active" : null;
 		$_attr["style"]			 = "width: " . $value . "%;";
 		$_attr["role"]			 = "progressbar";
 		$_attr["aria-valuenow"]	 = $value;
