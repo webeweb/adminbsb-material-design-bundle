@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Navigation;
 
-use Symfony\Component\Routing\Router;
 use Symfony\Component\Routing\RouterInterface;
 use WBW\Library\Core\Navigation\Node\BreadcrumbNode;
 
@@ -27,7 +26,7 @@ final class HowToNavigationProvider {
 	/**
 	 * Router.
 	 *
-	 * @var Router
+	 * @var RouterInterface
 	 */
 	private $router;
 
@@ -57,9 +56,10 @@ final class HowToNavigationProvider {
 		$route = "absbmd_howto_index";
 
 		// Handle each page.
-		foreach ($tableContents as $page) {
-			$breadcrumbRoot->addNode(new BreadcrumbNode($page["title"], "bookmark", $route));
-			$breadcrumbRoot->getLastNode()->setUrl($this->router->generate($route, ["page" => $page["page"]]));
+		foreach ($tableContents as $current) {
+			$breadcrumb = new BreadcrumbNode($current["title"], "bookmark", $route);
+			$breadcrumb->setUrl($this->router->generate($route, ["page" => $current["page"]]));
+			$breadcrumbRoot->addNode($breadcrumb);
 		}
 
 		// Return the breadcrumb.
