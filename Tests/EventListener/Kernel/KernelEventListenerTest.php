@@ -33,18 +33,18 @@ use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\ProvidersManager;
 final class KernelEventListenerTest extends PHPUnit_Framework_TestCase {
 
 	/**
-	 * Mock "Token storage".
-	 *
-	 * @var TokenStorageInterface
-	 */
-	private $mockTokenStorage;
-
-	/**
 	 * Providers manager.
 	 *
 	 * @var ProviderManager
 	 */
 	private $providersManager;
+
+	/**
+	 * Token storage.
+	 *
+	 * @var TokenStorageInterface
+	 */
+	private $tokenStorage;
 
 	/**
 	 * Twig globals.
@@ -65,25 +65,25 @@ final class KernelEventListenerTest extends PHPUnit_Framework_TestCase {
 	 */
 	protected function setUp() {
 
-		// Set the mocks.
-		$mockTwigLoader		 = $this->getMockBuilder(Twig_LoaderInterface::class)->getMock();
-		$mockTwigEnvironment = $this->getMockBuilder(Twig_Environment::class)->setConstructorArgs([$mockTwigLoader, []])->getMock();
-		$mockTwigEnvironment->expects($this->any())->method("addGlobal")->willReturnCallback(function($name, $value) {
+		$twigLoader = $this->getMockBuilder(Twig_LoaderInterface::class)->getMock();
+
+		$twigEnvironment = $this->getMockBuilder(Twig_Environment::class)->setConstructorArgs([$twigLoader, []])->getMock();
+		$twigEnvironment->expects($this->any())->method("addGlobal")->willReturnCallback(function($name, $value) {
 			$this->twigGlobals[$name] = $value;
 		});
-		$mockTwigEnvironment->expects($this->any())->method("getGlobals")->willReturnCallback(function() {
+		$twigEnvironment->expects($this->any())->method("getGlobals")->willReturnCallback(function() {
 			return $this->twigGlobals;
 		});
 
-		$this->providersManager = new ProvidersManager($mockTwigEnvironment);
+		$this->providersManager = new ProvidersManager($twigEnvironment);
 
-		$mockToken = $this->getMockBuilder(TokenInterface::class)->getMock();
-		$mockToken->expects($this->any())->method("getUser")->willReturnCallback(function() {
+		$token = $this->getMockBuilder(TokenInterface::class)->getMock();
+		$token->expects($this->any())->method("getUser")->willReturnCallback(function() {
 			return $this->user;
 		});
 
-		$this->mockTokenStorage = $this->getMockBuilder(TokenStorageInterface::class)->getMock();
-		$this->mockTokenStorage->expects($this->any())->method("getToken")->willReturn($mockToken);
+		$this->tokenStorage = $this->getMockBuilder(TokenStorageInterface::class)->getMock();
+		$this->tokenStorage->expects($this->any())->method("getToken")->willReturn($token);
 	}
 
 	/**
@@ -93,7 +93,7 @@ final class KernelEventListenerTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testConstructor() {
 
-		$obj = new KernelEventListener($this->mockTokenStorage, $this->providersManager);
+		$obj = new KernelEventListener($this->tokenStorage, $this->providersManager);
 
 		$this->assertEquals(null, $obj->getRequest());
 		$this->assertEquals(null, $obj->getUser());
@@ -107,7 +107,7 @@ final class KernelEventListenerTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testGetUser() {
 
-		$obj = new KernelEventListener($this->mockTokenStorage, $this->providersManager);
+		$obj = new KernelEventListener($this->tokenStorage, $this->providersManager);
 
 		$this->user = null;
 		$this->assertNull(null, $obj->getUser());
@@ -127,7 +127,7 @@ final class KernelEventListenerTest extends PHPUnit_Framework_TestCase {
 		// Set the mocks.
 		$httpKernel = $this->getMockBuilder(HttpKernelInterface::class)->getMock();
 
-		$obj = new KernelEventListener($this->mockTokenStorage, $this->providersManager);
+		$obj = new KernelEventListener($this->tokenStorage, $this->providersManager);
 
 		$obj->onKernelRequest(new GetResponseEvent($httpKernel, new Request(), "GET"));
 		$this->assertInstanceOf(Request::class, $obj->getRequest());
