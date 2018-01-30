@@ -24,24 +24,24 @@ use WBW\Library\Core\Navigation\Node\BreadcrumbNode;
  */
 final class FOSUserNavigationProviderTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the getBreadcrumb() method.
-	 *
-	 * @return void
-	 */
-	public function testGetBreadcrumb() {
+    /**
+     * Tests the getBreadcrumb() method.
+     *
+     * @return void
+     */
+    public function testGetBreadcrumb() {
 
-		$obj = new FOSUserNavigationProvider();
+        $obj = new FOSUserNavigationProvider();
 
-		$res = $obj->getBreadcrumb();
-		$this->assertInstanceOf(BreadcrumbNode::class, $res);
-		$this->assertCount(2, $res->getNodes());
-		$this->assertEquals("label.user_profile_edit", $res->getNodeAt(0)->getId());
-		$this->assertEquals("person", $res->getNodeAt(0)->getIcon());
-		$this->assertEquals("fos_user_profile_edit", $res->getNodeAt(0)->getRoute());
-		$this->assertEquals("label.user_change_password", $res->getNodeAt(1)->getId());
-		$this->assertEquals("person", $res->getNodeAt(1)->getIcon());
-		$this->assertEquals("fos_user_change_password", $res->getNodeAt(1)->getRoute());
-	}
+        $res = $obj->getBreadcrumb();
+        $this->assertInstanceOf(BreadcrumbNode::class, $res);
+        $this->assertCount(2, $res->getNodes());
+        $this->assertEquals("label.user_profile_edit", $res->getNodeAt(0)->getId());
+        $this->assertEquals("person", $res->getNodeAt(0)->getIcon());
+        $this->assertEquals("fos_user_profile_edit", $res->getNodeAt(0)->getRoute());
+        $this->assertEquals("label.user_change_password", $res->getNodeAt(1)->getId());
+        $this->assertEquals("person", $res->getNodeAt(1)->getIcon());
+        $this->assertEquals("fos_user_change_password", $res->getNodeAt(1)->getRoute());
+    }
 
 }

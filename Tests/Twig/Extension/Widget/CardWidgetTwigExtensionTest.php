@@ -25,54 +25,54 @@ use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Widget\CardWidgetTwig
  */
 final class CardWidgetTwigExtensionTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the getFunctions() method.
-	 *
-	 * @return void
-	 */
-	public function testGetFunctions() {
+    /**
+     * Tests the getFunctions() method.
+     *
+     * @return void
+     */
+    public function testGetFunctions() {
 
-		$obj = new CardWidgetTwigExtension();
+        $obj = new CardWidgetTwigExtension();
 
-		$res = $obj->getFunctions();
+        $res = $obj->getFunctions();
 
-		$this->assertCount(1, $res);
+        $this->assertCount(1, $res);
 
-		$this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-		$this->assertEquals("cardHeader", $res[0]->getName());
-		$this->assertEquals([$obj, "cardHeaderFunction"], $res[0]->getCallable());
-		$this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
-	}
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
+        $this->assertEquals("cardHeader", $res[0]->getName());
+        $this->assertEquals([$obj, "cardHeaderFunction"], $res[0]->getCallable());
+        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+    }
 
-	/**
-	 * Tests the cardHeaderFunction() method.
-	 *
-	 * @return void
-	 * @depends testGetFunctions
-	 */
-	public function testCardHeaderFunction() {
+    /**
+     * Tests the cardHeaderFunction() method.
+     *
+     * @return void
+     * @depends testGetFunctions
+     */
+    public function testCardHeaderFunction() {
 
-		$obj = new CardWidgetTwigExtension();
+        $obj = new CardWidgetTwigExtension();
 
-		$arg0	 = [];
-		$res0	 = '<h2 class="card-header">&nbsp;</h2>';
-		$this->assertEquals($res0, $obj->cardHeaderFunction($arg0));
+        $arg0 = [];
+        $res0 = '<h2 class="card-header">&nbsp;</h2>';
+        $this->assertEquals($res0, $obj->cardHeaderFunction($arg0));
 
-		$arg1	 = ["content" => "content"];
-		$res1	 = '<h2 class="card-header">content</h2>';
-		$this->assertEquals($res1, $obj->cardHeaderFunction($arg1));
+        $arg1 = ["content" => "content"];
+        $res1 = '<h2 class="card-header">content</h2>';
+        $this->assertEquals($res1, $obj->cardHeaderFunction($arg1));
 
-		$arg2	 = ["description" => "description"];
-		$res2	 = '<h2 class="card-header">&nbsp;<small>description</small></h2>';
-		$this->assertEquals($res2, $obj->cardHeaderFunction($arg2));
+        $arg2 = ["description" => "description"];
+        $res2 = '<h2 class="card-header">&nbsp;<small>description</small></h2>';
+        $this->assertEquals($res2, $obj->cardHeaderFunction($arg2));
 
-		$arg3	 = ["icon" => "person"];
-		$res3	 = '<h2 class="card-header"><i class="material-icons" style="margin: -4px 0; vertical-align: sub;">person</i>&nbsp;</h2>';
-		$this->assertEquals($res3, $obj->cardHeaderFunction($arg3));
+        $arg3 = ["icon" => "person"];
+        $res3 = '<h2 class="card-header"><i class="material-icons" style="margin: -4px 0; vertical-align: sub;">person</i>&nbsp;</h2>';
+        $this->assertEquals($res3, $obj->cardHeaderFunction($arg3));
 
-		$arg9	 = ["content" => "content", "description" => "description", "icon" => "person"];
-		$res9	 = '<h2 class="card-header"><i class="material-icons" style="margin: -4px 0; vertical-align: sub;">person</i>content<small>description</small></h2>';
-		$this->assertEquals($res9, $obj->cardHeaderFunction($arg9));
-	}
+        $arg9 = ["content" => "content", "description" => "description", "icon" => "person"];
+        $res9 = '<h2 class="card-header"><i class="material-icons" style="margin: -4px 0; vertical-align: sub;">person</i>content<small>description</small></h2>';
+        $this->assertEquals($res9, $obj->cardHeaderFunction($arg9));
+    }
 
 }

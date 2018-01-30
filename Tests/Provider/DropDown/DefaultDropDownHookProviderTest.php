@@ -24,17 +24,17 @@ use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\DropDown\DropDownHookProvid
  */
 final class DefaultDropDownHookProviderTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstructor() {
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstructor() {
 
-		$obj = new DefaultDropDownHookProvider();
+        $obj = new DefaultDropDownHookProvider();
 
-		$this->assertEquals([], $obj->getItems());
-		$this->assertEquals(DropDownHookProviderInterface::DEFAULT_TEMPLATE, $obj->getTemplate());
-	}
+        $this->assertEquals([], $obj->getItems());
+        $this->assertEquals(DropDownHookProviderInterface::DEFAULT_TEMPLATE, $obj->getTemplate());
+    }
 
 }

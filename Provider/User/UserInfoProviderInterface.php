@@ -19,38 +19,38 @@ namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\User;
  */
 interface UserInfoProviderInterface {
 
-	/**
-	 * Default template.
-	 *
-	 * @var string
-	 */
-	const DEFAULT_TEMPLATE = "@ABSBMD/html/body/section/aside/div.user-info.html.twig";
+    /**
+     * Default template.
+     *
+     * @var string
+     */
+    const DEFAULT_TEMPLATE = "@ABSBMD/html/body/section/aside/div.user-info.html.twig";
 
-	/**
-	 * Service name.
-	 *
-	 * @var string
-	 */
-	const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.provider.user_info";
+    /**
+     * Service name.
+     *
+     * @var string
+     */
+    const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.provider.user_info";
 
-	/**
-	 * Get the template.
-	 *
-	 * @return string Returns the template.
-	 */
-	public function getTemplate();
+    /**
+     * Get the template.
+     *
+     * @return string Returns the template.
+     */
+    public function getTemplate();
 
-	/**
-	 * Provides a register link.
-	 *
-	 * @return boolean Returns true in case of success, false otherwise.
-	 */
-	public function provideRegisterLink();
+    /**
+     * Provides a register link.
+     *
+     * @return boolean Returns true in case of success, false otherwise.
+     */
+    public function provideRegisterLink();
 
-	/**
-	 * Provides a resseting link.
-	 *
-	 * @return boolean Returns true in case of success, false otherwise.
-	 */
-	public function provideResettingLink();
+    /**
+     * Provides a resseting link.
+     *
+     * @return boolean Returns true in case of success, false otherwise.
+     */
+    public function provideResettingLink();
 }

@@ -24,17 +24,17 @@ use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\DropDown\DropDownNotificati
  */
 final class DefaultDropDownNotificationsProviderTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstructor() {
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstructor() {
 
-		$obj = new DefaultDropDownNotificationsProvider();
+        $obj = new DefaultDropDownNotificationsProvider();
 
-		$this->assertEquals([], $obj->getNotifications());
-		$this->assertEquals(DropDownNotificationsProviderInterface::DEFAULT_TEMPLATE, $obj->getTemplate());
-	}
+        $this->assertEquals([], $obj->getNotifications());
+        $this->assertEquals(DropDownNotificationsProviderInterface::DEFAULT_TEMPLATE, $obj->getTemplate());
+    }
 
 }

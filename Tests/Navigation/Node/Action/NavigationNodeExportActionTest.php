@@ -23,18 +23,18 @@ use WBW\Bundle\AdminBSBMaterialDesignBundle\Navigation\Node\Action\NavigationNod
  */
 final class NavigationNodeExportActionTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstructor() {
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstructor() {
 
-		$obj = new NavigationNodeExportAction("route");
+        $obj = new NavigationNodeExportAction("route");
 
-		$this->assertEquals("navigation.node.action.export", $obj->getId());
-		$this->assertEquals("file_upload", $obj->getIcon());
-		$this->assertEquals("route", $obj->getRoute());
-	}
+        $this->assertEquals("navigation.node.action.export", $obj->getId());
+        $this->assertEquals("file_upload", $obj->getIcon());
+        $this->assertEquals("route", $obj->getRoute());
+    }
 
 }

@@ -23,18 +23,18 @@ use WBW\Bundle\AdminBSBMaterialDesignBundle\Navigation\Node\NavigationNodeUserGr
  */
 final class NavigationNodeUserGroupTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstructor() {
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstructor() {
 
-		$obj = new NavigationNodeUserGroup("route");
+        $obj = new NavigationNodeUserGroup("route");
 
-		$this->assertEquals("navigation.node.userGroup", $obj->getId());
-		$this->assertEquals("group", $obj->getIcon());
-		$this->assertEquals("route", $obj->getRoute());
-	}
+        $this->assertEquals("navigation.node.userGroup", $obj->getId());
+        $this->assertEquals("group", $obj->getIcon());
+        $this->assertEquals("route", $obj->getRoute());
+    }
 
 }

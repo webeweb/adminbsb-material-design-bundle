@@ -26,92 +26,92 @@ use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\ProvidersManager;
  */
 final class KernelEventListener {
 
-	/**
-	 * Service name.
-	 *
-	 * @var string
-	 */
-	const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.eventlistener.kernel";
+    /**
+     * Service name.
+     *
+     * @var string
+     */
+    const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.eventlistener.kernel";
 
-	/**
-	 * Providers manager.
-	 *
-	 * @var ProvidersManager
-	 */
-	private $providersManager;
+    /**
+     * Providers manager.
+     *
+     * @var ProvidersManager
+     */
+    private $providersManager;
 
-	/**
-	 * Request.
-	 *
-	 * @var Request
-	 */
-	private static $request;
+    /**
+     * Request.
+     *
+     * @var Request
+     */
+    private static $request;
 
-	/**
-	 * Token storage.
-	 *
-	 * @var TokenStorageInterface
-	 */
-	private $tokenStorage;
+    /**
+     * Token storage.
+     *
+     * @var TokenStorageInterface
+     */
+    private $tokenStorage;
 
-	/**
-	 * User.
-	 *
-	 * @var UserInterface
-	 */
-	private $user;
+    /**
+     * User.
+     *
+     * @var UserInterface
+     */
+    private $user;
 
-	/**
-	 * Constructor.
-	 *
-	 * @param type $tokenStorage The token storage service.
-	 * @param ProvidersManager The providers manager service.
-	 */
-	public function __construct(TokenStorageInterface $tokenStorage, ProvidersManager $providersManager) {
-		$this->providersManager	 = $providersManager;
-		$this->tokenStorage		 = $tokenStorage;
-	}
+    /**
+     * Constructor.
+     *
+     * @param type $tokenStorage The token storage service.
+     * @param ProvidersManager The providers manager service.
+     */
+    public function __construct(TokenStorageInterface $tokenStorage, ProvidersManager $providersManager) {
+        $this->providersManager = $providersManager;
+        $this->tokenStorage     = $tokenStorage;
+    }
 
-	/**
-	 * Get the request.
-	 *
-	 * @return Request Returns the request.
-	 */
-	public function getRequest() {
-		return self::$request;
-	}
+    /**
+     * Get the request.
+     *
+     * @return Request Returns the request.
+     */
+    public function getRequest() {
+        return self::$request;
+    }
 
-	/**
-	 * Get the current user.
-	 *
-	 * @return UserInterface Returns the current user in case of success, null otherwise.
-	 */
-	public function getUser() {
-		if (is_null($this->user)) {
-			$token = $this->tokenStorage->getToken();
-			if (!is_null($token)) {
-				$this->user = $token->getUser();
-			}
-		}
-		if ($this->user instanceof UserInterface) {
-			return $this->user;
-		}
-		return null;
-	}
+    /**
+     * Get the current user.
+     *
+     * @return UserInterface Returns the current user in case of success, null otherwise.
+     */
+    public function getUser() {
+        if (is_null($this->user)) {
+            $token = $this->tokenStorage->getToken();
+            if (!is_null($token)) {
+                $this->user = $token->getUser();
+            }
+        }
+        if ($this->user instanceof UserInterface) {
+            return $this->user;
+        }
+        return null;
+    }
 
-	/**
-	 * On kernel request.
-	 *
-	 * @param GetResponseEvent $event The event.
-	 * @return void
-	 */
-	public function onKernelRequest(GetResponseEvent $event) {
+    /**
+     * On kernel request.
+     *
+     * @param GetResponseEvent $event The event.
+     * @return void
+     */
+    public function onKernelRequest(GetResponseEvent $event) {
 
-		// Initialize the request.
-		self::$request = $event->getRequest();
+        // Initialize the request.
+        self::$request = $event->getRequest();
 
-		// Register the providers.
-		$this->providersManager->register();
-	}
+        // Register the providers.
+        $this->providersManager->register();
+    }
 
 }

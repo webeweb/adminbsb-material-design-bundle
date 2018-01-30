@@ -23,18 +23,18 @@ use WBW\Bundle\AdminBSBMaterialDesignBundle\Navigation\Node\NavigationNodeParame
  */
 final class NavigationNodeParametersTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstructor() {
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstructor() {
 
-		$obj = new NavigationNodeParameters("route");
+        $obj = new NavigationNodeParameters("route");
 
-		$this->assertEquals("navigation.node.parameters", $obj->getId());
-		$this->assertEquals("build", $obj->getIcon());
-		$this->assertEquals("route", $obj->getRoute());
-	}
+        $this->assertEquals("navigation.node.parameters", $obj->getId());
+        $this->assertEquals("build", $obj->getIcon());
+        $this->assertEquals("route", $obj->getRoute());
+    }
 
 }

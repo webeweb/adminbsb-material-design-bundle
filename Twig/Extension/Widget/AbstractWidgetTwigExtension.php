@@ -22,11 +22,11 @@ use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\AbstractABSBMDTwigExt
  */
 abstract class AbstractWidgetTwigExtension extends AbstractABSBMDTwigExtension {
 
-	/**
-	 * Constructor.
-	 */
-	final public function __construct() {
-		parent::__construct();
-	}
+    /**
+     * Constructor.
+     */
+    final public function __construct() {
+        parent::__construct();
+    }
 
 }

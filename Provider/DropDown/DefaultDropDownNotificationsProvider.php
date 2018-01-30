@@ -20,25 +20,25 @@ namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\DropDown;
  */
 final class DefaultDropDownNotificationsProvider implements DropDownNotificationsProviderInterface {
 
-	/**
-	 * Constructor.
-	 */
-	public function __construct() {
-		// NOTHING TO DO.
-	}
+    /**
+     * Constructor.
+     */
+    public function __construct() {
+        // NOTHING TO DO.
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getNotifications() {
-		return [];
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getNotifications() {
+        return [];
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getTemplate() {
-		return self::DEFAULT_TEMPLATE;
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getTemplate() {
+        return self::DEFAULT_TEMPLATE;
+    }
 
 }

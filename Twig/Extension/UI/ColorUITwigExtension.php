@@ -22,32 +22,32 @@ use Twig_SimpleFunction;
  */
 final class ColorUITwigExtension extends AbstractUITwigExtension {
 
-	/**
-	 * Service name.
-	 *
-	 * @var string
-	 */
-	const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.ui.color";
+    /**
+     * Service name.
+     *
+     * @var string
+     */
+    const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.ui.color";
 
-	/**
-	 * Get the Twig functions.
-	 *
-	 * @return array Returns the Twig functions.
-	 */
-	public function getFunctions() {
-		return [
-			new Twig_SimpleFunction("materialDesignColor", [$this, "materialDesignColorFunction"], ["is_safe" => ["html"]]),
-		];
-	}
+    /**
+     * Get the Twig functions.
+     *
+     * @return array Returns the Twig functions.
+     */
+    public function getFunctions() {
+        return [
+            new Twig_SimpleFunction("materialDesignColor", [$this, "materialDesignColorFunction"], ["is_safe" => ["html"]]),
+        ];
+    }
 
-	/**
-	 * Displays a material design color.
-	 *
-	 * @param array $args The arguments.
-	 * @return string Returns the material design color.
-	 */
-	public function materialDesignColorFunction(array $args = []) {
-		return $this->color($this->getArg($args, "name"), $this->getArg($args, "code", "500"), $this->getArg($args, "out", "class"));
-	}
+    /**
+     * Displays a material design color.
+     *
+     * @param array $args The arguments.
+     * @return string Returns the material design color.
+     */
+    public function materialDesignColorFunction(array $args = []) {
+        return $this->color($this->getArg($args, "name"), $this->getArg($args, "code", "500"), $this->getArg($args, "out", "class"));
+    }
 
 }

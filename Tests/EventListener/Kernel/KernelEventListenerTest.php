@@ -32,105 +32,105 @@ use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\ProvidersManager;
  */
 final class KernelEventListenerTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Providers manager.
-	 *
-	 * @var ProviderManager
-	 */
-	private $providersManager;
+    /**
+     * Providers manager.
+     *
+     * @var ProviderManager
+     */
+    private $providersManager;
 
-	/**
-	 * Token storage.
-	 *
-	 * @var TokenStorageInterface
-	 */
-	private $tokenStorage;
+    /**
+     * Token storage.
+     *
+     * @var TokenStorageInterface
+     */
+    private $tokenStorage;
 
-	/**
-	 * Twig globals.
-	 *
-	 * @var array
-	 */
-	private $twigGlobals = [];
+    /**
+     * Twig globals.
+     *
+     * @var array
+     */
+    private $twigGlobals = [];
 
-	/**
-	 * User.
-	 *
-	 * @var UserInterface
-	 */
-	private $user;
+    /**
+     * User.
+     *
+     * @var UserInterface
+     */
+    private $user;
 
-	/**
-	 * {@inheritdoc}
-	 */
-	protected function setUp() {
+    /**
+     * {@inheritdoc}
+     */
+    protected function setUp() {
 
-		$twigLoader = $this->getMockBuilder(Twig_LoaderInterface::class)->getMock();
+        $twigLoader = $this->getMockBuilder(Twig_LoaderInterface::class)->getMock();
 
-		$twigEnvironment = $this->getMockBuilder(Twig_Environment::class)->setConstructorArgs([$twigLoader, []])->getMock();
-		$twigEnvironment->expects($this->any())->method("addGlobal")->willReturnCallback(function($name, $value) {
-			$this->twigGlobals[$name] = $value;
-		});
-		$twigEnvironment->expects($this->any())->method("getGlobals")->willReturnCallback(function() {
-			return $this->twigGlobals;
-		});
+        $twigEnvironment = $this->getMockBuilder(Twig_Environment::class)->setConstructorArgs([$twigLoader, []])->getMock();
+        $twigEnvironment->expects($this->any())->method("addGlobal")->willReturnCallback(function($name, $value) {
+            $this->twigGlobals[$name] = $value;
+        });
+        $twigEnvironment->expects($this->any())->method("getGlobals")->willReturnCallback(function() {
+            return $this->twigGlobals;
+        });
 
-		$this->providersManager = new ProvidersManager($twigEnvironment);
+        $this->providersManager = new ProvidersManager($twigEnvironment);
 
-		$token = $this->getMockBuilder(TokenInterface::class)->getMock();
-		$token->expects($this->any())->method("getUser")->willReturnCallback(function() {
-			return $this->user;
-		});
+        $token = $this->getMockBuilder(TokenInterface::class)->getMock();
+        $token->expects($this->any())->method("getUser")->willReturnCallback(function() {
+            return $this->user;
+        });
 
-		$this->tokenStorage = $this->getMockBuilder(TokenStorageInterface::class)->getMock();
-		$this->tokenStorage->expects($this->any())->method("getToken")->willReturn($token);
-	}
+        $this->tokenStorage = $this->getMockBuilder(TokenStorageInterface::class)->getMock();
+        $this->tokenStorage->expects($this->any())->method("getToken")->willReturn($token);
+    }
 
-	/**
-	 * Tests the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstructor() {
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstructor() {
 
-		$obj = new KernelEventListener($this->tokenStorage, $this->providersManager);
+        $obj = new KernelEventListener($this->tokenStorage, $this->providersManager);
 
-		$this->assertEquals(null, $obj->getRequest());
-		$this->assertEquals(null, $obj->getUser());
-	}
+        $this->assertEquals(null, $obj->getRequest());
+        $this->assertEquals(null, $obj->getUser());
+    }
 
-	/**
-	 * Tests the getUser() method.
-	 *
-	 * @return void.
-	 * @depends testConstructor
-	 */
-	public function testGetUser() {
+    /**
+     * Tests the getUser() method.
+     *
+     * @return void.
+     * @depends testConstructor
+     */
+    public function testGetUser() {
 
-		$obj = new KernelEventListener($this->tokenStorage, $this->providersManager);
+        $obj = new KernelEventListener($this->tokenStorage, $this->providersManager);
 
-		$this->user = null;
-		$this->assertNull(null, $obj->getUser());
+        $this->user = null;
+        $this->assertNull(null, $obj->getUser());
 
-		$this->user = $this->getMockBuilder(UserInterface::class)->getMock();
-		$this->assertNotNull($obj->getUser());
-	}
+        $this->user = $this->getMockBuilder(UserInterface::class)->getMock();
+        $this->assertNotNull($obj->getUser());
+    }
 
-	/**
-	 * Tests the onKernelRequest() method.
-	 *
-	 * @return void
-	 * @depends testConstructor
-	 */
-	public function testOnKernelRequest() {
+    /**
+     * Tests the onKernelRequest() method.
+     *
+     * @return void
+     * @depends testConstructor
+     */
+    public function testOnKernelRequest() {
 
-		// Set the mocks.
-		$httpKernel = $this->getMockBuilder(HttpKernelInterface::class)->getMock();
+        // Set the mocks.
+        $httpKernel = $this->getMockBuilder(HttpKernelInterface::class)->getMock();
 
-		$obj = new KernelEventListener($this->tokenStorage, $this->providersManager);
+        $obj = new KernelEventListener($this->tokenStorage, $this->providersManager);
 
-		$obj->onKernelRequest(new GetResponseEvent($httpKernel, new Request(), "GET"));
-		$this->assertInstanceOf(Request::class, $obj->getRequest());
-	}
+        $obj->onKernelRequest(new GetResponseEvent($httpKernel, new Request(), "GET"));
+        $this->assertInstanceOf(Request::class, $obj->getRequest());
+    }
 
 }

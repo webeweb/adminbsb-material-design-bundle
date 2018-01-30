@@ -23,18 +23,18 @@ use WBW\Bundle\AdminBSBMaterialDesignBundle\Navigation\Node\NavigationNodeEvent;
  */
 final class NavigationNodeEventTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstructor() {
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstructor() {
 
-		$obj = new NavigationNodeEvent("route");
+        $obj = new NavigationNodeEvent("route");
 
-		$this->assertEquals("navigation.node.event", $obj->getId());
-		$this->assertEquals("event", $obj->getIcon());
-		$this->assertEquals("route", $obj->getRoute());
-	}
+        $this->assertEquals("navigation.node.event", $obj->getId());
+        $this->assertEquals("event", $obj->getIcon());
+        $this->assertEquals("route", $obj->getRoute());
+    }
 
 }

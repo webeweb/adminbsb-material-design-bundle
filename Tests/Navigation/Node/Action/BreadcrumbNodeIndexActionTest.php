@@ -23,18 +23,18 @@ use WBW\Bundle\AdminBSBMaterialDesignBundle\Navigation\Node\Action\BreadcrumbNod
  */
 final class BreadcrumbNodeIndexActionTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstructor() {
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstructor() {
 
-		$obj = new BreadcrumbNodeIndexAction("route");
+        $obj = new BreadcrumbNodeIndexAction("route");
 
-		$this->assertEquals("navigation.node.action.index", $obj->getId());
-		$this->assertEquals("view_list", $obj->getIcon());
-		$this->assertEquals("route", $obj->getRoute());
-	}
+        $this->assertEquals("navigation.node.action.index", $obj->getId());
+        $this->assertEquals("view_list", $obj->getIcon());
+        $this->assertEquals("route", $obj->getRoute());
+    }
 
 }

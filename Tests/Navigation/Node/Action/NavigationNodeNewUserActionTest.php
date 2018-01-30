@@ -23,18 +23,18 @@ use WBW\Bundle\AdminBSBMaterialDesignBundle\Navigation\Node\Action\NavigationNod
  */
 final class NavigationNodeNewUserActionTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstructor() {
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstructor() {
 
-		$obj = new NavigationNodeNewUserAction("route");
+        $obj = new NavigationNodeNewUserAction("route");
 
-		$this->assertEquals("navigation.node.action.new", $obj->getId());
-		$this->assertEquals("person_add", $obj->getIcon());
-		$this->assertEquals("route", $obj->getRoute());
-	}
+        $this->assertEquals("navigation.node.action.new", $obj->getId());
+        $this->assertEquals("person_add", $obj->getIcon());
+        $this->assertEquals("route", $obj->getRoute());
+    }
 
 }

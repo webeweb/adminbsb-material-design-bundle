@@ -22,87 +22,87 @@ use Twig_SimpleFunction;
  */
 final class AlertUITwigExtension extends AbstractUITwigExtension {
 
-	/**
-	 * Service name.
-	 *
-	 * @var string
-	 */
-	const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.ui.alert";
+    /**
+     * Service name.
+     *
+     * @var string
+     */
+    const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.ui.alert";
 
-	/**
-	 * Displays a basic alert "Danger".
-	 *
-	 * @param array $args The arguments.
-	 * @return string Returns the basic alert "Danger".
-	 */
-	public function basicAlertDangerFunction(array $args = []) {
-		return $this->alert($this->getArg($args, "content"), $this->getArg($args, "dismissible"), "alert-danger");
-	}
+    /**
+     * Displays a basic alert "Danger".
+     *
+     * @param array $args The arguments.
+     * @return string Returns the basic alert "Danger".
+     */
+    public function basicAlertDangerFunction(array $args = []) {
+        return $this->alert($this->getArg($args, "content"), $this->getArg($args, "dismissible"), "alert-danger");
+    }
 
-	/**
-	 * Displays a basic alert "Info".
-	 *
-	 * @param array $args The arguments.
-	 * @return string Returns the basic alert "Info".
-	 */
-	public function basicAlertInfoFunction(array $args = []) {
-		return $this->alert($this->getArg($args, "content"), $this->getArg($args, "dismissible"), "alert-info");
-	}
+    /**
+     * Displays a basic alert "Info".
+     *
+     * @param array $args The arguments.
+     * @return string Returns the basic alert "Info".
+     */
+    public function basicAlertInfoFunction(array $args = []) {
+        return $this->alert($this->getArg($args, "content"), $this->getArg($args, "dismissible"), "alert-info");
+    }
 
-	/**
-	 * Displays a basic alert "Success".
-	 *
-	 * @param array $args The arguments.
-	 * @return string Returns the basic alert "Success".
-	 */
-	public function basicAlertSuccessFunction(array $args = []) {
-		return $this->alert($this->getArg($args, "content"), $this->getArg($args, "dismissible"), "alert-success");
-	}
+    /**
+     * Displays a basic alert "Success".
+     *
+     * @param array $args The arguments.
+     * @return string Returns the basic alert "Success".
+     */
+    public function basicAlertSuccessFunction(array $args = []) {
+        return $this->alert($this->getArg($args, "content"), $this->getArg($args, "dismissible"), "alert-success");
+    }
 
-	/**
-	 * Displays a basic alert "Warning".
-	 *
-	 * @param array $args The arguments.
-	 * @return string Returns the basic alert "Warning".
-	 */
-	public function basicAlertWarningFunction(array $args = []) {
-		return $this->alert($this->getArg($args, "content"), $this->getArg($args, "dismissible"), "alert-warning");
-	}
+    /**
+     * Displays a basic alert "Warning".
+     *
+     * @param array $args The arguments.
+     * @return string Returns the basic alert "Warning".
+     */
+    public function basicAlertWarningFunction(array $args = []) {
+        return $this->alert($this->getArg($args, "content"), $this->getArg($args, "dismissible"), "alert-warning");
+    }
 
-	/**
-	 * Get the Twig functions.
-	 *
-	 * @return array Returns the Twig functions.
-	 */
-	public function getFunctions() {
-		return [
-			new Twig_SimpleFunction("basicAlertDanger", [$this, "basicAlertDangerFunction"], ["is_safe" => ["html"]]),
-			new Twig_SimpleFunction("basicAlertInfo", [$this, "basicAlertInfoFunction"], ["is_safe" => ["html"]]),
-			new Twig_SimpleFunction("basicAlertSuccess", [$this, "basicAlertSuccessFunction"], ["is_safe" => ["html"]]),
-			new Twig_SimpleFunction("basicAlertWarning", [$this, "basicAlertWarningFunction"], ["is_safe" => ["html"]]),
-			new Twig_SimpleFunction("linkAlert", [$this, "linkAlertFunction"], ["is_safe" => ["html"]]),
-			new Twig_SimpleFunction("materialDesignAlert", [$this, "materialDesignAlertFunction"], ["is_safe" => ["html"]]),
-		];
-	}
+    /**
+     * Get the Twig functions.
+     *
+     * @return array Returns the Twig functions.
+     */
+    public function getFunctions() {
+        return [
+            new Twig_SimpleFunction("basicAlertDanger", [$this, "basicAlertDangerFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("basicAlertInfo", [$this, "basicAlertInfoFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("basicAlertSuccess", [$this, "basicAlertSuccessFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("basicAlertWarning", [$this, "basicAlertWarningFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("linkAlert", [$this, "linkAlertFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("materialDesignAlert", [$this, "materialDesignAlertFunction"], ["is_safe" => ["html"]]),
+        ];
+    }
 
-	/**
-	 * Displays a link alert.
-	 *
-	 * @param array $args The arguments.
-	 * @return string Returns the link alert.
-	 */
-	public function linkAlertFunction(array $args = []) {
-		return $this->alert($this->getArg($args, "content"), $this->getArg($args, "dismissible"), $this->getColor($this->getArg($args, "color", "red"), "bg-"));
-	}
+    /**
+     * Displays a link alert.
+     *
+     * @param array $args The arguments.
+     * @return string Returns the link alert.
+     */
+    public function linkAlertFunction(array $args = []) {
+        return $this->alert($this->getArg($args, "content"), $this->getArg($args, "dismissible"), $this->getColor($this->getArg($args, "color", "red"), "bg-"));
+    }
 
-	/**
-	 * Displays a material design alert.
-	 *
-	 * @param array $args The arguments.
-	 * @return string Returns the material design alert.
-	 */
-	public function materialDesignAlertFunction(array $args = []) {
-		return $this->alert($this->getArg($args, "content"), $this->getArg($args, "dismissible"), $this->getColor($this->getArg($args, "color", "red"), "bg-"));
-	}
+    /**
+     * Displays a material design alert.
+     *
+     * @param array $args The arguments.
+     * @return string Returns the material design alert.
+     */
+    public function materialDesignAlertFunction(array $args = []) {
+        return $this->alert($this->getArg($args, "content"), $this->getArg($args, "dismissible"), $this->getColor($this->getArg($args, "color", "red"), "bg-"));
+    }
 
 }

@@ -23,22 +23,22 @@ use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Application\DefaultApplicat
  */
 final class DefaultApplicationProviderTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstructor() {
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstructor() {
 
-		$obj = new DefaultApplicationProvider();
+        $obj = new DefaultApplicationProvider();
 
-		$this->assertEquals("AdminBSB Material Design", $obj->getDescription());
-		$this->assertEquals("/", $obj->getHome());
-		$this->assertEquals("AdminBSB<b>MaterialDesign</b>", $obj->getName());
-		$this->assertEquals("/", $obj->getRoute());
-		$this->assertEquals("AdminBSB Material Design", $obj->getTitle());
-		$this->assertEquals("~1.0@dev", $obj->getVersion());
-		$this->assertEquals("2017", $obj->getYear());
-	}
+        $this->assertEquals("AdminBSB Material Design", $obj->getDescription());
+        $this->assertEquals("/", $obj->getHome());
+        $this->assertEquals("AdminBSB<b>MaterialDesign</b>", $obj->getName());
+        $this->assertEquals("/", $obj->getRoute());
+        $this->assertEquals("AdminBSB Material Design", $obj->getTitle());
+        $this->assertEquals("~1.0@dev", $obj->getVersion());
+        $this->assertEquals("2017", $obj->getYear());
+    }
 
 }

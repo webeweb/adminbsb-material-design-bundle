@@ -24,18 +24,18 @@ use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\User\UserInfoProviderInterf
  */
 final class DefaultUserInfoProviderTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstructor() {
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstructor() {
 
-		$obj = new DefaultUserInfoProvider();
+        $obj = new DefaultUserInfoProvider();
 
-		$this->assertEquals(UserInfoProviderInterface::DEFAULT_TEMPLATE, $obj->getTemplate());
-		$this->assertEquals(false, $obj->provideRegisterLink());
-		$this->assertEquals(false, $obj->provideResettingLink());
-	}
+        $this->assertEquals(UserInfoProviderInterface::DEFAULT_TEMPLATE, $obj->getTemplate());
+        $this->assertEquals(false, $obj->provideRegisterLink());
+        $this->assertEquals(false, $obj->provideResettingLink());
+    }
 
 }

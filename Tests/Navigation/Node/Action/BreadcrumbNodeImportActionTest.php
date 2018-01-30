@@ -23,18 +23,18 @@ use WBW\Bundle\AdminBSBMaterialDesignBundle\Navigation\Node\Action\BreadcrumbNod
  */
 final class BreadcrumbNodeImportActionTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstructor() {
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstructor() {
 
-		$obj = new BreadcrumbNodeImportAction("route");
+        $obj = new BreadcrumbNodeImportAction("route");
 
-		$this->assertEquals("navigation.node.action.import", $obj->getId());
-		$this->assertEquals("file_download", $obj->getIcon());
-		$this->assertEquals("route", $obj->getRoute());
-	}
+        $this->assertEquals("navigation.node.action.import", $obj->getId());
+        $this->assertEquals("file_download", $obj->getIcon());
+        $this->assertEquals("route", $obj->getRoute());
+    }
 
 }

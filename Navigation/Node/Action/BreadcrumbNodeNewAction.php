@@ -22,13 +22,13 @@ use WBW\Library\Core\Navigation\Node\BreadcrumbNode;
  */
 final class BreadcrumbNodeNewAction extends BreadcrumbNode {
 
-	/**
-	 * Constructor.
-	 *
-	 * @param string $route The route.
-	 */
-	public function __construct($route = null) {
-		parent::__construct("navigation.node.action.new", "add_circle_outline", $route);
-	}
+    /**
+     * Constructor.
+     *
+     * @param string $route The route.
+     */
+    public function __construct($route = null) {
+        parent::__construct("navigation.node.action.new", "add_circle_outline", $route);
+    }
 
 }

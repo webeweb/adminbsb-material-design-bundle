@@ -20,32 +20,32 @@ namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\User;
  */
 final class DefaultUserInfoProvider implements UserInfoProviderInterface {
 
-	/**
-	 * Constructor.
-	 */
-	public function __construct() {
-		// NOTHING TO DO.
-	}
+    /**
+     * Constructor.
+     */
+    public function __construct() {
+        // NOTHING TO DO.
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getTemplate() {
-		return self::DEFAULT_TEMPLATE;
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getTemplate() {
+        return self::DEFAULT_TEMPLATE;
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function provideRegisterLink() {
-		return false;
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function provideRegisterLink() {
+        return false;
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function provideResettingLink() {
-		return false;
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function provideResettingLink() {
+        return false;
+    }
 
 }

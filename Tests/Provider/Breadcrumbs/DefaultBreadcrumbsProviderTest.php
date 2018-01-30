@@ -24,16 +24,16 @@ use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Breadcrumbs\DefaultBreadcru
  */
 final class DefaultBreadcrumbsProviderTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstructor() {
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstructor() {
 
-		$obj = new DefaultBreadcrumbsProvider();
+        $obj = new DefaultBreadcrumbsProvider();
 
-		$this->assertEquals(BreadcrumbsProviderInterface::DEFAULT_TEMPLATE, $obj->getTemplate());
-	}
+        $this->assertEquals(BreadcrumbsProviderInterface::DEFAULT_TEMPLATE, $obj->getTemplate());
+    }
 
 }

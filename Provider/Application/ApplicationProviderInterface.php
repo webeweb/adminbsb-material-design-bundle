@@ -19,59 +19,59 @@ namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Application;
  */
 interface ApplicationProviderInterface {
 
-	/**
-	 * Service name.
-	 *
-	 * @var string
-	 */
-	const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.provider.application";
+    /**
+     * Service name.
+     *
+     * @var string
+     */
+    const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.provider.application";
 
-	/**
-	 * Get the description.
-	 *
-	 * @return string Returns the description.
-	 */
-	public function getDescription();
+    /**
+     * Get the description.
+     *
+     * @return string Returns the description.
+     */
+    public function getDescription();
 
-	/**
-	 * Get the home.
-	 *
-	 * @return string Returns the home.
-	 */
-	public function getHome();
+    /**
+     * Get the home.
+     *
+     * @return string Returns the home.
+     */
+    public function getHome();
 
-	/**
-	 * Get the name.
-	 *
-	 * @return string Returns the name.
-	 */
-	public function getName();
+    /**
+     * Get the name.
+     *
+     * @return string Returns the name.
+     */
+    public function getName();
 
-	/**
-	 * Get the route.
-	 *
-	 * @return string Returns the route.
-	 */
-	public function getRoute();
+    /**
+     * Get the route.
+     *
+     * @return string Returns the route.
+     */
+    public function getRoute();
 
-	/**
-	 * Get the title.
-	 *
-	 * @return string Returns the title.
-	 */
-	public function getTitle();
+    /**
+     * Get the title.
+     *
+     * @return string Returns the title.
+     */
+    public function getTitle();
 
-	/**
-	 * Get the version.
-	 *
-	 * @return string Returns the version.
-	 */
-	public function getVersion();
+    /**
+     * Get the version.
+     *
+     * @return string Returns the version.
+     */
+    public function getVersion();
 
-	/**
-	 * Get the year.
-	 *
-	 * @return string Returns the year.
-	 */
-	public function getYear();
+    /**
+     * Get the year.
+     *
+     * @return string Returns the year.
+     */
+    public function getYear();
 }

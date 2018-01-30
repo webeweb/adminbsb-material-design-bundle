@@ -19,31 +19,31 @@ namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\DropDown;
  */
 interface DropDownTasksProviderInterface {
 
-	/**
-	 * Default template.
-	 *
-	 * @var string
-	 */
-	const DEFAULT_TEMPLATE = "@ABSBMD/html/body/nav/div/div/ul/li.dropdown_tasks.html.twig";
+    /**
+     * Default template.
+     *
+     * @var string
+     */
+    const DEFAULT_TEMPLATE = "@ABSBMD/html/body/nav/div/div/ul/li.dropdown_tasks.html.twig";
 
-	/**
-	 * Drop down tasks provider service name.
-	 *
-	 * @var string
-	 */
-	const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.provider.drop_down_tasks";
+    /**
+     * Drop down tasks provider service name.
+     *
+     * @var string
+     */
+    const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.provider.drop_down_tasks";
 
-	/**
-	 * Get the tasks.
-	 *
-	 * @return array Returns the tasks.
-	 */
-	public function getTasks();
+    /**
+     * Get the tasks.
+     *
+     * @return array Returns the tasks.
+     */
+    public function getTasks();
 
-	/**
-	 * Get the template.
-	 *
-	 * @return string Returns the template.
-	 */
-	public function getTemplate();
+    /**
+     * Get the template.
+     *
+     * @return string Returns the template.
+     */
+    public function getTemplate();
 }

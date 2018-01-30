@@ -22,13 +22,13 @@ use WBW\Library\Core\Navigation\Node\NavigationNode;
  */
 final class NavigationNodeEvent extends NavigationNode {
 
-	/**
-	 * Constructor.
-	 *
-	 * @param string $route The route.
-	 */
-	public function __construct($route = null) {
-		parent::__construct("navigation.node.event", "event", $route);
-	}
+    /**
+     * Constructor.
+     *
+     * @param string $route The route.
+     */
+    public function __construct($route = null) {
+        parent::__construct("navigation.node.event", "event", $route);
+    }
 
 }

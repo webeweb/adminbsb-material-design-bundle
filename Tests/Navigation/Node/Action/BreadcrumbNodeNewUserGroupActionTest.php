@@ -23,18 +23,18 @@ use WBW\Bundle\AdminBSBMaterialDesignBundle\Navigation\Node\Action\BreadcrumbNod
  */
 final class BreadcrumbNodeNewUserGroupActionTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstructor() {
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstructor() {
 
-		$obj = new BreadcrumbNodeNewUserGroupAction("route");
+        $obj = new BreadcrumbNodeNewUserGroupAction("route");
 
-		$this->assertEquals("navigation.node.action.new", $obj->getId());
-		$this->assertEquals("group_add", $obj->getIcon());
-		$this->assertEquals("route", $obj->getRoute());
-	}
+        $this->assertEquals("navigation.node.action.new", $obj->getId());
+        $this->assertEquals("group_add", $obj->getIcon());
+        $this->assertEquals("route", $obj->getRoute());
+    }
 
 }

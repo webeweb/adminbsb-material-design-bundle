@@ -19,31 +19,31 @@ namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\DropDown;
  */
 interface DropDownHookProviderInterface {
 
-	/**
-	 * Default template.
-	 *
-	 * @var string
-	 */
-	const DEFAULT_TEMPLATE = "@ABSBMD/html/body/nav/div/div/ul/li.dropdown_hook.html.twig";
+    /**
+     * Default template.
+     *
+     * @var string
+     */
+    const DEFAULT_TEMPLATE = "@ABSBMD/html/body/nav/div/div/ul/li.dropdown_hook.html.twig";
 
-	/**
-	 * Service name.
-	 *
-	 * @var string
-	 */
-	const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.provider.drop_down_hook";
+    /**
+     * Service name.
+     *
+     * @var string
+     */
+    const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.provider.drop_down_hook";
 
-	/**
-	 * Get the items.
-	 *
-	 * @return array Returns the items.
-	 */
-	public function getItems();
+    /**
+     * Get the items.
+     *
+     * @return array Returns the items.
+     */
+    public function getItems();
 
-	/**
-	 * Get the template.
-	 *
-	 * @return string Returns the template.
-	 */
-	public function getTemplate();
+    /**
+     * Get the template.
+     *
+     * @return string Returns the template.
+     */
+    public function getTemplate();
 }

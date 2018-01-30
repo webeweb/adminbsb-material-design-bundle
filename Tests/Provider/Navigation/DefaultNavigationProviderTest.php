@@ -25,17 +25,17 @@ use WBW\Library\Core\Navigation\Tree\NavigationTree;
  */
 final class DefaultNavigationProviderTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstructor() {
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstructor() {
 
-		$obj = new DefaultNavigationProvider();
+        $obj = new DefaultNavigationProvider();
 
-		$this->assertEquals(NavigationProviderInterface::DEFAULT_TEMPLATE, $obj->getTemplate());
-		$this->assertInstanceOf(NavigationTree::class, $obj->getTree());
-	}
+        $this->assertEquals(NavigationProviderInterface::DEFAULT_TEMPLATE, $obj->getTemplate());
+        $this->assertInstanceOf(NavigationTree::class, $obj->getTree());
+    }
 
 }

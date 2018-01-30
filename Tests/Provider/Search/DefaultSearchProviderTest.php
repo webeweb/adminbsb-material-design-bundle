@@ -24,16 +24,16 @@ use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Search\DefaultSearchProvide
  */
 final class DefaultSearchProviderTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstructor() {
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstructor() {
 
-		$obj = new DefaultSearchProvider();
+        $obj = new DefaultSearchProvider();
 
-		$this->assertEquals(SearchProviderInterface::DEFAULT_TEMPLATE, $obj->getTemplate());
-	}
+        $this->assertEquals(SearchProviderInterface::DEFAULT_TEMPLATE, $obj->getTemplate());
+    }
 
 }

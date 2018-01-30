@@ -23,56 +23,56 @@ use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Color\DefaultColorProvider;
  */
 abstract class AbstractABSBMDTwigExtension extends Twig_Extension {
 
-	/**
-	 * Default content.
-	 *
-	 * @var string
-	 */
-	const DEFAULT_CONTENT = "&nbsp;";
+    /**
+     * Default content.
+     *
+     * @var string
+     */
+    const DEFAULT_CONTENT = "&nbsp;";
 
-	/**
-	 * Constructor.
-	 */
-	protected function __construct() {
-		// NOTHING TO DO.
-	}
+    /**
+     * Constructor.
+     */
+    protected function __construct() {
+        // NOTHING TO DO.
+    }
 
-	/**
-	 * Get an argument.
-	 *
-	 * @param array $arguments The arguments.
-	 * @param string $name The argument name.
-	 * @param mixed $default The default value.
-	 * @return mixed Returns the value in case of success, $default otherwise.
-	 */
-	final protected function getArg(array $arguments, $name, $default = null) {
-		return isset($arguments[$name]) ? $arguments[$name] : $default;
-	}
+    /**
+     * Get an argument.
+     *
+     * @param array $arguments The arguments.
+     * @param string $name The argument name.
+     * @param mixed $default The default value.
+     * @return mixed Returns the value in case of success, $default otherwise.
+     */
+    final protected function getArg(array $arguments, $name, $default = null) {
+        return isset($arguments[$name]) ? $arguments[$name] : $default;
+    }
 
-	/**
-	 * Get a color.
-	 *
-	 * @param string $name The color name.
-	 * @param string $prefix The color prefix.
-	 * @return string Returns the color in case of success, "" otherwise.
-	 */
-	final protected function getColor($name, $prefix = "") {
-		if (!array_key_exists($name, DefaultColorProvider::getColors())) {
-			$name = "red";
-		}
-		return $prefix . $name;
-	}
+    /**
+     * Get a color.
+     *
+     * @param string $name The color name.
+     * @param string $prefix The color prefix.
+     * @return string Returns the color in case of success, "" otherwise.
+     */
+    final protected function getColor($name, $prefix = "") {
+        if (!array_key_exists($name, DefaultColorProvider::getColors())) {
+            $name = "red";
+        }
+        return $prefix . $name;
+    }
 
-	/**
-	 * Replace.
-	 *
-	 * @param string $subject The subject.
-	 * @param array $searches The searches.
-	 * @param array $replaces The replaces.
-	 * @return string Returns the replaced string.
-	 */
-	final protected function replace($subject, array $searches, array $replaces) {
-		return str_replace($searches, $replaces, $subject);
-	}
+    /**
+     * Replace.
+     *
+     * @param string $subject The subject.
+     * @param array $searches The searches.
+     * @param array $replaces The replaces.
+     * @return string Returns the replaced string.
+     */
+    final protected function replace($subject, array $searches, array $replaces) {
+        return str_replace($searches, $replaces, $subject);
+    }
 
 }

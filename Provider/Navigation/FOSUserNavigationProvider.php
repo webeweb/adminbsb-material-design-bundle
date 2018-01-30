@@ -22,27 +22,27 @@ use WBW\Library\Core\Navigation\Node\BreadcrumbNode;
  */
 final class FOSUserNavigationProvider {
 
-	/**
-	 * Constructor.
-	 */
-	public function __construct() {
-		// NOTHING TO DO.
-	}
+    /**
+     * Constructor.
+     */
+    public function __construct() {
+        // NOTHING TO DO.
+    }
 
-	/**
-	 * Get the breadcrumb.
-	 *
-	 * @return BreadcrumbNode Returns the breadcrumb.
-	 */
-	public function getBreadcrumb() {
+    /**
+     * Get the breadcrumb.
+     *
+     * @return BreadcrumbNode Returns the breadcrumb.
+     */
+    public function getBreadcrumb() {
 
-		// Initialize the breadcrumb.
-		$breadcrumb = new BreadcrumbNode("label.user", "person");
-		$breadcrumb->addNode(new BreadcrumbNode("label.user_profile_edit", "person", "fos_user_profile_edit"));
-		$breadcrumb->addNode(new BreadcrumbNode("label.user_change_password", "person", "fos_user_change_password"));
+        // Initialize the breadcrumb.
+        $breadcrumb = new BreadcrumbNode("label.user", "person");
+        $breadcrumb->addNode(new BreadcrumbNode("label.user_profile_edit", "person", "fos_user_profile_edit"));
+        $breadcrumb->addNode(new BreadcrumbNode("label.user_change_password", "person", "fos_user_change_password"));
 
-		// Return the breadcrumb.
-		return $breadcrumb;
-	}
+        // Return the breadcrumb.
+        return $breadcrumb;
+    }
 
 }

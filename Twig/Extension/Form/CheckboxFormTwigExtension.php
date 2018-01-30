@@ -22,43 +22,43 @@ use Twig_SimpleFunction;
  */
 final class CheckboxFormTwigExtension extends AbstractFormTwigExtension {
 
-	/**
-	 * Service name.
-	 *
-	 * @var string
-	 */
-	const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.form.checkbox";
+    /**
+     * Service name.
+     *
+     * @var string
+     */
+    const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.form.checkbox";
 
-	/**
-	 * Displays a basic checkbox.
-	 *
-	 * @param array $args The arguments.
-	 * @return string Returns the basic checkbox.
-	 */
-	public function basicCheckboxFunction(array $args = []) {
-		return $this->checkbox($this->getArg($args, "content"), $this->getArg($args, "name"), $this->getArg($args, "id"), $this->getArg($args, "checked", false), $this->getArg($args, "disabled", false), $this->getArg($args, "filledIn", false), $this->getArg($args, "class"));
-	}
+    /**
+     * Displays a basic checkbox.
+     *
+     * @param array $args The arguments.
+     * @return string Returns the basic checkbox.
+     */
+    public function basicCheckboxFunction(array $args = []) {
+        return $this->checkbox($this->getArg($args, "content"), $this->getArg($args, "name"), $this->getArg($args, "id"), $this->getArg($args, "checked", false), $this->getArg($args, "disabled", false), $this->getArg($args, "filledIn", false), $this->getArg($args, "class"));
+    }
 
-	/**
-	 * Get the Twig functions.
-	 *
-	 * @return array Returns the Twig functions.
-	 */
-	public function getFunctions() {
-		return [
-			new Twig_SimpleFunction("basicCheckbox", [$this, "basicCheckboxFunction"], ["is_safe" => ["html"]]),
-			new Twig_SimpleFunction("materialDesignCheckbox", [$this, "materialDesignCheckboxFunction"], ["is_safe" => ["html"]]),
-		];
-	}
+    /**
+     * Get the Twig functions.
+     *
+     * @return array Returns the Twig functions.
+     */
+    public function getFunctions() {
+        return [
+            new Twig_SimpleFunction("basicCheckbox", [$this, "basicCheckboxFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("materialDesignCheckbox", [$this, "materialDesignCheckboxFunction"], ["is_safe" => ["html"]]),
+        ];
+    }
 
-	/**
-	 * Displays a material design checkbox.
-	 *
-	 * @param array $args The arguments.
-	 * @return string Returns the material design checkbox.
-	 */
-	public function materialDesignCheckboxFunction(array $args = []) {
-		return $this->checkbox($this->getArg($args, "content"), $this->getArg($args, "name"), $this->getArg($args, "id"), $this->getArg($args, "checked", false), $this->getArg($args, "disabled", false), $this->getArg($args, "filledIn", false), $this->getArg($args, "class", "") . $this->getColor($this->getArg($args, "color", "red"), " chk-col-"));
-	}
+    /**
+     * Displays a material design checkbox.
+     *
+     * @param array $args The arguments.
+     * @return string Returns the material design checkbox.
+     */
+    public function materialDesignCheckboxFunction(array $args = []) {
+        return $this->checkbox($this->getArg($args, "content"), $this->getArg($args, "name"), $this->getArg($args, "id"), $this->getArg($args, "checked", false), $this->getArg($args, "disabled", false), $this->getArg($args, "filledIn", false), $this->getArg($args, "class", "") . $this->getColor($this->getArg($args, "color", "red"), " chk-col-"));
+    }
 
 }

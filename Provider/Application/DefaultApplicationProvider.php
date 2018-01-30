@@ -20,60 +20,60 @@ namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Application;
  */
 final class DefaultApplicationProvider implements ApplicationProviderInterface {
 
-	/**
-	 * Constructor.
-	 */
-	public function __construct() {
-		// NOTHING TO DO.
-	}
+    /**
+     * Constructor.
+     */
+    public function __construct() {
+        // NOTHING TO DO.
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getDescription() {
-		return "AdminBSB Material Design";
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getDescription() {
+        return "AdminBSB Material Design";
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getHome() {
-		return "/";
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getHome() {
+        return "/";
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getName() {
-		return "AdminBSB<b>MaterialDesign</b>";
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getName() {
+        return "AdminBSB<b>MaterialDesign</b>";
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getRoute() {
-		return "/";
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getRoute() {
+        return "/";
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getTitle() {
-		return "AdminBSB Material Design";
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getTitle() {
+        return "AdminBSB Material Design";
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getVersion() {
-		return "~1.0@dev";
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getVersion() {
+        return "~1.0@dev";
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getYear() {
-		return "2017";
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getYear() {
+        return "2017";
+    }
 
 }

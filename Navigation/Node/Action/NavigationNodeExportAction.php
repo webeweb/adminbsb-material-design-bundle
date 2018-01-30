@@ -22,13 +22,13 @@ use WBW\Library\Core\Navigation\Node\NavigationNode;
  */
 final class NavigationNodeExportAction extends NavigationNode {
 
-	/**
-	 * Constructor.
-	 *
-	 * @param string $route The route.
-	 */
-	public function __construct($route = null) {
-		parent::__construct("navigation.node.action.export", "file_upload", $route);
-	}
+    /**
+     * Constructor.
+     *
+     * @param string $route The route.
+     */
+    public function __construct($route = null) {
+        parent::__construct("navigation.node.action.export", "file_upload", $route);
+    }
 
 }

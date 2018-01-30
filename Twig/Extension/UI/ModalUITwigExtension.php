@@ -23,42 +23,42 @@ use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Typography\HeadingTyp
  */
 final class ModalUITwigExtension extends AbstractUITwigExtension {
 
-	/**
-	 * Service name.
-	 *
-	 * @var string
-	 */
-	const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.ui.modal";
+    /**
+     * Service name.
+     *
+     * @var string
+     */
+    const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.ui.modal";
 
-	/**
-	 * Displays a modal header.
-	 *
-	 * @param array $args The arguments.
-	 * @return string Returns the modal header.
-	 */
-	public function modalHeaderFunction(array $args = []) {
+    /**
+     * Displays a modal header.
+     *
+     * @param array $args The arguments.
+     * @return string Returns the modal header.
+     */
+    public function modalHeaderFunction(array $args = []) {
 
-		// Initialize the paramters.
-		$content = $this->getArg($args, "content", self::DEFAULT_CONTENT);
-		$icon	 = $this->getArg($args, "icon");
+        // Initialize the paramters.
+        $content = $this->getArg($args, "content", self::DEFAULT_CONTENT);
+        $icon    = $this->getArg($args, "icon");
 
-		if (!is_null($icon)) {
-			$content = (new IconUITwigExtension())->basicIconFunction(["name" => $icon, "style" => "margin: -4px 0; vertical-align: sub;"]) . $content;
-		}
+        if (!is_null($icon)) {
+            $content = (new IconUITwigExtension())->basicIconFunction(["name" => $icon, "style" => "margin: -4px 0; vertical-align: sub;"]) . $content;
+        }
 
-		// Return the HTML.
-		return (new HeadingTypographyTwigExtension())->h3Function(["class" => "modal-title", "content" => $content]);
-	}
+        // Return the HTML.
+        return (new HeadingTypographyTwigExtension())->h3Function(["class" => "modal-title", "content" => $content]);
+    }
 
-	/**
-	 * Get the Twig functions.
-	 *
-	 * @return array Returns the Twig functions.
-	 */
-	public function getFunctions() {
-		return [
-			new Twig_SimpleFunction("modalHeader", [$this, "modalHeaderFunction"], ["is_safe" => ["html"]]),
-		];
-	}
+    /**
+     * Get the Twig functions.
+     *
+     * @return array Returns the Twig functions.
+     */
+    public function getFunctions() {
+        return [
+            new Twig_SimpleFunction("modalHeader", [$this, "modalHeaderFunction"], ["is_safe" => ["html"]]),
+        ];
+    }
 
 }

@@ -26,23 +26,23 @@ use WBW\Library\Core\Navigation\Node\BreadcrumbNode;
  */
 final class HowToNavigationProviderTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the getBreadcrumb() method.
-	 *
-	 * @return void
-	 */
-	public function testGetBreadcrumb() {
+    /**
+     * Tests the getBreadcrumb() method.
+     *
+     * @return void
+     */
+    public function testGetBreadcrumb() {
 
-		// Set the mocks.
-		$router = $this->getMockBuilder(RouterInterface::class)->getMock();
+        // Set the mocks.
+        $router = $this->getMockBuilder(RouterInterface::class)->getMock();
 
-		$obj = new HowToNavigationProvider($router);
+        $obj = new HowToNavigationProvider($router);
 
-		$res = $obj->getBreadcrumb();
-		$this->assertInstanceOf(BreadcrumbNode::class, $res);
-		$this->assertCount(18, $res->getNodes());
-		$this->assertEquals("navigation.how-to", $res->getId());
-		$this->assertEquals("book", $res->getIcon());
-	}
+        $res = $obj->getBreadcrumb();
+        $this->assertInstanceOf(BreadcrumbNode::class, $res);
+        $this->assertCount(18, $res->getNodes());
+        $this->assertEquals("navigation.how-to", $res->getId());
+        $this->assertEquals("book", $res->getIcon());
+    }
 
 }

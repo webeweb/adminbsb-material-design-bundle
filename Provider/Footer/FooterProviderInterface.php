@@ -19,24 +19,24 @@ namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Footer;
  */
 interface FooterProviderInterface {
 
-	/**
-	 * Default template.
-	 *
-	 * @var string
-	 */
-	const DEFAULT_TEMPLATE = "@ABSBMD/html/body/section/aside/div.legal.html.twig";
+    /**
+     * Default template.
+     *
+     * @var string
+     */
+    const DEFAULT_TEMPLATE = "@ABSBMD/html/body/section/aside/div.legal.html.twig";
 
-	/**
-	 * Service name.
-	 *
-	 * @var string
-	 */
-	const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.provider.footer";
+    /**
+     * Service name.
+     *
+     * @var string
+     */
+    const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.provider.footer";
 
-	/**
-	 * Get the template.
-	 *
-	 * @return string Returns the template.
-	 */
-	public function getTemplate();
+    /**
+     * Get the template.
+     *
+     * @return string Returns the template.
+     */
+    public function getTemplate();
 }

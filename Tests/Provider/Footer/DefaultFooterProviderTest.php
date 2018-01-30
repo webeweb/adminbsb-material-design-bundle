@@ -24,16 +24,16 @@ use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Footer\DefaultFooterProvide
  */
 final class DefaultFooterProviderTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstructor() {
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstructor() {
 
-		$obj = new DefaultFooterProvider();
+        $obj = new DefaultFooterProvider();
 
-		$this->assertEquals(FooterProviderInterface::DEFAULT_TEMPLATE, $obj->getTemplate());
-	}
+        $this->assertEquals(FooterProviderInterface::DEFAULT_TEMPLATE, $obj->getTemplate());
+    }
 
 }

@@ -22,43 +22,43 @@ use Twig_SimpleFunction;
  */
 final class IconUITwigExtension extends AbstractUITwigExtension {
 
-	/**
-	 * Service name.
-	 *
-	 * @var string
-	 */
-	const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.ui.icon";
+    /**
+     * Service name.
+     *
+     * @var string
+     */
+    const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.ui.icon";
 
-	/**
-	 * Displays a basic icon.
-	 *
-	 * @param array $args The arguments.
-	 * @return string Returns the material design icon.
-	 */
-	public function basicIconFunction(array $args = []) {
-		return $this->icon($this->getArg($args, "name"), $this->getArg($args, "style"));
-	}
+    /**
+     * Displays a basic icon.
+     *
+     * @param array $args The arguments.
+     * @return string Returns the material design icon.
+     */
+    public function basicIconFunction(array $args = []) {
+        return $this->icon($this->getArg($args, "name"), $this->getArg($args, "style"));
+    }
 
-	/**
-	 * Get the Twig functions.
-	 *
-	 * @return array Returns the Twig functions.
-	 */
-	public function getFunctions() {
-		return [
-			new Twig_SimpleFunction("basicIcon", [$this, "basicIconFunction"], ["is_safe" => ["html"]]),
-			new Twig_SimpleFunction("materialDesignIcon", [$this, "materialDesignIconFunction"], ["is_safe" => ["html"]]),
-		];
-	}
+    /**
+     * Get the Twig functions.
+     *
+     * @return array Returns the Twig functions.
+     */
+    public function getFunctions() {
+        return [
+            new Twig_SimpleFunction("basicIcon", [$this, "basicIconFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("materialDesignIcon", [$this, "materialDesignIconFunction"], ["is_safe" => ["html"]]),
+        ];
+    }
 
-	/**
-	 * Displays a material design icon.
-	 *
-	 * @param array $args The arguments.
-	 * @return string Returns the material design icon.
-	 */
-	public function materialDesignIconFunction(array $args = []) {
-		return $this->icon($this->getArg($args, "name"), $this->getArg($args, "style"), $this->getColor($this->getArg($args, "color"), "col-"));
-	}
+    /**
+     * Displays a material design icon.
+     *
+     * @param array $args The arguments.
+     * @return string Returns the material design icon.
+     */
+    public function materialDesignIconFunction(array $args = []) {
+        return $this->icon($this->getArg($args, "name"), $this->getArg($args, "style"), $this->getColor($this->getArg($args, "color"), "col-"));
+    }
 
 }

@@ -20,18 +20,18 @@ namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Search;
  */
 final class DefaultSearchProvider implements SearchProviderInterface {
 
-	/**
-	 * Constructor.
-	 */
-	public function __construct() {
-		// NOTHING TO DO.
-	}
+    /**
+     * Constructor.
+     */
+    public function __construct() {
+        // NOTHING TO DO.
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getTemplate() {
-		return self::DEFAULT_TEMPLATE;
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getTemplate() {
+        return self::DEFAULT_TEMPLATE;
+    }
 
 }

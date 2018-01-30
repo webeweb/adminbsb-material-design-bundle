@@ -21,31 +21,31 @@ use WBW\Library\Core\Navigation\Tree\NavigationTree;
  */
 interface NavigationProviderInterface {
 
-	/**
-	 * Default template.
-	 *
-	 * @var string
-	 */
-	const DEFAULT_TEMPLATE = "@ABSBMD/html/body/section/aside/div.menu.html.twig";
+    /**
+     * Default template.
+     *
+     * @var string
+     */
+    const DEFAULT_TEMPLATE = "@ABSBMD/html/body/section/aside/div.menu.html.twig";
 
-	/**
-	 * Service name.
-	 *
-	 * @var string
-	 */
-	const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.provider.navigation";
+    /**
+     * Service name.
+     *
+     * @var string
+     */
+    const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.provider.navigation";
 
-	/**
-	 * Get the template.
-	 *
-	 * @return string Returns the template.
-	 */
-	public function getTemplate();
+    /**
+     * Get the template.
+     *
+     * @return string Returns the template.
+     */
+    public function getTemplate();
 
-	/**
-	 * Get the tree.
-	 *
-	 * @return NavigationTree Returns the tree.
-	 */
-	public function getTree();
+    /**
+     * Get the tree.
+     *
+     * @return NavigationTree Returns the tree.
+     */
+    public function getTree();
 }
