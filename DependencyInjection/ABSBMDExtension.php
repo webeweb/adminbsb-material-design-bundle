@@ -3,7 +3,7 @@
 /**
  * This file is part of the adminbsb-material-design-bundle package.
  *
- * (c) 2017 NdC/WBW
+ * (c) 2017 WEBEWEB
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -19,7 +19,7 @@ use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 /**
  * AdminBSB Material Design extension.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBMaterialDesignBundle\DependencyInjection
  * @final
  */
