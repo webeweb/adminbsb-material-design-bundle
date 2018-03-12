@@ -11,6 +11,8 @@
 
 namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\DropDown;
 
+use WBW\Bundle\BootstrapBundle\Provider\DropDown\DropDownHookProviderInterface;
+
 /**
  * Default drop down hook provider.
  *
@@ -38,7 +40,7 @@ final class DefaultDropDownHookProvider implements DropDownHookProviderInterface
      * {@inheritdoc}
      */
     public function getTemplate() {
-        return self::DEFAULT_TEMPLATE;
+        return "@ABSBMD/html/body/nav/div/div/ul/li.dropdown_hook.html.twig";
     }
 
 }

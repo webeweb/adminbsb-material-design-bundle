@@ -11,6 +11,8 @@
 
 namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Breadcrumbs;
 
+use WBW\Bundle\BootstrapBundle\Provider\Breadcrumbs\BreadcrumbsProviderInterface;
+
 /**
  * Default breadcrumbs provider.
  *
@@ -31,7 +33,7 @@ final class DefaultBreadcrumbsProvider implements BreadcrumbsProviderInterface {
      * {@inheritdoc}
      */
     public function getTemplate() {
-        return self::DEFAULT_TEMPLATE;
+        return "@ABSBMD/html/body/section/div/div.block-header.html.twig";
     }
 
 }

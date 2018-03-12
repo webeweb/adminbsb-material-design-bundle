@@ -12,7 +12,6 @@
 namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Provider\Search;
 
 use PHPUnit_Framework_TestCase;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Search\SearchProviderInterface;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Search\DefaultSearchProvider;
 
 /**
@@ -33,7 +32,7 @@ final class DefaultSearchProviderTest extends PHPUnit_Framework_TestCase {
 
         $obj = new DefaultSearchProvider();
 
-        $this->assertEquals(SearchProviderInterface::DEFAULT_TEMPLATE, $obj->getTemplate());
+        $this->assertEquals("@ABSBMD/html/body/div.search-bar.html.twig", $obj->getTemplate());
     }
 
 }

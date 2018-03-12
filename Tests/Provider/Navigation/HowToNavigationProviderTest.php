@@ -12,10 +12,9 @@
 namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Provider\Navigation;
 
 use PHPUnit_Framework_TestCase;
-use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\Routing\RouterInterface;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Navigation\HowToNavigationProvider;
-use WBW\Library\Core\Navigation\Node\BreadcrumbNode;
+use WBW\Bundle\BootstrapBundle\Navigation\Node\BreadcrumbNode;
 
 /**
  * How-to navigation provider test.

@@ -11,6 +11,8 @@
 
 namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\DropDown;
 
+use WBW\Bundle\BootstrapBundle\Provider\DropDown\DropDownTasksProviderInterface;
+
 /**
  * Default drop down "Tasks" provider.
  *
@@ -38,7 +40,7 @@ final class DefaultDropDownTasksProvider implements DropDownTasksProviderInterfa
      * {@inheritdoc}
      */
     public function getTemplate() {
-        return self::DEFAULT_TEMPLATE;
+        return "@ABSBMD/html/body/nav/div/div/ul/li.dropdown_tasks.html.twig";
     }
 
 }

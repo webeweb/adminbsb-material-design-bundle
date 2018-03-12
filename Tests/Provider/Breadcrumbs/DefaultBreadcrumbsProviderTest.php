@@ -12,7 +12,6 @@
 namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Provider\Breadcrumbs;
 
 use PHPUnit_Framework_TestCase;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Breadcrumbs\BreadcrumbsProviderInterface;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Breadcrumbs\DefaultBreadcrumbsProvider;
 
 /**
@@ -33,7 +32,7 @@ final class DefaultBreadcrumbsProviderTest extends PHPUnit_Framework_TestCase {
 
         $obj = new DefaultBreadcrumbsProvider();
 
-        $this->assertEquals(BreadcrumbsProviderInterface::DEFAULT_TEMPLATE, $obj->getTemplate());
+        $this->assertEquals("@ABSBMD/html/body/section/div/div.block-header.html.twig", $obj->getTemplate());
     }
 
 }

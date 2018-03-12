@@ -12,7 +12,6 @@
 namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Provider\Footer;
 
 use PHPUnit_Framework_TestCase;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Footer\FooterProviderInterface;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Footer\DefaultFooterProvider;
 
 /**
@@ -33,7 +32,7 @@ final class DefaultFooterProviderTest extends PHPUnit_Framework_TestCase {
 
         $obj = new DefaultFooterProvider();
 
-        $this->assertEquals(FooterProviderInterface::DEFAULT_TEMPLATE, $obj->getTemplate());
+        $this->assertEquals("@ABSBMD/html/body/section/aside/div.legal.html.twig", $obj->getTemplate());
     }
 
 }

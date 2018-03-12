@@ -13,7 +13,6 @@ namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Provider\DropDown;
 
 use PHPUnit_Framework_TestCase;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\DropDown\DefaultDropDownNotificationsProvider;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\DropDown\DropDownNotificationsProviderInterface;
 
 /**
  * Default drop down hook provider test.
@@ -34,7 +33,7 @@ final class DefaultDropDownNotificationsProviderTest extends PHPUnit_Framework_T
         $obj = new DefaultDropDownNotificationsProvider();
 
         $this->assertEquals([], $obj->getNotifications());
-        $this->assertEquals(DropDownNotificationsProviderInterface::DEFAULT_TEMPLATE, $obj->getTemplate());
+        $this->assertEquals("@ABSBMD/html/body/nav/div/div/ul/li.dropdown_notifications.html.twig", $obj->getTemplate());
     }
 
 }

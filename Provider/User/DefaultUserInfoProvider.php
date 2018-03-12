@@ -11,6 +11,8 @@
 
 namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\User;
 
+use WBW\Bundle\BootstrapBundle\Provider\User\UserInfoProviderInterface;
+
 /**
  * Default user info provider.
  *
@@ -31,7 +33,7 @@ final class DefaultUserInfoProvider implements UserInfoProviderInterface {
      * {@inheritdoc}
      */
     public function getTemplate() {
-        return self::DEFAULT_TEMPLATE;
+        return "@ABSBMD/html/body/section/aside/div.user-info.html.twig";
     }
 
     /**

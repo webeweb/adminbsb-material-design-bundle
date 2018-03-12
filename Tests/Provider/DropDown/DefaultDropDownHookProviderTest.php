@@ -13,7 +13,6 @@ namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Provider\DropDown;
 
 use PHPUnit_Framework_TestCase;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\DropDown\DefaultDropDownHookProvider;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\DropDown\DropDownHookProviderInterface;
 
 /**
  * Default drop down hook provider test.
@@ -34,7 +33,7 @@ final class DefaultDropDownHookProviderTest extends PHPUnit_Framework_TestCase {
         $obj = new DefaultDropDownHookProvider();
 
         $this->assertEquals([], $obj->getItems());
-        $this->assertEquals(DropDownHookProviderInterface::DEFAULT_TEMPLATE, $obj->getTemplate());
+        $this->assertEquals("@ABSBMD/html/body/nav/div/div/ul/li.dropdown_hook.html.twig", $obj->getTemplate());
     }
 
 }

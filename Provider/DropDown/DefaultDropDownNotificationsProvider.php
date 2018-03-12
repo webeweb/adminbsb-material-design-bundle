@@ -11,6 +11,8 @@
 
 namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\DropDown;
 
+use WBW\Bundle\BootstrapBundle\Provider\DropDown\DropDownNotificationsProviderInterface;
+
 /**
  * Default drop down "Notifications" provider.
  *
@@ -38,7 +40,7 @@ final class DefaultDropDownNotificationsProvider implements DropDownNotification
      * {@inheritdoc}
      */
     public function getTemplate() {
-        return self::DEFAULT_TEMPLATE;
+        return "@ABSBMD/html/body/nav/div/div/ul/li.dropdown_notifications.html.twig";
     }
 
 }

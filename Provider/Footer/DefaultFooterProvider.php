@@ -11,6 +11,8 @@
 
 namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Footer;
 
+use WBW\Bundle\BootstrapBundle\Provider\Footer\FooterProviderInterface;
+
 /**
  * Default footer provider.
  *
@@ -31,7 +33,7 @@ final class DefaultFooterProvider implements FooterProviderInterface {
      * {@inheritdoc}
      */
     public function getTemplate() {
-        return self::DEFAULT_TEMPLATE;
+        return "@ABSBMD/html/body/section/aside/div.legal.html.twig";
     }
 
 }

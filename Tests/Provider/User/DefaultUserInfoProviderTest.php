@@ -13,7 +13,6 @@ namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Provider\User;
 
 use PHPUnit_Framework_TestCase;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\User\DefaultUserInfoProvider;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\User\UserInfoProviderInterface;
 
 /**
  * Default user info provider test.
@@ -33,7 +32,7 @@ final class DefaultUserInfoProviderTest extends PHPUnit_Framework_TestCase {
 
         $obj = new DefaultUserInfoProvider();
 
-        $this->assertEquals(UserInfoProviderInterface::DEFAULT_TEMPLATE, $obj->getTemplate());
+        $this->assertEquals("@ABSBMD/html/body/section/aside/div.user-info.html.twig", $obj->getTemplate());
         $this->assertEquals(false, $obj->provideRegisterLink());
         $this->assertEquals(false, $obj->provideResettingLink());
     }

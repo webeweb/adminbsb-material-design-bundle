@@ -11,7 +11,8 @@
 
 namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Navigation;
 
-use WBW\Library\Core\Navigation\Tree\NavigationTree;
+use WBW\Bundle\BootstrapBundle\Navigation\Tree\NavigationTree;
+use WBW\Bundle\BootstrapBundle\Provider\Navigation\NavigationProviderInterface;
 
 /**
  * Default navigation provider.
@@ -32,7 +33,7 @@ final class DefaultNavigationProvider implements NavigationProviderInterface {
      * {@inheritdoc}
      */
     public function getTemplate() {
-        return self::DEFAULT_TEMPLATE;
+        return "@ABSBMD/html/body/section/aside/div.menu.html.twig";
     }
 
     /**

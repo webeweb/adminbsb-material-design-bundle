@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI;
 
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Color\DefaultColorProvider;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\AbstractABSBMDTwigExtension;
-use WBW\Library\Core\Navigation\NavigationInterface;
+use WBW\Bundle\BootstrapBundle\Navigation\NavigationInterface;
 use WBW\Library\Core\Utility\StringUtility;
 
 /**

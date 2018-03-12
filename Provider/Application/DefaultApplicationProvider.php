@@ -11,6 +11,8 @@
 
 namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Application;
 
+use WBW\Bundle\BootstrapBundle\Provider\Application\ApplicationProviderInterface;
+
 /**
  * Default application provider.
  *

@@ -13,8 +13,7 @@ namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Provider\Navigation;
 
 use PHPUnit_Framework_TestCase;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Navigation\DefaultNavigationProvider;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Navigation\NavigationProviderInterface;
-use WBW\Library\Core\Navigation\Tree\NavigationTree;
+use WBW\Bundle\BootstrapBundle\Navigation\Tree\NavigationTree;
 
 /**
  * Default navigation provider test.
@@ -34,7 +33,7 @@ final class DefaultNavigationProviderTest extends PHPUnit_Framework_TestCase {
 
         $obj = new DefaultNavigationProvider();
 
-        $this->assertEquals(NavigationProviderInterface::DEFAULT_TEMPLATE, $obj->getTemplate());
+        $this->assertEquals("@ABSBMD/html/body/section/aside/div.menu.html.twig", $obj->getTemplate());
         $this->assertInstanceOf(NavigationTree::class, $obj->getTree());
     }
 

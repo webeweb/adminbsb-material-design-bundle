@@ -11,6 +11,8 @@
 
 namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Search;
 
+use WBW\Bundle\BootstrapBundle\Provider\Search\SearchProviderInterface;
+
 /**
  * Default search provider.
  *
@@ -31,7 +33,7 @@ final class DefaultSearchProvider implements SearchProviderInterface {
      * {@inheritdoc}
      */
     public function getTemplate() {
-        return self::DEFAULT_TEMPLATE;
+        return "@ABSBMD/html/body/div.search-bar.html.twig";
     }
 
 }
