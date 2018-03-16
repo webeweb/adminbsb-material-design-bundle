@@ -44,10 +44,10 @@ final class CardWidgetTwigExtension extends AbstractWidgetTwigExtension {
         $description = $this->getArg($args, "description");
         $icon        = $this->getArg($args, "icon");
 
-        if (!is_null($description)) {
+        if (null !== $description) {
             $content .= "<small>" . $description . "</small>";
         }
-        if (!is_null($icon)) {
+        if (null !== $icon) {
             $content = (new IconUITwigExtension())->basicIconFunction(["name" => $icon, "style" => "margin: -4px 0; vertical-align: sub;"]) . $content;
         }
 
