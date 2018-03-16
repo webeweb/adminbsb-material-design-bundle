@@ -39,131 +39,135 @@ final class HeadingTypographyTwigExtensionTest extends PHPUnit_Framework_TestCas
         $this->assertCount(6, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("h1", $res[0]->getName());
-        $this->assertEquals([$obj, "h1Function"], $res[0]->getCallable());
+        $this->assertEquals("absbmdHeading1", $res[0]->getName());
+        $this->assertEquals([$obj, "absbmdHeading1Function"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
-        $this->assertEquals("h2", $res[1]->getName());
-        $this->assertEquals([$obj, "h2Function"], $res[1]->getCallable());
+        $this->assertEquals("absbmdHeading2", $res[1]->getName());
+        $this->assertEquals([$obj, "absbmdHeading2Function"], $res[1]->getCallable());
         $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[2]);
-        $this->assertEquals("h3", $res[2]->getName());
-        $this->assertEquals([$obj, "h3Function"], $res[2]->getCallable());
+        $this->assertEquals("absbmdHeading3", $res[2]->getName());
+        $this->assertEquals([$obj, "absbmdHeading3Function"], $res[2]->getCallable());
         $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[3]);
-        $this->assertEquals("h4", $res[3]->getName());
-        $this->assertEquals([$obj, "h4Function"], $res[3]->getCallable());
+        $this->assertEquals("absbmdHeading4", $res[3]->getName());
+        $this->assertEquals([$obj, "absbmdHeading4Function"], $res[3]->getCallable());
         $this->assertEquals(["html"], $res[3]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[4]);
-        $this->assertEquals("h5", $res[4]->getName());
-        $this->assertEquals([$obj, "h5Function"], $res[4]->getCallable());
+        $this->assertEquals("absbmdHeading5", $res[4]->getName());
+        $this->assertEquals([$obj, "absbmdHeading5Function"], $res[4]->getCallable());
         $this->assertEquals(["html"], $res[4]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[5]);
-        $this->assertEquals("h6", $res[5]->getName());
-        $this->assertEquals([$obj, "h6Function"], $res[5]->getCallable());
+        $this->assertEquals("absbmdHeading6", $res[5]->getName());
+        $this->assertEquals([$obj, "absbmdHeading6Function"], $res[5]->getCallable());
         $this->assertEquals(["html"], $res[5]->getSafe(new Twig_Node()));
     }
 
     /**
-     * Tests the h1Function() method.
+     * Tests the absbmdHeading1Function() method.
      *
      * @return void
      * @depends testGetFunctions
      */
-    public function testH1Function() {
+    public function testAbsbmdHeading1Function() {
 
         $obj = new HeadingTypographyTwigExtension();
 
         $arg0 = [];
-        $res0 = "<h1>&nbsp;</h1>";
-        $this->assertEquals($res0, $obj->h1Function($arg0));
+        $res0 = "<h1></h1>";
+        $this->assertEquals($res0, $obj->absbmdHeading1Function($arg0));
 
         $arg1 = ["content" => "content"];
         $res1 = "<h1>content</h1>";
-        $this->assertEquals($res1, $obj->h1Function($arg1));
+        $this->assertEquals($res1, $obj->absbmdHeading1Function($arg1));
 
-        $arg2 = ["class" => "class"];
-        $res2 = '<h1 class="class">&nbsp;</h1>';
-        $this->assertEquals($res2, $obj->h1Function($arg2));
+        $arg2 = ["description" => "description"];
+        $res2 = '<h1><small>description</small></h1>';
+        $this->assertEquals($res2, $obj->absbmdHeading1Function($arg2));
 
-        $arg9 = ["content" => "content", "class" => "class"];
-        $res9 = '<h1 class="class">content</h1>';
-        $this->assertEquals($res9, $obj->h1Function($arg9));
+        $arg3 = ["class" => "class"];
+        $res3 = '<h1 class="class"></h1>';
+        $this->assertEquals($res3, $obj->absbmdHeading1Function($arg3));
+
+        $arg9 = ["content" => "content", "description" => "description", "class" => "class"];
+        $res9 = '<h1 class="class">content <small>description</small></h1>';
+        $this->assertEquals($res9, $obj->absbmdHeading1Function($arg9));
     }
 
     /**
-     * Tests the h2Function() method.
+     * Tests the absbmdHeading2Function() method.
      *
      * @return void
      */
-    public function testH2Function() {
+    public function testAbsbmdHeading2Function() {
 
         $obj = new HeadingTypographyTwigExtension();
 
         $arg = [];
-        $res = "<h2>&nbsp;</h2>";
-        $this->assertEquals($res, $obj->h2Function($arg));
+        $res = "<h2></h2>";
+        $this->assertEquals($res, $obj->absbmdHeading2Function($arg));
     }
 
     /**
-     * Tests the h3Function() method.
+     * Tests the absbmdHeading3Function() method.
      *
      * @return void
      */
-    public function testH3Function() {
+    public function testAbsbmdHeading3Function() {
 
         $obj = new HeadingTypographyTwigExtension();
 
         $arg = [];
-        $res = "<h3>&nbsp;</h3>";
-        $this->assertEquals($res, $obj->h3Function($arg));
+        $res = "<h3></h3>";
+        $this->assertEquals($res, $obj->absbmdHeading3Function($arg));
     }
 
     /**
-     * Tests the h4Function() method.
+     * Tests the absbmdHeading4Function() method.
      *
      * @return void
      */
-    public function testH4Function() {
+    public function testAbsbmdHeading4Function() {
 
         $obj = new HeadingTypographyTwigExtension();
 
         $arg = [];
-        $res = "<h4>&nbsp;</h4>";
-        $this->assertEquals($res, $obj->h4Function($arg));
+        $res = "<h4></h4>";
+        $this->assertEquals($res, $obj->absbmdHeading4Function($arg));
     }
 
     /**
-     * Tests the h5Function() method.
+     * Tests the absbmdHeading5Function() method.
      *
      * @return void
      */
-    public function testH5Function() {
+    public function testAbsbmdHeading5Function() {
 
         $obj = new HeadingTypographyTwigExtension();
 
         $arg = [];
-        $res = "<h5>&nbsp;</h5>";
-        $this->assertEquals($res, $obj->h5Function($arg));
+        $res = "<h5></h5>";
+        $this->assertEquals($res, $obj->absbmdHeading5Function($arg));
     }
 
     /**
-     * Tests the h6Function() method.
+     * Tests the absbmdHeading6Function() method.
      *
      * @return void
      */
-    public function testH6Function() {
+    public function testAbsbmdHeading6Function() {
 
         $obj = new HeadingTypographyTwigExtension();
 
         $arg = [];
-        $res = "<h6>&nbsp;</h6>";
-        $this->assertEquals($res, $obj->h6Function($arg));
+        $res = "<h6></h6>";
+        $this->assertEquals($res, $obj->absbmdHeading6Function($arg));
     }
 
 }

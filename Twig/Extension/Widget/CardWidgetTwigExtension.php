@@ -52,7 +52,7 @@ final class CardWidgetTwigExtension extends AbstractWidgetTwigExtension {
         }
 
         // Return the HTML.
-        return (new HeadingTypographyTwigExtension())->h2Function(["class" => "card-header", "content" => $content]);
+        return (new HeadingTypographyTwigExtension())->absbmdHeading2Function(["class" => "card-header", "content" => $content]);
     }
 
     /**

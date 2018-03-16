@@ -12,6 +12,7 @@
 namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Typography;
 
 use Twig_SimpleFunction;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\HeadingTypographyTwigExtension as BaseTypographyTwigExtension;
 
 /**
  * Heading typography Twig extension.
@@ -36,73 +37,73 @@ final class HeadingTypographyTwigExtension extends AbstractTypographyTwigExtensi
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("h1", [$this, "h1Function"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("h2", [$this, "h2Function"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("h3", [$this, "h3Function"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("h4", [$this, "h4Function"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("h5", [$this, "h5Function"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("h6", [$this, "h6Function"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("absbmdHeading1", [$this, "absbmdHeading1Function"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("absbmdHeading2", [$this, "absbmdHeading2Function"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("absbmdHeading3", [$this, "absbmdHeading3Function"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("absbmdHeading4", [$this, "absbmdHeading4Function"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("absbmdHeading5", [$this, "absbmdHeading5Function"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("absbmdHeading6", [$this, "absbmdHeading6Function"], ["is_safe" => ["html"]]),
         ];
     }
 
     /**
      * Displays a heading 1.
      *
-     * @param array $getArgs The getArguments.
+     * @param array $args The arguments.
      * @return string Returns the heading 1.
      */
-    public function h1Function(array $getArgs = []) {
-        return $this->h(1, $this->getArg($getArgs, "content"), $this->getArg($getArgs, "class"));
+    public function absbmdHeading1Function(array $args = []) {
+        return (new BaseTypographyTwigExtension())->bootstrapHeading1Function($args);
     }
 
     /**
      * Displays a heading 2.
      *
-     * @param array $getArgs The getArguments.
+     * @param array $args The arguments.
      * @return string Returns the heading 2.
      */
-    public function h2Function(array $getArgs = []) {
-        return $this->h(2, $this->getArg($getArgs, "content"), $this->getArg($getArgs, "class"));
+    public function absbmdHeading2Function(array $args = []) {
+        return (new BaseTypographyTwigExtension())->bootstrapHeading2Function($args);
     }
 
     /**
      * Displays a heading 3.
      *
-     * @param array $getArgs The getArguments.
+     * @param array $args The arguments.
      * @return string Returns the heading 3.
      */
-    public function h3Function(array $getArgs = []) {
-        return $this->h(3, $this->getArg($getArgs, "content"), $this->getArg($getArgs, "class"));
+    public function absbmdHeading3Function(array $args = []) {
+        return (new BaseTypographyTwigExtension())->bootstrapHeading3Function($args);
     }
 
     /**
      * Displays a heading 4.
      *
-     * @param array $getArgs The getArguments.
+     * @param array $args The arguments.
      * @return string Returns the heading 4.
      */
-    public function h4Function(array $getArgs = []) {
-        return $this->h(4, $this->getArg($getArgs, "content"), $this->getArg($getArgs, "class"));
+    public function absbmdHeading4Function(array $args = []) {
+        return (new BaseTypographyTwigExtension())->bootstrapHeading4Function($args);
     }
 
     /**
      * Displays a heading 5.
      *
-     * @param array $getArgs The getArguments.
+     * @param array $args The arguments.
      * @return string Returns the heading 5.
      */
-    public function h5Function(array $getArgs = []) {
-        return $this->h(5, $this->getArg($getArgs, "content"), $this->getArg($getArgs, "class"));
+    public function absbmdHeading5Function(array $args = []) {
+        return (new BaseTypographyTwigExtension())->bootstrapHeading5Function($args);
     }
 
     /**
      * Displays a heading 6.
      *
-     * @param array $getArgs The getArguments.
+     * @param array $args The arguments.
      * @return string Returns the heading 6.
      */
-    public function h6Function(array $getArgs = []) {
-        return $this->h(6, $this->getArg($getArgs, "content"), $this->getArg($getArgs, "class"));
+    public function absbmdHeading6Function(array $args = []) {
+        return (new BaseTypographyTwigExtension())->bootstrapHeading6Function($args);
     }
 
 }
