@@ -99,37 +99,37 @@ abstract class AbstractFormTwigExtension extends AbstractABSBMDTwigExtension {
     }
 
     /**
-     * Displays a switch button.
+     * Displays an AdminBSB switch button.
      *
      * @param string $offLabel The switch button off label.
      * @param string $name The switch button name.
      * @param boolean $checked Checked switch button ?
      * @param boolean $disabled Disable switch button ?
      * @param string $onLabel The switch button on label.
-     * @param array $attributes The switch button attributes.
+     * @param array $attrs The switch button attributes.
      * @param string $class The switch button class.
-     * @return string Returns the switch button.
+     * @return string Returns the AdminBSB switch button.
      */
-    final protected function switchButton($offLabel, $name, $checked, $disabled, $onLabel, array $attributes, $class = null) {
+    final protected function absbmdSwitchButton($offLabel, $name, $checked, $disabled, $onLabel, array $attrs, $class = null) {
 
         // Initialize the template.
-        $template = '<div class="switch"><label>%offLabel%<input %attributes%><span class="lever%class%"></span>%onLabel%</label></div>';
+        $template = '<div class="switch"><label>%lLabel%<input %attributes%><span class="lever%sClass%"></span>%rLabel%</label></div>';
 
         // Initialize the attributes.
-        $_attr = $attributes;
+        $attributes = $attrs;
 
-        $_attr["name"]     = $name;
-        $_attr["type"]     = "checkbox";
-        $_attr["checked"]  = true === $checked ? "checked" : null;
-        $_attr["disabled"] = true === $disabled ? "disabled" : null;
+        $attributes["name"]     = $name;
+        $attributes["type"]     = "checkbox";
+        $attributes["checked"]  = true === $checked ? "checked" : null;
+        $attributes["disabled"] = true === $disabled ? "disabled" : null;
 
         // Check the parameters.
-        $_offLabel = null !== $offLabel ? $offLabel : "";
-        $_class    = null !== $class ? " " . trim($class) : "";
-        $_onLabel  = null !== $onLabel ? $onLabel : "";
+        $lLabel = null !== $offLabel ? $offLabel : "";
+        $sClass = null !== $class ? " " . trim($class) : "";
+        $rLabel = null !== $onLabel ? $onLabel : "";
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%offLabel%", "%attributes%", "%class%", "%onLabel%"], [$_offLabel, StringUtility::parseArray($_attr), $_class, $_onLabel]);
+        return StringUtility::replace($template, ["%lLabel%", "%attributes%", "%sClass%", "%rLabel%"], [$lLabel, StringUtility::parseArray($attributes), $sClass, $rLabel]);
     }
 
 }

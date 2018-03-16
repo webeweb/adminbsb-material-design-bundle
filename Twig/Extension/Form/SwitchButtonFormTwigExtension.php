@@ -31,13 +31,13 @@ final class SwitchButtonFormTwigExtension extends AbstractFormTwigExtension {
     const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.form.switchbutton";
 
     /**
-     * Displays a basic switch button.
+     * Displays an AdminBSB basic switch button.
      *
      * @param array $args The arguments.
-     * @return string Returns the basic switch button.
+     * @return string Returns the AdminBSB basic switch button.
      */
-    public function basicSwitchButtonFunction(array $args = []) {
-        return $this->switchButton(ArrayUtility::get($args, "offLabel"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "onLabel"), ArrayUtility::get($args, "attr", []));
+    public function absbmdBasicSwitchButtonFunction(array $args = []) {
+        return $this->absbmdSwitchButton(ArrayUtility::get($args, "offLabel"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "onLabel"), ArrayUtility::get($args, "attr", []));
     }
 
     /**
@@ -47,19 +47,19 @@ final class SwitchButtonFormTwigExtension extends AbstractFormTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("basicSwitchButton", [$this, "basicSwitchButtonFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("materialDesignSwitchButton", [$this, "materialDesignSwitchButtonFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("absbmdBasicSwitchButton", [$this, "absbmdBasicSwitchButtonFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("absbmdMaterialDesignSwitchButton", [$this, "absbmdMaterialDesignSwitchButtonFunction"], ["is_safe" => ["html"]]),
         ];
     }
 
     /**
-     * Displays a material design switch button.
+     * Displays an AdminBSB material design switch button.
      *
      * @param array $args The arguments.
-     * @return string Returns the material design switch button.
+     * @return string Returns the AdminBSB material design switch button.
      */
-    public function materialDesignSwitchButtonFunction(array $args = []) {
-        return $this->switchButton(ArrayUtility::get($args, "offLabel"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "onLabel"), ArrayUtility::get($args, "attr", []), $this->getColor(ArrayUtility::get($args, "color", "red"), " switch-col-"));
+    public function absbmdMaterialDesignSwitchButtonFunction(array $args = []) {
+        return $this->absbmdSwitchButton(ArrayUtility::get($args, "offLabel"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "onLabel"), ArrayUtility::get($args, "attr", []), $this->getColor(ArrayUtility::get($args, "color", "red"), " switch-col-"));
     }
 
 }
