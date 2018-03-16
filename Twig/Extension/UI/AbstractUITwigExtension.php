@@ -129,12 +129,12 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
         $_attr["class"][]     = true !== $circle && true === in_array($size, ["lg", "sm", "xs"]) ? "btn-" . $size : null;
         $_attr["title"]       = $title;
         $_attr["type"]        = "button";
-        $_attr["data-toggle"] = !is_null($title) ? "tooltip" : null;
+        $_attr["data-toggle"] = null !== $title ? "tooltip" : null;
         $_attr["disabled"]    = true === $disable ? "disabled" : null;
 
         // Handle the parameters.
-        $_content = !is_null($content) ? $content : self::DEFAULT_CONTENT;
-        $_icon    = !is_null($icon) ? $this->icon($icon, $style) : "";
+        $_content = null !== $content ? $content : self::DEFAULT_CONTENT;
+        $_icon    = null !== $icon ? $this->icon($icon, $style) : "";
 
         // Return the HTML.
         return $this->replace($template, ["%attributes%", "%icon%", "%content%"], [StringUtility::parseArray($_attr), $_icon, $_content]);
@@ -178,7 +178,7 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
         $_attr["style"] = $style;
 
         // Initialize the parameters.
-        $_name = !is_null($name) ? $name : "home";
+        $_name = null !== $name ? $name : "home";
 
         // Return the HTML.
         return $this->replace($template, ["%attributes%", "%name%"], [StringUtility::parseArray($_attr), $_name]);
@@ -202,7 +202,7 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
         $_attr["class"] = ["label", $class];
 
         // Initialize the parameters.
-        $_content = !is_null($content) ? $content : self::DEFAULT_CONTENT;
+        $_content = null !== $content ? $content : self::DEFAULT_CONTENT;
 
         // Return the HTML.
         return $this->replace($template, ["%attributes%", "%content%"], [StringUtility::parseArray($_attr), $_content]);
@@ -260,7 +260,7 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
         $_attr["aria-valuemax"] = $max . "%";
 
         // Initialize the parameters.
-        $_label = !is_null($label) ? $label . '<span class="sr-only">' . $value . ' %</span>' : self::DEFAULT_CONTENT;
+        $_label = null !== $label ? $label . '<span class="sr-only">' . $value . ' %</span>' : self::DEFAULT_CONTENT;
 
         // Return the HTML.
         return $this->replace($template, ["%attributes%", "%label%"], [StringUtility::parseArray($_attr), $_label]);
