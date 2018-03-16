@@ -12,6 +12,7 @@
 namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI;
 
 use Twig_SimpleFunction;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Preloader UI Twig extension.
@@ -51,7 +52,7 @@ final class PreloaderUITwigExtension extends AbstractUITwigExtension {
      * @return string Retruns the material design preloader L.
      */
     public function materialDesignPreloaderLFunction(array $args = []) {
-        return $this->preloader($this->getColor($this->getArg($args, "color", "red"), "pl-"), "l");
+        return $this->preloader($this->getColor(ArrayUtility::get($args, "color", "red"), "pl-"), "l");
     }
 
     /**
@@ -61,7 +62,7 @@ final class PreloaderUITwigExtension extends AbstractUITwigExtension {
      * @return string Retruns the material design preloader S.
      */
     public function materialDesignPreloaderSFunction(array $args = []) {
-        return $this->preloader($this->getColor($this->getArg($args, "color", "red"), "pl-"), "s");
+        return $this->preloader($this->getColor(ArrayUtility::get($args, "color", "red"), "pl-"), "s");
     }
 
     /**
@@ -71,7 +72,7 @@ final class PreloaderUITwigExtension extends AbstractUITwigExtension {
      * @return string Retruns the material design preloader SM.
      */
     public function materialDesignPreloaderSMFunction(array $args = []) {
-        return $this->preloader($this->getColor($this->getArg($args, "color", "red"), "pl-"), "sm");
+        return $this->preloader($this->getColor(ArrayUtility::get($args, "color", "red"), "pl-"), "sm");
     }
 
     /**
@@ -81,7 +82,7 @@ final class PreloaderUITwigExtension extends AbstractUITwigExtension {
      * @return string Retruns the material design preloader XL.
      */
     public function materialDesignPreloaderXLFunction(array $args = []) {
-        return $this->preloader($this->getColor($this->getArg($args, "color", "red"), "pl-"), "xl");
+        return $this->preloader($this->getColor(ArrayUtility::get($args, "color", "red"), "pl-"), "xl");
     }
 
     /**
@@ -91,7 +92,7 @@ final class PreloaderUITwigExtension extends AbstractUITwigExtension {
      * @return string Retruns the material design preloader XS.
      */
     public function materialDesignPreloaderXSFunction(array $args = []) {
-        return $this->preloader($this->getColor($this->getArg($args, "color", "red"), "pl-"), "xs");
+        return $this->preloader($this->getColor(ArrayUtility::get($args, "color", "red"), "pl-"), "xs");
     }
 
 }

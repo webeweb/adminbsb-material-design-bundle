@@ -12,6 +12,7 @@
 namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI;
 
 use Twig_SimpleFunction;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Progress bar UI Twig extension.
@@ -36,7 +37,7 @@ final class ProgressBarUITwigExtension extends AbstractUITwigExtension {
      * @return string Returns the basic progress bar.
      */
     public function basicProgressBarFunction(array $args = []) {
-        return $this->progressBar($this->getArg($args, "content"), $this->getArg($args, "value", 50), $this->getArg($args, "min", 0), $this->getArg($args, "max", 100), $this->getArg($args, "striped", false), $this->getArg($args, "animated", false));
+        return $this->progressBar(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "value", 50), ArrayUtility::get($args, "min", 0), ArrayUtility::get($args, "max", 100), ArrayUtility::get($args, "striped", false), ArrayUtility::get($args, "animated", false));
     }
 
     /**
@@ -62,7 +63,7 @@ final class ProgressBarUITwigExtension extends AbstractUITwigExtension {
      * @return string Returns the material design progress bar.
      */
     public function materialDesignProgressBarFunction(array $args = []) {
-        return $this->progressBar($this->getArg($args, "content"), $this->getArg($args, "value", 50), $this->getArg($args, "min", 0), $this->getArg($args, "max", 100), $this->getArg($args, "striped", false), $this->getArg($args, "animated", false), $this->getColor($this->getArg($args, "color", "red"), "bg-"));
+        return $this->progressBar(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "value", 50), ArrayUtility::get($args, "min", 0), ArrayUtility::get($args, "max", 100), ArrayUtility::get($args, "striped", false), ArrayUtility::get($args, "animated", false), $this->getColor(ArrayUtility::get($args, "color", "red"), "bg-"));
     }
 
     /**
@@ -72,7 +73,7 @@ final class ProgressBarUITwigExtension extends AbstractUITwigExtension {
      * @return string Returns the progress bar "Danger".
      */
     public function progressBarDangerFunction(array $args = []) {
-        return $this->progressBar($this->getArg($args, "content"), $this->getArg($args, "value", 50), $this->getArg($args, "min", 0), $this->getArg($args, "max", 100), $this->getArg($args, "striped", false), $this->getArg($args, "animated", false), "progress-bar-danger");
+        return $this->progressBar(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "value", 50), ArrayUtility::get($args, "min", 0), ArrayUtility::get($args, "max", 100), ArrayUtility::get($args, "striped", false), ArrayUtility::get($args, "animated", false), "progress-bar-danger");
     }
 
     /**
@@ -82,7 +83,7 @@ final class ProgressBarUITwigExtension extends AbstractUITwigExtension {
      * @return string Returns the progress bar "Info".
      */
     public function progressBarInfoFunction(array $args = []) {
-        return $this->progressBar($this->getArg($args, "content"), $this->getArg($args, "value", 50), $this->getArg($args, "min", 0), $this->getArg($args, "max", 100), $this->getArg($args, "striped", false), $this->getArg($args, "animated", false), "progress-bar-info");
+        return $this->progressBar(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "value", 50), ArrayUtility::get($args, "min", 0), ArrayUtility::get($args, "max", 100), ArrayUtility::get($args, "striped", false), ArrayUtility::get($args, "animated", false), "progress-bar-info");
     }
 
     /**
@@ -92,7 +93,7 @@ final class ProgressBarUITwigExtension extends AbstractUITwigExtension {
      * @return string Returns the progress bar "Success".
      */
     public function progressBarSuccessFunction(array $args = []) {
-        return $this->progressBar($this->getArg($args, "content"), $this->getArg($args, "value", 50), $this->getArg($args, "min", 0), $this->getArg($args, "max", 100), $this->getArg($args, "striped", false), $this->getArg($args, "animated", false), "progress-bar-success");
+        return $this->progressBar(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "value", 50), ArrayUtility::get($args, "min", 0), ArrayUtility::get($args, "max", 100), ArrayUtility::get($args, "striped", false), ArrayUtility::get($args, "animated", false), "progress-bar-success");
     }
 
     /**
@@ -102,7 +103,7 @@ final class ProgressBarUITwigExtension extends AbstractUITwigExtension {
      * @return string Returns the progress bar "Warning".
      */
     public function progressBarWarningFunction(array $args = []) {
-        return $this->progressBar($this->getArg($args, "content"), $this->getArg($args, "value", 50), $this->getArg($args, "min", 0), $this->getArg($args, "max", 100), $this->getArg($args, "striped", false), $this->getArg($args, "animated", false), "progress-bar-warning");
+        return $this->progressBar(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "value", 50), ArrayUtility::get($args, "min", 0), ArrayUtility::get($args, "max", 100), ArrayUtility::get($args, "striped", false), ArrayUtility::get($args, "animated", false), "progress-bar-warning");
     }
 
 }

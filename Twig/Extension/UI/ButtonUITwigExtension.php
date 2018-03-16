@@ -13,6 +13,8 @@ namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI;
 
 use Twig_SimpleFilter;
 use Twig_SimpleFunction;
+use WBW\Library\Core\Utility\ArrayUtility;
+use WBW\Library\Core\Utility\StringUtility;
 
 /**
  * Button UI Twig extension.
@@ -37,7 +39,7 @@ final class ButtonUITwigExtension extends AbstractUITwigExtension {
      * @return string Returns the button "Danger".
      */
     public function buttonDangerFunction(array $args = []) {
-        return $this->button($this->getArg($args, "content"), $this->getArg($args, "title"), $this->getArg($args, "size", false), $this->getArg($args, "block", false), $this->getArg($args, "disable", false), "btn-danger", $this->getArg($args, "icon"), $this->getArg($args, "circle", false));
+        return $this->button(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "title"), ArrayUtility::get($args, "size", false), ArrayUtility::get($args, "block", false), ArrayUtility::get($args, "disable", false), "btn-danger", ArrayUtility::get($args, "icon"), ArrayUtility::get($args, "circle", false));
     }
 
     /**
@@ -47,7 +49,7 @@ final class ButtonUITwigExtension extends AbstractUITwigExtension {
      * @return string Returns the button "Default".
      */
     public function buttonDefaultFunction(array $args = []) {
-        return $this->button($this->getArg($args, "content"), $this->getArg($args, "title"), $this->getArg($args, "size", false), $this->getArg($args, "block", false), $this->getArg($args, "disable", false), "btn-default", $this->getArg($args, "icon"), $this->getArg($args, "circle", false));
+        return $this->button(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "title"), ArrayUtility::get($args, "size", false), ArrayUtility::get($args, "block", false), ArrayUtility::get($args, "disable", false), "btn-default", ArrayUtility::get($args, "icon"), ArrayUtility::get($args, "circle", false));
     }
 
     /**
@@ -57,7 +59,7 @@ final class ButtonUITwigExtension extends AbstractUITwigExtension {
      * @return string Returns the button "Info".
      */
     public function buttonInfoFunction(array $args = []) {
-        return $this->button($this->getArg($args, "content"), $this->getArg($args, "title"), $this->getArg($args, "size", false), $this->getArg($args, "block", false), $this->getArg($args, "disable", false), "btn-info", $this->getArg($args, "icon"), $this->getArg($args, "circle", false));
+        return $this->button(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "title"), ArrayUtility::get($args, "size", false), ArrayUtility::get($args, "block", false), ArrayUtility::get($args, "disable", false), "btn-info", ArrayUtility::get($args, "icon"), ArrayUtility::get($args, "circle", false));
     }
 
     /**
@@ -67,7 +69,7 @@ final class ButtonUITwigExtension extends AbstractUITwigExtension {
      * @return string Returns the button "Primary".
      */
     public function buttonPrimaryFunction(array $args = []) {
-        return $this->button($this->getArg($args, "content"), $this->getArg($args, "title"), $this->getArg($args, "size", false), $this->getArg($args, "block", false), $this->getArg($args, "disable", false), "btn-primary", $this->getArg($args, "icon"), $this->getArg($args, "circle", false));
+        return $this->button(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "title"), ArrayUtility::get($args, "size", false), ArrayUtility::get($args, "block", false), ArrayUtility::get($args, "disable", false), "btn-primary", ArrayUtility::get($args, "icon"), ArrayUtility::get($args, "circle", false));
     }
 
     /**
@@ -77,7 +79,7 @@ final class ButtonUITwigExtension extends AbstractUITwigExtension {
      * @return string Returns the button "Success".
      */
     public function buttonSuccessFunction(array $args = []) {
-        return $this->button($this->getArg($args, "content"), $this->getArg($args, "title"), $this->getArg($args, "size", false), $this->getArg($args, "block", false), $this->getArg($args, "disable", false), "btn-success", $this->getArg($args, "icon"), $this->getArg($args, "circle", false));
+        return $this->button(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "title"), ArrayUtility::get($args, "size", false), ArrayUtility::get($args, "block", false), ArrayUtility::get($args, "disable", false), "btn-success", ArrayUtility::get($args, "icon"), ArrayUtility::get($args, "circle", false));
     }
 
     /**
@@ -87,7 +89,7 @@ final class ButtonUITwigExtension extends AbstractUITwigExtension {
      * @return string Returns the button "Warning".
      */
     public function buttonWarningFunction(array $args = []) {
-        return $this->button($this->getArg($args, "content"), $this->getArg($args, "title"), $this->getArg($args, "size", false), $this->getArg($args, "block", false), $this->getArg($args, "disable", false), "btn-warning", $this->getArg($args, "icon"), $this->getArg($args, "circle", false));
+        return $this->button(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "title"), ArrayUtility::get($args, "size", false), ArrayUtility::get($args, "block", false), ArrayUtility::get($args, "disable", false), "btn-warning", ArrayUtility::get($args, "icon"), ArrayUtility::get($args, "circle", false));
     }
 
     /**
@@ -126,7 +128,7 @@ final class ButtonUITwigExtension extends AbstractUITwigExtension {
      * @return string Returns the link button.
      */
     public function linkButtonFilter($button, $link = self::DEFAULT_HREF) {
-        return $this->replace($button, ["<button", "type=\"button\"", "</button>"], ["<a", "href=\"" . $link . "\"", "</a>"]);
+        return StringUtility::replace($button, ["<button", "type=\"button\"", "</button>"], ["<a", "href=\"" . $link . "\"", "</a>"]);
     }
 
     /**
@@ -136,7 +138,7 @@ final class ButtonUITwigExtension extends AbstractUITwigExtension {
      * @return string Returns the material design button.
      */
     public function materialDesignButtonFunction(array $args = []) {
-        return $this->button($this->getArg($args, "content"), $this->getArg($args, "title"), $this->getArg($args, "size", false), $this->getArg($args, "block", false), $this->getArg($args, "disable", false), $this->getColor($this->getArg($args, "color", "red"), "bg-"), $this->getArg($args, "icon"), $this->getArg($args, "circle", false));
+        return $this->button(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "title"), ArrayUtility::get($args, "size", false), ArrayUtility::get($args, "block", false), ArrayUtility::get($args, "disable", false), $this->getColor(ArrayUtility::get($args, "color", "red"), "bg-"), ArrayUtility::get($args, "icon"), ArrayUtility::get($args, "circle", false));
     }
 
 }

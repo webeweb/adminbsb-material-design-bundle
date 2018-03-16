@@ -61,7 +61,7 @@ abstract class AbstractFormTwigExtension extends AbstractABSBMDTwigExtension {
         $_content = null !== $content ? $content : self::DEFAULT_CONTENT;
 
         // Return the HTML.
-        return $this->replace($template, ["%attributes%", "%id%", "%content%"], [StringUtility::parseArray($_attr), $_attr["id"], $_content]);
+        return StringUtility::replace($template, ["%attributes%", "%id%", "%content%"], [StringUtility::parseArray($_attr), $_attr["id"], $_content]);
     }
 
     /**
@@ -95,7 +95,7 @@ abstract class AbstractFormTwigExtension extends AbstractABSBMDTwigExtension {
         $_content = null !== $content ? $content : self::DEFAULT_CONTENT;
 
         // Return the HTML.
-        return $this->replace($template, ["%attributes%", "%id%", "%content%"], [StringUtility::parseArray($_attr), $_attr["id"], $_content]);
+        return StringUtility::replace($template, ["%attributes%", "%id%", "%content%"], [StringUtility::parseArray($_attr), $_attr["id"], $_content]);
     }
 
     /**
@@ -129,7 +129,7 @@ abstract class AbstractFormTwigExtension extends AbstractABSBMDTwigExtension {
         $_onLabel  = null !== $onLabel ? $onLabel : "";
 
         // Return the HTML.
-        return $this->replace($template, ["%offLabel%", "%attributes%", "%class%", "%onLabel%"], [$_offLabel, StringUtility::parseArray($_attr), $_class, $_onLabel]);
+        return StringUtility::replace($template, ["%offLabel%", "%attributes%", "%class%", "%onLabel%"], [$_offLabel, StringUtility::parseArray($_attr), $_class, $_onLabel]);
     }
 
 }

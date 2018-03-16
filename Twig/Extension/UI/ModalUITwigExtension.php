@@ -13,6 +13,7 @@ namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI;
 
 use Twig_SimpleFunction;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Typography\HeadingTypographyTwigExtension;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Modal UI Twig extension.
@@ -39,8 +40,8 @@ final class ModalUITwigExtension extends AbstractUITwigExtension {
     public function modalHeaderFunction(array $args = []) {
 
         // Initialize the paramters.
-        $content = $this->getArg($args, "content", self::DEFAULT_CONTENT);
-        $icon    = $this->getArg($args, "icon");
+        $content = ArrayUtility::get($args, "content", self::DEFAULT_CONTENT);
+        $icon    = ArrayUtility::get($args, "icon");
 
         if (null !== $icon) {
             $content = (new IconUITwigExtension())->basicIconFunction(["name" => $icon, "style" => "margin: -4px 0; vertical-align: sub;"]) . $content;

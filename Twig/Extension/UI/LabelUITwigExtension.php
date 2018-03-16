@@ -12,6 +12,7 @@
 namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI;
 
 use Twig_SimpleFunction;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Label UI Twig extension.
@@ -53,7 +54,7 @@ final class LabelUITwigExtension extends AbstractUITwigExtension {
      * @return string Returns the label "Danger".
      */
     public function labelDangerFunction(array $args = []) {
-        return $this->label($this->getArg($args, "content"), "label-danger");
+        return $this->label(ArrayUtility::get($args, "content"), "label-danger");
     }
 
     /**
@@ -63,7 +64,7 @@ final class LabelUITwigExtension extends AbstractUITwigExtension {
      * @return string Returns the label "Default".
      */
     public function labelDefaultFunction(array $args = []) {
-        return $this->label($this->getArg($args, "content"), "label-default");
+        return $this->label(ArrayUtility::get($args, "content"), "label-default");
     }
 
     /**
@@ -73,7 +74,7 @@ final class LabelUITwigExtension extends AbstractUITwigExtension {
      * @return string Returns the label "Info".
      */
     public function labelInfoFunction(array $args = []) {
-        return $this->label($this->getArg($args, "content"), "label-info");
+        return $this->label(ArrayUtility::get($args, "content"), "label-info");
     }
 
     /**
@@ -83,7 +84,7 @@ final class LabelUITwigExtension extends AbstractUITwigExtension {
      * @return string Returns the label "Primary".
      */
     public function labelPrimaryFunction(array $args = []) {
-        return $this->label($this->getArg($args, "content"), "label-primary");
+        return $this->label(ArrayUtility::get($args, "content"), "label-primary");
     }
 
     /**
@@ -93,7 +94,7 @@ final class LabelUITwigExtension extends AbstractUITwigExtension {
      * @return string Returns the label "Success".
      */
     public function labelSuccessFunction(array $args = []) {
-        return $this->label($this->getArg($args, "content"), "label-success");
+        return $this->label(ArrayUtility::get($args, "content"), "label-success");
     }
 
     /**
@@ -103,7 +104,7 @@ final class LabelUITwigExtension extends AbstractUITwigExtension {
      * @return string Returns the label "Warning".
      */
     public function labelWarningFunction(array $args = []) {
-        return $this->label($this->getArg($args, "content"), "label-warning");
+        return $this->label(ArrayUtility::get($args, "content"), "label-warning");
     }
 
     /**
@@ -113,7 +114,7 @@ final class LabelUITwigExtension extends AbstractUITwigExtension {
      * @return string Returns the material design label.
      */
     public function materialDesignLabelFunction(array $args = []) {
-        return $this->label($this->getArg($args, "content"), $this->getColor($this->getArg($args, "color", "red"), "bg-"));
+        return $this->label(ArrayUtility::get($args, "content"), $this->getColor(ArrayUtility::get($args, "color", "red"), "bg-"));
     }
 
 }

@@ -14,6 +14,7 @@ namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Widget;
 use Twig_SimpleFunction;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Typography\HeadingTypographyTwigExtension;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI\IconUITwigExtension;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Card widget Twig extension.
@@ -40,9 +41,9 @@ final class CardWidgetTwigExtension extends AbstractWidgetTwigExtension {
     public function cardHeaderFunction(array $args = []) {
 
         // Initialize the paramters.
-        $content     = $this->getArg($args, "content", self::DEFAULT_CONTENT);
-        $description = $this->getArg($args, "description");
-        $icon        = $this->getArg($args, "icon");
+        $content     = ArrayUtility::get($args, "content", self::DEFAULT_CONTENT);
+        $description = ArrayUtility::get($args, "description");
+        $icon        = ArrayUtility::get($args, "icon");
 
         if (null !== $description) {
             $content .= "<small>" . $description . "</small>";

@@ -12,6 +12,7 @@
 namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI;
 
 use Twig_SimpleFunction;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Icon UI Twig extension.
@@ -36,7 +37,7 @@ final class IconUITwigExtension extends AbstractUITwigExtension {
      * @return string Returns the material design icon.
      */
     public function basicIconFunction(array $args = []) {
-        return $this->icon($this->getArg($args, "name"), $this->getArg($args, "style"));
+        return $this->icon(ArrayUtility::get($args, "name"), ArrayUtility::get($args, "style"));
     }
 
     /**
@@ -58,7 +59,7 @@ final class IconUITwigExtension extends AbstractUITwigExtension {
      * @return string Returns the material design icon.
      */
     public function materialDesignIconFunction(array $args = []) {
-        return $this->icon($this->getArg($args, "name"), $this->getArg($args, "style"), $this->getColor($this->getArg($args, "color"), "col-"));
+        return $this->icon(ArrayUtility::get($args, "name"), ArrayUtility::get($args, "style"), $this->getColor(ArrayUtility::get($args, "color"), "col-"));
     }
 
 }

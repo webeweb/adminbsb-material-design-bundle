@@ -56,7 +56,7 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
         $_content = (true === $dismissible ? $subtemplate : "") . (null !== $content ? $content : self::DEFAULT_CONTENT);
 
         // Return the HTML.
-        return $this->replace($template, ["%attributes%", "%content%"], [StringUtility::parseArray($_attr), $_content]);
+        return StringUtility::replace($template, ["%attributes%", "%content%"], [StringUtility::parseArray($_attr), $_content]);
     }
 
     /**
@@ -95,7 +95,7 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
         $_link    = null !== $link ? $link : self::DEFAULT_HREF;
 
         // Return the HTML.
-        return $this->replace($template, ["%attributes%", "%content%", "%label%", "%link%"], [StringUtility::parseArray($_attr), $_content, $_label, $_link]);
+        return StringUtility::replace($template, ["%attributes%", "%content%", "%label%", "%link%"], [StringUtility::parseArray($_attr), $_content, $_label, $_link]);
     }
 
     /**
@@ -137,7 +137,7 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
         $_icon    = null !== $icon ? $this->icon($icon, $style) : "";
 
         // Return the HTML.
-        return $this->replace($template, ["%attributes%", "%icon%", "%content%"], [StringUtility::parseArray($_attr), $_icon, $_content]);
+        return StringUtility::replace($template, ["%attributes%", "%icon%", "%content%"], [StringUtility::parseArray($_attr), $_icon, $_content]);
     }
 
     /**
@@ -181,7 +181,7 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
         $_name = null !== $name ? $name : "home";
 
         // Return the HTML.
-        return $this->replace($template, ["%attributes%", "%name%"], [StringUtility::parseArray($_attr), $_name]);
+        return StringUtility::replace($template, ["%attributes%", "%name%"], [StringUtility::parseArray($_attr), $_name]);
     }
 
     /**
@@ -205,7 +205,7 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
         $_content = null !== $content ? $content : self::DEFAULT_CONTENT;
 
         // Return the HTML.
-        return $this->replace($template, ["%attributes%", "%content%"], [StringUtility::parseArray($_attr), $_content]);
+        return StringUtility::replace($template, ["%attributes%", "%content%"], [StringUtility::parseArray($_attr), $_content]);
     }
 
     /**
@@ -227,7 +227,7 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
         $_attr["spinner"]["class"]   = ["spinner-layer", $class];
 
         // Return the HTML.
-        return $this->replace($template, ["%attributes1%", "%attributes2%"], [StringUtility::parseArray($_attr["preloader"]), StringUtility::parseArray($_attr["spinner"])]);
+        return StringUtility::replace($template, ["%attributes1%", "%attributes2%"], [StringUtility::parseArray($_attr["preloader"]), StringUtility::parseArray($_attr["spinner"])]);
     }
 
     /**
@@ -263,7 +263,7 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
         $_label = null !== $label ? $label . '<span class="sr-only">' . $value . ' %</span>' : self::DEFAULT_CONTENT;
 
         // Return the HTML.
-        return $this->replace($template, ["%attributes%", "%label%"], [StringUtility::parseArray($_attr), $_label]);
+        return StringUtility::replace($template, ["%attributes%", "%label%"], [StringUtility::parseArray($_attr), $_label]);
     }
 
 }

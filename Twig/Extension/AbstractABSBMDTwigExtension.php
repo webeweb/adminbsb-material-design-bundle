@@ -38,18 +38,6 @@ abstract class AbstractABSBMDTwigExtension extends Twig_Extension {
     }
 
     /**
-     * Get an argument.
-     *
-     * @param array $arguments The arguments.
-     * @param string $name The argument name.
-     * @param mixed $default The default value.
-     * @return mixed Returns the value in case of success, $default otherwise.
-     */
-    final protected function getArg(array $arguments, $name, $default = null) {
-        return isset($arguments[$name]) ? $arguments[$name] : $default;
-    }
-
-    /**
      * Get a color.
      *
      * @param string $name The color name.
@@ -61,18 +49,6 @@ abstract class AbstractABSBMDTwigExtension extends Twig_Extension {
             $name = "red";
         }
         return $prefix . $name;
-    }
-
-    /**
-     * Replace.
-     *
-     * @param string $subject The subject.
-     * @param array $searches The searches.
-     * @param array $replaces The replaces.
-     * @return string Returns the replaced string.
-     */
-    final protected function replace($subject, array $searches, array $replaces) {
-        return str_replace($searches, $replaces, $subject);
     }
 
 }

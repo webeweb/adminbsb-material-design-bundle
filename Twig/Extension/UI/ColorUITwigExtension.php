@@ -12,6 +12,7 @@
 namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI;
 
 use Twig_SimpleFunction;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Color UI Twig extension.
@@ -47,7 +48,7 @@ final class ColorUITwigExtension extends AbstractUITwigExtension {
      * @return string Returns the material design color.
      */
     public function materialDesignColorFunction(array $args = []) {
-        return $this->color($this->getArg($args, "name"), $this->getArg($args, "code", "500"), $this->getArg($args, "out", "class"));
+        return $this->color(ArrayUtility::get($args, "name"), ArrayUtility::get($args, "code", "500"), ArrayUtility::get($args, "out", "class"));
     }
 
 }

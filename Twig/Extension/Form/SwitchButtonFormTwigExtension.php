@@ -12,6 +12,7 @@
 namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Form;
 
 use Twig_SimpleFunction;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Switch button form Twig extension.
@@ -36,7 +37,7 @@ final class SwitchButtonFormTwigExtension extends AbstractFormTwigExtension {
      * @return string Returns the basic switch button.
      */
     public function basicSwitchButtonFunction(array $args = []) {
-        return $this->switchButton($this->getArg($args, "offLabel"), $this->getArg($args, "name"), $this->getArg($args, "checked", false), $this->getArg($args, "disabled", false), $this->getArg($args, "onLabel"), $this->getArg($args, "attr", []));
+        return $this->switchButton(ArrayUtility::get($args, "offLabel"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "onLabel"), ArrayUtility::get($args, "attr", []));
     }
 
     /**
@@ -58,7 +59,7 @@ final class SwitchButtonFormTwigExtension extends AbstractFormTwigExtension {
      * @return string Returns the material design switch button.
      */
     public function materialDesignSwitchButtonFunction(array $args = []) {
-        return $this->switchButton($this->getArg($args, "offLabel"), $this->getArg($args, "name"), $this->getArg($args, "checked", false), $this->getArg($args, "disabled", false), $this->getArg($args, "onLabel"), $this->getArg($args, "attr", []), $this->getColor($this->getArg($args, "color", "red"), " switch-col-"));
+        return $this->switchButton(ArrayUtility::get($args, "offLabel"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "onLabel"), ArrayUtility::get($args, "attr", []), $this->getColor(ArrayUtility::get($args, "color", "red"), " switch-col-"));
     }
 
 }

@@ -12,6 +12,7 @@
 namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Form;
 
 use Twig_SimpleFunction;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Checkbox form Twig extension.
@@ -36,7 +37,7 @@ final class CheckboxFormTwigExtension extends AbstractFormTwigExtension {
      * @return string Returns the basic checkbox.
      */
     public function basicCheckboxFunction(array $args = []) {
-        return $this->checkbox($this->getArg($args, "content"), $this->getArg($args, "name"), $this->getArg($args, "id"), $this->getArg($args, "checked", false), $this->getArg($args, "disabled", false), $this->getArg($args, "filledIn", false), $this->getArg($args, "class"));
+        return $this->checkbox(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "id"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "filledIn", false), ArrayUtility::get($args, "class"));
     }
 
     /**
@@ -58,7 +59,7 @@ final class CheckboxFormTwigExtension extends AbstractFormTwigExtension {
      * @return string Returns the material design checkbox.
      */
     public function materialDesignCheckboxFunction(array $args = []) {
-        return $this->checkbox($this->getArg($args, "content"), $this->getArg($args, "name"), $this->getArg($args, "id"), $this->getArg($args, "checked", false), $this->getArg($args, "disabled", false), $this->getArg($args, "filledIn", false), $this->getArg($args, "class", "") . $this->getColor($this->getArg($args, "color", "red"), " chk-col-"));
+        return $this->checkbox(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "id"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "filledIn", false), ArrayUtility::get($args, "class", "") . $this->getColor(ArrayUtility::get($args, "color", "red"), " chk-col-"));
     }
 
 }

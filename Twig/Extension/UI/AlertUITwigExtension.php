@@ -12,6 +12,7 @@
 namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI;
 
 use Twig_SimpleFunction;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Alert UI Twig extension.
@@ -36,7 +37,7 @@ final class AlertUITwigExtension extends AbstractUITwigExtension {
      * @return string Returns the basic alert "Danger".
      */
     public function basicAlertDangerFunction(array $args = []) {
-        return $this->alert($this->getArg($args, "content"), $this->getArg($args, "dismissible"), "alert-danger");
+        return $this->alert(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "dismissible"), "alert-danger");
     }
 
     /**
@@ -46,7 +47,7 @@ final class AlertUITwigExtension extends AbstractUITwigExtension {
      * @return string Returns the basic alert "Info".
      */
     public function basicAlertInfoFunction(array $args = []) {
-        return $this->alert($this->getArg($args, "content"), $this->getArg($args, "dismissible"), "alert-info");
+        return $this->alert(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "dismissible"), "alert-info");
     }
 
     /**
@@ -56,7 +57,7 @@ final class AlertUITwigExtension extends AbstractUITwigExtension {
      * @return string Returns the basic alert "Success".
      */
     public function basicAlertSuccessFunction(array $args = []) {
-        return $this->alert($this->getArg($args, "content"), $this->getArg($args, "dismissible"), "alert-success");
+        return $this->alert(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "dismissible"), "alert-success");
     }
 
     /**
@@ -66,7 +67,7 @@ final class AlertUITwigExtension extends AbstractUITwigExtension {
      * @return string Returns the basic alert "Warning".
      */
     public function basicAlertWarningFunction(array $args = []) {
-        return $this->alert($this->getArg($args, "content"), $this->getArg($args, "dismissible"), "alert-warning");
+        return $this->alert(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "dismissible"), "alert-warning");
     }
 
     /**
@@ -92,7 +93,7 @@ final class AlertUITwigExtension extends AbstractUITwigExtension {
      * @return string Returns the link alert.
      */
     public function linkAlertFunction(array $args = []) {
-        return $this->alert($this->getArg($args, "content"), $this->getArg($args, "dismissible"), $this->getColor($this->getArg($args, "color", "red"), "bg-"));
+        return $this->alert(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "dismissible"), $this->getColor(ArrayUtility::get($args, "color", "red"), "bg-"));
     }
 
     /**
@@ -102,7 +103,7 @@ final class AlertUITwigExtension extends AbstractUITwigExtension {
      * @return string Returns the material design alert.
      */
     public function materialDesignAlertFunction(array $args = []) {
-        return $this->alert($this->getArg($args, "content"), $this->getArg($args, "dismissible"), $this->getColor($this->getArg($args, "color", "red"), "bg-"));
+        return $this->alert(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "dismissible"), $this->getColor(ArrayUtility::get($args, "color", "red"), "bg-"));
     }
 
 }
