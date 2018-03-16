@@ -12,7 +12,9 @@
 namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI;
 
 use Twig_SimpleFunction;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\AlertComponentTwigExtension as BaseUITwigExtension;
 use WBW\Library\Core\Utility\ArrayUtility;
+use WBW\Library\Core\Utility\StringUtility;
 
 /**
  * Alert UI Twig extension.
@@ -31,43 +33,43 @@ final class AlertUITwigExtension extends AbstractUITwigExtension {
     const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.ui.alert";
 
     /**
-     * Displays a basic alert "Danger".
+     * Displays an basic alert "Danger".
      *
      * @param array $args The arguments.
      * @return string Returns the basic alert "Danger".
      */
-    public function basicAlertDangerFunction(array $args = []) {
-        return $this->alert(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "dismissible"), "alert-danger");
+    public function absbmdBasicAlertDangerFunction(array $args = []) {
+        return (new BaseUITwigExtension())->bootstrapAlertDangerFunction($args);
     }
 
     /**
-     * Displays a basic alert "Info".
+     * Displays an AdminBSB basic alert "Info".
      *
      * @param array $args The arguments.
-     * @return string Returns the basic alert "Info".
+     * @return string Returns the AdminBSB basic alert "Info".
      */
-    public function basicAlertInfoFunction(array $args = []) {
-        return $this->alert(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "dismissible"), "alert-info");
+    public function absbmdBasicAlertInfoFunction(array $args = []) {
+        return (new BaseUITwigExtension())->bootstrapAlertInfoFunction($args);
     }
 
     /**
-     * Displays a basic alert "Success".
+     * Displays an AdminBSB basic alert "Success".
      *
      * @param array $args The arguments.
-     * @return string Returns the basic alert "Success".
+     * @return string Returns the AdminBSB basic alert "Success".
      */
-    public function basicAlertSuccessFunction(array $args = []) {
-        return $this->alert(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "dismissible"), "alert-success");
+    public function absbmdBasicAlertSuccessFunction(array $args = []) {
+        return (new BaseUITwigExtension())->bootstrapAlertSuccessFunction($args);
     }
 
     /**
-     * Displays a basic alert "Warning".
+     * Displays an AdminBSB basic alert "Warning".
      *
      * @param array $args The arguments.
-     * @return string Returns the basic alert "Warning".
+     * @return string Returns the AdminBSB basic alert "Warning".
      */
-    public function basicAlertWarningFunction(array $args = []) {
-        return $this->alert(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "dismissible"), "alert-warning");
+    public function absbmdBasicAlertWarningFunction(array $args = []) {
+        return (new BaseUITwigExtension())->bootstrapAlertWarningFunction($args);
     }
 
     /**
@@ -77,33 +79,36 @@ final class AlertUITwigExtension extends AbstractUITwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("basicAlertDanger", [$this, "basicAlertDangerFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("basicAlertInfo", [$this, "basicAlertInfoFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("basicAlertSuccess", [$this, "basicAlertSuccessFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("basicAlertWarning", [$this, "basicAlertWarningFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("linkAlert", [$this, "linkAlertFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("materialDesignAlert", [$this, "materialDesignAlertFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("absbmdBasicAlertDanger", [$this, "absbmdBasicAlertDangerFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("absbmdBasicAlertInfo", [$this, "absbmdBasicAlertInfoFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("absbmdBasicAlertSuccess", [$this, "absbmdBasicAlertSuccessFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("absbmdBasicAlertWarning", [$this, "absbmdBasicAlertWarningFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("absbmdLinkAlert", [$this, "absbmdLinkAlertFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("absbmdMaterialDesignAlert", [$this, "absbmdMaterialDesignAlertFunction"], ["is_safe" => ["html"]]),
         ];
     }
 
     /**
-     * Displays a link alert.
+     * Displays an AdminBSB link alert.
      *
      * @param array $args The arguments.
-     * @return string Returns the link alert.
+     * @return string Returns the AdminBSB link alert.
      */
-    public function linkAlertFunction(array $args = []) {
-        return $this->alert(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "dismissible"), $this->getColor(ArrayUtility::get($args, "color", "red"), "bg-"));
+    public function absbmdLinkAlertFunction(array $args = []) {
+        return (new BaseUITwigExtension())->bootstrapLinkAlertFunction($args);
     }
 
     /**
-     * Displays a material design alert.
+     * Displays an AdminBSB material design alert.
      *
      * @param array $args The arguments.
-     * @return string Returns the material design alert.
+     * @return string Returns the AdminBSB material design alert.
      */
-    public function materialDesignAlertFunction(array $args = []) {
-        return $this->alert(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "dismissible"), $this->getColor(ArrayUtility::get($args, "color", "red"), "bg-"));
+    public function absbmdMaterialDesignAlertFunction(array $args = []) {
+        $template = (new BaseUITwigExtension())->bootstrapAlertDangerFunction($args);
+        $searches = ["alert-danger"];
+        $replaces = [$this->getColor(ArrayUtility::get($args, "color", "red"), "bg-")];
+        return StringUtility::replace($template, $searches, $replaces);
     }
 
 }

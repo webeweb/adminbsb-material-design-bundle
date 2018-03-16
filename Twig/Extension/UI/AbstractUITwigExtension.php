@@ -33,33 +33,6 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
     }
 
     /**
-     * Displays an alert.
-     *
-     * @param string $content The alert content.
-     * @param boolean $dismissible Dismissible alert ?
-     * @param string $class The alert class.
-     * @return string Returns the alert.
-     */
-    final protected function alert($content, $dismissible, $class) {
-
-        // Initialize the templates.
-        $template    = "<div %attributes%>%content%</div>";
-        $subtemplate = '<button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
-
-        // Initialize the attributes.
-        $_attr = [];
-
-        $_attr["class"]   = ["alert", $class];
-        $_attr["class"][] = true === $dismissible ? "alert-dismissible" : null;
-
-        // Initialize the parameters.
-        $_content = (true === $dismissible ? $subtemplate : "") . (null !== $content ? $content : self::DEFAULT_CONTENT);
-
-        // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%", "%content%"], [StringUtility::parseArray($_attr), $_content]);
-    }
-
-    /**
      * Displays a badge.
      *
      * @param string $content The badge content.
