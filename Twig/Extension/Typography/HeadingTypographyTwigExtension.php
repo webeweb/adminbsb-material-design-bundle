@@ -47,60 +47,60 @@ final class HeadingTypographyTwigExtension extends AbstractTypographyTwigExtensi
     }
 
     /**
-     * Displays a heading 1.
+     * Displays an AdminBSB heading 1.
      *
      * @param array $args The arguments.
-     * @return string Returns the heading 1.
+     * @return string Returns the AdminBSB heading 1.
      */
     public function absbmdHeading1Function(array $args = []) {
         return (new BaseTypographyTwigExtension())->bootstrapHeading1Function($args);
     }
 
     /**
-     * Displays a heading 2.
+     * Displays an AdminBSB heading 2.
      *
      * @param array $args The arguments.
-     * @return string Returns the heading 2.
+     * @return string Returns the AdminBSB heading 2.
      */
     public function absbmdHeading2Function(array $args = []) {
         return (new BaseTypographyTwigExtension())->bootstrapHeading2Function($args);
     }
 
     /**
-     * Displays a heading 3.
+     * Displays an AdminBSB heading 3.
      *
      * @param array $args The arguments.
-     * @return string Returns the heading 3.
+     * @return string Returns the AdminBSB heading 3.
      */
     public function absbmdHeading3Function(array $args = []) {
         return (new BaseTypographyTwigExtension())->bootstrapHeading3Function($args);
     }
 
     /**
-     * Displays a heading 4.
+     * Displays an AdminBSB heading 4.
      *
      * @param array $args The arguments.
-     * @return string Returns the heading 4.
+     * @return string Returns the AdminBSB heading 4.
      */
     public function absbmdHeading4Function(array $args = []) {
         return (new BaseTypographyTwigExtension())->bootstrapHeading4Function($args);
     }
 
     /**
-     * Displays a heading 5.
+     * Displays an AdminBSB heading 5.
      *
      * @param array $args The arguments.
-     * @return string Returns the heading 5.
+     * @return string Returns the AdminBSB heading 5.
      */
     public function absbmdHeading5Function(array $args = []) {
         return (new BaseTypographyTwigExtension())->bootstrapHeading5Function($args);
     }
 
     /**
-     * Displays a heading 6.
+     * Displays an AdminBSB heading 6.
      *
      * @param array $args The arguments.
-     * @return string Returns the heading 6.
+     * @return string Returns the AdminBSB heading 6.
      */
     public function absbmdHeading6Function(array $args = []) {
         return (new BaseTypographyTwigExtension())->bootstrapHeading6Function($args);
