@@ -196,7 +196,7 @@ final class ButtonUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 
         $btn = $obj->materialDesignButtonFunction();
 
-        $res0 = '<a class="btn bg-red waves-effect" href="javascript: void(0);">&nbsp;</a>';
+        $res0 = '<a class="btn bg-red waves-effect" href="javascript:void(0);">&nbsp;</a>';
         $this->assertEquals($res0, $obj->linkButtonFilter($btn));
 
         $res1 = '<a class="btn bg-red waves-effect" href="https://github.com">&nbsp;</a>';

@@ -180,19 +180,19 @@ final class BadgeUITwigExtensionTest extends PHPUnit_Framework_TestCase {
         $obj = new BadgeUITwigExtension();
 
         $arg0 = [];
-        $res0 = '<a class="list-group-item" href="javascript: void(0);"><span class="badge bg-red">&nbsp;</span>&nbsp;</a>';
+        $res0 = '<a class="list-group-item" href="javascript:void(0);"><span class="badge bg-red">&nbsp;</span>&nbsp;</a>';
         $this->assertEquals($res0, $obj->listBadgeFunction($arg0));
 
         $arg1 = ["content" => "content"];
-        $res1 = '<a class="list-group-item" href="javascript: void(0);"><span class="badge bg-red">content</span>&nbsp;</a>';
+        $res1 = '<a class="list-group-item" href="javascript:void(0);"><span class="badge bg-red">content</span>&nbsp;</a>';
         $this->assertEquals($res1, $obj->listBadgeFunction($arg1));
 
         $arg2 = ["label" => "label"];
-        $res2 = '<a class="list-group-item" href="javascript: void(0);"><span class="badge bg-red">&nbsp;</span>label</a>';
+        $res2 = '<a class="list-group-item" href="javascript:void(0);"><span class="badge bg-red">&nbsp;</span>label</a>';
         $this->assertEquals($res2, $obj->listBadgeFunction($arg2));
 
         $arg3 = ["color" => "black"];
-        $res3 = '<a class="list-group-item" href="javascript: void(0);"><span class="badge bg-black">&nbsp;</span>&nbsp;</a>';
+        $res3 = '<a class="list-group-item" href="javascript:void(0);"><span class="badge bg-black">&nbsp;</span>&nbsp;</a>';
         $this->assertEquals($res3, $obj->listBadgeFunction($arg3));
 
         $arg4 = ["link" => "http://domain.tld"];
