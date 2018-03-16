@@ -42,7 +42,7 @@ final class ModalUITwigExtension extends AbstractUITwigExtension {
         $content = $this->getArg($args, "content", self::DEFAULT_CONTENT);
         $icon    = $this->getArg($args, "icon");
 
-        if (!is_null($icon)) {
+        if (null !== $icon) {
             $content = (new IconUITwigExtension())->basicIconFunction(["name" => $icon, "style" => "margin: -4px 0; vertical-align: sub;"]) . $content;
         }
 
