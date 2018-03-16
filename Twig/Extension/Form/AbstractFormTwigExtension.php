@@ -31,7 +31,7 @@ abstract class AbstractFormTwigExtension extends AbstractABSBMDTwigExtension {
     }
 
     /**
-     * Displays a check box.
+     * Displays a AdminBSB check box.
      *
      * @param string $content The checkbox content.
      * @param string $name The checkbox name.
@@ -40,28 +40,28 @@ abstract class AbstractFormTwigExtension extends AbstractABSBMDTwigExtension {
      * @param boolean $disabled Disabled ?
      * @param boolean $filledIn Filled in ?
      * @param string $class The checkbox class.
-     * @return string Returns the checkbox.
+     * @return string Returns the AdminBSB checkbox.
      */
-    final protected function checkbox($content, $name, $id, $checked, $disabled, $filledIn, $class) {
+    final protected function absbmdCheckbox($content, $name, $id, $checked, $disabled, $filledIn, $class) {
 
         // Initialize the template.
-        $template = '<input %attributes%><label for="%id%">%content%</label>';
+        $template = '<input %attributes%><label for="%id%">%innerHTML%</label>';
 
         // Initialize the attributes.
-        $_attr = [];
+        $attributes = [];
 
-        $_attr["class"]    = [true === $filledIn ? "filled-in" : null, $class];
-        $_attr["name"]     = $name;
-        $_attr["type"]     = "checkbox";
-        $_attr["id"]       = $id;
-        $_attr["checked"]  = true === $checked ? "checked" : null;
-        $_attr["disabled"] = true === $disabled ? "disabled" : null;
+        $attributes["class"]    = [true === $filledIn ? "filled-in" : null, $class];
+        $attributes["name"]     = $name;
+        $attributes["type"]     = "checkbox";
+        $attributes["id"]       = $id;
+        $attributes["checked"]  = true === $checked ? "checked" : null;
+        $attributes["disabled"] = true === $disabled ? "disabled" : null;
 
         // Check the parameters.
-        $_content = null !== $content ? $content : self::DEFAULT_CONTENT;
+        $innerHTML = null !== $content ? $content : "";
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%", "%id%", "%content%"], [StringUtility::parseArray($_attr), $_attr["id"], $_content]);
+        return StringUtility::replace($template, ["%attributes%", "%id%", "%innerHTML%"], [StringUtility::parseArray($attributes), $attributes["id"], $innerHTML]);
     }
 
     /**

@@ -31,13 +31,13 @@ final class CheckboxFormTwigExtension extends AbstractFormTwigExtension {
     const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.form.checkbox";
 
     /**
-     * Displays a basic checkbox.
+     * Displays an AdminBSB basic checkbox.
      *
      * @param array $args The arguments.
      * @return string Returns the basic checkbox.
      */
-    public function basicCheckboxFunction(array $args = []) {
-        return $this->checkbox(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "id"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "filledIn", false), ArrayUtility::get($args, "class"));
+    public function absbmdBasicCheckboxFunction(array $args = []) {
+        return $this->absbmdCheckbox(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "id"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "filledIn", false), ArrayUtility::get($args, "class"));
     }
 
     /**
@@ -47,19 +47,19 @@ final class CheckboxFormTwigExtension extends AbstractFormTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("basicCheckbox", [$this, "basicCheckboxFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("materialDesignCheckbox", [$this, "materialDesignCheckboxFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("absbmdBasicCheckbox", [$this, "absbmdBasicCheckboxFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("absbmdMaterialDesignCheckbox", [$this, "absbmdMaterialDesignCheckboxFunction"], ["is_safe" => ["html"]]),
         ];
     }
 
     /**
-     * Displays a material design checkbox.
+     * Displays an AdminBSB material design checkbox.
      *
      * @param array $args The arguments.
      * @return string Returns the material design checkbox.
      */
-    public function materialDesignCheckboxFunction(array $args = []) {
-        return $this->checkbox(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "id"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "filledIn", false), ArrayUtility::get($args, "class", "") . $this->getColor(ArrayUtility::get($args, "color", "red"), " chk-col-"));
+    public function absbmdMaterialDesignCheckboxFunction(array $args = []) {
+        return $this->absbmdCheckbox(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "id"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "filledIn", false), ArrayUtility::get($args, "class", "") . $this->getColor(ArrayUtility::get($args, "color", "red"), " chk-col-"));
     }
 
 }
