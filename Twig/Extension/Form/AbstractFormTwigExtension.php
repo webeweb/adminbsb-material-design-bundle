@@ -65,37 +65,37 @@ abstract class AbstractFormTwigExtension extends AbstractABSBMDTwigExtension {
     }
 
     /**
-     * Displays a radio button.
+     * Displays a AdminBSB radio button.
      *
      * @param string $content The radio button content.
      * @param string $name The radio button name.
      * @param string $id The radio button id.
      * @param boolean $checked Checked ?
      * @param boolean $disabled Disabled ?
-     * @param boolean $withGap Filled in ?
+     * @param boolean $withGap With gap ?
      * @param string $class The radio button class.
-     * @return string Returns the radio button.
+     * @return string Returns the AdminBSB radio button.
      */
-    final protected function radioButton($content, $name, $id, $checked, $disabled, $withGap, $class) {
+    final protected function absbmdRadioButton($content, $name, $id, $checked, $disabled, $withGap, $class) {
 
         // Initialize the template.
-        $template = '<input %attributes%><label for="%id%">%content%</label>';
+        $template = '<input %attributes%><label for="%id%">%innerHTML%</label>';
 
         // Initialize the attributes.
-        $_attr = [];
+        $attributes = [];
 
-        $_attr["class"]    = [true === $withGap ? "with-gap" : null, $class];
-        $_attr["name"]     = $name;
-        $_attr["type"]     = "radio";
-        $_attr["id"]       = $id;
-        $_attr["checked"]  = true === $checked ? "checked" : null;
-        $_attr["disabled"] = true === $disabled ? "disabled" : null;
+        $attributes["class"]    = [true === $withGap ? "with-gap" : null, $class];
+        $attributes["name"]     = $name;
+        $attributes["type"]     = "radio";
+        $attributes["id"]       = $id;
+        $attributes["checked"]  = true === $checked ? "checked" : null;
+        $attributes["disabled"] = true === $disabled ? "disabled" : null;
 
         // Check the parameters.
-        $_content = null !== $content ? $content : self::DEFAULT_CONTENT;
+        $innerHTML = null !== $content ? $content : "";
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%", "%id%", "%content%"], [StringUtility::parseArray($_attr), $_attr["id"], $_content]);
+        return StringUtility::replace($template, ["%attributes%", "%id%", "%innerHTML%"], [StringUtility::parseArray($attributes), $attributes["id"], $innerHTML]);
     }
 
     /**
