@@ -29,7 +29,10 @@
     "autoload": {
         "psr-4": {
             "WBW\\Bundle\\AdminBSBMaterialDesignBundle\\": ""
-        }
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
     },
     "extra": {
         "branch-alias": {
