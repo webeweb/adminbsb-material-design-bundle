@@ -18,8 +18,7 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBMaterialDesignBundle
- * @final
  */
-final class ABSBMDBundle extends Bundle {
+class ABSBMDBundle extends Bundle {
 
 }
