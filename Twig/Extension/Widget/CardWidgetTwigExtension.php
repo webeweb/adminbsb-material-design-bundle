@@ -14,7 +14,7 @@ namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Widget;
 use Twig_SimpleFunction;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Typography\HeadingTypographyTwigExtension;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI\IconUITwigExtension;
-use WBW\Library\Core\Utility\ArrayUtility;
+use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
  * Card widget Twig extension.

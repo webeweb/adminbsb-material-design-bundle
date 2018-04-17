@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI;
 
 use Twig_SimpleFunction;
-use WBW\Library\Core\Utility\ArrayUtility;
+use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
  * Label UI Twig extension.

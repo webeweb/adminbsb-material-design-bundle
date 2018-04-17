@@ -13,8 +13,8 @@ namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI;
 
 use Twig_SimpleFilter;
 use Twig_SimpleFunction;
-use WBW\Library\Core\Utility\ArrayUtility;
-use WBW\Library\Core\Utility\StringUtility;
+use WBW\Library\Core\Utility\Argument\ArrayUtility;
+use WBW\Library\Core\Utility\Argument\StringUtility;
 
 /**
  * Button UI Twig extension.

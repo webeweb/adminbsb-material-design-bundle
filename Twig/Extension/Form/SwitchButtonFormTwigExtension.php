@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Form;
 
 use Twig_SimpleFunction;
-use WBW\Library\Core\Utility\ArrayUtility;
+use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
  * Switch button form Twig extension.

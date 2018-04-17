@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Form;
 
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\AbstractABSBMDTwigExtension;
-use WBW\Library\Core\Utility\StringUtility;
+use WBW\Library\Core\Utility\Argument\StringUtility;
 
 /**
  * Abstract form Twig extension.

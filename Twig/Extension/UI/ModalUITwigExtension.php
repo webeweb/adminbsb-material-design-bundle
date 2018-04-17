@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI;
 
 use Twig_SimpleFunction;
 use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Typography\HeadingTypographyTwigExtension;
-use WBW\Library\Core\Utility\ArrayUtility;
+use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
  * Modal UI Twig extension.
