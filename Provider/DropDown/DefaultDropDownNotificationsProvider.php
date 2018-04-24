@@ -18,9 +18,8 @@ use WBW\Bundle\BootstrapBundle\Provider\DropDown\DropDownNotificationsProviderIn
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\DropDown
- * @final
  */
-final class DefaultDropDownNotificationsProvider implements DropDownNotificationsProviderInterface {
+class DefaultDropDownNotificationsProvider implements DropDownNotificationsProviderInterface {
 
     /**
      * Constructor.
