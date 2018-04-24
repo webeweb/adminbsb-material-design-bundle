@@ -18,15 +18,14 @@ use WBW\Bundle\BootstrapBundle\Provider\Application\ApplicationProviderInterface
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Application
- * @final
  */
-final class DefaultApplicationProvider implements ApplicationProviderInterface {
+class DefaultApplicationProvider implements ApplicationProviderInterface {
 
     /**
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
+// NOTHING TO DO.
     }
 
     /**
