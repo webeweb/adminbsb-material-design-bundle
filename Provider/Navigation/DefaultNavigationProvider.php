@@ -20,7 +20,7 @@ use WBW\Bundle\BootstrapBundle\Provider\Navigation\NavigationProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Navigation
  */
-final class DefaultNavigationProvider implements NavigationProviderInterface {
+class DefaultNavigationProvider implements NavigationProviderInterface {
 
     /**
      * Constructor.
