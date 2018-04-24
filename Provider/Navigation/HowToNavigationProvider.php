@@ -19,9 +19,8 @@ use WBW\Bundle\BootstrapBundle\Navigation\Node\BreadcrumbNode;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Navigation
- * @final
  */
-final class HowToNavigationProvider {
+class HowToNavigationProvider {
 
     /**
      * Router.
