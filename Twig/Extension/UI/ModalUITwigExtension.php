@@ -20,9 +20,8 @@ use WBW\Library\Core\Utility\Argument\ArrayUtility;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI
- * @final
  */
-final class ModalUITwigExtension extends AbstractUITwigExtension {
+class ModalUITwigExtension extends AbstractUITwigExtension {
 
     /**
      * Service name.
