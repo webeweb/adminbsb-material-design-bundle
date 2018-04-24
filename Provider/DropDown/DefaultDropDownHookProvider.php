@@ -18,9 +18,8 @@ use WBW\Bundle\BootstrapBundle\Provider\DropDown\DropDownHookProviderInterface;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\DropDown
- * @final
  */
-final class DefaultDropDownHookProvider implements DropDownHookProviderInterface {
+class DefaultDropDownHookProvider implements DropDownHookProviderInterface {
 
     /**
      * Constructor.
