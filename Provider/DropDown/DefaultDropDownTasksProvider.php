@@ -18,9 +18,8 @@ use WBW\Bundle\BootstrapBundle\Provider\DropDown\DropDownTasksProviderInterface;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\DropDown
- * @final
  */
-final class DefaultDropDownTasksProvider implements DropDownTasksProviderInterface {
+class DefaultDropDownTasksProvider implements DropDownTasksProviderInterface {
 
     /**
      * Constructor.
