@@ -21,9 +21,8 @@ use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBMaterialDesignBundle\DependencyInjection
- * @final
  */
-final class ABSBMDExtension extends Extension {
+class ABSBMDExtension extends Extension {
 
     /**
      * {@inheritdoc}
