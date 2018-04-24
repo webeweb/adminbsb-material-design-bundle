@@ -19,9 +19,8 @@ use WBW\Library\Core\Utility\Argument\ArrayUtility;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Form
- * @final
  */
-final class CheckboxFormTwigExtension extends AbstractFormTwigExtension {
+class CheckboxFormTwigExtension extends AbstractFormTwigExtension {
 
     /**
      * Service name.
