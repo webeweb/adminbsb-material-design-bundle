@@ -18,9 +18,8 @@ use WBW\Bundle\BootstrapBundle\Provider\Breadcrumbs\BreadcrumbsProviderInterface
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Breadcrumbs
- * @final
  */
-final class DefaultBreadcrumbsProvider implements BreadcrumbsProviderInterface {
+class DefaultBreadcrumbsProvider implements BreadcrumbsProviderInterface {
 
     /**
      * Constructor.
