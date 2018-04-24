@@ -18,9 +18,8 @@ use WBW\Bundle\BootstrapBundle\Provider\Search\SearchProviderInterface;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Search
- * @final
  */
-final class DefaultSearchProvider implements SearchProviderInterface {
+class DefaultSearchProvider implements SearchProviderInterface {
 
     /**
      * Constructor.
