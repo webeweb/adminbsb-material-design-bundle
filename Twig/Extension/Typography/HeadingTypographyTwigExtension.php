@@ -19,9 +19,8 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\HeadingTypographyTwigEx
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Typography
- * @final
  */
-final class HeadingTypographyTwigExtension extends AbstractTypographyTwigExtension {
+class HeadingTypographyTwigExtension extends AbstractTypographyTwigExtension {
 
     /**
      * Service name.
