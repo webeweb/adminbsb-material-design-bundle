@@ -16,9 +16,8 @@ namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Color;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Color
- * @final
  */
-final class DefaultColorProvider implements ColorProviderInterface {
+class DefaultColorProvider implements ColorProviderInterface {
 
     /**
      * Constructor.
