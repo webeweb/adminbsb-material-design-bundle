@@ -18,9 +18,8 @@ use WBW\Bundle\BootstrapBundle\Provider\User\UserInfoProviderInterface;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\User
- * @final
  */
-final class DefaultUserInfoProvider implements UserInfoProviderInterface {
+class DefaultUserInfoProvider implements UserInfoProviderInterface {
 
     /**
      * Constructor.
