@@ -18,9 +18,8 @@ use WBW\Bundle\BootstrapBundle\Provider\Footer\FooterProviderInterface;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Footer
- * @final
  */
-final class DefaultFooterProvider implements FooterProviderInterface {
+class DefaultFooterProvider implements FooterProviderInterface {
 
     /**
      * Constructor.
