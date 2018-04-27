@@ -43,7 +43,7 @@ class StrikeThroughTypographyTwigExtension extends BaseTypographyTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("absbmdStrikeThrough", [$this, "bootstrapStrikeThroughFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBStrikeThrough", [$this, "bootstrapStrikeThroughFunction"], ["is_safe" => ["html"]]),
         ];
     }
 

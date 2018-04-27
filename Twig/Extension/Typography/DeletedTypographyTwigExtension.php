@@ -43,7 +43,7 @@ class DeletedTypographyTwigExtension extends BaseTypographyTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("absbmdDeleted", [$this, "bootstrapDeletedFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBDeleted", [$this, "bootstrapDeletedFunction"], ["is_safe" => ["html"]]),
         ];
     }
 

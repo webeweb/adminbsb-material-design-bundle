@@ -43,7 +43,7 @@ class ItalicTypographyTwigExtension extends BaseTypographyTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("absbmdItalic", [$this, "bootstrapItalicFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBItalic", [$this, "bootstrapItalicFunction"], ["is_safe" => ["html"]]),
         ];
     }
 

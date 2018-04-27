@@ -39,7 +39,7 @@ final class MarkedTypographyTwigExtensionTest extends PHPUnit_Framework_TestCase
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("absbmdMarked", $res[0]->getName());
+        $this->assertEquals("adminBSBMarked", $res[0]->getName());
         $this->assertEquals([$obj, "bootstrapMarkedFunction"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
     }

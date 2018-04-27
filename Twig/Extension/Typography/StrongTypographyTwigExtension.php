@@ -43,7 +43,7 @@ class StrongTypographyTwigExtension extends BaseTypographyTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("absbmdStrong", [$this, "bootstrapStrongFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBStrong", [$this, "bootstrapStrongFunction"], ["is_safe" => ["html"]]),
         ];
     }
 

@@ -39,7 +39,7 @@ final class DeletedTypographyTwigExtensionTest extends PHPUnit_Framework_TestCas
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("absbmdDeleted", $res[0]->getName());
+        $this->assertEquals("adminBSBDeleted", $res[0]->getName());
         $this->assertEquals([$obj, "bootstrapDeletedFunction"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
     }

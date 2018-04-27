@@ -43,7 +43,7 @@ class SmallTypographyTwigExtension extends BaseTypographyTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("absbmdSmall", [$this, "bootstrapSmallFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBSmall", [$this, "bootstrapSmallFunction"], ["is_safe" => ["html"]]),
         ];
     }
 

@@ -39,7 +39,7 @@ final class ItalicTypographyTwigExtensionTest extends PHPUnit_Framework_TestCase
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("absbmdItalic", $res[0]->getName());
+        $this->assertEquals("adminBSBItalic", $res[0]->getName());
         $this->assertEquals([$obj, "bootstrapItalicFunction"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
     }

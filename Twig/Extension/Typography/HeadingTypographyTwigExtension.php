@@ -36,12 +36,12 @@ class HeadingTypographyTwigExtension extends BaseTypographyTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("absbmdHeading1", [$this, "bootstrapHeading1Function"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("absbmdHeading2", [$this, "bootstrapHeading2Function"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("absbmdHeading3", [$this, "bootstrapHeading3Function"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("absbmdHeading4", [$this, "bootstrapHeading4Function"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("absbmdHeading5", [$this, "bootstrapHeading5Function"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("absbmdHeading6", [$this, "bootstrapHeading6Function"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBHeading1", [$this, "bootstrapHeading1Function"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBHeading2", [$this, "bootstrapHeading2Function"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBHeading3", [$this, "bootstrapHeading3Function"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBHeading4", [$this, "bootstrapHeading4Function"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBHeading5", [$this, "bootstrapHeading5Function"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBHeading6", [$this, "bootstrapHeading6Function"], ["is_safe" => ["html"]]),
         ];
     }
 

@@ -43,7 +43,7 @@ class UnderlinedTypographyTwigExtension extends BaseTypographyTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("absbmdUnderlined", [$this, "bootstrapUnderlinedFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBUnderlined", [$this, "bootstrapUnderlinedFunction"], ["is_safe" => ["html"]]),
         ];
     }
 

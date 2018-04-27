@@ -39,7 +39,7 @@ final class InsertedTypographyTwigExtensionTest extends PHPUnit_Framework_TestCa
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("absbmdInserted", $res[0]->getName());
+        $this->assertEquals("adminBSBInserted", $res[0]->getName());
         $this->assertEquals([$obj, "bootstrapInsertedFunction"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
     }

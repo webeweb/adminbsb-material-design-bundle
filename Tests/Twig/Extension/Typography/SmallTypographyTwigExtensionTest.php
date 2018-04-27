@@ -39,7 +39,7 @@ final class SmallTypographyTwigExtensionTest extends PHPUnit_Framework_TestCase 
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("absbmdSmall", $res[0]->getName());
+        $this->assertEquals("adminBSBSmall", $res[0]->getName());
         $this->assertEquals([$obj, "bootstrapSmallFunction"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
     }

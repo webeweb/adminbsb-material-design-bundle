@@ -43,7 +43,7 @@ class MarkedTypographyTwigExtension extends BaseTypographyTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("absbmdMarked", [$this, "bootstrapMarkedFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBMarked", [$this, "bootstrapMarkedFunction"], ["is_safe" => ["html"]]),
         ];
     }
 

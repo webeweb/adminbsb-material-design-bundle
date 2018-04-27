@@ -39,7 +39,7 @@ final class StrikeThroughTypographyTwigExtensionTest extends PHPUnit_Framework_T
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("absbmdStrikeThrough", $res[0]->getName());
+        $this->assertEquals("adminBSBStrikeThrough", $res[0]->getName());
         $this->assertEquals([$obj, "bootstrapStrikeThroughFunction"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
     }

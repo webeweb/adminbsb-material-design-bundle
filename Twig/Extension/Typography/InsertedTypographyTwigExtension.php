@@ -43,7 +43,7 @@ class InsertedTypographyTwigExtension extends BaseTypographyTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("absbmdInserted", [$this, "bootstrapInsertedFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBInserted", [$this, "bootstrapInsertedFunction"], ["is_safe" => ["html"]]),
         ];
     }
 
