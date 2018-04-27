@@ -27,7 +27,7 @@ class ItalicTypographyTwigExtension extends BaseTypographyTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.typography.italic";
+    const SERVICE_NAME = "webeweb.bundle.adminbsbbundle.twig.extension.typography.italic";
 
     /**
      * Constructor.
