@@ -47,7 +47,7 @@ class ModalUITwigExtension extends AbstractUITwigExtension {
         }
 
         // Return the HTML.
-        return (new HeadingTypographyTwigExtension())->absbmdHeading3Function(["class" => "modal-title", "content" => $content]);
+        return (new HeadingTypographyTwigExtension())->bootstrapHeading3Function(["class" => "modal-title", "content" => $content]);
     }
 
     /**
