@@ -9,19 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Twig\Extension\UI;
+namespace WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\UI;
 
 use PHPUnit_Framework_TestCase;
 use Twig_Node;
 use Twig_SimpleFilter;
 use Twig_SimpleFunction;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI\ButtonUITwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ButtonUITwigExtension;
 
 /**
  * Button UI Twig extension test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Twig\Extension\UI
+ * @package WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\UI
  * @final
  */
 final class ButtonUITwigExtensionTest extends PHPUnit_Framework_TestCase {
@@ -40,8 +40,8 @@ final class ButtonUITwigExtensionTest extends PHPUnit_Framework_TestCase {
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFilter::class, $res[0]);
-        $this->assertEquals("absbmdLinkButton", $res[0]->getName());
-        $this->assertEquals([$obj, "absbmdLinkButtonFilter"], $res[0]->getCallable());
+        $this->assertEquals("adminBSBLinkButton", $res[0]->getName());
+        $this->assertEquals([$obj, "adminBSBLinkButtonFilter"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
     }
 
@@ -59,129 +59,129 @@ final class ButtonUITwigExtensionTest extends PHPUnit_Framework_TestCase {
         $this->assertCount(7, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("absbmdButtonDanger", $res[0]->getName());
-        $this->assertEquals([$obj, "absbmdButtonDangerFunction"], $res[0]->getCallable());
+        $this->assertEquals("adminBSBButtonDanger", $res[0]->getName());
+        $this->assertEquals([$obj, "adminBSBButtonDangerFunction"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
-        $this->assertEquals("absbmdButtonDefault", $res[1]->getName());
-        $this->assertEquals([$obj, "absbmdButtonDefaultFunction"], $res[1]->getCallable());
+        $this->assertEquals("adminBSBButtonDefault", $res[1]->getName());
+        $this->assertEquals([$obj, "adminBSBButtonDefaultFunction"], $res[1]->getCallable());
         $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[2]);
-        $this->assertEquals("absbmdButtonInfo", $res[2]->getName());
-        $this->assertEquals([$obj, "absbmdButtonInfoFunction"], $res[2]->getCallable());
+        $this->assertEquals("adminBSBButtonInfo", $res[2]->getName());
+        $this->assertEquals([$obj, "adminBSBButtonInfoFunction"], $res[2]->getCallable());
         $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[3]);
-        $this->assertEquals("absbmdButtonPrimary", $res[3]->getName());
-        $this->assertEquals([$obj, "absbmdButtonPrimaryFunction"], $res[3]->getCallable());
+        $this->assertEquals("adminBSBButtonPrimary", $res[3]->getName());
+        $this->assertEquals([$obj, "adminBSBButtonPrimaryFunction"], $res[3]->getCallable());
         $this->assertEquals(["html"], $res[3]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[4]);
-        $this->assertEquals("absbmdButtonSuccess", $res[4]->getName());
-        $this->assertEquals([$obj, "absbmdButtonSuccessFunction"], $res[4]->getCallable());
+        $this->assertEquals("adminBSBButtonSuccess", $res[4]->getName());
+        $this->assertEquals([$obj, "adminBSBButtonSuccessFunction"], $res[4]->getCallable());
         $this->assertEquals(["html"], $res[4]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[5]);
-        $this->assertEquals("absbmdButtonWarning", $res[5]->getName());
-        $this->assertEquals([$obj, "absbmdButtonWarningFunction"], $res[5]->getCallable());
+        $this->assertEquals("adminBSBButtonWarning", $res[5]->getName());
+        $this->assertEquals([$obj, "adminBSBButtonWarningFunction"], $res[5]->getCallable());
         $this->assertEquals(["html"], $res[5]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[6]);
-        $this->assertEquals("absbmdMaterialDesignButton", $res[6]->getName());
-        $this->assertEquals([$obj, "absbmdMaterialDesignButtonFunction"], $res[6]->getCallable());
+        $this->assertEquals("adminBSBMaterialDesignButton", $res[6]->getName());
+        $this->assertEquals([$obj, "adminBSBMaterialDesignButtonFunction"], $res[6]->getCallable());
         $this->assertEquals(["html"], $res[6]->getSafe(new Twig_Node()));
     }
 
     /**
-     * Tests the absbmdButtonDangerFunction() method.
+     * Tests the adminBSBButtonDangerFunction() method.
      *
      * @return void
      * @depends testGetFunctions
      */
-    public function testAbsbmdButtonDangerFunction() {
+    public function testAdminBSBButtonDangerFunction() {
 
         $obj = new ButtonUITwigExtension();
 
         $arg0 = [];
         $res0 = '<button class="btn btn-danger waves-effect" type="button">&nbsp;</button>';
-        $this->assertEquals($res0, $obj->absbmdButtonDangerFunction($arg0));
+        $this->assertEquals($res0, $obj->adminBSBButtonDangerFunction($arg0));
     }
 
     /**
-     * Tests the absbmdButtonDefaultFunction() method.
+     * Tests the adminBSBButtonDefaultFunction() method.
      *
      * @return void
      * @depends testGetFunctions
      */
-    public function testAbsbmdButtonDefaultFunction() {
+    public function testAdminBSBButtonDefaultFunction() {
 
         $obj = new ButtonUITwigExtension();
 
         $arg0 = [];
         $res0 = '<button class="btn btn-default waves-effect" type="button">&nbsp;</button>';
-        $this->assertEquals($res0, $obj->absbmdButtonDefaultFunction($arg0));
+        $this->assertEquals($res0, $obj->adminBSBButtonDefaultFunction($arg0));
     }
 
     /**
-     * Tests the absbmdButtonInfoFunction() method.
+     * Tests the adminBSBButtonInfoFunction() method.
      *
      * @return void
      * @depends testGetFunctions
      */
-    public function testAbsbmdButtonInfoFunction() {
+    public function testAdminBSBButtonInfoFunction() {
 
         $obj = new ButtonUITwigExtension();
 
         $arg0 = [];
         $res0 = '<button class="btn btn-info waves-effect" type="button">&nbsp;</button>';
-        $this->assertEquals($res0, $obj->absbmdButtonInfoFunction($arg0));
+        $this->assertEquals($res0, $obj->adminBSBButtonInfoFunction($arg0));
     }
 
     /**
-     * Tests the absbmdButtonPrimaryFunction() method.
+     * Tests the adminBSBButtonPrimaryFunction() method.
      *
      * @return void
      * @depends testGetFunctions
      */
-    public function testAbsbmdButtonPrimaryFunction() {
+    public function testAdminBSBButtonPrimaryFunction() {
 
         $obj = new ButtonUITwigExtension();
 
         $arg0 = [];
         $res0 = '<button class="btn btn-primary waves-effect" type="button">&nbsp;</button>';
-        $this->assertEquals($res0, $obj->absbmdButtonPrimaryFunction($arg0));
+        $this->assertEquals($res0, $obj->adminBSBButtonPrimaryFunction($arg0));
     }
 
     /**
-     * Tests the absbmdButtonSuccessFunction() method.
+     * Tests the adminBSBButtonSuccessFunction() method.
      *
      * @return void
      * @depends testGetFunctions
      */
-    public function testAbsbmdButtonSuccessFunction() {
+    public function testAdminBSBButtonSuccessFunction() {
 
         $obj = new ButtonUITwigExtension();
 
         $arg0 = [];
         $res0 = '<button class="btn btn-success waves-effect" type="button">&nbsp;</button>';
-        $this->assertEquals($res0, $obj->absbmdButtonSuccessFunction($arg0));
+        $this->assertEquals($res0, $obj->adminBSBButtonSuccessFunction($arg0));
     }
 
     /**
-     * Tests the absbmdButtonSuccessFunction() method.
+     * Tests the adminBSBButtonSuccessFunction() method.
      *
      * @return void
      * @depends testGetFunctions
      */
-    public function testAbsbmdButtonWarningFunction() {
+    public function testAdminBSBButtonWarningFunction() {
 
         $obj = new ButtonUITwigExtension();
 
         $arg0 = [];
         $res0 = '<button class="btn btn-warning waves-effect" type="button">&nbsp;</button>';
-        $this->assertEquals($res0, $obj->absbmdButtonWarningFunction($arg0));
+        $this->assertEquals($res0, $obj->adminBSBButtonWarningFunction($arg0));
     }
 
     /**
@@ -190,68 +190,68 @@ final class ButtonUITwigExtensionTest extends PHPUnit_Framework_TestCase {
      * @return void
      * @depends testGetFilters
      */
-    public function testAbsbmdLinkButtonFilter() {
+    public function testAdminBSBLinkButtonFilter() {
 
         $obj = new ButtonUITwigExtension();
 
-        $btn = $obj->absbmdMaterialDesignButtonFunction();
+        $btn = $obj->adminBSBMaterialDesignButtonFunction();
 
         $res0 = '<a class="btn bg-red waves-effect" href="javascript:void(0);">&nbsp;</a>';
-        $this->assertEquals($res0, $obj->absbmdLinkButtonFilter($btn));
+        $this->assertEquals($res0, $obj->adminBSBLinkButtonFilter($btn));
 
         $res1 = '<a class="btn bg-red waves-effect" href="https://github.com">&nbsp;</a>';
-        $this->assertEquals($res1, $obj->absbmdLinkButtonFilter($btn, "https://github.com"));
+        $this->assertEquals($res1, $obj->adminBSBLinkButtonFilter($btn, "https://github.com"));
     }
 
     /**
-     * Tests the absbmdMaterialDesignButtonFunction() method.
+     * Tests the adminBSBMaterialDesignButtonFunction() method.
      *
      * @return void
      * @depends testGetFunctions
      */
-    public function testAbsbmdMaterialDesignButtonFunction() {
+    public function testAdminBSBMaterialDesignButtonFunction() {
 
         $obj = new ButtonUITwigExtension();
 
         $arg0 = [];
         $res0 = '<button class="btn bg-red waves-effect" type="button">&nbsp;</button>';
-        $this->assertEquals($res0, $obj->absbmdMaterialDesignButtonFunction($arg0));
+        $this->assertEquals($res0, $obj->adminBSBMaterialDesignButtonFunction($arg0));
 
         $arg1 = ["content" => "content"];
         $res1 = '<button class="btn bg-red waves-effect" type="button">content</button>';
-        $this->assertEquals($res1, $obj->absbmdMaterialDesignButtonFunction($arg1));
+        $this->assertEquals($res1, $obj->adminBSBMaterialDesignButtonFunction($arg1));
 
         $arg2 = ["title" => "title"];
         $res2 = '<button class="btn bg-red waves-effect" title="title" type="button" data-toggle="tooltip">&nbsp;</button>';
-        $this->assertEquals($res2, $obj->absbmdMaterialDesignButtonFunction($arg2));
+        $this->assertEquals($res2, $obj->adminBSBMaterialDesignButtonFunction($arg2));
 
         $arg3 = ["size" => "lg"];
         $res3 = '<button class="btn bg-red waves-effect btn-lg" type="button">&nbsp;</button>';
-        $this->assertEquals($res3, $obj->absbmdMaterialDesignButtonFunction($arg3));
+        $this->assertEquals($res3, $obj->adminBSBMaterialDesignButtonFunction($arg3));
 
         $arg4 = ["block" => true];
         $res4 = '<button class="btn bg-red waves-effect btn-block" type="button">&nbsp;</button>';
-        $this->assertEquals($res4, $obj->absbmdMaterialDesignButtonFunction($arg4));
+        $this->assertEquals($res4, $obj->adminBSBMaterialDesignButtonFunction($arg4));
 
         $arg5 = ["disable" => true];
         $res5 = '<button class="btn bg-red waves-effect" type="button" disabled="disabled">&nbsp;</button>';
-        $this->assertEquals($res5, $obj->absbmdMaterialDesignButtonFunction($arg5));
+        $this->assertEquals($res5, $obj->adminBSBMaterialDesignButtonFunction($arg5));
 
         $arg6 = ["icon" => "person"];
         $res6 = '<button class="btn bg-red waves-effect" type="button"><i class="material-icons">person</i>&nbsp;</button>';
-        $this->assertEquals($res6, $obj->absbmdMaterialDesignButtonFunction($arg6));
+        $this->assertEquals($res6, $obj->adminBSBMaterialDesignButtonFunction($arg6));
 
         $arg7 = ["circle" => true];
         $res7 = '<button class="btn bg-red waves-effect btn-circle waves-circle waves-float" type="button">&nbsp;</button>';
-        $this->assertEquals($res7, $obj->absbmdMaterialDesignButtonFunction($arg7));
+        $this->assertEquals($res7, $obj->adminBSBMaterialDesignButtonFunction($arg7));
 
         $arg8 = ["color" => "black"];
         $res8 = '<button class="btn bg-black waves-effect" type="button">&nbsp;</button>';
-        $this->assertEquals($res8, $obj->absbmdMaterialDesignButtonFunction($arg8));
+        $this->assertEquals($res8, $obj->adminBSBMaterialDesignButtonFunction($arg8));
 
         $arg9 = ["content" => "content", "title" => "title", "size" => "lg", "disable" => true, "icon" => "person", "color" => "black"];
         $res9 = '<button class="btn bg-black waves-effect btn-lg" title="title" type="button" data-toggle="tooltip" disabled="disabled"><i class="material-icons" style="margin: -4px 2px 0; vertical-align: sub;">person</i>content</button>';
-        $this->assertEquals($res9, $obj->absbmdMaterialDesignButtonFunction($arg9));
+        $this->assertEquals($res9, $obj->adminBSBMaterialDesignButtonFunction($arg9));
     }
 
 }
