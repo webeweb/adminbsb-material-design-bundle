@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI;
+namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Color\DefaultColorProvider;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\AbstractABSBMDTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Provider\Color\DefaultColorProvider;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractABSBMDTwigExtension;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationInterface;
 use WBW\Library\Core\Utility\Argument\StringUtility;
 
@@ -20,7 +20,7 @@ use WBW\Library\Core\Utility\Argument\StringUtility;
  * Abstract UI Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI
+ * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\UI
  * @abstract
  */
 abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension implements NavigationInterface {
@@ -28,12 +28,12 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
     /**
      * Constructor.
      */
-    final public function __construct() {
+    protected function __construct() {
         parent::__construct();
     }
 
     /**
-     * Displays a badge.
+     * Displays an AdminBSB badge.
      *
      * @param string $content The badge content.
      * @param string $label The badge label.
@@ -41,38 +41,38 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
      * @param string $class The badge class.
      * @param boolean $list List badge ?
      * @param string $link The badge link.
-     * @return string Returns the badge.
+     * @return string Returns the AdminBSB badge.
      */
-    final protected function badge($content, $label, $large, $class, $list = false, $link = false) {
+    final protected function adminBSBBadge($content, $label, $large, $class, $list = false, $link = false) {
 
         // Initialize the template.
-        $template = '<button %attributes%>%content%<span class="badge">%label%</span></button>';
-        if ($list) {
-            $template = '<a class="list-group-item" href="%link%"><span %attributes%>%content%</span>%label%</a>';
+        $template = '<button %attributes%>%innerHTML%<span class="badge">%label%</span></button>';
+        if (true === $list) {
+            $template = '<a class="list-group-item" href="%href%"><span %attributes%>%innerHTML%</span>%label%</a>';
         }
 
         // Initialize the attributes.
-        $_attr = [];
+        $attributes = [];
 
         if (true === $list) {
-            $_attr["class"] = ["badge", $class];
+            $attributes["class"] = ["badge", $class];
         } else {
-            $_attr["class"]   = ["btn", $class, "btn-block", "waves-effect"];
-            $_attr["class"][] = true === $large ? "btn-lg" : null;
-            $_attr["type"]    = "button";
+            $attributes["class"]   = ["btn", $class, "btn-block", "waves-effect"];
+            $attributes["class"][] = true === $large ? "btn-lg" : null;
+            $attributes["type"]    = "button";
         }
 
         // Initialize the parameters.
-        $_content = null !== $content ? $content : self::DEFAULT_CONTENT;
-        $_label   = null !== $label ? $label : self::DEFAULT_CONTENT;
-        $_link    = null !== $link ? $link : self::DEFAULT_HREF;
+        $innerHTML = null !== $content ? $content : "";
+        $spanLabel = null !== $label ? $label : "";
+        $href      = null !== $link ? $link : self::DEFAULT_HREF;
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%", "%content%", "%label%", "%link%"], [StringUtility::parseArray($_attr), $_content, $_label, $_link]);
+        return StringUtility::replace($template, ["%attributes%", "%innerHTML%", "%label%", "%href%"], [StringUtility::parseArray($attributes), $innerHTML, $spanLabel, $href]);
     }
 
     /**
-     * Displays a button.
+     * Displays an AdminBSB button.
      *
      * @param string $content The button content.
      * @param string $title The button title.
@@ -82,49 +82,49 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
      * @param string $class The button class.
      * @param string $icon The button icon.
      * @param boolean $circle Circle button ?
-     * @return string Returns the button.
+     * @return string Returns the AdminBSB button.
      */
-    final protected function button($content, $title, $size, $block, $disable, $class, $icon, $circle) {
+    final protected function adminBSBButton($content, $title, $size, $block, $disable, $class, $icon, $circle) {
 
         // Disable the parameters.
         $circle = null !== $content ? false : $circle;
         $style  = null !== $content ? "margin: -4px 2px 0; vertical-align: sub;" : "";
 
         // Initialize the template.
-        $template = "<button %attributes%>%icon%%content%</button>";
+        $template = "<button %attributes%>%icon%%innerHTML%</button>";
 
         // Initialize the attributes.
-        $_attr = [];
+        $attributes = [];
 
-        $_attr["class"]       = ["btn", $class, "waves-effect"];
-        $_attr["class"][]     = true === $block ? "btn-block" : null;
-        $_attr["class"][]     = true === $circle ? "btn-circle" . ("lg" === $size ? "-lg" : "") . " waves-circle waves-float" : null;
-        $_attr["class"][]     = true !== $circle && true === in_array($size, ["lg", "sm", "xs"]) ? "btn-" . $size : null;
-        $_attr["title"]       = $title;
-        $_attr["type"]        = "button";
-        $_attr["data-toggle"] = null !== $title ? "tooltip" : null;
-        $_attr["disabled"]    = true === $disable ? "disabled" : null;
+        $attributes["class"]       = ["btn", $class, "waves-effect"];
+        $attributes["class"][]     = true === $block ? "btn-block" : null;
+        $attributes["class"][]     = true === $circle ? "btn-circle" . ("lg" === $size ? "-lg" : "") . " waves-circle waves-float" : null;
+        $attributes["class"][]     = true !== $circle && true === in_array($size, ["lg", "sm", "xs"]) ? "btn-" . $size : null;
+        $attributes["title"]       = $title;
+        $attributes["type"]        = "button";
+        $attributes["data-toggle"] = null !== $title ? "tooltip" : null;
+        $attributes["disabled"]    = true === $disable ? "disabled" : null;
 
         // Handle the parameters.
-        $_content = null !== $content ? $content : self::DEFAULT_CONTENT;
-        $_icon    = null !== $icon ? $this->icon($icon, $style) : "";
+        $innerHTML = null !== $content ? $content : "";
+        $glyphicon = null !== $icon ? $this->adminBSBIcon($icon, $style) : "";
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%", "%icon%", "%content%"], [StringUtility::parseArray($_attr), $_icon, $_content]);
+        return StringUtility::replace($template, ["%attributes%", "%icon%", "%innerHTML%"], [StringUtility::parseArray($attributes), $glyphicon, $innerHTML]);
     }
 
     /**
-     * Displays a color.
+     * Displays an AdminBSB color.
      *
      * @param string $name The color name.
      * @param string $code The color code.
      * @param string $output The output.
-     * @return string Returns the color.
+     * @return string Returns the AdminBSB color.
      */
-    final protected function color($name, $code, $output) {
+    final protected function adminBSBColor($name, $code, $output) {
 
         // Initialize the parameters.
-        $_name = $this->getColor($name, "");
+        $_name = self::fixColor($name, "");
         $_code = null !== $code ? $code : "500";
 
         // Return the HTML.
@@ -132,111 +132,51 @@ abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension imple
     }
 
     /**
-     * Displays an icon.
+     * Displays an AdminBSB icon.
      *
      * @param string $name The icon name.
      * @param string $style The icon style.
      * @param string $class The icon class.
-     * @return string Returns the icon.
+     * @return string Returns the AdminBSB icon.
      */
-    final protected function icon($name, $style, $class = null) {
+    final protected function adminBSBIcon($name, $style, $class = null) {
 
         // Initialize the template.
-        $template = "<i %attributes%>%name%</i>";
+        $template = "<i %attributes%>%innerHTML%</i>";
 
         // Initialize the attributes.
-        $_attr = [];
+        $attributes = [];
 
-        $_attr["class"] = ["material-icons", $class];
-        $_attr["style"] = $style;
+        $attributes["class"] = ["material-icons", $class];
+        $attributes["style"] = $style;
 
         // Initialize the parameters.
-        $_name = null !== $name ? $name : "home";
+        $innerHTML = null !== $name ? $name : "home";
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%", "%name%"], [StringUtility::parseArray($_attr), $_name]);
+        return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $innerHTML]);
     }
 
     /**
-     * Displays a label.
-     *
-     * @param string $content The label content.
-     * @param string $class The label class.
-     * @return string Returns the label.
-     */
-    final protected function label($content, $class) {
-
-        // Initialize the template.
-        $template = "<span %attributes%>%content%</span>";
-
-        // Initialize the attributes.
-        $_attr = [];
-
-        $_attr["class"] = ["label", $class];
-
-        // Initialize the parameters.
-        $_content = null !== $content ? $content : self::DEFAULT_CONTENT;
-
-        // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%", "%content%"], [StringUtility::parseArray($_attr), $_content]);
-    }
-
-    /**
-     * Displays a preloader.
+     * Displays an AdminBSB preloader.
      *
      * @param string $class The preloader class.
      * @param string $size The preloader size.
-     * @return string Returns the preloader.
+     * @return string Returns the AdminBSB preloader.
      */
-    final protected function preloader($class, $size) {
+    final protected function adminBSBPreloader($class, $size) {
 
         // Initialize the template.
         $template = '<div %attributes1%><div %attributes2%><div class="circle-clipper left"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>';
 
         // Initialize the attributes.
-        $_attr = [];
+        $attributes = [];
 
-        $_attr["preloader"]["class"] = ["preloader", in_array($size, ["xs", "sm", "l", "xl"]) ? "pl-size-" . $size : null];
-        $_attr["spinner"]["class"]   = ["spinner-layer", $class];
-
-        // Return the HTML.
-        return StringUtility::replace($template, ["%attributes1%", "%attributes2%"], [StringUtility::parseArray($_attr["preloader"]), StringUtility::parseArray($_attr["spinner"])]);
-    }
-
-    /**
-     * Displays a progress bar.
-     *
-     * @param string $label The progress bar label.
-     * @param integer $value The progress bar value.
-     * @param integer $min The progress bar min.
-     * @param integer $max The progress bar max.
-     * @param boolean $striped Progress bar striped ?
-     * @param boolean $animated Progress bar animated ?
-     * @param string $class The progress bar class.
-     * @return string Returns the progress bar.
-     */
-    final protected function progressBar($label, $value, $min, $max, $striped, $animated, $class = null) {
-
-        // Initialize the template.
-        $template = '<div class="progress"><div %attributes%>%label%</div></div>';
-
-        // Initialize the attributes.
-        $_attr = [];
-
-        $_attr["class"]         = ["progress-bar", $class];
-        $_attr["class"][]       = true === $striped ? "progress-bar-striped" : null;
-        $_attr["class"][]       = true === $animated ? "active" : null;
-        $_attr["style"]         = "width: " . $value . "%;";
-        $_attr["role"]          = "progressbar";
-        $_attr["aria-valuenow"] = $value;
-        $_attr["aria-valuemin"] = $min;
-        $_attr["aria-valuemax"] = $max . "%";
-
-        // Initialize the parameters.
-        $_label = null !== $label ? $label . '<span class="sr-only">' . $value . ' %</span>' : self::DEFAULT_CONTENT;
+        $attributes["preloader"]["class"] = ["preloader", in_array($size, ["xs", "sm", "l", "xl"]) ? "pl-size-" . $size : null];
+        $attributes["spinner"]["class"]   = ["spinner-layer", $class];
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%", "%label%"], [StringUtility::parseArray($_attr), $_label]);
+        return StringUtility::replace($template, ["%attributes1%", "%attributes2%"], [StringUtility::parseArray($attributes["preloader"]), StringUtility::parseArray($attributes["spinner"])]);
     }
 
 }

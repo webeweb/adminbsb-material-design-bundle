@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension;
+namespace WBW\Bundle\AdminBSBBundle\Twig\Extension;
 
 use Twig_Extension;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Color\DefaultColorProvider;
+use WBW\Bundle\AdminBSBBundle\Provider\Color\DefaultColorProvider;
 
 /**
  * Abstract AdminBSB Material Design Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension
+ * @package WBW\Bundle\AdminBSBBundle\Twig\Extension
  * @abstract
  */
 abstract class AbstractABSBMDTwigExtension extends Twig_Extension {
