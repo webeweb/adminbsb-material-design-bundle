@@ -9,18 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Twig\Extension\UI;
+namespace WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\UI;
 
 use PHPUnit_Framework_TestCase;
 use Twig_Node;
 use Twig_SimpleFunction;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI\BadgeUITwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\BadgeUITwigExtension;
 
 /**
  * Badge UI Twig extension test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Twig\Extension\UI
+ * @package WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\UI
  * @final
  */
 final class BadgeUITwigExtensionTest extends PHPUnit_Framework_TestCase {
@@ -39,204 +39,204 @@ final class BadgeUITwigExtensionTest extends PHPUnit_Framework_TestCase {
         $this->assertCount(8, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("buttonBadgeDanger", $res[0]->getName());
-        $this->assertEquals([$obj, "buttonBadgeDangerFunction"], $res[0]->getCallable());
+        $this->assertEquals("adminBSBButtonBadgeDanger", $res[0]->getName());
+        $this->assertEquals([$obj, "adminBSBButtonBadgeDangerFunction"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
-        $this->assertEquals("buttonBadgeDefault", $res[1]->getName());
-        $this->assertEquals([$obj, "buttonBadgeDefaultFunction"], $res[1]->getCallable());
+        $this->assertEquals("adminBSBButtonBadgeDefault", $res[1]->getName());
+        $this->assertEquals([$obj, "adminBSBButtonBadgeDefaultFunction"], $res[1]->getCallable());
         $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[2]);
-        $this->assertEquals("buttonBadgeInfo", $res[2]->getName());
-        $this->assertEquals([$obj, "buttonBadgeInfoFunction"], $res[2]->getCallable());
+        $this->assertEquals("adminBSBButtonBadgeInfo", $res[2]->getName());
+        $this->assertEquals([$obj, "adminBSBButtonBadgeInfoFunction"], $res[2]->getCallable());
         $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[3]);
-        $this->assertEquals("buttonBadgePrimary", $res[3]->getName());
-        $this->assertEquals([$obj, "buttonBadgePrimaryFunction"], $res[3]->getCallable());
+        $this->assertEquals("adminBSBButtonBadgePrimary", $res[3]->getName());
+        $this->assertEquals([$obj, "adminBSBButtonBadgePrimaryFunction"], $res[3]->getCallable());
         $this->assertEquals(["html"], $res[3]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[4]);
-        $this->assertEquals("buttonBadgeSuccess", $res[4]->getName());
-        $this->assertEquals([$obj, "buttonBadgeSuccessFunction"], $res[4]->getCallable());
+        $this->assertEquals("adminBSBButtonBadgeSuccess", $res[4]->getName());
+        $this->assertEquals([$obj, "adminBSBButtonBadgeSuccessFunction"], $res[4]->getCallable());
         $this->assertEquals(["html"], $res[4]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[5]);
-        $this->assertEquals("buttonBadgeWarning", $res[5]->getName());
-        $this->assertEquals([$obj, "buttonBadgeWarningFunction"], $res[5]->getCallable());
+        $this->assertEquals("adminBSBButtonBadgeWarning", $res[5]->getName());
+        $this->assertEquals([$obj, "adminBSBButtonBadgeWarningFunction"], $res[5]->getCallable());
         $this->assertEquals(["html"], $res[5]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[6]);
-        $this->assertEquals("listBadge", $res[6]->getName());
-        $this->assertEquals([$obj, "listBadgeFunction"], $res[6]->getCallable());
+        $this->assertEquals("adminBSBListBadge", $res[6]->getName());
+        $this->assertEquals([$obj, "adminBSBListBadgeFunction"], $res[6]->getCallable());
         $this->assertEquals(["html"], $res[6]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[7]);
-        $this->assertEquals("materialDesignButtonBadge", $res[7]->getName());
-        $this->assertEquals([$obj, "materialDesignButtonBadgeFunction"], $res[7]->getCallable());
+        $this->assertEquals("adminBSBMaterialDesignButtonBadge", $res[7]->getName());
+        $this->assertEquals([$obj, "adminBSBMaterialDesignButtonBadgeFunction"], $res[7]->getCallable());
         $this->assertEquals(["html"], $res[7]->getSafe(new Twig_Node()));
     }
 
     /**
-     * Tests the buttonBadgeDangerFunction() method.
+     * Tests the adminBSBButtonBadgeDangerFunction() method.
      *
      * @return void
      * @depends testGetFunctions
      */
-    public function testButtonBadgeDangerFunction() {
+    public function testAdminBSBButtonBadgeDangerFunction() {
 
         $obj = new BadgeUITwigExtension();
 
         $arg0 = [];
-        $res0 = '<button class="btn btn-danger btn-block waves-effect" type="button">&nbsp;<span class="badge">&nbsp;</span></button>';
-        $this->assertEquals($res0, $obj->buttonBadgeDangerFunction($arg0));
+        $res0 = '<button class="btn btn-danger btn-block waves-effect" type="button"><span class="badge"></span></button>';
+        $this->assertEquals($res0, $obj->adminBSBButtonBadgeDangerFunction($arg0));
     }
 
     /**
-     * Tests the buttonBadgeDefaultFunction() method.
+     * Tests the adminBSBButtonBadgeDefaultFunction() method.
      *
      * @return void
      * @depends testGetFunctions
      */
-    public function testButtonBadgeDefaultFunction() {
+    public function testAdminBSBButtonBadgeDefaultFunction() {
 
         $obj = new BadgeUITwigExtension();
 
         $arg0 = [];
-        $res0 = '<button class="btn btn-default btn-block waves-effect" type="button">&nbsp;<span class="badge">&nbsp;</span></button>';
-        $this->assertEquals($res0, $obj->buttonBadgeDefaultFunction($arg0));
+        $res0 = '<button class="btn btn-default btn-block waves-effect" type="button"><span class="badge"></span></button>';
+        $this->assertEquals($res0, $obj->adminBSBButtonBadgeDefaultFunction($arg0));
     }
 
     /**
-     * Tests the buttonBadgeInfoFunction() method.
+     * Tests the adminBSBButtonBadgeInfoFunction() method.
      *
      * @return void
      * @depends testGetFunctions
      */
-    public function testButtonBadgeInfoFunction() {
+    public function testAdminBSBButtonBadgeInfoFunction() {
 
         $obj = new BadgeUITwigExtension();
 
         $arg0 = [];
-        $res0 = '<button class="btn btn-info btn-block waves-effect" type="button">&nbsp;<span class="badge">&nbsp;</span></button>';
-        $this->assertEquals($res0, $obj->buttonBadgeInfoFunction($arg0));
+        $res0 = '<button class="btn btn-info btn-block waves-effect" type="button"><span class="badge"></span></button>';
+        $this->assertEquals($res0, $obj->adminBSBButtonBadgeInfoFunction($arg0));
     }
 
     /**
-     * Tests the buttonBadgePrimaryFunction() method.
+     * Tests the adminBSBButtonBadgePrimaryFunction() method.
      *
      * @return void
      * @depends testGetFunctions
      */
-    public function testButtonBadgePrimaryFunction() {
+    public function testAdminBSBButtonBadgePrimaryFunction() {
 
         $obj = new BadgeUITwigExtension();
 
         $arg0 = [];
-        $res0 = '<button class="btn btn-primary btn-block waves-effect" type="button">&nbsp;<span class="badge">&nbsp;</span></button>';
-        $this->assertEquals($res0, $obj->buttonBadgePrimaryFunction($arg0));
+        $res0 = '<button class="btn btn-primary btn-block waves-effect" type="button"><span class="badge"></span></button>';
+        $this->assertEquals($res0, $obj->adminBSBButtonBadgePrimaryFunction($arg0));
     }
 
     /**
-     * Tests the buttonBadgeSuccessFunction() method.
+     * Tests the adminBSBButtonBadgeSuccessFunction() method.
      *
      * @return void
      * @depends testGetFunctions
      */
-    public function testButtonBadgeSuccessFunction() {
+    public function testAdminBSBButtonBadgeSuccessFunction() {
 
         $obj = new BadgeUITwigExtension();
 
         $arg0 = [];
-        $res0 = '<button class="btn btn-success btn-block waves-effect" type="button">&nbsp;<span class="badge">&nbsp;</span></button>';
-        $this->assertEquals($res0, $obj->buttonBadgeSuccessFunction($arg0));
+        $res0 = '<button class="btn btn-success btn-block waves-effect" type="button"><span class="badge"></span></button>';
+        $this->assertEquals($res0, $obj->adminBSBButtonBadgeSuccessFunction($arg0));
     }
 
     /**
-     * Tests the buttonBadgeWarningFunction() method.
+     * Tests the adminBSBButtonBadgeWarningFunction() method.
      *
      * @return void
      * @depends testGetFunctions
      */
-    public function testButtonBadgeWarningFunction() {
+    public function testAdminBSBButtonBadgeWarningFunction() {
 
         $obj = new BadgeUITwigExtension();
 
         $arg0 = [];
-        $res0 = '<button class="btn btn-warning btn-block waves-effect" type="button">&nbsp;<span class="badge">&nbsp;</span></button>';
-        $this->assertEquals($res0, $obj->buttonBadgeWarningFunction($arg0));
+        $res0 = '<button class="btn btn-warning btn-block waves-effect" type="button"><span class="badge"></span></button>';
+        $this->assertEquals($res0, $obj->adminBSBButtonBadgeWarningFunction($arg0));
     }
 
     /**
-     * Tests the listBadgeFunction() method.
+     * Tests the adminBSBListBadgeFunction() method.
      *
      * @return void
      * @depends testGetFunctions
      */
-    public function testListBadgeFunction() {
+    public function testAdminBSBListBadgeFunction() {
 
         $obj = new BadgeUITwigExtension();
 
         $arg0 = [];
-        $res0 = '<a class="list-group-item" href="javascript:void(0);"><span class="badge bg-red">&nbsp;</span>&nbsp;</a>';
-        $this->assertEquals($res0, $obj->listBadgeFunction($arg0));
+        $res0 = '<a class="list-group-item" href="javascript:void(0);"><span class="badge bg-red"></span></a>';
+        $this->assertEquals($res0, $obj->adminBSBListBadgeFunction($arg0));
 
         $arg1 = ["content" => "content"];
-        $res1 = '<a class="list-group-item" href="javascript:void(0);"><span class="badge bg-red">content</span>&nbsp;</a>';
-        $this->assertEquals($res1, $obj->listBadgeFunction($arg1));
+        $res1 = '<a class="list-group-item" href="javascript:void(0);"><span class="badge bg-red">content</span></a>';
+        $this->assertEquals($res1, $obj->adminBSBListBadgeFunction($arg1));
 
         $arg2 = ["label" => "label"];
-        $res2 = '<a class="list-group-item" href="javascript:void(0);"><span class="badge bg-red">&nbsp;</span>label</a>';
-        $this->assertEquals($res2, $obj->listBadgeFunction($arg2));
+        $res2 = '<a class="list-group-item" href="javascript:void(0);"><span class="badge bg-red"></span>label</a>';
+        $this->assertEquals($res2, $obj->adminBSBListBadgeFunction($arg2));
 
         $arg3 = ["color" => "black"];
-        $res3 = '<a class="list-group-item" href="javascript:void(0);"><span class="badge bg-black">&nbsp;</span>&nbsp;</a>';
-        $this->assertEquals($res3, $obj->listBadgeFunction($arg3));
+        $res3 = '<a class="list-group-item" href="javascript:void(0);"><span class="badge bg-black"></span></a>';
+        $this->assertEquals($res3, $obj->adminBSBListBadgeFunction($arg3));
 
         $arg4 = ["link" => "http://domain.tld"];
-        $res4 = '<a class="list-group-item" href="http://domain.tld"><span class="badge bg-red">&nbsp;</span>&nbsp;</a>';
-        $this->assertEquals($res4, $obj->listBadgeFunction($arg4));
+        $res4 = '<a class="list-group-item" href="http://domain.tld"><span class="badge bg-red"></span></a>';
+        $this->assertEquals($res4, $obj->adminBSBListBadgeFunction($arg4));
 
         $arg9 = ["content" => "content", "label" => "label", "color" => "black", "link" => "http://domain.tld"];
         $res9 = '<a class="list-group-item" href="http://domain.tld"><span class="badge bg-black">content</span>label</a>';
-        $this->assertEquals($res9, $obj->listBadgeFunction($arg9));
+        $this->assertEquals($res9, $obj->adminBSBListBadgeFunction($arg9));
     }
 
     /**
-     * Tests the materialDesignButtonBadgeFunction() method.
+     * Tests the adminBSBMaterialDesignButtonBadgeFunction() method.
      *
      * @return void
      * @depends testGetFunctions
      */
-    public function testMaterialDesignButtonBadgeFunction() {
+    public function testAdminBSBMaterialDesignButtonBadgeFunction() {
 
         $obj = new BadgeUITwigExtension();
 
         $arg0 = [];
-        $res0 = '<button class="btn bg-red btn-block waves-effect" type="button">&nbsp;<span class="badge">&nbsp;</span></button>';
-        $this->assertEquals($res0, $obj->materialDesignButtonBadgeFunction($arg0));
+        $res0 = '<button class="btn bg-red btn-block waves-effect" type="button"><span class="badge"></span></button>';
+        $this->assertEquals($res0, $obj->adminBSBMaterialDesignButtonBadgeFunction($arg0));
 
         $arg1 = ["content" => "content"];
-        $res1 = '<button class="btn bg-red btn-block waves-effect" type="button">content<span class="badge">&nbsp;</span></button>';
-        $this->assertEquals($res1, $obj->materialDesignButtonBadgeFunction($arg1));
+        $res1 = '<button class="btn bg-red btn-block waves-effect" type="button">content<span class="badge"></span></button>';
+        $this->assertEquals($res1, $obj->adminBSBMaterialDesignButtonBadgeFunction($arg1));
 
         $arg2 = ["label" => "label"];
-        $res2 = '<button class="btn bg-red btn-block waves-effect" type="button">&nbsp;<span class="badge">label</span></button>';
-        $this->assertEquals($res2, $obj->materialDesignButtonBadgeFunction($arg2));
+        $res2 = '<button class="btn bg-red btn-block waves-effect" type="button"><span class="badge">label</span></button>';
+        $this->assertEquals($res2, $obj->adminBSBMaterialDesignButtonBadgeFunction($arg2));
 
         $arg3 = ["large" => true];
-        $res3 = '<button class="btn bg-red btn-block waves-effect btn-lg" type="button">&nbsp;<span class="badge">&nbsp;</span></button>';
-        $this->assertEquals($res3, $obj->materialDesignButtonBadgeFunction($arg3));
+        $res3 = '<button class="btn bg-red btn-block waves-effect btn-lg" type="button"><span class="badge"></span></button>';
+        $this->assertEquals($res3, $obj->adminBSBMaterialDesignButtonBadgeFunction($arg3));
 
         $arg4 = ["color" => "black"];
-        $res4 = '<button class="btn bg-black btn-block waves-effect" type="button">&nbsp;<span class="badge">&nbsp;</span></button>';
-        $this->assertEquals($res4, $obj->materialDesignButtonBadgeFunction($arg4));
+        $res4 = '<button class="btn bg-black btn-block waves-effect" type="button"><span class="badge"></span></button>';
+        $this->assertEquals($res4, $obj->adminBSBMaterialDesignButtonBadgeFunction($arg4));
 
         $arg9 = ["content" => "content", "label" => "label", "large" => true, "color" => "black"];
         $res9 = '<button class="btn bg-black btn-block waves-effect btn-lg" type="button">content<span class="badge">label</span></button>';
-        $this->assertEquals($res9, $obj->materialDesignButtonBadgeFunction($arg9));
+        $this->assertEquals($res9, $obj->adminBSBMaterialDesignButtonBadgeFunction($arg9));
     }
 
 }

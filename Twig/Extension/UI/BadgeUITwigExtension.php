@@ -9,16 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI;
+namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
 use Twig_SimpleFunction;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractABSBMDTwigExtension;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
  * Badge UI Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI
+ * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\UI
  */
 class BadgeUITwigExtension extends AbstractUITwigExtension {
 
@@ -27,66 +28,93 @@ class BadgeUITwigExtension extends AbstractUITwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.ui.badge";
+    const SERVICE_NAME = "webeweb.bundle.adminbsbbundle.twig.extension.ui.badge";
 
     /**
-     * Displays a button badge "Danger".
-     *
-     * @param array $args The arguments.
-     * @return string Returns the button badge "Danger".
+     * Constructor.
      */
-    public function buttonBadgeDangerFunction(array $args = []) {
-        return $this->badge(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "label"), ArrayUtility::get($args, "large", false), "btn-danger");
+    public function __construct() {
+        parent::__construct();
     }
 
     /**
-     * Displays a button badge "Default".
+     * Displays an AdminBSB button badge "Danger".
      *
      * @param array $args The arguments.
-     * @return string Returns the button badge "Default".
+     * @return string Returns the AdminBSB button badge "Danger".
      */
-    public function buttonBadgeDefaultFunction(array $args = []) {
-        return $this->badge(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "label"), ArrayUtility::get($args, "large", false), "btn-default");
+    public function adminBSBButtonBadgeDangerFunction(array $args = []) {
+        return $this->adminBSBBadge(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "label"), ArrayUtility::get($args, "large", false), "btn-danger");
     }
 
     /**
-     * Displays a button badge "Info".
+     * Displays an AdminBSB button badge "Default".
      *
      * @param array $args The arguments.
-     * @return string Returns the button badge "Info".
+     * @return string Returns the AdminBSB button badge "Default".
      */
-    public function buttonBadgeInfoFunction(array $args = []) {
-        return $this->badge(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "label"), ArrayUtility::get($args, "large", false), "btn-info");
+    public function adminBSBButtonBadgeDefaultFunction(array $args = []) {
+        return $this->adminBSBBadge(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "label"), ArrayUtility::get($args, "large", false), "btn-default");
     }
 
     /**
-     * Displays a button badge "Primary".
+     * Displays an AdminBSB button badge "Info".
      *
      * @param array $args The arguments.
-     * @return string Returns the button badge "Primary".
+     * @return string Returns the AdminBSB button badge "Info".
      */
-    public function buttonBadgePrimaryFunction(array $args = []) {
-        return $this->badge(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "label"), ArrayUtility::get($args, "large", false), "btn-primary");
+    public function adminBSBButtonBadgeInfoFunction(array $args = []) {
+        return $this->adminBSBBadge(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "label"), ArrayUtility::get($args, "large", false), "btn-info");
     }
 
     /**
-     * Displays a button badge "Success".
+     * Displays an AdminBSB button badge "Primary".
      *
      * @param array $args The arguments.
-     * @return string Returns the button badge "Success".
+     * @return string Returns the AdminBSB button badge "Primary".
      */
-    public function buttonBadgeSuccessFunction(array $args = []) {
-        return $this->badge(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "label"), ArrayUtility::get($args, "large", false), "btn-success");
+    public function adminBSBButtonBadgePrimaryFunction(array $args = []) {
+        return $this->adminBSBBadge(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "label"), ArrayUtility::get($args, "large", false), "btn-primary");
     }
 
     /**
-     * Displays a button badge "Warning".
+     * Displays an AdminBSB button badge "Success".
      *
      * @param array $args The arguments.
-     * @return string Returns the button badge "Warning".
+     * @return string Returns the AdminBSB button badge "Success".
      */
-    public function buttonBadgeWarningFunction(array $args = []) {
-        return $this->badge(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "label"), ArrayUtility::get($args, "large", false), "btn-warning");
+    public function adminBSBButtonBadgeSuccessFunction(array $args = []) {
+        return $this->adminBSBBadge(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "label"), ArrayUtility::get($args, "large", false), "btn-success");
+    }
+
+    /**
+     * Displays an AdminBSB button badge "Warning".
+     *
+     * @param array $args The arguments.
+     * @return string Returns the AdminBSB button badge "Warning".
+     */
+    public function adminBSBButtonBadgeWarningFunction(array $args = []) {
+        return $this->adminBSBBadge(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "label"), ArrayUtility::get($args, "large", false), "btn-warning");
+    }
+
+    /**
+     * Displays an AdminBSB list badge.
+     *
+     * @param array $args The arguments.
+     * @return string Returns the AdminBSB list badge.
+     */
+    public function adminBSBListBadgeFunction(array $args = []) {
+        return $this->adminBSBBadge(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "label"), false, AbstractABSBMDTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), "bg-"), true, ArrayUtility::get($args, "link"));
+    }
+
+    /**
+     * Displays an AdminBSB material design button badge.
+     *
+     * @param array $args The arguments.
+     * @return string Returns the AdminBSB material design button badge.
+     */
+    public function adminBSBMaterialDesignButtonBadgeFunction(array $args = []) {
+        return $this->adminBSBBadge(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "label"), ArrayUtility::get($args, "large", false), AbstractABSBMDTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), "bg-"));
     }
 
     /**
@@ -96,35 +124,15 @@ class BadgeUITwigExtension extends AbstractUITwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("buttonBadgeDanger", [$this, "buttonBadgeDangerFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("buttonBadgeDefault", [$this, "buttonBadgeDefaultFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("buttonBadgeInfo", [$this, "buttonBadgeInfoFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("buttonBadgePrimary", [$this, "buttonBadgePrimaryFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("buttonBadgeSuccess", [$this, "buttonBadgeSuccessFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("buttonBadgeWarning", [$this, "buttonBadgeWarningFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("listBadge", [$this, "listBadgeFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("materialDesignButtonBadge", [$this, "materialDesignButtonBadgeFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBButtonBadgeDanger", [$this, "adminBSBButtonBadgeDangerFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBButtonBadgeDefault", [$this, "adminBSBButtonBadgeDefaultFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBButtonBadgeInfo", [$this, "adminBSBButtonBadgeInfoFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBButtonBadgePrimary", [$this, "adminBSBButtonBadgePrimaryFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBButtonBadgeSuccess", [$this, "adminBSBButtonBadgeSuccessFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBButtonBadgeWarning", [$this, "adminBSBButtonBadgeWarningFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBListBadge", [$this, "adminBSBListBadgeFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBMaterialDesignButtonBadge", [$this, "adminBSBMaterialDesignButtonBadgeFunction"], ["is_safe" => ["html"]]),
         ];
-    }
-
-    /**
-     * Displays a list badge.
-     *
-     * @param array $args The arguments.
-     * @return string Returns the list badge.
-     */
-    public function listBadgeFunction(array $args = []) {
-        return $this->badge(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "label"), false, $this->getColor(ArrayUtility::get($args, "color", "red"), "bg-"), true, ArrayUtility::get($args, "link"));
-    }
-
-    /**
-     * Displays a material design button badge.
-     *
-     * @param array $args The arguments.
-     * @return string Returns the material design button badge.
-     */
-    public function materialDesignButtonBadgeFunction(array $args = []) {
-        return $this->badge(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "label"), ArrayUtility::get($args, "large", false), $this->getColor(ArrayUtility::get($args, "color", "red"), "bg-"));
     }
 
 }
