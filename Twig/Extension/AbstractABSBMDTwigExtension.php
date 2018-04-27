@@ -38,14 +38,14 @@ abstract class AbstractABSBMDTwigExtension extends Twig_Extension {
     }
 
     /**
-     * Get a color.
+     * Fix a color.
      *
      * @param string $name The color name.
      * @param string $prefix The color prefix.
-     * @return string Returns the color in case of success, "" otherwise.
+     * @return string Returns the prefix color in case of success, default color otherwise.
      */
-    final protected function getColor($name, $prefix = "") {
-        if (!array_key_exists($name, DefaultColorProvider::getColors())) {
+    public static function fixColor($name, $prefix = "") {
+        if (false === array_key_exists($name, DefaultColorProvider::getColors())) {
             $name = "red";
         }
         return $prefix . $name;
