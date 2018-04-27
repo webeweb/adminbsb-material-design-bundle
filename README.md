@@ -39,7 +39,8 @@ in the `app/AppKernel.php` file of your project:
 	public function registerBundles() {
 		$bundles = [
             // ...
-            new WBW\Bundle\AdminBSBMaterialDesignBundle\ABSBMDBundle(),
+            new WBW\Bundle\AdminBSBMaterialDesignBundle\AdminBSBBundle(),
+			new WBW\Bundle\BootstrapBundle\BootstrapBundle(),
         ];
 
 		// ...
