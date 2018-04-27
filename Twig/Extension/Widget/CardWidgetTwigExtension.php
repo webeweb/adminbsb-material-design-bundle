@@ -47,7 +47,7 @@ class CardWidgetTwigExtension extends AbstractWidgetTwigExtension {
     public function adminBSBCardHeaderFunction(array $args = []) {
 
         // Initialize the paramters.
-        $content     = ArrayUtility::get($args, "content", self::DEFAULT_CONTENT);
+        $content     = ArrayUtility::get($args, "content", "");
         $description = ArrayUtility::get($args, "description");
         $icon        = ArrayUtility::get($args, "icon");
 

@@ -55,7 +55,7 @@ final class CardWidgetTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $obj = new CardWidgetTwigExtension();
 
         $arg0 = [];
-        $res0 = '<h2 class="card-header">&nbsp;</h2>';
+        $res0 = '<h2 class="card-header"></h2>';
         $this->assertEquals($res0, $obj->adminBSBCardHeaderFunction($arg0));
 
         $arg1 = ["content" => "content"];
@@ -63,11 +63,11 @@ final class CardWidgetTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals($res1, $obj->adminBSBCardHeaderFunction($arg1));
 
         $arg2 = ["description" => "description"];
-        $res2 = '<h2 class="card-header">&nbsp;<small>description</small></h2>';
+        $res2 = '<h2 class="card-header"><small>description</small></h2>';
         $this->assertEquals($res2, $obj->adminBSBCardHeaderFunction($arg2));
 
         $arg3 = ["icon" => "person"];
-        $res3 = '<h2 class="card-header"><i class="material-icons" style="margin: -4px 0; vertical-align: sub;">person</i>&nbsp;</h2>';
+        $res3 = '<h2 class="card-header"><i class="material-icons" style="margin: -4px 0; vertical-align: sub;">person</i></h2>';
         $this->assertEquals($res3, $obj->adminBSBCardHeaderFunction($arg3));
 
         $arg9 = ["content" => "content", "description" => "description", "icon" => "person"];
