@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Provider\Navigation;
+namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\Navigation;
 
 use PHPUnit_Framework_TestCase;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Navigation\DefaultNavigationProvider;
+use WBW\Bundle\AdminBSBBundle\Provider\Navigation\DefaultNavigationProvider;
 use WBW\Bundle\BootstrapBundle\Navigation\Tree\NavigationTree;
 
 /**
  * Default navigation provider test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Provider\Navigation
+ * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\Navigation
  * @final
  */
 final class DefaultNavigationProviderTest extends PHPUnit_Framework_TestCase {

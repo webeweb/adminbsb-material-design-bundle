@@ -9,18 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Twig\Extension\Widget;
+namespace WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Widget;
 
 use PHPUnit_Framework_TestCase;
 use Twig_Node;
 use Twig_SimpleFunction;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Widget\CardWidgetTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget\CardWidgetTwigExtension;
 
 /**
  * Card widget Twig extension test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Twig\Extension\Widget
+ * @package WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Widget
  * @final
  */
 final class CardWidgetTwigExtensionTest extends PHPUnit_Framework_TestCase {

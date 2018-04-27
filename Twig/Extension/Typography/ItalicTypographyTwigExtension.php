@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Typography;
+namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography;
 
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\ItalicTypographyTwigExtension as BaseTypographyTwigExtension;
@@ -18,7 +18,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\ItalicTypographyTwigExt
  * Italic typography Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Typography
+ * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography
  */
 class ItalicTypographyTwigExtension extends BaseTypographyTwigExtension {
 

@@ -1,86 +1,86 @@
 # Resources/config/services.yml
 services:
 
-  webeweb.bundle.adminbsbmaterialdesignbundle.provider.manager:
-    class:     WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\ProvidersManager
+  webeweb.bundle.adminbsbbundle.provider.manager:
+    class:     WBW\Bundle\AdminBSBBundle\Provider\ProvidersManager
     arguments: ["@twig"]
     calls:
-      - [setApplicationProvider, ["@?webeweb.bundle.adminbsbmaterialdesignbundle.provider.application"]]
-      - [setBreadcrumbsProvider, ["@?webeweb.bundle.adminbsbmaterialdesignbundle.provider.breadcrumbs"]]
-      - [setDropDownHookProvider, ["@?webeweb.bundle.adminbsbmaterialdesignbundle.provider.drop_down_hook"]]
-      - [setDropDownNotificationsProvider, ["@?webeweb.bundle.adminbsbmaterialdesignbundle.provider.drop_down_notifications"]]
-      - [setDropDownTasksProvider, ["@?webeweb.bundle.adminbsbmaterialdesignbundle.provider.drop_down_tasks"]]
-      - [setFooterProvider, ["@?webeweb.bundle.adminbsbmaterialdesignbundle.provider.footer"]]
-      - [setNavigationProvider, ["@?webeweb.bundle.adminbsbmaterialdesignbundle.provider.navigation"]]
-      - [setSearchProvider, ["@?webeweb.bundle.adminbsbmaterialdesignbundle.provider.search"]]
-      - [setUserInfoProvider, ["@?webeweb.bundle.adminbsbmaterialdesignbundle.provider.user_info"]]
+      - [setApplicationProvider, ["@?webeweb.bundle.adminbsbbundle.provider.application"]]
+      - [setBreadcrumbsProvider, ["@?webeweb.bundle.adminbsbbundle.provider.breadcrumbs"]]
+      - [setDropDownHookProvider, ["@?webeweb.bundle.adminbsbbundle.provider.drop_down_hook"]]
+      - [setDropDownNotificationsProvider, ["@?webeweb.bundle.adminbsbbundle.provider.drop_down_notifications"]]
+      - [setDropDownTasksProvider, ["@?webeweb.bundle.adminbsbbundle.provider.drop_down_tasks"]]
+      - [setFooterProvider, ["@?webeweb.bundle.adminbsbbundle.provider.footer"]]
+      - [setNavigationProvider, ["@?webeweb.bundle.adminbsbbundle.provider.navigation"]]
+      - [setSearchProvider, ["@?webeweb.bundle.adminbsbbundle.provider.search"]]
+      - [setUserInfoProvider, ["@?webeweb.bundle.adminbsbbundle.provider.user_info"]]
 
-  webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.form.checkbox:
-    class: WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Form\CheckboxFormTwigExtension
+  webeweb.bundle.adminbsbbundle.twig.extension.form.checkbox:
+    class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\CheckboxFormTwigExtension
     tags:
       - { name: twig.extension }
 
-  webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.form.radiobutton:
-    class: WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Form\RadioButtonFormTwigExtension
+  webeweb.bundle.adminbsbbundle.twig.extension.form.radiobutton:
+    class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\RadioButtonFormTwigExtension
     tags:
       - { name: twig.extension }
 
-  webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.form.switchbutton:
-    class: WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Form\SwitchButtonFormTwigExtension
+  webeweb.bundle.adminbsbbundle.twig.extension.form.switchbutton:
+    class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\SwitchButtonFormTwigExtension
     tags:
       - { name: twig.extension }
 
-  webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.typography.heading:
-    class: WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Typography\HeadingTypographyTwigExtension
+  webeweb.bundle.adminbsbbundle.twig.extension.typography.heading:
+    class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\HeadingTypographyTwigExtension
     tags:
       - { name: twig.extension }
 
-  webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.ui.alert:
-    class: WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI\AlertUITwigExtension
+  webeweb.bundle.adminbsbbundle.twig.extension.ui.alert:
+    class: WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\AlertUITwigExtension
     tags:
       - { name: twig.extension }
 
-  webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.ui.badge:
-    class: WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI\BadgeUITwigExtension
+  webeweb.bundle.adminbsbbundle.twig.extension.ui.badge:
+    class: WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\BadgeUITwigExtension
     tags:
       - { name: twig.extension }
 
-  webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.ui.color:
-    class: WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI\ColorUITwigExtension
+  webeweb.bundle.adminbsbbundle.twig.extension.ui.color:
+    class: WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ColorUITwigExtension
     tags:
       - { name: twig.extension }
 
-  webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.ui.button:
-    class: WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI\ButtonUITwigExtension
+  webeweb.bundle.adminbsbbundle.twig.extension.ui.button:
+    class: WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ButtonUITwigExtension
     tags:
       - { name: twig.extension }
 
-  webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.ui.icon:
-    class: WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI\IconUITwigExtension
+  webeweb.bundle.adminbsbbundle.twig.extension.ui.icon:
+    class: WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\IconUITwigExtension
     tags:
       - { name: twig.extension }
 
-  webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.ui.label:
-    class: WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI\LabelUITwigExtension
+  webeweb.bundle.adminbsbbundle.twig.extension.ui.label:
+    class: WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\LabelUITwigExtension
     tags:
       - { name: twig.extension }
 
-  webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.ui.modal:
-    class: WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI\ModalUITwigExtension
+  webeweb.bundle.adminbsbbundle.twig.extension.ui.modal:
+    class: WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ModalUITwigExtension
     tags:
       - { name: twig.extension }
 
-  webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.ui.preloader:
-    class: WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI\PreloaderUITwigExtension
+  webeweb.bundle.adminbsbbundle.twig.extension.ui.preloader:
+    class: WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\PreloaderUITwigExtension
     tags:
       - { name: twig.extension }
 
-  webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.ui.progressbar:
-    class: WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI\ProgressBarUITwigExtension
+  webeweb.bundle.adminbsbbundle.twig.extension.ui.progressbar:
+    class: WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ProgressBarUITwigExtension
     tags:
       - { name: twig.extension }
 
-  webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.widget.card:
-    class: WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Widget\CardWidgetTwigExtension
+  webeweb.bundle.adminbsbbundle.twig.extension.widget.card:
+    class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget\CardWidgetTwigExtension
     tags:
       - { name: twig.extension }

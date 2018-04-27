@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\User;
+namespace WBW\Bundle\AdminBSBBundle\Provider\User;
 
 use WBW\Bundle\BootstrapBundle\Provider\User\UserInfoProviderInterface;
 
@@ -17,7 +17,7 @@ use WBW\Bundle\BootstrapBundle\Provider\User\UserInfoProviderInterface;
  * Default user info provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\User
+ * @package WBW\Bundle\AdminBSBBundle\Provider\User
  */
 class DefaultUserInfoProvider implements UserInfoProviderInterface {
 

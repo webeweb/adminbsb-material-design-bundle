@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Form;
+namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Form;
 
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\AbstractABSBMDTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractABSBMDTwigExtension;
 use WBW\Library\Core\Utility\Argument\StringUtility;
 
 /**
  * Abstract form Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Form
+ * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\Form
  * @abstract
  */
 abstract class AbstractFormTwigExtension extends AbstractABSBMDTwigExtension {
@@ -31,7 +31,7 @@ abstract class AbstractFormTwigExtension extends AbstractABSBMDTwigExtension {
     }
 
     /**
-     * Displays a AdminBSB material design checkbox.
+     * Displays a AdminBSB checkbox.
      *
      * @param string $content The checkbox content.
      * @param string $name The checkbox name.
@@ -40,7 +40,7 @@ abstract class AbstractFormTwigExtension extends AbstractABSBMDTwigExtension {
      * @param boolean $disabled Disabled ?
      * @param boolean $filledIn Filled in ?
      * @param string $class The checkbox class.
-     * @return string Returns the AdminBSB material design checkbox.
+     * @return string Returns the AdminBSB checkbox.
      */
     final protected function absbmdCheckbox($content, $name, $id, $checked, $disabled, $filledIn, $class) {
 
@@ -65,7 +65,7 @@ abstract class AbstractFormTwigExtension extends AbstractABSBMDTwigExtension {
     }
 
     /**
-     * Displays a AdminBSB material design radio button.
+     * Displays a AdminBSB radio button.
      *
      * @param string $content The radio button content.
      * @param string $name The radio button name.
@@ -74,7 +74,7 @@ abstract class AbstractFormTwigExtension extends AbstractABSBMDTwigExtension {
      * @param boolean $disabled Disabled ?
      * @param boolean $withGap With gap ?
      * @param string $class The radio button class.
-     * @return string Returns the AdminBSB material design radio button.
+     * @return string Returns the AdminBSB radio button.
      */
     final protected function absbmdRadioButton($content, $name, $id, $checked, $disabled, $withGap, $class) {
 
@@ -99,7 +99,7 @@ abstract class AbstractFormTwigExtension extends AbstractABSBMDTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB material design switch button.
+     * Displays an AdminBSB switch button.
      *
      * @param string $offLabel The switch button off label.
      * @param string $name The switch button name.
@@ -108,7 +108,7 @@ abstract class AbstractFormTwigExtension extends AbstractABSBMDTwigExtension {
      * @param string $onLabel The switch button on label.
      * @param array $attrs The switch button attributes.
      * @param string $class The switch button class.
-     * @return string Returns the AdminBSB material design switch button.
+     * @return string Returns the AdminBSB switch button.
      */
     final protected function absbmdSwitchButton($offLabel, $name, $checked, $disabled, $onLabel, array $attrs, $class = null) {
 

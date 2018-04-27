@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Application;
+namespace WBW\Bundle\AdminBSBBundle\Provider\Application;
 
 use WBW\Bundle\BootstrapBundle\Provider\Application\ApplicationProviderInterface;
 
@@ -17,7 +17,7 @@ use WBW\Bundle\BootstrapBundle\Provider\Application\ApplicationProviderInterface
  * Default application provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Application
+ * @package WBW\Bundle\AdminBSBBundle\Provider\Application
  */
 class DefaultApplicationProvider implements ApplicationProviderInterface {
 

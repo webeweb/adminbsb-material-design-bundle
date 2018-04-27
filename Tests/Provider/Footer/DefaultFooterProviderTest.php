@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Provider\Footer;
+namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\Footer;
 
 use PHPUnit_Framework_TestCase;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Footer\DefaultFooterProvider;
+use WBW\Bundle\AdminBSBBundle\Provider\Footer\DefaultFooterProvider;
 
 /**
  * Default footer provider test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Provider\Footer
+ * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\Footer
  * @final
  */
 final class DefaultFooterProviderTest extends PHPUnit_Framework_TestCase {

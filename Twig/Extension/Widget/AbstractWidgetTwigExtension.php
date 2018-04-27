@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Widget;
+namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget;
 
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\AbstractABSBMDTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractABSBMDTwigExtension;
 
 /**
  * Abstract widget twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Widget
+ * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget
  * @abstract
  */
 abstract class AbstractWidgetTwigExtension extends AbstractABSBMDTwigExtension {

@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Provider\DropDown;
+namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\DropDown;
 
 use PHPUnit_Framework_TestCase;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\DropDown\DefaultDropDownHookProvider;
+use WBW\Bundle\AdminBSBBundle\Provider\DropDown\DefaultDropDownHookProvider;
 
 /**
  * Default drop down hook provider test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Provider\DropDown
+ * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\DropDown
  * @final
  */
 final class DefaultDropDownHookProviderTest extends PHPUnit_Framework_TestCase {

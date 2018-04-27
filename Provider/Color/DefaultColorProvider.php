@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Color;
+namespace WBW\Bundle\AdminBSBBundle\Provider\Color;
 
 /**
  * Default color provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Color
+ * @package WBW\Bundle\AdminBSBBundle\Provider\Color
  */
 class DefaultColorProvider implements ColorProviderInterface {
 

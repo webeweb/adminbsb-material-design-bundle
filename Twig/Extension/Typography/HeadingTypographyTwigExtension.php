@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Typography;
+namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography;
 
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\HeadingTypographyTwigExtension as BaseTypographyTwigExtension;
@@ -18,7 +18,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\HeadingTypographyTwigEx
  * Heading typography Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Typography
+ * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography
  */
 class HeadingTypographyTwigExtension extends BaseTypographyTwigExtension {
 
@@ -27,7 +27,7 @@ class HeadingTypographyTwigExtension extends BaseTypographyTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.typography.heading";
+    const SERVICE_NAME = "webeweb.bundle.adminbsbbundle.twig.extension.typography.heading";
 
     /**
      * Get the Twig functions.

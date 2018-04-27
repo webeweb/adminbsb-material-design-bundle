@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Provider\Color;
+namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\Color;
 
 use PHPUnit_Framework_TestCase;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Color\DefaultColorProvider;
+use WBW\Bundle\AdminBSBBundle\Provider\Color\DefaultColorProvider;
 
 /**
  * Default color provider test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Provider\Color
+ * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\Color
  * @final
  */
 final class DefaultColorProviderTest extends PHPUnit_Framework_TestCase {

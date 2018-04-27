@@ -9,18 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Twig\Extension\Typography;
+namespace WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Typography;
 
 use PHPUnit_Framework_TestCase;
 use Twig_Node;
 use Twig_SimpleFunction;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Typography\StrongTypographyTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\StrongTypographyTwigExtension;
 
 /**
  * Strong typography Twig extension test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Twig\Extension\Typography
+ * @package WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Typography
  * @final
  */
 final class StrongTypographyTwigExtensionTest extends PHPUnit_Framework_TestCase {

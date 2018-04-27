@@ -9,18 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Twig\Extension\Form;
+namespace WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Form;
 
 use PHPUnit_Framework_TestCase;
 use Twig_Node;
 use Twig_SimpleFunction;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Form\RadioButtonFormTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\RadioButtonFormTwigExtension;
 
 /**
  * Radio button form Twig extension test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Twig\Extension\Form
+ * @package WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Form
  * @final
  */
 final class RadioButtonFormTwigExtensionTest extends PHPUnit_Framework_TestCase {

@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Form;
+namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Form;
 
 use Twig_SimpleFunction;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\AbstractABSBMDTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractABSBMDTwigExtension;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
  * Checkbox form Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Form
+ * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\Form
  */
 class CheckboxFormTwigExtension extends AbstractFormTwigExtension {
 
@@ -28,7 +28,7 @@ class CheckboxFormTwigExtension extends AbstractFormTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.form.checkbox";
+    const SERVICE_NAME = "webeweb.bundle.adminbsbbundle.twig.extension.form.checkbox";
 
     /**
      * Constructor.
@@ -38,10 +38,10 @@ class CheckboxFormTwigExtension extends AbstractFormTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB material design basic checkbox.
+     * Displays an AdminBSB basic checkbox.
      *
      * @param array $args The arguments.
-     * @return string Returns the AdminBSB material design basic checkbox.
+     * @return string Returns the AdminBSB basic checkbox.
      */
     public function absbmdBasicCheckboxFunction(array $args = []) {
         return $this->absbmdCheckbox(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "id"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "filledIn", false), ArrayUtility::get($args, "class"));
@@ -60,10 +60,10 @@ class CheckboxFormTwigExtension extends AbstractFormTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB material design material design checkbox.
+     * Displays an AdminBSB material design checkbox.
      *
      * @param array $args The arguments.
-     * @return string Returns the AdminBSB material design material design checkbox.
+     * @return string Returns the AdminBSB material design checkbox.
      */
     public function absbmdMaterialDesignCheckboxFunction(array $args = []) {
         return $this->absbmdCheckbox(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "id"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "filledIn", false), ArrayUtility::get($args, "class", "") . AbstractABSBMDTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), " chk-col-"));

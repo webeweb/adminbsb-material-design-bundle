@@ -9,18 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Widget;
+namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget;
 
 use Twig_SimpleFunction;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Typography\HeadingTypographyTwigExtension;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI\IconUITwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\HeadingTypographyTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\IconUITwigExtension;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
  * Card widget Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Widget
+ * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget
  */
 class CardWidgetTwigExtension extends AbstractWidgetTwigExtension {
 
@@ -29,7 +29,7 @@ class CardWidgetTwigExtension extends AbstractWidgetTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.widget.card";
+    const SERVICE_NAME = "webeweb.bundle.adminbsbbundle.twig.extension.widget.card";
 
     /**
      * Constructor.
@@ -39,10 +39,10 @@ class CardWidgetTwigExtension extends AbstractWidgetTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB material design card header.
+     * Displays an AdminBSB card header.
      *
      * @param array $args The arguments.
-     * @return string Returns the AdminBSB material design card header.
+     * @return string Returns the AdminBSB card header.
      */
     public function absbmdCardHeaderFunction(array $args = []) {
 

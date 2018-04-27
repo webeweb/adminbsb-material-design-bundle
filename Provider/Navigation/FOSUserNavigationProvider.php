@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Navigation;
+namespace WBW\Bundle\AdminBSBBundle\Provider\Navigation;
 
 use WBW\Bundle\BootstrapBundle\Navigation\Node\BreadcrumbNode;
 
@@ -17,7 +17,7 @@ use WBW\Bundle\BootstrapBundle\Navigation\Node\BreadcrumbNode;
  * FOSUserNavigationProvider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Navigation
+ * @package WBW\Bundle\AdminBSBBundle\Provider\Navigation
  */
 class FOSUserNavigationProvider {
 

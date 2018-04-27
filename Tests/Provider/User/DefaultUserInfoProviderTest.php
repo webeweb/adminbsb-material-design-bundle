@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Provider\User;
+namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\User;
 
 use PHPUnit_Framework_TestCase;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\User\DefaultUserInfoProvider;
+use WBW\Bundle\AdminBSBBundle\Provider\User\DefaultUserInfoProvider;
 
 /**
  * Default user info provider test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Provider\User
+ * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\User
  * @final
  */
 final class DefaultUserInfoProviderTest extends PHPUnit_Framework_TestCase {

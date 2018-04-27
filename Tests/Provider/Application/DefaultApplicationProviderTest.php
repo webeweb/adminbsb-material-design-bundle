@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Provider\Application;
+namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\Application;
 
 use PHPUnit_Framework_TestCase;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Application\DefaultApplicationProvider;
+use WBW\Bundle\AdminBSBBundle\Provider\Application\DefaultApplicationProvider;
 
 /**
  * Default application provider test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Provider\Application
+ * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\Application
  * @final
  */
 final class DefaultApplicationProviderTest extends PHPUnit_Framework_TestCase {

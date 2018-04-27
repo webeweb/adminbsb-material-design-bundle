@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\DependencyInjection;
+namespace WBW\Bundle\AdminBSBBundle\Tests\DependencyInjection;
 
 use PHPUnit_Framework_TestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -17,29 +17,29 @@ use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
 use Symfony\Component\HttpKernel\KernelInterface;
 use Twig_Environment;
 use Twig_LoaderInterface;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\DependencyInjection\ABSBMDExtension;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Form\CheckboxFormTwigExtension;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Form\RadioButtonFormTwigExtension;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Form\SwitchButtonFormTwigExtension;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Typography\HeadingTypographyTwigExtension;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI\AlertUITwigExtension;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI\BadgeUITwigExtension;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI\ButtonUITwigExtension;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI\ColorUITwigExtension;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI\IconUITwigExtension;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI\LabelUITwigExtension;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI\ModalUITwigExtension;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI\PreloaderUITwigExtension;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI\ProgressBarUITwigExtension;
+use WBW\Bundle\AdminBSBBundle\DependencyInjection\AdminBSBExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\CheckboxFormTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\RadioButtonFormTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\SwitchButtonFormTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\HeadingTypographyTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\AlertUITwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\BadgeUITwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ButtonUITwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ColorUITwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\IconUITwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\LabelUITwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ModalUITwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\PreloaderUITwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ProgressBarUITwigExtension;
 
 /**
- * AdminBSB Material Design extension test.
+ * AdminBSB extension test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\DependencyInjection
+ * @package WBW\Bundle\AdminBSBBundle\Tests\DependencyInjection
  * @final
  */
-final class ABSBMDExtensionTest extends PHPUnit_Framework_TestCase {
+final class AdminBSBExtensionTest extends PHPUnit_Framework_TestCase {
 
     /**
      * Tests the load() method.
@@ -58,7 +58,7 @@ final class ABSBMDExtensionTest extends PHPUnit_Framework_TestCase {
         $container->set("kernel", $kernel);
         $container->set("twig", $twigEnvironment);
 
-        $obj = new ABSBMDExtension();
+        $obj = new AdminBSBExtension();
 
         $obj->load([], $container);
         $this->assertInstanceOf(CheckboxFormTwigExtension::class, $container->get(CheckboxFormTwigExtension::SERVICE_NAME));

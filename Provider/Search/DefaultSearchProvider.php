@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Search;
+namespace WBW\Bundle\AdminBSBBundle\Provider\Search;
 
 use WBW\Bundle\BootstrapBundle\Provider\Search\SearchProviderInterface;
 
@@ -17,7 +17,7 @@ use WBW\Bundle\BootstrapBundle\Provider\Search\SearchProviderInterface;
  * Default search provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Search
+ * @package WBW\Bundle\AdminBSBBundle\Provider\Search
  */
 class DefaultSearchProvider implements SearchProviderInterface {
 

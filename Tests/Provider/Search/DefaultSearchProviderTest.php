@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Provider\Search;
+namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\Search;
 
 use PHPUnit_Framework_TestCase;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Search\DefaultSearchProvider;
+use WBW\Bundle\AdminBSBBundle\Provider\Search\DefaultSearchProvider;
 
 /**
  * Default search provider test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Tests\Provider\Search
+ * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\Search
  * @final
  */
 final class DefaultSearchProviderTest extends PHPUnit_Framework_TestCase {

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Navigation;
+namespace WBW\Bundle\AdminBSBBundle\Provider\Navigation;
 
 use WBW\Bundle\BootstrapBundle\Navigation\Tree\NavigationTree;
 use WBW\Bundle\BootstrapBundle\Provider\Navigation\NavigationProviderInterface;
@@ -18,7 +18,7 @@ use WBW\Bundle\BootstrapBundle\Provider\Navigation\NavigationProviderInterface;
  * Default navigation provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Navigation
+ * @package WBW\Bundle\AdminBSBBundle\Provider\Navigation
  */
 class DefaultNavigationProvider implements NavigationProviderInterface {
 

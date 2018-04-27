@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\DependencyInjection;
+namespace WBW\Bundle\AdminBSBBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -20,9 +20,9 @@ use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
  * AdminBSB Material Design extension.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\DependencyInjection
+ * @package WBW\Bundle\AdminBSBBundle\DependencyInjection
  */
-class ABSBMDExtension extends Extension {
+class AdminBSBExtension extends Extension {
 
     /**
      * {@inheritdoc}

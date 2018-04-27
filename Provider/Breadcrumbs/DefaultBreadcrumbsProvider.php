@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Breadcrumbs;
+namespace WBW\Bundle\AdminBSBBundle\Provider\Breadcrumbs;
 
 use WBW\Bundle\BootstrapBundle\Provider\Breadcrumbs\BreadcrumbsProviderInterface;
 
@@ -17,7 +17,7 @@ use WBW\Bundle\BootstrapBundle\Provider\Breadcrumbs\BreadcrumbsProviderInterface
  * Default breadcrumbs provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Breadcrumbs
+ * @package WBW\Bundle\AdminBSBBundle\Provider\Breadcrumbs
  */
 class DefaultBreadcrumbsProvider implements BreadcrumbsProviderInterface {
 

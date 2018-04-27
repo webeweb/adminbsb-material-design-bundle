@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Color;
+namespace WBW\Bundle\AdminBSBBundle\Provider\Color;
 
 /**
  * Color provider interface.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Color
+ * @package WBW\Bundle\AdminBSBBundle\Provider\Color
  */
 interface ColorProviderInterface {
 
@@ -24,7 +24,7 @@ interface ColorProviderInterface {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.provider.color";
+    const SERVICE_NAME = "webeweb.bundle.adminbsbbundle.provider.color";
 
     /**
      * Get the color "Amber".

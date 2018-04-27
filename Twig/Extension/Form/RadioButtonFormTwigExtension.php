@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Form;
+namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Form;
 
 use Twig_SimpleFunction;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\AbstractABSBMDTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractABSBMDTwigExtension;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
  * Radio button form Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Form
+ * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\Form
  */
 class RadioButtonFormTwigExtension extends AbstractFormTwigExtension {
 
@@ -28,7 +28,7 @@ class RadioButtonFormTwigExtension extends AbstractFormTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.form.radiobutton";
+    const SERVICE_NAME = "webeweb.bundle.adminbsbbundle.twig.extension.form.radiobutton";
 
     /**
      * Constructor.
@@ -60,10 +60,10 @@ class RadioButtonFormTwigExtension extends AbstractFormTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB material design radio button.
+     * Displays an AdminBSB radio button.
      *
      * @param array $args The arguments.
-     * @return string Returns the AdminBSB material design radio button.
+     * @return string Returns the AdminBSB radio button.
      */
     public function absbmdMaterialDesignRadioButtonFunction(array $args = []) {
         return $this->absbmdRadioButton(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "id"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "withGap", false), ArrayUtility::get($args, "class", "") . AbstractABSBMDTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), " radio-col-"));

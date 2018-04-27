@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\DropDown;
+namespace WBW\Bundle\AdminBSBBundle\Provider\DropDown;
 
 use WBW\Bundle\BootstrapBundle\Provider\DropDown\DropDownHookProviderInterface;
 
@@ -17,7 +17,7 @@ use WBW\Bundle\BootstrapBundle\Provider\DropDown\DropDownHookProviderInterface;
  * Default drop down hook provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\DropDown
+ * @package WBW\Bundle\AdminBSBBundle\Provider\DropDown
  */
 class DefaultDropDownHookProvider implements DropDownHookProviderInterface {
 

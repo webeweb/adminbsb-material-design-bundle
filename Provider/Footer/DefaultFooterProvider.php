@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Footer;
+namespace WBW\Bundle\AdminBSBBundle\Provider\Footer;
 
 use WBW\Bundle\BootstrapBundle\Provider\Footer\FooterProviderInterface;
 
@@ -17,7 +17,7 @@ use WBW\Bundle\BootstrapBundle\Provider\Footer\FooterProviderInterface;
  * Default footer provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Provider\Footer
+ * @package WBW\Bundle\AdminBSBBundle\Provider\Footer
  */
 class DefaultFooterProvider implements FooterProviderInterface {
 
