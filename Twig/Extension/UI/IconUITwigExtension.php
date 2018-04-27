@@ -38,10 +38,10 @@ class IconUITwigExtension extends AbstractUITwigExtension {
     }
 
     /**
-     * Displays a AdminBSB basic icon.
+     * Displays an AdminBSB basic icon.
      *
      * @param array $args The arguments.
-     * @return string Returns the adminBSB basic icon.
+     * @return string Returns the AdminBSB basic icon.
      */
     public function adminBSBBasicIconFunction(array $args = []) {
         return $this->adminBSBIcon(ArrayUtility::get($args, "name"), ArrayUtility::get($args, "style"));
@@ -60,7 +60,7 @@ class IconUITwigExtension extends AbstractUITwigExtension {
     }
 
     /**
-     * Displays a AdminBSB material design icon.
+     * Displays an AdminBSB material design icon.
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB material design icon.
