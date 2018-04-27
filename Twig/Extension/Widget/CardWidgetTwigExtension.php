@@ -55,7 +55,7 @@ class CardWidgetTwigExtension extends AbstractWidgetTwigExtension {
             $content .= "<small>" . $description . "</small>";
         }
         if (null !== $icon) {
-            $content = (new IconUITwigExtension())->basicIconFunction(["name" => $icon, "style" => "margin: -4px 0; vertical-align: sub;"]) . $content;
+            $content = (new IconUITwigExtension())->adminBSBBasicIconFunction(["name" => $icon, "style" => "margin: -4px 0; vertical-align: sub;"]) . $content;
         }
 
         // Return the HTML.

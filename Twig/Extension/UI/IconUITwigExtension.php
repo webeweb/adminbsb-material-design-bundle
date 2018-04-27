@@ -9,16 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI;
+namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
 use Twig_SimpleFunction;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractABSBMDTwigExtension;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
  * Icon UI Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI
+ * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\UI
  */
 class IconUITwigExtension extends AbstractUITwigExtension {
 
@@ -27,16 +28,23 @@ class IconUITwigExtension extends AbstractUITwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.ui.icon";
+    const SERVICE_NAME = "webeweb.bundle.adminbsbbundle.twig.extension.ui.icon";
 
     /**
-     * Displays a basic icon.
+     * Constructor.
+     */
+    public function __construct() {
+        parent::__construct();
+    }
+
+    /**
+     * Displays a AdminBSB basic icon.
      *
      * @param array $args The arguments.
-     * @return string Returns the material design icon.
+     * @return string Returns the adminBSB basic icon.
      */
-    public function basicIconFunction(array $args = []) {
-        return $this->icon(ArrayUtility::get($args, "name"), ArrayUtility::get($args, "style"));
+    public function adminBSBBasicIconFunction(array $args = []) {
+        return $this->adminBSBIcon(ArrayUtility::get($args, "name"), ArrayUtility::get($args, "style"));
     }
 
     /**
@@ -46,19 +54,19 @@ class IconUITwigExtension extends AbstractUITwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("basicIcon", [$this, "basicIconFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("materialDesignIcon", [$this, "materialDesignIconFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBBasicIcon", [$this, "adminBSBBasicIconFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBMaterialDesignIcon", [$this, "adminBSBMaterialDesignIconFunction"], ["is_safe" => ["html"]]),
         ];
     }
 
     /**
-     * Displays a material design icon.
+     * Displays a AdminBSB material design icon.
      *
      * @param array $args The arguments.
-     * @return string Returns the material design icon.
+     * @return string Returns the AdminBSB material design icon.
      */
-    public function materialDesignIconFunction(array $args = []) {
-        return $this->icon(ArrayUtility::get($args, "name"), ArrayUtility::get($args, "style"), $this->getColor(ArrayUtility::get($args, "color"), "col-"));
+    public function adminBSBMaterialDesignIconFunction(array $args = []) {
+        return $this->adminBSBIcon(ArrayUtility::get($args, "name"), ArrayUtility::get($args, "style"), AbstractABSBMDTwigExtension::fixColor(ArrayUtility::get($args, "color"), "col-"));
     }
 
 }
