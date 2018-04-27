@@ -105,7 +105,7 @@ final class ButtonUITwigExtensionTest extends PHPUnit_Framework_TestCase {
         $obj = new ButtonUITwigExtension();
 
         $arg0 = [];
-        $res0 = '<button class="btn btn-danger waves-effect" type="button">&nbsp;</button>';
+        $res0 = '<button class="btn btn-danger waves-effect" type="button"></button>';
         $this->assertEquals($res0, $obj->adminBSBButtonDangerFunction($arg0));
     }
 
@@ -120,7 +120,7 @@ final class ButtonUITwigExtensionTest extends PHPUnit_Framework_TestCase {
         $obj = new ButtonUITwigExtension();
 
         $arg0 = [];
-        $res0 = '<button class="btn btn-default waves-effect" type="button">&nbsp;</button>';
+        $res0 = '<button class="btn btn-default waves-effect" type="button"></button>';
         $this->assertEquals($res0, $obj->adminBSBButtonDefaultFunction($arg0));
     }
 
@@ -135,7 +135,7 @@ final class ButtonUITwigExtensionTest extends PHPUnit_Framework_TestCase {
         $obj = new ButtonUITwigExtension();
 
         $arg0 = [];
-        $res0 = '<button class="btn btn-info waves-effect" type="button">&nbsp;</button>';
+        $res0 = '<button class="btn btn-info waves-effect" type="button"></button>';
         $this->assertEquals($res0, $obj->adminBSBButtonInfoFunction($arg0));
     }
 
@@ -150,7 +150,7 @@ final class ButtonUITwigExtensionTest extends PHPUnit_Framework_TestCase {
         $obj = new ButtonUITwigExtension();
 
         $arg0 = [];
-        $res0 = '<button class="btn btn-primary waves-effect" type="button">&nbsp;</button>';
+        $res0 = '<button class="btn btn-primary waves-effect" type="button"></button>';
         $this->assertEquals($res0, $obj->adminBSBButtonPrimaryFunction($arg0));
     }
 
@@ -165,7 +165,7 @@ final class ButtonUITwigExtensionTest extends PHPUnit_Framework_TestCase {
         $obj = new ButtonUITwigExtension();
 
         $arg0 = [];
-        $res0 = '<button class="btn btn-success waves-effect" type="button">&nbsp;</button>';
+        $res0 = '<button class="btn btn-success waves-effect" type="button"></button>';
         $this->assertEquals($res0, $obj->adminBSBButtonSuccessFunction($arg0));
     }
 
@@ -180,7 +180,7 @@ final class ButtonUITwigExtensionTest extends PHPUnit_Framework_TestCase {
         $obj = new ButtonUITwigExtension();
 
         $arg0 = [];
-        $res0 = '<button class="btn btn-warning waves-effect" type="button">&nbsp;</button>';
+        $res0 = '<button class="btn btn-warning waves-effect" type="button"></button>';
         $this->assertEquals($res0, $obj->adminBSBButtonWarningFunction($arg0));
     }
 
@@ -196,10 +196,10 @@ final class ButtonUITwigExtensionTest extends PHPUnit_Framework_TestCase {
 
         $btn = $obj->adminBSBMaterialDesignButtonFunction();
 
-        $res0 = '<a class="btn bg-red waves-effect" href="javascript:void(0);">&nbsp;</a>';
+        $res0 = '<a class="btn bg-red waves-effect" href="javascript:void(0);"></a>';
         $this->assertEquals($res0, $obj->adminBSBLinkButtonFilter($btn));
 
-        $res1 = '<a class="btn bg-red waves-effect" href="https://github.com">&nbsp;</a>';
+        $res1 = '<a class="btn bg-red waves-effect" href="https://github.com"></a>';
         $this->assertEquals($res1, $obj->adminBSBLinkButtonFilter($btn, "https://github.com"));
     }
 
@@ -214,7 +214,7 @@ final class ButtonUITwigExtensionTest extends PHPUnit_Framework_TestCase {
         $obj = new ButtonUITwigExtension();
 
         $arg0 = [];
-        $res0 = '<button class="btn bg-red waves-effect" type="button">&nbsp;</button>';
+        $res0 = '<button class="btn bg-red waves-effect" type="button"></button>';
         $this->assertEquals($res0, $obj->adminBSBMaterialDesignButtonFunction($arg0));
 
         $arg1 = ["content" => "content"];
@@ -222,31 +222,31 @@ final class ButtonUITwigExtensionTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals($res1, $obj->adminBSBMaterialDesignButtonFunction($arg1));
 
         $arg2 = ["title" => "title"];
-        $res2 = '<button class="btn bg-red waves-effect" title="title" type="button" data-toggle="tooltip">&nbsp;</button>';
+        $res2 = '<button class="btn bg-red waves-effect" title="title" type="button" data-toggle="tooltip"></button>';
         $this->assertEquals($res2, $obj->adminBSBMaterialDesignButtonFunction($arg2));
 
         $arg3 = ["size" => "lg"];
-        $res3 = '<button class="btn bg-red waves-effect btn-lg" type="button">&nbsp;</button>';
+        $res3 = '<button class="btn bg-red waves-effect btn-lg" type="button"></button>';
         $this->assertEquals($res3, $obj->adminBSBMaterialDesignButtonFunction($arg3));
 
         $arg4 = ["block" => true];
-        $res4 = '<button class="btn bg-red waves-effect btn-block" type="button">&nbsp;</button>';
+        $res4 = '<button class="btn bg-red waves-effect btn-block" type="button"></button>';
         $this->assertEquals($res4, $obj->adminBSBMaterialDesignButtonFunction($arg4));
 
         $arg5 = ["disable" => true];
-        $res5 = '<button class="btn bg-red waves-effect" type="button" disabled="disabled">&nbsp;</button>';
+        $res5 = '<button class="btn bg-red waves-effect" type="button" disabled="disabled"></button>';
         $this->assertEquals($res5, $obj->adminBSBMaterialDesignButtonFunction($arg5));
 
         $arg6 = ["icon" => "person"];
-        $res6 = '<button class="btn bg-red waves-effect" type="button"><i class="material-icons">person</i>&nbsp;</button>';
+        $res6 = '<button class="btn bg-red waves-effect" type="button"><i class="material-icons">person</i></button>';
         $this->assertEquals($res6, $obj->adminBSBMaterialDesignButtonFunction($arg6));
 
         $arg7 = ["circle" => true];
-        $res7 = '<button class="btn bg-red waves-effect btn-circle waves-circle waves-float" type="button">&nbsp;</button>';
+        $res7 = '<button class="btn bg-red waves-effect btn-circle waves-circle waves-float" type="button"></button>';
         $this->assertEquals($res7, $obj->adminBSBMaterialDesignButtonFunction($arg7));
 
         $arg8 = ["color" => "black"];
-        $res8 = '<button class="btn bg-black waves-effect" type="button">&nbsp;</button>';
+        $res8 = '<button class="btn bg-black waves-effect" type="button"></button>';
         $this->assertEquals($res8, $obj->adminBSBMaterialDesignButtonFunction($arg8));
 
         $arg9 = ["content" => "content", "title" => "title", "size" => "lg", "disable" => true, "icon" => "person", "color" => "black"];
