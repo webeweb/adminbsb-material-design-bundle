@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle;
+namespace WBW\Bundle\AdminBSBBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
