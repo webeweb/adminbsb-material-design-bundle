@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI;
+namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
 use Twig_SimpleFunction;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
@@ -18,7 +18,7 @@ use WBW\Library\Core\Utility\Argument\ArrayUtility;
  * Color UI Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI
+ * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\UI
  */
 class ColorUITwigExtension extends AbstractUITwigExtension {
 
@@ -27,7 +27,14 @@ class ColorUITwigExtension extends AbstractUITwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.ui.color";
+    const SERVICE_NAME = "webeweb.bundle.adminbsbbundle.twig.extension.ui.color";
+
+    /**
+     * Constructor.
+     */
+    public function __construct() {
+        parent::__construct();
+    }
 
     /**
      * Get the Twig functions.
@@ -36,18 +43,18 @@ class ColorUITwigExtension extends AbstractUITwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("materialDesignColor", [$this, "materialDesignColorFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBMaterialDesignColor", [$this, "adminBSBMaterialDesignColorFunction"], ["is_safe" => ["html"]]),
         ];
     }
 
     /**
-     * Displays a material design color.
+     * Displays an AdminBSB material design color.
      *
      * @param array $args The arguments.
-     * @return string Returns the material design color.
+     * @return string Returns the AdminBSB material design color.
      */
-    public function materialDesignColorFunction(array $args = []) {
-        return $this->color(ArrayUtility::get($args, "name"), ArrayUtility::get($args, "code", "500"), ArrayUtility::get($args, "out", "class"));
+    public function adminBSBMaterialDesignColorFunction(array $args = []) {
+        return $this->adminBSBColor(ArrayUtility::get($args, "name"), ArrayUtility::get($args, "code", "500"), ArrayUtility::get($args, "out", "class"));
     }
 
 }
