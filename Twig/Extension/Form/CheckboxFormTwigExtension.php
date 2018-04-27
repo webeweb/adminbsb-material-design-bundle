@@ -12,6 +12,7 @@
 namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Form;
 
 use Twig_SimpleFunction;
+use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\AbstractABSBMDTwigExtension;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
@@ -58,7 +59,7 @@ class CheckboxFormTwigExtension extends AbstractFormTwigExtension {
      * @return string Returns the material design checkbox.
      */
     public function absbmdMaterialDesignCheckboxFunction(array $args = []) {
-        return $this->absbmdCheckbox(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "id"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "filledIn", false), ArrayUtility::get($args, "class", "") . $this->getColor(ArrayUtility::get($args, "color", "red"), " chk-col-"));
+        return $this->absbmdCheckbox(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "id"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "filledIn", false), ArrayUtility::get($args, "class", "") . AbstractABSBMDTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), " chk-col-"));
     }
 
 }

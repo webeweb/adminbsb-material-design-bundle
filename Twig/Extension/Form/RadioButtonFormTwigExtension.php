@@ -12,6 +12,7 @@
 namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Form;
 
 use Twig_SimpleFunction;
+use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\AbstractABSBMDTwigExtension;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
@@ -58,7 +59,7 @@ class RadioButtonFormTwigExtension extends AbstractFormTwigExtension {
      * @return string Returns the AdminBSB material design radio button.
      */
     public function absbmdMaterialDesignRadioButtonFunction(array $args = []) {
-        return $this->absbmdRadioButton(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "id"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "withGap", false), ArrayUtility::get($args, "class", "") . $this->getColor(ArrayUtility::get($args, "color", "red"), " radio-col-"));
+        return $this->absbmdRadioButton(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "id"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "withGap", false), ArrayUtility::get($args, "class", "") . AbstractABSBMDTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), " radio-col-"));
     }
 
 }
