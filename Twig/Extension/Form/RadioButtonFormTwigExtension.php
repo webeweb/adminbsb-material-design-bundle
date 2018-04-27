@@ -43,8 +43,8 @@ class RadioButtonFormTwigExtension extends AbstractFormTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the AdminBSB basic radio button.
      */
-    public function absbmdBasicRadioButtonFunction(array $args = []) {
-        return $this->absbmdRadioButton(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "id"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "withGap", false), ArrayUtility::get($args, "class"));
+    public function adminBSBBasicRadioButtonFunction(array $args = []) {
+        return $this->adminBSBRadioButton(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "id"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "withGap", false), ArrayUtility::get($args, "class"));
     }
 
     /**
@@ -54,19 +54,19 @@ class RadioButtonFormTwigExtension extends AbstractFormTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("absbmdBasicRadioButton", [$this, "absbmdBasicRadioButtonFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("absbmdMaterialDesignRadioButton", [$this, "absbmdMaterialDesignRadioButtonFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBBasicRadioButton", [$this, "adminBSBBasicRadioButtonFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBMaterialDesignRadioButton", [$this, "adminBSBMaterialDesignRadioButtonFunction"], ["is_safe" => ["html"]]),
         ];
     }
 
     /**
-     * Displays an AdminBSB radio button.
+     * Displays an AdminBSB material designradio button.
      *
      * @param array $args The arguments.
-     * @return string Returns the AdminBSB radio button.
+     * @return string Returns the AdminBSB material designradio button.
      */
-    public function absbmdMaterialDesignRadioButtonFunction(array $args = []) {
-        return $this->absbmdRadioButton(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "id"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "withGap", false), ArrayUtility::get($args, "class", "") . AbstractABSBMDTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), " radio-col-"));
+    public function adminBSBMaterialDesignRadioButtonFunction(array $args = []) {
+        return $this->adminBSBRadioButton(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "id"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "withGap", false), ArrayUtility::get($args, "class", "") . AbstractABSBMDTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), " radio-col-"));
     }
 
 }

@@ -43,8 +43,8 @@ class CheckboxFormTwigExtension extends AbstractFormTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the AdminBSB basic checkbox.
      */
-    public function absbmdBasicCheckboxFunction(array $args = []) {
-        return $this->absbmdCheckbox(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "id"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "filledIn", false), ArrayUtility::get($args, "class"));
+    public function adminBSBBasicCheckboxFunction(array $args = []) {
+        return $this->adminBSBCheckbox(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "id"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "filledIn", false), ArrayUtility::get($args, "class"));
     }
 
     /**
@@ -54,8 +54,8 @@ class CheckboxFormTwigExtension extends AbstractFormTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("absbmdBasicCheckbox", [$this, "absbmdBasicCheckboxFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("absbmdMaterialDesignCheckbox", [$this, "absbmdMaterialDesignCheckboxFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBBasicCheckbox", [$this, "adminBSBBasicCheckboxFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBMaterialDesignCheckbox", [$this, "adminBSBMaterialDesignCheckboxFunction"], ["is_safe" => ["html"]]),
         ];
     }
 
@@ -65,8 +65,8 @@ class CheckboxFormTwigExtension extends AbstractFormTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the AdminBSB material design checkbox.
      */
-    public function absbmdMaterialDesignCheckboxFunction(array $args = []) {
-        return $this->absbmdCheckbox(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "id"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "filledIn", false), ArrayUtility::get($args, "class", "") . AbstractABSBMDTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), " chk-col-"));
+    public function adminBSBMaterialDesignCheckboxFunction(array $args = []) {
+        return $this->adminBSBCheckbox(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "id"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "filledIn", false), ArrayUtility::get($args, "class", "") . AbstractABSBMDTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), " chk-col-"));
     }
 
 }

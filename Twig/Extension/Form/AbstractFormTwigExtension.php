@@ -42,7 +42,7 @@ abstract class AbstractFormTwigExtension extends AbstractABSBMDTwigExtension {
      * @param string $class The checkbox class.
      * @return string Returns the AdminBSB checkbox.
      */
-    final protected function absbmdCheckbox($content, $name, $id, $checked, $disabled, $filledIn, $class) {
+    final protected function adminBSBCheckbox($content, $name, $id, $checked, $disabled, $filledIn, $class) {
 
         // Initialize the template.
         $template = '<input %attributes%><label for="%id%">%innerHTML%</label>';
@@ -76,7 +76,7 @@ abstract class AbstractFormTwigExtension extends AbstractABSBMDTwigExtension {
      * @param string $class The radio button class.
      * @return string Returns the AdminBSB radio button.
      */
-    final protected function absbmdRadioButton($content, $name, $id, $checked, $disabled, $withGap, $class) {
+    final protected function adminBSBRadioButton($content, $name, $id, $checked, $disabled, $withGap, $class) {
 
         // Initialize the template.
         $template = '<input %attributes%><label for="%id%">%innerHTML%</label>';
@@ -110,7 +110,7 @@ abstract class AbstractFormTwigExtension extends AbstractABSBMDTwigExtension {
      * @param string $class The switch button class.
      * @return string Returns the AdminBSB switch button.
      */
-    final protected function absbmdSwitchButton($offLabel, $name, $checked, $disabled, $onLabel, array $attrs, $class = null) {
+    final protected function adminBSBSwitchButton($offLabel, $name, $checked, $disabled, $onLabel, array $attrs, $class = null) {
 
         // Initialize the template.
         $template = '<div class="switch"><label>%lLabel%<input %attributes%><span class="lever%sClass%"></span>%rLabel%</label></div>';
