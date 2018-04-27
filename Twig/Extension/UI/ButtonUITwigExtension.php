@@ -13,6 +13,7 @@ namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI;
 
 use Twig_SimpleFilter;
 use Twig_SimpleFunction;
+use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\AbstractABSBMDTwigExtension;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 use WBW\Library\Core\Utility\Argument\StringUtility;
 
@@ -32,63 +33,84 @@ class ButtonUITwigExtension extends AbstractUITwigExtension {
     const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.ui.button";
 
     /**
-     * Displays a button "Danger".
+     * Displays an AdminBSB material design button "Danger".
      *
      * @param array $args The arguments.
-     * @return string Returns the button "Danger".
+     * @return string Returns the AdminBSB material design button "Danger".
      */
-    public function buttonDangerFunction(array $args = []) {
-        return $this->button(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "title"), ArrayUtility::get($args, "size", false), ArrayUtility::get($args, "block", false), ArrayUtility::get($args, "disable", false), "btn-danger", ArrayUtility::get($args, "icon"), ArrayUtility::get($args, "circle", false));
+    public function absbmdButtonDangerFunction(array $args = []) {
+        return $this->absbmdButton(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "title"), ArrayUtility::get($args, "size", false), ArrayUtility::get($args, "block", false), ArrayUtility::get($args, "disable", false), "btn-danger", ArrayUtility::get($args, "icon"), ArrayUtility::get($args, "circle", false));
     }
 
     /**
-     * Displays a button "Default".
+     * Displays an AdminBSB material design button "Default".
      *
      * @param array $args The arguments.
-     * @return string Returns the button "Default".
+     * @return string Returns the AdminBSB material design button "Default".
      */
-    public function buttonDefaultFunction(array $args = []) {
-        return $this->button(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "title"), ArrayUtility::get($args, "size", false), ArrayUtility::get($args, "block", false), ArrayUtility::get($args, "disable", false), "btn-default", ArrayUtility::get($args, "icon"), ArrayUtility::get($args, "circle", false));
+    public function absbmdButtonDefaultFunction(array $args = []) {
+        return $this->absbmdButton(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "title"), ArrayUtility::get($args, "size", false), ArrayUtility::get($args, "block", false), ArrayUtility::get($args, "disable", false), "btn-default", ArrayUtility::get($args, "icon"), ArrayUtility::get($args, "circle", false));
     }
 
     /**
-     * Displays a button "Info".
+     * Displays an AdminBSB material design button "Info".
      *
      * @param array $args The arguments.
-     * @return string Returns the button "Info".
+     * @return string Returns the AdminBSB material design button "Info".
      */
-    public function buttonInfoFunction(array $args = []) {
-        return $this->button(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "title"), ArrayUtility::get($args, "size", false), ArrayUtility::get($args, "block", false), ArrayUtility::get($args, "disable", false), "btn-info", ArrayUtility::get($args, "icon"), ArrayUtility::get($args, "circle", false));
+    public function absbmdButtonInfoFunction(array $args = []) {
+        return $this->absbmdButton(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "title"), ArrayUtility::get($args, "size", false), ArrayUtility::get($args, "block", false), ArrayUtility::get($args, "disable", false), "btn-info", ArrayUtility::get($args, "icon"), ArrayUtility::get($args, "circle", false));
     }
 
     /**
-     * Displays a button "Primary".
+     * Displays an AdminBSB material design button "Primary".
      *
      * @param array $args The arguments.
-     * @return string Returns the button "Primary".
+     * @return string Returns the AdminBSB material design button "Primary".
      */
-    public function buttonPrimaryFunction(array $args = []) {
-        return $this->button(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "title"), ArrayUtility::get($args, "size", false), ArrayUtility::get($args, "block", false), ArrayUtility::get($args, "disable", false), "btn-primary", ArrayUtility::get($args, "icon"), ArrayUtility::get($args, "circle", false));
+    public function absbmdButtonPrimaryFunction(array $args = []) {
+        return $this->absbmdButton(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "title"), ArrayUtility::get($args, "size", false), ArrayUtility::get($args, "block", false), ArrayUtility::get($args, "disable", false), "btn-primary", ArrayUtility::get($args, "icon"), ArrayUtility::get($args, "circle", false));
     }
 
     /**
-     * Displays a button "Success".
+     * Displays an AdminBSB material design button "Success".
      *
      * @param array $args The arguments.
-     * @return string Returns the button "Success".
+     * @return string Returns the AdminBSB material design button "Success".
      */
-    public function buttonSuccessFunction(array $args = []) {
-        return $this->button(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "title"), ArrayUtility::get($args, "size", false), ArrayUtility::get($args, "block", false), ArrayUtility::get($args, "disable", false), "btn-success", ArrayUtility::get($args, "icon"), ArrayUtility::get($args, "circle", false));
+    public function absbmdButtonSuccessFunction(array $args = []) {
+        return $this->absbmdButton(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "title"), ArrayUtility::get($args, "size", false), ArrayUtility::get($args, "block", false), ArrayUtility::get($args, "disable", false), "btn-success", ArrayUtility::get($args, "icon"), ArrayUtility::get($args, "circle", false));
     }
 
     /**
-     * Displays a button "Warning".
+     * Displays an AdminBSB material design button "Warning".
      *
      * @param array $args The arguments.
-     * @return string Returns the button "Warning".
+     * @return string Returns the AdminBSB material design button "Warning".
      */
-    public function buttonWarningFunction(array $args = []) {
-        return $this->button(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "title"), ArrayUtility::get($args, "size", false), ArrayUtility::get($args, "block", false), ArrayUtility::get($args, "disable", false), "btn-warning", ArrayUtility::get($args, "icon"), ArrayUtility::get($args, "circle", false));
+    public function absbmdButtonWarningFunction(array $args = []) {
+        return $this->absbmdButton(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "title"), ArrayUtility::get($args, "size", false), ArrayUtility::get($args, "block", false), ArrayUtility::get($args, "disable", false), "btn-warning", ArrayUtility::get($args, "icon"), ArrayUtility::get($args, "circle", false));
+    }
+
+    /**
+     * Displays an AdminBSB material design link button.
+     *
+     * @param string $button The button.
+     * @param string $link The link.
+     * @return string Returns the AdminBSB material design link button.
+     */
+    public function absbmdLinkButtonFilter($button, $link = self::DEFAULT_HREF) {
+        return StringUtility::replace($button, ["<button", "type=\"button\"", "</button>"], ["<a", "href=\"" . $link . "\"", "</a>"]);
+    }
+
+    /**
+     * Displays a AdminBSB material design material design button.
+     *
+     * @param array $args The arguments.
+     * @return string Returns the AdminBSB material design material design button.
+     */
+    public function absbmdMaterialDesignButtonFunction(array $args = []) {
+        return $this->absbmdButton(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "title"), ArrayUtility::get($args, "size", false), ArrayUtility::get($args, "block", false), ArrayUtility::get($args, "disable", false), AbstractABSBMDTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), "bg-"), ArrayUtility::get($args, "icon"), ArrayUtility::get($args, "circle", false));
     }
 
     /**
@@ -98,7 +120,7 @@ class ButtonUITwigExtension extends AbstractUITwigExtension {
      */
     public function getFilters() {
         return [
-            new Twig_SimpleFilter("linkButton", [$this, "linkButtonFilter"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFilter("absbmdLinkButton", [$this, "absbmdLinkButtonFilter"], ["is_safe" => ["html"]]),
         ];
     }
 
@@ -109,35 +131,14 @@ class ButtonUITwigExtension extends AbstractUITwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("buttonDanger", [$this, "buttonDangerFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("buttonDefault", [$this, "buttonDefaultFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("buttonInfo", [$this, "buttonInfoFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("buttonPrimary", [$this, "buttonPrimaryFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("buttonSuccess", [$this, "buttonSuccessFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("buttonWarning", [$this, "buttonWarningFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("materialDesignButton", [$this, "materialDesignButtonFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("absbmdButtonDanger", [$this, "absbmdButtonDangerFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("absbmdButtonDefault", [$this, "absbmdButtonDefaultFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("absbmdButtonInfo", [$this, "absbmdButtonInfoFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("absbmdButtonPrimary", [$this, "absbmdButtonPrimaryFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("absbmdButtonSuccess", [$this, "absbmdButtonSuccessFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("absbmdButtonWarning", [$this, "absbmdButtonWarningFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("absbmdMaterialDesignButton", [$this, "absbmdMaterialDesignButtonFunction"], ["is_safe" => ["html"]]),
         ];
-    }
-
-    /**
-     * Displays a link button.
-     *
-     * @param string $button The button.
-     * @param string $link The link.
-     * @return string Returns the link button.
-     */
-    public function linkButtonFilter($button, $link = self::DEFAULT_HREF) {
-        return StringUtility::replace($button, ["<button", "type=\"button\"", "</button>"], ["<a", "href=\"" . $link . "\"", "</a>"]);
-    }
-
-    /**
-     * Displays a material design button.
-     *
-     * @param array $args The arguments.
-     * @return string Returns the material design button.
-     */
-    public function materialDesignButtonFunction(array $args = []) {
-        return $this->button(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "title"), ArrayUtility::get($args, "size", false), ArrayUtility::get($args, "block", false), ArrayUtility::get($args, "disable", false), $this->getColor(ArrayUtility::get($args, "color", "red"), "bg-"), ArrayUtility::get($args, "icon"), ArrayUtility::get($args, "circle", false));
     }
 
 }
