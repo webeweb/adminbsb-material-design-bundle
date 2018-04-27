@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI;
+namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
 use Twig_SimpleFunction;
-use WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\Typography\HeadingTypographyTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\HeadingTypographyTwigExtension;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
  * Modal UI Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle\Twig\Extension\UI
+ * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\UI
  */
 class ModalUITwigExtension extends AbstractUITwigExtension {
 
@@ -28,15 +28,22 @@ class ModalUITwigExtension extends AbstractUITwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.ui.modal";
+    const SERVICE_NAME = "webeweb.bundle.adminbsbbundle.twig.extension.ui.modal";
 
     /**
-     * Displays a modal header.
+     * Constructor.
+     */
+    public function __construct() {
+        parent::__construct();
+    }
+
+    /**
+     * Displays an AdminBSB modal header.
      *
      * @param array $args The arguments.
-     * @return string Returns the modal header.
+     * @return string Returns the AdminBSB modal header.
      */
-    public function modalHeaderFunction(array $args = []) {
+    public function adminBSBModalHeaderFunction(array $args = []) {
 
         // Initialize the paramters.
         $content = ArrayUtility::get($args, "content", self::DEFAULT_CONTENT);
@@ -57,7 +64,7 @@ class ModalUITwigExtension extends AbstractUITwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("modalHeader", [$this, "modalHeaderFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBModalHeader", [$this, "adminBSBModalHeaderFunction"], ["is_safe" => ["html"]]),
         ];
     }
 
