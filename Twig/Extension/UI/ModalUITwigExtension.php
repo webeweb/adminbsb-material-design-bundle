@@ -46,7 +46,7 @@ class ModalUITwigExtension extends AbstractUITwigExtension {
     public function adminBSBModalHeaderFunction(array $args = []) {
 
         // Initialize the paramters.
-        $content = ArrayUtility::get($args, "content", self::DEFAULT_CONTENT);
+        $content = ArrayUtility::get($args, "content", "");
         $icon    = ArrayUtility::get($args, "icon");
 
         if (null !== $icon) {

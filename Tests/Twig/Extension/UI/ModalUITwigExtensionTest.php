@@ -55,7 +55,7 @@ final class ModalUITwigExtensionTest extends PHPUnit_Framework_TestCase {
         $obj = new ModalUITwigExtension();
 
         $arg0 = [];
-        $res0 = '<h3 class="modal-title">&nbsp;</h3>';
+        $res0 = '<h3 class="modal-title"></h3>';
         $this->assertEquals($res0, $obj->adminBSBModalHeaderFunction($arg0));
 
         $arg1 = ["content" => "content"];
@@ -63,7 +63,7 @@ final class ModalUITwigExtensionTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals($res1, $obj->adminBSBModalHeaderFunction($arg1));
 
         $arg3 = ["icon" => "person"];
-        $res3 = '<h3 class="modal-title"><i class="material-icons" style="margin: -4px 0; vertical-align: sub;">person</i>&nbsp;</h3>';
+        $res3 = '<h3 class="modal-title"><i class="material-icons" style="margin: -4px 0; vertical-align: sub;">person</i></h3>';
         $this->assertEquals($res3, $obj->adminBSBModalHeaderFunction($arg3));
 
         $arg9 = ["content" => "content", "icon" => "person"];
