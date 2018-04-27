@@ -26,12 +26,12 @@ abstract class AbstractFormTwigExtension extends AbstractABSBMDTwigExtension {
     /**
      * Constructor.
      */
-    final public function __construct() {
+    public function __construct() {
         parent::__construct();
     }
 
     /**
-     * Displays a AdminBSB check box.
+     * Displays a AdminBSB material design checkbox.
      *
      * @param string $content The checkbox content.
      * @param string $name The checkbox name.
@@ -40,7 +40,7 @@ abstract class AbstractFormTwigExtension extends AbstractABSBMDTwigExtension {
      * @param boolean $disabled Disabled ?
      * @param boolean $filledIn Filled in ?
      * @param string $class The checkbox class.
-     * @return string Returns the AdminBSB checkbox.
+     * @return string Returns the AdminBSB material design checkbox.
      */
     final protected function absbmdCheckbox($content, $name, $id, $checked, $disabled, $filledIn, $class) {
 
@@ -65,7 +65,7 @@ abstract class AbstractFormTwigExtension extends AbstractABSBMDTwigExtension {
     }
 
     /**
-     * Displays a AdminBSB radio button.
+     * Displays a AdminBSB material design radio button.
      *
      * @param string $content The radio button content.
      * @param string $name The radio button name.
@@ -74,7 +74,7 @@ abstract class AbstractFormTwigExtension extends AbstractABSBMDTwigExtension {
      * @param boolean $disabled Disabled ?
      * @param boolean $withGap With gap ?
      * @param string $class The radio button class.
-     * @return string Returns the AdminBSB radio button.
+     * @return string Returns the AdminBSB material design radio button.
      */
     final protected function absbmdRadioButton($content, $name, $id, $checked, $disabled, $withGap, $class) {
 
@@ -99,7 +99,7 @@ abstract class AbstractFormTwigExtension extends AbstractABSBMDTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB switch button.
+     * Displays an AdminBSB material design switch button.
      *
      * @param string $offLabel The switch button off label.
      * @param string $name The switch button name.
@@ -108,7 +108,7 @@ abstract class AbstractFormTwigExtension extends AbstractABSBMDTwigExtension {
      * @param string $onLabel The switch button on label.
      * @param array $attrs The switch button attributes.
      * @param string $class The switch button class.
-     * @return string Returns the AdminBSB switch button.
+     * @return string Returns the AdminBSB material design switch button.
      */
     final protected function absbmdSwitchButton($offLabel, $name, $checked, $disabled, $onLabel, array $attrs, $class = null) {
 

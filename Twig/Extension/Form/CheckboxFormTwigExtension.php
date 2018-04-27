@@ -31,10 +31,17 @@ class CheckboxFormTwigExtension extends AbstractFormTwigExtension {
     const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.form.checkbox";
 
     /**
-     * Displays an AdminBSB basic checkbox.
+     * Constructor.
+     */
+    public function __construct() {
+        parent::__construct();
+    }
+
+    /**
+     * Displays an AdminBSB material design basic checkbox.
      *
      * @param array $args The arguments.
-     * @return string Returns the basic checkbox.
+     * @return string Returns the AdminBSB material design basic checkbox.
      */
     public function absbmdBasicCheckboxFunction(array $args = []) {
         return $this->absbmdCheckbox(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "id"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "filledIn", false), ArrayUtility::get($args, "class"));
@@ -53,10 +60,10 @@ class CheckboxFormTwigExtension extends AbstractFormTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB material design checkbox.
+     * Displays an AdminBSB material design material design checkbox.
      *
      * @param array $args The arguments.
-     * @return string Returns the material design checkbox.
+     * @return string Returns the AdminBSB material design material design checkbox.
      */
     public function absbmdMaterialDesignCheckboxFunction(array $args = []) {
         return $this->absbmdCheckbox(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "id"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "filledIn", false), ArrayUtility::get($args, "class", "") . AbstractABSBMDTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), " chk-col-"));
