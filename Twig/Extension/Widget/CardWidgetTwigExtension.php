@@ -32,12 +32,19 @@ class CardWidgetTwigExtension extends AbstractWidgetTwigExtension {
     const SERVICE_NAME = "webeweb.bundle.adminbsbmaterialdesignbundle.twig.extension.widget.card";
 
     /**
-     * Displays a card header.
+     * Constructor.
+     */
+    public function __construct() {
+        parent::__construct();
+    }
+
+    /**
+     * Displays an AdminBSB material design card header.
      *
      * @param array $args The arguments.
-     * @return string Returns the card header.
+     * @return string Returns the AdminBSB material design card header.
      */
-    public function cardHeaderFunction(array $args = []) {
+    public function absbmdCardHeaderFunction(array $args = []) {
 
         // Initialize the paramters.
         $content     = ArrayUtility::get($args, "content", self::DEFAULT_CONTENT);
@@ -62,7 +69,7 @@ class CardWidgetTwigExtension extends AbstractWidgetTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("cardHeader", [$this, "cardHeaderFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("absbmdCardHeader", [$this, "absbmdCardHeaderFunction"], ["is_safe" => ["html"]]),
         ];
     }
 

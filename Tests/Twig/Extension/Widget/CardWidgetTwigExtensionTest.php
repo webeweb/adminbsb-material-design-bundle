@@ -39,40 +39,40 @@ final class CardWidgetTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("cardHeader", $res[0]->getName());
-        $this->assertEquals([$obj, "cardHeaderFunction"], $res[0]->getCallable());
+        $this->assertEquals("absbmdCardHeader", $res[0]->getName());
+        $this->assertEquals([$obj, "absbmdCardHeaderFunction"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
     }
 
     /**
-     * Tests the cardHeaderFunction() method.
+     * Tests the absbmdCardHeaderFunction() method.
      *
      * @return void
      * @depends testGetFunctions
      */
-    public function testCardHeaderFunction() {
+    public function testAbsbmdCardHeaderFunction() {
 
         $obj = new CardWidgetTwigExtension();
 
         $arg0 = [];
         $res0 = '<h2 class="card-header">&nbsp;</h2>';
-        $this->assertEquals($res0, $obj->cardHeaderFunction($arg0));
+        $this->assertEquals($res0, $obj->absbmdCardHeaderFunction($arg0));
 
         $arg1 = ["content" => "content"];
         $res1 = '<h2 class="card-header">content</h2>';
-        $this->assertEquals($res1, $obj->cardHeaderFunction($arg1));
+        $this->assertEquals($res1, $obj->absbmdCardHeaderFunction($arg1));
 
         $arg2 = ["description" => "description"];
         $res2 = '<h2 class="card-header">&nbsp;<small>description</small></h2>';
-        $this->assertEquals($res2, $obj->cardHeaderFunction($arg2));
+        $this->assertEquals($res2, $obj->absbmdCardHeaderFunction($arg2));
 
         $arg3 = ["icon" => "person"];
         $res3 = '<h2 class="card-header"><i class="material-icons" style="margin: -4px 0; vertical-align: sub;">person</i>&nbsp;</h2>';
-        $this->assertEquals($res3, $obj->cardHeaderFunction($arg3));
+        $this->assertEquals($res3, $obj->absbmdCardHeaderFunction($arg3));
 
         $arg9 = ["content" => "content", "description" => "description", "icon" => "person"];
         $res9 = '<h2 class="card-header"><i class="material-icons" style="margin: -4px 0; vertical-align: sub;">person</i>content<small>description</small></h2>';
-        $this->assertEquals($res9, $obj->cardHeaderFunction($arg9));
+        $this->assertEquals($res9, $obj->absbmdCardHeaderFunction($arg9));
     }
 
 }
