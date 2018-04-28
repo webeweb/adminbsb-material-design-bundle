@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography;
 
 use Twig_SimpleFunction;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\ItalicTypographyTwigExtension as BaseTypographyTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\ItalicTypographyTwigExtension as BaseTwigExtension;
 
 /**
  * Italic typography Twig extension.
@@ -20,7 +20,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\ItalicTypographyTwigExt
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography
  */
-class ItalicTypographyTwigExtension extends BaseTypographyTwigExtension {
+class ItalicTypographyTwigExtension extends BaseTwigExtension {
 
     /**
      * Service name.

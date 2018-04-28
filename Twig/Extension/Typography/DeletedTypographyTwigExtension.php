@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography;
 
 use Twig_SimpleFunction;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\DeletedTypographyTwigExtension as BaseTypographyTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\DeletedTypographyTwigExtension as BaseTwigExtension;
 
 /**
  * Deleted typography Twig extension.
@@ -20,7 +20,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\DeletedTypographyTwigEx
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography
  */
-class DeletedTypographyTwigExtension extends BaseTypographyTwigExtension {
+class DeletedTypographyTwigExtension extends BaseTwigExtension {
 
     /**
      * Service name.

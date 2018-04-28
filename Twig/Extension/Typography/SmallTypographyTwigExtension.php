@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography;
 
 use Twig_SimpleFunction;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\SmallTypographyTwigExtension as BaseTypographyTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\SmallTypographyTwigExtension as BaseTwigExtension;
 
 /**
  * Small typography Twig extension.
@@ -20,7 +20,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\SmallTypographyTwigExte
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography
  */
-class SmallTypographyTwigExtension extends BaseTypographyTwigExtension {
+class SmallTypographyTwigExtension extends BaseTwigExtension {
 
     /**
      * Service name.
