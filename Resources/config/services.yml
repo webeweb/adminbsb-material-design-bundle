@@ -55,6 +55,11 @@ services:
         tags:
             - { name: twig.extension }
 
+    webeweb.bundle.adminbsbbundle.twig.extension.grid.grid:
+        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Grid\GridTwigExtension
+        tags:
+            - { name: twig.extension }
+
     webeweb.bundle.adminbsbbundle.twig.extension.typography.deleted:
         class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\DeletedTypographyTwigExtension
         tags:
