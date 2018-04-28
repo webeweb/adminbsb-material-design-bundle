@@ -11,12 +11,12 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Tests\DependencyInjection;
 
-use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
-use Symfony\Component\HttpKernel\KernelInterface;
-use Twig_Environment;
-use Twig_LoaderInterface;
 use WBW\Bundle\AdminBSBBundle\DependencyInjection\AdminBSBExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\Code\BasicBlockCodeTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\Code\InlineCodeTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\Code\SampleOutputCodeTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\Code\UserInputCodeTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\Code\VariableCodeTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\CheckboxFormTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\RadioButtonFormTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\SwitchButtonFormTwigExtension;
@@ -67,6 +67,13 @@ final class AdminBSBExtensionTest extends AbstractFrameworkTestCase {
         $obj = new AdminBSBExtension();
 
         $obj->load([], $this->containerBuilder);
+
+        // Code
+        $this->assertInstanceOf(BasicBlockCodeTwigExtension::class, $this->containerBuilder->get(BasicBlockCodeTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(InlineCodeTwigExtension::class, $this->containerBuilder->get(InlineCodeTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(SampleOutputCodeTwigExtension::class, $this->containerBuilder->get(SampleOutputCodeTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(UserInputCodeTwigExtension::class, $this->containerBuilder->get(UserInputCodeTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(VariableCodeTwigExtension::class, $this->containerBuilder->get(VariableCodeTwigExtension::SERVICE_NAME));
 
         // Form
         $this->assertInstanceOf(CheckboxFormTwigExtension::class, $this->containerBuilder->get(CheckboxFormTwigExtension::SERVICE_NAME));

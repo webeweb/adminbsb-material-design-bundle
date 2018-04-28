@@ -15,6 +15,31 @@ services:
             - [setSearchProvider, ["@?webeweb.bundle.adminbsbbundle.provider.search"]]
             - [setUserInfoProvider, ["@?webeweb.bundle.adminbsbbundle.provider.user_info"]]
 
+    webeweb.bundle.adminbsbbundle.twig.extension.code.basicblock:
+        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Code\BasicBlockCodeTwigExtension
+        tags:
+            - { name: twig.extension }
+
+    webeweb.bundle.adminbsbbundle.twig.extension.code.inline:
+        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Code\InlineCodeTwigExtension
+        tags:
+            - { name: twig.extension }
+
+    webeweb.bundle.adminbsbbundle.twig.extension.code.sampleoutput:
+        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Code\SampleOutputCodeTwigExtension
+        tags:
+            - { name: twig.extension }
+
+    webeweb.bundle.adminbsbbundle.twig.extension.code.userinput:
+        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Code\UserInputCodeTwigExtension
+        tags:
+            - { name: twig.extension }
+
+    webeweb.bundle.adminbsbbundle.twig.extension.code.variable:
+        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Code\VariableCodeTwigExtension
+        tags:
+            - { name: twig.extension }
+
     webeweb.bundle.adminbsbbundle.twig.extension.form.checkbox:
         class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\CheckboxFormTwigExtension
         tags:
