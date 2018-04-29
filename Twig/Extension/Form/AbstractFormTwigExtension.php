@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Form;
 
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractABSBMDTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
 use WBW\Library\Core\Utility\Argument\StringUtility;
 
 /**
@@ -21,7 +21,7 @@ use WBW\Library\Core\Utility\Argument\StringUtility;
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\Form
  * @abstract
  */
-abstract class AbstractFormTwigExtension extends AbstractABSBMDTwigExtension {
+abstract class AbstractFormTwigExtension extends AbstractAdminBSBTwigExtension {
 
     /**
      * Constructor.

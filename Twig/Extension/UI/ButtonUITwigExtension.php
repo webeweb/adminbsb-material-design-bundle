@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
 use Twig_SimpleFilter;
 use Twig_SimpleFunction;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractABSBMDTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 use WBW\Library\Core\Utility\Argument\StringUtility;
 
@@ -117,7 +117,7 @@ class ButtonUITwigExtension extends AbstractUITwigExtension {
      * @return string Returns the AdminBSB material design button.
      */
     public function adminBSBMaterialDesignButtonFunction(array $args = []) {
-        return $this->adminBSBButton(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "title"), ArrayUtility::get($args, "size", false), ArrayUtility::get($args, "block", false), ArrayUtility::get($args, "disable", false), AbstractABSBMDTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), "bg-"), ArrayUtility::get($args, "icon"), ArrayUtility::get($args, "circle", false));
+        return $this->adminBSBButton(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "title"), ArrayUtility::get($args, "size", false), ArrayUtility::get($args, "block", false), ArrayUtility::get($args, "disable", false), AbstractAdminBSBTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), "bg-"), ArrayUtility::get($args, "icon"), ArrayUtility::get($args, "circle", false));
     }
 
     /**

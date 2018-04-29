@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget;
 
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractABSBMDTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
 
 /**
  * Abstract widget twig extension.
@@ -20,7 +20,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractABSBMDTwigExtension;
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget
  * @abstract
  */
-abstract class AbstractWidgetTwigExtension extends AbstractABSBMDTwigExtension {
+abstract class AbstractWidgetTwigExtension extends AbstractAdminBSBTwigExtension {
 
     /**
      * Constructor.

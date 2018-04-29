@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Form;
 
 use Twig_SimpleFunction;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractABSBMDTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
@@ -66,7 +66,7 @@ class SwitchButtonFormTwigExtension extends AbstractFormTwigExtension {
      * @return string Returns the AdminBSB material designswitch button.
      */
     public function adminBSBMaterialDesignSwitchButtonFunction(array $args = []) {
-        return $this->adminBSBSwitchButton(ArrayUtility::get($args, "offLabel"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "onLabel"), ArrayUtility::get($args, "attr", []), AbstractABSBMDTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), " switch-col-"));
+        return $this->adminBSBSwitchButton(ArrayUtility::get($args, "offLabel"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "onLabel"), ArrayUtility::get($args, "attr", []), AbstractAdminBSBTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), " switch-col-"));
     }
 
 }

@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
 use WBW\Bundle\AdminBSBBundle\Provider\Color\DefaultColorProvider;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractABSBMDTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationInterface;
 use WBW\Library\Core\Utility\Argument\StringUtility;
 
@@ -23,7 +23,7 @@ use WBW\Library\Core\Utility\Argument\StringUtility;
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\UI
  * @abstract
  */
-abstract class AbstractUITwigExtension extends AbstractABSBMDTwigExtension implements NavigationInterface {
+abstract class AbstractUITwigExtension extends AbstractAdminBSBTwigExtension implements NavigationInterface {
 
     /**
      * Constructor.

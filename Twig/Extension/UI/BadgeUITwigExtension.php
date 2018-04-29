@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
 use Twig_SimpleFunction;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractABSBMDTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
@@ -104,7 +104,7 @@ class BadgeUITwigExtension extends AbstractUITwigExtension {
      * @return string Returns the AdminBSB list badge.
      */
     public function adminBSBListBadgeFunction(array $args = []) {
-        return $this->adminBSBBadge(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "label"), false, AbstractABSBMDTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), "bg-"), true, ArrayUtility::get($args, "link"));
+        return $this->adminBSBBadge(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "label"), false, AbstractAdminBSBTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), "bg-"), true, ArrayUtility::get($args, "link"));
     }
 
     /**
@@ -114,7 +114,7 @@ class BadgeUITwigExtension extends AbstractUITwigExtension {
      * @return string Returns the AdminBSB material design button badge.
      */
     public function adminBSBMaterialDesignButtonBadgeFunction(array $args = []) {
-        return $this->adminBSBBadge(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "label"), ArrayUtility::get($args, "large", false), AbstractABSBMDTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), "bg-"));
+        return $this->adminBSBBadge(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "label"), ArrayUtility::get($args, "large", false), AbstractAdminBSBTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), "bg-"));
     }
 
     /**

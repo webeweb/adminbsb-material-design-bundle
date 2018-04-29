@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
 use Twig_SimpleFunction;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractABSBMDTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\AlertComponentTwigExtension as BaseTwigExtension;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 use WBW\Library\Core\Utility\Argument\StringUtility;
@@ -57,7 +57,7 @@ class AlertUITwigExtension extends BaseTwigExtension {
     public function adminBSBMaterialDesignAlertFunction(array $args = []) {
         $template = $this->bootstrapAlertDangerFunction($args);
         $searches = ["alert-danger"];
-        $replaces = [AbstractABSBMDTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), "bg-")];
+        $replaces = [AbstractAdminBSBTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), "bg-")];
         return StringUtility::replace($template, $searches, $replaces);
     }
 

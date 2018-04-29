@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
 use Twig_SimpleFunction;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractABSBMDTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
@@ -66,7 +66,7 @@ class IconUITwigExtension extends AbstractUITwigExtension {
      * @return string Returns the AdminBSB material design icon.
      */
     public function adminBSBMaterialDesignIconFunction(array $args = []) {
-        return $this->adminBSBIcon(ArrayUtility::get($args, "name"), ArrayUtility::get($args, "style"), AbstractABSBMDTwigExtension::fixColor(ArrayUtility::get($args, "color"), "col-"));
+        return $this->adminBSBIcon(ArrayUtility::get($args, "name"), ArrayUtility::get($args, "style"), AbstractAdminBSBTwigExtension::fixColor(ArrayUtility::get($args, "color"), "col-"));
     }
 
 }

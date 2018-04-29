@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
 use Twig_SimpleFunction;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractABSBMDTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
@@ -44,7 +44,7 @@ class PreloaderUITwigExtension extends AbstractUITwigExtension {
      * @return string Retruns the AdminBSB material design preloader L.
      */
     public function adminBSBMaterialDesignPreloaderLFunction(array $args = []) {
-        return $this->adminBSBPreloader(AbstractABSBMDTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), "pl-"), "l");
+        return $this->adminBSBPreloader(AbstractAdminBSBTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), "pl-"), "l");
     }
 
     /**
@@ -54,7 +54,7 @@ class PreloaderUITwigExtension extends AbstractUITwigExtension {
      * @return string Retruns the AdminBSB material design preloader S.
      */
     public function adminBSBMaterialDesignPreloaderSFunction(array $args = []) {
-        return $this->adminBSBPreloader(AbstractABSBMDTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), "pl-"), "s");
+        return $this->adminBSBPreloader(AbstractAdminBSBTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), "pl-"), "s");
     }
 
     /**
@@ -64,7 +64,7 @@ class PreloaderUITwigExtension extends AbstractUITwigExtension {
      * @return string Retruns the AdminBSB material design preloader SM.
      */
     public function adminBSBMaterialDesignPreloaderSMFunction(array $args = []) {
-        return $this->adminBSBPreloader(AbstractABSBMDTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), "pl-"), "sm");
+        return $this->adminBSBPreloader(AbstractAdminBSBTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), "pl-"), "sm");
     }
 
     /**
@@ -74,7 +74,7 @@ class PreloaderUITwigExtension extends AbstractUITwigExtension {
      * @return string Retruns the AdminBSB material design preloader XL.
      */
     public function adminBSBMaterialDesignPreloaderXLFunction(array $args = []) {
-        return $this->adminBSBPreloader(AbstractABSBMDTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), "pl-"), "xl");
+        return $this->adminBSBPreloader(AbstractAdminBSBTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), "pl-"), "xl");
     }
 
     /**
@@ -84,7 +84,7 @@ class PreloaderUITwigExtension extends AbstractUITwigExtension {
      * @return string Retruns the AdminBSB material design preloader XS.
      */
     public function adminBSBMaterialDesignPreloaderXSFunction(array $args = []) {
-        return $this->adminBSBPreloader(AbstractABSBMDTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), "pl-"), "xs");
+        return $this->adminBSBPreloader(AbstractAdminBSBTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), "pl-"), "xs");
     }
 
     /**
