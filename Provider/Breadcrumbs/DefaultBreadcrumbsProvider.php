@@ -31,7 +31,7 @@ class DefaultBreadcrumbsProvider implements BreadcrumbsProviderInterface {
     /**
      * {@inheritdoc}
      */
-    public function getTemplate() {
+    public function getView() {
         return "@ABSBMD/html/body/section/div/div.block-header.html.twig";
     }
 

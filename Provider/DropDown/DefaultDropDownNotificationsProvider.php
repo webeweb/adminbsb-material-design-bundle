@@ -38,7 +38,7 @@ class DefaultDropDownNotificationsProvider implements DropDownNotificationsProvi
     /**
      * {@inheritdoc}
      */
-    public function getTemplate() {
+    public function getView() {
         return "@ABSBMD/html/body/nav/div/div/ul/li.dropdown_notifications.html.twig";
     }
 

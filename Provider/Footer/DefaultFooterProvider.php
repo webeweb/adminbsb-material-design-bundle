@@ -31,7 +31,7 @@ class DefaultFooterProvider implements FooterProviderInterface {
     /**
      * {@inheritdoc}
      */
-    public function getTemplate() {
+    public function getView() {
         return "@ABSBMD/html/body/section/aside/div.legal.html.twig";
     }
 

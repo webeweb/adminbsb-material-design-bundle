@@ -32,7 +32,7 @@ final class DefaultBreadcrumbsProviderTest extends PHPUnit_Framework_TestCase {
 
         $obj = new DefaultBreadcrumbsProvider();
 
-        $this->assertEquals("@ABSBMD/html/body/section/div/div.block-header.html.twig", $obj->getTemplate());
+        $this->assertEquals("@ABSBMD/html/body/section/div/div.block-header.html.twig", $obj->getView());
     }
 
 }

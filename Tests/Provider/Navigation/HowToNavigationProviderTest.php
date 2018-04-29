@@ -14,7 +14,7 @@ namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\Navigation;
 use PHPUnit_Framework_TestCase;
 use Symfony\Component\Routing\RouterInterface;
 use WBW\Bundle\AdminBSBBundle\Provider\Navigation\HowToNavigationProvider;
-use WBW\Bundle\BootstrapBundle\Navigation\Node\BreadcrumbNode;
+use WBW\Bundle\BootstrapBundle\Navigation\BreadcrumbNode;
 
 /**
  * How-to navigation provider test.

@@ -33,7 +33,7 @@ final class DefaultDropDownHookProviderTest extends PHPUnit_Framework_TestCase {
         $obj = new DefaultDropDownHookProvider();
 
         $this->assertEquals([], $obj->getItems());
-        $this->assertEquals("@ABSBMD/html/body/nav/div/div/ul/li.dropdown_hook.html.twig", $obj->getTemplate());
+        $this->assertEquals("@ABSBMD/html/body/nav/div/div/ul/li.dropdown_hook.html.twig", $obj->getView());
     }
 
 }

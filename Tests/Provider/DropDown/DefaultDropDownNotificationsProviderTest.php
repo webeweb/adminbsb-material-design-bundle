@@ -33,7 +33,7 @@ final class DefaultDropDownNotificationsProviderTest extends PHPUnit_Framework_T
         $obj = new DefaultDropDownNotificationsProvider();
 
         $this->assertEquals([], $obj->getNotifications());
-        $this->assertEquals("@ABSBMD/html/body/nav/div/div/ul/li.dropdown_notifications.html.twig", $obj->getTemplate());
+        $this->assertEquals("@ABSBMD/html/body/nav/div/div/ul/li.dropdown_notifications.html.twig", $obj->getView());
     }
 
 }

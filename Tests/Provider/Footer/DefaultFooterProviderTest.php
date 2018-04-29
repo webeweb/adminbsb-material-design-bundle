@@ -32,7 +32,7 @@ final class DefaultFooterProviderTest extends PHPUnit_Framework_TestCase {
 
         $obj = new DefaultFooterProvider();
 
-        $this->assertEquals("@ABSBMD/html/body/section/aside/div.legal.html.twig", $obj->getTemplate());
+        $this->assertEquals("@ABSBMD/html/body/section/aside/div.legal.html.twig", $obj->getView());
     }
 
 }

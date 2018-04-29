@@ -31,13 +31,6 @@ class DefaultUserInfoProvider implements UserInfoProviderInterface {
     /**
      * {@inheritdoc}
      */
-    public function getTemplate() {
-        return "@ABSBMD/html/body/section/aside/div.user-info.html.twig";
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function provideRegisterLink() {
         return false;
     }
@@ -47,6 +40,13 @@ class DefaultUserInfoProvider implements UserInfoProviderInterface {
      */
     public function provideResettingLink() {
         return false;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getView() {
+        return "@ABSBMD/html/body/section/aside/div.user-info.html.twig";
     }
 
 }

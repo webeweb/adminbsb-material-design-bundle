@@ -32,7 +32,7 @@ final class DefaultSearchProviderTest extends PHPUnit_Framework_TestCase {
 
         $obj = new DefaultSearchProvider();
 
-        $this->assertEquals("@ABSBMD/html/body/div.search-bar.html.twig", $obj->getTemplate());
+        $this->assertEquals("@ABSBMD/html/body/div.search-bar.html.twig", $obj->getView());
     }
 
 }

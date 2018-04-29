@@ -38,7 +38,7 @@ class DefaultDropDownTasksProvider implements DropDownTasksProviderInterface {
     /**
      * {@inheritdoc}
      */
-    public function getTemplate() {
+    public function getView() {
         return "@ABSBMD/html/body/nav/div/div/ul/li.dropdown_tasks.html.twig";
     }
 

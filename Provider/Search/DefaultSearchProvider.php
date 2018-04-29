@@ -31,7 +31,7 @@ class DefaultSearchProvider implements SearchProviderInterface {
     /**
      * {@inheritdoc}
      */
-    public function getTemplate() {
+    public function getView() {
         return "@ABSBMD/html/body/div.search-bar.html.twig";
     }
 

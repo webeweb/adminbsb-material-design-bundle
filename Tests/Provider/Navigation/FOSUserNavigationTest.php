@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\Navigation;
 
 use PHPUnit_Framework_TestCase;
 use WBW\Bundle\AdminBSBBundle\Provider\Navigation\FOSUserNavigationProvider;
-use WBW\Bundle\BootstrapBundle\Navigation\Node\BreadcrumbNode;
+use WBW\Bundle\BootstrapBundle\Navigation\BreadcrumbNode;
 
 /**
  * FOS User navigation provider test.

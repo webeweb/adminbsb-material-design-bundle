@@ -33,7 +33,7 @@ final class DefaultDropDownTasksProviderTest extends PHPUnit_Framework_TestCase 
         $obj = new DefaultDropDownTasksProvider();
 
         $this->assertEquals([], $obj->getTasks());
-        $this->assertEquals("@ABSBMD/html/body/nav/div/div/ul/li.dropdown_tasks.html.twig", $obj->getTemplate());
+        $this->assertEquals("@ABSBMD/html/body/nav/div/div/ul/li.dropdown_tasks.html.twig", $obj->getView());
     }
 
 }

@@ -38,7 +38,7 @@ class DefaultDropDownHookProvider implements DropDownHookProviderInterface {
     /**
      * {@inheritdoc}
      */
-    public function getTemplate() {
+    public function getView() {
         return "@ABSBMD/html/body/nav/div/div/ul/li.dropdown_hook.html.twig";
     }
 

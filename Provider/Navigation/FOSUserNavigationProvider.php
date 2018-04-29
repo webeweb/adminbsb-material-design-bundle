@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Provider\Navigation;
 
-use WBW\Bundle\BootstrapBundle\Navigation\Node\BreadcrumbNode;
+use WBW\Bundle\BootstrapBundle\Navigation\BreadcrumbNode;
 
 /**
  * FOSUserNavigationProvider.

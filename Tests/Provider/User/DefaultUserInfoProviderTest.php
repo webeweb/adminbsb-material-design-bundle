@@ -32,7 +32,7 @@ final class DefaultUserInfoProviderTest extends PHPUnit_Framework_TestCase {
 
         $obj = new DefaultUserInfoProvider();
 
-        $this->assertEquals("@ABSBMD/html/body/section/aside/div.user-info.html.twig", $obj->getTemplate());
+        $this->assertEquals("@ABSBMD/html/body/section/aside/div.user-info.html.twig", $obj->getView());
         $this->assertFalse($obj->provideRegisterLink());
         $this->assertFalse($obj->provideResettingLink());
     }

@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Provider\Navigation;
 
 use Symfony\Component\Routing\RouterInterface;
-use WBW\Bundle\BootstrapBundle\Navigation\Node\BreadcrumbNode;
+use WBW\Bundle\BootstrapBundle\Navigation\BreadcrumbNode;
 
 /**
  * How-to navigation provider.
