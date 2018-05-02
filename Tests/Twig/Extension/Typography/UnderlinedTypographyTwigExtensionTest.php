@@ -39,9 +39,27 @@ final class UnderlinedTypographyTwigExtensionTest extends PHPUnit_Framework_Test
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("adminBSBUnderlined", $res[0]->getName());
-        $this->assertEquals([$obj, "bootstrapUnderlinedFunction"], $res[0]->getCallable());
+        $this->assertEquals("adminBSBUnderline", $res[0]->getName());
+        $this->assertEquals([$obj, "adminBSBUnderlineFunction"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+    }
+
+    /**
+     * Tests the adminBSBUnderlineFunction() method.
+     *
+     * @return void
+     */
+    public function testAdminBSBUnderlineFunction() {
+
+        $obj = new UnderlinedTypographyTwigExtension();
+
+        $arg0 = [];
+        $res0 = '<span class="font-underline"></span>';
+        $this->assertEquals($res0, $obj->adminBSBUnderlineFunction($arg0));
+
+        $arg9 = ["content" => "content"];
+        $res9 = '<span class="font-underline">content</span>';
+        $this->assertEquals($res9, $obj->adminBSBUnderlineFunction($arg9));
     }
 
 }
