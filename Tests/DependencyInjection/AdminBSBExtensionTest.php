@@ -20,14 +20,15 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Code\VariableCodeTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\CheckboxFormTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\RadioButtonFormTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\SwitchButtonFormTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\BoldTypographyTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\DeletedTypographyTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\HeadingTypographyTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\InsertedTypographyTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\ItalicTypographyTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\MarkedTypographyTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\OverlinedTypographyTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\SmallTypographyTwigExtension;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\StrikeThroughTypographyTwigExtension;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\StrongTypographyTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\StrikethroughTypographyTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\UnderlinedTypographyTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\AlertUITwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\BadgeUITwigExtension;
@@ -81,14 +82,15 @@ final class AdminBSBExtensionTest extends AbstractFrameworkTestCase {
         $this->assertInstanceOf(SwitchButtonFormTwigExtension::class, $this->containerBuilder->get(SwitchButtonFormTwigExtension::SERVICE_NAME));
 
         // Typography
+        $this->assertInstanceOf(BoldTypographyTwigExtension::class, $this->containerBuilder->get(BoldTypographyTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(DeletedTypographyTwigExtension::class, $this->containerBuilder->get(DeletedTypographyTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(HeadingTypographyTwigExtension::class, $this->containerBuilder->get(HeadingTypographyTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(InsertedTypographyTwigExtension::class, $this->containerBuilder->get(InsertedTypographyTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(ItalicTypographyTwigExtension::class, $this->containerBuilder->get(ItalicTypographyTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(MarkedTypographyTwigExtension::class, $this->containerBuilder->get(MarkedTypographyTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(OverlinedTypographyTwigExtension::class, $this->containerBuilder->get(OverlinedTypographyTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(SmallTypographyTwigExtension::class, $this->containerBuilder->get(SmallTypographyTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(StrikeThroughTypographyTwigExtension::class, $this->containerBuilder->get(StrikeThroughTypographyTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(StrongTypographyTwigExtension::class, $this->containerBuilder->get(StrongTypographyTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(StrikethroughTypographyTwigExtension::class, $this->containerBuilder->get(StrikethroughTypographyTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(UnderlinedTypographyTwigExtension::class, $this->containerBuilder->get(UnderlinedTypographyTwigExtension::SERVICE_NAME));
 
         // UI

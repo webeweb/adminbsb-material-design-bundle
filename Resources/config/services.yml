@@ -46,6 +46,11 @@ services:
         tags:
             - { name: "twig.extension" }
 
+    webeweb.bundle.adminbsbbundle.twig.extension.typography.bold:
+        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\BoldTypographyTwigExtension
+        tags:
+            - { name: "twig.extension" }
+
     webeweb.bundle.adminbsbbundle.twig.extension.typography.deleted:
         class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\DeletedTypographyTwigExtension
         tags:
@@ -71,6 +76,11 @@ services:
         tags:
             - { name: "twig.extension" }
 
+    webeweb.bundle.adminbsbbundle.twig.extension.typography.overlined:
+        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\OverlinedTypographyTwigExtension
+        tags:
+            - { name: "twig.extension" }
+
     webeweb.bundle.adminbsbbundle.twig.extension.typography.small:
         class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\SmallTypographyTwigExtension
         tags:
@@ -78,11 +88,6 @@ services:
 
     webeweb.bundle.adminbsbbundle.twig.extension.typography.strikethrough:
         class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\StrikeThroughTypographyTwigExtension
-        tags:
-            - { name: "twig.extension" }
-
-    webeweb.bundle.adminbsbbundle.twig.extension.typography.strong:
-        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\StrongTypographyTwigExtension
         tags:
             - { name: "twig.extension" }
 
