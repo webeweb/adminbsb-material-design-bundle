@@ -40,8 +40,26 @@ final class ItalicTypographyTwigExtensionTest extends PHPUnit_Framework_TestCase
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
         $this->assertEquals("adminBSBItalic", $res[0]->getName());
-        $this->assertEquals([$obj, "bootstrapItalicFunction"], $res[0]->getCallable());
+        $this->assertEquals([$obj, "adminBSBItalicFunction"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+    }
+
+    /**
+     * Tests the adminBSBItalicFunction() method.
+     *
+     * @return void
+     */
+    public function testAdminBSBItalicFunction() {
+
+        $obj = new ItalicTypographyTwigExtension();
+
+        $arg0 = [];
+        $res0 = '<span class="font-italic"></span>';
+        $this->assertEquals($res0, $obj->adminBSBItalicFunction($arg0));
+
+        $arg9 = ["content" => "content"];
+        $res9 = '<span class="font-italic">content</span>';
+        $this->assertEquals($res9, $obj->adminBSBItalicFunction($arg9));
     }
 
 }

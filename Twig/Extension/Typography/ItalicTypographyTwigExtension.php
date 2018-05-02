@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography;
 
 use Twig_SimpleFunction;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\ItalicTypographyTwigExtension as BaseTwigExtension;
+use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
  * Italic typography Twig extension.
@@ -20,7 +20,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\ItalicTypographyTwigExt
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography
  */
-class ItalicTypographyTwigExtension extends BaseTwigExtension {
+class ItalicTypographyTwigExtension extends AbstractTypographyTwigExtension {
 
     /**
      * Service name.
@@ -37,13 +37,23 @@ class ItalicTypographyTwigExtension extends BaseTwigExtension {
     }
 
     /**
+     * Displays an AdminBSB italic text.
+     *
+     * @param array $args The arguments.
+     * @return Returns the AdminBSB italic text.
+     */
+    public function adminBSBItalicFunction(array $args = []) {
+        return $this->adminBSBItalic(ArrayUtility::get($args, "content"));
+    }
+
+    /**
      * Get the Twig functions.
      *
      * @return array Returns the Twig functions.
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("adminBSBItalic", [$this, "bootstrapItalicFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBItalic", [$this, "adminBSBItalicFunction"], ["is_safe" => ["html"]]),
         ];
     }
 
