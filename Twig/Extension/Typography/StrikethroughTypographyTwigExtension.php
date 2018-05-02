@@ -12,15 +12,15 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography;
 
 use Twig_SimpleFunction;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\StrikeThroughTypographyTwigExtension as BaseTwigExtension;
+use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
- * Strike through typography Twig extension.
+ * Strikethrough typography Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography
  */
-class StrikeThroughTypographyTwigExtension extends BaseTwigExtension {
+class StrikethroughTypographyTwigExtension extends AbstractTypographyTwigExtension {
 
     /**
      * Service name.
@@ -37,13 +37,23 @@ class StrikeThroughTypographyTwigExtension extends BaseTwigExtension {
     }
 
     /**
+     * Displays an AdminBSB line through text.
+     *
+     * @param array $args The arguments.
+     * @return string Returns the AdminBSB line through text.
+     */
+    public function adminBSBLineThroughFunction(array $args = []) {
+        return $this->adminBSBLineThrough(ArrayUtility::get($args, "content"));
+    }
+
+    /**
      * Get the Twig functions.
      *
      * @return array Returns the Twig functions.
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("adminBSBStrikeThrough", [$this, "bootstrapStrikeThroughFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBLineThrough", [$this, "adminBSBLineThroughFunction"], ["is_safe" => ["html"]]),
         ];
     }
 
