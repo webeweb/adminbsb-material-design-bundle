@@ -46,6 +46,11 @@ services:
         tags:
             - { name: "twig.extension" }
 
+    webeweb.bundle.adminbsbbundle.twig.extension.menu.multilevelmenu:
+        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Menu\MultiLevelMenuTwigExtension
+        tags:
+            - { name: "twig.extension" }
+
     webeweb.bundle.adminbsbbundle.twig.extension.typography.bold:
         class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\BoldTypographyTwigExtension
         tags:

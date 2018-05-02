@@ -23,6 +23,13 @@ use WBW\Bundle\BootstrapBundle\Navigation\NavigationTree;
 class MultiLevelMenuTwigExtension extends AbstractMenuTwigExtension {
 
     /**
+     * Service name.
+     *
+     * @var string
+     */
+    const SERVICE_NAME = "webeweb.bundle.adminbsbbundle.twig.extension.menu.multilevelmenu";
+
+    /**
      * Constructor.
      */
     public function __construct() {

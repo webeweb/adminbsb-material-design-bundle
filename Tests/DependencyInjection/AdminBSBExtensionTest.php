@@ -20,6 +20,8 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Code\VariableCodeTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\CheckboxFormTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\RadioButtonFormTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\SwitchButtonFormTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\Grid\GridTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\Menu\MultiLevelMenuTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\BoldTypographyTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\DeletedTypographyTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\HeadingTypographyTwigExtension;
@@ -80,6 +82,12 @@ final class AdminBSBExtensionTest extends AbstractFrameworkTestCase {
         $this->assertInstanceOf(CheckboxFormTwigExtension::class, $this->containerBuilder->get(CheckboxFormTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(RadioButtonFormTwigExtension::class, $this->containerBuilder->get(RadioButtonFormTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(SwitchButtonFormTwigExtension::class, $this->containerBuilder->get(SwitchButtonFormTwigExtension::SERVICE_NAME));
+
+        // Grid
+        $this->assertInstanceOf(GridTwigExtension::class, $this->containerBuilder->get(GridTwigExtension::SERVICE_NAME));
+
+        // Menu
+        $this->assertInstanceOf(MultiLevelMenuTwigExtension::class, $this->containerBuilder->get(MultiLevelMenuTwigExtension::SERVICE_NAME));
 
         // Typography
         $this->assertInstanceOf(BoldTypographyTwigExtension::class, $this->containerBuilder->get(BoldTypographyTwigExtension::SERVICE_NAME));
