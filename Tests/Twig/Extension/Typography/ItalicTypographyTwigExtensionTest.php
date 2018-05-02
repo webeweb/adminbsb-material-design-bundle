@@ -48,6 +48,7 @@ final class ItalicTypographyTwigExtensionTest extends PHPUnit_Framework_TestCase
      * Tests the adminBSBItalicFunction() method.
      *
      * @return void
+     * @depends testGetFunctions
      */
     public function testAdminBSBItalicFunction() {
 

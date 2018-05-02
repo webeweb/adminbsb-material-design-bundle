@@ -48,6 +48,7 @@ final class UnderlinedTypographyTwigExtensionTest extends PHPUnit_Framework_Test
      * Tests the adminBSBUnderlineFunction() method.
      *
      * @return void
+     * @depends testGetFunctions
      */
     public function testAdminBSBUnderlineFunction() {
 

@@ -48,6 +48,7 @@ final class StrikethroughTypographyTwigExtensionTest extends PHPUnit_Framework_T
      * Tests the adminBSBLineThroughFunction() method.
      *
      * @return void
+     * @depends testGetFunctions
      */
     public function testAdminBSBLineThroughFunction() {
 

@@ -48,6 +48,7 @@ final class BoldTypographyTwigExtensionTest extends PHPUnit_Framework_TestCase {
      * Tests the adminBSBBoldFunction() method.
      *
      * @return void
+     * @depends testGetFunctions
      */
     public function testAdminBSBBoldFunction() {
 

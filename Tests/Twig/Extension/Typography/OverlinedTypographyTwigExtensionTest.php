@@ -48,6 +48,7 @@ final class OverlinedTypographyTwigExtensionTest extends PHPUnit_Framework_TestC
      * Tests the adminBSBOverlineFunction() method.
      *
      * @return void
+     * @depends testGetFunctions
      */
     public function testAdminBSBOverlineFunction() {
 
