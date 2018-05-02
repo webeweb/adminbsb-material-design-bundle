@@ -12,22 +12,22 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography;
 
 use Twig_SimpleFunction;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\StrongTypographyTwigExtension as BaseTwigExtension;
+use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
- * Strong typography Twig extension.
+ * Bold typography Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography
  */
-class StrongTypographyTwigExtension extends BaseTwigExtension {
+class BoldTypographyTwigExtension extends AbstractTypographyTwigExtension {
 
     /**
      * Service name.
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.adminbsbbundle.twig.extension.typography.strong";
+    const SERVICE_NAME = "webeweb.bundle.adminbsbbundle.twig.extension.typography.bold";
 
     /**
      * Constructor.
@@ -37,13 +37,23 @@ class StrongTypographyTwigExtension extends BaseTwigExtension {
     }
 
     /**
+     * Displays an AdminBSB bold text.
+     *
+     * @param array $args The arguments.
+     * @return string Returns the AdminBSB bold text.
+     */
+    public function adminBSBBoldFunction(array $args = []) {
+        return $this->adminBSBBold(ArrayUtility::get($args, "content"));
+    }
+
+    /**
      * Get the Twig functions.
      *
      * @return array Returns the Twig functions.
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("adminBSBStrong", [$this, "bootstrapStrongFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBBold", [$this, "adminBSBBoldFunction"], ["is_safe" => ["html"]]),
         ];
     }
 
