@@ -40,7 +40,7 @@ class ItalicTypographyTwigExtension extends AbstractTypographyTwigExtension {
      * Displays an AdminBSB italic text.
      *
      * @param array $args The arguments.
-     * @return Returns the AdminBSB italic text.
+     * @return string Returns the AdminBSB italic text.
      */
     public function adminBSBItalicFunction(array $args = []) {
         return $this->adminBSBItalic(ArrayUtility::get($args, "content"));
