@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Provider\Application;
 
-use WBW\Bundle\BootstrapBundle\Provider\Application\ApplicationProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\ApplicationProviderInterface;
 
 /**
  * Default application provider.

@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Provider\DropDown;
 
-use WBW\Bundle\BootstrapBundle\Provider\DropDown\DropDownTasksProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\DropDownTasksProviderInterface;
 
 /**
  * Default drop down "Tasks" provider.

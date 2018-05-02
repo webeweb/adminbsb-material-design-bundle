@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Provider\Search;
 
-use WBW\Bundle\BootstrapBundle\Provider\Search\SearchProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\SearchProviderInterface;
 
 /**
  * Default search provider.

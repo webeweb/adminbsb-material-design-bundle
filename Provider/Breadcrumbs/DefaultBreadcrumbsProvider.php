@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Provider\Breadcrumbs;
 
-use WBW\Bundle\BootstrapBundle\Provider\Breadcrumbs\BreadcrumbsProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\BreadcrumbsProviderInterface;
 
 /**
  * Default breadcrumbs provider.

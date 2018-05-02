@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Provider\Navigation;
 
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationTree;
-use WBW\Bundle\BootstrapBundle\Provider\Navigation\NavigationProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\NavigationProviderInterface;
 
 /**
  * Default navigation provider.

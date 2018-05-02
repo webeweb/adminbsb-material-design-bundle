@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Provider\DropDown;
 
-use WBW\Bundle\BootstrapBundle\Provider\DropDown\DropDownHookProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\DropDownHookProviderInterface;
 
 /**
  * Default drop down hook provider.

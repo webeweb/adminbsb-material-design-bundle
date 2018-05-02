@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Provider\DropDown;
 
-use WBW\Bundle\BootstrapBundle\Provider\DropDown\DropDownNotificationsProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\DropDownNotificationsProviderInterface;
 
 /**
  * Default drop down "Notifications" provider.

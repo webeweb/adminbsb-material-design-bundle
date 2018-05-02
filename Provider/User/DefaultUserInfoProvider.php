@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Provider\User;
 
-use WBW\Bundle\BootstrapBundle\Provider\User\UserInfoProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\UserInfoProviderInterface;
 
 /**
  * Default user info provider.

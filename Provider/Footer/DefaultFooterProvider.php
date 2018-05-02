@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Provider\Footer;
 
-use WBW\Bundle\BootstrapBundle\Provider\Footer\FooterProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\FooterProviderInterface;
 
 /**
  * Default footer provider.
