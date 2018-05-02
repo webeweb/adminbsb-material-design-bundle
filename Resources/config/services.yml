@@ -87,7 +87,7 @@ services:
             - { name: "twig.extension" }
 
     webeweb.bundle.adminbsbbundle.twig.extension.typography.strikethrough:
-        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\StrikeThroughTypographyTwigExtension
+        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\StrikethroughTypographyTwigExtension
         tags:
             - { name: "twig.extension" }
 
