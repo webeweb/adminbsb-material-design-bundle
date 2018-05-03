@@ -84,7 +84,7 @@ abstract class AbstractMenuTwigExtension extends AbstractAdminBSBTwigExtension {
         $attributes["class"] = "menu-header";
 
         // Initialize the parameters.
-        $innerHTML = null !== $tree->getId() ? $this->translator->trans($tree->getId()) : "";
+        $innerHTML = null !== $tree->getId() ? $this->translate($tree->getId()) : "";
 
         // Return the HTML.
         return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $innerHTML]);
@@ -145,7 +145,7 @@ abstract class AbstractMenuTwigExtension extends AbstractAdminBSBTwigExtension {
     private function adminBSBMenuItemLabel(NavigationNode $node) {
 
         // Initialize the parameters.
-        $innerHTML = null !== $node->getId() ? $this->translator->trans($node->getId()) : "";
+        $innerHTML = null !== $node->getId() ? $this->translate($node->getId()) : "";
 
         // Check the icon.
         if (null === $node->getIcon()) {
@@ -177,8 +177,9 @@ abstract class AbstractMenuTwigExtension extends AbstractAdminBSBTwigExtension {
         // Initialize the attributes.
         $attributes = [];
 
-        $attributes["class"] = $class;
-        $attributes["href"]  = $node->getUrl();
+        $attributes["class"]  = $class;
+        $attributes["href"]   = $node->getUrl();
+        $attributes["target"] = $node->getTarget();
 
         // Initialize the parameters.
         $innerHTML = $this->adminBSBMenuItemLabel($node);
@@ -195,6 +196,30 @@ abstract class AbstractMenuTwigExtension extends AbstractAdminBSBTwigExtension {
      */
     private function isValidNode($node) {
         return true === ($node instanceof NavigationNode) && true === $node->isDisplayable();
+    }
+
+    /**
+     * Translate.
+     *
+     * @param string $id The translation id.
+     * @return string Returns the translation in case of succes, id otherwise.
+     */
+    private function translate($id) {
+
+        // Translate with Bootstrap bundle.
+        $outputB = $this->translator->trans($id, [], "BootstrapBundle");
+        if ($id === $outputB) {
+            return $outputB;
+        }
+
+        // Translate with AdminBSB bundle.
+        $outputA = $this->translator->trans($id, [], "AdminBSBBundle");
+        if ($id === $outputA) {
+            return $outputA;
+        }
+
+        // Translate.
+        return $this->translator->trans($id);
     }
 
 }
