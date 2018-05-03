@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Menu;
 
+use Symfony\Component\Translation\TranslatorInterface;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\IconUITwigExtension;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationNode;
@@ -27,10 +28,20 @@ use WBW\Library\Core\Utility\Argument\StringUtility;
 abstract class AbstractMenuTwigExtension extends AbstractAdminBSBTwigExtension {
 
     /**
-     * Constructor.
+     * Translator;
+     *
+     * @var TranslatorInterface
      */
-    protected function __construct() {
+    protected $translator;
+
+    /**
+     * Constructor.
+     *
+     * @param TranslatorInterface $translator The translator.
+     */
+    protected function __construct(TranslatorInterface $translator) {
         parent::__construct();
+        $this->translator = $translator;
     }
 
     /**
@@ -73,7 +84,7 @@ abstract class AbstractMenuTwigExtension extends AbstractAdminBSBTwigExtension {
         $attributes["class"] = "menu-header";
 
         // Initialize the parameters.
-        $innerHTML = null !== $tree->getId() ? $tree->getId() : "";
+        $innerHTML = null !== $tree->getId() ? $this->translator->trans($tree->getId()) : "";
 
         // Return the HTML.
         return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $innerHTML]);
@@ -134,7 +145,7 @@ abstract class AbstractMenuTwigExtension extends AbstractAdminBSBTwigExtension {
     private function adminBSBMenuItemLabel(NavigationNode $node) {
 
         // Initialize the parameters.
-        $innerHTML = null !== $node->getId() ? $node->getId() : "";
+        $innerHTML = null !== $node->getId() ? $this->translator->trans($node->getId()) : "";
 
         // Check the icon.
         if (null === $node->getIcon()) {

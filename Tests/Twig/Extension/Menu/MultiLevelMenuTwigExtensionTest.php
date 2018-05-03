@@ -11,13 +11,13 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Menu;
 
-use PHPUnit_Framework_TestCase;
 use Twig_Node;
 use Twig_SimpleFunction;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Menu\MultiLevelMenuTwigExtension;
 use WBW\Bundle\BootstrapBundle\Navigation\BreadcrumbNode;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationNode;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationTree;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
 
 /**
  * Multi level menu Twig extension test.
@@ -25,7 +25,7 @@ use WBW\Bundle\BootstrapBundle\Navigation\NavigationTree;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Menu
  */
-class MultiLevelMenuTwigExtensionTest extends PHPUnit_Framework_TestCase {
+class MultiLevelMenuTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * Navigation tree.
@@ -39,6 +39,11 @@ class MultiLevelMenuTwigExtensionTest extends PHPUnit_Framework_TestCase {
      */
     protected function setUp() {
         parent::setUp();
+
+        // set a Translator mock.
+        $this->translator->expects($this->any())->method("trans")->willReturnCallback(function($id, array $parameters = array(), $domain = null, $locale = null) {
+            return $id;
+        });
 
         // Set a Navigation tree mock.
         $this->navigationTree = new NavigationTree();
@@ -66,7 +71,7 @@ class MultiLevelMenuTwigExtensionTest extends PHPUnit_Framework_TestCase {
      */
     public function testGetFunctions() {
 
-        $obj = new MultiLevelMenuTwigExtension();
+        $obj = new MultiLevelMenuTwigExtension($this->translator);
 
         $res = $obj->getFunctions();
 
@@ -86,7 +91,7 @@ class MultiLevelMenuTwigExtensionTest extends PHPUnit_Framework_TestCase {
      */
     public function testAdminBSBMultiLevelMenuFunction() {
 
-        $obj = new MultiLevelMenuTwigExtension();
+        $obj = new MultiLevelMenuTwigExtension($this->translator);
 
         $res0 = '<li class="menu-header">tree</li>
 <li>

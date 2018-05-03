@@ -47,7 +47,8 @@ services:
             - { name: "twig.extension" }
 
     webeweb.bundle.adminbsbbundle.twig.extension.menu.multilevelmenu:
-        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Menu\MultiLevelMenuTwigExtension
+        class:     WBW\Bundle\AdminBSBBundle\Twig\Extension\Menu\MultiLevelMenuTwigExtension
+        arguments: ["@translator"]
         tags:
             - { name: "twig.extension" }
 

@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Menu;
 
+use Symfony\Component\Translation\TranslatorInterface;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationTree;
 
@@ -31,9 +32,11 @@ class MultiLevelMenuTwigExtension extends AbstractMenuTwigExtension {
 
     /**
      * Constructor.
+     *
+     * @param TranslatorInterface $translator The translator.
      */
-    public function __construct() {
-        parent::__construct();
+    public function __construct(TranslatorInterface $translator) {
+        parent::__construct($translator);
     }
 
     /**
