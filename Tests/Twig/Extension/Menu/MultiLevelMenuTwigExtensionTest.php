@@ -93,7 +93,7 @@ class MultiLevelMenuTwigExtensionTest extends AbstractFrameworkTestCase {
 
         $obj = new MultiLevelMenuTwigExtension($this->translator);
 
-        $res0 = '<li class="menu-header">tree</li>
+        $res0 = '<li class="header">tree</li>
 <li>
 <a class="menu-toggle"><i class="material-icons">person</i><span>Users</span></a>
 <ul class="ml-menu">
@@ -108,7 +108,7 @@ class MultiLevelMenuTwigExtensionTest extends AbstractFrameworkTestCase {
         $this->assertEquals($res0, $obj->adminBSBMultiLevelMenuFunction($this->navigationTree));
 
         $this->navigationTree->getLastNode()->getFirstNode()->setActive(true);
-        $res9 = '<li class="menu-header">tree</li>
+        $res9 = '<li class="header">tree</li>
 <li>
 <a class="menu-toggle"><i class="material-icons">person</i><span>Users</span></a>
 <ul class="ml-menu">

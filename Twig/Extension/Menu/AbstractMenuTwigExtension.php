@@ -81,7 +81,7 @@ abstract class AbstractMenuTwigExtension extends AbstractAdminBSBTwigExtension {
         // Initialize the attributes.
         $attributes = [];
 
-        $attributes["class"] = "menu-header";
+        $attributes["class"] = "header";
 
         // Initialize the parameters.
         $innerHTML = null !== $tree->getId() ? $this->translate($tree->getId()) : "";
