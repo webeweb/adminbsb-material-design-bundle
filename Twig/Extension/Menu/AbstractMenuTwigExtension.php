@@ -208,13 +208,13 @@ abstract class AbstractMenuTwigExtension extends AbstractAdminBSBTwigExtension {
 
         // Translate with Bootstrap bundle.
         $outputB = $this->translator->trans($id, [], "BootstrapBundle");
-        if ($id === $outputB) {
+        if ($id !== $outputB) {
             return $outputB;
         }
 
         // Translate with AdminBSB bundle.
         $outputA = $this->translator->trans($id, [], "AdminBSBBundle");
-        if ($id === $outputA) {
+        if ($id !== $outputA) {
             return $outputA;
         }
 
