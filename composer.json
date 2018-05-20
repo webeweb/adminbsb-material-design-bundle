@@ -21,6 +21,7 @@
         "twig/twig": "^1.0||^2.0",
         "webeweb/bootstrap-bundle": "^1.0",
         "webeweb/core-library": "^2.0",
+        "webeweb/jquery-datatables-bundle": "^1.0",
         "webeweb/syntaxhighlighter-bundle": "^1.0"
     },
     "require-dev": {
@@ -28,7 +29,6 @@
         "symfony/expression-language": "^2.6|^3.0"
     },
     "suggest": {
-        "webeweb/jquery-datatables-bundle": "*",
         "webeweb/jquery-querybuilder-bundle": "*"
     },
     "support": {
