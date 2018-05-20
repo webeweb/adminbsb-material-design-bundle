@@ -70,6 +70,17 @@ class ButtonUITwigExtension extends AbstractUITwigExtension {
     }
 
     /**
+     * Displays an AdminBSB button "Link".
+     *
+     * @param string $button The button.
+     * @param string $link The link.
+     * @return string Returns the AdminBSB button "Link".
+     */
+    public function adminBSBButtonLinkFilter($button, $link = self::DEFAULT_HREF) {
+        return StringUtility::replace($button, ["<button", "type=\"button\"", "</button>"], ["<a", "href=\"" . $link . "\"", "</a>"]);
+    }
+
+    /**
      * Displays an AdminBSB button "Primary".
      *
      * @param array $args The arguments.
@@ -100,17 +111,6 @@ class ButtonUITwigExtension extends AbstractUITwigExtension {
     }
 
     /**
-     * Displays an AdminBSB link button.
-     *
-     * @param string $button The button.
-     * @param string $link The link.
-     * @return string Returns the AdminBSB link button.
-     */
-    public function adminBSBLinkButtonFilter($button, $link = self::DEFAULT_HREF) {
-        return StringUtility::replace($button, ["<button", "type=\"button\"", "</button>"], ["<a", "href=\"" . $link . "\"", "</a>"]);
-    }
-
-    /**
      * Displays a AdminBSB material design button.
      *
      * @param array $args The arguments.
@@ -127,7 +127,7 @@ class ButtonUITwigExtension extends AbstractUITwigExtension {
      */
     public function getFilters() {
         return [
-            new Twig_SimpleFilter("adminBSBLinkButton", [$this, "adminBSBLinkButtonFilter"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFilter("adminBSBButtonLink", [$this, "adminBSBButtonLinkFilter"], ["is_safe" => ["html"]]),
         ];
     }
 

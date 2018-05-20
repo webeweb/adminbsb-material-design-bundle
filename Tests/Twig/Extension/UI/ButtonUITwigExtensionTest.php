@@ -40,8 +40,8 @@ final class ButtonUITwigExtensionTest extends PHPUnit_Framework_TestCase {
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFilter::class, $res[0]);
-        $this->assertEquals("adminBSBLinkButton", $res[0]->getName());
-        $this->assertEquals([$obj, "adminBSBLinkButtonFilter"], $res[0]->getCallable());
+        $this->assertEquals("adminBSBButtonLink", $res[0]->getName());
+        $this->assertEquals([$obj, "adminBSBButtonLinkFilter"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
     }
 
@@ -140,6 +140,25 @@ final class ButtonUITwigExtensionTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
+     * Tests the adminBSBButtonLinkFilter() method.
+     *
+     * @return void
+     * @depends testGetFilters
+     */
+    public function testAdminBSBButtonLinkFilter() {
+
+        $obj = new ButtonUITwigExtension();
+
+        $btn = $obj->adminBSBMaterialDesignButtonFunction();
+
+        $res0 = '<a class="btn bg-red waves-effect" href="javascript:void(0);"></a>';
+        $this->assertEquals($res0, $obj->adminBSBButtonLinkFilter($btn));
+
+        $res1 = '<a class="btn bg-red waves-effect" href="https://github.com"></a>';
+        $this->assertEquals($res1, $obj->adminBSBButtonLinkFilter($btn, "https://github.com"));
+    }
+
+    /**
      * Tests the adminBSBButtonPrimaryFunction() method.
      *
      * @return void
@@ -182,25 +201,6 @@ final class ButtonUITwigExtensionTest extends PHPUnit_Framework_TestCase {
         $arg0 = [];
         $res0 = '<button class="btn btn-warning waves-effect" type="button"></button>';
         $this->assertEquals($res0, $obj->adminBSBButtonWarningFunction($arg0));
-    }
-
-    /**
-     * Tests the absmdLinkButtonFilter() method.
-     *
-     * @return void
-     * @depends testGetFilters
-     */
-    public function testAdminBSBLinkButtonFilter() {
-
-        $obj = new ButtonUITwigExtension();
-
-        $btn = $obj->adminBSBMaterialDesignButtonFunction();
-
-        $res0 = '<a class="btn bg-red waves-effect" href="javascript:void(0);"></a>';
-        $this->assertEquals($res0, $obj->adminBSBLinkButtonFilter($btn));
-
-        $res1 = '<a class="btn bg-red waves-effect" href="https://github.com"></a>';
-        $this->assertEquals($res1, $obj->adminBSBLinkButtonFilter($btn, "https://github.com"));
     }
 
     /**
