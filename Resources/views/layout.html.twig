@@ -1,0 +1,23 @@
+{# Resources/views/layout.html.twig #}
+{% extends "@Bootstrap/layout.html.twig" %}
+{% block bootstrapHeadStyles %}
+    {{ parent() }}
+    {% include "@JQueryDataTables/styles.html.twig" with {"theme": "bootstrap" } %}
+    {% include "@AdminBSB/styles.html.twig" %}
+    {% block adminBSBHeadStyles %}
+    {% endblock %}
+{% endblock %}
+{% block bootstrapHeadTitle %}{{ parent() }}{{ block("adminBSBHeadTitle") }}{% endblock %}
+{% block bootstrapBodyClasses %}{{ parent() }} class="{{ block("adminBSBBodyClasses") }}"{% endblock %}
+{% block bootstrapBodyContent %}
+    {{ parent() }}
+    {% block adminBSBBodyContent %}
+    {% endblock %}
+{% endblock %}
+{% block bootstrapBodyScripts %}
+    {{ parent() }}
+    {% include "@JQueryDataTables/scripts.html.twig" with {"theme": "bootstrap" } %}
+    {% include "@AdminBSB/scripts.html.twig" %}
+    {% block adminBSBBodyScripts %}
+    {% endblock %}
+{% endblock %}
