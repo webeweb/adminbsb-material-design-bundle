@@ -1,0 +1,11 @@
+# Resources/translations/AdminBSB.en.yml
+TwigBundle:
+    views:
+        Exception:
+            go_homepage: "Go homepage"
+
+views:
+    layout:
+        loader:
+            wait: "Please wait..."
+        search: "Start typing..."
