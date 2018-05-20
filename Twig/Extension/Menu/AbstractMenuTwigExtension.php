@@ -93,11 +93,7 @@ abstract class AbstractMenuTwigExtension extends AbstractAdminBSBTwigExtension {
     /**
      * Displays an AdminBSB menu item.
      *
-     * @param string $content The menu item content.
-     * @param string $url The menu item URL.
-     * @param string $icon The menu item icon.
-     * @param boolean $active Menu item active ?
-     * @param array $nodes The menu item nodes.
+     * @param NavigationNode $node The node.
      * @return string Returns the AdminBSB menu item.
      */
     private function adminBSBMenuItem(NavigationNode $node) {
