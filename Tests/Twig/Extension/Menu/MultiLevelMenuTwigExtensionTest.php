@@ -40,12 +40,12 @@ class MultiLevelMenuTwigExtensionTest extends AbstractFrameworkTestCase {
     protected function setUp() {
         parent::setUp();
 
-        // set a Translator mock.
+// set a Translator mock.
         $this->translator->expects($this->any())->method("trans")->willReturnCallback(function($id, array $parameters = array(), $domain = null, $locale = null) {
             return $id;
         });
 
-        // Set a Navigation tree mock.
+// Set a Navigation tree mock.
         $this->navigationTree = new NavigationTree();
 
         $this->navigationTree->addNode(new NavigationNode("Users", "person", null));
@@ -93,7 +93,8 @@ class MultiLevelMenuTwigExtensionTest extends AbstractFrameworkTestCase {
 
         $obj = new MultiLevelMenuTwigExtension($this->translator);
 
-        $res0 = '<li class="header">tree</li>
+        $res0 = <<< 'EOTXT'
+<li class="header">tree</li>
 <li>
 <a class="menu-toggle"><i class="material-icons">person</i><span>Users</span></a>
 <ul class="ml-menu">
@@ -104,11 +105,14 @@ class MultiLevelMenuTwigExtensionTest extends AbstractFrameworkTestCase {
 <a href="/app/users/index"><i class="material-icons">view_list</i><span>List</span></a>
 </li>
 </ul>
-</li>';
+</li>
+EOTXT;
+
         $this->assertEquals($res0, $obj->adminBSBMultiLevelMenuFunction($this->navigationTree));
 
         $this->navigationTree->getLastNode()->getFirstNode()->setActive(true);
-        $res9 = '<li class="header">tree</li>
+        $res9 = <<< 'EOTXT'
+<li class="header">tree</li>
 <li>
 <a class="menu-toggle"><i class="material-icons">person</i><span>Users</span></a>
 <ul class="ml-menu">
@@ -119,7 +123,9 @@ class MultiLevelMenuTwigExtensionTest extends AbstractFrameworkTestCase {
 <a href="/app/users/index"><i class="material-icons">view_list</i><span>List</span></a>
 </li>
 </ul>
-</li>';
+</li>
+EOTXT;
+
         $this->assertEquals($res9, $obj->adminBSBMultiLevelMenuFunction($this->navigationTree));
     }
 
