@@ -40,28 +40,25 @@ class MultiLevelMenuTwigExtensionTest extends AbstractFrameworkTestCase {
     protected function setUp() {
         parent::setUp();
 
-// set a Translator mock.
+        // Set a Translator mock.
         $this->translator->expects($this->any())->method("trans")->willReturnCallback(function($id, array $parameters = array(), $domain = null, $locale = null) {
             return $id;
         });
 
-// Set a Navigation tree mock.
-        $this->navigationTree = new NavigationTree();
+        // Set a Navigation tree mock.
+        $this->navigationTree = new NavigationTree("Main navigation");
 
-        $this->navigationTree->addNode(new NavigationNode("Users", "person", null));
+        $this->navigationTree->addNode(new NavigationNode("Users", "person"));
         $this->navigationTree->getLastNode()->setEnable(true);
 
-        $this->navigationTree->getLastNode()->addNode(new NavigationNode("New", "add_circle_outline", null));
+        $this->navigationTree->getLastNode()->addNode(new NavigationNode("New", "add_circle_outline", "/app/users/new"));
         $this->navigationTree->getLastNode()->getLastNode()->setEnable(true);
-        $this->navigationTree->getLastNode()->getLastNode()->setUrl("/app/users/new");
 
-        $this->navigationTree->getLastNode()->addNode(new NavigationNode("List", "view_list", null));
+        $this->navigationTree->getLastNode()->addNode(new NavigationNode("List", "view_list", "/app/users/index"));
         $this->navigationTree->getLastNode()->getLastNode()->setEnable(true);
-        $this->navigationTree->getLastNode()->getLastNode()->setUrl("/app/users/index");
 
-        $this->navigationTree->getLastNode()->addNode(new BreadcrumbNode("Edit", "pencil", null));
+        $this->navigationTree->getLastNode()->addNode(new BreadcrumbNode("Edit", "pencil", "/app/users/edit"));
         $this->navigationTree->getLastNode()->getLastNode()->setEnable(true);
-        $this->navigationTree->getLastNode()->getLastNode()->setUrl("/app/users/edit");
     }
 
     /**
@@ -94,7 +91,7 @@ class MultiLevelMenuTwigExtensionTest extends AbstractFrameworkTestCase {
         $obj = new MultiLevelMenuTwigExtension($this->translator);
 
         $res0 = <<< 'EOTXT'
-<li class="header">tree</li>
+<li class="header">Main navigation</li>
 <li>
 <a class="menu-toggle"><i class="material-icons">person</i><span>Users</span></a>
 <ul class="ml-menu">
@@ -112,7 +109,7 @@ EOTXT;
 
         $this->navigationTree->getLastNode()->getFirstNode()->setActive(true);
         $res9 = <<< 'EOTXT'
-<li class="header">tree</li>
+<li class="header">Main navigation</li>
 <li>
 <a class="menu-toggle"><i class="material-icons">person</i><span>Users</span></a>
 <ul class="ml-menu">

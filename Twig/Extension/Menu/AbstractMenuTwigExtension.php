@@ -174,7 +174,7 @@ abstract class AbstractMenuTwigExtension extends AbstractAdminBSBTwigExtension {
         $attributes = [];
 
         $attributes["class"]  = $class;
-        $attributes["href"]   = $node->getUrl();
+        $attributes["href"]   = $node->getRoute();
         $attributes["target"] = $node->getTarget();
 
         // Initialize the parameters.

@@ -56,8 +56,7 @@ class HowToNavigationProvider {
 
         // Handle each page.
         foreach ($tableContents as $current) {
-            $breadcrumb = new BreadcrumbNode($current["title"], "bookmark", $route);
-            $breadcrumb->setUrl($this->router->generate($route, ["page" => $current["page"]]));
+            $breadcrumb = new BreadcrumbNode($current["title"], "bookmark", $this->router->generate($route, ["page" => $current["page"]]));
             $breadcrumbRoot->addNode($breadcrumb);
         }
 

@@ -33,7 +33,7 @@ class DefaultNavigationProvider implements NavigationProviderInterface {
      * {@inheritdoc}
      */
     public function getTree() {
-        return new NavigationTree();
+        return new NavigationTree("");
     }
 
     /**
