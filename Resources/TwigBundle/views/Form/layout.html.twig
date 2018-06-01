@@ -1,0 +1,147 @@
+{# Resources/form/layout.html.twig #}
+{% use "bootstrap_3_layout.html.twig" %}
+
+{% block form_row %}
+
+    {# Initialize #}
+    {% set adminBSBIcon = adminBSB.icon|default(null) %}
+    {% set adminBSBIsCheckbox = checked is defined %}
+    {% set adminBSBIsDate = (adminBSB.date is defined and adminBSB.date) or date_pattern is defined %}
+    {% set adminBSBIsDisabled = (adminBSB.disabled is defined and adminBSB.disabled) ? " disabled" : "" %}
+    {% set adminBSBIsError = 0 < errors|length ? " error" : "" %}
+    {% set adminBSBIsEuro = adminBSB.euro|default(false) %}
+    {% set adminBSBIsFile = adminBSB.file|default(false) %}
+    {% set adminBSBIsFocused = 0 < value|length ? " focused" : "" %}
+    {% set adminBSBIsRadio = choices|default(false) and expanded|default(false) %}
+    {% set adminBSBIsSelect = choices|default(false) %}
+    {% set adminBSBIsSlider = adminBSB.slider is defined and adminBSB.slider %}
+    {% set adminBSBIsSpinner = adminBSB.spinner is defined and adminBSB.spinner %}
+
+    {# Check the grid #}
+    {% set adminBSBGrid = "col-lg-12 col-md-12 col-sm-12 col-xs-12" %}
+    {% if adminBSB.grid is defined %}
+        {% if (1 <= adminBSB.grid and adminBSB.grid <= 12) %}
+            {% set adminBSBGrid = "col-lg-" ~ adminBSB.grid ~ " col-md-12 col-sm-12 col-xs-12" %}
+        {% endif %}
+    {% endif %}
+
+    {# Components #}
+    {% if true == adminBSBIsCheckbox %} {# Checkbox #}
+        <div class="{{ adminBSBGrid }}">
+            {{ form_widget(form, {"attr": {"class": "form-control filled-in" } }) }}
+            {{ form_label(form) }}
+            {{ form_errors(form) }}
+        </div>
+    {% elseif adminBSBIsDate %} {# Date #}
+        <div class="{{ adminBSBGrid }}">
+            <b>{{ label|trans }}</b>
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <i class="material-icons">date_range</i>
+                </span>
+                <div class="form-line{{ adminBSBIsDisabled }}{{ adminBSBIsError }}{{ adminBSBIsFocused }}">
+                    {{ form_widget(form, {"attr": {"class": "form-control date", "placeholder" : "Ex : 30/07/2016"} }) }}
+                    {{ form_errors(form) }}
+                </div>
+            </div>
+        </div>
+    {% elseif adminBSBIsEuro %} {# €uro #}
+        <div class="{{ adminBSBGrid }}">
+            <b>{{ label|trans }}</b>
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <i class="material-icons">euro_symbol</i>
+                </span>
+                <div class="form-line">
+                    {{ form_widget(form, {"attr": {"class": "form-control money-euro", "placeholder": "Ex : 99.99 €"} }) }}
+                    {{ form_errors(form) }}
+                </div>
+            </div>
+        </div>
+    {% elseif adminBSBIsFile %} {# File #}
+        <div class="{{ adminBSBGrid }}">
+            <div class="form-group">
+                {{ form_label(form) }}
+                {{ form_widget(form) }}
+                {{ form_errors(form) }}
+            </div>
+        </div>
+    {% elseif adminBSBIsRadio %} {# Radio #}
+        {{ form_widget(form, {"div_class": adminBSBGrid}) }}
+        {{ form_errors(form) }}
+    {% elseif adminBSBIsSelect %} {# Select #}
+        {% set adminBSBSelectSearch = adminBSB.selectSearch|default(false) %}
+        <div class="{{ adminBSBGrid }}">
+            {% if (adminBSBIcon is not null) %}
+                {{ form_label(form) }}
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="material-icons">{{ adminBSBIcon }}</i>
+                    </span>
+                    {{ form_widget(form, {"attr": {"class": "form-control show-tick", "data-live-search": adminBSBSelectSearch} }) }}
+                    {{ form_errors(form) }}
+                </div>
+            {% else %}
+                {{ form_label(form) }}
+                {{ form_widget(form, {"attr": {"class": "form-control show-tick", "data-live-search": adminBSBSelectSearch} }) }}
+                {{ form_errors(form) }}
+            {% endif %}
+        </div>
+    {% elseif adminBSBIsSpinner %} {# Spinner #}
+        {% set adminBSBSpinnerMin = adminBSB.spinnerMin|default(0) %}
+        {% set adminBSBSpinnerMax = adminBSB.spinnerMax|default(65536) %}
+        {% set adminBSBSpinnerStep = adminBSB.spinnerStep|default(1) %}
+        {% set adminBSBSpinnerPrecision = adminBSB.spinnerPrecision|default(0) %}
+        {% set adminBSBSpinnerRule = adminBSB.spinnerType|default("quantity") %}
+        <div class="{{ adminBSBGrid }}">
+            <b>{{ label|trans }}</b>
+            <div class="input-group spinner" data-trigger="spinner">
+                {% if (adminBSBIcon is not null) %}
+                    <span class="input-group-addon">
+                        <i class="material-icons">{{ adminBSBIcon }}</i>
+                    </span>
+                {% endif %}
+                <div class="form-line">
+                    {{ form_widget(form, {"attr": {"class": "form-control text-center", "data-rule" : adminBSBSpinnerRule, "data-min": adminBSBSpinnerMin, "data-max": adminBSBSpinnerMax, "data-step": adminBSBSpinnerStep, "data-precision": adminBSBSpinnerPrecision}, "type": "text" }) }}
+                    {{ form_errors(form) }}
+                </div>
+                <span class="input-group-addon">
+                    <a href="javascript:;" class="spin-up" data-spin="up"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                    <a href="javascript:;" class="spin-down" data-spin="down"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                </span>
+            </div>
+        </div>
+    {% elseif adminBSBIsSlider %} {# Slider #}
+        <div class="{{ adminBSBGrid }}">
+            {% if (adminBSBIcon is not null) %}
+                <i class="material-icons">{{ adminBSBIcon }}</i>
+            {% endif %}
+            <b>{{ label|trans }}</b>
+            {{ form_widget(form, {"attr": {"class": "form-control"} }) }}
+            {{ form_errors(form) }}
+        </div>
+    {% else %} {# Text #}
+        <div class="{{ adminBSBGrid }}">
+            {% if (adminBSBIcon is not null) %}
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="material-icons">{{ adminBSBIcon }}</i>
+                    </span>
+                    <div class="form-line{{ adminBSBIsDisabled }}{{ adminBSBIsError }}{{ adminBSBIsFocused }}">
+                        {{ form_widget(form, {"attr": {"class": "form-control", "placeholder": label} }) }}
+                        {{ form_errors(form) }}
+                    </div>
+                </div>
+            {% else %}
+                <div class="form-group form-float">
+                    <div class="form-line{{ adminBSBIsDisabled }}{{ adminBSBIsError }}{{ adminBSBIsFocused }}">
+                        {{ form_widget(form, {"attr": {"class": "form-control"} }) }}
+                        {{ form_label(form) }}
+                        {{ form_errors(form) }}
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    {% endif %}
+
+{% endblock form_row %}
