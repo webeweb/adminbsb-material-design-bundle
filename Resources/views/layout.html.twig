@@ -1,8 +1,10 @@
 {# Resources/views/layout.html.twig #}
-{% if (form is defined) %}
-    {% form_theme form '@AdminBSB/../TwigBundle/views/Form/layout.html.twig' %}
-{% endif %}
 {% extends "@Bootstrap/layout.html.twig" %}
+{% block bootstrapFormTheme %}
+    {% if (form is defined) %}
+        {% form_theme form "@AdminBSB/../TwigBundle/views/Form/layout.html.twig" %}
+    {% endif %}
+{% endblock %}
 {% block bootstrapHeadStyles %}
     {{ parent() }}
     {% include "@AdminBSB/layout/style.html.twig" with {"theme": "bootstrap" } %}
