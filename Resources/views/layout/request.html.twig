@@ -1,0 +1,33 @@
+{# Resources/views/layout/register.html.twig #}
+{% extends "@AdminBSB/layout.html.twig" %}
+{% block adminBSBHeadTitle %}{{ ApplicationProvider.title|default("AdminBSB Material Design") }} - {{ "resetting.request.submit"|trans({}, "FOSUserBundle") }}{% endblock %}
+{% block adminBSBBodyClasses %}fp-page{% endblock %}
+{% block adminBSBBodyContent %}
+    <div class="fp-box">
+        <div class="logo">
+            <a href="{{ ApplicationProvider.home|default("javascript: void(0);") }}">{{ ApplicationProvider.name|default("AdminBSB<b>MaterielDesign</b>")|raw }}</a>
+            <small>{{ ApplicationProvider.description|default("AdminBSB Material Design") }}</small>
+        </div>
+        <div class="card">
+            <div class="body">
+                <form action="{{ path("fos_user_resetting_send_email") }}" id="forgot_password" method="POST">
+                    <div class="msg">
+                        {{ "resetting.request.submit"|trans({}, "FOSUserBundle") }}
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">email</i>
+                        </span>
+                        <div class="form-line">
+                            <input class="form-control" name="username" type="email" placeholder="{{ "form.email"|trans({}, "FOSUserBundle") }}" id="username" autofocus>
+                        </div>
+                    </div>
+                    <button class="btn btn-block btn-lg bg-pink waves-effect" type="submit">{{ "resetting.request.submit"|trans({}, "FOSUserBundle")|upper }}</button>
+                    <div class="row m-t-20 m-b--5 align-center">
+                        <a href="{{ path("fos_user_security_login") }}">{{ "layout.login"|trans({}, "FOSUserBundle") }}</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
