@@ -42,7 +42,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ModalUITwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\PreloaderUITwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ProgressBarUITwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget\CardWidgetTwigExtension;
-use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
 
 /**
  * AdminBSB extension test.
@@ -51,7 +51,7 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
  * @package WBW\Bundle\AdminBSBBundle\Tests\DependencyInjection
  * @final
  */
-final class AdminBSBExtensionTest extends AbstractFrameworkTestCase {
+final class AdminBSBExtensionTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * {@inheritdoc}

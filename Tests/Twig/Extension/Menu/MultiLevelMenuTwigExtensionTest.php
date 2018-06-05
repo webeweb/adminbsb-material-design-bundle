@@ -17,7 +17,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Menu\MultiLevelMenuTwigExtension;
 use WBW\Bundle\BootstrapBundle\Navigation\BreadcrumbNode;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationNode;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationTree;
-use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
 
 /**
  * Multi level menu Twig extension test.
@@ -25,7 +25,7 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Menu
  */
-class MultiLevelMenuTwigExtensionTest extends AbstractFrameworkTestCase {
+class MultiLevelMenuTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * Navigation tree.
