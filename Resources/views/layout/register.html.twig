@@ -1,4 +1,4 @@
-{# Resources/views/fosuser/register.html.twig #}
+{# Resources/views/layout/register.html.twig #}
 {% extends "@AdminBSB/layout.html.twig" %}
 {% block adminBSBHeadTitle %}{{ ApplicationProvider.title|default("AdminBSB Material Design") }} - {{ "layout.register"|trans({}, "FOSUserBundle") }}{% endblock %}
 {% block adminBSBBodyClasses %}signup-page{% endblock %}
@@ -50,7 +50,7 @@
                     </div>-->
                     <button class="btn btn-block btn-lg bg-pink waves-effect" type="submit">{{ "registration.submit"|trans({}, "FOSUserBundle")|upper }}</button>
                     <div class="m-t-25 m-b--5 align-center">
-                        <a href="{{ path("fos_user_security_login") }}">{{ "registration.back"|trans({}, "FOSUserBundle") }}</a>
+                        <a href="{{ path("fos_user_security_login") }}">{{ "layout.login"|trans({}, "FOSUserBundle") }}</a>
                     </div>
                 </form>
             </div>

@@ -1,0 +1,13 @@
+{# Resources/views/layout/error500.html.twig #}
+{% extends "@AdminBSB/layout.html.twig" %}
+{% block adminBSBHeadTitle %}{{ ApplicationProvider.title|default("AdminBSB Material Design") }} - {{ status_code }} {{ status_text }}{% endblock %}
+{% block adminBSBBodyClasses %}five-zero-zero{% endblock %}
+{% block adminBSBBodyContent %}
+    <div class="five-zero-zero-container">
+        <div class="error-code">{{ status_code }}</div>
+        <div class="error-message">{{ status_text }}</div>
+        <div class="button-place">
+            {{ adminBSBButtonDefault({"content": "TwigBundle.views.Exception.go_homepage"|trans({}, "AdminBSBBundle")|upper})|adminBSBButtonLink(path(ApplicationProvider.route|default("/"))) }}
+        </div>
+    </div>
+{% endblock %}

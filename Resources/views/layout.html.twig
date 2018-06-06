@@ -7,7 +7,7 @@
 {% endblock %}
 {% block bootstrapHeadStyles %}
     {{ parent() }}
-    {% include "@AdminBSB/layout/style.html.twig" with {"theme": "bootstrap" } %}
+    {% include "@AdminBSB/include/styles.html.twig" with {"theme": "bootstrap" } %}
     {% block adminBSBHeadStyles %}
     {% endblock %}
 {% endblock %}
@@ -20,7 +20,7 @@
 {% endblock %}
 {% block bootstrapBodyScripts %}
     {{ parent() }}
-    {% include "@AdminBSB/layout/script.html.twig" with {"theme": "bootstrap" } %}
+    {% include "@AdminBSB/include/scripts.html.twig" with {"theme": "bootstrap" } %}
     {% block adminBSBBodyScripts %}
     {% endblock %}
 {% endblock %}

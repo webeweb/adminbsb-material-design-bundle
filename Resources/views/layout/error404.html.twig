@@ -1,0 +1,13 @@
+{# Resources/views/layout/error404.html.twig #}
+{% extends "@AdminBSB/layout.html.twig" %}
+{% block adminBSBHeadTitle %}{{ ApplicationProvider.title|default("AdminBSB Material Design") }} - {{ status_code }} {{ status_text }}{% endblock %}
+{% block adminBSBBodyClasses %}four-zero-four{% endblock %}
+{% block adminBSBBodyContent %}
+    <div class="four-zero-four-container">
+        <div class="error-code">{{ status_code }}</div>
+        <div class="error-message">{{ status_text }}</div>
+        <div class="button-place">
+            {{ adminBSBButtonDefault({"content": "TwigBundle.views.Exception.go_homepage"|trans({}, "AdminBSBBundle")|upper})|adminBSBButtonLink(path(ApplicationProvider.route|default("/"))) }}
+        </div>
+    </div>
+{% endblock %}
