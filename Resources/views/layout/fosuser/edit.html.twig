@@ -1,0 +1,30 @@
+{# Resources/views/layout/fosuser/edit.html.twig #}
+{% extends "@AdminBSB/layout/section.html.twig" %}
+{% block adminBSBHeadTitle %}{{ ApplicationProvider.title|default("AdminBSB Material Design") }} - {{ "layout.logged_in_as"|trans({"%username%": app.user.username}, "FOSUserBundle") }}{% endblock %}
+{% block adminBSBBodySection %}
+    <div class="row clearfix">
+        <div class="{{ bootstrapGrid({"lg": 12, "recopy": true}) }}">
+            <div class="card">
+                <div class="header">
+                    {{ adminBSBCardHeader({"icon": "person", "content": "layout.logged_in_as"|trans({"%username%": app.user.username}, "FOSUserBundle")}) }}
+                </div>
+                <div class="body">
+                    {{ form_start(form) }}
+                    <div class="row clearfix">
+                        {{ form_row(form.username, {"adminBSB": {"icon": "person", "grid": 4} }) }}
+                    </div>
+                    <div class="row clearfix">
+                        {{ form_row(form.email, {"adminBSB": {"icon": "email", "grid": 4} }) }}
+                    </div>
+                    <div class="row clearfix">
+                        {{ form_row(form.current_password, {"adminBSB":{"icon": "lock", "grid": 4} }) }}
+                    </div>
+                    <div class="align-right">
+                        {{ bootstrapDefaultFormButtons({"cancel_href": path("fos_user_profile_show") }) }}
+                    </div>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
