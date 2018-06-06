@@ -1,5 +1,6 @@
-{# Resources/layout/form.html.twig #}
-{% extends "bootstrap_3_layout.html.twig" %}
+{# Resources/layout/twig/form.html.twig #}
+{#% use "bootstrap_3_layout.html.twig" %#}
+{% use "form_div_layout.html.twig" %}
 
 {% block form_row %}
 
@@ -26,7 +27,7 @@
     {% endif %}
 
     {# Components #}
-    {% if true == adminBSBIsCheckbox %} {# Checkbox #}
+    {% if adminBSBIsCheckbox %} {# Checkbox #}
         <div class="{{ adminBSBGrid }}">
             {{ form_widget(form, {"attr": {"class": "form-control filled-in" } }) }}
             {{ form_label(form) }}
