@@ -1,0 +1,18 @@
+{# Resources/views/layout/fosuser/show.html.twig #}
+{% extends "@AdminBSB/layout/section.html.twig" %}
+{% block adminBSBHeadTitle %}{{ ApplicationProvider.title|default("AdminBSB Material Design") }} - {{ "layout.logged_in_as"|trans({"%username%": app.user.username}, "FOSUserBundle") }}{% endblock %}
+{% block adminBSBBodySection %}
+    <div class="row clearfix">
+        <div class="{{ bootstrapGrid({"lg": 12, "recopy": true}) }}">
+            <div class="card">
+                <div class="header">
+                    {{ adminBSBCardHeader({"icon": "person", "content": "layout.logged_in_as"|trans({"%username%": app.user.username}, "FOSUserBundle")}) }}
+                </div>
+                <div class="body">
+                    <p>{{ 'profile.show.username'|trans({}, "FOSUserBundle") }}: {{ user.username }}</p>
+                    <p>{{ 'profile.show.email'|trans({}, "FOSUserBundle") }}: {{ user.email }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
