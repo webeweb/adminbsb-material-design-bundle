@@ -91,7 +91,9 @@
             {% endif %}
             {% block adminBSBBodySection %}
             {% endblock %}
-            {% include "@Bootstrap/include/twig-console.html.twig" %}
+            {% if ("dev" == app.environment) %}
+                {% include "@Bootstrap/include/twig-console.html.twig" %}
+            {% endif %}
         </div>
     </section>
 {% endblock %}
