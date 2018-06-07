@@ -3,13 +3,58 @@ adminbsb-material-design-bundle
 
 [![Build Status](https://travis-ci.org/webeweb/adminbsb-material-design-bundle.svg?branch=master)](https://travis-ci.org/webeweb/adminbsb-material-design-bundle) [![Coverage Status](https://coveralls.io/repos/github/webeweb/adminbsb-material-design-bundle/badge.svg?branch=master)](https://coveralls.io/github/webeweb/adminbsb-material-design-bundle?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/webeweb/adminbsb-material-design-bundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/webeweb/adminbsb-material-design-bundle/?branch=master) [![Latest Stable Version](https://poser.pugx.org/webeweb/adminbsb-material-design-bundle/v/stable)](https://packagist.org/packages/webeweb/adminbsb-material-design-bundle) [![Latest Unstable Version](https://poser.pugx.org/webeweb/adminbsb-material-design-bundle/v/unstable)](https://packagist.org/packages/webeweb/adminbsb-material-design-bundle) [![License](https://poser.pugx.org/webeweb/adminbsb-material-design-bundle/license)](https://packagist.org/packages/webeweb/adminbsb-material-design-bundle) [![composer.lock](https://poser.pugx.org/webeweb/adminbsb-material-design-bundle/composerlock)](https://packagist.org/packages/webeweb/adminbsb-material-design-bundle)
 
-<img src="https://raw.githubusercontent.com/webeweb/adminbsb-material-design-bundle/master/Resources/doc/images/adminbsb-material-design_promo.png" alt="AdminBSB Material Design bundle" align="right" />
-
 Integrate AdminBSB Material Design theme with Symfony 2.
 
 > IMPORTANT NOTICE: This package is still under development. Any changes will be
 > done without prior notice to consumers of this package. Of course this code
 > will become stable at a certain point, but for now, use at your own risk.
+
+<img src="https://raw.githubusercontent.com/webeweb/adminbsb-material-design-bundle/master/Resources/doc/images/adminbsb-material-design_promo.png" alt="AdminBSB Material Design bundle" align="right" />
+
+Includes:
+
+- [Animate.css 3.5.0](https://daneden.github.io/animate.css/)
+- [Autosize 3.0.17](http://www.jacklmoore.com/autosize/)
+- [Bootstrap 3.3.6](https://getbootstrap.com/docs/3.3/)
+- [Bootstrap Colorpicker 2.3.3](https://github.com/farbelous/bootstrap-colorpicker/) (Bootstrap plugin)
+- Bootstrap Material Datetimepicker (Bootstrap plugin)
+- [Bootstrap Notify 3.1.3](https://github.com/mouse0270/bootstrap-growl/) (Bootstrap plugin)
+- [Bootstrap Select 1.10.0](https://silviomoreto.github.io/bootstrap-select/) (Bootstrap plugin)
+- [Bootstrap Tagsinput](https://github.com/bootstrap-tagsinput/bootstrap-tagsinput/) (Bootstrap plugin)
+- [Chart.js 2.2.1](http://www.chartjs.org/)
+- [Chosen 1.6.1](https://harvesthq.github.io/chosen/)
+- [CKEditor 4.5.10](https://ckeditor.com/ckeditor-4/)
+- [Dropzone](http://www.dropzonejs.com/)
+- [editableTableWidget](http://mindmup.github.io/editable-table/)
+- [Flot 0.8.3](http://www.flotcharts.org/)
+- [Font Awesome 4.6.3](https://fontawesome.com/)
+- [GMaps.js 0.4.24](http://hpneo.github.com/gmaps/)
+- [Ion.RangeSlider 2.1.4](http://ionden.com/a/plugins/ion.rangeSlider/en.html)
+- [jQuery 1.12.4](http://jquery.com/) (Bootstrap dependency)
+- [jQuery Cookie 1.4.1](https://github.com/carhartl/jquery-cookie/) (jQuery plugin)
+- [jQuery countTo](https://github.com/mhuggins/jquery-countTo/) (jQuery plugin)
+- [jQuery dataTables 1.10.12](http://www.datatables.net/) (jQuery plugin)
+- [jQuery InputMask 3.3.1](https://github.com/RobinHerbots/Inputmask/) (jQuery plugin)
+- [jQuery Knob](https://github.com/aterrien/jQuery-Knob/) (jQuery plugin)
+- jQuery SlimScroll 1.3.0 (jQuery plugin)
+- [jQuery Sparlines 2.3.2](http://omnipotent.net/jquery.sparkline/) (jQuery plugin)
+- [jQuery Spinner 0.2.1](https://vsn4ik.github.io/jquery.spinner/) (jQuery plugin)
+- [jQuery Steps 1.1.0](http://www.jquery-steps.com/) (jQuery plugin)
+- [jQuery Validation 1.15.1](http://jqueryvalidation.org/) (jQuery plugin)
+- [jVectorMap 1.2.2](http://jvectormap.com/)
+- [jQuery lightGallery 1.2.21](http://sachinchoolur.github.io/lightGallery/) (jQuery plugin)
+- [Material Design Iconic Font](http://zavoloklom.github.io/material-design-iconic-font/)
+- [Materialize 0.97.7](https://materializecss.com/)
+- [Moment.js 2.14.1](http://momentjs.com/)
+- [Moris.js 0.5.0](http://morrisjs.github.io/morris.js/)
+- [jQuery MultiSelect 0.9.12](http://loudev.com/) (jQuery plugin)
+- [jQuery Nestable](http://dbushell.com/) (jQuery plugin)
+- [Waves](http://fian.my.id/Waves/)
+- [noUiSlider 8.5.1](https://refreshless.com/nouislider/)
+- [Raphaël 2.2.0](http://dmitrybaranovskiy.github.io/raphael/)
+- [SweetAlert](https://sweetalert.js.org/)
+- [TinyMCE 4.4.1](https://www.tinymce.com/)
+- [waitMe 1.15](https://github.com/vadimsva/waitMe/)
 
 ---
 
