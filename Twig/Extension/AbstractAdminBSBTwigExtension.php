@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension;
 
-use Twig_Extension;
 use WBW\Bundle\AdminBSBBundle\Provider\Color\DefaultColorProvider;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
 
 /**
  * Abstract AdminBSB Twig extension.
@@ -21,14 +21,7 @@ use WBW\Bundle\AdminBSBBundle\Provider\Color\DefaultColorProvider;
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension
  * @abstract
  */
-abstract class AbstractAdminBSBTwigExtension extends Twig_Extension {
-
-    /**
-     * Default content.
-     *
-     * @var string
-     */
-    const DEFAULT_CONTENT = "&nbsp;";
+abstract class AbstractAdminBSBTwigExtension extends AbstractBootstrapTwigExtension {
 
     /**
      * Constructor.
