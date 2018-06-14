@@ -44,10 +44,10 @@ class GridTwigExtension extends BaseTwigExtension {
     public function getFunctions() {
         return [
             new Twig_SimpleFunction("adminBSBGrid", [$this, "bootstrapGridFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBOffsetGrid", [$this, "bootstrapOffsetGridFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBPullGrid", [$this, "bootstrapPullGridFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBPushGrid", [$this, "bootstrapPushGridFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBStackedGrid", [$this, "bootstrapStackedGridFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBGridOffset", [$this, "bootstrapGridOffsetFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBGridPull", [$this, "bootstrapGridPullFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBGridPush", [$this, "bootstrapGridPushFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBGridStacked", [$this, "bootstrapGridStackedFunction"], ["is_safe" => ["html"]]),
         ];
     }
 
