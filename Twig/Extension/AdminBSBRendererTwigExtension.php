@@ -12,24 +12,24 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension;
 
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\IconUITwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\FactoryBootstrapTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\BootstrapRendererTwigExtension;
 
 /**
- * Factory AdminBSB Twig extension.
+ * AdminBSB renderer Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension
  */
-class FactoryAdminBSBTwigExtension extends AbstractAdminBSBTwigExtension {
+class AdminBSBRendererTwigExtension extends AbstractAdminBSBTwigExtension {
 
     /**
-     * Display an AdminBSB Material Design icon.
+     * Render an icon.
      *
      * @param string $name The icon name.
      * @param string $style The icon style.
-     * @return string Returns the Admin BSB Materiel Design icon.
+     * @return string Returns a rendered icon.
      */
-    public static function adminBSBIcon($name, $style = null) {
+    public static function renderIcon($name, $style = null) {
 
 
         // Determines the handler.
@@ -51,11 +51,11 @@ class FactoryAdminBSBTwigExtension extends AbstractAdminBSBTwigExtension {
         switch ($handler[0]) {
 
             case "md": // Material Design
-                $output = (new IconUITwigExtension())->adminBSBBasicIconFunction(["name" => $handler[1], "style" => $style]);
+                $output = (new IconUITwigExtension())->renderIcon($handler[1], $style);
                 break;
 
             default:
-                $output = FactoryBootstrapTwigExtension::bootstrapIcon($name, $style);
+                $output = BootstrapRendererTwigExtension::renderIcon($name, $style);
                 break;
         }
 
