@@ -13,6 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
 use Twig_SimpleFunction;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\IconRendererTwigExtensionInterface;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
@@ -21,7 +22,7 @@ use WBW\Library\Core\Utility\Argument\ArrayUtility;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\UI
  */
-class IconUITwigExtension extends AbstractUITwigExtension {
+class IconUITwigExtension extends AbstractUITwigExtension implements IconRendererTwigExtensionInterface {
 
     /**
      * Service name.
@@ -67,6 +68,13 @@ class IconUITwigExtension extends AbstractUITwigExtension {
      */
     public function adminBSBMaterialDesignIconFunction(array $args = []) {
         return $this->adminBSBIcon(ArrayUtility::get($args, "name"), ArrayUtility::get($args, "style"), AbstractAdminBSBTwigExtension::fixColor(ArrayUtility::get($args, "color"), "col-"));
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function renderIcon($name, $style) {
+        return $this->adminBSBBasicIconFunction(["name" => $name, "style" => $style]);
     }
 
 }
