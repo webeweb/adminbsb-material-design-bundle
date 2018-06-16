@@ -26,9 +26,10 @@ class FactoryAdminBSBTwigExtension extends AbstractAdminBSBTwigExtension {
      * Display an AdminBSB Material Design icon.
      *
      * @param string $name The icon name.
+     * @param string $style The icon style.
      * @return string Returns the Admin BSB Materiel Design icon.
      */
-    public static function adminBSBIcon($name) {
+    public static function adminBSBIcon($name, $style = null) {
 
 
         // Determines the handler.
@@ -50,11 +51,11 @@ class FactoryAdminBSBTwigExtension extends AbstractAdminBSBTwigExtension {
         switch ($handler[0]) {
 
             case "md": // Material Design
-                $output = (new IconUITwigExtension())->adminBSBBasicIconFunction(["name" => $handler[1]]);
+                $output = (new IconUITwigExtension())->adminBSBBasicIconFunction(["name" => $handler[1], "style" => $style]);
                 break;
 
             default:
-                $output = FactoryBootstrapTwigExtension::bootstrapIcon($name);
+                $output = FactoryBootstrapTwigExtension::bootstrapIcon($name, $style);
                 break;
         }
 
