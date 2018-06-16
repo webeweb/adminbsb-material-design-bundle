@@ -13,6 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
 use WBW\Bundle\AdminBSBBundle\Provider\Color\DefaultColorProvider;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\FactoryAdminBSBTwigExtension;
 use WBW\Library\Core\Utility\Argument\StringUtility;
 
 /**
@@ -106,7 +107,7 @@ abstract class AbstractUITwigExtension extends AbstractAdminBSBTwigExtension {
 
         // Handle the parameters.
         $innerHTML = null !== $content ? $content : "";
-        $glyphicon = null !== $icon ? $this->adminBSBIcon($icon, $style) : "";
+        $glyphicon = null !== $icon ? FactoryAdminBSBTwigExtension::adminBSBIcon($icon, $style) : "";
 
         // Return the HTML.
         return StringUtility::replace($template, ["%attributes%", "%icon%", "%innerHTML%"], [StringUtility::parseArray($attributes), $glyphicon, $innerHTML]);

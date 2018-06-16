@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Menu;
 
 use Symfony\Component\Translation\TranslatorInterface;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\IconUITwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\FactoryAdminBSBTwigExtension;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationNode;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationTree;
 use WBW\Library\Core\Utility\Argument\StringUtility;
@@ -149,13 +149,13 @@ abstract class AbstractMenuTwigExtension extends AbstractAdminBSBTwigExtension {
         }
 
         // Initialize the template.
-        $template = "%icon%<span>%innerHTML%</span>";
+        $template = "%glyphicon%<span>%innerHTML%</span>";
 
         // Initialize the parameters.
-        $glyphicon = (new IconUITwigExtension())->adminBSBBasicIconFunction(["name" => $node->getIcon()]);
+        $glyphicon = FactoryAdminBSBTwigExtension::adminBSBIcon($node->getIcon());
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%icon%", "%innerHTML%"], [$glyphicon, $innerHTML]);
+        return StringUtility::replace($template, ["%glyphicon%", "%innerHTML%"], [$glyphicon, $innerHTML]);
     }
 
     /**

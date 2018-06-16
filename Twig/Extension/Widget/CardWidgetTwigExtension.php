@@ -12,8 +12,8 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget;
 
 use Twig_SimpleFunction;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\FactoryAdminBSBTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\HeadingTypographyTwigExtension;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\IconUITwigExtension;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
@@ -55,7 +55,7 @@ class CardWidgetTwigExtension extends AbstractWidgetTwigExtension {
             $content .= "<small>" . $description . "</small>";
         }
         if (null !== $icon) {
-            $content = (new IconUITwigExtension())->adminBSBBasicIconFunction(["name" => $icon, "style" => "margin: -4px 4px 0 0; vertical-align: sub;"]) . $content;
+            $content = FactoryAdminBSBTwigExtension::adminBSBIcon($icon, "margin: -4px 4px 0 0; vertical-align: sub;") . $content;
         }
 
         // Return the HTML.

@@ -12,6 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
 use Twig_SimpleFunction;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\FactoryAdminBSBTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\HeadingTypographyTwigExtension;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
@@ -50,7 +51,7 @@ class ModalUITwigExtension extends AbstractUITwigExtension {
         $icon    = ArrayUtility::get($args, "icon");
 
         if (null !== $icon) {
-            $content = (new IconUITwigExtension())->adminBSBBasicIconFunction(["name" => $icon, "style" => "margin: -4px 0; vertical-align: sub;"]) . $content;
+            $content = FactoryAdminBSBTwigExtension::adminBSBIcon($icon, "margin: -4px 0; vertical-align: sub;") . $content;
         }
 
         // Return the HTML.
