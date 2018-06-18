@@ -15,7 +15,6 @@
     "prefer-stable": true,
     "require": {
         "php": "^5.6|^7.0",
-        "friendsofsymfony/user-bundle": "^1.3|^2.0",
         "symfony/asset": "^2.6|^3.0",
         "symfony/form": "^2.6|^3.0",
         "symfony/framework-bundle": "^2.6|^3.0",
@@ -23,15 +22,14 @@
         "twig/twig": "^1.0||^2.0",
         "webeweb/bootstrap-bundle": "^1.0",
         "webeweb/core-library": "^2.0",
-        "webeweb/jquery-datatables-bundle": "^1.0",
-        "webeweb/syntaxhighlighter-bundle": "^1.0"
+        "webeweb/jquery-datatables-bundle": "^1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "5.7.*",
         "symfony/expression-language": "^2.6|^3.0"
     },
     "suggest": {
-        "webeweb/jquery-querybuilder-bundle": "*"
+        "friendsofsymfony/user-bundle": "^1.3|^2.0"
     },
     "support": {
         "issues": "http://github.com/webeweb/adminbsb-material-design-bundle/issues"
