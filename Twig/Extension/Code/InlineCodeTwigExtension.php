@@ -27,7 +27,7 @@ class InlineCodeTwigExtension extends BaseTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.adminbsbbundle.twig.extension.code.inline";
+    const SERVICE_NAME = "webeweb.adminbsbbundle.twig.extension.code.inline";
 
     /**
      * Constructor.

@@ -30,7 +30,7 @@ class AlertUITwigExtension extends BaseTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.adminbsbbundle.twig.extension.ui.alert";
+    const SERVICE_NAME = "webeweb.adminbsbbundle.twig.extension.ui.alert";
 
     /**
      * Get the Twig functions.

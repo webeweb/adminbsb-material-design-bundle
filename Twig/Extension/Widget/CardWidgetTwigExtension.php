@@ -29,7 +29,7 @@ class CardWidgetTwigExtension extends AbstractWidgetTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.adminbsbbundle.twig.extension.widget.card";
+    const SERVICE_NAME = "webeweb.adminbsbbundle.twig.extension.widget.card";
 
     /**
      * Constructor.

@@ -30,7 +30,7 @@ class ButtonUITwigExtension extends AbstractUITwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.adminbsbbundle.twig.extension.ui.button";
+    const SERVICE_NAME = "webeweb.adminbsbbundle.twig.extension.ui.button";
 
     /**
      * Constructor.

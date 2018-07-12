@@ -27,7 +27,7 @@ class UnderlinedTypographyTwigExtension extends AbstractTypographyTwigExtension 
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.adminbsbbundle.twig.extension.typography.underlined";
+    const SERVICE_NAME = "webeweb.adminbsbbundle.twig.extension.typography.underlined";
 
     /**
      * Constructor.

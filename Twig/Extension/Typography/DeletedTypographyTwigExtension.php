@@ -27,7 +27,7 @@ class DeletedTypographyTwigExtension extends BaseTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.adminbsbbundle.twig.extension.typography.deleted";
+    const SERVICE_NAME = "webeweb.adminbsbbundle.twig.extension.typography.deleted";
 
     /**
      * Constructor.

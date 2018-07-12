@@ -28,7 +28,7 @@ class CheckboxFormTwigExtension extends AbstractFormTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.adminbsbbundle.twig.extension.form.checkbox";
+    const SERVICE_NAME = "webeweb.adminbsbbundle.twig.extension.form.checkbox";
 
     /**
      * Constructor.

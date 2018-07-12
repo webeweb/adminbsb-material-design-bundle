@@ -27,7 +27,7 @@ class VariableCodeTwigExtension extends BaseTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.adminbsbbundle.twig.extension.code.variable";
+    const SERVICE_NAME = "webeweb.adminbsbbundle.twig.extension.code.variable";
 
     /**
      * Constructor.

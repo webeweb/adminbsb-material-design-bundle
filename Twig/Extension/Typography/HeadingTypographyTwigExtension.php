@@ -27,7 +27,7 @@ class HeadingTypographyTwigExtension extends BaseTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.adminbsbbundle.twig.extension.typography.heading";
+    const SERVICE_NAME = "webeweb.adminbsbbundle.twig.extension.typography.heading";
 
     /**
      * Get the Twig functions.

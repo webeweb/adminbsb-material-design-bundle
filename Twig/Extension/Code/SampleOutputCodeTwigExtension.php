@@ -27,7 +27,7 @@ class SampleOutputCodeTwigExtension extends BaseTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.adminbsbbundle.twig.extension.code.sampleoutput";
+    const SERVICE_NAME = "webeweb.adminbsbbundle.twig.extension.code.sampleoutput";
 
     /**
      * Constructor.
