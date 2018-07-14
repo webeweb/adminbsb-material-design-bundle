@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Menu;
 
+use Symfony\Component\HttpFoundation\Request;
 use Twig_Node;
 use Twig_SimpleFunction;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Menu\MultiLevelMenuTwigExtension;
@@ -90,40 +91,22 @@ class MultiLevelMenuTwigExtensionTest extends AbstractBootstrapFrameworkTestCase
 
         $obj = new MultiLevelMenuTwigExtension($this->translator);
 
-        $res0 = <<< 'EOTXT'
+        $res = <<< 'EOTXT'
 <li class="header">Main navigation</li>
-<li>
-<a class="menu-toggle"><i class="material-icons">person</i><span>Users</span></a>
-<ul class="ml-menu">
-<li>
-<a href="/app/users/new"><i class="material-icons">add_circle_outline</i><span>New</span></a>
-</li>
-<li>
-<a href="/app/users/index"><i class="material-icons">view_list</i><span>List</span></a>
-</li>
-</ul>
-</li>
-EOTXT;
-
-        $this->assertEquals($res0, $obj->adminBSBMultiLevelMenuFunction($this->navigationTree));
-
-        $this->navigationTree->getLastNode()->getFirstNode()->setActive(true);
-        $res9 = <<< 'EOTXT'
-<li class="header">Main navigation</li>
-<li>
-<a class="menu-toggle"><i class="material-icons">person</i><span>Users</span></a>
-<ul class="ml-menu">
 <li class="active">
+<a class="menu-toggle"><i class="material-icons">person</i><span>Users</span></a>
+<ul class="ml-menu">
+<li>
 <a href="/app/users/new"><i class="material-icons">add_circle_outline</i><span>New</span></a>
 </li>
-<li>
-<a href="/app/users/index"><i class="material-icons">view_list</i><span>List</span></a>
+<li class="active">
+<a href="/app/users/index">List</a>
 </li>
 </ul>
 </li>
 EOTXT;
 
-        $this->assertEquals($res9, $obj->adminBSBMultiLevelMenuFunction($this->navigationTree));
+        $this->assertEquals($res, $obj->adminBSBMultiLevelMenuFunction($this->navigationTree, Request::create("/app/users/index")));
     }
 
 }
