@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Form;
 
-use DateTime;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
 use WBW\Library\Core\Utility\Argument\StringUtility;
 
@@ -46,7 +45,7 @@ abstract class AbstractFormTwigExtension extends AbstractAdminBSBTwigExtension {
     final protected function adminBSBCheckbox($content, $name, $id, $checked, $disabled, $filledIn, $class) {
 
         // Initialize the template.
-        $template = '<input %attributes%>%innerHTML%';
+        $template = "<input %attributes%>%innerHTML%";
 
         // Initialize the attributes.
         $attributes = [];
@@ -80,7 +79,7 @@ abstract class AbstractFormTwigExtension extends AbstractAdminBSBTwigExtension {
     final protected function adminBSBRadioButton($content, $name, $id, $checked, $disabled, $withGap, $class) {
 
         // Initialize the template.
-        $template = '<input %attributes%>%innerHTML%';
+        $template = "<input %attributes%>%innerHTML%";
 
         // Initialize the attributes.
         $attributes = [];
@@ -114,7 +113,7 @@ abstract class AbstractFormTwigExtension extends AbstractAdminBSBTwigExtension {
     final protected function adminBSBSwitchButton($offLabel, $name, $checked, $disabled, $onLabel, array $attrs, $class = null) {
 
         // Initialize the template.
-        $template = '<div class="switch"><label>%lLabel%<input %attributes%><span class="lever%sClass%"></span>%rLabel%</label></div>';
+        $template = "<input %attributes%>%innerHTML%";
 
         // Initialize the attributes.
         $attributes = $attrs;
@@ -124,13 +123,16 @@ abstract class AbstractFormTwigExtension extends AbstractAdminBSBTwigExtension {
         $attributes["checked"]  = true === $checked ? "checked" : null;
         $attributes["disabled"] = true === $disabled ? "disabled" : null;
 
-        // Check the parameters.
+        // Initialize the parameters.
         $lLabel = null !== $offLabel ? $offLabel : "";
-        $sClass = null !== $class ? " " . trim($class) : "";
         $rLabel = null !== $onLabel ? $onLabel : "";
 
+        $span  = self::bootstrapHTMLElement("span", null, ["class" => ["lever", $class]]);
+        $input = StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $span]);
+        $label = self::bootstrapHTMLElement("label", $lLabel . $input . $rLabel);
+
         // Return the HTML.
-        return StringUtility::replace($template, ["%lLabel%", "%attributes%", "%sClass%", "%rLabel%"], [$lLabel, StringUtility::parseArray($attributes), $sClass, $rLabel]);
+        return self::bootstrapHTMLElement("div", $label, ["class" => "switch"]);
     }
 
 }
