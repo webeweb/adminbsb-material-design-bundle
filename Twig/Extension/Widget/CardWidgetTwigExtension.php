@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget;
 
 use Twig_SimpleFunction;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AdminBSBRendererTwigExtension;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\HeadingTypographyTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
@@ -59,7 +59,7 @@ class CardWidgetTwigExtension extends AbstractWidgetTwigExtension {
         }
 
         // Return the HTML.
-        return (new HeadingTypographyTwigExtension())->bootstrapHeading2Function(["class" => "card-header", "content" => $content]);
+        return (new TypographyTwigExtension())->bootstrapHeading2Function(["class" => "card-header", "content" => $content]);
     }
 
     /**

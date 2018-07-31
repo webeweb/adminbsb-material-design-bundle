@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
 use Twig_SimpleFunction;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AdminBSBRendererTwigExtension;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\HeadingTypographyTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
@@ -55,7 +55,7 @@ class ModalUITwigExtension extends AbstractUITwigExtension {
         }
 
         // Return the HTML.
-        return (new HeadingTypographyTwigExtension())->bootstrapHeading3Function(["class" => "modal-title", "content" => $content]);
+        return (new TypographyTwigExtension())->bootstrapHeading3Function(["class" => "modal-title", "content" => $content]);
     }
 
     /**

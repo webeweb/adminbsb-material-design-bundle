@@ -1,31 +1,6 @@
 # Resources/config/services.yml
 services:
 
-    webeweb.adminbsbbundle.twig.extension.code.basicblock:
-        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Code\BasicBlockCodeTwigExtension
-        tags:
-            - { name: "twig.extension" }
-
-    webeweb.adminbsbbundle.twig.extension.code.inline:
-        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Code\InlineCodeTwigExtension
-        tags:
-            - { name: "twig.extension" }
-
-    webeweb.adminbsbbundle.twig.extension.code.sampleoutput:
-        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Code\SampleOutputCodeTwigExtension
-        tags:
-            - { name: "twig.extension" }
-
-    webeweb.adminbsbbundle.twig.extension.code.userinput:
-        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Code\UserInputCodeTwigExtension
-        tags:
-            - { name: "twig.extension" }
-
-    webeweb.adminbsbbundle.twig.extension.code.variable:
-        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Code\VariableCodeTwigExtension
-        tags:
-            - { name: "twig.extension" }
-
     webeweb.adminbsbbundle.twig.extension.form.checkbox:
         class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\CheckboxFormTwigExtension
         tags:
@@ -41,34 +16,9 @@ services:
         tags:
             - { name: "twig.extension" }
 
-    webeweb.adminbsbbundle.twig.extension.grid.grid:
-        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Grid\GridTwigExtension
-        tags:
-            - { name: "twig.extension" }
-
     webeweb.adminbsbbundle.twig.extension.menu.multilevelmenu:
         class:     WBW\Bundle\AdminBSBBundle\Twig\Extension\Menu\MultiLevelMenuTwigExtension
         arguments: ["@translator"]
-        tags:
-            - { name: "twig.extension" }
-
-    webeweb.adminbsbbundle.twig.extension.typography.bold:
-        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\BoldTypographyTwigExtension
-        tags:
-            - { name: "twig.extension" }
-
-    webeweb.adminbsbbundle.twig.extension.typography.deleted:
-        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\DeletedTypographyTwigExtension
-        tags:
-            - { name: "twig.extension" }
-
-    webeweb.adminbsbbundle.twig.extension.typography.heading:
-        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\HeadingTypographyTwigExtension
-        tags:
-            - { name: "twig.extension" }
-
-    webeweb.adminbsbbundle.twig.extension.typography.inserted:
-        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\InsertedTypographyTwigExtension
         tags:
             - { name: "twig.extension" }
 
@@ -77,18 +27,8 @@ services:
         tags:
             - { name: "twig.extension" }
 
-    webeweb.adminbsbbundle.twig.extension.typography.marked:
-        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\MarkedTypographyTwigExtension
-        tags:
-            - { name: "twig.extension" }
-
     webeweb.adminbsbbundle.twig.extension.typography.overlined:
         class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\OverlinedTypographyTwigExtension
-        tags:
-            - { name: "twig.extension" }
-
-    webeweb.adminbsbbundle.twig.extension.typography.small:
-        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\SmallTypographyTwigExtension
         tags:
             - { name: "twig.extension" }
 
@@ -99,11 +39,6 @@ services:
 
     webeweb.adminbsbbundle.twig.extension.typography.underlined:
         class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\UnderlinedTypographyTwigExtension
-        tags:
-            - { name: "twig.extension" }
-
-    webeweb.adminbsbbundle.twig.extension.ui.alert:
-        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\AlertUITwigExtension
         tags:
             - { name: "twig.extension" }
 
@@ -124,11 +59,6 @@ services:
 
     webeweb.adminbsbbundle.twig.extension.ui.icon:
         class: WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\IconUITwigExtension
-        tags:
-            - { name: "twig.extension" }
-
-    webeweb.adminbsbbundle.twig.extension.ui.label:
-        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\LabelUITwigExtension
         tags:
             - { name: "twig.extension" }
 
