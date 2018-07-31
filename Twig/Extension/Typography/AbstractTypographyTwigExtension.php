@@ -16,7 +16,6 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography;
 
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
-use WBW\Library\Core\Utility\Argument\StringUtility;
 
 /**
  * Abstract typography Twig extension.
@@ -41,20 +40,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractAdminBSBTwigExten
      * @return string Returns the AdminBSB bold text.
      */
     protected function adminBSBBold($content) {
-
-        // Initialize the template.
-        $template = "<span %attributes%>%innerHTML%</span>";
-
-        // Initialize the attributes
-        $attributes = [];
-
-        $attributes["class"] = "font-bold";
-
-        // Initialize the parameters.
-        $innerHTML = null !== $content ? $content : "";
-
-        // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $innerHTML]);
+        return self::bootstrapHTMLElement("span", $content, ["class" => "font-bold"]);
     }
 
     /**
@@ -64,20 +50,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractAdminBSBTwigExten
      * @return string Returns the AdminBSB italic text.
      */
     protected function adminBSBItalic($content) {
-
-        // Initialize the template.
-        $template = "<span %attributes%>%innerHTML%</span>";
-
-        // Initialize the attributes
-        $attributes = [];
-
-        $attributes["class"] = "font-italic";
-
-        // Initialize the parameters.
-        $innerHTML = null !== $content ? $content : "";
-
-        // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $innerHTML]);
+        return self::bootstrapHTMLElement("span", $content, ["class" => "font-italic"]);
     }
 
     /**
@@ -87,20 +60,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractAdminBSBTwigExten
      * @return string Returns the AdminBSB line through text.
      */
     protected function adminBSBLineThrough($content) {
-
-        // Initialize the template.
-        $template = "<span %attributes%>%innerHTML%</span>";
-
-        // Initialize the attributes
-        $attributes = [];
-
-        $attributes["class"] = "font-line-through";
-
-        // Initialize the parameters.
-        $innerHTML = null !== $content ? $content : "";
-
-        // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $innerHTML]);
+        return self::bootstrapHTMLElement("span", $content, ["class" => "font-line-through"]);
     }
 
     /**
@@ -110,20 +70,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractAdminBSBTwigExten
      * @return string Returns the AdminBSB overlined text.
      */
     protected function adminBSBOverline($content) {
-
-        // Initialize the template.
-        $template = "<span %attributes%>%innerHTML%</span>";
-
-        // Initialize the attributes
-        $attributes = [];
-
-        $attributes["class"] = "font-overline";
-
-        // Initialize the parameters.
-        $innerHTML = null !== $content ? $content : "";
-
-        // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $innerHTML]);
+        return self::bootstrapHTMLElement("span", $content, ["class" => "font-overline"]);
     }
 
     /**
@@ -133,20 +80,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractAdminBSBTwigExten
      * @return string Returns the AdminBSB underlined text.
      */
     protected function adminBSBUnderline($content) {
-
-        // Initialize the template.
-        $template = "<span %attributes%>%innerHTML%</span>";
-
-        // Initialize the attributes
-        $attributes = [];
-
-        $attributes["class"] = "font-underline";
-
-        // Initialize the parameters.
-        $innerHTML = null !== $content ? $content : "";
-
-        // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $innerHTML]);
+        return self::bootstrapHTMLElement("span", $content, ["class" => "font-underline"]);
     }
 
 }
