@@ -38,13 +38,23 @@ class CheckboxTwigExtension extends AbstractFormTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB basic checkbox.
+     * Displays an AdminBSB checkbox "Basic".
      *
      * @param array $args The arguments.
-     * @return string Returns the AdminBSB basic checkbox.
+     * @return string Returns the AdminBSB checkbox "Basic".
      */
-    public function adminBSBBasicCheckboxFunction(array $args = []) {
+    public function adminBSBCheckboxBasicFunction(array $args = []) {
         return $this->adminBSBCheckbox(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "id"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "filledIn", false), ArrayUtility::get($args, "class"));
+    }
+
+    /**
+     * Displays an AdminBSB checkbox "Material design".
+     *
+     * @param array $args The arguments.
+     * @return string Returns the AdminBSB checkbox "Material Design".
+     */
+    public function adminBSBCheckboxMaterialDesignFunction(array $args = []) {
+        return $this->adminBSBCheckbox(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "id"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "filledIn", false), ArrayUtility::get($args, "class", "") . AbstractAdminBSBTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), " chk-col-"));
     }
 
     /**
@@ -54,19 +64,9 @@ class CheckboxTwigExtension extends AbstractFormTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("adminBSBBasicCheckbox", [$this, "adminBSBBasicCheckboxFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBMaterialDesignCheckbox", [$this, "adminBSBMaterialDesignCheckboxFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBCheckboxBasic", [$this, "adminBSBCheckboxBasicFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBCheckboxMaterialDesign", [$this, "adminBSBCheckboxMaterialDesignFunction"], ["is_safe" => ["html"]]),
         ];
-    }
-
-    /**
-     * Displays an AdminBSB material design checkbox.
-     *
-     * @param array $args The arguments.
-     * @return string Returns the AdminBSB material design checkbox.
-     */
-    public function adminBSBMaterialDesignCheckboxFunction(array $args = []) {
-        return $this->adminBSBCheckbox(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "id"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "filledIn", false), ArrayUtility::get($args, "class", "") . AbstractAdminBSBTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), " chk-col-"));
     }
 
 }
