@@ -16,12 +16,12 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
- * Radio button form Twig extension.
+ * Radio button Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\Form
  */
-class RadioButtonFormTwigExtension extends AbstractFormTwigExtension {
+class RadioButtonTwigExtension extends AbstractFormTwigExtension {
 
     /**
      * Service name.

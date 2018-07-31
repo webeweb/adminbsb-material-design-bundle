@@ -7,7 +7,7 @@ services:
             - { name: "twig.extension" }
 
     webeweb.adminbsbbundle.twig.extension.form.radiobutton:
-        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\RadioButtonFormTwigExtension
+        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\RadioButtonTwigExtension
         tags:
             - { name: "twig.extension" }
 

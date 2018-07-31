@@ -14,16 +14,16 @@ namespace WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Form;
 use PHPUnit_Framework_TestCase;
 use Twig_Node;
 use Twig_SimpleFunction;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\RadioButtonFormTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\RadioButtonTwigExtension;
 
 /**
- * Radio button form Twig extension test.
+ * Radio button Twig extension test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Form
  * @final
  */
-final class RadioButtonFormTwigExtensionTest extends PHPUnit_Framework_TestCase {
+final class RadioButtonTwigExtensionTest extends PHPUnit_Framework_TestCase {
 
     /**
      * Tests the getFunctions() method.
@@ -32,7 +32,7 @@ final class RadioButtonFormTwigExtensionTest extends PHPUnit_Framework_TestCase 
      */
     public function testGetFunctions() {
 
-        $obj = new RadioButtonFormTwigExtension();
+        $obj = new RadioButtonTwigExtension();
 
         $res = $obj->getFunctions();
 
@@ -57,7 +57,7 @@ final class RadioButtonFormTwigExtensionTest extends PHPUnit_Framework_TestCase 
      */
     public function testAdminBSBBasicRadioButton() {
 
-        $obj = new RadioButtonFormTwigExtension();
+        $obj = new RadioButtonTwigExtension();
 
         $arg0 = [];
         $res0 = '<input type="radio"><label for=""></label>';
@@ -72,7 +72,7 @@ final class RadioButtonFormTwigExtensionTest extends PHPUnit_Framework_TestCase 
      */
     public function testAdminBSBMaterialDesignRadioButtonRadioButton() {
 
-        $obj = new RadioButtonFormTwigExtension();
+        $obj = new RadioButtonTwigExtension();
 
         $arg0 = [];
         $res0 = '<input class="radio-col-red" type="radio"><label for=""></label>';
