@@ -90,9 +90,6 @@ abstract class AbstractUITwigExtension extends AbstractAdminBSBTwigExtension {
         $circle = null !== $content ? false : $circle;
         $style  = null !== $content ? "margin: -4px 2px 0; vertical-align: sub;" : "";
 
-        // Initialize the template.
-        $template = "<button %attributes%>%icon%%innerHTML%</button>";
-
         // Initialize the attributes.
         $attributes = [];
 
@@ -110,7 +107,7 @@ abstract class AbstractUITwigExtension extends AbstractAdminBSBTwigExtension {
         $glyphicon = null !== $icon ? AdminBSBRendererTwigExtension::renderIcon($icon, $style) : "";
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%", "%icon%", "%innerHTML%"], [StringUtility::parseArray($attributes), $glyphicon, $innerHTML]);
+        return self::bootstrapHTMLElement("button", $glyphicon . $innerHTML, $attributes);
     }
 
     /**
@@ -141,9 +138,6 @@ abstract class AbstractUITwigExtension extends AbstractAdminBSBTwigExtension {
      */
     final protected function adminBSBIcon($name, $style, $class = null) {
 
-        // Initialize the template.
-        $template = "<i %attributes%>%innerHTML%</i>";
-
         // Initialize the attributes.
         $attributes = [];
 
@@ -154,7 +148,7 @@ abstract class AbstractUITwigExtension extends AbstractAdminBSBTwigExtension {
         $innerHTML = null !== $name ? $name : "home";
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $innerHTML]);
+        return self::bootstrapHTMLElement("i", $innerHTML, $attributes);
     }
 
     /**
