@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Form;
 
+use DateTime;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
 use WBW\Library\Core\Utility\Argument\StringUtility;
 
@@ -45,7 +46,7 @@ abstract class AbstractFormTwigExtension extends AbstractAdminBSBTwigExtension {
     final protected function adminBSBCheckbox($content, $name, $id, $checked, $disabled, $filledIn, $class) {
 
         // Initialize the template.
-        $template = '<input %attributes%><label for="%id%">%innerHTML%</label>';
+        $template = '<input %attributes%>%innerHTML%';
 
         // Initialize the attributes.
         $attributes = [];
@@ -53,15 +54,15 @@ abstract class AbstractFormTwigExtension extends AbstractAdminBSBTwigExtension {
         $attributes["class"]    = [true === $filledIn ? "filled-in" : null, $class];
         $attributes["name"]     = $name;
         $attributes["type"]     = "checkbox";
-        $attributes["id"]       = $id;
+        $attributes["id"]       = null !== $id ? $id : (new DateTime())->format("YmdHisu");
         $attributes["checked"]  = true === $checked ? "checked" : null;
         $attributes["disabled"] = true === $disabled ? "disabled" : null;
 
         // Check the parameters.
-        $innerHTML = null !== $content ? $content : "";
+        $innerHTML = self::bootstrapHTMLElement("label", $content, ["for" => $attributes["id"]]);
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%", "%id%", "%innerHTML%"], [StringUtility::parseArray($attributes), $attributes["id"], $innerHTML]);
+        return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $innerHTML]);
     }
 
     /**
