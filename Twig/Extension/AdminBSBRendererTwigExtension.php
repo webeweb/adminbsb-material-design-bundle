@@ -20,7 +20,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\BootstrapRendererTwigExtension;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension
  */
-class AdminBSBRendererTwigExtension extends AbstractAdminBSBTwigExtension {
+class AdminBSBRendererTwigExtension {
 
     /**
      * Render an icon.
@@ -30,7 +30,6 @@ class AdminBSBRendererTwigExtension extends AbstractAdminBSBTwigExtension {
      * @return string Returns a rendered icon.
      */
     public static function renderIcon($name, $style = null) {
-
 
         // Determines the handler.
         $handler = explode(":", $name);
