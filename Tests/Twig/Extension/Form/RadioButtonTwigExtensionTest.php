@@ -60,8 +60,8 @@ final class RadioButtonTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $obj = new RadioButtonTwigExtension();
 
         $arg0 = [];
-        $res0 = '/<input type="radio" id="[0-9]{14,}"><label for="[0-9]{14,}"><\/label>/';
-        $this->assertRegExp($res0, $obj->adminBSBRadioButtonBasicFunction($arg0));
+        $res0 = '<input type="radio"><label></label>';
+        $this->assertEquals($res0, $obj->adminBSBRadioButtonBasicFunction($arg0));
     }
 
     /**
@@ -75,40 +75,40 @@ final class RadioButtonTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $obj = new RadioButtonTwigExtension();
 
         $arg0 = [];
-        $res0 = '/<input class="radio-col-red" type="radio" id="[0-9]{14,}"><label for="[0-9]{14,}"><\/label>/';
-        $this->assertRegExp($res0, $obj->adminBSBRadioButtonMaterialDesignFunction($arg0));
+        $res0 = '<input class="radio-col-red" type="radio"><label></label>';
+        $this->assertEquals($res0, $obj->adminBSBRadioButtonMaterialDesignFunction($arg0));
 
         $arg1 = ["content" => "content"];
-        $res1 = '/<input class="radio-col-red" type="radio" id="[0-9]{14,}"><label for="[0-9]{14,}">content<\/label>/';
-        $this->assertRegExp($res1, $obj->adminBSBRadioButtonMaterialDesignFunction($arg1));
+        $res1 = '<input class="radio-col-red" type="radio"><label>content</label>';
+        $this->assertEquals($res1, $obj->adminBSBRadioButtonMaterialDesignFunction($arg1));
 
         $arg2 = ["name" => "name"];
-        $res2 = '/<input class="radio-col-red" name="name" type="radio" id="[0-9]{14,}"><label for="[0-9]{14,}"><\/label>/';
-        $this->assertRegExp($res2, $obj->adminBSBRadioButtonMaterialDesignFunction($arg2));
+        $res2 = '<input class="radio-col-red" name="name" type="radio"><label></label>';
+        $this->assertEquals($res2, $obj->adminBSBRadioButtonMaterialDesignFunction($arg2));
 
         $arg3 = ["id" => "id"];
         $res3 = '<input class="radio-col-red" type="radio" id="id"><label for="id"></label>';
         $this->assertEquals($res3, $obj->adminBSBRadioButtonMaterialDesignFunction($arg3));
 
         $arg4 = ["checked" => true];
-        $res4 = '/<input class="radio-col-red" type="radio" id="[0-9]{14,}" checked="checked"><label for="[0-9]{14,}"><\/label>/';
-        $this->assertRegExp($res4, $obj->adminBSBRadioButtonMaterialDesignFunction($arg4));
+        $res4 = '<input class="radio-col-red" type="radio" checked="checked"><label></label>';
+        $this->assertEquals($res4, $obj->adminBSBRadioButtonMaterialDesignFunction($arg4));
 
         $arg5 = ["disabled" => true];
-        $res5 = '/<input class="radio-col-red" type="radio" id="[0-9]{14,}" disabled="disabled"><label for="[0-9]{14,}"><\/label>/';
-        $this->assertRegExp($res5, $obj->adminBSBRadioButtonMaterialDesignFunction($arg5));
+        $res5 = '<input class="radio-col-red" type="radio" disabled="disabled"><label></label>';
+        $this->assertEquals($res5, $obj->adminBSBRadioButtonMaterialDesignFunction($arg5));
 
         $arg6 = ["withGap" => true];
-        $res6 = '/<input class="with-gap radio-col-red" type="radio" id="[0-9]{14,}"><label for="[0-9]{14,}"><\/label>/';
-        $this->assertRegExp($res6, $obj->adminBSBRadioButtonMaterialDesignFunction($arg6));
+        $res6 = '<input class="with-gap radio-col-red" type="radio"><label></label>';
+        $this->assertEquals($res6, $obj->adminBSBRadioButtonMaterialDesignFunction($arg6));
 
         $arg7 = ["class" => "class"];
-        $res7 = '/<input class="class radio-col-red" type="radio" id="[0-9]{14,}"><label for="[0-9]{14,}"><\/label>/';
-        $this->assertRegExp($res7, $obj->adminBSBRadioButtonMaterialDesignFunction($arg7));
+        $res7 = '<input class="class radio-col-red" type="radio"><label></label>';
+        $this->assertEquals($res7, $obj->adminBSBRadioButtonMaterialDesignFunction($arg7));
 
         $arg8 = ["color" => "black"];
-        $res8 = '/<input class="radio-col-black" type="radio" id="[0-9]{14,}"><label for="[0-9]{14,}"><\/label>/';
-        $this->assertRegExp($res8, $obj->adminBSBRadioButtonMaterialDesignFunction($arg8));
+        $res8 = '<input class="radio-col-black" type="radio"><label></label>';
+        $this->assertEquals($res8, $obj->adminBSBRadioButtonMaterialDesignFunction($arg8));
 
         $arg9 = ["content" => "content", "name" => "name", "id" => "id", "checked" => true, "disabled" => true, "withGap" => true, "class" => "class", "color" => "black"];
         $res9 = '<input class="with-gap class radio-col-black" name="name" type="radio" id="id" checked="checked" disabled="disabled"><label for="id">content</label>';

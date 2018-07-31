@@ -60,8 +60,8 @@ final class CheckboxTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $obj = new CheckboxTwigExtension();
 
         $arg0 = [];
-        $res0 = '/<input type="checkbox" id="[0-9]{14,}"><label for="[0-9]{14,}"><\/label>/';
-        $this->assertRegExp($res0, $obj->adminBSBCheckboxBasicFunction($arg0));
+        $res0 = '<input type="checkbox"><label></label>';
+        $this->assertEquals($res0, $obj->adminBSBCheckboxBasicFunction($arg0));
     }
 
     /**
@@ -75,40 +75,40 @@ final class CheckboxTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $obj = new CheckboxTwigExtension();
 
         $arg0 = [];
-        $res0 = '/<input class="chk-col-red" type="checkbox" id="[0-9]{14,}"><label for="[0-9]{14,}"><\/label>/';
-        $this->assertRegExp($res0, $obj->adminBSBCheckboxMaterialDesignFunction($arg0));
+        $res0 = '<input class="chk-col-red" type="checkbox"><label></label>';
+        $this->assertEquals($res0, $obj->adminBSBCheckboxMaterialDesignFunction($arg0));
 
         $arg1 = ["content" => "content"];
-        $res1 = '/<input class="chk-col-red" type="checkbox" id="[0-9]{14,}"><label for="[0-9]{14,}">content<\/label>/';
-        $this->assertRegExp($res1, $obj->adminBSBCheckboxMaterialDesignFunction($arg1));
+        $res1 = '<input class="chk-col-red" type="checkbox"><label>content</label>';
+        $this->assertEquals($res1, $obj->adminBSBCheckboxMaterialDesignFunction($arg1));
 
         $arg2 = ["name" => "name"];
-        $res2 = '/<input class="chk-col-red" name="name" type="checkbox" id="[0-9]{14,}"><label for="[0-9]{14,}"><\/label>/';
-        $this->assertRegExp($res2, $obj->adminBSBCheckboxMaterialDesignFunction($arg2));
+        $res2 = '<input class="chk-col-red" name="name" type="checkbox"><label></label>';
+        $this->assertEquals($res2, $obj->adminBSBCheckboxMaterialDesignFunction($arg2));
 
         $arg3 = ["id" => "id"];
         $res3 = '<input class="chk-col-red" type="checkbox" id="id"><label for="id"></label>';
         $this->assertEquals($res3, $obj->adminBSBCheckboxMaterialDesignFunction($arg3));
 
         $arg4 = ["checked" => true];
-        $res4 = '/<input class="chk-col-red" type="checkbox" id="[0-9]{14,}" checked="checked"><label for="[0-9]{14,}"><\/label>/';
-        $this->assertRegExp($res4, $obj->adminBSBCheckboxMaterialDesignFunction($arg4));
+        $res4 = '<input class="chk-col-red" type="checkbox" checked="checked"><label></label>';
+        $this->assertEquals($res4, $obj->adminBSBCheckboxMaterialDesignFunction($arg4));
 
         $arg5 = ["disabled" => true];
-        $res5 = '/<input class="chk-col-red" type="checkbox" id="[0-9]{14,}" disabled="disabled"><label for="[0-9]{14,}"><\/label>/';
-        $this->assertRegExp($res5, $obj->adminBSBCheckboxMaterialDesignFunction($arg5));
+        $res5 = '<input class="chk-col-red" type="checkbox" disabled="disabled"><label></label>';
+        $this->assertEquals($res5, $obj->adminBSBCheckboxMaterialDesignFunction($arg5));
 
         $arg6 = ["filledIn" => true];
-        $res6 = '/<input class="filled-in chk-col-red" type="checkbox" id="[0-9]{14,}"><label for="[0-9]{14,}"><\/label>/';
-        $this->assertRegExp($res6, $obj->adminBSBCheckboxMaterialDesignFunction($arg6));
+        $res6 = '<input class="filled-in chk-col-red" type="checkbox"><label></label>';
+        $this->assertEquals($res6, $obj->adminBSBCheckboxMaterialDesignFunction($arg6));
 
         $arg7 = ["class" => "class"];
-        $res7 = '/<input class="class chk-col-red" type="checkbox" id="[0-9]{14,}"><label for="[0-9]{14,}"><\/label>/';
-        $this->assertRegExp($res7, $obj->adminBSBCheckboxMaterialDesignFunction($arg7));
+        $res7 = '<input class="class chk-col-red" type="checkbox"><label></label>';
+        $this->assertEquals($res7, $obj->adminBSBCheckboxMaterialDesignFunction($arg7));
 
         $arg8 = ["color" => "black"];
-        $res8 = '/<input class="chk-col-black" type="checkbox" id="[0-9]{14,}"><label for="[0-9]{14,}"><\/label>/';
-        $this->assertRegExp($res8, $obj->adminBSBCheckboxMaterialDesignFunction($arg8));
+        $res8 = '<input class="chk-col-black" type="checkbox"><label></label>';
+        $this->assertEquals($res8, $obj->adminBSBCheckboxMaterialDesignFunction($arg8));
 
         $arg9 = ["content" => "content", "name" => "name", "id" => "id", "checked" => true, "disabled" => true, "filledIn" => true, "class" => "class", "color" => "black"];
         $res9 = '<input class="filled-in class chk-col-black" name="name" type="checkbox" id="id" checked="checked" disabled="disabled"><label for="id">content</label>';

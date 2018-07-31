@@ -54,7 +54,7 @@ abstract class AbstractFormTwigExtension extends AbstractAdminBSBTwigExtension {
         $attributes["class"]    = [true === $filledIn ? "filled-in" : null, $class];
         $attributes["name"]     = $name;
         $attributes["type"]     = "checkbox";
-        $attributes["id"]       = null !== $id ? $id : (new DateTime())->format("YmdHisu");
+        $attributes["id"]       = $id;
         $attributes["checked"]  = true === $checked ? "checked" : null;
         $attributes["disabled"] = true === $disabled ? "disabled" : null;
 
@@ -88,7 +88,7 @@ abstract class AbstractFormTwigExtension extends AbstractAdminBSBTwigExtension {
         $attributes["class"]    = [true === $withGap ? "with-gap" : null, $class];
         $attributes["name"]     = $name;
         $attributes["type"]     = "radio";
-        $attributes["id"]       = null !== $id ? $id : (new DateTime())->format("YmdHisu");
+        $attributes["id"]       = $id;
         $attributes["checked"]  = true === $checked ? "checked" : null;
         $attributes["disabled"] = true === $disabled ? "disabled" : null;
 
