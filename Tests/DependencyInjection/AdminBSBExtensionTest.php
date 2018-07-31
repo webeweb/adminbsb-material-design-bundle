@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Tests\DependencyInjection;
 
 use WBW\Bundle\AdminBSBBundle\DependencyInjection\AdminBSBExtension;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\CheckboxFormTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\CheckboxTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\RadioButtonFormTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\SwitchButtonFormTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Menu\MultiLevelMenuTwigExtension;
@@ -58,7 +58,7 @@ final class AdminBSBExtensionTest extends AbstractBootstrapFrameworkTestCase {
         $obj->load([], $this->containerBuilder);
 
         // Form
-        $this->assertInstanceOf(CheckboxFormTwigExtension::class, $this->containerBuilder->get(CheckboxFormTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(CheckboxTwigExtension::class, $this->containerBuilder->get(CheckboxTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(RadioButtonFormTwigExtension::class, $this->containerBuilder->get(RadioButtonFormTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(SwitchButtonFormTwigExtension::class, $this->containerBuilder->get(SwitchButtonFormTwigExtension::SERVICE_NAME));
 

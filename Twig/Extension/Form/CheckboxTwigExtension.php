@@ -16,12 +16,12 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
- * Checkbox form Twig extension.
+ * Checkbox Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\Form
  */
-class CheckboxFormTwigExtension extends AbstractFormTwigExtension {
+class CheckboxTwigExtension extends AbstractFormTwigExtension {
 
     /**
      * Service name.

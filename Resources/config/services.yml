@@ -2,7 +2,7 @@
 services:
 
     webeweb.adminbsbbundle.twig.extension.form.checkbox:
-        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\CheckboxFormTwigExtension
+        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\CheckboxTwigExtension
         tags:
             - { name: "twig.extension" }
 

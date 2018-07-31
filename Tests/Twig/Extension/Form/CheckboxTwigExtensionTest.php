@@ -14,16 +14,16 @@ namespace WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Form;
 use PHPUnit_Framework_TestCase;
 use Twig_Node;
 use Twig_SimpleFunction;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\CheckboxFormTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\CheckboxTwigExtension;
 
 /**
- * Checkbox form Twig extension test.
+ * Checkbox Twig extension test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Form
  * @final
  */
-final class CheckboxFormTwigExtensionTest extends PHPUnit_Framework_TestCase {
+final class CheckboxTwigExtensionTest extends PHPUnit_Framework_TestCase {
 
     /**
      * Tests the getFunctions() method.
@@ -32,7 +32,7 @@ final class CheckboxFormTwigExtensionTest extends PHPUnit_Framework_TestCase {
      */
     public function testGetFunctions() {
 
-        $obj = new CheckboxFormTwigExtension();
+        $obj = new CheckboxTwigExtension();
 
         $res = $obj->getFunctions();
 
@@ -57,7 +57,7 @@ final class CheckboxFormTwigExtensionTest extends PHPUnit_Framework_TestCase {
      */
     public function testAdminBSBBasicCheckbox() {
 
-        $obj = new CheckboxFormTwigExtension();
+        $obj = new CheckboxTwigExtension();
 
         $arg0 = [];
         $res0 = '<input type="checkbox"><label for=""></label>';
@@ -72,7 +72,7 @@ final class CheckboxFormTwigExtensionTest extends PHPUnit_Framework_TestCase {
      */
     public function testAdminBSBMaterialDesignCheckboxCheckbox() {
 
-        $obj = new CheckboxFormTwigExtension();
+        $obj = new CheckboxTwigExtension();
 
         $arg0 = [];
         $res0 = '<input class="chk-col-red" type="checkbox"><label for=""></label>';
