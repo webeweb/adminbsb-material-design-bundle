@@ -16,10 +16,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\CheckboxTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\RadioButtonTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\SwitchButtonTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Menu\MultiLevelMenuTwigExtension;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\ItalicTypographyTwigExtension;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\OverlinedTypographyTwigExtension;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\StrikethroughTypographyTwigExtension;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\UnderlinedTypographyTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\TypographyTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\BadgeUITwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ButtonUITwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ColorUITwigExtension;
@@ -66,10 +63,7 @@ final class AdminBSBExtensionTest extends AbstractBootstrapFrameworkTestCase {
         $this->assertInstanceOf(MultiLevelMenuTwigExtension::class, $this->containerBuilder->get(MultiLevelMenuTwigExtension::SERVICE_NAME));
 
         // Typography
-        $this->assertInstanceOf(ItalicTypographyTwigExtension::class, $this->containerBuilder->get(ItalicTypographyTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(OverlinedTypographyTwigExtension::class, $this->containerBuilder->get(OverlinedTypographyTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(StrikethroughTypographyTwigExtension::class, $this->containerBuilder->get(StrikethroughTypographyTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(UnderlinedTypographyTwigExtension::class, $this->containerBuilder->get(UnderlinedTypographyTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(TypographyTwigExtension::class, $this->containerBuilder->get(TypographyTwigExtension::SERVICE_NAME));
 
         // UI
         $this->assertInstanceOf(BadgeUITwigExtension::class, $this->containerBuilder->get(BadgeUITwigExtension::SERVICE_NAME));

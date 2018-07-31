@@ -22,23 +22,8 @@ services:
         tags:
             - { name: "twig.extension" }
 
-    webeweb.adminbsbbundle.twig.extension.typography.italic:
-        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\ItalicTypographyTwigExtension
-        tags:
-            - { name: "twig.extension" }
-
-    webeweb.adminbsbbundle.twig.extension.typography.overlined:
-        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\OverlinedTypographyTwigExtension
-        tags:
-            - { name: "twig.extension" }
-
-    webeweb.adminbsbbundle.twig.extension.typography.strikethrough:
-        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\StrikethroughTypographyTwigExtension
-        tags:
-            - { name: "twig.extension" }
-
-    webeweb.adminbsbbundle.twig.extension.typography.underlined:
-        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\UnderlinedTypographyTwigExtension
+    webeweb.adminbsbbundle.twig.extension.typography:
+        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\TypographyTwigExtension
         tags:
             - { name: "twig.extension" }
 
