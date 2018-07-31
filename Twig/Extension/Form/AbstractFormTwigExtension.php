@@ -80,7 +80,7 @@ abstract class AbstractFormTwigExtension extends AbstractAdminBSBTwigExtension {
     final protected function adminBSBRadioButton($content, $name, $id, $checked, $disabled, $withGap, $class) {
 
         // Initialize the template.
-        $template = '<input %attributes%><label for="%id%">%innerHTML%</label>';
+        $template = '<input %attributes%>%innerHTML%';
 
         // Initialize the attributes.
         $attributes = [];
@@ -88,15 +88,15 @@ abstract class AbstractFormTwigExtension extends AbstractAdminBSBTwigExtension {
         $attributes["class"]    = [true === $withGap ? "with-gap" : null, $class];
         $attributes["name"]     = $name;
         $attributes["type"]     = "radio";
-        $attributes["id"]       = $id;
+        $attributes["id"]       = null !== $id ? $id : (new DateTime())->format("YmdHisu");
         $attributes["checked"]  = true === $checked ? "checked" : null;
         $attributes["disabled"] = true === $disabled ? "disabled" : null;
 
         // Check the parameters.
-        $innerHTML = null !== $content ? $content : "";
+        $innerHTML = self::bootstrapHTMLElement("label", $content, ["for" => $attributes["id"]]);
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%", "%id%", "%innerHTML%"], [StringUtility::parseArray($attributes), $attributes["id"], $innerHTML]);
+        return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $innerHTML]);
     }
 
     /**
