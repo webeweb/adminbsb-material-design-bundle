@@ -38,13 +38,23 @@ class RadioButtonTwigExtension extends AbstractFormTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB basic radio button.
+     * Displays an AdminBSB radio button "Basic".
      *
      * @param array $args The arguments.
-     * @return string Returns the AdminBSB basic radio button.
+     * @return string Returns the AdminBSB radio button "Basic".
      */
-    public function adminBSBBasicRadioButtonFunction(array $args = []) {
+    public function adminBSBRadioButtonBasicFunction(array $args = []) {
         return $this->adminBSBRadioButton(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "id"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "withGap", false), ArrayUtility::get($args, "class"));
+    }
+
+    /**
+     * Displays an AdminBSB radio button "Material Design".
+     *
+     * @param array $args The arguments.
+     * @return string Returns the AdminBSB radio button "Material Design".
+     */
+    public function adminBSBRadioButtonMaterialDesignFunction(array $args = []) {
+        return $this->adminBSBRadioButton(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "id"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "withGap", false), ArrayUtility::get($args, "class", "") . AbstractAdminBSBTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), " radio-col-"));
     }
 
     /**
@@ -54,19 +64,9 @@ class RadioButtonTwigExtension extends AbstractFormTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("adminBSBBasicRadioButton", [$this, "adminBSBBasicRadioButtonFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBMaterialDesignRadioButton", [$this, "adminBSBMaterialDesignRadioButtonFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBRadioButtonBasic", [$this, "adminBSBRadioButtonBasicFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBRadioButtonMaterialDesign", [$this, "adminBSBRadioButtonMaterialDesignFunction"], ["is_safe" => ["html"]]),
         ];
-    }
-
-    /**
-     * Displays an AdminBSB material designradio button.
-     *
-     * @param array $args The arguments.
-     * @return string Returns the AdminBSB material designradio button.
-     */
-    public function adminBSBMaterialDesignRadioButtonFunction(array $args = []) {
-        return $this->adminBSBRadioButton(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "id"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "withGap", false), ArrayUtility::get($args, "class", "") . AbstractAdminBSBTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), " radio-col-"));
     }
 
 }
