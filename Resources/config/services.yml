@@ -12,7 +12,7 @@ services:
             - { name: "twig.extension" }
 
     webeweb.adminbsbbundle.twig.extension.form.switchbutton:
-        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\SwitchButtonFormTwigExtension
+        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\SwitchButtonTwigExtension
         tags:
             - { name: "twig.extension" }
 

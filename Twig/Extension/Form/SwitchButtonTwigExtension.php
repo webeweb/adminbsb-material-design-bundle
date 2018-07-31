@@ -16,12 +16,12 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
- * Switch button form Twig extension.
+ * Switch button Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\Form
  */
-class SwitchButtonFormTwigExtension extends AbstractFormTwigExtension {
+class SwitchButtonTwigExtension extends AbstractFormTwigExtension {
 
     /**
      * Service name.

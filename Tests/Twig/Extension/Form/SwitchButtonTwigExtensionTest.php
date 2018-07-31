@@ -14,16 +14,16 @@ namespace WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Form;
 use PHPUnit_Framework_TestCase;
 use Twig_Node;
 use Twig_SimpleFunction;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\SwitchButtonFormTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\SwitchButtonTwigExtension;
 
 /**
- * Switch button form Twig extension test.
+ * Switch button Twig extension test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Form
  * @final
  */
-final class SwitchButtonFormTwigExtensionTest extends PHPUnit_Framework_TestCase {
+final class SwitchButtonTwigExtensionTest extends PHPUnit_Framework_TestCase {
 
     /**
      * Tests the getFunctions() method.
@@ -32,7 +32,7 @@ final class SwitchButtonFormTwigExtensionTest extends PHPUnit_Framework_TestCase
      */
     public function testGetFunctions() {
 
-        $obj = new SwitchButtonFormTwigExtension();
+        $obj = new SwitchButtonTwigExtension();
 
         $res = $obj->getFunctions();
 
@@ -57,7 +57,7 @@ final class SwitchButtonFormTwigExtensionTest extends PHPUnit_Framework_TestCase
      */
     public function testAdminBSBBasicSwitchButton() {
 
-        $obj = new SwitchButtonFormTwigExtension();
+        $obj = new SwitchButtonTwigExtension();
 
         $arg0 = [];
         $res0 = '<div class="switch"><label><input type="checkbox"><span class="lever"></span></label></div>';
@@ -72,7 +72,7 @@ final class SwitchButtonFormTwigExtensionTest extends PHPUnit_Framework_TestCase
      */
     public function testAdminBSBMaterialDesignSwitchButtonSwitchButton() {
 
-        $obj = new SwitchButtonFormTwigExtension();
+        $obj = new SwitchButtonTwigExtension();
 
         $arg0 = [];
         $res0 = '<div class="switch"><label><input type="checkbox"><span class="lever switch-col-red"></span></label></div>';
