@@ -38,13 +38,23 @@ class SwitchButtonTwigExtension extends AbstractFormTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB basic switch button.
+     * Displays an AdminBSB switch button "Basic".
      *
      * @param array $args The arguments.
-     * @return string Returns the AdminBSB basic switch button.
+     * @return string Returns the AdminBSB switch button "Basic".
      */
-    public function adminBSBBasicSwitchButtonFunction(array $args = []) {
+    public function adminBSBSwitchButtonBasicFunction(array $args = []) {
         return $this->adminBSBSwitchButton(ArrayUtility::get($args, "offLabel"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "onLabel"), ArrayUtility::get($args, "attr", []));
+    }
+
+    /**
+     * Displays an AdminBSB switch button "Material design".
+     *
+     * @param array $args The arguments.
+     * @return string Returns the AdminBSB switch button "Material Design".
+     */
+    public function adminBSBSwitchButtonMaterialDesignFunction(array $args = []) {
+        return $this->adminBSBSwitchButton(ArrayUtility::get($args, "offLabel"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "onLabel"), ArrayUtility::get($args, "attr", []), AbstractAdminBSBTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), " switch-col-"));
     }
 
     /**
@@ -54,19 +64,9 @@ class SwitchButtonTwigExtension extends AbstractFormTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("adminBSBBasicSwitchButton", [$this, "adminBSBBasicSwitchButtonFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBMaterialDesignSwitchButton", [$this, "adminBSBMaterialDesignSwitchButtonFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBSwitchButtonBasic", [$this, "adminBSBSwitchButtonBasicFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBSwitchButtonMaterialDesign", [$this, "adminBSBSwitchButtonMaterialDesignFunction"], ["is_safe" => ["html"]]),
         ];
-    }
-
-    /**
-     * Displays an AdminBSB material designswitch button.
-     *
-     * @param array $args The arguments.
-     * @return string Returns the AdminBSB material designswitch button.
-     */
-    public function adminBSBMaterialDesignSwitchButtonFunction(array $args = []) {
-        return $this->adminBSBSwitchButton(ArrayUtility::get($args, "offLabel"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "onLabel"), ArrayUtility::get($args, "attr", []), AbstractAdminBSBTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), " switch-col-"));
     }
 
 }
