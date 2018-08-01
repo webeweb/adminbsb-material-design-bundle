@@ -81,6 +81,16 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
     }
 
     /**
+     * Displays a AdminBSB button "Material design".
+     *
+     * @param array $args The arguments.
+     * @return string Returns the AdminBSB button "Material design".
+     */
+    public function adminBSBButtonMaterialDesignFunction(array $args = []) {
+        return $this->adminBSBButton(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "title"), ArrayUtility::get($args, "size", false), ArrayUtility::get($args, "block", false), ArrayUtility::get($args, "disable", false), AbstractAdminBSBTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), "bg-"), ArrayUtility::get($args, "icon"), ArrayUtility::get($args, "circle", false));
+    }
+
+    /**
      * Displays an AdminBSB button "Primary".
      *
      * @param array $args The arguments.
@@ -111,16 +121,6 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
     }
 
     /**
-     * Displays a AdminBSB material design button.
-     *
-     * @param array $args The arguments.
-     * @return string Returns the AdminBSB material design button.
-     */
-    public function adminBSBMaterialDesignButtonFunction(array $args = []) {
-        return $this->adminBSBButton(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "title"), ArrayUtility::get($args, "size", false), ArrayUtility::get($args, "block", false), ArrayUtility::get($args, "disable", false), AbstractAdminBSBTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), "bg-"), ArrayUtility::get($args, "icon"), ArrayUtility::get($args, "circle", false));
-    }
-
-    /**
      * Get the Twig filters.
      *
      * @return array Returns the Twig filters.
@@ -141,10 +141,10 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
             new Twig_SimpleFunction("adminBSBButtonDanger", [$this, "adminBSBButtonDangerFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("adminBSBButtonDefault", [$this, "adminBSBButtonDefaultFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("adminBSBButtonInfo", [$this, "adminBSBButtonInfoFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBButtonMaterialDesign", [$this, "adminBSBButtonMaterialDesignFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("adminBSBButtonPrimary", [$this, "adminBSBButtonPrimaryFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("adminBSBButtonSuccess", [$this, "adminBSBButtonSuccessFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("adminBSBButtonWarning", [$this, "adminBSBButtonWarningFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBMaterialDesignButton", [$this, "adminBSBMaterialDesignButtonFunction"], ["is_safe" => ["html"]]),
         ];
     }
 
