@@ -16,12 +16,12 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
- * Preloader UI Twig extension.
+ * Preloader Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\UI
  */
-class PreloaderUITwigExtension extends AbstractUITwigExtension {
+class PreloaderTwigExtension extends AbstractPreloaderTwigExtension {
 
     /**
      * Service name.
@@ -38,52 +38,52 @@ class PreloaderUITwigExtension extends AbstractUITwigExtension {
     }
 
     /**
-     * Displays an AdminBSB material design preloader L.
+     * Displays an AdminBSB preloader "Material design" L.
      *
      * @param array $args The arguments.
-     * @return string Retruns the AdminBSB material design preloader L.
+     * @return string Retruns the AdminBSB preloader "Material design" L.
      */
-    public function adminBSBMaterialDesignPreloaderLFunction(array $args = []) {
+    public function adminBSBPreloaderMaterialDesignLFunction(array $args = []) {
         return $this->adminBSBPreloader(AbstractAdminBSBTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), "pl-"), "l");
     }
 
     /**
-     * Displays an AdminBSB material design preloader S.
+     * Displays an AdminBSB preloader "Material design" S.
      *
      * @param array $args The arguments.
-     * @return string Retruns the AdminBSB material design preloader S.
+     * @return string Retruns the AdminBSB preloader "Material design" S.
      */
-    public function adminBSBMaterialDesignPreloaderSFunction(array $args = []) {
+    public function adminBSBPreloaderMaterialDesignSFunction(array $args = []) {
         return $this->adminBSBPreloader(AbstractAdminBSBTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), "pl-"), "s");
     }
 
     /**
-     * Displays an AdminBSB material design preloader SM.
+     * Displays an AdminBSB preloader "Material design" SM.
      *
      * @param array $args The arguments.
-     * @return string Retruns the AdminBSB material design preloader SM.
+     * @return string Retruns the AdminBSB preloader "Material design" SM.
      */
-    public function adminBSBMaterialDesignPreloaderSMFunction(array $args = []) {
+    public function adminBSBPreloaderMaterialDesignSMFunction(array $args = []) {
         return $this->adminBSBPreloader(AbstractAdminBSBTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), "pl-"), "sm");
     }
 
     /**
-     * Displays an AdminBSB material design preloader XL.
+     * Displays an AdminBSB preloader "Material design" XL.
      *
      * @param array $args The arguments.
-     * @return string Retruns the AdminBSB material design preloader XL.
+     * @return string Retruns the AdminBSB preloader "Material design" XL.
      */
-    public function adminBSBMaterialDesignPreloaderXLFunction(array $args = []) {
+    public function adminBSBPreloaderMaterialDesignXLFunction(array $args = []) {
         return $this->adminBSBPreloader(AbstractAdminBSBTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), "pl-"), "xl");
     }
 
     /**
-     * Displays an AdminBSB material design preloader XS.
+     * Displays an AdminBSB preloader "Material design" XS.
      *
      * @param array $args The arguments.
-     * @return string Retruns the AdminBSB material design preloader XS.
+     * @return string Retruns the AdminBSB preloader "Material design" XS.
      */
-    public function adminBSBMaterialDesignPreloaderXSFunction(array $args = []) {
+    public function adminBSBPreloaderMaterialDesignXSFunction(array $args = []) {
         return $this->adminBSBPreloader(AbstractAdminBSBTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), "pl-"), "xs");
     }
 
@@ -94,11 +94,11 @@ class PreloaderUITwigExtension extends AbstractUITwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("adminBSBMaterialDesignPreloaderL", [$this, "adminBSBMaterialDesignPreloaderLFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBMaterialDesignPreloaderS", [$this, "adminBSBMaterialDesignPreloaderSFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBMaterialDesignPreloaderSM", [$this, "adminBSBMaterialDesignPreloaderSMFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBMaterialDesignPreloaderXL", [$this, "adminBSBMaterialDesignPreloaderXLFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBMaterialDesignPreloaderXS", [$this, "adminBSBMaterialDesignPreloaderXSFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBPreloaderMaterialDesignL", [$this, "adminBSBPreloaderMaterialDesignLFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBPreloaderMaterialDesignS", [$this, "adminBSBPreloaderMaterialDesignSFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBPreloaderMaterialDesignSM", [$this, "adminBSBPreloaderMaterialDesignSMFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBPreloaderMaterialDesignXL", [$this, "adminBSBPreloaderMaterialDesignXLFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBPreloaderMaterialDesignXS", [$this, "adminBSBPreloaderMaterialDesignXSFunction"], ["is_safe" => ["html"]]),
         ];
     }
 
