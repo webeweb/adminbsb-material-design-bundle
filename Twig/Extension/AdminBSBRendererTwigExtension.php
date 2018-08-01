@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension;
 
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\IconUITwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\IconTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\BootstrapRendererTwigExtension;
 
 /**
@@ -50,7 +50,7 @@ class AdminBSBRendererTwigExtension {
         switch ($handler[0]) {
 
             case "md": // Material Design
-                $output = (new IconUITwigExtension())->renderIcon($handler[1], $style);
+                $output = (new IconTwigExtension())->renderIcon($handler[1], $style);
                 break;
 
             default:
