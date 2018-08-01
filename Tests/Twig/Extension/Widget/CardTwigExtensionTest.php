@@ -14,7 +14,7 @@ namespace WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Widget;
 use PHPUnit_Framework_TestCase;
 use Twig_Node;
 use Twig_SimpleFunction;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget\CardWidgetTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget\CardTwigExtension;
 
 /**
  * Card widget Twig extension test.
@@ -23,7 +23,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget\CardWidgetTwigExtension;
  * @package WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Widget
  * @final
  */
-final class CardWidgetTwigExtensionTest extends PHPUnit_Framework_TestCase {
+final class CardTwigExtensionTest extends PHPUnit_Framework_TestCase {
 
     /**
      * Tests the getFunctions() method.
@@ -32,7 +32,7 @@ final class CardWidgetTwigExtensionTest extends PHPUnit_Framework_TestCase {
      */
     public function testGetFunctions() {
 
-        $obj = new CardWidgetTwigExtension();
+        $obj = new CardTwigExtension();
 
         $res = $obj->getFunctions();
 
@@ -52,7 +52,7 @@ final class CardWidgetTwigExtensionTest extends PHPUnit_Framework_TestCase {
      */
     public function testAdminBSBCardHeaderFunction() {
 
-        $obj = new CardWidgetTwigExtension();
+        $obj = new CardTwigExtension();
 
         $arg0 = [];
         $res0 = '<h2 class="card-header"></h2>';

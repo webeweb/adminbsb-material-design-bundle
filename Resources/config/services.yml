@@ -63,6 +63,6 @@ services:
             - { name: "twig.extension" }
 
     webeweb.adminbsbbundle.twig.extension.widget.card:
-        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget\CardWidgetTwigExtension
+        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget\CardTwigExtension
         tags:
             - { name: "twig.extension" }

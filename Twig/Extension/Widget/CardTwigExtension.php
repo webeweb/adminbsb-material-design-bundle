@@ -17,12 +17,12 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
- * Card widget Twig extension.
+ * Card Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget
  */
-class CardWidgetTwigExtension extends AbstractWidgetTwigExtension {
+class CardTwigExtension extends AbstractCardTwigExtension {
 
     /**
      * Service name.
@@ -52,7 +52,7 @@ class CardWidgetTwigExtension extends AbstractWidgetTwigExtension {
         $icon        = ArrayUtility::get($args, "icon");
 
         if (null !== $description) {
-            $content .= "<small>" . $description . "</small>";
+            $content .= self::bootstrapHTMLElement("small", $description);
         }
         if (null !== $icon) {
             $content = AdminBSBRendererTwigExtension::renderIcon($icon, "margin: -4px 4px 0 0; vertical-align: sub;") . $content;

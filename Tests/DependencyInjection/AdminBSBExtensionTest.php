@@ -24,7 +24,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\IconUITwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ModalUITwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\PreloaderUITwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ProgressBarUITwigExtension;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget\CardWidgetTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget\CardTwigExtension;
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
 
 /**
@@ -75,7 +75,7 @@ final class AdminBSBExtensionTest extends AbstractBootstrapFrameworkTestCase {
         $this->assertInstanceOf(ProgressBarUITwigExtension::class, $this->containerBuilder->get(ProgressBarUITwigExtension::SERVICE_NAME));
 
         // Widget
-        $this->assertInstanceOf(CardWidgetTwigExtension::class, $this->containerBuilder->get(CardWidgetTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(CardTwigExtension::class, $this->containerBuilder->get(CardTwigExtension::SERVICE_NAME));
     }
 
 }

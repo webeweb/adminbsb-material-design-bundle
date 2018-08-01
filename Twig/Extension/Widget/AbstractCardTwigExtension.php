@@ -14,18 +14,18 @@ namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
 
 /**
- * Abstract widget twig extension.
+ * Abstract card twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget
  * @abstract
  */
-abstract class AbstractWidgetTwigExtension extends AbstractAdminBSBTwigExtension {
+abstract class AbstractCardTwigExtension extends AbstractAdminBSBTwigExtension {
 
     /**
      * Constructor.
      */
-    public function __construct() {
+    protected function __construct() {
         parent::__construct();
     }
 
