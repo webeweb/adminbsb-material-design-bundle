@@ -18,12 +18,12 @@ use WBW\Library\Core\Utility\Argument\ArrayUtility;
 use WBW\Library\Core\Utility\Argument\StringUtility;
 
 /**
- * Button UI Twig extension.
+ * Button Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\UI
  */
-class ButtonUITwigExtension extends AbstractUITwigExtension {
+class ButtonTwigExtension extends AbstractButtonTwigExtension {
 
     /**
      * Service name.
