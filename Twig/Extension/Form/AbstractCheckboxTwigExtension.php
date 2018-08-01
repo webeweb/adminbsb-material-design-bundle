@@ -42,7 +42,7 @@ abstract class AbstractCheckboxTwigExtension extends AbstractAdminBSBTwigExtensi
      * @param string $class The checkbox class.
      * @return string Returns the AdminBSB checkbox.
      */
-    final protected function adminBSBCheckbox($content, $name, $id, $checked, $disabled, $filledIn, $class) {
+    protected function adminBSBCheckbox($content, $name, $id, $checked, $disabled, $filledIn, $class) {
 
         // Initialize the template.
         $template = "<input %attributes%>%innerHTML%";
