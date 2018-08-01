@@ -12,7 +12,6 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
-use WBW\Library\Core\Utility\Argument\StringUtility;
 
 /**
  * Abstract preloader Twig extension.
@@ -39,17 +38,21 @@ abstract class AbstractPreloaderTwigExtension extends AbstractAdminBSBTwigExtens
      */
     protected function adminBSBPreloader($class, $size) {
 
-        // Initialize the template.
-        $template = '<div %attributes1%><div %attributes2%><div class="circle-clipper left"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>';
+        // Initialize the values.
+        $sizes = ["xs", "sm", "l", "xl"];
 
         // Initialize the attributes.
         $attributes = [];
 
-        $attributes["preloader"]["class"] = ["preloader", in_array($size, ["xs", "sm", "l", "xl"]) ? "pl-size-" . $size : null];
-        $attributes["spinner"]["class"]   = ["spinner-layer", $class];
+        $attributes["class"][] = "preloader";
+        $attributes["class"][] = true === in_array($size, $sizes) ? "pl-size-" . $size : null;
+
+        // Initialize the parameters.
+        $innerHTML = "<div class=\"circle-clipper left\"><div class=\"circle\"></div></div><div class=\"circle-clipper right\"><div class=\"circle\"></div></div>";
+        $div       = self::bootstrapHTMLElement("div", $innerHTML, ["class" => ["spinner-layer", $class]]);
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%attributes1%", "%attributes2%"], [StringUtility::parseArray($attributes["preloader"]), StringUtility::parseArray($attributes["spinner"])]);
+        return self::bootstrapHTMLElement("div", $div, $attributes);
     }
 
 }
