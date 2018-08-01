@@ -15,6 +15,7 @@ use PHPUnit_Framework_TestCase;
 use Twig_Node;
 use Twig_SimpleFunction;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget\CardTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension;
 
 /**
  * Card widget Twig extension test.
@@ -26,13 +27,30 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget\CardTwigExtension;
 final class CardTwigExtensionTest extends PHPUnit_Framework_TestCase {
 
     /**
+     * Typography.
+     *
+     * @var TypographyTwigExtension
+     */
+    private $typography;
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function setUp() {
+        parent::setUp();
+
+        // Set a Typography Twig extension mock.
+        $this->typography = new TypographyTwigExtension();
+    }
+
+    /**
      * Tests the getFunctions() method.
      *
      * @return void
      */
     public function testGetFunctions() {
 
-        $obj = new CardTwigExtension();
+        $obj = new CardTwigExtension($this->typography);
 
         $res = $obj->getFunctions();
 
@@ -52,7 +70,7 @@ final class CardTwigExtensionTest extends PHPUnit_Framework_TestCase {
      */
     public function testAdminBSBCardHeaderFunction() {
 
-        $obj = new CardTwigExtension();
+        $obj = new CardTwigExtension($this->typography);
 
         $arg0 = [];
         $res0 = '<h2 class="card-header"></h2>';

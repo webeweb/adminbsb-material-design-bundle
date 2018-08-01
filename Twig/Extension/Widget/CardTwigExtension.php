@@ -12,7 +12,6 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget;
 
 use Twig_SimpleFunction;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\AdminBSBRendererTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
@@ -35,7 +34,7 @@ class CardTwigExtension extends AbstractCardTwigExtension {
      * Constructor.
      */
     public function __construct() {
-        parent::__construct();
+        parent::__construct(new TypographyTwigExtension());
     }
 
     /**
@@ -45,21 +44,7 @@ class CardTwigExtension extends AbstractCardTwigExtension {
      * @return string Returns the AdminBSB card header.
      */
     public function adminBSBCardHeaderFunction(array $args = []) {
-
-        // Initialize the paramters.
-        $content     = ArrayUtility::get($args, "content", "");
-        $description = ArrayUtility::get($args, "description");
-        $icon        = ArrayUtility::get($args, "icon");
-
-        if (null !== $description) {
-            $content .= self::bootstrapHTMLElement("small", $description);
-        }
-        if (null !== $icon) {
-            $content = AdminBSBRendererTwigExtension::renderIcon($icon, "margin: -4px 4px 0 0; vertical-align: sub;") . $content;
-        }
-
-        // Return the HTML.
-        return (new TypographyTwigExtension())->bootstrapHeading2Function(["class" => "card-header", "content" => $content]);
+        return $this->adminBSBCardHeader(ArrayUtility::get($args, "content", ""), ArrayUtility::get($args, "description"), ArrayUtility::get($args, "icon"));
     }
 
     /**
