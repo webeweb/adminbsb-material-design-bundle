@@ -21,7 +21,7 @@ use WBW\Library\Core\Utility\Argument\ArrayUtility;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\Form
  */
-class RadioButtonTwigExtension extends AbstractFormTwigExtension {
+class RadioButtonTwigExtension extends AbstractRadioButtonTwigExtension {
 
     /**
      * Service name.
