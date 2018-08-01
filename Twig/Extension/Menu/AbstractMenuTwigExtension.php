@@ -28,7 +28,7 @@ use WBW\Library\Core\Utility\Argument\StringUtility;
 abstract class AbstractMenuTwigExtension extends AbstractAdminBSBTwigExtension {
 
     /**
-     * Translator;
+     * Translator.
      *
      * @var TranslatorInterface
      */
@@ -75,9 +75,6 @@ abstract class AbstractMenuTwigExtension extends AbstractAdminBSBTwigExtension {
      */
     private function adminBSBMenuHeader(NavigationTree $tree) {
 
-        // Initialize the template.
-        $template = "<li %attributes%>%innerHTML%</li>";
-
         // Initialize the attributes.
         $attributes = [];
 
@@ -87,7 +84,7 @@ abstract class AbstractMenuTwigExtension extends AbstractAdminBSBTwigExtension {
         $innerHTML = null !== $tree->getId() ? $this->translate($tree->getId()) : "";
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $innerHTML]);
+        return self::bootstrapHTMLElement("li", $innerHTML, $attributes);
     }
 
     /**
@@ -167,9 +164,6 @@ abstract class AbstractMenuTwigExtension extends AbstractAdminBSBTwigExtension {
      */
     private function adminBSBMenuItemLink(NavigationNode $node, $class) {
 
-        // Initialize the template.
-        $template = "<a %attributes%>%innerHTML%</a>";
-
         // Initialize the attributes.
         $attributes = [];
 
@@ -181,7 +175,7 @@ abstract class AbstractMenuTwigExtension extends AbstractAdminBSBTwigExtension {
         $innerHTML = $this->adminBSBMenuItemLabel($node);
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $innerHTML]);
+        return self::bootstrapHTMLElement("a", $innerHTML, $attributes);
     }
 
     /**
@@ -198,7 +192,7 @@ abstract class AbstractMenuTwigExtension extends AbstractAdminBSBTwigExtension {
      * Translate.
      *
      * @param string $id The translation id.
-     * @return string Returns the translation in case of succes, id otherwise.
+     * @return string Returns the translation in case of success, id otherwise.
      */
     private function translate($id) {
 
