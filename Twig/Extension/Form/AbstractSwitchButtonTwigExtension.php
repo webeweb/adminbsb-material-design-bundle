@@ -42,7 +42,7 @@ abstract class AbstractSwitchButtonTwigExtension extends AbstractAdminBSBTwigExt
      * @param string $class The switch button class.
      * @return string Returns the AdminBSB switch button.
      */
-    final protected function adminBSBSwitchButton($offLabel, $name, $checked, $disabled, $onLabel, array $attrs, $class) {
+    protected function adminBSBSwitchButton($offLabel, $name, $checked, $disabled, $onLabel, array $attrs, $class) {
 
         // Initialize the template.
         $template = "<input %attributes%>%innerHTML%";
