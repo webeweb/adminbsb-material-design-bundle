@@ -17,12 +17,12 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarTwigExtension
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
- * Progress bar UI Twig extension.
+ * Progress bar Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\UI
  */
-class ProgressBarUITwigExtension extends BaseTwigExtension {
+class ProgressBarTwigExtension extends BaseTwigExtension {
 
     /**
      * Service name.
@@ -39,12 +39,12 @@ class ProgressBarUITwigExtension extends BaseTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB material design progress bar.
+     * Displays an AdminBSB progress bar "Material design".
      *
      * @param array $args The arguments.
-     * @return string Returns the AdminBSB material design progress bar.
+     * @return string Returns the AdminBSB progress bar "Material design".
      */
-    public function adminBSBMaterialDesignProgressBarFunction(array $args = []) {
+    public function adminBSBProgressBarMaterialDesignFunction(array $args = []) {
         return $this->bootstrapProgressBar(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "value", 50), ArrayUtility::get($args, "min", 0), ArrayUtility::get($args, "max", 100), ArrayUtility::get($args, "striped", false), ArrayUtility::get($args, "animated", false), AbstractAdminBSBTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), "bg-"));
     }
 
@@ -55,12 +55,7 @@ class ProgressBarUITwigExtension extends BaseTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("adminBSBBasicProgressBar", [$this, "bootstrapBasicProgressBarFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBProgressBarDanger", [$this, "bootstrapProgressBarDangerFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBProgressBarInfo", [$this, "bootstrapProgressBarInfoFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBProgressBarSuccess", [$this, "bootstrapProgressBarSuccessFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBProgressBarWarning", [$this, "bootstrapProgressBarWarningFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBMaterialDesignProgressBar", [$this, "adminBSBMaterialDesignProgressBarFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBProgressBarMaterialDesign", [$this, "adminBSBProgressBarMaterialDesignFunction"], ["is_safe" => ["html"]]),
         ];
     }
 
