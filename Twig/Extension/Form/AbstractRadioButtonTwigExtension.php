@@ -42,7 +42,7 @@ abstract class AbstractRadioButtonTwigExtension extends AbstractAdminBSBTwigExte
      * @param string $class The radio button class.
      * @return string Returns the AdminBSB radio button.
      */
-    final protected function adminBSBRadioButton($content, $name, $id, $checked, $disabled, $withGap, $class) {
+    protected function adminBSBRadioButton($content, $name, $id, $checked, $disabled, $withGap, $class) {
 
         // Initialize the template.
         $template = "<input %attributes%>%innerHTML%";
