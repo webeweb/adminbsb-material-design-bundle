@@ -49,7 +49,7 @@ class AdminBSBRendererTwigExtension {
         // Swith into handler.
         switch ($handler[0]) {
 
-            case "md": // Material Design
+            case "md": // Material design
                 $output = (new IconTwigExtension())->renderIcon($handler[1], $style);
                 break;
 

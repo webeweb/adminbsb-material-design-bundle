@@ -51,7 +51,7 @@ class SwitchButtonTwigExtension extends AbstractSwitchButtonTwigExtension {
      * Displays an AdminBSB switch button "Material design".
      *
      * @param array $args The arguments.
-     * @return string Returns the AdminBSB switch button "Material Design".
+     * @return string Returns the AdminBSB switch button "Material design".
      */
     public function adminBSBSwitchButtonMaterialDesignFunction(array $args = []) {
         return $this->adminBSBSwitchButton(ArrayUtility::get($args, "offLabel"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "onLabel"), ArrayUtility::get($args, "attr", []), AbstractAdminBSBTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), " switch-col-"));
