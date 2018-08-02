@@ -32,8 +32,8 @@ abstract class AbstractPreloaderTwigExtension extends AbstractAdminBSBTwigExtens
     /**
      * Displays an AdminBSB preloader.
      *
-     * @param string $class The preloader class.
-     * @param string $size The preloader size.
+     * @param string $class The class.
+     * @param string $size The size.
      * @return string Returns the AdminBSB preloader.
      */
     protected function adminBSBPreloader($class, $size) {
@@ -48,11 +48,11 @@ abstract class AbstractPreloaderTwigExtension extends AbstractAdminBSBTwigExtens
         $attributes["class"][] = true === in_array($size, $sizes) ? "pl-size-" . $size : null;
 
         // Initialize the parameters.
-        $innerHTML = "<div class=\"circle-clipper left\"><div class=\"circle\"></div></div><div class=\"circle-clipper right\"><div class=\"circle\"></div></div>";
-        $div       = self::bootstrapHTMLElement("div", $innerHTML, ["class" => ["spinner-layer", $class]]);
+        $content   = "<div class=\"circle-clipper left\"><div class=\"circle\"></div></div><div class=\"circle-clipper right\"><div class=\"circle\"></div></div>";
+        $innerHTML = self::bootstrapHTMLElement("div", $content, ["class" => ["spinner-layer", $class]]);
 
         // Return the HTML.
-        return self::bootstrapHTMLElement("div", $div, $attributes);
+        return self::bootstrapHTMLElement("div", $innerHTML, $attributes);
     }
 
 }
