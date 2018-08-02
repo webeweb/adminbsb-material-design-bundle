@@ -16,12 +16,12 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
- * Badge UI Twig extension.
+ * Badge Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\UI
  */
-class BadgeUITwigExtension extends AbstractUITwigExtension {
+class BadgeTwigExtension extends AbstractBadgeTwigExtension {
 
     /**
      * Service name.
@@ -68,6 +68,16 @@ class BadgeUITwigExtension extends AbstractUITwigExtension {
     }
 
     /**
+     * Displays an AdminBSB button badge "Material design".
+     *
+     * @param array $args The arguments.
+     * @return string Returns the AdminBSB button badge "Material design".
+     */
+    public function adminBSBButtonBadgeMaterialDesignFunction(array $args = []) {
+        return $this->adminBSBBadge(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "label"), ArrayUtility::get($args, "large", false), AbstractAdminBSBTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), "bg-"));
+    }
+
+    /**
      * Displays an AdminBSB button badge "Primary".
      *
      * @param array $args The arguments.
@@ -108,16 +118,6 @@ class BadgeUITwigExtension extends AbstractUITwigExtension {
     }
 
     /**
-     * Displays an AdminBSB material design button badge.
-     *
-     * @param array $args The arguments.
-     * @return string Returns the AdminBSB material design button badge.
-     */
-    public function adminBSBMaterialDesignButtonBadgeFunction(array $args = []) {
-        return $this->adminBSBBadge(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "label"), ArrayUtility::get($args, "large", false), AbstractAdminBSBTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), "bg-"));
-    }
-
-    /**
      * Get the Twig functions.
      *
      * @return array Returns the Twig functions.
@@ -127,11 +127,11 @@ class BadgeUITwigExtension extends AbstractUITwigExtension {
             new Twig_SimpleFunction("adminBSBButtonBadgeDanger", [$this, "adminBSBButtonBadgeDangerFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("adminBSBButtonBadgeDefault", [$this, "adminBSBButtonBadgeDefaultFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("adminBSBButtonBadgeInfo", [$this, "adminBSBButtonBadgeInfoFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBButtonBadgeMaterialDesign", [$this, "adminBSBButtonBadgeMaterialDesignFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("adminBSBButtonBadgePrimary", [$this, "adminBSBButtonBadgePrimaryFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("adminBSBButtonBadgeSuccess", [$this, "adminBSBButtonBadgeSuccessFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("adminBSBButtonBadgeWarning", [$this, "adminBSBButtonBadgeWarningFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("adminBSBListBadge", [$this, "adminBSBListBadgeFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBMaterialDesignButtonBadge", [$this, "adminBSBMaterialDesignButtonBadgeFunction"], ["is_safe" => ["html"]]),
         ];
     }
 
