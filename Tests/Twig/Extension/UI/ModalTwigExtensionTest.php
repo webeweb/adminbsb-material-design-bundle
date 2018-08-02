@@ -14,16 +14,16 @@ namespace WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\UI;
 use PHPUnit_Framework_TestCase;
 use Twig_Node;
 use Twig_SimpleFunction;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ModalUITwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ModalTwigExtension;
 
 /**
- * Modal UI Twig extension test.
+ * Modal Twig extension test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\UI
  * @final
  */
-final class ModalUITwigExtensionTest extends PHPUnit_Framework_TestCase {
+final class ModalTwigExtensionTest extends PHPUnit_Framework_TestCase {
 
     /**
      * Tests the getFunctions() method.
@@ -32,7 +32,7 @@ final class ModalUITwigExtensionTest extends PHPUnit_Framework_TestCase {
      */
     public function testGetFunctions() {
 
-        $obj = new ModalUITwigExtension();
+        $obj = new ModalTwigExtension();
 
         $res = $obj->getFunctions();
 
@@ -52,7 +52,7 @@ final class ModalUITwigExtensionTest extends PHPUnit_Framework_TestCase {
      */
     public function testAdminBSBModalHeaderFunction() {
 
-        $obj = new ModalUITwigExtension();
+        $obj = new ModalTwigExtension();
 
         $arg0 = [];
         $res0 = '<h3 class="modal-title"></h3>';

@@ -12,17 +12,16 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
 use Twig_SimpleFunction;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\AdminBSBRendererTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
- * Modal UI Twig extension.
+ * Modal Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\UI
  */
-class ModalUITwigExtension extends AbstractUITwigExtension {
+class ModalTwigExtension extends AbstractModalTwigExtension {
 
     /**
      * Service name.
@@ -35,7 +34,7 @@ class ModalUITwigExtension extends AbstractUITwigExtension {
      * Constructor.
      */
     public function __construct() {
-        parent::__construct();
+        parent::__construct(new TypographyTwigExtension());
     }
 
     /**
@@ -45,17 +44,7 @@ class ModalUITwigExtension extends AbstractUITwigExtension {
      * @return string Returns the AdminBSB modal header.
      */
     public function adminBSBModalHeaderFunction(array $args = []) {
-
-        // Initialize the paramters.
-        $content = ArrayUtility::get($args, "content", "");
-        $icon    = ArrayUtility::get($args, "icon");
-
-        if (null !== $icon) {
-            $content = AdminBSBRendererTwigExtension::renderIcon($icon, "margin: -4px 0; vertical-align: sub;") . $content;
-        }
-
-        // Return the HTML.
-        return (new TypographyTwigExtension())->bootstrapHeading3Function(["class" => "modal-title", "content" => $content]);
+        return $this->adminBSBModalHeader(ArrayUtility::get($args, "content", ""), ArrayUtility::get($args, "icon"));
     }
 
     /**
