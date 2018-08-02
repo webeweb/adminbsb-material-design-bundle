@@ -77,7 +77,9 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
      * @return string Returns the AdminBSB button "Link".
      */
     public function adminBSBButtonLinkFilter($button, $link = self::DEFAULT_HREF) {
-        return StringUtility::replace($button, ["<button", "type=\"button\"", "</button>"], ["<a", "href=\"" . $link . "\"", "</a>"]);
+        $searches = ["<button", "type=\"button\"", "</button>"];
+        $replaces = ["<a", "href=\"" . $link . "\"", "</a>"];
+        return StringUtility::replace($button, $searches, $replaces);
     }
 
     /**
