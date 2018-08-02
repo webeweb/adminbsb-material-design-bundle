@@ -17,13 +17,13 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\RadioButtonTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\SwitchButtonTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Menu\MultiLevelMenuTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\TypographyTwigExtension;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\BadgeUITwigExtension;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ButtonUITwigExtension;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ColorUITwigExtension;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\IconUITwigExtension;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ModalUITwigExtension;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\PreloaderUITwigExtension;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ProgressBarUITwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\BadgeTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ButtonTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ColorTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\IconTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ModalTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\PreloaderTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ProgressBarTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget\CardTwigExtension;
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
 
@@ -66,13 +66,13 @@ final class AdminBSBExtensionTest extends AbstractBootstrapFrameworkTestCase {
         $this->assertInstanceOf(TypographyTwigExtension::class, $this->containerBuilder->get(TypographyTwigExtension::SERVICE_NAME));
 
         // UI
-        $this->assertInstanceOf(BadgeUITwigExtension::class, $this->containerBuilder->get(BadgeUITwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(ButtonUITwigExtension::class, $this->containerBuilder->get(ButtonUITwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(ColorUITwigExtension::class, $this->containerBuilder->get(ColorUITwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(IconUITwigExtension::class, $this->containerBuilder->get(IconUITwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(ModalUITwigExtension::class, $this->containerBuilder->get(ModalUITwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(PreloaderUITwigExtension::class, $this->containerBuilder->get(PreloaderUITwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(ProgressBarUITwigExtension::class, $this->containerBuilder->get(ProgressBarUITwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(BadgeTwigExtension::class, $this->containerBuilder->get(BadgeTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(ButtonTwigExtension::class, $this->containerBuilder->get(ButtonTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(ColorTwigExtension::class, $this->containerBuilder->get(ColorTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(IconTwigExtension::class, $this->containerBuilder->get(IconTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(ModalTwigExtension::class, $this->containerBuilder->get(ModalTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(PreloaderTwigExtension::class, $this->containerBuilder->get(PreloaderTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(ProgressBarTwigExtension::class, $this->containerBuilder->get(ProgressBarTwigExtension::SERVICE_NAME));
 
         // Widget
         $this->assertInstanceOf(CardTwigExtension::class, $this->containerBuilder->get(CardTwigExtension::SERVICE_NAME));

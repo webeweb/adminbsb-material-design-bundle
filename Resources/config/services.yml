@@ -28,37 +28,37 @@ services:
             - { name: "twig.extension" }
 
     webeweb.adminbsbbundle.twig.extension.ui.badge:
-        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\BadgeUITwigExtension
+        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\BadgeTwigExtension
         tags:
             - { name: "twig.extension" }
 
     webeweb.adminbsbbundle.twig.extension.ui.button:
-        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ButtonUITwigExtension
+        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ButtonTwigExtension
         tags:
             - { name: "twig.extension" }
 
     webeweb.adminbsbbundle.twig.extension.ui.color:
-        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ColorUITwigExtension
+        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ColorTwigExtension
         tags:
             - { name: "twig.extension" }
 
     webeweb.adminbsbbundle.twig.extension.ui.icon:
-        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\IconUITwigExtension
+        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\IconTwigExtension
         tags:
             - { name: "twig.extension" }
 
     webeweb.adminbsbbundle.twig.extension.ui.modal:
-        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ModalUITwigExtension
+        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ModalTwigExtension
         tags:
             - { name: "twig.extension" }
 
     webeweb.adminbsbbundle.twig.extension.ui.preloader:
-        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\PreloaderUITwigExtension
+        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\PreloaderTwigExtension
         tags:
             - { name: "twig.extension" }
 
     webeweb.adminbsbbundle.twig.extension.ui.progressbar:
-        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ProgressBarUITwigExtension
+        class: WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ProgressBarTwigExtension
         tags:
             - { name: "twig.extension" }
 
