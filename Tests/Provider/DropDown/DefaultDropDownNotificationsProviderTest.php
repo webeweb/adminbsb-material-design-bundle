@@ -28,7 +28,7 @@ final class DefaultDropDownNotificationsProviderTest extends PHPUnit_Framework_T
      *
      * @return void
      */
-    public function testConstructor() {
+    public function testConstruct() {
 
         $obj = new DefaultDropDownNotificationsProvider();
 
