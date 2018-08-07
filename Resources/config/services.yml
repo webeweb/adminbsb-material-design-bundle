@@ -22,6 +22,12 @@ services:
         tags:
             - { name: "twig.extension" }
 
+    webeweb.adminbsbbundle.twig.extension.plugin.datetimepicker:
+        class:     WBW\Bundle\AdminBSBBundle\Twig\Extension\Plugin\DatetimePickerTwigExtension
+        arguments: ["@translator"]
+        tags:
+            - { name: "twig.extension" }
+
     webeweb.adminbsbbundle.twig.extension.typography:
         class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\TypographyTwigExtension
         tags:
