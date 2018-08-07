@@ -49,7 +49,7 @@ EOTXT;
      *
      * @var string
      */
-    const DEFAULT_DATE_FORMAT = "DD/MM/YYYY";
+    const DEFAULT_DATE_FORMAT = "YYYY-MM-DD";
 
     /**
      * Default datetime format.
@@ -102,7 +102,7 @@ EOTXT;
         $bClearButton = StringHelper::parseBoolean($clearButton);
         $bDate        = StringHelper::parseBoolean($date);
         $bTime        = StringHelper::parseBoolean($time);
-        $iWeekStart   = true === in_array($weekStart, $weekStarts) ? $weekStart : 1;
+        $iWeekStart   = true === in_array($weekStart, $weekStarts) ? $weekStart : 0;
 
         //
         $searches = ["%selector%", "%cancelText%", "%clearButton%", "%clearText%", "%date%", "%format%", "%lang%", "%time%", "%weekStart%"];
