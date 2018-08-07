@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\Search;
 
-use PHPUnit_Framework_TestCase;
 use WBW\Bundle\AdminBSBBundle\Provider\Search\DefaultSearchProvider;
+use WBW\Bundle\AdminBSBBundle\Tests\Cases\AbstractAdminBSBFrameworkTestCase;
 
 /**
  * Default search provider test.
@@ -21,7 +21,7 @@ use WBW\Bundle\AdminBSBBundle\Provider\Search\DefaultSearchProvider;
  * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\Search
  * @final
  */
-final class DefaultSearchProviderTest extends PHPUnit_Framework_TestCase {
+final class DefaultSearchProviderTest extends AbstractAdminBSBFrameworkTestCase {
 
     /**
      * Tests the __construct() method.
