@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\Breadcrumbs;
 
-use PHPUnit_Framework_TestCase;
 use WBW\Bundle\AdminBSBBundle\Provider\Breadcrumbs\DefaultBreadcrumbsProvider;
+use WBW\Bundle\AdminBSBBundle\Tests\Cases\AbstractAdminBSBFrameworkTestCase;
 
 /**
  * DefaultBreadcrumbsProviderTest
@@ -21,7 +21,7 @@ use WBW\Bundle\AdminBSBBundle\Provider\Breadcrumbs\DefaultBreadcrumbsProvider;
  * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\Breadcrumbs
  * @final
  */
-final class DefaultBreadcrumbsProviderTest extends PHPUnit_Framework_TestCase {
+final class DefaultBreadcrumbsProviderTest extends AbstractAdminBSBFrameworkTestCase {
 
     /**
      * Tests the __construct() method.
