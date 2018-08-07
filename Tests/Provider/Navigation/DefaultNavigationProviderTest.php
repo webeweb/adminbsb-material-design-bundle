@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\Navigation;
 
-use PHPUnit_Framework_TestCase;
 use WBW\Bundle\AdminBSBBundle\Provider\Navigation\DefaultNavigationProvider;
+use WBW\Bundle\AdminBSBBundle\Tests\Cases\AbstractAdminBSBFrameworkTestCase;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationTree;
 
 /**
@@ -22,7 +22,7 @@ use WBW\Bundle\BootstrapBundle\Navigation\NavigationTree;
  * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\Navigation
  * @final
  */
-final class DefaultNavigationProviderTest extends PHPUnit_Framework_TestCase {
+final class DefaultNavigationProviderTest extends AbstractAdminBSBFrameworkTestCase {
 
     /**
      * Tests the __construct() method.
