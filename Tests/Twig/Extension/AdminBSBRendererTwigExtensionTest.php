@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\AdminBSB\Tests\Twig\Extension;
 
-use PHPUnit_Framework_TestCase;
+use WBW\Bundle\AdminBSBBundle\Tests\Cases\AbstractAdminBSBFrameworkTestCase;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AdminBSBRendererTwigExtension;
 
 /**
@@ -21,7 +21,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\AdminBSBRendererTwigExtension;
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension
  * @final
  */
-final class AdminBSBRendererTwigExtensionTest extends PHPUnit_Framework_TestCase {
+final class AdminBSBRendererTwigExtensionTest extends AbstractAdminBSBFrameworkTestCase {
 
     /**
      * Tests the renderIcon() method.
