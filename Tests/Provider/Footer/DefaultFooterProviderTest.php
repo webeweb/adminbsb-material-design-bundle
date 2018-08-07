@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\Footer;
 
-use PHPUnit_Framework_TestCase;
 use WBW\Bundle\AdminBSBBundle\Provider\Footer\DefaultFooterProvider;
+use WBW\Bundle\AdminBSBBundle\Tests\Cases\AbstractAdminBSBFrameworkTestCase;
 
 /**
  * Default footer provider test.
@@ -21,7 +21,7 @@ use WBW\Bundle\AdminBSBBundle\Provider\Footer\DefaultFooterProvider;
  * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\Footer
  * @final
  */
-final class DefaultFooterProviderTest extends PHPUnit_Framework_TestCase {
+final class DefaultFooterProviderTest extends AbstractAdminBSBFrameworkTestCase {
 
     /**
      * Tests the __construct() method.
