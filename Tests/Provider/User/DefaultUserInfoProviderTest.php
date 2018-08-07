@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\User;
 
-use PHPUnit_Framework_TestCase;
 use WBW\Bundle\AdminBSBBundle\Provider\User\DefaultUserInfoProvider;
+use WBW\Bundle\AdminBSBBundle\Tests\Cases\AbstractAdminBSBFrameworkTestCase;
 
 /**
  * Default user info provider test.
@@ -21,7 +21,7 @@ use WBW\Bundle\AdminBSBBundle\Provider\User\DefaultUserInfoProvider;
  * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\User
  * @final
  */
-final class DefaultUserInfoProviderTest extends PHPUnit_Framework_TestCase {
+final class DefaultUserInfoProviderTest extends AbstractAdminBSBFrameworkTestCase {
 
     /**
      * Tests the __construct() method.
