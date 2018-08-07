@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\Application;
 
-use PHPUnit_Framework_TestCase;
 use WBW\Bundle\AdminBSBBundle\Provider\Application\DefaultApplicationProvider;
+use WBW\Bundle\AdminBSBBundle\Tests\Cases\AbstractAdminBSBFrameworkTestCase;
 
 /**
  * Default application provider test.
@@ -21,7 +21,7 @@ use WBW\Bundle\AdminBSBBundle\Provider\Application\DefaultApplicationProvider;
  * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\Application
  * @final
  */
-final class DefaultApplicationProviderTest extends PHPUnit_Framework_TestCase {
+final class DefaultApplicationProviderTest extends AbstractAdminBSBFrameworkTestCase {
 
     /**
      * Tests the __construct() method.
