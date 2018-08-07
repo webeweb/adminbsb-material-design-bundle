@@ -7,6 +7,9 @@
 {% endblock %}
 {% block bootstrapHeadStyles %}
     {{ parent() }}
+    <!-- Google fonts -->
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin,cyrillic-ext">
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     {% include "@AdminBSB/include/styles.html.twig" with {"theme": "bootstrap" } %}
     {% block adminBSBHeadStyles %}
     {% endblock %}
