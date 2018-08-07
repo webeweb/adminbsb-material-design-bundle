@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\DropDown;
 
-use PHPUnit_Framework_TestCase;
 use WBW\Bundle\AdminBSBBundle\Provider\DropDown\DefaultDropDownHookProvider;
+use WBW\Bundle\AdminBSBBundle\Tests\Cases\AbstractAdminBSBFrameworkTestCase;
 
 /**
  * Default drop down hook provider test.
@@ -21,7 +21,7 @@ use WBW\Bundle\AdminBSBBundle\Provider\DropDown\DefaultDropDownHookProvider;
  * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\DropDown
  * @final
  */
-final class DefaultDropDownHookProviderTest extends PHPUnit_Framework_TestCase {
+final class DefaultDropDownHookProviderTest extends AbstractAdminBSBFrameworkTestCase {
 
     /**
      * Tests the __construct() method.
