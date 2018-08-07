@@ -11,9 +11,9 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\UI;
 
-use PHPUnit_Framework_TestCase;
 use Twig_Node;
 use Twig_SimpleFunction;
+use WBW\Bundle\AdminBSBBundle\Tests\Cases\AbstractAdminBSBFrameworkTestCase;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\IconTwigExtension;
 
 /**
@@ -23,7 +23,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\IconTwigExtension;
  * @package WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\UI
  * @final
  */
-final class IconTwigExtensionTest extends PHPUnit_Framework_TestCase {
+final class IconTwigExtensionTest extends AbstractAdminBSBFrameworkTestCase {
 
     /**
      * Tests the getFunctions() method.
