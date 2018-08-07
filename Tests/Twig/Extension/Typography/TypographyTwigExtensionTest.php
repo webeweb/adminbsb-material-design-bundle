@@ -11,9 +11,9 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Typography;
 
-use PHPUnit_Framework_TestCase;
 use Twig_Node;
 use Twig_SimpleFunction;
+use WBW\Bundle\AdminBSBBundle\Tests\Cases\AbstractAdminBSBFrameworkTestCase;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\TypographyTwigExtension;
 
 /**
@@ -23,7 +23,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\TypographyTwigExtension;
  * @package WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Typography
  * @final
  */
-final class TypographyTwigExtensionTest extends PHPUnit_Framework_TestCase {
+final class TypographyTwigExtensionTest extends AbstractAdminBSBFrameworkTestCase {
 
     /**
      * Tests the getFunctions() method.
