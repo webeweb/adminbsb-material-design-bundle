@@ -11,9 +11,9 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Form;
 
-use PHPUnit_Framework_TestCase;
 use Twig_Node;
 use Twig_SimpleFunction;
+use WBW\Bundle\AdminBSBBundle\Tests\Cases\AbstractAdminBSBFrameworkTestCase;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\CheckboxTwigExtension;
 
 /**
@@ -23,7 +23,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\CheckboxTwigExtension;
  * @package WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Form
  * @final
  */
-final class CheckboxTwigExtensionTest extends PHPUnit_Framework_TestCase {
+final class CheckboxTwigExtensionTest extends AbstractAdminBSBFrameworkTestCase {
 
     /**
      * Tests the getFunctions() method.
