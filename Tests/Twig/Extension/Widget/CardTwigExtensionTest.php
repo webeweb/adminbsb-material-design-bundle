@@ -11,9 +11,9 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Widget;
 
-use PHPUnit_Framework_TestCase;
 use Twig_Node;
 use Twig_SimpleFunction;
+use WBW\Bundle\AdminBSBBundle\Tests\Cases\AbstractAdminBSBFrameworkTestCase;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget\CardTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension;
 
@@ -24,7 +24,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension;
  * @package WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Widget
  * @final
  */
-final class CardTwigExtensionTest extends PHPUnit_Framework_TestCase {
+final class CardTwigExtensionTest extends AbstractAdminBSBFrameworkTestCase {
 
     /**
      * Typography.
