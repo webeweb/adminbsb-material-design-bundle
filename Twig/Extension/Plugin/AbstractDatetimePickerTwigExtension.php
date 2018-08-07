@@ -83,7 +83,7 @@ EOTXT;
      * Display an AdminBSB datetime picker.
      *
      * @param string $selector The selector.
-     * @param string $clearButton Clear button ?
+     * @param boolean $clearButton Clear button ?
      * @param boolean $date Date ?
      * @param string $format The format.
      * @param string $lang The lang.
