@@ -1,0 +1,11 @@
+# Resources/translations/AdminBSB.en.yml
+TwigBundle:
+    views:
+        Exception:
+            go_homepage: "Aller à l'accueil"
+
+views:
+    layout:
+        loader:
+            wait: "Patientez SVP..."
+        search: "Commencez à taper..."
