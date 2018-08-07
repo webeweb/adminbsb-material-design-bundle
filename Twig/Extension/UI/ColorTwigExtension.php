@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
 use Twig_SimpleFunction;
-use WBW\Library\Core\Utility\Argument\ArrayUtility;
+use WBW\Library\Core\Helper\Argument\ArrayHelper;
 
 /**
  * Color Twig extension.
@@ -43,7 +43,7 @@ class ColorTwigExtension extends AbstractColorTwigExtension {
      * @return string Returns the AdminBSB color "Material design".
      */
     public function adminBSBColorMaterialDesignFunction(array $args = []) {
-        return $this->adminBSBColor(ArrayUtility::get($args, "name"), ArrayUtility::get($args, "code", "500"), ArrayUtility::get($args, "out", "class"));
+        return $this->adminBSBColor(ArrayHelper::get($args, "name"), ArrayHelper::get($args, "code", "500"), ArrayHelper::get($args, "out", "class"));
     }
 
     /**

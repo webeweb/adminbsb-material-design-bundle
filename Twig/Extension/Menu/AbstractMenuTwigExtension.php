@@ -16,7 +16,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AdminBSBRendererTwigExtension;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationNode;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationTree;
-use WBW\Library\Core\Utility\Argument\StringUtility;
+use WBW\Library\Core\Helper\Argument\StringHelper;
 
 /**
  * Abstract multi level menu Twig extension.
@@ -152,7 +152,7 @@ abstract class AbstractMenuTwigExtension extends AbstractAdminBSBTwigExtension {
         $glyphicon = AdminBSBRendererTwigExtension::renderIcon($node->getIcon());
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%glyphicon%", "%innerHTML%"], [$glyphicon, $innerHTML]);
+        return StringHelper::replace($template, ["%glyphicon%", "%innerHTML%"], [$glyphicon, $innerHTML]);
     }
 
     /**

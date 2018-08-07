@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Form;
 
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
-use WBW\Library\Core\Utility\Argument\StringUtility;
+use WBW\Library\Core\Helper\Argument\StringHelper;
 
 /**
  * Abstract checkbox Twig extension.
@@ -61,7 +61,7 @@ abstract class AbstractCheckboxTwigExtension extends AbstractAdminBSBTwigExtensi
         $innerHTML = self::bootstrapHTMLElement("label", $content, ["for" => $attributes["id"]]);
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $innerHTML]);
+        return StringHelper::replace($template, ["%attributes%", "%innerHTML%"], [StringHelper::parseArray($attributes), $innerHTML]);
     }
 
 }

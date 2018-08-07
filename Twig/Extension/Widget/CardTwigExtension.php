@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget;
 
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension;
-use WBW\Library\Core\Utility\Argument\ArrayUtility;
+use WBW\Library\Core\Helper\Argument\ArrayHelper;
 
 /**
  * Card Twig extension.
@@ -44,7 +44,7 @@ class CardTwigExtension extends AbstractCardTwigExtension {
      * @return string Returns the AdminBSB card header.
      */
     public function adminBSBCardHeaderFunction(array $args = []) {
-        return $this->adminBSBCardHeader(ArrayUtility::get($args, "content", ""), ArrayUtility::get($args, "description"), ArrayUtility::get($args, "icon"));
+        return $this->adminBSBCardHeader(ArrayHelper::get($args, "content", ""), ArrayHelper::get($args, "description"), ArrayHelper::get($args, "icon"));
     }
 
     /**

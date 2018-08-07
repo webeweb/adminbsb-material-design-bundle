@@ -14,7 +14,7 @@ namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 use Twig_SimpleFunction;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarTwigExtension as BaseTwigExtension;
-use WBW\Library\Core\Utility\Argument\ArrayUtility;
+use WBW\Library\Core\Helper\Argument\ArrayHelper;
 
 /**
  * Progress bar Twig extension.
@@ -45,7 +45,7 @@ class ProgressBarTwigExtension extends BaseTwigExtension {
      * @return string Returns the AdminBSB progress bar "Material design".
      */
     public function adminBSBProgressBarMaterialDesignFunction(array $args = []) {
-        return $this->bootstrapProgressBar(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "value", 50), ArrayUtility::get($args, "min", 0), ArrayUtility::get($args, "max", 100), ArrayUtility::get($args, "striped", false), ArrayUtility::get($args, "animated", false), AbstractAdminBSBTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), "bg-"));
+        return $this->bootstrapProgressBar(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "value", 50), ArrayHelper::get($args, "min", 0), ArrayHelper::get($args, "max", 100), ArrayHelper::get($args, "striped", false), ArrayHelper::get($args, "animated", false), AbstractAdminBSBTwigExtension::fixColor(ArrayHelper::get($args, "color", "red"), "bg-"));
     }
 
     /**

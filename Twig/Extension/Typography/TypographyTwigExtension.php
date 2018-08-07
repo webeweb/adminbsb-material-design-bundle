@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography;
 
 use Twig_SimpleFunction;
-use WBW\Library\Core\Utility\Argument\ArrayUtility;
+use WBW\Library\Core\Helper\Argument\ArrayHelper;
 
 /**
  * Typography Twig extension.
@@ -43,7 +43,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
      * @return string Returns the AdminBSB bold text.
      */
     public function adminBSBBoldFunction(array $args = []) {
-        return $this->adminBSBBold(ArrayUtility::get($args, "content"));
+        return $this->adminBSBBold(ArrayHelper::get($args, "content"));
     }
 
     /**
@@ -53,7 +53,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
      * @return string Returns the AdminBSB italic text.
      */
     public function adminBSBItalicFunction(array $args = []) {
-        return $this->adminBSBItalic(ArrayUtility::get($args, "content"));
+        return $this->adminBSBItalic(ArrayHelper::get($args, "content"));
     }
 
     /**
@@ -63,7 +63,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
      * @return string Returns the AdminBSB overlined text.
      */
     public function adminBSBOverlineFunction(array $args = []) {
-        return $this->adminBSBOverline(ArrayUtility::get($args, "content"));
+        return $this->adminBSBOverline(ArrayHelper::get($args, "content"));
     }
 
     /**
@@ -73,7 +73,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
      * @return string Returns the AdminBSB line through text.
      */
     public function adminBSBLineThroughFunction(array $args = []) {
-        return $this->adminBSBLineThrough(ArrayUtility::get($args, "content"));
+        return $this->adminBSBLineThrough(ArrayHelper::get($args, "content"));
     }
 
     /**
@@ -83,7 +83,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
      * @return string Returns the AdminBSB underline text.
      */
     public function adminBSBUnderlineFunction(array $args = []) {
-        return $this->adminBSBUnderline(ArrayUtility::get($args, "content"));
+        return $this->adminBSBUnderline(ArrayHelper::get($args, "content"));
     }
 
     /**

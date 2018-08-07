@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Form;
 
 use Twig_SimpleFunction;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
-use WBW\Library\Core\Utility\Argument\ArrayUtility;
+use WBW\Library\Core\Helper\Argument\ArrayHelper;
 
 /**
  * Checkbox Twig extension.
@@ -44,7 +44,7 @@ class CheckboxTwigExtension extends AbstractCheckboxTwigExtension {
      * @return string Returns the AdminBSB checkbox "Basic".
      */
     public function adminBSBCheckboxBasicFunction(array $args = []) {
-        return $this->adminBSBCheckbox(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "id"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "filledIn", false), ArrayUtility::get($args, "class"));
+        return $this->adminBSBCheckbox(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "name"), ArrayHelper::get($args, "id"), ArrayHelper::get($args, "checked", false), ArrayHelper::get($args, "disabled", false), ArrayHelper::get($args, "filledIn", false), ArrayHelper::get($args, "class"));
     }
 
     /**
@@ -54,7 +54,7 @@ class CheckboxTwigExtension extends AbstractCheckboxTwigExtension {
      * @return string Returns the AdminBSB checkbox "Material design".
      */
     public function adminBSBCheckboxMaterialDesignFunction(array $args = []) {
-        return $this->adminBSBCheckbox(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "id"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "filledIn", false), ArrayUtility::get($args, "class", "") . AbstractAdminBSBTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), " chk-col-"));
+        return $this->adminBSBCheckbox(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "name"), ArrayHelper::get($args, "id"), ArrayHelper::get($args, "checked", false), ArrayHelper::get($args, "disabled", false), ArrayHelper::get($args, "filledIn", false), ArrayHelper::get($args, "class", "") . AbstractAdminBSBTwigExtension::fixColor(ArrayHelper::get($args, "color", "red"), " chk-col-"));
     }
 
     /**

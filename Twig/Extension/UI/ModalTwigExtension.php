@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension;
-use WBW\Library\Core\Utility\Argument\ArrayUtility;
+use WBW\Library\Core\Helper\Argument\ArrayHelper;
 
 /**
  * Modal Twig extension.
@@ -44,7 +44,7 @@ class ModalTwigExtension extends AbstractModalTwigExtension {
      * @return string Returns the AdminBSB modal header.
      */
     public function adminBSBModalHeaderFunction(array $args = []) {
-        return $this->adminBSBModalHeader(ArrayUtility::get($args, "content", ""), ArrayUtility::get($args, "icon"));
+        return $this->adminBSBModalHeader(ArrayHelper::get($args, "content", ""), ArrayHelper::get($args, "icon"));
     }
 
     /**

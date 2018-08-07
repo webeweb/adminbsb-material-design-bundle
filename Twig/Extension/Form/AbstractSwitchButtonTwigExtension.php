@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Form;
 
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
-use WBW\Library\Core\Utility\Argument\StringUtility;
+use WBW\Library\Core\Helper\Argument\StringHelper;
 
 /**
  * Abstract switch button Twig extension.
@@ -60,7 +60,7 @@ abstract class AbstractSwitchButtonTwigExtension extends AbstractAdminBSBTwigExt
         $rLabel = null !== $onLabel ? $onLabel : "";
 
         $span  = self::bootstrapHTMLElement("span", null, ["class" => ["lever", $class]]);
-        $input = StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $span]);
+        $input = StringHelper::replace($template, ["%attributes%", "%innerHTML%"], [StringHelper::parseArray($attributes), $span]);
         $label = self::bootstrapHTMLElement("label", $lLabel . $input . $rLabel);
 
         // Return the HTML.

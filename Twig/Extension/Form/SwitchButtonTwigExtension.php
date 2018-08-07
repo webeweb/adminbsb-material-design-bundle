@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Form;
 
 use Twig_SimpleFunction;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
-use WBW\Library\Core\Utility\Argument\ArrayUtility;
+use WBW\Library\Core\Helper\Argument\ArrayHelper;
 
 /**
  * Switch button Twig extension.
@@ -44,7 +44,7 @@ class SwitchButtonTwigExtension extends AbstractSwitchButtonTwigExtension {
      * @return string Returns the AdminBSB switch button "Basic".
      */
     public function adminBSBSwitchButtonBasicFunction(array $args = []) {
-        return $this->adminBSBSwitchButton(ArrayUtility::get($args, "offLabel"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "onLabel"), ArrayUtility::get($args, "attr", []), null);
+        return $this->adminBSBSwitchButton(ArrayHelper::get($args, "offLabel"), ArrayHelper::get($args, "name"), ArrayHelper::get($args, "checked", false), ArrayHelper::get($args, "disabled", false), ArrayHelper::get($args, "onLabel"), ArrayHelper::get($args, "attr", []), null);
     }
 
     /**
@@ -54,7 +54,7 @@ class SwitchButtonTwigExtension extends AbstractSwitchButtonTwigExtension {
      * @return string Returns the AdminBSB switch button "Material design".
      */
     public function adminBSBSwitchButtonMaterialDesignFunction(array $args = []) {
-        return $this->adminBSBSwitchButton(ArrayUtility::get($args, "offLabel"), ArrayUtility::get($args, "name"), ArrayUtility::get($args, "checked", false), ArrayUtility::get($args, "disabled", false), ArrayUtility::get($args, "onLabel"), ArrayUtility::get($args, "attr", []), AbstractAdminBSBTwigExtension::fixColor(ArrayUtility::get($args, "color", "red"), " switch-col-"));
+        return $this->adminBSBSwitchButton(ArrayHelper::get($args, "offLabel"), ArrayHelper::get($args, "name"), ArrayHelper::get($args, "checked", false), ArrayHelper::get($args, "disabled", false), ArrayHelper::get($args, "onLabel"), ArrayHelper::get($args, "attr", []), AbstractAdminBSBTwigExtension::fixColor(ArrayHelper::get($args, "color", "red"), " switch-col-"));
     }
 
     /**
