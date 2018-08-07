@@ -12,10 +12,12 @@
 namespace WBW\Bundle\AdminBSBBundle\Tests\DependencyInjection;
 
 use WBW\Bundle\AdminBSBBundle\DependencyInjection\AdminBSBExtension;
+use WBW\Bundle\AdminBSBBundle\Tests\Cases\AbstractAdminBSBFrameworkTestCase;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\CheckboxTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\RadioButtonTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\SwitchButtonTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Menu\MultiLevelMenuTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\Plugin\DatetimePickerTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\TypographyTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\BadgeTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ButtonTwigExtension;
@@ -25,7 +27,6 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ModalTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\PreloaderTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ProgressBarTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget\CardTwigExtension;
-use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
 
 /**
  * AdminBSB extension test.
@@ -34,7 +35,7 @@ use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
  * @package WBW\Bundle\AdminBSBBundle\Tests\DependencyInjection
  * @final
  */
-final class AdminBSBExtensionTest extends AbstractBootstrapFrameworkTestCase {
+final class AdminBSBExtensionTest extends AbstractAdminBSBFrameworkTestCase {
 
     /**
      * {@inheritdoc}
@@ -61,6 +62,9 @@ final class AdminBSBExtensionTest extends AbstractBootstrapFrameworkTestCase {
 
         // Menu
         $this->assertInstanceOf(MultiLevelMenuTwigExtension::class, $this->containerBuilder->get(MultiLevelMenuTwigExtension::SERVICE_NAME));
+
+        // Plugin
+        $this->assertInstanceOf(DatetimePickerTwigExtension::class, $this->containerBuilder->get(DatetimePickerTwigExtension::SERVICE_NAME));
 
         // Typography
         $this->assertInstanceOf(TypographyTwigExtension::class, $this->containerBuilder->get(TypographyTwigExtension::SERVICE_NAME));
