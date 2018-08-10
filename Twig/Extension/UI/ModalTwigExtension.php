@@ -28,7 +28,7 @@ class ModalTwigExtension extends AbstractModalTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.adminbsbbundle.twig.extension.ui.modal";
+    const SERVICE_NAME = "webeweb.adminbsb.twig.extension.ui.modal";
 
     /**
      * Constructor.

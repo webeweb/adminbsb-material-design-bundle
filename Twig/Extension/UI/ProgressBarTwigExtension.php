@@ -29,7 +29,7 @@ class ProgressBarTwigExtension extends BaseTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.adminbsbbundle.twig.extension.ui.progressbar";
+    const SERVICE_NAME = "webeweb.adminbsb.twig.extension.ui.progressbar";
 
     /**
      * Constructor.

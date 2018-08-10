@@ -27,7 +27,7 @@ class ColorTwigExtension extends AbstractColorTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.adminbsbbundle.twig.extension.ui.color";
+    const SERVICE_NAME = "webeweb.adminbsb.twig.extension.ui.color";
 
     /**
      * Constructor.

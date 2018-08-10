@@ -28,7 +28,7 @@ class SwitchButtonTwigExtension extends AbstractSwitchButtonTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.adminbsbbundle.twig.extension.form.switchbutton";
+    const SERVICE_NAME = "webeweb.adminbsb.twig.extension.form.switchbutton";
 
     /**
      * Constructor.

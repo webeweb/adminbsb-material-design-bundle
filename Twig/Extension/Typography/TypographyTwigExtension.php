@@ -27,7 +27,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.adminbsbbundle.twig.extension.typography";
+    const SERVICE_NAME = "webeweb.adminbsb.twig.extension.typography";
 
     /**
      * Constructor.

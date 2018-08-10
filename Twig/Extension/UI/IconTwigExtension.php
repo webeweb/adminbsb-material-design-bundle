@@ -29,7 +29,7 @@ class IconTwigExtension extends AbstractIconTwigExtension implements IconRendere
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.adminbsbbundle.twig.extension.ui.icon";
+    const SERVICE_NAME = "webeweb.adminbsb.twig.extension.ui.icon";
 
     /**
      * Constructor.

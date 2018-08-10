@@ -28,7 +28,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.adminbsbbundle.twig.extension.ui.badge";
+    const SERVICE_NAME = "webeweb.adminbsb.twig.extension.ui.badge";
 
     /**
      * Constructor.

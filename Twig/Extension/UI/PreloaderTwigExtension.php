@@ -28,7 +28,7 @@ class PreloaderTwigExtension extends AbstractPreloaderTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.adminbsbbundle.twig.extension.ui.preloader";
+    const SERVICE_NAME = "webeweb.adminbsb.twig.extension.ui.preloader";
 
     /**
      * Constructor.
