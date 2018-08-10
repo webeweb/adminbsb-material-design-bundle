@@ -1,10 +1,12 @@
 {# Resources/views/layout.html.twig #}
 {% extends "@Bootstrap/layout.html.twig" %}
+
 {% block bootstrapFormTheme %}
     {% if (form is defined) %}
         {% form_theme form "@AdminBSB/../TwigBundle/views/Form/form.html.twig" %}
     {% endif %}
 {% endblock %}
+
 {% block bootstrapHeadStyles %}
     {{ parent() }}
     <!-- Google fonts -->
@@ -14,13 +16,17 @@
     {% block adminBSBHeadStyles %}
     {% endblock %}
 {% endblock %}
+
 {% block bootstrapHeadTitle %}{{ parent() }}{{ block("adminBSBHeadTitle") }}{% endblock %}
+
 {% block bootstrapBodyClasses %}{{ parent() }} class="{{ block("adminBSBBodyClasses") }}"{% endblock %}
+
 {% block bootstrapBodyContent %}
     {{ parent() }}
     {% block adminBSBBodyContent %}
     {% endblock %}
 {% endblock %}
+
 {% block bootstrapBodyScripts %}
     {{ parent() }}
     {% include "@AdminBSB/include/scripts.html.twig" with {"theme": "bootstrap" } %}
