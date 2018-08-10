@@ -1,7 +1,10 @@
 {# Resources/views/layout/section.html.twig #}
 {% extends "@AdminBSB/layout.html.twig" %}
+
 {% block adminBSBHeadTitle %}{{ ApplicationProvider.title|default("AdminBSB Material Design") }}{% endblock %}
+
 {% block adminBSBBodyClasses %}theme-red{% endblock %}
+
 {% block adminBSBBodyContent %}
     {{ parent() }}
     <div class="page-loader-wrapper">
