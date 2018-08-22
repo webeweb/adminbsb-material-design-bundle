@@ -19,7 +19,7 @@
         "symfony/security-core": "^2.6|^3.0",
         "twig/twig": "^1.0||^2.0",
         "webeweb/bootstrap-bundle": "^1.0",
-        "webeweb/core-library": "^3.0",
+        "webeweb/core-library": "^4.0",
         "webeweb/jquery-datatables-bundle": "^1.0"
     },
     "require-dev": {

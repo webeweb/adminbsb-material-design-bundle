@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Plugin;
 
 use Symfony\Component\Translation\TranslatorInterface;
 use Twig_SimpleFunction;
-use WBW\Library\Core\Helper\Argument\ArrayHelper;
+use WBW\Library\Core\Argument\ArrayHelper;
 
 /**
  * Datetime picker Twig extension.
