@@ -128,5 +128,5 @@ $ vendor/bin/phpunit
 
 ## License
 
-adminbsb-material-design-bundle is released under the LGPL License. See the bundled
+`adminbsb-material-design-bundle` is released under the LGPL License. See the bundled
 [LICENSE](LICENSE) file for details.
