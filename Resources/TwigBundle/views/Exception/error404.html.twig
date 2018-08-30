@@ -1,7 +1,10 @@
 {# Resources/TwigBundle/views/Exception/error404.html.twig #}
 {% extends "@AdminBSB/layout.html.twig" %}
+
 {% block adminBSBHeadTitle %}{{ ApplicationProvider.title|default("AdminBSB Material Design") }} - {{ status_code }} {{ status_text }}{% endblock %}
+
 {% block adminBSBBodyClasses %}four-zero-four{% endblock %}
+
 {% block adminBSBBodyContent %}
     <div class="four-zero-four-container">
         <div class="error-code">{{ status_code }}</div>

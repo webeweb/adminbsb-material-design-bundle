@@ -1,7 +1,10 @@
 {# Resources/TwigBundle/views/Exception/error500.html.twig #}
 {% extends "@AdminBSB/layout.html.twig" %}
+
 {% block adminBSBHeadTitle %}{{ ApplicationProvider.title|default("AdminBSB Material Design") }} - {{ status_code }} {{ status_text }}{% endblock %}
+
 {% block adminBSBBodyClasses %}five-zero-zero{% endblock %}
+
 {% block adminBSBBodyContent %}
     <div class="five-zero-zero-container">
         <div class="error-code">{{ status_code }}</div>
