@@ -14,7 +14,6 @@
         <div class="card">
             <div class="body">
                 <form action="{{ path("fos_user_security_check") }}" method="POST" id="sign_in">
-                    <input name="_csrf_token" type="hidden" value="{{ csrf_token }}" />
                     <div class="msg">{{ "layout.login"|trans({}, "FOSUserBundle") }}</div>
                     <div class="input-group">
                         <span class="input-group-addon">
@@ -56,6 +55,7 @@
                             {% endif %}
                         </div>
                     </div>
+                    <input name="_csrf_token" type="hidden" value="{{ csrf_token }}" />
                 </form>
             </div>
         </div>
