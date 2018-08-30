@@ -14,7 +14,7 @@
         <div class="card">
             <div class="body">
                 <form action="{{ path("fos_user_resetting_reset", {"token": token}) }}" method="POST" id="reset">
-                    <div class="msg">{{ "layout.register"|trans({}, "FOSUserBundle") }}</div>
+                    <div class="msg">{{ "resetting.request.submit"|trans({}, "FOSUserBundle") }}</div>
                     <div class="input-group">
                         <span class="input-group-addon">
                             <i class="material-icons">lock</i>
