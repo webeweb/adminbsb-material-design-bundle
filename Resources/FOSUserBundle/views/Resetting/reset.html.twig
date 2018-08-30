@@ -35,7 +35,7 @@
                     <div class="m-t-25 m-b--5 align-center">
                         <a href="{{ path("fos_user_security_login") }}">{{ "layout.login"|trans({}, "FOSUserBundle") }}</a>
                     </div>
-                    <input name="fos_user_resetting_form[_token]" type="hidden" value="{{ csrf_token }}" />
+                    <input name="fos_user_resetting_form[_token]" type="hidden" value="{{ form._token.vars.value }}" />
                 </form>
             </div>
         </div>
