@@ -1,14 +1,14 @@
 {# Resources/FOSUserBundle/views/Profile/edit.html.twig #}
 {% extends "@AdminBSB/layout/section.html.twig" %}
 
-{% block adminBSBHeadTitle %}{{ ApplicationProvider.title|default("AdminBSB Material Design") }} - {{ "layout.logged_in_as"|trans({"%username%": app.user.username}, "FOSUserBundle") }}{% endblock %}
+{% block adminBSBHeadTitle %}{{ ApplicationProvider.title|default("AdminBSB Material Design") }} - {{ "profile.edit.submit"|trans({}, "FOSUserBundle") }}{% endblock %}
 
 {% block adminBSBBodySection %}
     <div class="row clearfix">
         <div class="{{ bootstrapGrid({"lg": 12, "recopy": true}) }}">
             <div class="card">
                 <div class="header">
-                    {{ adminBSBCardHeader({"icon": "person", "content": "layout.logged_in_as"|trans({"%username%": app.user.username}, "FOSUserBundle")}) }}
+                    {{ adminBSBCardHeader({"icon": "person", "content": "profile.edit.submit"|trans({}, "FOSUserBundle")}) }}
                 </div>
                 <div class="body">
                     {{ form_start(form) }}
