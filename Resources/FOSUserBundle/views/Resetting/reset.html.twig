@@ -1,0 +1,42 @@
+{# Resources/FOSUserBundle/views/Registration/register.html.twig #}
+{% extends "@AdminBSB/layout.html.twig" %}
+
+{% block adminBSBHeadTitle %}{{ ApplicationProvider.title|default("AdminBSB Material Design") }} - {{ "resetting.request.submit"|trans({}, "FOSUserBundle") }}{% endblock %}
+
+{% block adminBSBBodyClasses %}signup-page{% endblock %}
+
+{% block adminBSBBodyContent %}
+    <div class="signup-box">
+        <div class="logo">
+            <a href="{{ ApplicationProvider.home|default("javascript: void(0);") }}">{{ ApplicationProvider.name|default("AdminBSB<b>MaterielDesign</b>")|raw }}</a>
+            <small>{{ ApplicationProvider.description|default("AdminBSB Material Design") }}</small>
+        </div>
+        <div class="card">
+            <div class="body">
+                <form action="{{ path("fos_user_resetting_reset", {"token": token}) }}" method="POST" id="reset">
+                    <div class="msg">{{ "layout.register"|trans({}, "FOSUserBundle") }}</div>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">lock</i>
+                        </span>
+                        <div class="form-line">
+                            <input class="form-control" name="fos_user_registration_form[plainPassword][first]" type="password" placeholder="{{ "form.password"|trans({}, "FOSUserBundle") }}" minlength="6" id="fos_user_registration_form_plainPassword_first">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">lock</i>
+                        </span>
+                        <div class="form-line">
+                            <input class="form-control" name="fos_user_registration_form[plainPassword][second]" type="password" placeholder="{{ "form.password_confirmation"|trans({}, "FOSUserBundle") }}" minlength="6" id="fos_user_registration_form_plainPassword_second">
+                        </div>
+                    </div>
+                    <button class="btn btn-block btn-lg bg-pink waves-effect" type="submit">{{ "resetting.reset.submit"|trans({}, "FOSUserBundle")|upper }}</button>
+                    <div class="m-t-25 m-b--5 align-center">
+                        <a href="{{ path("fos_user_security_login") }}">{{ "layout.login"|trans({}, "FOSUserBundle") }}</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

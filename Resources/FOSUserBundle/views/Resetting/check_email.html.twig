@@ -1,0 +1,25 @@
+{# Resources/FOSUserBundle/views/Resetting/register.html.twig #}
+{% extends "@AdminBSB/layout.html.twig" %}
+
+{% block adminBSBHeadTitle %}{{ ApplicationProvider.title|default("AdminBSB Material Design") }} - {{ "resetting.request.submit"|trans({}, "FOSUserBundle") }}{% endblock %}
+
+{% block adminBSBBodyClasses %}fp-page{% endblock %}
+
+{% block adminBSBBodyContent %}
+    <div class="fp-box">
+        <div class="logo">
+            <a href="{{ ApplicationProvider.home|default("javascript: void(0);") }}">{{ ApplicationProvider.name|default("AdminBSB<b>MaterielDesign</b>")|raw }}</a>
+            <small>{{ ApplicationProvider.description|default("AdminBSB Material Design") }}</small>
+        </div>
+        <div class="card">
+            <div class="body">
+                <div class="msg">
+                    {{ "registration.check_email"|trans({"%email%": app.request.query.get("username")}, "FOSUserBundle") }}
+                </div>
+                <div class="row m-t-20 m-b--5 align-center">
+                    <a href="{{ path("fos_user_security_login") }}">{{ "layout.login"|trans({}, "FOSUserBundle") }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
