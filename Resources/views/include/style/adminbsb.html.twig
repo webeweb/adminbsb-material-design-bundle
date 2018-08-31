@@ -3,6 +3,20 @@
 <link type="text/css" rel="stylesheet" href="{{ asset("bundles/adminbsb/css/style.min.css") }}">
 <link type="text/css" rel="stylesheet" href="{{ asset("bundles/adminbsb/css/themes/all-themes.min.css") }}">
 <style type="text/css">
+    .form-line.focused .form-label {
+        font-weight: bold;
+        color: #555;
+    }
+    /* to have same appearance as .form-group.form-float label */
+    .form-line .form-label {
+        position: absolute;
+        top: -10px;
+        left: 0;
+        cursor: text;
+        font-size: 12px;
+        font-weight: bold;
+        color: #555;
+    }
     .btn span.glyphicon {
         margin: -4px 0 !important;
         position: relative;
