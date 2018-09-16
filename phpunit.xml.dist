@@ -27,7 +27,7 @@
     </php>
     <testsuites>
         <testsuite name="webeweb/adminbsb-material-design-bundle">
-            <directory>./Tests</directory>
+            <directory suffix="Test.php">./Tests</directory>
         </testsuite>
     </testsuites>
 </phpunit>
