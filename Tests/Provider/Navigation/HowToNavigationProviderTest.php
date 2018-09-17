@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\Navigation;
 
 use Symfony\Component\Routing\RouterInterface;
 use WBW\Bundle\AdminBSBBundle\Provider\Navigation\HowToNavigationProvider;
-use WBW\Bundle\AdminBSBBundle\Tests\Cases\AbstractAdminBSBFrameworkTestCase;
+use WBW\Bundle\AdminBSBBundle\Tests\AbstractAdminBSBFrameworkTestCase;
 use WBW\Bundle\BootstrapBundle\Navigation\BreadcrumbNode;
 
 /**
