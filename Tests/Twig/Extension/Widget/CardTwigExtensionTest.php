@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Widget;
 
 use Twig_Node;
 use Twig_SimpleFunction;
-use WBW\Bundle\AdminBSBBundle\Tests\Cases\AbstractAdminBSBFrameworkTestCase;
+use WBW\Bundle\AdminBSBBundle\Tests\AbstractAdminBSBFrameworkTestCase;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget\CardTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension;
 
