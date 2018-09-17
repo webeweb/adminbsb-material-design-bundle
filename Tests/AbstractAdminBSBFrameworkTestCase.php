@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Tests\Cases;
+namespace WBW\Bundle\AdminBSBBundle\Tests;
 
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
 
@@ -17,7 +17,7 @@ use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
  * Abstract AdminBSB framework test case.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBBundle\Tests\Cases
+ * @package WBW\Bundle\AdminBSBBundle\Tests
  * @abstract
  */
 abstract class AbstractAdminBSBFrameworkTestCase extends AbstractBootstrapFrameworkTestCase {
