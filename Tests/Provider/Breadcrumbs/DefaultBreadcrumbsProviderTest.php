@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\Breadcrumbs;
 
 use WBW\Bundle\AdminBSBBundle\Provider\Breadcrumbs\DefaultBreadcrumbsProvider;
-use WBW\Bundle\AdminBSBBundle\Tests\Cases\AbstractAdminBSBFrameworkTestCase;
+use WBW\Bundle\AdminBSBBundle\Tests\AbstractAdminBSBFrameworkTestCase;
 
 /**
  * DefaultBreadcrumbsProviderTest
