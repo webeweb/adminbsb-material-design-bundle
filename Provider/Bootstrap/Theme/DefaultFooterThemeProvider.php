@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Provider\Footer;
+namespace WBW\Bundle\AdminBSBBundle\Provider\Bootstrap\Theme;
 
-use WBW\Bundle\BootstrapBundle\Provider\FooterProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\FooterThemeProviderInterface;
 
 /**
- * Default footer provider.
+ * Default footer theme provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBBundle\Provider\Footer
+ * @package WBW\Bundle\AdminBSBBundle\Provider\Bootstrap\Theme
  */
-class DefaultFooterProvider implements FooterProviderInterface {
+class DefaultFooterThemeProvider implements FooterThemeProviderInterface {
 
     /**
      * Constructor.
@@ -32,7 +32,7 @@ class DefaultFooterProvider implements FooterProviderInterface {
      * {@inheritdoc}
      */
     public function getView() {
-        return "@ABSBMD/html/body/section/aside/div.legal.html.twig";
+        return null;
     }
 
 }

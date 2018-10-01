@@ -9,19 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\Footer;
+namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\Bootstrap\Theme;
 
-use WBW\Bundle\AdminBSBBundle\Provider\Footer\DefaultFooterProvider;
+use WBW\Bundle\AdminBSBBundle\Provider\Bootstrap\Theme\DefaultFooterThemeProvider;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractAdminBSBFrameworkTestCase;
 
 /**
- * Default footer provider test.
+ * Default footer theme provider test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\Footer
+ * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\Bootstrap\Theme
  * @final
  */
-final class DefaultFooterProviderTest extends AbstractAdminBSBFrameworkTestCase {
+final class DefaultFooterThemeProviderTest extends AbstractAdminBSBFrameworkTestCase {
 
     /**
      * Tests the __construct() method.
@@ -30,9 +30,9 @@ final class DefaultFooterProviderTest extends AbstractAdminBSBFrameworkTestCase 
      */
     public function testConstruct() {
 
-        $obj = new DefaultFooterProvider();
+        $obj = new DefaultFooterThemeProvider();
 
-        $this->assertEquals("@ABSBMD/html/body/section/aside/div.legal.html.twig", $obj->getView());
+        $this->assertEquals(null, $obj->getView());
     }
 
 }
