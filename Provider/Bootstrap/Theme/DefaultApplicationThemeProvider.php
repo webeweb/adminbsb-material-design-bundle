@@ -9,23 +9,23 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Provider\Application;
+namespace WBW\Bundle\AdminBSBBundle\Provider\Bootstrap\Theme;
 
-use WBW\Bundle\BootstrapBundle\Provider\ApplicationProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\ApplicationThemeProviderInterface;
 
 /**
- * Default application provider.
+ * Default application theme provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBBundle\Provider\Application
+ * @package WBW\Bundle\AdminBSBBundle\Provider\Bootstrap\Theme
  */
-class DefaultApplicationProvider implements ApplicationProviderInterface {
+class DefaultApplicationThemeProvider implements ApplicationThemeProviderInterface {
 
     /**
      * Constructor.
      */
     public function __construct() {
-// NOTHING TO DO.
+        // NOTHING TO DO.
     }
 
     /**
@@ -68,6 +68,13 @@ class DefaultApplicationProvider implements ApplicationProviderInterface {
      */
     public function getVersion() {
         return "~1.0@dev";
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getView() {
+        return null;
     }
 
     /**

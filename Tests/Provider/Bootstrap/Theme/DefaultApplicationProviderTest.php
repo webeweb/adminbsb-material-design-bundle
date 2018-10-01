@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\Application;
+namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\Bootstrap\Theme;
 
-use WBW\Bundle\AdminBSBBundle\Provider\Application\DefaultApplicationProvider;
+use WBW\Bundle\AdminBSBBundle\Provider\Bootstrap\Theme\DefaultApplicationThemeProvider;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractAdminBSBFrameworkTestCase;
 
 /**
@@ -30,7 +30,7 @@ final class DefaultApplicationProviderTest extends AbstractAdminBSBFrameworkTest
      */
     public function testConstruct() {
 
-        $obj = new DefaultApplicationProvider();
+        $obj = new DefaultApplicationThemeProvider();
 
         $this->assertEquals("AdminBSB Material Design", $obj->getDescription());
         $this->assertEquals("/", $obj->getHome());
