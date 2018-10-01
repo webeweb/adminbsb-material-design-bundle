@@ -11,17 +11,17 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\DropDown;
 
-use WBW\Bundle\AdminBSBBundle\Provider\DropDown\DefaultDropDownHookProvider;
+use WBW\Bundle\AdminBSBBundle\Provider\Bootstrap\Theme\DefaultHookDropDownThemeProvider;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractAdminBSBFrameworkTestCase;
 
 /**
- * Default drop down hook provider test.
+ * Default hook drop down theme provider test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\DropDown
  * @final
  */
-final class DefaultDropDownHookProviderTest extends AbstractAdminBSBFrameworkTestCase {
+final class DefaultHookDropDownThemeProviderTest extends AbstractAdminBSBFrameworkTestCase {
 
     /**
      * Tests the __construct() method.
@@ -30,10 +30,10 @@ final class DefaultDropDownHookProviderTest extends AbstractAdminBSBFrameworkTes
      */
     public function testConstruct() {
 
-        $obj = new DefaultDropDownHookProvider();
+        $obj = new DefaultHookDropDownThemeProvider();
 
         $this->assertEquals([], $obj->getItems());
-        $this->assertEquals("@ABSBMD/html/body/nav/div/div/ul/li.dropdown_hook.html.twig", $obj->getView());
+        $this->assertEquals(null, $obj->getView());
     }
 
 }

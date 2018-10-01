@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Provider\DropDown;
+namespace WBW\Bundle\AdminBSBBundle\Provider\Bootstrap\Theme;
 
-use WBW\Bundle\BootstrapBundle\Provider\DropDownHookProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\HookDropDownThemeProviderInterface;
 
 /**
- * Default drop down hook provider.
+ * Default hook drop down theme provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBBundle\Provider\DropDown
+ * @package WBW\Bundle\AdminBSBBundle\Provider\Bootstrap\Theme
  */
-class DefaultDropDownHookProvider implements DropDownHookProviderInterface {
+class DefaultHookDropDownThemeProvider implements HookDropDownThemeProviderInterface {
 
     /**
      * Constructor.
@@ -39,7 +39,7 @@ class DefaultDropDownHookProvider implements DropDownHookProviderInterface {
      * {@inheritdoc}
      */
     public function getView() {
-        return "@ABSBMD/html/body/nav/div/div/ul/li.dropdown_hook.html.twig";
+        return null;
     }
 
 }
