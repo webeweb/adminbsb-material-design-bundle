@@ -22,7 +22,7 @@ use WBW\Library\Core\Exception\FileSystem\IOException;
 class ViewHelper {
 
     /**
-     * Write.
+     * Write a view.
      *
      * @param string $filename The filename.
      * @param string $content The content.
