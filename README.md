@@ -3,7 +3,7 @@ adminbsb-material-design-bundle
 
 [![Build Status](https://travis-ci.org/webeweb/adminbsb-material-design-bundle.svg?branch=master)](https://travis-ci.org/webeweb/adminbsb-material-design-bundle) [![Coverage Status](https://coveralls.io/repos/github/webeweb/adminbsb-material-design-bundle/badge.svg?branch=master)](https://coveralls.io/github/webeweb/adminbsb-material-design-bundle?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/webeweb/adminbsb-material-design-bundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/webeweb/adminbsb-material-design-bundle/?branch=master) [![Latest Stable Version](https://poser.pugx.org/webeweb/adminbsb-material-design-bundle/v/stable)](https://packagist.org/packages/webeweb/adminbsb-material-design-bundle) [![Latest Unstable Version](https://poser.pugx.org/webeweb/adminbsb-material-design-bundle/v/unstable)](https://packagist.org/packages/webeweb/adminbsb-material-design-bundle) [![License](https://poser.pugx.org/webeweb/adminbsb-material-design-bundle/license)](https://packagist.org/packages/webeweb/adminbsb-material-design-bundle) [![composer.lock](https://poser.pugx.org/webeweb/adminbsb-material-design-bundle/composerlock)](https://packagist.org/packages/webeweb/adminbsb-material-design-bundle)
 
-Integrate AdminBSB Material Design theme with Symfony 2.
+Integrate AdminBSB Material Design theme with Symfony 2 and more.
 
 Based on the work of [AdminBSB - Free admin panel that is based on Bootstrap 3.x with Material Design](https://github.com/gurayyarar/AdminBSBMaterialDesign/)
 
