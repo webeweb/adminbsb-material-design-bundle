@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Plugin;
 
 use Twig_Node;
 use Twig_SimpleFunction;
-use WBW\Bundle\AdminBSBBundle\Tests\AbstractAdminBSBFrameworkTestCase;
+use WBW\Bundle\AdminBSBBundle\Tests\AbstractFrameworkTestCase;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Plugin\DatetimePickerTwigExtension;
 
 /**
@@ -23,7 +23,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Plugin\DatetimePickerTwigExtension;
  * @package WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Plugin
  * @final
  */
-final class DatetimePickerTwigExtensionTest extends AbstractAdminBSBFrameworkTestCase {
+final class DatetimePickerTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * {@inheritdoc}

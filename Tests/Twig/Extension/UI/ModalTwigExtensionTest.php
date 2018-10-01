@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\UI;
 
 use Twig_Node;
 use Twig_SimpleFunction;
-use WBW\Bundle\AdminBSBBundle\Tests\AbstractAdminBSBFrameworkTestCase;
+use WBW\Bundle\AdminBSBBundle\Tests\AbstractFrameworkTestCase;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ModalTwigExtension;
 
 /**
@@ -23,7 +23,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ModalTwigExtension;
  * @package WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\UI
  * @final
  */
-final class ModalTwigExtensionTest extends AbstractAdminBSBFrameworkTestCase {
+final class ModalTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the getFunctions() method.

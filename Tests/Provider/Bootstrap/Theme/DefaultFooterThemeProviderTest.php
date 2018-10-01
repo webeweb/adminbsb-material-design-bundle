@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\Bootstrap\Theme;
 
 use WBW\Bundle\AdminBSBBundle\Provider\Bootstrap\Theme\DefaultFooterThemeProvider;
-use WBW\Bundle\AdminBSBBundle\Tests\AbstractAdminBSBFrameworkTestCase;
+use WBW\Bundle\AdminBSBBundle\Tests\AbstractFrameworkTestCase;
 
 /**
  * Default footer theme provider test.
@@ -21,7 +21,7 @@ use WBW\Bundle\AdminBSBBundle\Tests\AbstractAdminBSBFrameworkTestCase;
  * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\Bootstrap\Theme
  * @final
  */
-final class DefaultFooterThemeProviderTest extends AbstractAdminBSBFrameworkTestCase {
+final class DefaultFooterThemeProviderTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the __construct() method.

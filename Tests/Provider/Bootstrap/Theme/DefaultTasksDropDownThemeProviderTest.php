@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\Bootstrap\Theme;
 
 use WBW\Bundle\AdminBSBBundle\Provider\Bootstrap\Theme\DefaultTasksDropDownThemeProvider;
-use WBW\Bundle\AdminBSBBundle\Tests\AbstractAdminBSBFrameworkTestCase;
+use WBW\Bundle\AdminBSBBundle\Tests\AbstractFrameworkTestCase;
 
 /**
  * Default tasks drop down theme provider test.
@@ -21,7 +21,7 @@ use WBW\Bundle\AdminBSBBundle\Tests\AbstractAdminBSBFrameworkTestCase;
  * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\Bootstrap\Theme
  * @final
  */
-final class DefaultTasksDropDownThemeProviderTest extends AbstractAdminBSBFrameworkTestCase {
+final class DefaultTasksDropDownThemeProviderTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the __construct() method.

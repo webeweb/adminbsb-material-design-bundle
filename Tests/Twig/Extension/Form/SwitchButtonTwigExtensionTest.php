@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Form;
 
 use Twig_Node;
 use Twig_SimpleFunction;
-use WBW\Bundle\AdminBSBBundle\Tests\AbstractAdminBSBFrameworkTestCase;
+use WBW\Bundle\AdminBSBBundle\Tests\AbstractFrameworkTestCase;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\SwitchButtonTwigExtension;
 
 /**
@@ -23,7 +23,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\SwitchButtonTwigExtension;
  * @package WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Form
  * @final
  */
-final class SwitchButtonTwigExtensionTest extends AbstractAdminBSBFrameworkTestCase {
+final class SwitchButtonTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the getFunctions() method.

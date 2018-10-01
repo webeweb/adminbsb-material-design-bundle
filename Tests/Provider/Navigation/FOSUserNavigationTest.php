@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\Navigation;
 
 use WBW\Bundle\AdminBSBBundle\Provider\Navigation\FOSUserNavigationProvider;
-use WBW\Bundle\AdminBSBBundle\Tests\AbstractAdminBSBFrameworkTestCase;
+use WBW\Bundle\AdminBSBBundle\Tests\AbstractFrameworkTestCase;
 use WBW\Bundle\BootstrapBundle\Navigation\BreadcrumbNode;
 
 /**
@@ -22,7 +22,7 @@ use WBW\Bundle\BootstrapBundle\Navigation\BreadcrumbNode;
  * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\Navigation
  * @final
  */
-final class FOSUserNavigationProviderTest extends AbstractAdminBSBFrameworkTestCase {
+final class FOSUserNavigationProviderTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the getBreadcrumb() method.
