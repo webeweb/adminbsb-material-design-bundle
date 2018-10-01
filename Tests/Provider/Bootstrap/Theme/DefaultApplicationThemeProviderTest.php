@@ -38,6 +38,7 @@ final class DefaultApplicationThemeProviderTest extends AbstractAdminBSBFramewor
         $this->assertEquals("/", $obj->getRoute());
         $this->assertEquals("AdminBSB Material Design", $obj->getTitle());
         $this->assertEquals("~1.0@dev", $obj->getVersion());
+        $this->assertEquals(null, $obj->getView());
         $this->assertEquals("2017", $obj->getYear());
     }
 
