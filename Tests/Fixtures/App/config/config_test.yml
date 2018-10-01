@@ -21,7 +21,6 @@ framework:
         engines: ["twig"]
     test:            ~
     translator:      { fallbacks: ["%locale%"] }
-    trusted_hosts:   ~
     trusted_proxies: ~
     validation:
         enabled: false
