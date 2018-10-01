@@ -9,18 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Provider\Navigation;
+namespace WBW\Bundle\AdminBSBBundle\Provider\Bootstrap\Theme;
 
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationTree;
-use WBW\Bundle\BootstrapBundle\Provider\NavigationProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\NavigationThemeProviderInterface;
 
 /**
- * Default navigation provider.
+ * Default navigation theme provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBBundle\Provider\Navigation
+ * @package WBW\Bundle\AdminBSBBundle\Provider\Bootstrap\Theme
  */
-class DefaultNavigationProvider implements NavigationProviderInterface {
+class DefaultNavigationThemeProvider implements NavigationThemeProviderInterface {
 
     /**
      * Constructor.
@@ -40,7 +40,7 @@ class DefaultNavigationProvider implements NavigationProviderInterface {
      * {@inheritdoc}
      */
     public function getView() {
-        return "@ABSBMD/html/body/section/aside/div.menu.html.twig";
+        return null;
     }
 
 }

@@ -9,20 +9,20 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\Navigation;
+namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\Bootstrap\Theme;
 
-use WBW\Bundle\AdminBSBBundle\Provider\Navigation\DefaultNavigationProvider;
+use WBW\Bundle\AdminBSBBundle\Provider\Bootstrap\Theme\DefaultNavigationThemeProvider;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractAdminBSBFrameworkTestCase;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationTree;
 
 /**
- * Default navigation provider test.
+ * Default navigation theme provider test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\Navigation
+ * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\Bootstrap\Theme
  * @final
  */
-final class DefaultNavigationProviderTest extends AbstractAdminBSBFrameworkTestCase {
+final class DefaultNavigationThemeProviderTest extends AbstractAdminBSBFrameworkTestCase {
 
     /**
      * Tests the __construct() method.
@@ -31,9 +31,9 @@ final class DefaultNavigationProviderTest extends AbstractAdminBSBFrameworkTestC
      */
     public function testConstruct() {
 
-        $obj = new DefaultNavigationProvider();
+        $obj = new DefaultNavigationThemeProvider();
 
-        $this->assertEquals("@ABSBMD/html/body/section/aside/div.menu.html.twig", $obj->getView());
+        $this->assertEquals(null, $obj->getView());
         $this->assertInstanceOf(NavigationTree::class, $obj->getTree());
     }
 
