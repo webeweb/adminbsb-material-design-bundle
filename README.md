@@ -1,7 +1,12 @@
 adminbsb-material-design-bundle
 ===============================
 
-[![Build Status](https://travis-ci.org/webeweb/adminbsb-material-design-bundle.svg?branch=master)](https://travis-ci.org/webeweb/adminbsb-material-design-bundle) [![Coverage Status](https://coveralls.io/repos/github/webeweb/adminbsb-material-design-bundle/badge.svg?branch=master)](https://coveralls.io/github/webeweb/adminbsb-material-design-bundle?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/webeweb/adminbsb-material-design-bundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/webeweb/adminbsb-material-design-bundle/?branch=master) [![Latest Stable Version](https://poser.pugx.org/webeweb/adminbsb-material-design-bundle/v/stable)](https://packagist.org/packages/webeweb/adminbsb-material-design-bundle) [![Latest Unstable Version](https://poser.pugx.org/webeweb/adminbsb-material-design-bundle/v/unstable)](https://packagist.org/packages/webeweb/adminbsb-material-design-bundle) [![License](https://poser.pugx.org/webeweb/adminbsb-material-design-bundle/license)](https://packagist.org/packages/webeweb/adminbsb-material-design-bundle) [![composer.lock](https://poser.pugx.org/webeweb/adminbsb-material-design-bundle/composerlock)](https://packagist.org/packages/webeweb/adminbsb-material-design-bundle)
+[![Build Status](https://travis-ci.org/webeweb/adminbsb-material-design-bundle.svg?branch=master)](https://travis-ci.org/webeweb/adminbsb-material-design-bundle)
+[![Coverage Status](https://coveralls.io/repos/github/webeweb/adminbsb-material-design-bundle/badge.svg?branch=master)](https://coveralls.io/github/webeweb/adminbsb-material-design-bundle?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/webeweb/adminbsb-material-design-bundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/webeweb/adminbsb-material-design-bundle/?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/webeweb/adminbsb-material-design-bundle/v/stable)](https://packagist.org/packages/webeweb/adminbsb-material-design-bundle)
+[![Latest Unstable Version](https://poser.pugx.org/webeweb/adminbsb-material-design-bundle/v/unstable)](https://packagist.org/packages/webeweb/adminbsb-material-design-bundle)
+[![License](https://poser.pugx.org/webeweb/adminbsb-material-design-bundle/license)](https://packagist.org/packages/webeweb/adminbsb-material-design-bundle) [![composer.lock](https://poser.pugx.org/webeweb/adminbsb-material-design-bundle/composerlock)](https://packagist.org/packages/webeweb/adminbsb-material-design-bundle)
 
 Integrate AdminBSB Material Design theme with Symfony 2 and more.
 
@@ -62,7 +67,8 @@ Includes:
 
 ## Compatibility
 
-[![PHP](https://img.shields.io/badge/PHP-%5E5.6%7C%5E7.0-blue.svg)](http://php.net) [![HHVM](https://img.shields.io/badge/HHVM-ready-orange.svg)](https://hhvm.com/) [![Symfony](https://img.shields.io/badge/Symfony-%5E2.6%7C%5E3.0-brightgreen.svg)](https://symfony.com)
+[![PHP](https://img.shields.io/badge/PHP-%5E5.6%7C%5E7.0-blue.svg)](http://php.net)
+[![Symfony](https://img.shields.io/badge/Symfony-%5E2.7%7C%5E3.0-brightgreen.svg)](https://symfony.com)
 
 ---
 
