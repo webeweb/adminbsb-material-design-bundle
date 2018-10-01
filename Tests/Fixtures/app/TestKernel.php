@@ -1,14 +1,14 @@
 <?php
 
 /**
- * This file is part of the jquery-datatables-bundle package.
+ * This file is part of the adminbsb-material-design-bundle package.
  *
  * (c) 2017 WEBEWEB
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapKernel;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractKernel;
 
 /**
  * Test kernel.
@@ -17,7 +17,7 @@ use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapKernel;
  * @package WBW\Bundle\JQuery\DataTablesBundle\Tests\Fixtures\App
  * @final
  */
-final class TestKernel extends AbstractBootstrapKernel {
+final class TestKernel extends AbstractKernel {
 
     /**
      * {@inheritdoc}
@@ -28,8 +28,9 @@ final class TestKernel extends AbstractBootstrapKernel {
             new Symfony\Bundle\MonologBundle\MonologBundle(),
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
-            new WBW\Bundle\AdminBSBBundle\BootstrapBundle(),
+            new WBW\Bundle\AdminBSBBundle\AdminBSBBundle(),
             new WBW\Bundle\BootstrapBundle\BootstrapBundle(),
+            new WBW\Bundle\JQuery\DataTablesBundle\JQueryDataTablesBundle(),
             new WBW\Bundle\SyntaxHighlighterBundle\SyntaxHighlighterBundle(),
         ];
         return $bundles;
