@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Provider\Search;
+namespace WBW\Bundle\AdminBSBBundle\Provider\Bootstrap\Theme;
 
-use WBW\Bundle\BootstrapBundle\Provider\SearchProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\SearchThemeProviderInterface;
 
 /**
- * Default search provider.
+ * Default search theme provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBBundle\Provider\Search
+ * @package WBW\Bundle\AdminBSBBundle\Provider\Bootstrap\Theme
  */
-class DefaultSearchProvider implements SearchProviderInterface {
+class DefaultSearchThemeProvider implements SearchThemeProviderInterface {
 
     /**
      * Constructor.
@@ -32,7 +32,7 @@ class DefaultSearchProvider implements SearchProviderInterface {
      * {@inheritdoc}
      */
     public function getView() {
-        return "@ABSBMD/html/body/div.search-bar.html.twig";
+        return null;
     }
 
 }

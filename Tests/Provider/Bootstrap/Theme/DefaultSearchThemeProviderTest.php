@@ -9,19 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\Search;
+namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\Bootstrap\Theme;
 
-use WBW\Bundle\AdminBSBBundle\Provider\Search\DefaultSearchProvider;
+use WBW\Bundle\AdminBSBBundle\Provider\Bootstrap\Theme\DefaultSearchThemeProvider;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractAdminBSBFrameworkTestCase;
 
 /**
- * Default search provider test.
+ * Default search theme provider test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\Search
+ * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\Bootstrap\Theme
  * @final
  */
-final class DefaultSearchProviderTest extends AbstractAdminBSBFrameworkTestCase {
+final class DefaultSearchThemeProviderTest extends AbstractAdminBSBFrameworkTestCase {
 
     /**
      * Tests the __construct() method.
@@ -30,9 +30,9 @@ final class DefaultSearchProviderTest extends AbstractAdminBSBFrameworkTestCase 
      */
     public function testConstruct() {
 
-        $obj = new DefaultSearchProvider();
+        $obj = new DefaultSearchThemeProvider();
 
-        $this->assertEquals("@ABSBMD/html/body/div.search-bar.html.twig", $obj->getView());
+        $this->assertEquals(null, $obj->getView());
     }
 
 }
