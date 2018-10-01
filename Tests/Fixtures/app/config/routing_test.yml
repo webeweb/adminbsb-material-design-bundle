@@ -1,1 +1,5 @@
-# Tests/Fixtures/App/config/routing_test.yml
+# Tests/Fixtures/app/config/routing_test.yml
+adminbsb_blank_action:
+    path:     "/blank"
+    defaults: { _controller: "WBW\\Bundle\\AdminBSBBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::blankAction" }
+    methods: ["GET"]
