@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Provider\DropDown;
+namespace WBW\Bundle\AdminBSBBundle\Provider\Bootstrap\Theme;
 
-use WBW\Bundle\BootstrapBundle\Provider\DropDownNotificationsProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\NotificationsDropDownThemeProviderInterface;
 
 /**
- * Default drop down "Notifications" provider.
+ * Default notifications drop down theme provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBBundle\Provider\DropDown
+ * @package WBW\Bundle\AdminBSBBundle\Provider\Bootstrap\Theme
  */
-class DefaultDropDownNotificationsProvider implements DropDownNotificationsProviderInterface {
+class DefaultNotificationsDropDownThemeProvider implements NotificationsDropDownThemeProviderInterface {
 
     /**
      * Constructor.
@@ -39,7 +39,7 @@ class DefaultDropDownNotificationsProvider implements DropDownNotificationsProvi
      * {@inheritdoc}
      */
     public function getView() {
-        return "@ABSBMD/html/body/nav/div/div/ul/li.dropdown_notifications.html.twig";
+        return null;
     }
 
 }

@@ -9,19 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\DropDown;
+namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\Bootstrap\Theme;
 
-use WBW\Bundle\AdminBSBBundle\Provider\DropDown\DefaultDropDownNotificationsProvider;
+use WBW\Bundle\AdminBSBBundle\Provider\Bootstrap\Theme\DefaultNotificationsDropDownThemeProvider;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractAdminBSBFrameworkTestCase;
 
 /**
- * Default drop down hook provider test.
+ * Default notifications drop down theme provider test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\DropDown
+ * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\Bootstrap\Theme
  * @final
  */
-final class DefaultDropDownNotificationsProviderTest extends AbstractAdminBSBFrameworkTestCase {
+final class DefaultNotificationsDropDownThemeProviderTest extends AbstractAdminBSBFrameworkTestCase {
 
     /**
      * Tests the __construct() method.
@@ -30,10 +30,10 @@ final class DefaultDropDownNotificationsProviderTest extends AbstractAdminBSBFra
      */
     public function testConstruct() {
 
-        $obj = new DefaultDropDownNotificationsProvider();
+        $obj = new DefaultNotificationsDropDownThemeProvider();
 
         $this->assertEquals([], $obj->getNotifications());
-        $this->assertEquals("@ABSBMD/html/body/nav/div/div/ul/li.dropdown_notifications.html.twig", $obj->getView());
+        $this->assertEquals(null, $obj->getView());
     }
 
 }
