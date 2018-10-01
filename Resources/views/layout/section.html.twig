@@ -23,7 +23,7 @@
         </div>
     </div>
     <div class="overlay"></div>
-    {% include "@AdminBBS/provider/search.html.twig" %}
+    {% include "@AdminBSB/provider/search.html.twig" %}
     <nav class="navbar">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -44,13 +44,13 @@
                 {% if (UserInfoThemeProvider is defined and UserInfoThemeProvider.view is not null) %}
                     {% include UserInfoThemeProvider.view with {"provider": UserInfoThemeProvider} %}
                 {% else %}
-                    {% include "@AdminBBS/provider/user-info.html.twig" %}
+                    {% include "@AdminBSB/provider/user-info.html.twig" %}
                 {% endif %}
             {% endif %}
             {% if (NavigationThemeProvider is defined and NavigationThemeProvider.view is not null) %}
                 {% include NavigationThemeProvider.view with {"provider": NavigationThemeProvider} %}
             {% else %}
-                {% include "@AdminBBS/provider/navigation.html.twig" %}
+                {% include "@AdminBSB/provider/navigation.html.twig" %}
             {% endif %}
             {% if (FooterThemeProvider is defined and FooterThemeProvider.view is not null) %}
                 {% include FooterThemeProvider.view with {"provider": FooterThemeProvider} %}
