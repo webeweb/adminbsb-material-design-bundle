@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Provider\Breadcrumbs;
+namespace WBW\Bundle\AdminBSBBundle\Provider\Bootstrap\Theme;
 
-use WBW\Bundle\BootstrapBundle\Provider\BreadcrumbsProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\BreadcrumbsThemeProviderInterface;
 
 /**
- * Default breadcrumbs provider.
+ * Default breadcrumbs theme provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBBundle\Provider\Breadcrumbs
+ * @package WBW\Bundle\AdminBSBBundle\Provider\Bootstrap\Theme
  */
-class DefaultBreadcrumbsProvider implements BreadcrumbsProviderInterface {
+class DefaultBreadcrumbsThemeProvider implements BreadcrumbsThemeProviderInterface {
 
     /**
      * Constructor.
@@ -32,7 +32,7 @@ class DefaultBreadcrumbsProvider implements BreadcrumbsProviderInterface {
      * {@inheritdoc}
      */
     public function getView() {
-        return "@ABSBMD/html/body/section/div/div.block-header.html.twig";
+        return null;
     }
 
 }

@@ -9,19 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\Breadcrumbs;
+namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\Bootstrap\Theme;
 
-use WBW\Bundle\AdminBSBBundle\Provider\Breadcrumbs\DefaultBreadcrumbsProvider;
+use WBW\Bundle\AdminBSBBundle\Provider\Bootstrap\Theme\DefaultBreadcrumbsThemeProvider;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractAdminBSBFrameworkTestCase;
 
 /**
- * DefaultBreadcrumbsProviderTest
+ * Default breadcrumbs theme provider test
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\Breadcrumbs
+ * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\BreadcBootstrap\Themerumbs
  * @final
  */
-final class DefaultBreadcrumbsProviderTest extends AbstractAdminBSBFrameworkTestCase {
+final class DefaultBreadcrumbsThemeProviderTest extends AbstractAdminBSBFrameworkTestCase {
 
     /**
      * Tests the __construct() method.
@@ -30,9 +30,9 @@ final class DefaultBreadcrumbsProviderTest extends AbstractAdminBSBFrameworkTest
      */
     public function testConstruct() {
 
-        $obj = new DefaultBreadcrumbsProvider();
+        $obj = new DefaultBreadcrumbsThemeProvider();
 
-        $this->assertEquals("@ABSBMD/html/body/section/div/div.block-header.html.twig", $obj->getView());
+        $this->assertEquals(null, $obj->getView());
     }
 
 }
