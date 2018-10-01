@@ -1,0 +1,9 @@
+{# Resources/views/provider/footer.html.twig #}
+<div class="legal">
+    <div class="copyright">
+        &copy; {{ ApplicationThemeProvider.year|default("2018")|raw }} <a href="{{ ApplicationThemeProvider.route|default("#") }}">{{ ApplicationThemeProvider.name|default("")|raw }}</a>.
+    </div>
+    <div class="version">
+        <b>Version : </b>{{ ApplicationThemeProvider.version|default("1.0.0") }}
+    </div>
+</div>
