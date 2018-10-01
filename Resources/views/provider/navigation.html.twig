@@ -1,0 +1,8 @@
+{# Resources/views/provider/navigation.html.twig #}
+<div class="menu">
+    {% if (NavigationThemeProvider is defined) %}
+        <ul class="list">
+            {{ adminBSBMultiLevelMenu(NavigationThemeProvider.tree, app.request) }}
+        </ul>
+    {% endif %}
+</div>
