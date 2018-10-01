@@ -43,9 +43,6 @@ class AdminBSBRendererTwigExtension {
             $handler = ["md", $name];
         }
 
-        // Initialize the output.
-        $output = "";
-
         // Swith into handler.
         switch ($handler[0]) {
 
