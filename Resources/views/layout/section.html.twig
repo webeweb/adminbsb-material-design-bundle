@@ -1,7 +1,7 @@
 {# Resources/views/layout/section.html.twig #}
 {% extends "@AdminBSB/layout.html.twig" %}
 
-{% block adminBSBHeadTitle %}{{ ApplicationProvider.title|default("AdminBSB Material Design") }}{% endblock %}
+{% block adminBSBHeadTitle %}{{ ApplicationThemeProvider.title|default("AdminBSB Material Design") }}{% endblock %}
 
 {% block adminBSBBodyClasses %}theme-red{% endblock %}
 
@@ -23,61 +23,40 @@
         </div>
     </div>
     <div class="overlay"></div>
-    <div class="search-bar">
-        <div class="search-icon">
-            <i class="material-icons">search</i>
-        </div>
-        <input type="text" placeholder="{{ "views.layout.search"|trans({}, "AdminBSBBundle")|upper }}">
-        <div class="close-search">
-            <i class="material-icons">close</i>
-        </div>
-    </div>
+    {% include "@AdminBBS/provider/search.html.twig" %}
     <nav class="navbar">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-toggle collapsed" href="javascript:void(0);" aria-expanded="false" data-target="#navbar-collapse" data-toggle="collapse"></a>
                 <a class="bars" href="javascript:void(0);"></a>
-                <a class="navbar-brand" href="javscript:void(0)">{{ ApplicationProvider.name|default("")|raw }}</a>
+                <a class="navbar-brand" href="javscript:void(0)">{{ ApplicationThemeProvider.name|default("")|raw }}</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
+
                 </ul>
             </div>
         </div>
     </nav>
     <section>
         <aside class="sidebar" id="leftsidebar">
-            <div class="user-info">
-                <div class="image">
-                    <img src="{{ asset("bundles/adminbsb/images/user.png") }}" height="48" width="48" alt="User" />
-                </div>
-                <div class="info-container">
-                    <div class="name" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">{{ app.user.username|default("") }}</div>
-                    <div class="email">{{ app.user.email|default("") }}</div>
-                    <div class="btn-group user-helper-dropdown">
-                        <i class="material-icons" data-toggle="dropdown" aria-expanded="true" aria-haspopup="true">keyboard_arrow_down</i>
-                        <ul class="dropdown-menu pull-right">
-                            <li><a href="{{ path("fos_user_profile_edit") }}"><i class="material-icons">person</i>{{ "profile.edit.submit"|trans({}, "FOSUserBundle") }}</a></li>
-                            <li><a href="{{ path("fos_user_change_password") }}"><i class="material-icons">lock</i>{{ "form.password"|trans({}, "FOSUserBundle") }}</a></li>
-                            <li class="divider" role="seperator"></li>
-                            <li><a href="{{ path("fos_user_security_logout") }}"><i class="material-icons">input</i>{{ "layout.logout"|trans({}, "FOSUserBundle") }}</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="menu">
-                <ul class="list">
-                    {{ adminBSBMultiLevelMenu(NavigationProvider.tree, app.request) }}
-                </ul>
-            </div>
-            <div class="legal">
-                <div class="copyright">
-                    &copy; {{ ApplicationProvider.year|default("2018")|raw }} <a href="{{ path(ApplicationProvider.route|default("/")) }}">{{ ApplicationProvider.name|default("")|raw }}</a>.
-                </div>
-                <div class="version">
-                    <b>Version : </b>{{ ApplicationProvider.version|default("1.0.0") }}
-                </div>
-            </div>
+            {% if (app.user is not null) %}
+                {% if (UserInfoThemeProvider is defined and UserInfoThemeProvider.view is not null) %}
+                    {% include UserInfoThemeProvider.view with {"provider": UserInfoThemeProvider} %}
+                {% else %}
+                    {% include "@AdminBBS/provider/user-info.html.twig" %}
+                {% endif %}
+            {% endif %}
+            {% if (NavigationThemeProvider is defined and NavigationThemeProvider.view is not null) %}
+                {% include NavigationThemeProvider.view with {"provider": NavigationThemeProvider} %}
+            {% else %}
+                {% include "@AdminBBS/provider/navigation.html.twig" %}
+            {% endif %}
+            {% if (FooterThemeProvider is defined and FooterThemeProvider.view is not null) %}
+                {% include FooterThemeProvider.view with {"provider": FooterThemeProvider} %}
+            {% else %}
+                {% include "@AdminBSB/provider/footer.html.twig" %}
+            {% endif %}
         </aside>
         <aside class="right-sidebar" id="rightsidebar">
 
@@ -86,11 +65,7 @@
     <section class="content">
         <div class="container-fluid">
             {% if (0 < app.session.flashbag.peekAll()|length) %}
-                <div class="row clearfix" id="twig-console">
-                    <div class="{{ bootstrapGrid({"lg": 12, "recopy": true}) }}">
-                        {% include "@Bootstrap/include/flashbag.html.twig" %}
-                    </div>
-                </div>
+                {% include "@AdminBSB/include/flashbag.html.twig" %}
             {% endif %}
             {% block adminBSBBodySection %}
             {% endblock %}
