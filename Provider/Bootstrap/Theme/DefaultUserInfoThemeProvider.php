@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Provider\User;
+namespace WBW\Bundle\AdminBSBBundle\Provider\Bootstrap\Theme;
 
-use WBW\Bundle\BootstrapBundle\Provider\UserInfoProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\UserInfoThemeProviderInterface;
 
 /**
- * Default user info provider.
+ * Default user info theme provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBBundle\Provider\User
+ * @package WBW\Bundle\AdminBSBBundle\Provider\Bootstrap\Theme
  */
-class DefaultUserInfoProvider implements UserInfoProviderInterface {
+class DefaultUserInfoThemeProvider implements UserInfoThemeProviderInterface {
 
     /**
      * Constructor.
@@ -46,7 +46,7 @@ class DefaultUserInfoProvider implements UserInfoProviderInterface {
      * {@inheritdoc}
      */
     public function getView() {
-        return "@ABSBMD/html/body/section/aside/div.user-info.html.twig";
+        return null;
     }
 
 }

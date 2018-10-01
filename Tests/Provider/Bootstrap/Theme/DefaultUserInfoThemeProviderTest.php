@@ -9,19 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\User;
+namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\Bootstrap\Theme;
 
-use WBW\Bundle\AdminBSBBundle\Provider\User\DefaultUserInfoProvider;
+use WBW\Bundle\AdminBSBBundle\Provider\Bootstrap\Theme\DefaultUserInfoThemeProvider;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractAdminBSBFrameworkTestCase;
 
 /**
- * Default user info provider test.
+ * Default user info theme provider test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\User
+ * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\Bootstrap\Theme
  * @final
  */
-final class DefaultUserInfoProviderTest extends AbstractAdminBSBFrameworkTestCase {
+final class DefaultUserInfoThemeProviderTest extends AbstractAdminBSBFrameworkTestCase {
 
     /**
      * Tests the __construct() method.
@@ -30,9 +30,9 @@ final class DefaultUserInfoProviderTest extends AbstractAdminBSBFrameworkTestCas
      */
     public function testConstruct() {
 
-        $obj = new DefaultUserInfoProvider();
+        $obj = new DefaultUserInfoThemeProvider();
 
-        $this->assertEquals("@ABSBMD/html/body/section/aside/div.user-info.html.twig", $obj->getView());
+        $this->assertEquals(null, $obj->getView());
         $this->assertFalse($obj->provideRegisterLink());
         $this->assertFalse($obj->provideResettingLink());
     }
