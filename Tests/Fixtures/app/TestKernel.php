@@ -24,9 +24,12 @@ final class TestKernel extends AbstractKernel {
      */
     public function registerBundles() {
         $bundles = [
+            new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
+            new FOS\UserBundle\FOSUserBundle,
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Bundle\MonologBundle\MonologBundle(),
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
+            new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
             new WBW\Bundle\AdminBSBBundle\AdminBSBBundle(),
             new WBW\Bundle\BootstrapBundle\BootstrapBundle(),
