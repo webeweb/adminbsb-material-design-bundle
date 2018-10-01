@@ -91,7 +91,7 @@ class MultiLevelMenuTwigExtensionTest extends AbstractFrameworkTestCase {
 
         $obj = new MultiLevelMenuTwigExtension($this->translator);
 
-        $res = <<< 'EOTXT'
+        $res = <<<'EOT'
 <li class="header">Main navigation</li>
 <li class="active">
 <a class="menu-toggle"><i class="material-icons">person</i><span>Users</span></a>
@@ -104,7 +104,7 @@ class MultiLevelMenuTwigExtensionTest extends AbstractFrameworkTestCase {
 </li>
 </ul>
 </li>
-EOTXT;
+EOT;
 
         $this->assertEquals($res, $obj->adminBSBMultiLevelMenuFunction($this->navigationTree, Request::create("/app/users/index")));
     }

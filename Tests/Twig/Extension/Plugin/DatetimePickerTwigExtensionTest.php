@@ -76,7 +76,7 @@ final class DatetimePickerTwigExtensionTest extends AbstractFrameworkTestCase {
         $obj = new DatetimePickerTwigExtension($this->translator);
 
         $arg0 = ["selector" => "selector"];
-        $res0 = <<< 'EOTXT'
+        $res0 = <<<'EOT'
 <script type="text/javascript">
 	$("selector").bootstrapMaterialDatePicker({
 		cancelText: "label.cancel",
@@ -89,12 +89,12 @@ final class DatetimePickerTwigExtensionTest extends AbstractFrameworkTestCase {
 		weekStart: 0
 	});
 </script>
-EOTXT;
+EOT;
 
         $this->assertEquals($res0, $obj->adminBSBDatePickerFunction($arg0));
 
         $arg9 = ["selector" => "selector", "clearButton" => true, "format" => "DD/MM/YYYY", "lang" => "fr", "weekStart" => 1];
-        $res9 = <<< 'EOTXT'
+        $res9 = <<<'EOT'
 <script type="text/javascript">
 	$("selector").bootstrapMaterialDatePicker({
 		cancelText: "label.cancel",
@@ -107,7 +107,7 @@ EOTXT;
 		weekStart: 1
 	});
 </script>
-EOTXT;
+EOT;
 
         $this->assertEquals($res9, $obj->adminBSBDatePickerFunction($arg9));
     }
@@ -122,7 +122,7 @@ EOTXT;
         $obj = new DatetimePickerTwigExtension($this->translator);
 
         $arg0 = ["selector" => "selector"];
-        $res0 = <<< 'EOTXT'
+        $res0 = <<<'EOT'
 <script type="text/javascript">
 	$("selector").bootstrapMaterialDatePicker({
 		cancelText: "label.cancel",
@@ -135,12 +135,12 @@ EOTXT;
 		weekStart: 0
 	});
 </script>
-EOTXT;
+EOT;
 
         $this->assertEquals($res0, $obj->adminBSBDatetimePickerFunction($arg0));
 
         $arg9 = ["selector" => "selector", "clearButton" => true, "format" => "DD/MM/YYYY HH mm", "lang" => "fr", "weekStart" => 1];
-        $res9 = <<< 'EOTXT'
+        $res9 = <<<'EOT'
 <script type="text/javascript">
 	$("selector").bootstrapMaterialDatePicker({
 		cancelText: "label.cancel",
@@ -153,7 +153,7 @@ EOTXT;
 		weekStart: 1
 	});
 </script>
-EOTXT;
+EOT;
 
         $this->assertEquals($res9, $obj->adminBSBDatetimePickerFunction($arg9));
     }
@@ -168,7 +168,7 @@ EOTXT;
         $obj = new DatetimePickerTwigExtension($this->translator);
 
         $arg0 = ["selector" => "selector"];
-        $res0 = <<< 'EOTXT'
+        $res0 = <<<'EOT'
 <script type="text/javascript">
 	$("selector").bootstrapMaterialDatePicker({
 		cancelText: "label.cancel",
@@ -181,12 +181,12 @@ EOTXT;
 		weekStart: 0
 	});
 </script>
-EOTXT;
+EOT;
 
         $this->assertEquals($res0, $obj->adminBSBTimePickerFunction($arg0));
 
         $arg9 = ["selector" => "selector", "clearButton" => true, "format" => "HH mm", "lang" => "fr"];
-        $res9 = <<< 'EOTXT'
+        $res9 = <<<'EOT'
 <script type="text/javascript">
 	$("selector").bootstrapMaterialDatePicker({
 		cancelText: "label.cancel",
@@ -199,7 +199,7 @@ EOTXT;
 		weekStart: 0
 	});
 </script>
-EOTXT;
+EOT;
 
         $this->assertEquals($res9, $obj->adminBSBTimePickerFunction($arg9));
     }

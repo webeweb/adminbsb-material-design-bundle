@@ -29,7 +29,7 @@ abstract class AbstractDatetimePickerTwigExtension extends AbstractAdminBSBTwigE
      *
      * @var string
      */
-    const DATETIMEPICKER = <<< 'EOTXT'
+    const DATETIMEPICKER = <<<'EOT'
 <script type="text/javascript">
 	$("%selector%").bootstrapMaterialDatePicker({
 		cancelText: "%cancelText%",
@@ -42,7 +42,7 @@ abstract class AbstractDatetimePickerTwigExtension extends AbstractAdminBSBTwigE
 		weekStart: %weekStart%
 	});
 </script>
-EOTXT;
+EOT;
 
     /**
      * Default date format.
