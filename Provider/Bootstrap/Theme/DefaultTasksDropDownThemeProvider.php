@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Provider\DropDown;
+namespace WBW\Bundle\AdminBSBBundle\Provider\Bootstrap\Theme;
 
-use WBW\Bundle\BootstrapBundle\Provider\DropDownTasksProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\TasksDropDownThemeProviderInterface;
 
 /**
- * Default drop down "Tasks" provider.
+ * Default tasks drop down theme provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBBundle\Provider\DropDown
+ * @package WBW\Bundle\AdminBSBBundle\Provider\Bootstrap\Theme
  */
-class DefaultDropDownTasksProvider implements DropDownTasksProviderInterface {
+class DefaultTasksDropDownThemeProvider implements TasksDropDownThemeProviderInterface {
 
     /**
      * Constructor.
@@ -39,7 +39,7 @@ class DefaultDropDownTasksProvider implements DropDownTasksProviderInterface {
      * {@inheritdoc}
      */
     public function getView() {
-        return "@ABSBMD/html/body/nav/div/div/ul/li.dropdown_tasks.html.twig";
+        return null;
     }
 
 }
