@@ -100,7 +100,7 @@ class MultiLevelMenuTwigExtensionTest extends AbstractAdminBSBFrameworkTestCase 
 <a href="/app/users/new"><i class="material-icons">add_circle_outline</i><span>New</span></a>
 </li>
 <li class="active">
-<a href="/app/users/index">List</a>
+<a href="/app/users/index"><i class="material-icons">view_list</i><span>List</span></a>
 </li>
 </ul>
 </li>
