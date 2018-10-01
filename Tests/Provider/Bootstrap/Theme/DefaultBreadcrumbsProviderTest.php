@@ -18,7 +18,7 @@ use WBW\Bundle\AdminBSBBundle\Tests\AbstractAdminBSBFrameworkTestCase;
  * Default breadcrumbs theme provider test
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\BreadcBootstrap\Themerumbs
+ * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\Bootstrap\Theme
  * @final
  */
 final class DefaultBreadcrumbsThemeProviderTest extends AbstractAdminBSBFrameworkTestCase {
