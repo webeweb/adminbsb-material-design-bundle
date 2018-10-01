@@ -15,13 +15,13 @@ use WBW\Bundle\AdminBSBBundle\Provider\Bootstrap\Theme\DefaultApplicationThemePr
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractAdminBSBFrameworkTestCase;
 
 /**
- * Default application provider test.
+ * Default application theme provider test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\Application
  * @final
  */
-final class DefaultApplicationProviderTest extends AbstractAdminBSBFrameworkTestCase {
+final class DefaultApplicationThemeProviderTest extends AbstractAdminBSBFrameworkTestCase {
 
     /**
      * Tests the __construct() method.
