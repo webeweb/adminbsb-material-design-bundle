@@ -22,12 +22,42 @@ framework:
     validation:
         enabled: false
 
+doctrine:
+    dbal:
+        driver: "pdo_sqlite"
+        path:   "%kernel.root_dir%/var/test.sqlite"
+    orm:
+        auto_generate_proxy_classes: "%kernel.debug%"
+        auto_mapping:                true
+        mappings:
+            JQueryDataTablesBundle:
+                dir:       "Tests/Fixtures/app/config/doctrine"
+                type:      "yml"
+                is_bundle: true
+                prefix:    "WBW\\Bundle\\AdminBSBBundle\\Tests\\Fixtures\\Entity"
+        naming_strategy:             "doctrine.orm.naming_strategy.underscore"
+
+fos_user:
+    db_driver:     orm
+    firewall_name: main
+    from_email:
+        address:     "no-reply@github.com"
+        sender_name: "GitHub"
+    user_class:    AppBundle\Entity\Utilisateur
+
 monolog:
     handlers:
         main:
             level: "debug"
             path:  "%kernel.logs_dir%/test.log"
             type:  "stream"
+
+swiftmailer:
+    host:      "localhost"
+    password:  null
+    spool:     { type: memory }
+    transport: "smtp"
+    username:  "no-reply@github.com"
 
 twig:
     debug:            "%kernel.debug%"
