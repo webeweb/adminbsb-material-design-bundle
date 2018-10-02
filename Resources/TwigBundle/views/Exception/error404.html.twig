@@ -6,6 +6,7 @@
 {% block adminBSBBodyClasses %}four-zero-four{% endblock %}
 
 {% block adminBSBBodyContent %}
+    {{ parent() }}
     <div class="four-zero-four-container">
         <div class="error-code">{{ status_code }}</div>
         <div class="error-message">{{ status_text }}</div>
