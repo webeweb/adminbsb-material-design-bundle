@@ -1,15 +1,15 @@
 {# Resources/FOSUserBundle/views/Security/login.html.twig #}
 {% extends "@AdminBSB/layout.html.twig" %}
 
-{% block adminBSBHeadTitle %}{{ ApplicationProvider.title|default("AdminBSB Material Design") }} - {{ "layout.login"|trans({}, "FOSUserBundle") }}{% endblock %}
+{% block adminBSBHeadTitle %}{{ ApplicationThemeProvider.title|default("AdminBSB Material Design") }} - {{ "layout.login"|trans({}, "FOSUserBundle") }}{% endblock %}
 
 {% block adminBSBBodyClasses %}login-page{% endblock %}
 
 {% block adminBSBBodyContent %}
     <div class="login-box">
         <div class="logo">
-            <a href="{{ ApplicationProvider.home|default("javascript: void(0);") }}">{{ ApplicationProvider.name|default("AdminBSB<b>MaterielDesign</b>")|raw }}</a>
-            <small>{{ ApplicationProvider.description|default("AdminBSB Material Design") }}</small>
+            <a href="{{ ApplicationThemeProvider.home|default("javascript: void(0);") }}">{{ ApplicationThemeProvider.name|default("AdminBSB<b>MaterielDesign</b>")|raw }}</a>
+            <small>{{ ApplicationThemeProvider.description|default("AdminBSB Material Design") }}</small>
         </div>
         <div class="card">
             <div class="body">
