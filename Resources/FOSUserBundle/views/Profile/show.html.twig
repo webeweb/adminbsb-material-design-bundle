@@ -1,7 +1,7 @@
 {# Resources/FOSUserBundle/views/Profile/show.html.twig #}
 {% extends "@AdminBSB/layout/section.html.twig" %}
 
-{% block adminBSBHeadTitle %}{{ ApplicationProvider.title|default("AdminBSB Material Design") }} - {{ "layout.logged_in_as"|trans({"%username%": app.user.username}, "FOSUserBundle") }}{% endblock %}
+{% block adminBSBHeadTitle %}{{ ApplicationThemeProvider.title|default("AdminBSB Material Design") }} - {{ "layout.logged_in_as"|trans({"%username%": app.user.username}, "FOSUserBundle") }}{% endblock %}
 
 {% block adminBSBBodySection %}
     <div class="row clearfix">

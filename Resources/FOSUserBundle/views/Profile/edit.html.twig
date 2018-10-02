@@ -1,7 +1,7 @@
 {# Resources/FOSUserBundle/views/Profile/edit.html.twig #}
 {% extends "@AdminBSB/layout/section.html.twig" %}
 
-{% block adminBSBHeadTitle %}{{ ApplicationProvider.title|default("AdminBSB Material Design") }} - {{ "profile.edit.submit"|trans({}, "FOSUserBundle") }}{% endblock %}
+{% block adminBSBHeadTitle %}{{ ApplicationThemeProvider.title|default("AdminBSB Material Design") }} - {{ "profile.edit.submit"|trans({}, "FOSUserBundle") }}{% endblock %}
 
 {% block adminBSBBodySection %}
     <div class="row clearfix">
