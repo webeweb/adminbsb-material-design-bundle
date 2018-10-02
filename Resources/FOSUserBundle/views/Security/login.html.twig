@@ -6,6 +6,7 @@
 {% block adminBSBBodyClasses %}login-page{% endblock %}
 
 {% block adminBSBBodyContent %}
+    {{ parent() }}
     <div class="login-box">
         <div class="logo">
             <a href="{{ ApplicationThemeProvider.home|default("javascript: void(0);") }}">{{ ApplicationThemeProvider.name|default("AdminBSB<b>MaterielDesign</b>")|raw }}</a>
