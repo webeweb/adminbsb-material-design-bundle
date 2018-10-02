@@ -33,7 +33,15 @@
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-
+                    {% if (HookDropDownProvider is defined and HookDropDownProvider.view is not null) %}
+                        {% include HookDropDownProvider.view with {"provider": HookDropDownProvider} %}
+                    {% endif %}
+                    {% if (NotificationsDropDownProvider is defined and NotificationsDropDownProvider.view is not null) %}
+                        {% include NotificationsDropDownProvider.view with {"provider": NotificationsDropDownProvider} %}
+                    {% endif %}
+                    {% if (TasksDropDownProvider is defined and TasksDropDownProvider.view is not null) %}
+                        {% include TasksDropDownProvider.view with {"provider": TasksDropDownProvider} %}
+                    {% endif %}
                 </ul>
             </div>
         </div>
