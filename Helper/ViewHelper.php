@@ -26,7 +26,7 @@ class ViewHelper {
      *
      * @param string $filename The filename.
      * @param string $content The content.
-     * @param boolean $overwrite Overwrite ?
+     * @param bool $overwrite Overwrite ?
      * @return void
      * @throws IOException Throws an I/O exception an I/O error occurs.
      */

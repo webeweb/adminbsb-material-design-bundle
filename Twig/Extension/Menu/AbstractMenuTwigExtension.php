@@ -182,7 +182,7 @@ abstract class AbstractMenuTwigExtension extends AbstractAdminBSBTwigExtension {
      * Determines if a node is valid.
      *
      * @param mixed $node The node.
-     * @return boolean Returns true in case of success, false otherwise.
+     * @return bool Returns true in case of success, false otherwise.
      */
     private function isValidNode($node) {
         return true === ($node instanceof NavigationNode) && true === $node->isDisplayable();

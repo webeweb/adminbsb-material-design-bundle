@@ -83,11 +83,11 @@ EOT;
      * Display an AdminBSB datetime picker.
      *
      * @param string $selector The selector.
-     * @param boolean $clearButton Clear button ?
-     * @param boolean $date Date ?
+     * @param bool $clearButton Clear button ?
+     * @param bool $date Date ?
      * @param string $format The format.
      * @param string $lang The lang.
-     * @param boolean $time Time ?
+     * @param bool $time Time ?
      * @param string $weekStart The week start.
      * @return string Returns the AdminBSB datetime picker.
      */

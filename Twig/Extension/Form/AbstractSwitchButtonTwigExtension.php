@@ -35,8 +35,8 @@ abstract class AbstractSwitchButtonTwigExtension extends AbstractAdminBSBTwigExt
      *
      * @param string $offLabel The off label.
      * @param string $name The name.
-     * @param boolean $checked Checked ?
-     * @param boolean $disabled Disable ?
+     * @param bool $checked Checked ?
+     * @param bool $disabled Disable ?
      * @param string $onLabel The on label.
      * @param array $attrs The attributes.
      * @param string $class The class.

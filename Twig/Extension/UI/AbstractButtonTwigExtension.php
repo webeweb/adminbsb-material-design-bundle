@@ -36,11 +36,11 @@ abstract class AbstractButtonTwigExtension extends AbstractAdminBSBTwigExtension
      * @param string $content The button content.
      * @param string $title The button title.
      * @param string $size The button size.
-     * @param boolean $block Block button ?
+     * @param bool $block Block button ?
      * @param booelan $disable Disable button ?
      * @param string $class The button class.
      * @param string $icon The button icon.
-     * @param boolean $circle Circle button ?
+     * @param bool $circle Circle button ?
      * @return string Returns the AdminBSB button.
      */
     protected function adminBSBButton($content, $title, $size, $block, $disable, $class, $icon, $circle) {

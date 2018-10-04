@@ -35,9 +35,9 @@ abstract class AbstractBadgeTwigExtension extends AbstractAdminBSBTwigExtension 
      *
      * @param string $content The content.
      * @param string $label The label.
-     * @param boolean $large Large ?
+     * @param bool $large Large ?
      * @param string $class The class.
-     * @param boolean $list List ?
+     * @param bool $list List ?
      * @param string $link The link.
      * @return string Returns the AdminBSB badge.
      */
