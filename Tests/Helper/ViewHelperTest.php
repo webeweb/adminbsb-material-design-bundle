@@ -20,9 +20,8 @@ use WBW\Library\Core\FileSystem\FileHelper;
  *
  * @author Camille A. <camille@ingeneo.eu>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Helper
- * @final
  */
-final class ViewHelperTest extends AbstractFrameworkTestCase {
+class ViewHelperTest extends AbstractFrameworkTestCase {
 
     /**
      * Filename.
