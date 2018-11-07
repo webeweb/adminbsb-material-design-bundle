@@ -19,9 +19,8 @@ use WBW\Bundle\AdminBSBBundle\Tests\AbstractFrameworkTestCase;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\Color
- * @final
  */
-final class DefaultColorProviderTest extends AbstractFrameworkTestCase {
+class DefaultColorProviderTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the __construct() method.

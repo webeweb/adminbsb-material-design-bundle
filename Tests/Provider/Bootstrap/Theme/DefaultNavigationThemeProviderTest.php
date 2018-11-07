@@ -20,9 +20,8 @@ use WBW\Bundle\BootstrapBundle\Navigation\NavigationTree;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\Bootstrap\Theme
- * @final
  */
-final class DefaultNavigationThemeProviderTest extends AbstractFrameworkTestCase {
+class DefaultNavigationThemeProviderTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the __construct() method.

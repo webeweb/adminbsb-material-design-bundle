@@ -19,9 +19,8 @@ use WBW\Bundle\AdminBSBBundle\Tests\AbstractFrameworkTestCase;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\Bootstrap\Theme
- * @final
  */
-final class DefaultBreadcrumbsThemeProviderTest extends AbstractFrameworkTestCase {
+class DefaultBreadcrumbsThemeProviderTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the __construct() method.

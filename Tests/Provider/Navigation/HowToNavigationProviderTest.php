@@ -21,9 +21,8 @@ use WBW\Bundle\BootstrapBundle\Navigation\BreadcrumbNode;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\Navigation
- * @final
  */
-final class HowToNavigationProviderTest extends AbstractFrameworkTestCase {
+class HowToNavigationProviderTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the getBreadcrumb() method.
