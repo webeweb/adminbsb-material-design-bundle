@@ -33,9 +33,8 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget\CardTwigExtension;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests\DependencyInjection
- * @final
  */
-final class AdminBSBExtensionTest extends AbstractFrameworkTestCase {
+class AdminBSBExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * {@inheritdoc}
