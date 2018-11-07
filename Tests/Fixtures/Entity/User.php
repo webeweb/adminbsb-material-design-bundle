@@ -18,7 +18,6 @@ use FOS\UserBundle\Model\User as BaseUser;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Fixtures\Entity
- * @final
  */
 class User extends BaseUser {
 

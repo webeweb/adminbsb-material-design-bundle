@@ -19,9 +19,8 @@ use WBW\Bundle\AdminBSBBundle\Controller\AbstractAdminBSBController;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Fixtures\Controller
- * @final
  */
-final class TestLayoutController extends AbstractAdminBSBController {
+class TestLayoutController extends AbstractAdminBSBController {
 
     /**
      * Displays a blank page.
