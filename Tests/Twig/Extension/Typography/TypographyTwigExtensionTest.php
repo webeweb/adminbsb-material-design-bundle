@@ -21,9 +21,8 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\TypographyTwigExtension;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Typography
- * @final
  */
-final class TypographyTwigExtensionTest extends AbstractFrameworkTestCase {
+class TypographyTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the getFunctions() method.

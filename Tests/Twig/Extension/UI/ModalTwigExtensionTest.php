@@ -21,9 +21,8 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ModalTwigExtension;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\UI
- * @final
  */
-final class ModalTwigExtensionTest extends AbstractFrameworkTestCase {
+class ModalTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the getFunctions() method.

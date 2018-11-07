@@ -22,9 +22,8 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ButtonTwigExtension;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\UI
- * @final
  */
-final class ButtonTwigExtensionTest extends AbstractFrameworkTestCase {
+class ButtonTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the getFilters() method.

@@ -21,9 +21,8 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\PreloaderTwigExtension;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\UI
- * @final
  */
-final class PreloaderTwigExtensionTest extends AbstractFrameworkTestCase {
+class PreloaderTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the getFunctions() method.

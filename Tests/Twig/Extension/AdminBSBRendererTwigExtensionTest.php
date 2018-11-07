@@ -19,9 +19,8 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\AdminBSBRendererTwigExtension;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension
- * @final
  */
-final class AdminBSBRendererTwigExtensionTest extends AbstractFrameworkTestCase {
+class AdminBSBRendererTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the renderIcon() method.

@@ -22,9 +22,8 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Widget
- * @final
  */
-final class CardTwigExtensionTest extends AbstractFrameworkTestCase {
+class CardTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * Typography.

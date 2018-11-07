@@ -21,9 +21,8 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Plugin\DatetimePickerTwigExtension;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Plugin
- * @final
  */
-final class DatetimePickerTwigExtensionTest extends AbstractFrameworkTestCase {
+class DatetimePickerTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * {@inheritdoc}
