@@ -120,7 +120,7 @@ stable version of this package:
 ```bash
 $ mkdir adminbsb-material-design-bundle
 $ cd adminbsb-material-design-bundle
-$ git clone git@github.com:webeweb/adminbsb-material-design-bundle.git .
+$ git clone https://github.com/webeweb/adminbsb-material-design-bundle.git .
 $ composer install
 ```
 
