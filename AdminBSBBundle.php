@@ -12,6 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
+use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
 
 /**
  * AdminBSB bundle.
@@ -19,6 +20,13 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBMaterialDesignBundle
  */
-class AdminBSBBundle extends Bundle {
+class AdminBSBBundle extends Bundle implements AssetsProviderInterface {
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getAssetsRelativeDirectory() {
+        return "/Resources/assets";
+    }
 
 }
