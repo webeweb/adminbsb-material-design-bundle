@@ -11,43 +11,14 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Tests;
 
-use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
-use TestKernel;
+use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase as WebTestCase;
 
 /**
- * Abstract AdminBSB web test case.
+ * Abstract web test case.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests
  */
 abstract class AbstractWebTestCase extends WebTestCase {
-
-    /**
-     * {@inheritdoc}
-     */
-    protected static function getKernelClass() {
-        require_once __DIR__ . "/Fixtures/app/TestKernel.php";
-        return TestKernel::class;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public static function setUpBeforeClass() {
-        parent::setUpBeforeClass();
-
-        // Initialize and boot the kernel.
-        static::$kernel = static::createKernel();
-        static::$kernel->boot();
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    protected function tearDown() {
-
-        // Shutdown the kernel.
-        static::$kernel->shutdown();
-    }
 
 }
