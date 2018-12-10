@@ -18,7 +18,7 @@ use WBW\Library\Core\FileSystem\FileHelper;
 /**
  * View helper test.
  *
- * @author Camille A. <camille@ingeneo.eu>
+ * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Helper
  */
 class ViewHelperTest extends AbstractFrameworkTestCase {
