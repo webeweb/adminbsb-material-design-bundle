@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\Navigation;
 
 use Symfony\Component\Routing\RouterInterface;
 use WBW\Bundle\AdminBSBBundle\Provider\Navigation\HowToNavigationProvider;
-use WBW\Bundle\AdminBSBBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Navigation\BreadcrumbNode;
 
 /**
@@ -22,7 +22,7 @@ use WBW\Bundle\BootstrapBundle\Navigation\BreadcrumbNode;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\Navigation
  */
-class HowToNavigationProviderTest extends AbstractFrameworkTestCase {
+class HowToNavigationProviderTest extends AbstractTestCase {
 
     /**
      * Tests the getBreadcrumb() method.

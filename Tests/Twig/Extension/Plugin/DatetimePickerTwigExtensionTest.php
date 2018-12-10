@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Plugin;
 
 use Twig_Node;
 use Twig_SimpleFunction;
-use WBW\Bundle\AdminBSBBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Plugin\DatetimePickerTwigExtension;
 
 /**
@@ -22,7 +22,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Plugin\DatetimePickerTwigExtension;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Plugin
  */
-class DatetimePickerTwigExtensionTest extends AbstractFrameworkTestCase {
+class DatetimePickerTwigExtensionTest extends AbstractTestCase {
 
     /**
      * {@inheritdoc}

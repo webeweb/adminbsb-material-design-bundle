@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Tests\Helper;
 
-use WBW\Bundle\AdminBSBBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Helper\TestAssetsHelper;
 
 /**
@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Helper\TestAssetsHelper;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Helper
  */
-class AssetsHelperTest extends AbstractFrameworkTestCase {
+class AssetsHelperTest extends AbstractTestCase {
 
     /**
      * Directory "assets".

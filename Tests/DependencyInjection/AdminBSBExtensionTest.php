@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Tests\DependencyInjection;
 
 use WBW\Bundle\AdminBSBBundle\DependencyInjection\AdminBSBExtension;
-use WBW\Bundle\AdminBSBBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\CheckboxTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\RadioButtonTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\SwitchButtonTwigExtension;
@@ -34,7 +34,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget\CardTwigExtension;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests\DependencyInjection
  */
-class AdminBSBExtensionTest extends AbstractFrameworkTestCase {
+class AdminBSBExtensionTest extends AbstractTestCase {
 
     /**
      * {@inheritdoc}

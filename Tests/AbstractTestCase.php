@@ -14,12 +14,12 @@ namespace WBW\Bundle\AdminBSBBundle\Tests;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase as TestCase;
 
 /**
- * Abstract AdminBSB framework test case.
+ * Abstract test case.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests
  * @abstract
  */
-abstract class AbstractFrameworkTestCase extends TestCase {
+abstract class AbstractTestCase extends TestCase {
 
 }

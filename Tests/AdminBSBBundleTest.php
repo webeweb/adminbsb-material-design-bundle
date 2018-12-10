@@ -19,7 +19,7 @@ use WBW\Bundle\AdminBSBBundle\AdminBSBBundle;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests
  */
-class AdminBSBBundleTest extends AbstractFrameworkTestCase {
+class AdminBSBBundleTest extends AbstractTestCase {
 
     /**
      * Tests the getAssetsRelativeDirectory() method.

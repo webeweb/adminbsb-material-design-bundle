@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\Bootstrap\Theme;
 
 use WBW\Bundle\AdminBSBBundle\Provider\Bootstrap\Theme\DefaultHookDropDownThemeProvider;
-use WBW\Bundle\AdminBSBBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 
 /**
  * Default hook drop down theme provider test.
@@ -20,7 +20,7 @@ use WBW\Bundle\AdminBSBBundle\Tests\AbstractFrameworkTestCase;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\Bootstrap\Theme
  */
-class DefaultHookDropDownThemeProviderTest extends AbstractFrameworkTestCase {
+class DefaultHookDropDownThemeProviderTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\Color;
 
 use WBW\Bundle\AdminBSBBundle\Provider\Color\DefaultColorProvider;
-use WBW\Bundle\AdminBSBBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 
 /**
  * Default color provider test.
@@ -20,7 +20,7 @@ use WBW\Bundle\AdminBSBBundle\Tests\AbstractFrameworkTestCase;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\Color
  */
-class DefaultColorProviderTest extends AbstractFrameworkTestCase {
+class DefaultColorProviderTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

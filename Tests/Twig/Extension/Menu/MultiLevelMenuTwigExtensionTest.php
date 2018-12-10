@@ -14,7 +14,7 @@ namespace WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Menu;
 use Symfony\Component\HttpFoundation\Request;
 use Twig_Node;
 use Twig_SimpleFunction;
-use WBW\Bundle\AdminBSBBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Menu\MultiLevelMenuTwigExtension;
 use WBW\Bundle\BootstrapBundle\Navigation\BreadcrumbNode;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationNode;
@@ -26,7 +26,7 @@ use WBW\Bundle\BootstrapBundle\Navigation\NavigationTree;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Menu
  */
-class MultiLevelMenuTwigExtensionTest extends AbstractFrameworkTestCase {
+class MultiLevelMenuTwigExtensionTest extends AbstractTestCase {
 
     /**
      * Navigation tree.

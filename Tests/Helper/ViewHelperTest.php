@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Tests\Helper;
 
 use WBW\Bundle\AdminBSBBundle\Helper\ViewHelper;
-use WBW\Bundle\AdminBSBBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 use WBW\Library\Core\FileSystem\FileHelper;
 
 /**
@@ -21,7 +21,7 @@ use WBW\Library\Core\FileSystem\FileHelper;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Helper
  */
-class ViewHelperTest extends AbstractFrameworkTestCase {
+class ViewHelperTest extends AbstractTestCase {
 
     /**
      * Filename.

@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Widget;
 
 use Twig_Node;
 use Twig_SimpleFunction;
-use WBW\Bundle\AdminBSBBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget\CardTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension;
 
@@ -23,7 +23,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Widget
  */
-class CardTwigExtensionTest extends AbstractFrameworkTestCase {
+class CardTwigExtensionTest extends AbstractTestCase {
 
     /**
      * Typography.
