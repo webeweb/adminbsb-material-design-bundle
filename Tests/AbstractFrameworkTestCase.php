@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Tests;
 
-use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase as BaseFrameworkTest;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase as TestCase;
 
 /**
  * Abstract AdminBSB framework test case.
@@ -20,6 +20,6 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase as BaseFrameworkT
  * @package WBW\Bundle\AdminBSBBundle\Tests
  * @abstract
  */
-abstract class AbstractFrameworkTestCase extends BaseFrameworkTest {
+abstract class AbstractFrameworkTestCase extends TestCase {
 
 }
