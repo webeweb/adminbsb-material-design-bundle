@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the adminbsb-material-design-bundle ackage.
  *
  * (c) 2018 WEBEWEB
