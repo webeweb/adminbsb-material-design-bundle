@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension;
 
+use Twig_Environment;
 use WBW\Bundle\AdminBSBBundle\Provider\Color\DefaultColorProvider;
 use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension as BaseTwigExtension;
 
@@ -25,9 +26,11 @@ abstract class AbstractTwigExtension extends BaseTwigExtension {
 
     /**
      * Constructor.
+     *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      */
-    protected function __construct() {
-        // NOTHING TO DO.
+    protected function __construct(Twig_Environment $twigEnvironment) {
+        parent::__construct($twigEnvironment);
     }
 
     /**
