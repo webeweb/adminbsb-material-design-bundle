@@ -28,7 +28,7 @@ class BreadcrumbNodeActionImport extends BreadcrumbNode {
      * @param string $matcher The matcher.
      */
     public function __construct($route = null, $matcher = self::NAVIGATION_MATCHER_URL) {
-        parent::__construct("navigation.node.action.import", "mi:save", $route, $matcher);
+        parent::__construct("navigation.node.action.import", "mi:file_upload", $route, $matcher);
     }
 
 }
