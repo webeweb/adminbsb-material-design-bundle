@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Form;
 
+use Twig_Environment;
 use Twig_SimpleFunction;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
 use WBW\Library\Core\Argument\ArrayHelper;
 
 /**
@@ -32,9 +32,11 @@ class CheckboxTwigExtension extends AbstractCheckboxTwigExtension {
 
     /**
      * Constructor.
+     *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      */
-    public function __construct() {
-        parent::__construct();
+    public function __construct(Twig_Environment $twigEnvironment) {
+        parent::__construct($twigEnvironment);
     }
 
     /**
@@ -54,7 +56,7 @@ class CheckboxTwigExtension extends AbstractCheckboxTwigExtension {
      * @return string Returns the AdminBSB checkbox "Material design".
      */
     public function adminBSBCheckboxMaterialDesignFunction(array $args = []) {
-        return $this->adminBSBCheckbox(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "name"), ArrayHelper::get($args, "id"), ArrayHelper::get($args, "checked", false), ArrayHelper::get($args, "disabled", false), ArrayHelper::get($args, "filledIn", false), ArrayHelper::get($args, "class", "") . AbstractAdminBSBTwigExtension::fixColor(ArrayHelper::get($args, "color", "red"), " chk-col-"));
+        return $this->adminBSBCheckbox(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "name"), ArrayHelper::get($args, "id"), ArrayHelper::get($args, "checked", false), ArrayHelper::get($args, "disabled", false), ArrayHelper::get($args, "filledIn", false), ArrayHelper::get($args, "class", "") . self::fixColor(ArrayHelper::get($args, "color", "red"), " chk-col-"));
     }
 
     /**
