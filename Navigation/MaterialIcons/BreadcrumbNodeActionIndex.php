@@ -28,7 +28,7 @@ class BreadcrumbNodeActionIndex extends BreadcrumbNode {
      * @param string $matcher The matcher.
      */
     public function __construct($route = null, $matcher = self::NAVIGATION_MATCHER_URL) {
-        parent::__construct("navigation.node.action.index", "mi:list", $route, $matcher);
+        parent::__construct("navigation.node.action.index", "mi:view_list", $route, $matcher);
     }
 
 }

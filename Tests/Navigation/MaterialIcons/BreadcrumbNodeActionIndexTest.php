@@ -33,7 +33,7 @@ class BreadcrumbNodeActionIndexTest extends AbstractTestCase {
         $obj = new BreadcrumbNodeActionIndex("route");
 
         $this->assertEquals("navigation.node.action.index", $obj->getId());
-        $this->assertEquals("mi:list", $obj->getIcon());
+        $this->assertEquals("mi:view_list", $obj->getIcon());
         $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_URL, $obj->getMatcher());
         $this->assertEquals("route", $obj->getUri());
     }
