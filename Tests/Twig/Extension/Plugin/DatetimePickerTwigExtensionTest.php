@@ -25,6 +25,19 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Plugin\DatetimePickerTwigExtension;
 class DatetimePickerTwigExtensionTest extends AbstractTestCase {
 
     /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
+
+        $obj = new DatetimePickerTwigExtension($this->twigEnvironment, $this->translator);
+
+        $this->assertEquals("webeweb.adminbsb.twig.extension.plugin.datetime_picker", DatetimePickerTwigExtension::SERVICE_NAME);
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
+    }
+
+    /**
      * Tests the getFunctions() method.
      *
      * @return void
