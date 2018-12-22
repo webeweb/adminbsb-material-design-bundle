@@ -40,7 +40,7 @@ trait DatetimePickerTwigExtensionTrait {
      *
      * @param DatetimePickerTwigExtension $datetimePickerTwigExtension The datetime picker Twig extension.
      */
-    protected function setDatetimePickerTwigExtension(DatetimePickerTwigExtension $datetimePickerTwigExtension) {
+    protected function setDatetimePickerTwigExtension(DatetimePickerTwigExtension $datetimePickerTwigExtension = null) {
         $this->datetimePickerTwigExtension = $datetimePickerTwigExtension;
         return $this;
     }
