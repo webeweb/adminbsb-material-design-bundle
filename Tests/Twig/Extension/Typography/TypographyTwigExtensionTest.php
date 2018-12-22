@@ -25,16 +25,28 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\TypographyTwigExtension;
 class TypographyTwigExtensionTest extends AbstractTestCase {
 
     /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $this->assertEquals("webeweb.adminbsb.twig.extension.typography", TypographyTwigExtension::SERVICE_NAME);
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
+    }
+
+    /**
      * Tests the getFunctions() method.
      *
      * @return void
      */
     public function testGetFunctions() {
 
-        $obj = new TypographyTwigExtension();
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
-
         $this->assertCount(5, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
@@ -67,95 +79,140 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      * Tests the adminBSBBoldFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testAdminBSBBoldFunction() {
 
-        $obj = new TypographyTwigExtension();
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
 
-        $arg0 = [];
-        $res0 = '<span class="font-bold"></span>';
-        $this->assertEquals($res0, $obj->adminBSBBoldFunction($arg0));
+        $arg = ["content" => "content"];
+        $res = '<span class="font-bold">content</span>';
+        $this->assertEquals($res, $obj->adminBSBBoldFunction($arg));
+    }
 
-        $arg9 = ["content" => "content"];
-        $res9 = '<span class="font-bold">content</span>';
-        $this->assertEquals($res9, $obj->adminBSBBoldFunction($arg9));
+    /**
+     * Tests the adminBSBBoldFunction() method.
+     *
+     * @return void
+     */
+    public function testAdminBSBBoldFunctionWithoutArguments() {
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = '<span class="font-bold"></span>';
+        $this->assertEquals($res, $obj->adminBSBBoldFunction($arg));
     }
 
     /**
      * Tests the adminBSBItalicFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testAdminBSBItalicFunction() {
 
-        $obj = new TypographyTwigExtension();
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
 
-        $arg0 = [];
-        $res0 = '<span class="font-italic"></span>';
-        $this->assertEquals($res0, $obj->adminBSBItalicFunction($arg0));
+        $arg = ["content" => "content"];
+        $res = '<span class="font-italic">content</span>';
+        $this->assertEquals($res, $obj->adminBSBItalicFunction($arg));
+    }
 
-        $arg9 = ["content" => "content"];
-        $res9 = '<span class="font-italic">content</span>';
-        $this->assertEquals($res9, $obj->adminBSBItalicFunction($arg9));
+    /**
+     * Tests the adminBSBItalicFunction() method.
+     *
+     * @return void
+     */
+    public function testAdminBSBItalicFunctionWithoutArguments() {
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = '<span class="font-italic"></span>';
+        $this->assertEquals($res, $obj->adminBSBItalicFunction($arg));
     }
 
     /**
      * Tests the adminBSBOverlineFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testAdminBSBOverlineFunction() {
 
-        $obj = new TypographyTwigExtension();
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
 
-        $arg0 = [];
-        $res0 = '<span class="font-overline"></span>';
-        $this->assertEquals($res0, $obj->adminBSBOverlineFunction($arg0));
+        $arg = ["content" => "content"];
+        $res = '<span class="font-overline">content</span>';
+        $this->assertEquals($res, $obj->adminBSBOverlineFunction($arg));
+    }
 
-        $arg9 = ["content" => "content"];
-        $res9 = '<span class="font-overline">content</span>';
-        $this->assertEquals($res9, $obj->adminBSBOverlineFunction($arg9));
+    /**
+     * Tests the adminBSBOverlineFunction() method.
+     *
+     * @return void
+     */
+    public function testAdminBSBOverlineFunctionWithoutArguments() {
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = '<span class="font-overline"></span>';
+        $this->assertEquals($res, $obj->adminBSBOverlineFunction($arg));
     }
 
     /**
      * Tests the adminBSBLineThroughFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testAdminBSBLineThroughFunction() {
 
-        $obj = new TypographyTwigExtension();
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
 
-        $arg0 = [];
-        $res0 = '<span class="font-line-through"></span>';
-        $this->assertEquals($res0, $obj->adminBSBLineThroughFunction($arg0));
+        $arg = ["content" => "content"];
+        $res = '<span class="font-line-through">content</span>';
+        $this->assertEquals($res, $obj->adminBSBLineThroughFunction($arg));
+    }
 
-        $arg9 = ["content" => "content"];
-        $res9 = '<span class="font-line-through">content</span>';
-        $this->assertEquals($res9, $obj->adminBSBLineThroughFunction($arg9));
+    /**
+     * Tests the adminBSBLineThroughFunction() method.
+     *
+     * @return void
+     */
+    public function testAdminBSBLineThroughFunctionWithoutArguments() {
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = '<span class="font-line-through"></span>';
+        $this->assertEquals($res, $obj->adminBSBLineThroughFunction($arg));
     }
 
     /**
      * Tests the adminBSBUnderlineFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testAdminBSBUnderlineFunction() {
 
-        $obj = new TypographyTwigExtension();
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
 
-        $arg0 = [];
-        $res0 = '<span class="font-underline"></span>';
-        $this->assertEquals($res0, $obj->adminBSBUnderlineFunction($arg0));
+        $arg = ["content" => "content"];
+        $res = '<span class="font-underline">content</span>';
+        $this->assertEquals($res, $obj->adminBSBUnderlineFunction($arg));
+    }
 
-        $arg9 = ["content" => "content"];
-        $res9 = '<span class="font-underline">content</span>';
-        $this->assertEquals($res9, $obj->adminBSBUnderlineFunction($arg9));
+    /**
+     * Tests the adminBSBUnderlineFunction() method.
+     *
+     * @return void
+     */
+    public function testAdminBSBUnderlineFunctionWithoutArguments() {
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = '<span class="font-underline"></span>';
+        $this->assertEquals($res, $obj->adminBSBUnderlineFunction($arg));
     }
 
 }

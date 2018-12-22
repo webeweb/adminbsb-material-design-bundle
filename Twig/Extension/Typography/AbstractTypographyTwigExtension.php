@@ -11,7 +11,8 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography;
 
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
+use Twig_Environment;
+use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
 
 /**
  * Abstract typography Twig extension.
@@ -20,13 +21,15 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography
  * @abstract
  */
-abstract class AbstractTypographyTwigExtension extends AbstractAdminBSBTwigExtension {
+abstract class AbstractTypographyTwigExtension extends AbstractTwigExtension {
 
     /**
      * Constructor.
+     *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      */
-    protected function __construct() {
-        parent::__construct();
+    protected function __construct(Twig_Environment $twigEnvironment) {
+        parent::__construct($twigEnvironment);
     }
 
     /**
@@ -36,7 +39,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractAdminBSBTwigExten
      * @return string Returns the AdminBSB bold text.
      */
     protected function adminBSBBold($content) {
-        return self::bootstrapHTMLElement("span", $content, ["class" => "font-bold"]);
+        return static::coreHTMLElement("span", $content, ["class" => "font-bold"]);
     }
 
     /**
@@ -46,7 +49,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractAdminBSBTwigExten
      * @return string Returns the AdminBSB italic text.
      */
     protected function adminBSBItalic($content) {
-        return self::bootstrapHTMLElement("span", $content, ["class" => "font-italic"]);
+        return static::coreHTMLElement("span", $content, ["class" => "font-italic"]);
     }
 
     /**
@@ -56,7 +59,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractAdminBSBTwigExten
      * @return string Returns the AdminBSB line through text.
      */
     protected function adminBSBLineThrough($content) {
-        return self::bootstrapHTMLElement("span", $content, ["class" => "font-line-through"]);
+        return static::coreHTMLElement("span", $content, ["class" => "font-line-through"]);
     }
 
     /**
@@ -66,7 +69,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractAdminBSBTwigExten
      * @return string Returns the AdminBSB overlined text.
      */
     protected function adminBSBOverline($content) {
-        return self::bootstrapHTMLElement("span", $content, ["class" => "font-overline"]);
+        return static::coreHTMLElement("span", $content, ["class" => "font-overline"]);
     }
 
     /**
@@ -76,7 +79,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractAdminBSBTwigExten
      * @return string Returns the AdminBSB underlined text.
      */
     protected function adminBSBUnderline($content) {
-        return self::bootstrapHTMLElement("span", $content, ["class" => "font-underline"]);
+        return static::coreHTMLElement("span", $content, ["class" => "font-underline"]);
     }
 
 }
