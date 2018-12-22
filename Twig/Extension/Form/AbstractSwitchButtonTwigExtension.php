@@ -11,7 +11,8 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Form;
 
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
+use Twig_Environment;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Library\Core\Argument\StringHelper;
 
 /**
@@ -21,13 +22,15 @@ use WBW\Library\Core\Argument\StringHelper;
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\Form
  * @abstract
  */
-abstract class AbstractSwitchButtonTwigExtension extends AbstractAdminBSBTwigExtension {
+abstract class AbstractSwitchButtonTwigExtension extends AbstractTwigExtension {
 
     /**
      * Constructor.
+     *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      */
-    protected function __construct() {
-        parent::__construct();
+    protected function __construct(Twig_Environment $twigEnvironment) {
+        parent::__construct($twigEnvironment);
     }
 
     /**
@@ -59,12 +62,12 @@ abstract class AbstractSwitchButtonTwigExtension extends AbstractAdminBSBTwigExt
         $lLabel = null !== $offLabel ? $offLabel : "";
         $rLabel = null !== $onLabel ? $onLabel : "";
 
-        $span  = self::bootstrapHTMLElement("span", null, ["class" => ["lever", $class]]);
+        $span  = static::coreHTMLElement("span", null, ["class" => ["lever", $class]]);
         $input = StringHelper::replace($template, ["%attributes%", "%innerHTML%"], [StringHelper::parseArray($attributes), $span]);
-        $label = self::bootstrapHTMLElement("label", $lLabel . $input . $rLabel);
+        $label = static::coreHTMLElement("label", $lLabel . $input . $rLabel);
 
         // Return the HTML.
-        return self::bootstrapHTMLElement("div", $label, ["class" => "switch"]);
+        return static::coreHTMLElement("div", $label, ["class" => "switch"]);
     }
 
 }

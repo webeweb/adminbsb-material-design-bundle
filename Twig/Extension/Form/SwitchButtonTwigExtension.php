@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Form;
 
+use Twig_Environment;
 use Twig_SimpleFunction;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
 use WBW\Library\Core\Argument\ArrayHelper;
@@ -28,13 +29,15 @@ class SwitchButtonTwigExtension extends AbstractSwitchButtonTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.adminbsb.twig.extension.form.switchbutton";
+    const SERVICE_NAME = "webeweb.adminbsb.twig.extension.form.switch_button";
 
     /**
      * Constructor.
+     *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      */
-    public function __construct() {
-        parent::__construct();
+    public function __construct(Twig_Environment $twigEnvironment) {
+        parent::__construct($twigEnvironment);
     }
 
     /**
@@ -54,7 +57,7 @@ class SwitchButtonTwigExtension extends AbstractSwitchButtonTwigExtension {
      * @return string Returns the AdminBSB switch button "Material design".
      */
     public function adminBSBSwitchButtonMaterialDesignFunction(array $args = []) {
-        return $this->adminBSBSwitchButton(ArrayHelper::get($args, "offLabel"), ArrayHelper::get($args, "name"), ArrayHelper::get($args, "checked", false), ArrayHelper::get($args, "disabled", false), ArrayHelper::get($args, "onLabel"), ArrayHelper::get($args, "attr", []), AbstractAdminBSBTwigExtension::fixColor(ArrayHelper::get($args, "color", "red"), " switch-col-"));
+        return $this->adminBSBSwitchButton(ArrayHelper::get($args, "offLabel"), ArrayHelper::get($args, "name"), ArrayHelper::get($args, "checked", false), ArrayHelper::get($args, "disabled", false), ArrayHelper::get($args, "onLabel"), ArrayHelper::get($args, "attr", []), self::fixColor(ArrayHelper::get($args, "color", "red"), " switch-col-"));
     }
 
     /**
