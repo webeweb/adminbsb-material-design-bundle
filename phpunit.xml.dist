@@ -29,7 +29,6 @@
             <exclude>Tests/Helper/</exclude>
             <exclude>Tests/Provider/</exclude>
             <exclude>Tests/Twig/Extension/AdminBSBRendererTwigExtensionTest.php</exclude>
-            <exclude>Tests/Twig/Extension/Form/</exclude>
             <exclude>Tests/Twig/Extension/Menu/</exclude>
             <exclude>Tests/Twig/Extension/UI/</exclude>
             <exclude>Tests/Twig/Extension/Widget/</exclude>
