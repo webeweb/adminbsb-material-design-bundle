@@ -40,7 +40,7 @@ trait TypographyTwigExtensionTrait {
      *
      * @param TypographyTwigExtension $typographyTwigExtension The typography Twig extension.
      */
-    protected function setTypographyTwigExtension(TypographyTwigExtension $typographyTwigExtension) {
+    protected function setTypographyTwigExtension(TypographyTwigExtension $typographyTwigExtension = null) {
         $this->typographyTwigExtension = $typographyTwigExtension;
         return $this;
     }
