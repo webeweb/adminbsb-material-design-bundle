@@ -12,16 +12,16 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension;
 
 use WBW\Bundle\AdminBSBBundle\Provider\Color\DefaultColorProvider;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
+use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension as BaseTwigExtension;
 
 /**
- * Abstract AdminBSB Twig extension.
+ * Abstract Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension
  * @abstract
  */
-abstract class AbstractAdminBSBTwigExtension extends AbstractBootstrapTwigExtension {
+abstract class AbstractTwigExtension extends BaseTwigExtension {
 
     /**
      * Constructor.
