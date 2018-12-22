@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Twig\Extension\Form;
+namespace WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Form;
 
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 use WBW\Bundle\AdminBSBBundle\Tests\Fixtures\Twig\Extension\Form\TestCheckboxTwigExtensionTrait;
@@ -19,7 +19,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\CheckboxTwigExtension;
  * Checkbox Twig extension trait test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package Twig\Extension\Form
+ * @package WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Form
  */
 class CheckboxTwigExtensionTraitTest extends AbstractTestCase {
 
