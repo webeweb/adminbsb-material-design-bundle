@@ -42,7 +42,7 @@ class DatetimePickerTwigExtensionTraitTest extends AbstractTestCase {
      */
     public function testSetDatetimePickerTwigExtension() {
 
-        // Set a Datetime picket Twig extension mock.
+        // Set a Datetime picker Twig extension mock.
         $datetimePickerTwigExtension = new DatetimePickerTwigExtension($this->twigEnvironment, $this->translator);
 
         $obj = new TestDatetimePickerTwigExtensionTrait();
