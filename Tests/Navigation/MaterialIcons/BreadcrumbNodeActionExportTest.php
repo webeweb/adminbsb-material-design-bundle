@@ -33,7 +33,7 @@ class BreadcrumbNodeActionExportTest extends AbstractTestCase {
         $obj = new BreadcrumbNodeActionExport("route");
 
         $this->assertEquals("navigation.node.action.export", $obj->getId());
-        $this->assertEquals("mi:open", $obj->getIcon());
+        $this->assertEquals("mi:file_download", $obj->getIcon());
         $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_URL, $obj->getMatcher());
         $this->assertEquals("route", $obj->getUri());
     }

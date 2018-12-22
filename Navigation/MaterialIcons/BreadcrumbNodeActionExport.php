@@ -28,7 +28,7 @@ class BreadcrumbNodeActionExport extends BreadcrumbNode {
      * @param string $matcher The matcher.
      */
     public function __construct($route = null, $matcher = self::NAVIGATION_MATCHER_URL) {
-        parent::__construct("navigation.node.action.export", "mi:open", $route, $matcher);
+        parent::__construct("navigation.node.action.export", "mi:file_download", $route, $matcher);
     }
 
 }
