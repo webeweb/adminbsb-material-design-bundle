@@ -12,6 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Plugin;
 
 use Symfony\Component\Translation\TranslatorInterface;
+use Twig_Environment;
 use Twig_SimpleFunction;
 use WBW\Library\Core\Argument\ArrayHelper;
 
@@ -33,10 +34,11 @@ class DatetimePickerTwigExtension extends AbstractDatetimePickerTwigExtension {
     /**
      * Constructor.
      *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      * @param TranslatorInterface $translator The translator.
      */
-    public function __construct(TranslatorInterface $translator) {
-        parent::__construct($translator);
+    public function __construct(Twig_Environment $twigEnvironment, TranslatorInterface $translator) {
+        parent::__construct($twigEnvironment, $translator);
     }
 
     /**

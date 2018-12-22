@@ -12,7 +12,9 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Plugin;
 
 use Symfony\Component\Translation\TranslatorInterface;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
+use Twig_Environment;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
+use WBW\Bundle\CoreBundle\Service\TranslatorTrait;
 use WBW\Library\Core\Argument\StringHelper;
 
 /**
@@ -22,25 +24,27 @@ use WBW\Library\Core\Argument\StringHelper;
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\Plugin
  * @abstract
  */
-abstract class AbstractDatetimePickerTwigExtension extends AbstractAdminBSBTwigExtension {
+abstract class AbstractDatetimePickerTwigExtension extends AbstractTwigExtension {
+
+    use TranslatorTrait;
 
     /**
      * Datetime picker.
      *
      * @var string
      */
-    const DATETIMEPICKER = <<<'EOT'
+    const DATETIMEPICKER = <<< EOT
 <script type="text/javascript">
-	$("%selector%").bootstrapMaterialDatePicker({
-		cancelText: "%cancelText%",
-		clearButton: %clearButton%,
-		clearText: "%clearText%",
-		date: %date%,
-		format: "%format%",
-		lang: "%lang%",
-		time: %time%,
-		weekStart: %weekStart%
-	});
+    $("%selector%").bootstrapMaterialDatePicker({
+        cancelText: "%cancelText%",
+        clearButton: %clearButton%,
+        clearText: "%clearText%",
+        date: %date%,
+        format: "%format%",
+        lang: "%lang%",
+        time: %time%,
+        weekStart: %weekStart%
+    });
 </script>
 EOT;
 
@@ -66,16 +70,13 @@ EOT;
     const DEFAULT_TIME_FORMAT = "HH:mm";
 
     /**
-     * Translator.
-     *
-     * @var TranslatorInterface
-     */
-    private $translator;
-
-    /**
      * Constructor.
+     *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
+     * @param TranslatorInterface $translator The translator.
      */
-    protected function __construct(TranslatorInterface $translator) {
+    protected function __construct(Twig_Environment $twigEnvironment, TranslatorInterface $translator) {
+        parent::__construct($twigEnvironment);
         $this->setTranslator($translator);
     }
 
@@ -110,26 +111,6 @@ EOT;
 
         // Return the HTML.
         return StringHelper::replace(self::DATETIMEPICKER, $searches, $replaces);
-    }
-
-    /**
-     * Get the translator.
-     *
-     * @return TranslatorInterface Returns the translator.
-     */
-    public function getTranslator() {
-        return $this->translator;
-    }
-
-    /**
-     * Set the translator.
-     *
-     * @param TranslatorInterface $translator The translator.
-     * @return AbstractDatetimePickerTwigExtension Returns this Datetime picker Twig extension.
-     */
-    protected function setTranslator(TranslatorInterface $translator) {
-        $this->translator = $translator;
-        return $this;
     }
 
 }
