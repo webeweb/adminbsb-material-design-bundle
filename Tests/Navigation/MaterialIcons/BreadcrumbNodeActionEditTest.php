@@ -33,7 +33,7 @@ class BreadcrumbNodeActionEditTest extends AbstractTestCase {
         $obj = new BreadcrumbNodeActionEdit("route");
 
         $this->assertEquals("navigation.node.action.edit", $obj->getId());
-        $this->assertEquals("mi:pencil", $obj->getIcon());
+        $this->assertEquals("mi:edit", $obj->getIcon());
         $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_URL, $obj->getMatcher());
         $this->assertEquals("route", $obj->getUri());
     }
