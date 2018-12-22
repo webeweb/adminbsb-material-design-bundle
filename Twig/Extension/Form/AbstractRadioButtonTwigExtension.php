@@ -11,7 +11,8 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Form;
 
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
+use Twig_Environment;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Library\Core\Argument\StringHelper;
 
 /**
@@ -21,13 +22,15 @@ use WBW\Library\Core\Argument\StringHelper;
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\Form
  * @abstract
  */
-abstract class AbstractRadioButtonTwigExtension extends AbstractAdminBSBTwigExtension {
+abstract class AbstractRadioButtonTwigExtension extends AbstractTwigExtension {
 
     /**
      * Constructor.
+     *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      */
-    protected function __construct() {
-        parent::__construct();
+    protected function __construct(Twig_Environment $twigEnvironment) {
+        parent::__construct($twigEnvironment);
     }
 
     /**
@@ -58,7 +61,7 @@ abstract class AbstractRadioButtonTwigExtension extends AbstractAdminBSBTwigExte
         $attributes["disabled"] = true === $disabled ? "disabled" : null;
 
         // Check the parameters.
-        $innerHTML = self::bootstrapHTMLElement("label", $content, ["for" => $attributes["id"]]);
+        $innerHTML = static::coreHTMLElement("label", $content, ["for" => $attributes["id"]]);
 
         // Return the HTML.
         return StringHelper::replace($template, ["%attributes%", "%innerHTML%"], [StringHelper::parseArray($attributes), $innerHTML]);

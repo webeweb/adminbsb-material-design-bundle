@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Form;
 
+use Twig_Environment;
 use Twig_SimpleFunction;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
 use WBW\Library\Core\Argument\ArrayHelper;
@@ -28,13 +29,15 @@ class RadioButtonTwigExtension extends AbstractRadioButtonTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.adminbsb.twig.extension.form.radiobutton";
+    const SERVICE_NAME = "webeweb.adminbsb.twig.extension.form.radio_button";
 
     /**
      * Constructor.
+     *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      */
-    public function __construct() {
-        parent::__construct();
+    public function __construct(Twig_Environment $twigEnvironment) {
+        parent::__construct($twigEnvironment);
     }
 
     /**
@@ -54,7 +57,7 @@ class RadioButtonTwigExtension extends AbstractRadioButtonTwigExtension {
      * @return string Returns the AdminBSB radio button "Material design".
      */
     public function adminBSBRadioButtonMaterialDesignFunction(array $args = []) {
-        return $this->adminBSBRadioButton(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "name"), ArrayHelper::get($args, "id"), ArrayHelper::get($args, "checked", false), ArrayHelper::get($args, "disabled", false), ArrayHelper::get($args, "withGap", false), ArrayHelper::get($args, "class", "") . AbstractAdminBSBTwigExtension::fixColor(ArrayHelper::get($args, "color", "red"), " radio-col-"));
+        return $this->adminBSBRadioButton(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "name"), ArrayHelper::get($args, "id"), ArrayHelper::get($args, "checked", false), ArrayHelper::get($args, "disabled", false), ArrayHelper::get($args, "withGap", false), ArrayHelper::get($args, "class", "") . self::fixColor(ArrayHelper::get($args, "color", "red"), " radio-col-"));
     }
 
     /**
