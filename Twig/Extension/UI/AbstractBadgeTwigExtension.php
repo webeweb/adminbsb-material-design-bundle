@@ -11,7 +11,8 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
+use Twig_Environment;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Library\Core\Argument\StringHelper;
 
 /**
@@ -21,13 +22,15 @@ use WBW\Library\Core\Argument\StringHelper;
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\UI
  * @abstract
  */
-abstract class AbstractBadgeTwigExtension extends AbstractAdminBSBTwigExtension {
+abstract class AbstractBadgeTwigExtension extends AbstractTwigExtension {
 
     /**
      * Constructor.
+     *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      */
-    protected function __construct() {
-        parent::__construct();
+    protected function __construct(Twig_Environment $twigEnvironment) {
+        parent::__construct($twigEnvironment);
     }
 
     /**
@@ -41,7 +44,7 @@ abstract class AbstractBadgeTwigExtension extends AbstractAdminBSBTwigExtension 
      * @param string $link The link.
      * @return string Returns the AdminBSB badge.
      */
-    protected function adminBSBBadge($content, $label, $large, $class, $list = false, $link = false) {
+    protected function adminBSBBadge($content, $label, $large, $class, $list = false, $link = null) {
 
         // Initialize the template.
         $template = '<button %attributes%>%innerHTML%<span class="badge">%label%</span></button>';
