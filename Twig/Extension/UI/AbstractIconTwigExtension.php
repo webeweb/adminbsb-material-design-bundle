@@ -11,22 +11,25 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
+use Twig_Environment;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
 
 /**
- * AbstractIconTwigExtension.
+ * Abstract Icon Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\UI
  * @abstract
  */
-abstract class AbstractIconTwigExtension extends AbstractAdminBSBTwigExtension {
+abstract class AbstractIconTwigExtension extends AbstractTwigExtension {
 
     /**
      * Constructor.
+     *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      */
-    protected function __construct() {
-        parent::__construct();
+    protected function __construct(Twig_Environment $twigEnvironment) {
+        parent::__construct($twigEnvironment);
     }
 
     /**
@@ -49,7 +52,7 @@ abstract class AbstractIconTwigExtension extends AbstractAdminBSBTwigExtension {
         $innerHTML = null !== $name ? $name : "home";
 
         // Return the HTML.
-        return self::bootstrapHTMLElement("i", $innerHTML, $attributes);
+        return static::coreHTMLElement("i", $innerHTML, $attributes);
     }
 
 }

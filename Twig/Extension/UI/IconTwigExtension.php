@@ -11,9 +11,9 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
+use Twig_Environment;
 use Twig_SimpleFunction;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\IconRendererTwigExtensionInterface;
+use WBW\Bundle\CoreBundle\Renderer\IconRendererInterface;
 use WBW\Library\Core\Argument\ArrayHelper;
 
 /**
@@ -22,7 +22,7 @@ use WBW\Library\Core\Argument\ArrayHelper;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\UI
  */
-class IconTwigExtension extends AbstractIconTwigExtension implements IconRendererTwigExtensionInterface {
+class IconTwigExtension extends AbstractIconTwigExtension implements IconRendererInterface {
 
     /**
      * Service name.
@@ -33,9 +33,11 @@ class IconTwigExtension extends AbstractIconTwigExtension implements IconRendere
 
     /**
      * Constructor.
+     *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      */
-    public function __construct() {
-        parent::__construct();
+    public function __construct(Twig_Environment $twigEnvironment) {
+        parent::__construct($twigEnvironment);
     }
 
     /**
@@ -55,7 +57,7 @@ class IconTwigExtension extends AbstractIconTwigExtension implements IconRendere
      * @return string Returns the AdminBSB material design icon.
      */
     public function adminBSBIconMaterialDesignFunction(array $args = []) {
-        return $this->adminBSBIcon(ArrayHelper::get($args, "name"), ArrayHelper::get($args, "style"), AbstractAdminBSBTwigExtension::fixColor(ArrayHelper::get($args, "color"), "col-"));
+        return $this->adminBSBIcon(ArrayHelper::get($args, "name"), ArrayHelper::get($args, "style"), self::fixColor(ArrayHelper::get($args, "color"), "col-"));
     }
 
     /**
