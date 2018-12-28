@@ -30,7 +30,7 @@ class CardTwigExtensionTest extends AbstractTestCase {
      *
      * @var TypographyTwigExtension
      */
-    private $typography;
+    private $typographyTwigExtension;
 
     /**
      * {@inheritdoc}
@@ -39,7 +39,93 @@ class CardTwigExtensionTest extends AbstractTestCase {
         parent::setUp();
 
         // Set a Typography Twig extension mock.
-        $this->typography = new TypographyTwigExtension();
+        $this->typographyTwigExtension = new TypographyTwigExtension($this->twigEnvironment);
+    }
+
+    /**
+     * Tests the adminBSBCardHeaderFunction() method.
+     *
+     * @return void
+     */
+    public function testAdminBSBCardHeaderFunction() {
+
+        $obj = new CardTwigExtension($this->twigEnvironment, $this->typographyTwigExtension);
+
+        $arg = ["content" => "content", "description" => "description", "icon" => "person"];
+        $res = '<h2 class="card-header"><i class="material-icons" style="margin: -4px 4px 0 0; vertical-align: sub;">person</i>content<small>description</small></h2>';
+        $this->assertEquals($res, $obj->adminBSBCardHeaderFunction($arg));
+    }
+
+    /**
+     * Tests the adminBSBCardHeaderFunction() method.
+     *
+     * @return void
+     */
+    public function testAdminBSBCardHeaderFunctionWitContent() {
+
+        $obj = new CardTwigExtension($this->twigEnvironment, $this->typographyTwigExtension);
+
+        $arg = ["content" => "content"];
+        $res = '<h2 class="card-header">content</h2>';
+        $this->assertEquals($res, $obj->adminBSBCardHeaderFunction($arg));
+
+    }
+
+    /**
+     * Tests the adminBSBCardHeaderFunction() method.
+     *
+     * @return void
+     */
+    public function testAdminBSBCardHeaderFunctionWitDescription() {
+
+        $obj = new CardTwigExtension($this->twigEnvironment, $this->typographyTwigExtension);
+
+        $arg = ["description" => "description"];
+        $res = '<h2 class="card-header"><small>description</small></h2>';
+        $this->assertEquals($res, $obj->adminBSBCardHeaderFunction($arg));
+
+    }
+
+    /**
+     * Tests the adminBSBCardHeaderFunction() method.
+     *
+     * @return void
+     */
+    public function testAdminBSBCardHeaderFunctionWitIcon() {
+
+        $obj = new CardTwigExtension($this->twigEnvironment, $this->typographyTwigExtension);
+
+        $arg = ["icon" => "person"];
+        $res = '<h2 class="card-header"><i class="material-icons" style="margin: -4px 4px 0 0; vertical-align: sub;">person</i></h2>';
+        $this->assertEquals($res, $obj->adminBSBCardHeaderFunction($arg));
+
+    }
+
+    /**
+     * Tests the adminBSBCardHeaderFunction() method.
+     *
+     * @return void
+     */
+    public function testAdminBSBCardHeaderFunctionWithoutArguments() {
+
+        $obj = new CardTwigExtension($this->twigEnvironment, $this->typographyTwigExtension);
+
+        $arg = [];
+        $res = '<h2 class="card-header"></h2>';
+        $this->assertEquals($res, $obj->adminBSBCardHeaderFunction($arg));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
+
+        $obj = new CardTwigExtension($this->twigEnvironment, $this->typographyTwigExtension);
+
+        $this->assertEquals("webeweb.adminbsb.twig.extension.form.checkbox", CardTwigExtension::SERVICE_NAME);
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 
     /**
@@ -49,47 +135,15 @@ class CardTwigExtensionTest extends AbstractTestCase {
      */
     public function testGetFunctions() {
 
-        $obj = new CardTwigExtension($this->typography);
+        $obj = new CardTwigExtension($this->twigEnvironment, $this->typographyTwigExtension);
 
         $res = $obj->getFunctions();
-
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
         $this->assertEquals("adminBSBCardHeader", $res[0]->getName());
         $this->assertEquals([$obj, "adminBSBCardHeaderFunction"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
-    }
-
-    /**
-     * Tests the adminBSBCardHeaderFunction() method.
-     *
-     * @return void
-     * @depends testGetFunctions
-     */
-    public function testAdminBSBCardHeaderFunction() {
-
-        $obj = new CardTwigExtension($this->typography);
-
-        $arg0 = [];
-        $res0 = '<h2 class="card-header"></h2>';
-        $this->assertEquals($res0, $obj->adminBSBCardHeaderFunction($arg0));
-
-        $arg1 = ["content" => "content"];
-        $res1 = '<h2 class="card-header">content</h2>';
-        $this->assertEquals($res1, $obj->adminBSBCardHeaderFunction($arg1));
-
-        $arg2 = ["description" => "description"];
-        $res2 = '<h2 class="card-header"><small>description</small></h2>';
-        $this->assertEquals($res2, $obj->adminBSBCardHeaderFunction($arg2));
-
-        $arg3 = ["icon" => "person"];
-        $res3 = '<h2 class="card-header"><i class="material-icons" style="margin: -4px 4px 0 0; vertical-align: sub;">person</i></h2>';
-        $this->assertEquals($res3, $obj->adminBSBCardHeaderFunction($arg3));
-
-        $arg9 = ["content" => "content", "description" => "description", "icon" => "person"];
-        $res9 = '<h2 class="card-header"><i class="material-icons" style="margin: -4px 4px 0 0; vertical-align: sub;">person</i>content<small>description</small></h2>';
-        $this->assertEquals($res9, $obj->adminBSBCardHeaderFunction($arg9));
     }
 
 }
