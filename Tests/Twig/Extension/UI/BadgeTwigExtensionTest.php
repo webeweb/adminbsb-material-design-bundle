@@ -25,71 +25,6 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\BadgeTwigExtension;
 class BadgeTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new BadgeTwigExtension($this->twigEnvironment);
-
-        $this->assertEquals("webeweb.adminbsb.twig.extension.ui.badge", BadgeTwigExtension::SERVICE_NAME);
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-    }
-
-    /**
-     * Tests the getFunctions() method.
-     *
-     * @return void
-     */
-    public function testGetFunctions() {
-
-        $obj = new BadgeTwigExtension($this->twigEnvironment);
-
-        $res = $obj->getFunctions();
-        $this->assertCount(8, $res);
-
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("adminBSBButtonBadgeDanger", $res[0]->getName());
-        $this->assertEquals([$obj, "adminBSBButtonBadgeDangerFunction"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
-
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
-        $this->assertEquals("adminBSBButtonBadgeDefault", $res[1]->getName());
-        $this->assertEquals([$obj, "adminBSBButtonBadgeDefaultFunction"], $res[1]->getCallable());
-        $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
-
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[2]);
-        $this->assertEquals("adminBSBButtonBadgeInfo", $res[2]->getName());
-        $this->assertEquals([$obj, "adminBSBButtonBadgeInfoFunction"], $res[2]->getCallable());
-        $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
-
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[3]);
-        $this->assertEquals("adminBSBButtonBadgeList", $res[3]->getName());
-        $this->assertEquals([$obj, "adminBSBButtonBadgeListFunction"], $res[3]->getCallable());
-        $this->assertEquals(["html"], $res[3]->getSafe(new Twig_Node()));
-
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[4]);
-        $this->assertEquals("adminBSBButtonBadgeMaterialDesign", $res[4]->getName());
-        $this->assertEquals([$obj, "adminBSBButtonBadgeMaterialDesignFunction"], $res[4]->getCallable());
-        $this->assertEquals(["html"], $res[4]->getSafe(new Twig_Node()));
-
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[5]);
-        $this->assertEquals("adminBSBButtonBadgePrimary", $res[5]->getName());
-        $this->assertEquals([$obj, "adminBSBButtonBadgePrimaryFunction"], $res[5]->getCallable());
-        $this->assertEquals(["html"], $res[5]->getSafe(new Twig_Node()));
-
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[6]);
-        $this->assertEquals("adminBSBButtonBadgeSuccess", $res[6]->getName());
-        $this->assertEquals([$obj, "adminBSBButtonBadgeSuccessFunction"], $res[6]->getCallable());
-        $this->assertEquals(["html"], $res[6]->getSafe(new Twig_Node()));
-
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[7]);
-        $this->assertEquals("adminBSBButtonBadgeWarning", $res[7]->getName());
-        $this->assertEquals([$obj, "adminBSBButtonBadgeWarningFunction"], $res[7]->getCallable());
-        $this->assertEquals(["html"], $res[7]->getSafe(new Twig_Node()));
-    }
-    /**
      * Tests the adminBSBButtonBadgeDangerFunction() method.
      *
      * @return void
@@ -675,6 +610,72 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
         $arg = [];
         $res = '<button class="btn btn-warning btn-block waves-effect" type="button"><span class="badge"></span></button>';
         $this->assertEquals($res, $obj->adminBSBButtonBadgeWarningFunction($arg));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
+
+        $obj = new BadgeTwigExtension($this->twigEnvironment);
+
+        $this->assertEquals("webeweb.adminbsb.twig.extension.ui.badge", BadgeTwigExtension::SERVICE_NAME);
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
+    }
+
+    /**
+     * Tests the getFunctions() method.
+     *
+     * @return void
+     */
+    public function testGetFunctions() {
+
+        $obj = new BadgeTwigExtension($this->twigEnvironment);
+
+        $res = $obj->getFunctions();
+        $this->assertCount(8, $res);
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
+        $this->assertEquals("adminBSBButtonBadgeDanger", $res[0]->getName());
+        $this->assertEquals([$obj, "adminBSBButtonBadgeDangerFunction"], $res[0]->getCallable());
+        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
+        $this->assertEquals("adminBSBButtonBadgeDefault", $res[1]->getName());
+        $this->assertEquals([$obj, "adminBSBButtonBadgeDefaultFunction"], $res[1]->getCallable());
+        $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[2]);
+        $this->assertEquals("adminBSBButtonBadgeInfo", $res[2]->getName());
+        $this->assertEquals([$obj, "adminBSBButtonBadgeInfoFunction"], $res[2]->getCallable());
+        $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[3]);
+        $this->assertEquals("adminBSBButtonBadgeList", $res[3]->getName());
+        $this->assertEquals([$obj, "adminBSBButtonBadgeListFunction"], $res[3]->getCallable());
+        $this->assertEquals(["html"], $res[3]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[4]);
+        $this->assertEquals("adminBSBButtonBadgeMaterialDesign", $res[4]->getName());
+        $this->assertEquals([$obj, "adminBSBButtonBadgeMaterialDesignFunction"], $res[4]->getCallable());
+        $this->assertEquals(["html"], $res[4]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[5]);
+        $this->assertEquals("adminBSBButtonBadgePrimary", $res[5]->getName());
+        $this->assertEquals([$obj, "adminBSBButtonBadgePrimaryFunction"], $res[5]->getCallable());
+        $this->assertEquals(["html"], $res[5]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[6]);
+        $this->assertEquals("adminBSBButtonBadgeSuccess", $res[6]->getName());
+        $this->assertEquals([$obj, "adminBSBButtonBadgeSuccessFunction"], $res[6]->getCallable());
+        $this->assertEquals(["html"], $res[6]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[7]);
+        $this->assertEquals("adminBSBButtonBadgeWarning", $res[7]->getName());
+        $this->assertEquals([$obj, "adminBSBButtonBadgeWarningFunction"], $res[7]->getCallable());
+        $this->assertEquals(["html"], $res[7]->getSafe(new Twig_Node()));
     }
 
 }
