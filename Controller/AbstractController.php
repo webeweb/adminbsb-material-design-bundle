@@ -11,15 +11,15 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Controller;
 
-use WBW\Bundle\BootstrapBundle\Controller\AbstractBootstrapController;
+use WBW\Bundle\BootstrapBundle\Controller\AbstractController as BaseController;
 
 /**
- * Abstract AdminBSB controller.
+ * Abstract controller.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Controller
  * @abstract
  */
-abstract class AbstractAdminBSBController extends AbstractBootstrapController {
+abstract class AbstractController extends BaseController {
 
 }
