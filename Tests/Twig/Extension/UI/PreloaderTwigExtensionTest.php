@@ -25,16 +25,168 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\PreloaderTwigExtension;
 class PreloaderTwigExtensionTest extends AbstractTestCase {
 
     /**
+     * Tests the adminBSBPreloaderMaterialDesignLFunction() method.
+     *
+     * @return void
+     */
+    public function testAdminBSBPreloaderMaterialDesignLFunction() {
+
+        $obj = new PreloaderTwigExtension($this->twigEnvironment);
+
+        $arg = ["color" => "black"];
+        $res = '<div class="preloader pl-size-l"><div class="spinner-layer pl-black"><div class="circle-clipper left"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>';
+        $this->assertEquals($res, $obj->adminBSBPreloaderMaterialDesignLFunction($arg));
+    }
+
+    /**
+     * Tests the adminBSBPreloaderMaterialDesignLFunction() method.
+     *
+     * @return void
+     */
+    public function testAdminBSBPreloaderMaterialDesignLFunctionWithoutArguments() {
+
+        $obj = new PreloaderTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = '<div class="preloader pl-size-l"><div class="spinner-layer pl-red"><div class="circle-clipper left"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>';
+        $this->assertEquals($res, $obj->adminBSBPreloaderMaterialDesignLFunction($arg));
+    }
+
+    /**
+     * Tests the adminBSBPreloaderMaterialDesignSFunction() method.
+     *
+     * @return void
+     */
+    public function testAdminBSBPreloaderMaterialDesignSFunction() {
+
+        $obj = new PreloaderTwigExtension($this->twigEnvironment);
+
+        $arg = ["color" => "black"];
+        $res = '<div class="preloader"><div class="spinner-layer pl-black"><div class="circle-clipper left"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>';
+        $this->assertEquals($res, $obj->adminBSBPreloaderMaterialDesignSFunction($arg));
+    }
+
+    /**
+     * Tests the adminBSBPreloaderMaterialDesignSFunction() method.
+     *
+     * @return void
+     */
+    public function testAdminBSBPreloaderMaterialDesignSFunctionWithoutArguments() {
+
+        $obj = new PreloaderTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = '<div class="preloader"><div class="spinner-layer pl-red"><div class="circle-clipper left"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>';
+        $this->assertEquals($res, $obj->adminBSBPreloaderMaterialDesignSFunction($arg));
+    }
+
+    /**
+     * Tests the adminBSBPreloaderMaterialDesignSMFunction() method.
+     *
+     * @return void
+     */
+    public function testAdminBSBPreloaderMaterialDesignSMFunction() {
+
+        $obj = new PreloaderTwigExtension($this->twigEnvironment);
+
+        $arg = ["color" => "black"];
+        $res = '<div class="preloader pl-size-sm"><div class="spinner-layer pl-black"><div class="circle-clipper left"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>';
+        $this->assertEquals($res, $obj->adminBSBPreloaderMaterialDesignSMFunction($arg));
+    }
+
+    /**
+     * Tests the adminBSBPreloaderMaterialDesignSMFunction() method.
+     *
+     * @return void
+     */
+    public function testAdminBSBPreloaderMaterialDesignSMFunctionWithoutArguments() {
+
+        $obj = new PreloaderTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = '<div class="preloader pl-size-sm"><div class="spinner-layer pl-red"><div class="circle-clipper left"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>';
+        $this->assertEquals($res, $obj->adminBSBPreloaderMaterialDesignSMFunction($arg));
+    }
+
+    /**
+     * Tests the adminBSBPreloaderMaterialDesignXLFunction() method.
+     *
+     * @return void
+     */
+    public function testAdminBSBPreloaderMaterialDesignXLFunction() {
+
+        $obj = new PreloaderTwigExtension($this->twigEnvironment);
+
+        $arg = ["color" => "black"];
+        $res = '<div class="preloader pl-size-xl"><div class="spinner-layer pl-black"><div class="circle-clipper left"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>';
+        $this->assertEquals($res, $obj->adminBSBPreloaderMaterialDesignXLFunction($arg));
+    }
+
+    /**
+     * Tests the adminBSBPreloaderMaterialDesignXLFunction() method.
+     *
+     * @return void
+     */
+    public function testAdminBSBPreloaderMaterialDesignXLFunctionWithoutArguments() {
+
+        $obj = new PreloaderTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = '<div class="preloader pl-size-xl"><div class="spinner-layer pl-red"><div class="circle-clipper left"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>';
+        $this->assertEquals($res, $obj->adminBSBPreloaderMaterialDesignXLFunction($arg));
+    }
+
+    /**
+     * Tests the adminBSBPreloaderMaterialDesignXSFunction() method.
+     *
+     * @return void
+     */
+    public function testAdminBSBPreloaderMaterialDesignXSFunction() {
+
+        $obj = new PreloaderTwigExtension($this->twigEnvironment);
+
+        $arg = ["color" => "black"];
+        $res = '<div class="preloader pl-size-xs"><div class="spinner-layer pl-black"><div class="circle-clipper left"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>';
+        $this->assertEquals($res, $obj->adminBSBPreloaderMaterialDesignXSFunction($arg));
+    }
+
+    /**
+     * Tests the adminBSBPreloaderMaterialDesignXSFunction() method.
+     *
+     * @return void
+     */
+    public function testAdminBSBPreloaderMaterialDesignXSFunctionWithoutArguments() {
+
+        $obj = new PreloaderTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = '<div class="preloader pl-size-xs"><div class="spinner-layer pl-red"><div class="circle-clipper left"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>';
+        $this->assertEquals($res, $obj->adminBSBPreloaderMaterialDesignXSFunction($arg));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
+
+        $obj = new PreloaderTwigExtension($this->twigEnvironment);
+
+        $this->assertEquals("webeweb.adminbsb.twig.extension.ui.preloader", PreloaderTwigExtension::SERVICE_NAME);
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
+    }
+
+    /**
      * Tests the getFunctions() method.
      *
      * @return void
      */
     public function testGetFunctions() {
 
-        $obj = new PreloaderTwigExtension();
+        $obj = new PreloaderTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
-
         $this->assertCount(5, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
@@ -61,85 +213,6 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("adminBSBPreloaderMaterialDesignXS", $res[4]->getName());
         $this->assertEquals([$obj, "adminBSBPreloaderMaterialDesignXSFunction"], $res[4]->getCallable());
         $this->assertEquals(["html"], $res[4]->getSafe(new Twig_Node()));
-    }
-
-    /**
-     * Tests the adminBSBPreloaderMaterialDesignLFunction() method.
-     *
-     * @return void
-     * @depends testGetFunctions
-     */
-    public function testAdminBSBPreloaderMaterialDesignLFunction() {
-
-        $obj = new PreloaderTwigExtension();
-
-        $arg0 = [];
-        $res0 = '<div class="preloader pl-size-l"><div class="spinner-layer pl-red"><div class="circle-clipper left"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>';
-        $this->assertEquals($res0, $obj->adminBSBPreloaderMaterialDesignLFunction($arg0));
-    }
-
-    /**
-     * Tests the adminBSBPreloaderMaterialDesignSFunction() method.
-     *
-     * @return void
-     * @depends testGetFunctions
-     */
-    public function testAdminBSBPreloaderMaterialDesignSFunction() {
-
-        $obj = new PreloaderTwigExtension();
-
-        $arg0 = [];
-        $res0 = '<div class="preloader"><div class="spinner-layer pl-red"><div class="circle-clipper left"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>';
-        $this->assertEquals($res0, $obj->adminBSBPreloaderMaterialDesignSFunction($arg0));
-
-        $arg9 = ["color" => "black"];
-        $res9 = '<div class="preloader"><div class="spinner-layer pl-black"><div class="circle-clipper left"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>';
-        $this->assertEquals($res9, $obj->adminBSBPreloaderMaterialDesignSFunction($arg9));
-    }
-
-    /**
-     * Tests the adminBSBPreloaderMaterialDesignSMFunction() method.
-     *
-     * @return void
-     * @depends testGetFunctions
-     */
-    public function testAdminBSBPreloaderMaterialDesignSMFunction() {
-
-        $obj = new PreloaderTwigExtension();
-
-        $arg0 = [];
-        $res0 = '<div class="preloader pl-size-sm"><div class="spinner-layer pl-red"><div class="circle-clipper left"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>';
-        $this->assertEquals($res0, $obj->adminBSBPreloaderMaterialDesignSMFunction($arg0));
-    }
-
-    /**
-     * Tests the adminBSBPreloaderMaterialDesignXLFunction() method.
-     *
-     * @return void
-     * @depends testGetFunctions
-     */
-    public function testAdminBSBPreloaderMaterialDesignXLFunction() {
-
-        $obj = new PreloaderTwigExtension();
-
-        $arg0 = [];
-        $res0 = '<div class="preloader pl-size-xl"><div class="spinner-layer pl-red"><div class="circle-clipper left"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>';
-        $this->assertEquals($res0, $obj->adminBSBPreloaderMaterialDesignXLFunction($arg0));
-    }
-
-    /**
-     * Tests the adminBSBPreloaderMaterialDesignXSFunction() method.
-     *
-     * @return void
-     * @depends testGetFunctions
-     */
-    public function testAdminBSBPreloaderMaterialDesignXSFunction() {
-
-        $obj = new PreloaderTwigExtension();
-
-        $arg0 = [];
-        $res0 = '<div class="preloader pl-size-xs"><div class="spinner-layer pl-red"><div class="circle-clipper left"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>';
-        $this->assertEquals($res0, $obj->adminBSBPreloaderMaterialDesignXSFunction($arg0));
     }
 
 }

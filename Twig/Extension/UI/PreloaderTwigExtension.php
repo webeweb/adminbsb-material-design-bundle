@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
+use Twig_Environment;
 use Twig_SimpleFunction;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
 use WBW\Library\Core\Argument\ArrayHelper;
 
 /**
@@ -32,9 +32,11 @@ class PreloaderTwigExtension extends AbstractPreloaderTwigExtension {
 
     /**
      * Constructor.
+     *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      */
-    public function __construct() {
-        parent::__construct();
+    public function __construct(Twig_Environment $twigEnvironment) {
+        parent::__construct($twigEnvironment);
     }
 
     /**
@@ -44,7 +46,7 @@ class PreloaderTwigExtension extends AbstractPreloaderTwigExtension {
      * @return string Retruns the AdminBSB preloader "Material design" L.
      */
     public function adminBSBPreloaderMaterialDesignLFunction(array $args = []) {
-        return $this->adminBSBPreloader(AbstractAdminBSBTwigExtension::fixColor(ArrayHelper::get($args, "color", "red"), "pl-"), "l");
+        return $this->adminBSBPreloader(self::fixColor(ArrayHelper::get($args, "color", "red"), "pl-"), "l");
     }
 
     /**
@@ -54,7 +56,7 @@ class PreloaderTwigExtension extends AbstractPreloaderTwigExtension {
      * @return string Retruns the AdminBSB preloader "Material design" S.
      */
     public function adminBSBPreloaderMaterialDesignSFunction(array $args = []) {
-        return $this->adminBSBPreloader(AbstractAdminBSBTwigExtension::fixColor(ArrayHelper::get($args, "color", "red"), "pl-"), "s");
+        return $this->adminBSBPreloader(self::fixColor(ArrayHelper::get($args, "color", "red"), "pl-"), "s");
     }
 
     /**
@@ -64,7 +66,7 @@ class PreloaderTwigExtension extends AbstractPreloaderTwigExtension {
      * @return string Retruns the AdminBSB preloader "Material design" SM.
      */
     public function adminBSBPreloaderMaterialDesignSMFunction(array $args = []) {
-        return $this->adminBSBPreloader(AbstractAdminBSBTwigExtension::fixColor(ArrayHelper::get($args, "color", "red"), "pl-"), "sm");
+        return $this->adminBSBPreloader(self::fixColor(ArrayHelper::get($args, "color", "red"), "pl-"), "sm");
     }
 
     /**
@@ -74,7 +76,7 @@ class PreloaderTwigExtension extends AbstractPreloaderTwigExtension {
      * @return string Retruns the AdminBSB preloader "Material design" XL.
      */
     public function adminBSBPreloaderMaterialDesignXLFunction(array $args = []) {
-        return $this->adminBSBPreloader(AbstractAdminBSBTwigExtension::fixColor(ArrayHelper::get($args, "color", "red"), "pl-"), "xl");
+        return $this->adminBSBPreloader(self::fixColor(ArrayHelper::get($args, "color", "red"), "pl-"), "xl");
     }
 
     /**
@@ -84,7 +86,7 @@ class PreloaderTwigExtension extends AbstractPreloaderTwigExtension {
      * @return string Retruns the AdminBSB preloader "Material design" XS.
      */
     public function adminBSBPreloaderMaterialDesignXSFunction(array $args = []) {
-        return $this->adminBSBPreloader(AbstractAdminBSBTwigExtension::fixColor(ArrayHelper::get($args, "color", "red"), "pl-"), "xs");
+        return $this->adminBSBPreloader(self::fixColor(ArrayHelper::get($args, "color", "red"), "pl-"), "xs");
     }
 
     /**

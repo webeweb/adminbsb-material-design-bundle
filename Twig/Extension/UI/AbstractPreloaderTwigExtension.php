@@ -11,7 +11,8 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
+use Twig_Environment;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
 
 /**
  * Abstract preloader Twig extension.
@@ -20,13 +21,15 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\UI
  * @abstract
  */
-abstract class AbstractPreloaderTwigExtension extends AbstractAdminBSBTwigExtension {
+abstract class AbstractPreloaderTwigExtension extends AbstractTwigExtension {
 
     /**
      * Constructor.
+     *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      */
-    protected function __construct() {
-        parent::__construct();
+    protected function __construct(Twig_Environment $twigEnvironment) {
+        parent::__construct($twigEnvironment);
     }
 
     /**
@@ -49,10 +52,10 @@ abstract class AbstractPreloaderTwigExtension extends AbstractAdminBSBTwigExtens
 
         // Initialize the parameters.
         $content   = "<div class=\"circle-clipper left\"><div class=\"circle\"></div></div><div class=\"circle-clipper right\"><div class=\"circle\"></div></div>";
-        $innerHTML = self::bootstrapHTMLElement("div", $content, ["class" => ["spinner-layer", $class]]);
+        $innerHTML = static::coreHTMLElement("div", $content, ["class" => ["spinner-layer", $class]]);
 
         // Return the HTML.
-        return self::bootstrapHTMLElement("div", $innerHTML, $attributes);
+        return static::coreHTMLElement("div", $innerHTML, $attributes);
     }
 
 }
