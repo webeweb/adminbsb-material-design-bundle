@@ -25,69 +25,160 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ProgressBarTwigExtension;
 class ProgressBarTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the getFunctions() method.
+     * Tests the adminBSBProgressBarMaterialDesignFunction() method.
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testAdminBSBProgressBarMaterialDesignFunction() {
 
-        $obj = new ProgressBarTwigExtension();
+        $obj = new ProgressBarTwigExtension($this->twigEnvironment);
 
-        $res = $obj->getFunctions();
-
-        $this->assertCount(1, $res);
-
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("adminBSBProgressBarMaterialDesign", $res[0]->getName());
-        $this->assertEquals([$obj, "adminBSBProgressBarMaterialDesignFunction"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+        $arg = ["content" => "content", "value" => 75, "min" => 1, "max" => 150, "striped" => true, "animated" => true, "color" => "black"];
+        $res = '<div class="progress"><div class="progress-bar bg-black progress-bar-striped active" style="width: 75%;" role="progressbar" aria-valuenow="75" aria-valuemin="1" aria-valuemax="150%">content</div></div>';
+        $this->assertEquals($res, $obj->adminBSBProgressBarMaterialDesignFunction($arg));
     }
 
     /**
      * Tests the adminBSBProgressBarMaterialDesignFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
-    public function testAdminBSBProgressBarMaterialDesignFunction() {
+    public function testAdminBSBProgressBarMaterialDesignFunctionWithAnimated() {
 
-        $obj = new ProgressBarTwigExtension();
+        $obj = new ProgressBarTwigExtension($this->twigEnvironment);
 
-        $arg0 = [];
-        $res0 = '<div class="progress"><div class="progress-bar bg-red" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%"><span class="sr-only">50%</span></div></div>';
-        $this->assertEquals($res0, $obj->adminBSBProgressBarMaterialDesignFunction($arg0));
+        $arg = ["animated" => true];
+        $res = '<div class="progress"><div class="progress-bar bg-red active" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%"><span class="sr-only">50%</span></div></div>';
+        $this->assertEquals($res, $obj->adminBSBProgressBarMaterialDesignFunction($arg));
+    }
 
-        $arg1 = ["content" => "content"];
-        $res1 = '<div class="progress"><div class="progress-bar bg-red" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%">content</div></div>';
-        $this->assertEquals($res1, $obj->adminBSBProgressBarMaterialDesignFunction($arg1));
+    /**
+     * Tests the adminBSBProgressBarMaterialDesignFunction() method.
+     *
+     * @return void
+     */
+    public function testAdminBSBProgressBarMaterialDesignFunctionWithColor() {
 
-        $arg2 = ["value" => 75];
-        $res2 = '<div class="progress"><div class="progress-bar bg-red" style="width: 75%;" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100%"><span class="sr-only">75%</span></div></div>';
-        $this->assertEquals($res2, $obj->adminBSBProgressBarMaterialDesignFunction($arg2));
+        $obj = new ProgressBarTwigExtension($this->twigEnvironment);
 
-        $arg3 = ["min" => 1];
-        $res3 = '<div class="progress"><div class="progress-bar bg-red" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="1" aria-valuemax="100%"><span class="sr-only">50%</span></div></div>';
-        $this->assertEquals($res3, $obj->adminBSBProgressBarMaterialDesignFunction($arg3));
+        $arg = ["color" => "black"];
+        $res = '<div class="progress"><div class="progress-bar bg-black" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%"><span class="sr-only">50%</span></div></div>';
+        $this->assertEquals($res, $obj->adminBSBProgressBarMaterialDesignFunction($arg));
+    }
 
-        $arg4 = ["max" => 200];
-        $res4 = '<div class="progress"><div class="progress-bar bg-red" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="200%"><span class="sr-only">50%</span></div></div>';
-        $this->assertEquals($res4, $obj->adminBSBProgressBarMaterialDesignFunction($arg4));
+    /**
+     * Tests the adminBSBProgressBarMaterialDesignFunction() method.
+     *
+     * @return void
+     */
+    public function testAdminBSBProgressBarMaterialDesignFunctionWithContent() {
 
-        $arg5 = ["striped" => true];
-        $res5 = '<div class="progress"><div class="progress-bar bg-red progress-bar-striped" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%"><span class="sr-only">50%</span></div></div>';
-        $this->assertEquals($res5, $obj->adminBSBProgressBarMaterialDesignFunction($arg5));
+        $obj = new ProgressBarTwigExtension($this->twigEnvironment);
 
-        $arg6 = ["animated" => true];
-        $res6 = '<div class="progress"><div class="progress-bar bg-red active" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%"><span class="sr-only">50%</span></div></div>';
-        $this->assertEquals($res6, $obj->adminBSBProgressBarMaterialDesignFunction($arg6));
+        $arg = ["content" => "content"];
+        $res = '<div class="progress"><div class="progress-bar bg-red" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%">content</div></div>';
+        $this->assertEquals($res, $obj->adminBSBProgressBarMaterialDesignFunction($arg));
+    }
 
-        $arg7 = ["color" => "black"];
-        $res7 = '<div class="progress"><div class="progress-bar bg-black" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%"><span class="sr-only">50%</span></div></div>';
-        $this->assertEquals($res7, $obj->adminBSBProgressBarMaterialDesignFunction($arg7));
+    /**
+     * Tests the adminBSBProgressBarMaterialDesignFunction() method.
+     *
+     * @return void
+     */
+    public function testAdminBSBProgressBarMaterialDesignFunctionWithMax() {
 
-        $arg9 = ["content" => "content", "value" => 75, "min" => 1, "max" => 150, "striped" => true, "animated" => true, "color" => "black"];
-        $res9 = '<div class="progress"><div class="progress-bar bg-black progress-bar-striped active" style="width: 75%;" role="progressbar" aria-valuenow="75" aria-valuemin="1" aria-valuemax="150%">content</div></div>';
-        $this->assertEquals($res9, $obj->adminBSBProgressBarMaterialDesignFunction($arg9));
+        $obj = new ProgressBarTwigExtension($this->twigEnvironment);
+
+        $arg = ["max" => 200];
+        $res = '<div class="progress"><div class="progress-bar bg-red" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="200%"><span class="sr-only">50%</span></div></div>';
+        $this->assertEquals($res, $obj->adminBSBProgressBarMaterialDesignFunction($arg));
+    }
+
+    /**
+     * Tests the adminBSBProgressBarMaterialDesignFunction() method.
+     *
+     * @return void
+     */
+    public function testAdminBSBProgressBarMaterialDesignFunctionWithMin() {
+
+        $obj = new ProgressBarTwigExtension($this->twigEnvironment);
+
+        $arg = ["min" => 1];
+        $res = '<div class="progress"><div class="progress-bar bg-red" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="1" aria-valuemax="100%"><span class="sr-only">50%</span></div></div>';
+        $this->assertEquals($res, $obj->adminBSBProgressBarMaterialDesignFunction($arg));
+    }
+
+    /**
+     * Tests the adminBSBProgressBarMaterialDesignFunction() method.
+     *
+     * @return void
+     */
+    public function testAdminBSBProgressBarMaterialDesignFunctionWithStriped() {
+
+        $obj = new ProgressBarTwigExtension($this->twigEnvironment);
+
+        $arg = ["striped" => true];
+        $res = '<div class="progress"><div class="progress-bar bg-red progress-bar-striped" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%"><span class="sr-only">50%</span></div></div>';
+        $this->assertEquals($res, $obj->adminBSBProgressBarMaterialDesignFunction($arg));
+    }
+
+    /**
+     * Tests the adminBSBProgressBarMaterialDesignFunction() method.
+     *
+     * @return void
+     */
+    public function testAdminBSBProgressBarMaterialDesignFunctionWithValue() {
+
+        $obj = new ProgressBarTwigExtension($this->twigEnvironment);
+
+        $arg = ["value" => 75];
+        $res = '<div class="progress"><div class="progress-bar bg-red" style="width: 75%;" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100%"><span class="sr-only">75%</span></div></div>';
+        $this->assertEquals($res, $obj->adminBSBProgressBarMaterialDesignFunction($arg));
+    }
+
+    /**
+     * Tests the adminBSBProgressBarMaterialDesignFunction() method.
+     *
+     * @return void
+     */
+    public function testAdminBSBProgressBarMaterialDesignFunctionWithoutArguments() {
+
+        $obj = new ProgressBarTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = '<div class="progress"><div class="progress-bar bg-red" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%"><span class="sr-only">50%</span></div></div>';
+        $this->assertEquals($res, $obj->adminBSBProgressBarMaterialDesignFunction($arg));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
+
+        $obj = new ProgressBarTwigExtension($this->twigEnvironment);
+
+        $this->assertEquals("webeweb.adminbsb.twig.extension.ui.progress_bar", ProgressBarTwigExtension::SERVICE_NAME);
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
+    }
+
+    /**
+     * Tests the getFunctions() method.
+     *
+     * @return void
+     */
+    public function testGetFunctions() {
+
+        $obj = new ProgressBarTwigExtension($this->twigEnvironment);
+
+        $res = $obj->getFunctions();
+        $this->assertCount(1, $res);
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
+        $this->assertEquals("adminBSBProgressBarMaterialDesign", $res[0]->getName());
+        $this->assertEquals([$obj, "adminBSBProgressBarMaterialDesignFunction"], $res[0]->getCallable());
+        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
     }
 
 }
