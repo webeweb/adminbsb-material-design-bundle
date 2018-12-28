@@ -160,16 +160,16 @@ interface ColorProviderInterface {
     public function getColorTeal();
 
     /**
-     * Get the color "Yellow".
-     *
-     * @return array Returns the color "Yellow".
-     */
-    public function getColorYellow();
-
-    /**
      * Get the color "White".
      *
      * @return array Returns the color "White".
      */
     public function getColorWhite();
+
+    /**
+     * Get the color "Yellow".
+     *
+     * @return array Returns the color "Yellow".
+     */
+    public function getColorYellow();
 }

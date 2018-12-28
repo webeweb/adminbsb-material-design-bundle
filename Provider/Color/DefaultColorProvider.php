@@ -162,15 +162,15 @@ class DefaultColorProvider implements ColorProviderInterface {
     /**
      * {@inheritdoc}
      */
-    public function getColorYellow() {
-        return ["yellow" => ["500" => "#FFEB3B"]];
+    public function getColorWhite() {
+        return ["white" => ["500" => "#FFFFFF"]];
     }
 
     /**
      * {@inheritdoc}
      */
-    public function getColorWhite() {
-        return ["white" => ["500" => "#FFFFFF"]];
+    public function getColorYellow() {
+        return ["yellow" => ["500" => "#FFEB3B"]];
     }
 
     /**
