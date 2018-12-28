@@ -60,16 +60,6 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB overlined text.
-     *
-     * @param array $args The arguments.
-     * @return string Returns the AdminBSB overlined text.
-     */
-    public function adminBSBOverlineFunction(array $args = []) {
-        return $this->adminBSBOverline(ArrayHelper::get($args, "content"));
-    }
-
-    /**
      * Displays an AdminBSB line through text.
      *
      * @param array $args The arguments.
@@ -77,6 +67,16 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
      */
     public function adminBSBLineThroughFunction(array $args = []) {
         return $this->adminBSBLineThrough(ArrayHelper::get($args, "content"));
+    }
+
+    /**
+     * Displays an AdminBSB overlined text.
+     *
+     * @param array $args The arguments.
+     * @return string Returns the AdminBSB overlined text.
+     */
+    public function adminBSBOverlineFunction(array $args = []) {
+        return $this->adminBSBOverline(ArrayHelper::get($args, "content"));
     }
 
     /**
