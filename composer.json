@@ -3,12 +3,12 @@
     "type": "symfony-bundle",
     "description": "Integrate AdminBSB Material Design theme with Symfony 2 and more",
     "keywords": [
-        "webeweb",
-        "bundle",
-        "symfony",
         "adminbsb",
+        "bundle",
         "material design",
-        "theme"
+        "symfony",
+        "theme",
+        "webeweb"
     ],
     "homepage": "https://github.com/webeweb/adminbsb-material-design-bundle",
     "license": "LGPL-3.0-only",
