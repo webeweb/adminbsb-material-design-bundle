@@ -45,6 +45,4 @@ trait BadgeTwigExtensionTrait {
         return $this;
     }
 
-
-
 }
