@@ -15,7 +15,7 @@ use Twig_Environment;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
 
 /**
- * Abstract Icon Twig extension.
+ * Abstract icon Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\UI
