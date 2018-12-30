@@ -29,7 +29,6 @@
             <exclude>Tests/Helper/</exclude>
             <exclude>Tests/Provider/</exclude>
             <exclude>Tests/Twig/Extension/Menu/</exclude>
-            <exclude>Tests/Twig/Extension/UI/ButtonTwigExtensionTest.php</exclude>
             <exclude>Tests/Twig/Extension/UI/ColorTwigExtensionTest.php</exclude>
             <exclude>Tests/Twig/Extension/UI/ModalTwigExtensionTest.php</exclude>
             <exclude>Tests/Twig/Extension/Widget/</exclude>
