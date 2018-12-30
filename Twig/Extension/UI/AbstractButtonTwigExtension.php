@@ -11,8 +11,10 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
+use Twig_Environment;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AdminBSBRendererTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\RendererTwigExtension;
 
 /**
  * Abstract button Twig extension.
@@ -21,13 +23,15 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\AdminBSBRendererTwigExtension;
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\UI
  * @abstract
  */
-abstract class AbstractButtonTwigExtension extends AbstractAdminBSBTwigExtension {
+abstract class AbstractButtonTwigExtension extends AbstractTwigExtension {
 
     /**
      * Constructor.
+     *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      */
-    protected function __construct() {
-        parent::__construct();
+    protected function __construct(Twig_Environment $twigEnvironment) {
+        parent::__construct($twigEnvironment);
     }
 
     /**
@@ -66,10 +70,10 @@ abstract class AbstractButtonTwigExtension extends AbstractAdminBSBTwigExtension
 
         // Handle the parameters.
         $innerHTML = null !== $content ? $content : "";
-        $glyphicon = null !== $icon ? AdminBSBRendererTwigExtension::renderIcon($icon, $style) : "";
+        $glyphicon = null !== $icon ? RendererTwigExtension::renderIcon($this->getTwigEnvironment(), $icon, $style) : "";
 
         // Return the HTML.
-        return self::bootstrapHTMLElement("button", $glyphicon . $innerHTML, $attributes);
+        return static::coreHTMLElement("button", $glyphicon . $innerHTML, $attributes);
     }
 
 }
