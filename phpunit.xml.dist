@@ -28,7 +28,6 @@
             <exclude>Tests/DependencyInjection/</exclude>
             <exclude>Tests/Helper/</exclude>
             <exclude>Tests/Provider/</exclude>
-            <exclude>Tests/Twig/Extension/AdminBSBRendererTwigExtensionTest.php</exclude>
             <exclude>Tests/Twig/Extension/Menu/</exclude>
             <exclude>Tests/Twig/Extension/UI/ButtonTwigExtensionTest.php</exclude>
             <exclude>Tests/Twig/Extension/UI/ColorTwigExtensionTest.php</exclude>
