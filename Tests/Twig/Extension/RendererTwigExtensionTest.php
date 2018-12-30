@@ -36,6 +36,18 @@ class RendererTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the getFilters() method.
+     *
+     * @return void
+     */
+    public function testGetFilters() {
+
+        $obj = new RendererTwigExtension($this->twigEnvironment);
+        $res = $obj->getFilters();
+        $this->assertCount(0, $res);
+    }
+
+    /**
      * Tests the renderIcon() method.
      *
      * @return void

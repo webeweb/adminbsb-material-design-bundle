@@ -12,6 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension;
 
 use Twig_Environment;
+use Twig_SimpleFilter;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\IconTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\RendererTwigExtension as BaseTwigExtension;
 
@@ -37,6 +38,15 @@ class RendererTwigExtension extends BaseTwigExtension {
      */
     public function __construct(Twig_Environment $twigEnvironment) {
         parent::__construct($twigEnvironment);
+    }
+
+    /**
+     * Get the Twig filters.
+     *
+     * @return Twig_SimpleFilter[] Returns the Twig filters.
+     */
+    public function getFilters() {
+        return [];
     }
 
     /**
