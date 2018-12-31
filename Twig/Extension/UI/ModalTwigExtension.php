@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
+use Twig_Environment;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension;
 use WBW\Library\Core\Argument\ArrayHelper;
@@ -32,9 +33,11 @@ class ModalTwigExtension extends AbstractModalTwigExtension {
 
     /**
      * Constructor.
+     *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      */
-    public function __construct() {
-        parent::__construct(new TypographyTwigExtension());
+    public function __construct(Twig_Environment $twigEnvironment) {
+        parent::__construct($twigEnvironment, new TypographyTwigExtension($twigEnvironment));
     }
 
     /**

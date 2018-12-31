@@ -25,49 +25,77 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ModalTwigExtension;
 class ModalTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the getFunctions() method.
+     * Tests the adminBSBModalHeaderFunction() method.
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testAdminBSBModalHeaderFunctionWithContent() {
 
-        $obj = new ModalTwigExtension();
+        $obj = new ModalTwigExtension($this->twigEnvironment);
 
-        $res = $obj->getFunctions();
-
-        $this->assertCount(1, $res);
-
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("adminBSBModalHeader", $res[0]->getName());
-        $this->assertEquals([$obj, "adminBSBModalHeaderFunction"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+        $arg = ["content" => "content"];
+        $res = '<h3 class="modal-title">content</h3>';
+        $this->assertEquals($res, $obj->adminBSBModalHeaderFunction($arg));
     }
 
     /**
      * Tests the adminBSBModalHeaderFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
-    public function testAdminBSBModalHeaderFunction() {
+    public function testAdminBSBModalHeaderFunctionWithContentAndIcon() {
 
-        $obj = new ModalTwigExtension();
+        $obj = new ModalTwigExtension($this->twigEnvironment);
 
-        $arg0 = [];
-        $res0 = '<h3 class="modal-title"></h3>';
-        $this->assertEquals($res0, $obj->adminBSBModalHeaderFunction($arg0));
+        $arg = ["content" => "content", "icon" => "person"];
+        $res = '<h3 class="modal-title"><i class="material-icons" style="margin: -4px 0; vertical-align: sub;">person</i>content</h3>';
+        $this->assertEquals($res, $obj->adminBSBModalHeaderFunction($arg));
+    }
 
-        $arg1 = ["content" => "content"];
-        $res1 = '<h3 class="modal-title">content</h3>';
-        $this->assertEquals($res1, $obj->adminBSBModalHeaderFunction($arg1));
+    /**
+     * Tests the adminBSBModalHeaderFunction() method.
+     *
+     * @return void
+     */
+    public function testAdminBSBModalHeaderFunctionWithIcon() {
 
-        $arg3 = ["icon" => "person"];
-        $res3 = '<h3 class="modal-title"><i class="material-icons" style="margin: -4px 0; vertical-align: sub;">person</i></h3>';
-        $this->assertEquals($res3, $obj->adminBSBModalHeaderFunction($arg3));
+        $obj = new ModalTwigExtension($this->twigEnvironment);
 
-        $arg9 = ["content" => "content", "icon" => "person"];
-        $res9 = '<h3 class="modal-title"><i class="material-icons" style="margin: -4px 0; vertical-align: sub;">person</i>content</h3>';
-        $this->assertEquals($res9, $obj->adminBSBModalHeaderFunction($arg9));
+        $arg = ["icon" => "person"];
+        $res = '<h3 class="modal-title"><i class="material-icons" style="margin: -4px 0; vertical-align: sub;">person</i></h3>';
+        $this->assertEquals($res, $obj->adminBSBModalHeaderFunction($arg));
+    }
+
+    /**
+     * Tests the adminBSBModalHeaderFunction() method.
+     *
+     * @return void
+     */
+    public function testAdminBSBModalHeaderFunctionWithoutArguments() {
+
+        $obj = new ModalTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = '<h3 class="modal-title"></h3>';
+        $this->assertEquals($res, $obj->adminBSBModalHeaderFunction($arg));
+    }
+
+    /**
+     * Tests the getFunctions() method.
+     *
+     * @return void
+     */
+    public function testGetFunctions() {
+
+        $obj = new ModalTwigExtension($this->twigEnvironment);
+
+        $res = $obj->getFunctions();
+        $this->assertCount(1, $res);
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
+        $this->assertEquals("adminBSBModalHeader", $res[0]->getName());
+        $this->assertEquals([$obj, "adminBSBModalHeaderFunction"], $res[0]->getCallable());
+        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
     }
 
 }
