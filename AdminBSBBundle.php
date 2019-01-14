@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
  * AdminBSB bundle.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBMaterialDesignBundle
+ * @package WBW\Bundle\AdminBSBBundle
  */
 class AdminBSBBundle extends Bundle implements AssetsProviderInterface {
 
@@ -28,5 +28,4 @@ class AdminBSBBundle extends Bundle implements AssetsProviderInterface {
     public function getAssetsRelativeDirectory() {
         return "/Resources/assets";
     }
-
 }
