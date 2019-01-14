@@ -7,29 +7,29 @@
     {% endif %}
 {% endblock %}
 
-{% block bootstrapHeadStyles %}
+{% block bootstrapStylesheets %}
     {{ parent() }}
     <!-- Google fonts -->
     <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin,cyrillic-ext">
     <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     {% include "@AdminBSB/include/styles.html.twig" with {"theme": "bootstrap" } %}
-    {% block adminBSBHeadStyles %}
+    {% block adminBSBStylesheets %}
     {% endblock %}
 {% endblock %}
 
-{% block bootstrapHeadTitle %}{{ parent() }}{{ block("adminBSBHeadTitle") }}{% endblock %}
+{% block bootstrapTitle %}{{ block("adminBSBTitle") }}{% endblock %}
 
-{% block bootstrapBodyClasses %}{{ parent() }} class="{{ block("adminBSBBodyClasses") }}"{% endblock %}
+{% block bootstrapAttributes %}{{ parent() }} class="{{ block("adminBSBAttributes") }}"{% endblock %}
 
-{% block bootstrapBodyContent %}
+{% block bootstrapContainer %}
     {{ parent() }}
-    {% block adminBSBBodyContent %}
+    {% block adminBSBContainer %}
     {% endblock %}
 {% endblock %}
 
-{% block bootstrapBodyScripts %}
+{% block bootstrapJavascripts %}
     {{ parent() }}
     {% include "@AdminBSB/include/scripts.html.twig" with {"theme": "bootstrap" } %}
-    {% block adminBSBBodyScripts %}
+    {% block adminBSBJavascripts %}
     {% endblock %}
 {% endblock %}
