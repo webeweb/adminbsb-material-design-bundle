@@ -213,5 +213,4 @@ class CheckboxTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals([$obj, "adminBSBCheckboxMaterialDesignFunction"], $res[1]->getCallable());
         $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
     }
-
 }

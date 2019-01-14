@@ -54,5 +54,4 @@ abstract class AbstractIconTwigExtension extends AbstractTwigExtension {
         // Return the HTML.
         return static::coreHTMLElement("i", $innerHTML, $attributes);
     }
-
 }

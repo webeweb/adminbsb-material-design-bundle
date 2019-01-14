@@ -50,5 +50,4 @@ class SwitchButtonTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setSwitchButtonTwigExtension($switchButtonTwigExtension);
         $this->assertSame($switchButtonTwigExtension, $obj->getSwitchButtonTwigExtension());
     }
-
 }

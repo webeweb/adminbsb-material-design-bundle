@@ -80,5 +80,4 @@ class AdminBSBExtensionTest extends AbstractTestCase {
         // Widget
         $this->assertInstanceOf(CardTwigExtension::class, $this->containerBuilder->get(CardTwigExtension::SERVICE_NAME));
     }
-
 }

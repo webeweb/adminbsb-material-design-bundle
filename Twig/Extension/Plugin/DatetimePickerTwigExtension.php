@@ -83,5 +83,4 @@ class DatetimePickerTwigExtension extends AbstractDatetimePickerTwigExtension {
             new Twig_SimpleFunction("adminBSBTimePicker", [$this, "adminBSBTimePickerFunction"], ["is_safe" => ["html"]]),
         ];
     }
-
 }

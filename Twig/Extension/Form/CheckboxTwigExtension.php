@@ -70,5 +70,4 @@ class CheckboxTwigExtension extends AbstractCheckboxTwigExtension {
             new Twig_SimpleFunction("adminBSBCheckboxMaterialDesign", [$this, "adminBSBCheckboxMaterialDesignFunction"], ["is_safe" => ["html"]]),
         ];
     }
-
 }

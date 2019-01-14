@@ -71,5 +71,4 @@ class RadioButtonTwigExtension extends AbstractRadioButtonTwigExtension {
             new Twig_SimpleFunction("adminBSBRadioButtonMaterialDesign", [$this, "adminBSBRadioButtonMaterialDesignFunction"], ["is_safe" => ["html"]]),
         ];
     }
-
 }

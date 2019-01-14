@@ -55,5 +55,4 @@ class DefaultColorProviderTest extends AbstractTestCase {
 
         $this->assertCount(21, $obj->getColors());
     }
-
 }

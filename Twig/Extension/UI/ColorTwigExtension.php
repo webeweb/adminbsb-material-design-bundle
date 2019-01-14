@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
+use Twig_Environment;
 use Twig_SimpleFunction;
 use WBW\Library\Core\Argument\ArrayHelper;
 
@@ -31,9 +32,11 @@ class ColorTwigExtension extends AbstractColorTwigExtension {
 
     /**
      * Constructor.
+     *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      */
-    public function __construct() {
-        parent::__construct();
+    public function __construct(Twig_Environment $twigEnvironment) {
+        parent::__construct($twigEnvironment);
     }
 
     /**
@@ -56,5 +59,4 @@ class ColorTwigExtension extends AbstractColorTwigExtension {
             new Twig_SimpleFunction("adminBSBColorMaterialDesign", [$this, "adminBSBColorMaterialDesignFunction"], ["is_safe" => ["html"]]),
         ];
     }
-
 }

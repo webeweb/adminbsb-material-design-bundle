@@ -60,5 +60,4 @@ class ModalTwigExtension extends AbstractModalTwigExtension {
             new Twig_SimpleFunction("adminBSBModalHeader", [$this, "adminBSBModalHeaderFunction"], ["is_safe" => ["html"]]),
         ];
     }
-
 }

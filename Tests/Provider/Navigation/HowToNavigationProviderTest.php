@@ -42,5 +42,4 @@ class HowToNavigationProviderTest extends AbstractTestCase {
         $this->assertEquals("navigation.how-to", $res->getId());
         $this->assertEquals("book", $res->getIcon());
     }
-
 }

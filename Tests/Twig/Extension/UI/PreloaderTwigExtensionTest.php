@@ -214,5 +214,4 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals([$obj, "adminBSBPreloaderMaterialDesignXSFunction"], $res[4]->getCallable());
         $this->assertEquals(["html"], $res[4]->getSafe(new Twig_Node()));
     }
-
 }

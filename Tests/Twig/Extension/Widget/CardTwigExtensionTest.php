@@ -145,5 +145,4 @@ class CardTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals([$obj, "adminBSBCardHeaderFunction"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
     }
-
 }

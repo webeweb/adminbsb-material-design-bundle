@@ -71,5 +71,4 @@ class SwitchButtonTwigExtension extends AbstractSwitchButtonTwigExtension {
             new Twig_SimpleFunction("adminBSBSwitchButtonMaterialDesign", [$this, "adminBSBSwitchButtonMaterialDesignFunction"], ["is_safe" => ["html"]]),
         ];
     }
-
 }

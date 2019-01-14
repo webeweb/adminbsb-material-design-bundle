@@ -136,5 +136,4 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
             new Twig_SimpleFunction("adminBSBButtonBadgeWarning", [$this, "adminBSBButtonBadgeWarningFunction"], ["is_safe" => ["html"]]),
         ];
     }
-
 }

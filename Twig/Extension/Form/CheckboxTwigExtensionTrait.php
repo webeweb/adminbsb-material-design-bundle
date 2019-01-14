@@ -44,5 +44,4 @@ trait CheckboxTwigExtensionTrait {
         $this->checkboxTwigExtension = $checkboxTwigExtension;
         return $this;
     }
-
 }

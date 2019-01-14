@@ -103,5 +103,4 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
             new Twig_SimpleFunction("adminBSBUnderline", [$this, "adminBSBUnderlineFunction"], ["is_safe" => ["html"]]),
         ];
     }
-
 }

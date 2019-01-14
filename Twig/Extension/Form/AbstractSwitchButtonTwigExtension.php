@@ -69,5 +69,4 @@ abstract class AbstractSwitchButtonTwigExtension extends AbstractTwigExtension {
         // Return the HTML.
         return static::coreHTMLElement("div", $label, ["class" => "switch"]);
     }
-
 }

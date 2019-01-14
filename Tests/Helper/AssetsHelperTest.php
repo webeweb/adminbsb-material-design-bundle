@@ -92,5 +92,4 @@ class AssetsHelperTest extends AbstractTestCase {
         $this->assertRegExp("/tinymce\.zip$/", $res[40]);
         $this->assertRegExp("/waitme\.zip$/", $res[41]);
     }
-
 }

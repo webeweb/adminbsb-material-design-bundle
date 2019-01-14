@@ -35,5 +35,4 @@ class DefaultApplicationThemeProviderTest extends AbstractTestCase {
         $this->assertEquals("AdminBSB<b>bundle</b>", $obj->getName());
         $this->assertEquals("AdminBSB bundle", $obj->getTitle());
     }
-
 }

@@ -35,5 +35,4 @@ class LayoutControllerTest extends AbstractWebTestCase {
         $client->request("GET", "/blank");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
-
 }

@@ -44,5 +44,4 @@ trait SwitchButtonTwigExtensionTrait {
         $this->switchButtonTwigExtension = $switchButtonTwigExtension;
         return $this;
     }
-
 }

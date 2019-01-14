@@ -50,5 +50,4 @@ class CheckboxTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setCheckboxTwigExtension($checkboxTwigExtension);
         $this->assertSame($checkboxTwigExtension, $obj->getCheckboxTwigExtension());
     }
-
 }

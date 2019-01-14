@@ -226,5 +226,4 @@ EOT;
         $this->assertEquals([$obj, "adminBSBTimePickerFunction"], $res[2]->getCallable());
         $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
     }
-
 }

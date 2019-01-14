@@ -57,5 +57,4 @@ abstract class AbstractModalTwigExtension extends AbstractTwigExtension {
         // Return the HTML.
         return $this->getTypographyTwigExtension()->bootstrapHeading3Function(["class" => "modal-title", "content" => $innerHTML]);
     }
-
 }

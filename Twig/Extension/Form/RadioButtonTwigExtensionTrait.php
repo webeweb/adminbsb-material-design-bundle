@@ -44,5 +44,4 @@ trait RadioButtonTwigExtensionTrait {
         $this->radioButtonTwigExtension = $radioButtonTwigExtension;
         return $this;
     }
-
 }

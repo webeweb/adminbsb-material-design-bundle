@@ -44,5 +44,4 @@ trait DatetimePickerTwigExtensionTrait {
         $this->datetimePickerTwigExtension = $datetimePickerTwigExtension;
         return $this;
     }
-
 }

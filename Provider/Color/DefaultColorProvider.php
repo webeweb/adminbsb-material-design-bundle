@@ -184,5 +184,4 @@ class DefaultColorProvider implements ColorProviderInterface {
             $provider->getColorRed(), $provider->getColorPink(), $provider->getColorPurple(), $provider->getColorDeepPurple(), $provider->getColorIndigo(), $provider->getColorBlue(), $provider->getColorLightBlue(), $provider->getColorCyan(), $provider->getColorTeal(), $provider->getColorGreen(), $provider->getColorLightGreen(), $provider->getColorLime(), $provider->getColorYellow(), $provider->getColorAmber(), $provider->getColorOrange(), $provider->getColorDeepOrange(), $provider->getColorBrown(), $provider->getColorGrey(), $provider->getColorBlueGrey(), $provider->getColorBlack(), $provider->getColorWhite()
         );
     }
-
 }

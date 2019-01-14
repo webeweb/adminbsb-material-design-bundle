@@ -42,5 +42,4 @@ class FOSUserNavigationProviderTest extends AbstractTestCase {
         $this->assertEquals("person", $res->getNodeAt(1)->getIcon());
         $this->assertEquals("fos_user_change_password", $res->getNodeAt(1)->getRoute());
     }
-
 }

@@ -95,5 +95,4 @@ class HowToNavigationProvider {
         // Return the table of contents.
         return $tableContents;
     }
-
 }

@@ -213,5 +213,4 @@ class RadioButtonTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals([$obj, "adminBSBRadioButtonMaterialDesignFunction"], $res[1]->getCallable());
         $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
     }
-
 }

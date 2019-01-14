@@ -112,5 +112,4 @@ EOT;
         // Return the HTML.
         return StringHelper::replace(self::DATETIMEPICKER, $searches, $replaces);
     }
-
 }

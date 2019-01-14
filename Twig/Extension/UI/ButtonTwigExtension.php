@@ -151,5 +151,4 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
             new Twig_SimpleFunction("adminBSBButtonWarning", [$this, "adminBSBButtonWarningFunction"], ["is_safe" => ["html"]]),
         ];
     }
-
 }

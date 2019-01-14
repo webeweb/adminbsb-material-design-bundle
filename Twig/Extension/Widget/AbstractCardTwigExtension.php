@@ -11,9 +11,11 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget;
 
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
+use Twig_Environment;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AdminBSBRendererTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtensionTrait;
 
 /**
  * Abstract card twig extension.
@@ -22,23 +24,19 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension;
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget
  * @abstract
  */
-abstract class AbstractCardTwigExtension extends AbstractAdminBSBTwigExtension {
+abstract class AbstractCardTwigExtension extends AbstractTwigExtension {
 
-    /**
-     * Typography.
-     *
-     * @var TypographyTwigExtension
-     */
-    private $typography;
+    use TypographyTwigExtensionTrait;
 
     /**
      * Constructor.
      *
-     * @param TypographyTwigExtension $typography The typography.
+     * @param Twig_Environment $twigEnvironment The Twig environment.
+     * @param TypographyTwigExtension $typographyTwigExtension The typography.
      */
-    protected function __construct(TypographyTwigExtension $typography) {
-        parent::__construct();
-        $this->setTypography($typography);
+    protected function __construct(Twig_Environment $twigEnvironment, TypographyTwigExtension $typographyTwigExtension) {
+        parent::__construct($twigEnvironment);
+        $this->setTypographyTwigExtension($typographyTwigExtension);
     }
 
     /**
@@ -54,7 +52,7 @@ abstract class AbstractCardTwigExtension extends AbstractAdminBSBTwigExtension {
         // Initialize the parameters.
         $innerHTML = $content;
         if (null !== $description) {
-            $innerHTML .= self::bootstrapHTMLElement("small", $description);
+            $innerHTML .= static::coreHTMLElement("small", $description);
         }
         if (null !== $icon) {
             $innerHTML = AdminBSBRendererTwigExtension::renderIcon($icon, "margin: -4px 4px 0 0; vertical-align: sub;") . $innerHTML;
@@ -63,25 +61,4 @@ abstract class AbstractCardTwigExtension extends AbstractAdminBSBTwigExtension {
         // Return the HTML.
         return $this->getTypography()->bootstrapHeading2Function(["class" => "card-header", "content" => $innerHTML]);
     }
-
-    /**
-     * Get the typography.
-     *
-     * @return TypographyTwigExtension Returns the typography.
-     */
-    public function getTypography() {
-        return $this->typography;
-    }
-
-    /**
-     * Set the typography.
-     *
-     * @param TypographyTwigExtension $typography The typography.
-     * @return AbstractCardTwigExtension Returns this card Twig extension.
-     */
-    protected function setTypography(TypographyTwigExtension $typography) {
-        $this->typography = $typography;
-        return $this;
-    }
-
 }

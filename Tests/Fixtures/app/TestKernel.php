@@ -45,5 +45,4 @@ class TestKernel extends AbstractKernel {
     public function getTestsDir() {
         return __DIR__ . "/../..";
     }
-
 }

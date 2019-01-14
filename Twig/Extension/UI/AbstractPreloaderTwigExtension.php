@@ -57,5 +57,4 @@ abstract class AbstractPreloaderTwigExtension extends AbstractTwigExtension {
         // Return the HTML.
         return static::coreHTMLElement("div", $innerHTML, $attributes);
     }
-
 }

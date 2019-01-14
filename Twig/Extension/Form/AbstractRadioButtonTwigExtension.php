@@ -66,5 +66,4 @@ abstract class AbstractRadioButtonTwigExtension extends AbstractTwigExtension {
         // Return the HTML.
         return StringHelper::replace($template, ["%attributes%", "%innerHTML%"], [StringHelper::parseArray($attributes), $innerHTML]);
     }
-
 }

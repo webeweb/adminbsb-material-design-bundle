@@ -50,5 +50,4 @@ class RadioButtonTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setRadioButtonTwigExtension($radioButtonTwigExtension);
         $this->assertSame($radioButtonTwigExtension, $obj->getRadioButtonTwigExtension());
     }
-
 }

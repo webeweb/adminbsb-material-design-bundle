@@ -103,5 +103,4 @@ class PreloaderTwigExtension extends AbstractPreloaderTwigExtension {
             new Twig_SimpleFunction("adminBSBPreloaderMaterialDesignXS", [$this, "adminBSBPreloaderMaterialDesignXSFunction"], ["is_safe" => ["html"]]),
         ];
     }
-
 }

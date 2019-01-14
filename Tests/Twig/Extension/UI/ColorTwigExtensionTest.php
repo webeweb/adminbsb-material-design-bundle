@@ -25,25 +25,6 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ColorTwigExtension;
 class ColorTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the getFunctions() method.
-     *
-     * @return void
-     */
-    public function testGetFunctions() {
-
-        $obj = new ColorTwigExtension();
-
-        $res = $obj->getFunctions();
-
-        $this->assertCount(1, $res);
-
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("adminBSBColorMaterialDesign", $res[0]->getName());
-        $this->assertEquals([$obj, "adminBSBColorMaterialDesignFunction"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
-    }
-
-    /**
      * Tests the adminBSBColorMaterialDesignFunction() method.
      *
      * @return void
@@ -70,4 +51,22 @@ class ColorTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals($res9, $service->adminBSBColorMaterialDesignFunction($arg9));
     }
 
+    /**
+     * Tests the getFunctions() method.
+     *
+     * @return void
+     */
+    public function testGetFunctions() {
+
+        $obj = new ColorTwigExtension();
+
+        $res = $obj->getFunctions();
+
+        $this->assertCount(1, $res);
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
+        $this->assertEquals("adminBSBColorMaterialDesign", $res[0]->getName());
+        $this->assertEquals([$obj, "adminBSBColorMaterialDesignFunction"], $res[0]->getCallable());
+        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+    }
 }

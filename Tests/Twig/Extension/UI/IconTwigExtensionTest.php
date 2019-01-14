@@ -188,5 +188,4 @@ class IconTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals([$obj, "adminBSBIconMaterialDesignFunction"], $res[1]->getCallable());
         $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
     }
-
 }

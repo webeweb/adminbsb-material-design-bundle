@@ -46,5 +46,4 @@ abstract class AbstractTwigExtension extends BaseTwigExtension {
         }
         return $prefix . $name;
     }
-
 }

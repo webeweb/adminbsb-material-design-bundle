@@ -61,5 +61,4 @@ class ProgressBarTwigExtension extends BaseTwigExtension {
             new Twig_SimpleFunction("adminBSBProgressBarMaterialDesign", [$this, "adminBSBProgressBarMaterialDesignFunction"], ["is_safe" => ["html"]]),
         ];
     }
-
 }

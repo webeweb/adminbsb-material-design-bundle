@@ -12,10 +12,12 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Menu;
 
 use Symfony\Component\Translation\TranslatorInterface;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
+use Twig_Environment;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AdminBSBRendererTwigExtension;
-use WBW\Bundle\BootstrapBundle\Navigation\NavigationNode;
-use WBW\Bundle\BootstrapBundle\Navigation\NavigationTree;
+use WBW\Bundle\CoreBundle\Navigation\NavigationNode;
+use WBW\Bundle\CoreBundle\Navigation\NavigationTree;
+use WBW\Bundle\CoreBundle\Service\TranslatorTrait;
 use WBW\Library\Core\Argument\StringHelper;
 
 /**
@@ -25,23 +27,19 @@ use WBW\Library\Core\Argument\StringHelper;
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\Menu
  * @abstract
  */
-abstract class AbstractMenuTwigExtension extends AbstractAdminBSBTwigExtension {
+abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
 
-    /**
-     * Translator.
-     *
-     * @var TranslatorInterface
-     */
-    protected $translator;
+    use TranslatorTrait;
 
     /**
      * Constructor.
      *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      * @param TranslatorInterface $translator The translator.
      */
-    protected function __construct(TranslatorInterface $translator) {
-        parent::__construct();
-        $this->translator = $translator;
+    protected function __construct(Twig_Environment $twigEnvironment, TranslatorInterface $translator) {
+        parent::__construct($twigEnvironment);
+        $this->setTranslator($translator);
     }
 
     /**
@@ -84,7 +82,7 @@ abstract class AbstractMenuTwigExtension extends AbstractAdminBSBTwigExtension {
         $innerHTML = null !== $tree->getId() ? $this->translate($tree->getId()) : "";
 
         // Return the HTML.
-        return self::bootstrapHTMLElement("li", $innerHTML, $attributes);
+        return static::coreHTMLElement("li", $innerHTML, $attributes);
     }
 
     /**
@@ -168,14 +166,14 @@ abstract class AbstractMenuTwigExtension extends AbstractAdminBSBTwigExtension {
         $attributes = [];
 
         $attributes["class"]  = $class;
-        $attributes["href"]   = $node->getRoute();
+        $attributes["href"]   = $node->getUri();
         $attributes["target"] = $node->getTarget();
 
         // Initialize the parameters.
         $innerHTML = $this->adminBSBMenuItemLabel($node);
 
         // Return the HTML.
-        return self::bootstrapHTMLElement("a", $innerHTML, $attributes);
+        return static::coreHTMLElement("a", $innerHTML, $attributes);
     }
 
     /**
@@ -197,19 +195,24 @@ abstract class AbstractMenuTwigExtension extends AbstractAdminBSBTwigExtension {
     private function translate($id) {
 
         // Translate with Bootstrap bundle.
-        $outputB = $this->translator->trans($id, [], "BootstrapBundle");
+        $outputC = $this->getTranslator()->trans($id, [], "CoreBundle");
+        if ($id !== $outputC) {
+            return $outputC;
+        }
+
+        // Translate with Bootstrap bundle.
+        $outputB = $this->getTranslator()->trans($id, [], "BootstrapBundle");
         if ($id !== $outputB) {
             return $outputB;
         }
 
         // Translate with AdminBSB bundle.
-        $outputA = $this->translator->trans($id, [], "AdminBSBBundle");
+        $outputA = $this->getTranslator()->trans($id, [], "AdminBSBBundle");
         if ($id !== $outputA) {
             return $outputA;
         }
 
         // Translate.
-        return $this->translator->trans($id);
+        return $this->getTranslator()->trans($id);
     }
-
 }

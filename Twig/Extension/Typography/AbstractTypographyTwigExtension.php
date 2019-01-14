@@ -81,5 +81,4 @@ abstract class AbstractTypographyTwigExtension extends AbstractTwigExtension {
     protected function adminBSBUnderline($content) {
         return static::coreHTMLElement("span", $content, ["class" => "font-underline"]);
     }
-
 }

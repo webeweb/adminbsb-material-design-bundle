@@ -71,5 +71,4 @@ abstract class AbstractBadgeTwigExtension extends AbstractTwigExtension {
         // Return the HTML.
         return StringHelper::replace($template, ["%attributes%", "%innerHTML%", "%label%", "%href%"], [StringHelper::parseArray($attributes), $innerHTML, $spanLabel, $href]);
     }
-
 }

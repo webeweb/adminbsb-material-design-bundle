@@ -80,5 +80,4 @@ class ViewHelperTest extends AbstractTestCase {
 
         $this->assertGreaterThan($size, FileHelper::getSize($this->filename));
     }
-
 }

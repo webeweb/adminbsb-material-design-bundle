@@ -43,5 +43,4 @@ class FOSUserNavigationProvider {
         // Return the breadcrumb.
         return $breadcrumb;
     }
-
 }

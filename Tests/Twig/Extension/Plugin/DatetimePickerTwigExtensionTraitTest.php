@@ -50,5 +50,4 @@ class DatetimePickerTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setDatetimePickerTwigExtension($datetimePickerTwigExtension);
         $this->assertSame($datetimePickerTwigExtension, $obj->getDatetimePickerTwigExtension());
     }
-
 }

@@ -61,5 +61,4 @@ class ViewHelper {
             throw new IOException(sprintf("Failed to close \"%s\"", $filename));
         }
     }
-
 }

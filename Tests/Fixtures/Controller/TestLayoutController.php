@@ -32,5 +32,4 @@ class TestLayoutController extends AbstractAdminBSBController {
         // Return the response.
         return $this->render("@AdminBSB/layout/blank.html.twig");
     }
-
 }

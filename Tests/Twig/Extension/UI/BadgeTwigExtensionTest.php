@@ -677,5 +677,4 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals([$obj, "adminBSBButtonBadgeWarningFunction"], $res[7]->getCallable());
         $this->assertEquals(["html"], $res[7]->getSafe(new Twig_Node()));
     }
-
 }
