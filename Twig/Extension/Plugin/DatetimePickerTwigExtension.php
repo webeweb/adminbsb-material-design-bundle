@@ -11,8 +11,6 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Plugin;
 
-use Symfony\Component\Translation\TranslatorInterface;
-use Twig_Environment;
 use Twig_SimpleFunction;
 use WBW\Library\Core\Argument\ArrayHelper;
 
@@ -32,19 +30,9 @@ class DatetimePickerTwigExtension extends AbstractDatetimePickerTwigExtension {
     const SERVICE_NAME = "webeweb.adminbsb.twig.extension.plugin.datetime_picker";
 
     /**
-     * Constructor.
-     *
-     * @param Twig_Environment $twigEnvironment The Twig environment.
-     * @param TranslatorInterface $translator The translator.
-     */
-    public function __construct(Twig_Environment $twigEnvironment, TranslatorInterface $translator) {
-        parent::__construct($twigEnvironment, $translator);
-    }
-
-    /**
      * Displays an AdminBSB date picker.
      *
-     * @param $args The arguments.
+     * @param array $args The arguments.
      * @return string Returns the AdminBSB date picker.
      */
     public function adminBSBDatePickerFunction(array $args = []) {
@@ -54,7 +42,7 @@ class DatetimePickerTwigExtension extends AbstractDatetimePickerTwigExtension {
     /**
      * Displays a AdminBSB datetime picker.
      *
-     * @param $args The arguments.
+     * @param array $args The arguments.
      * @return string Returns the AdminBSB datetime picker.
      */
     public function adminBSBDatetimePickerFunction(array $args = []) {
@@ -64,7 +52,7 @@ class DatetimePickerTwigExtension extends AbstractDatetimePickerTwigExtension {
     /**
      * Displays a time picker.
      *
-     * @param $args The arguments.
+     * @param array $args The arguments.
      * @return string Returns the AdminBSB time picker.
      */
     public function adminBSBTimePickerFunction(array $args = []) {
