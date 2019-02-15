@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
-use Twig_Environment;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
 
 /**
@@ -24,15 +23,6 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
 abstract class AbstractIconTwigExtension extends AbstractTwigExtension {
 
     /**
-     * Constructor.
-     *
-     * @param Twig_Environment $twigEnvironment The Twig environment.
-     */
-    protected function __construct(Twig_Environment $twigEnvironment) {
-        parent::__construct($twigEnvironment);
-    }
-
-    /**
      * Displays an AdminBSB icon.
      *
      * @param string $name The icon name.
@@ -42,16 +32,13 @@ abstract class AbstractIconTwigExtension extends AbstractTwigExtension {
      */
     protected function adminBSBIcon($name, $style, $class = null) {
 
-        // Initialize the attributes.
         $attributes = [];
 
         $attributes["class"] = ["material-icons", $class];
         $attributes["style"] = $style;
 
-        // Initialize the parameters.
         $innerHTML = null !== $name ? $name : "home";
 
-        // Return the HTML.
         return static::coreHTMLElement("i", $innerHTML, $attributes);
     }
 }

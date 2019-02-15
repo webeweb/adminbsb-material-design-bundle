@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
-use Twig_Environment;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Library\Core\Argument\StringHelper;
 
@@ -23,15 +22,6 @@ use WBW\Library\Core\Argument\StringHelper;
  * @abstract
  */
 abstract class AbstractBadgeTwigExtension extends AbstractTwigExtension {
-
-    /**
-     * Constructor.
-     *
-     * @param Twig_Environment $twigEnvironment The Twig environment.
-     */
-    protected function __construct(Twig_Environment $twigEnvironment) {
-        parent::__construct($twigEnvironment);
-    }
 
     /**
      * Displays an AdminBSB badge.
@@ -46,13 +36,11 @@ abstract class AbstractBadgeTwigExtension extends AbstractTwigExtension {
      */
     protected function adminBSBBadge($content, $label, $large, $class, $list = false, $link = null) {
 
-        // Initialize the template.
         $template = '<button %attributes%>%innerHTML%<span class="badge">%label%</span></button>';
         if (true === $list) {
             $template = '<a class="list-group-item" href="%href%"><span %attributes%>%innerHTML%</span>%label%</a>';
         }
 
-        // Initialize the attributes.
         $attributes = [];
 
         if (true === $list) {
@@ -63,12 +51,10 @@ abstract class AbstractBadgeTwigExtension extends AbstractTwigExtension {
             $attributes["type"]    = "button";
         }
 
-        // Initialize the parameters.
         $innerHTML = null !== $content ? $content : "";
         $spanLabel = null !== $label ? $label : "";
         $href      = null !== $link ? $link : self::DEFAULT_HREF;
 
-        // Return the HTML.
         return StringHelper::replace($template, ["%attributes%", "%innerHTML%", "%label%", "%href%"], [StringHelper::parseArray($attributes), $innerHTML, $spanLabel, $href]);
     }
 }

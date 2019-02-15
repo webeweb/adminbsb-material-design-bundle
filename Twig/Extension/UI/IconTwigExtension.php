@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
-use Twig_Environment;
 use Twig_SimpleFunction;
 use WBW\Bundle\CoreBundle\Renderer\IconRendererInterface;
 use WBW\Library\Core\Argument\ArrayHelper;
@@ -30,15 +29,6 @@ class IconTwigExtension extends AbstractIconTwigExtension implements IconRendere
      * @var string
      */
     const SERVICE_NAME = "webeweb.adminbsb.twig.extension.ui.icon";
-
-    /**
-     * Constructor.
-     *
-     * @param Twig_Environment $twigEnvironment The Twig environment.
-     */
-    public function __construct(Twig_Environment $twigEnvironment) {
-        parent::__construct($twigEnvironment);
-    }
 
     /**
      * Displays an AdminBSB basic icon.

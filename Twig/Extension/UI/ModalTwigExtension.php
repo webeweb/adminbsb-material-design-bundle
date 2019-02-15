@@ -11,9 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
-use Twig_Environment;
 use Twig_SimpleFunction;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension;
 use WBW\Library\Core\Argument\ArrayHelper;
 
 /**
@@ -30,15 +28,6 @@ class ModalTwigExtension extends AbstractModalTwigExtension {
      * @var string
      */
     const SERVICE_NAME = "webeweb.adminbsb.twig.extension.ui.modal";
-
-    /**
-     * Constructor.
-     *
-     * @param Twig_Environment $twigEnvironment The Twig environment.
-     */
-    public function __construct(Twig_Environment $twigEnvironment) {
-        parent::__construct($twigEnvironment, new TypographyTwigExtension($twigEnvironment));
-    }
 
     /**
      * Displays an AdminBSB modal header.

@@ -11,10 +11,9 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
-use Twig_Environment;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AdminBSBRendererTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\RendererTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension as BaseTwigExtension;
 
 /**
  * Abstract button Twig extension.
@@ -23,16 +22,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\RendererTwigExtension;
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\UI
  * @abstract
  */
-abstract class AbstractButtonTwigExtension extends AbstractTwigExtension {
-
-    /**
-     * Constructor.
-     *
-     * @param Twig_Environment $twigEnvironment The Twig environment.
-     */
-    protected function __construct(Twig_Environment $twigEnvironment) {
-        parent::__construct($twigEnvironment);
-    }
+abstract class AbstractButtonTwigExtension extends BaseTwigExtension {
 
     /**
      * Displays an AdminBSB button.
@@ -41,7 +31,7 @@ abstract class AbstractButtonTwigExtension extends AbstractTwigExtension {
      * @param string $title The button title.
      * @param string $size The button size.
      * @param bool $block Block button ?
-     * @param booelan $disable Disable button ?
+     * @param bool $disable Disable button ?
      * @param string $class The button class.
      * @param string $icon The button icon.
      * @param bool $circle Circle button ?
@@ -69,8 +59,8 @@ abstract class AbstractButtonTwigExtension extends AbstractTwigExtension {
         $attributes["disabled"]    = true === $disable ? "disabled" : null;
 
         // Handle the parameters.
-        $innerHTML = null !== $content ? $content : "";
         $glyphicon = null !== $icon ? RendererTwigExtension::renderIcon($this->getTwigEnvironment(), $icon, $style) : "";
+        $innerHTML = null !== $content ? $content : "";
 
         // Return the HTML.
         return static::coreHTMLElement("button", $glyphicon . $innerHTML, $attributes);
