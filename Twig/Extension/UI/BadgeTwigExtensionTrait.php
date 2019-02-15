@@ -40,7 +40,7 @@ trait BadgeTwigExtensionTrait {
      *
      * @param BadgeTwigExtension $badgeTwigExtension The badge Twig extension.
      */
-    protected function setBadgeTwigExtension($badgeTwigExtension) {
+    protected function setBadgeTwigExtension(BadgeTwigExtension $badgeTwigExtension = null) {
         $this->badgeTwigExtension = $badgeTwigExtension;
         return $this;
     }
