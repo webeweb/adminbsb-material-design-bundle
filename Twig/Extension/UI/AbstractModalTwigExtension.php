@@ -13,9 +13,9 @@ namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
 use Twig_Environment;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\TypographyTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\TypographyTwigExtensionTrait;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\RendererTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtensionTrait;
 
 /**
  * Abstract modal Twig extension.
@@ -32,11 +32,10 @@ abstract class AbstractModalTwigExtension extends AbstractTwigExtension {
      * Constructor.
      *
      * @param Twig_Environment $twigEnvironment The Twig environment.
-     * @param TypographyTwigExtension $typographyTwigExtension The typography.
      */
-    protected function __construct(Twig_Environment $twigEnvironment, TypographyTwigExtension $typographyTwigExtension) {
+    public function __construct(Twig_Environment $twigEnvironment) {
         parent::__construct($twigEnvironment);
-        $this->setTypographyTwigExtension($typographyTwigExtension);
+        $this->setTypographyTwigExtension(new TypographyTwigExtension($twigEnvironment));
     }
 
     /**
@@ -48,13 +47,11 @@ abstract class AbstractModalTwigExtension extends AbstractTwigExtension {
      */
     protected function adminBSBModalHeader($content, $icon) {
 
-        // Initialize the parameters.
         $innerHTML = $content;
         if (null !== $icon) {
             $innerHTML = RendererTwigExtension::renderIcon($this->getTwigEnvironment(), $icon, "margin: -4px 0; vertical-align: sub;") . $innerHTML;
         }
 
-        // Return the HTML.
         return $this->getTypographyTwigExtension()->bootstrapHeading3Function(["class" => "modal-title", "content" => $innerHTML]);
     }
 }
