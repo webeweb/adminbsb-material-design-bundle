@@ -12,8 +12,6 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Menu;
 
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Translation\TranslatorInterface;
-use Twig_Environment;
 use Twig_SimpleFunction;
 use WBW\Bundle\CoreBundle\Navigation\NavigationTree;
 use WBW\Bundle\CoreBundle\Navigation\NavigationTreeHelper;
@@ -32,16 +30,6 @@ class MultiLevelMenuTwigExtension extends AbstractMenuTwigExtension {
      * @var string
      */
     const SERVICE_NAME = "webeweb.adminbsb.twig.extension.menu.multi_level_menu";
-
-    /**
-     * Constructor.
-     *
-     * @param Twig_Environment $twigEnvironment The Twig environment.
-     * @param TranslatorInterface $translator The translator.
-     */
-    public function __construct(Twig_Environment $twigEnvironment, TranslatorInterface $translator) {
-        parent::__construct($twigEnvironment, $translator);
-    }
 
     /**
      * Displays an AdminBSB multi level menu.
