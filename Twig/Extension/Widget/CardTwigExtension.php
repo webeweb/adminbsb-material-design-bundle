@@ -11,9 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget;
 
-use Twig_Environment;
 use Twig_SimpleFunction;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension;
 use WBW\Library\Core\Argument\ArrayHelper;
 
 /**
@@ -30,16 +28,6 @@ class CardTwigExtension extends AbstractCardTwigExtension {
      * @var string
      */
     const SERVICE_NAME = "webeweb.adminbsb.twig.extension.widget.card";
-
-    /**
-     * Constructor.
-     *
-     * @param Twig_Environment $twigEnvironment The Twig environment.
-     * @param TypographyTwigExtension $typographyTwigExtension The typography.
-     */
-    public function __construct(Twig_Environment $twigEnvironment, TypographyTwigExtension $typographyTwigExtension) {
-        parent::__construct($twigEnvironment, $typographyTwigExtension);
-    }
 
     /**
      * Displays an AdminBSB card header.

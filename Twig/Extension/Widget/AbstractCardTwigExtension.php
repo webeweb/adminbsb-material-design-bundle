@@ -14,8 +14,8 @@ namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget;
 use Twig_Environment;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AdminBSBRendererTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtensionTrait;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\CSS\TypographyTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\CSS\TypographyTwigExtensionTrait;
 
 /**
  * Abstract card twig extension.
@@ -34,7 +34,7 @@ abstract class AbstractCardTwigExtension extends AbstractTwigExtension {
      * @param Twig_Environment $twigEnvironment The Twig environment.
      * @param TypographyTwigExtension $typographyTwigExtension The typography.
      */
-    protected function __construct(Twig_Environment $twigEnvironment, TypographyTwigExtension $typographyTwigExtension) {
+    public function __construct(Twig_Environment $twigEnvironment, TypographyTwigExtension $typographyTwigExtension) {
         parent::__construct($twigEnvironment);
         $this->setTypographyTwigExtension($typographyTwigExtension);
     }
@@ -49,7 +49,6 @@ abstract class AbstractCardTwigExtension extends AbstractTwigExtension {
      */
     protected function adminBSBCardHeader($content, $description, $icon) {
 
-        // Initialize the parameters.
         $innerHTML = $content;
         if (null !== $description) {
             $innerHTML .= static::coreHTMLElement("small", $description);
@@ -58,7 +57,6 @@ abstract class AbstractCardTwigExtension extends AbstractTwigExtension {
             $innerHTML = AdminBSBRendererTwigExtension::renderIcon($icon, "margin: -4px 4px 0 0; vertical-align: sub;") . $innerHTML;
         }
 
-        // Return the HTML.
         return $this->getTypography()->bootstrapHeading2Function(["class" => "card-header", "content" => $innerHTML]);
     }
 }
