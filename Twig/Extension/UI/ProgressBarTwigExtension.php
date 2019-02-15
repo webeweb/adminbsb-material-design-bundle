@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
-use Twig_Environment;
+use Twig_SimpleFilter;
 use Twig_SimpleFunction;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarTwigExtension as BaseTwigExtension;
@@ -33,15 +33,6 @@ class ProgressBarTwigExtension extends BaseTwigExtension {
     const SERVICE_NAME = "webeweb.adminbsb.twig.extension.ui.progress_bar";
 
     /**
-     * Constructor.
-     *
-     * @param Twig_Environment $twigEnvironment The Twig environment.
-     */
-    public function __construct(Twig_Environment $twigEnvironment) {
-        parent::__construct($twigEnvironment);
-    }
-
-    /**
      * Displays an AdminBSB progress bar "Material design".
      *
      * @param array $args The arguments.
@@ -52,13 +43,27 @@ class ProgressBarTwigExtension extends BaseTwigExtension {
     }
 
     /**
+     * Get the Twig filters.
+     *
+     * @return Twig_SimpleFilter[] Returns the Twig filters.
+     */
+    public function getFilters() {
+        return [];
+    }
+
+    /**
      * Get the Twig functions.
      *
      * @return array Returns the Twig functions.
      */
     public function getFunctions() {
         return [
+            new Twig_SimpleFunction("adminBSBProgressBarBasic", [$this, "bootstrapProgressBarBasicFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBProgressBarDanger", [$this, "bootstrapProgressBarDangerFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBProgressBarInfo", [$this, "bootstrapProgressBarInfoFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("adminBSBProgressBarMaterialDesign", [$this, "adminBSBProgressBarMaterialDesignFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBProgressBarSuccess", [$this, "bootstrapProgressBarSuccessFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBProgressBarWarning", [$this, "bootstrapProgressBarWarningFunction"], ["is_safe" => ["html"]]),
         ];
     }
 }
