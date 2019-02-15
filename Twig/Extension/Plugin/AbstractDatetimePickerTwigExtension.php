@@ -75,7 +75,7 @@ EOT;
      * @param Twig_Environment $twigEnvironment The Twig environment.
      * @param TranslatorInterface $translator The translator.
      */
-    protected function __construct(Twig_Environment $twigEnvironment, TranslatorInterface $translator) {
+    public function __construct(Twig_Environment $twigEnvironment, TranslatorInterface $translator) {
         parent::__construct($twigEnvironment);
         $this->setTranslator($translator);
     }
@@ -94,10 +94,8 @@ EOT;
      */
     protected function adminBSBDatetimePicker($selector, $clearButton, $date, $format, $lang, $time, $weekStart) {
 
-        // Initialize the values.
         $weekStarts = [0, 1, 2, 3, 4, 5, 6];
 
-        // Initialize the parameters.
         $cancelText   = $this->getTranslator()->trans("label.cancel", [], "BootstrapBundle");
         $clearText    = $this->getTranslator()->trans("label.delete", [], "BootstrapBundle");
         $bClearButton = StringHelper::parseBoolean($clearButton);
@@ -105,11 +103,9 @@ EOT;
         $bTime        = StringHelper::parseBoolean($time);
         $iWeekStart   = true === in_array($weekStart, $weekStarts) ? $weekStart : 0;
 
-        //
         $searches = ["%selector%", "%cancelText%", "%clearButton%", "%clearText%", "%date%", "%format%", "%lang%", "%time%", "%weekStart%"];
         $replaces = [$selector, $cancelText, $bClearButton, $clearText, $bDate, $format, $lang, $bTime, $iWeekStart];
 
-        // Return the HTML.
         return StringHelper::replace(self::DATETIMEPICKER, $searches, $replaces);
     }
 }
