@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Form;
 
-use Twig_Environment;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Library\Core\Argument\StringHelper;
 
@@ -23,15 +22,6 @@ use WBW\Library\Core\Argument\StringHelper;
  * @abstract
  */
 abstract class AbstractSwitchButtonTwigExtension extends AbstractTwigExtension {
-
-    /**
-     * Constructor.
-     *
-     * @param Twig_Environment $twigEnvironment The Twig environment.
-     */
-    protected function __construct(Twig_Environment $twigEnvironment) {
-        parent::__construct($twigEnvironment);
-    }
 
     /**
      * Displays an AdminBSB switch button.
@@ -47,10 +37,8 @@ abstract class AbstractSwitchButtonTwigExtension extends AbstractTwigExtension {
      */
     protected function adminBSBSwitchButton($offLabel, $name, $checked, $disabled, $onLabel, array $attrs, $class) {
 
-        // Initialize the template.
         $template = "<input %attributes%>%innerHTML%";
 
-        // Initialize the attributes.
         $attributes = $attrs;
 
         $attributes["name"]     = $name;
@@ -58,7 +46,6 @@ abstract class AbstractSwitchButtonTwigExtension extends AbstractTwigExtension {
         $attributes["checked"]  = true === $checked ? "checked" : null;
         $attributes["disabled"] = true === $disabled ? "disabled" : null;
 
-        // Initialize the parameters.
         $lLabel = null !== $offLabel ? $offLabel : "";
         $rLabel = null !== $onLabel ? $onLabel : "";
 
@@ -66,7 +53,6 @@ abstract class AbstractSwitchButtonTwigExtension extends AbstractTwigExtension {
         $input = StringHelper::replace($template, ["%attributes%", "%innerHTML%"], [StringHelper::parseArray($attributes), $span]);
         $label = static::coreHTMLElement("label", $lLabel . $input . $rLabel);
 
-        // Return the HTML.
         return static::coreHTMLElement("div", $label, ["class" => "switch"]);
     }
 }

@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Form;
 
-use Twig_Environment;
 use Twig_SimpleFunction;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
 use WBW\Library\Core\Argument\ArrayHelper;
@@ -30,15 +29,6 @@ class RadioButtonTwigExtension extends AbstractRadioButtonTwigExtension {
      * @var string
      */
     const SERVICE_NAME = "webeweb.adminbsb.twig.extension.form.radio_button";
-
-    /**
-     * Constructor.
-     *
-     * @param Twig_Environment $twigEnvironment The Twig environment.
-     */
-    public function __construct(Twig_Environment $twigEnvironment) {
-        parent::__construct($twigEnvironment);
-    }
 
     /**
      * Displays an AdminBSB radio button "Basic".
