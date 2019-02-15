@@ -187,7 +187,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
-        $this->assertCount(5, $res);
+        $this->assertCount(15, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
         $this->assertEquals("adminBSBBold", $res[0]->getName());
@@ -195,23 +195,73 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
-        $this->assertEquals("adminBSBItalic", $res[1]->getName());
-        $this->assertEquals([$obj, "adminBSBItalicFunction"], $res[1]->getCallable());
+        $this->assertEquals("adminBSBDeleted", $res[1]->getName());
+        $this->assertEquals([$obj, "bootstrapDeletedFunction"], $res[1]->getCallable());
         $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[2]);
-        $this->assertEquals("adminBSBOverline", $res[2]->getName());
-        $this->assertEquals([$obj, "adminBSBOverlineFunction"], $res[2]->getCallable());
+        $this->assertEquals("adminBSBHeading1", $res[2]->getName());
+        $this->assertEquals([$obj, "bootstrapHeading1Function"], $res[2]->getCallable());
         $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[3]);
-        $this->assertEquals("adminBSBLineThrough", $res[3]->getName());
-        $this->assertEquals([$obj, "adminBSBLineThroughFunction"], $res[3]->getCallable());
+        $this->assertEquals("adminBSBHeading2", $res[3]->getName());
+        $this->assertEquals([$obj, "bootstrapHeading2Function"], $res[3]->getCallable());
         $this->assertEquals(["html"], $res[3]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[4]);
-        $this->assertEquals("adminBSBUnderline", $res[4]->getName());
-        $this->assertEquals([$obj, "adminBSBUnderlineFunction"], $res[4]->getCallable());
+        $this->assertEquals("adminBSBHeading3", $res[4]->getName());
+        $this->assertEquals([$obj, "bootstrapHeading3Function"], $res[4]->getCallable());
         $this->assertEquals(["html"], $res[4]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[5]);
+        $this->assertEquals("adminBSBHeading4", $res[5]->getName());
+        $this->assertEquals([$obj, "bootstrapHeading4Function"], $res[5]->getCallable());
+        $this->assertEquals(["html"], $res[5]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[6]);
+        $this->assertEquals("adminBSBHeading5", $res[6]->getName());
+        $this->assertEquals([$obj, "bootstrapHeading5Function"], $res[6]->getCallable());
+        $this->assertEquals(["html"], $res[6]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[7]);
+        $this->assertEquals("adminBSBHeading6", $res[7]->getName());
+        $this->assertEquals([$obj, "bootstrapHeading6Function"], $res[7]->getCallable());
+        $this->assertEquals(["html"], $res[7]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[8]);
+        $this->assertEquals("adminBSBInserted", $res[8]->getName());
+        $this->assertEquals([$obj, "bootstrapInsertedFunction"], $res[8]->getCallable());
+        $this->assertEquals(["html"], $res[8]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[9]);
+        $this->assertEquals("adminBSBItalic", $res[9]->getName());
+        $this->assertEquals([$obj, "adminBSBItalicFunction"], $res[9]->getCallable());
+        $this->assertEquals(["html"], $res[9]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[10]);
+        $this->assertEquals("adminBSBLineThrough", $res[10]->getName());
+        $this->assertEquals([$obj, "adminBSBLineThroughFunction"], $res[10]->getCallable());
+        $this->assertEquals(["html"], $res[10]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[11]);
+        $this->assertEquals("adminBSBMarked", $res[11]->getName());
+        $this->assertEquals([$obj, "bootstrapMarkedFunction"], $res[11]->getCallable());
+        $this->assertEquals(["html"], $res[11]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[12]);
+        $this->assertEquals("adminBSBOverline", $res[12]->getName());
+        $this->assertEquals([$obj, "adminBSBOverlineFunction"], $res[12]->getCallable());
+        $this->assertEquals(["html"], $res[12]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[13]);
+        $this->assertEquals("adminBSBSmall", $res[13]->getName());
+        $this->assertEquals([$obj, "bootstrapSmallFunction"], $res[13]->getCallable());
+        $this->assertEquals(["html"], $res[13]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[14]);
+        $this->assertEquals("adminBSBUnderline", $res[14]->getName());
+        $this->assertEquals([$obj, "adminBSBUnderlineFunction"], $res[14]->getCallable());
+        $this->assertEquals(["html"], $res[14]->getSafe(new Twig_Node()));
     }
 }

@@ -11,8 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography;
 
-use Twig_Environment;
-use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension as BaseTwigExtension;
 
 /**
  * Abstract typography Twig extension.
@@ -21,16 +20,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography
  * @abstract
  */
-abstract class AbstractTypographyTwigExtension extends AbstractTwigExtension {
-
-    /**
-     * Constructor.
-     *
-     * @param Twig_Environment $twigEnvironment The Twig environment.
-     */
-    protected function __construct(Twig_Environment $twigEnvironment) {
-        parent::__construct($twigEnvironment);
-    }
+abstract class AbstractTypographyTwigExtension extends BaseTwigExtension {
 
     /**
      * Displays an AdminBSB bold text.

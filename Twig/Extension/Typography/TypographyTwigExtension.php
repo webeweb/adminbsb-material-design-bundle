@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography;
 
-use Twig_Environment;
 use Twig_SimpleFunction;
 use WBW\Library\Core\Argument\ArrayHelper;
 
@@ -29,15 +28,6 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
      * @var string
      */
     const SERVICE_NAME = "webeweb.adminbsb.twig.extension.typography";
-
-    /**
-     * Constructor.
-     *
-     * @param Twig_Environment $twigEnvironment The Twig environment.
-     */
-    public function __construct(Twig_Environment $twigEnvironment) {
-        parent::__construct($twigEnvironment);
-    }
 
     /**
      * Displays an AdminBSB bold text.
@@ -90,6 +80,15 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
     }
 
     /**
+     * Get the Twig filters.
+     *
+     * @return Twig_SimpleFilter[] Returns the Twig filters.
+     */
+    public function getFilters() {
+        return [];
+    }
+
+    /**
      * Get the Twig functions.
      *
      * @return array Returns the Twig functions.
@@ -97,9 +96,19 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
     public function getFunctions() {
         return [
             new Twig_SimpleFunction("adminBSBBold", [$this, "adminBSBBoldFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBDeleted", [$this, "bootstrapDeletedFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBHeading1", [$this, "bootstrapHeading1Function"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBHeading2", [$this, "bootstrapHeading2Function"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBHeading3", [$this, "bootstrapHeading3Function"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBHeading4", [$this, "bootstrapHeading4Function"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBHeading5", [$this, "bootstrapHeading5Function"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBHeading6", [$this, "bootstrapHeading6Function"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBInserted", [$this, "bootstrapInsertedFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("adminBSBItalic", [$this, "adminBSBItalicFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBOverline", [$this, "adminBSBOverlineFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("adminBSBLineThrough", [$this, "adminBSBLineThroughFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBMarked", [$this, "bootstrapMarkedFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBOverline", [$this, "adminBSBOverlineFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("adminBSBSmall", [$this, "bootstrapSmallFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("adminBSBUnderline", [$this, "adminBSBUnderlineFunction"], ["is_safe" => ["html"]]),
         ];
     }
