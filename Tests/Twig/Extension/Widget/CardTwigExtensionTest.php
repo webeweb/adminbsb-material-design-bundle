@@ -61,12 +61,12 @@ class CardTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBCardHeaderFunctionWitContent() {
+    public function testAdminBSBCardHeaderFunctionWithContent() {
 
         $obj = new CardTwigExtension($this->twigEnvironment, $this->typographyTwigExtension);
 
         $arg = ["content" => "content"];
-        $res = '<h2 class="card-header">content</h2>';
+        $res = '<h2 class="card-header"></h2>';
         $this->assertEquals($res, $obj->adminBSBCardHeaderFunction($arg));
 
     }
@@ -76,7 +76,7 @@ class CardTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBCardHeaderFunctionWitDescription() {
+    public function testAdminBSBCardHeaderFunctionWithDescription() {
 
         $obj = new CardTwigExtension($this->twigEnvironment, $this->typographyTwigExtension);
 
@@ -91,7 +91,7 @@ class CardTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBCardHeaderFunctionWitIcon() {
+    public function testAdminBSBCardHeaderFunctionWithIcon() {
 
         $obj = new CardTwigExtension($this->twigEnvironment, $this->typographyTwigExtension);
 
