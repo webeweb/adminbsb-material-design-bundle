@@ -61,7 +61,6 @@ class MultiLevelMenuTwigExtensionTest extends AbstractTestCase {
      * Tests the adminBSBMultiLevelMenuFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testAdminBSBMultiLevelMenuFunction() {
 

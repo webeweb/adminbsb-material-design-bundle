@@ -15,6 +15,7 @@ use Symfony\Component\Translation\TranslatorInterface;
 use Twig_Environment;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AdminBSBRendererTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\RendererTwigExtension;
 use WBW\Bundle\CoreBundle\Navigation\NavigationNode;
 use WBW\Bundle\CoreBundle\Navigation\NavigationTree;
 use WBW\Bundle\CoreBundle\Service\TranslatorTrait;
@@ -50,7 +51,6 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
      */
     protected function adminBSBMenu(NavigationTree $tree) {
 
-        // Initialize the template.
         $template = [];
 
         $template[] = $this->adminBSBMenuHeader($tree);
@@ -61,7 +61,6 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
             $template[] = $this->adminBSBMenuItem($current);
         }
 
-        // Return the HTML.
         return implode("\n", $template);
     }
 
@@ -73,15 +72,12 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
      */
     private function adminBSBMenuHeader(NavigationTree $tree) {
 
-        // Initialize the attributes.
         $attributes = [];
 
         $attributes["class"] = "header";
 
-        // Initialize the parameters.
         $innerHTML = null !== $tree->getId() ? $this->translate($tree->getId()) : "";
 
-        // Return the HTML.
         return static::coreHTMLElement("li", $innerHTML, $attributes);
     }
 
@@ -103,7 +99,6 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
             break;
         }
 
-        // Initialize the template.
         $template = [];
 
         $template[] = "<li" . (true === $node->getActive() ? ' class="active"' : "") . ">";
@@ -123,7 +118,6 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
 
         $template [] = "</li>";
 
-        // Return the HTML.
         return implode("\n", $template);
     }
 
@@ -135,21 +129,16 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
      */
     private function adminBSBMenuItemLabel(NavigationNode $node) {
 
-        // Initialize the parameters.
         $innerHTML = null !== $node->getId() ? $this->translate($node->getId()) : "";
 
-        // Check the icon.
         if (null === $node->getIcon()) {
             return $innerHTML;
         }
 
-        // Initialize the template.
         $template = "%glyphicon%<span>%innerHTML%</span>";
 
-        // Initialize the parameters.
-        $glyphicon = AdminBSBRendererTwigExtension::renderIcon($node->getIcon());
+        $glyphicon = RendererTwigExtension::renderIcon($this->getTwigEnvironment(), $node->getIcon());
 
-        // Return the HTML.
         return StringHelper::replace($template, ["%glyphicon%", "%innerHTML%"], [$glyphicon, $innerHTML]);
     }
 
@@ -162,17 +151,14 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
      */
     private function adminBSBMenuItemLink(NavigationNode $node, $class) {
 
-        // Initialize the attributes.
         $attributes = [];
 
         $attributes["class"]  = $class;
         $attributes["href"]   = $node->getUri();
         $attributes["target"] = $node->getTarget();
 
-        // Initialize the parameters.
         $innerHTML = $this->adminBSBMenuItemLabel($node);
 
-        // Return the HTML.
         return static::coreHTMLElement("a", $innerHTML, $attributes);
     }
 
@@ -194,25 +180,21 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
      */
     private function translate($id) {
 
-        // Translate with Bootstrap bundle.
         $outputC = $this->getTranslator()->trans($id, [], "CoreBundle");
         if ($id !== $outputC) {
             return $outputC;
         }
 
-        // Translate with Bootstrap bundle.
         $outputB = $this->getTranslator()->trans($id, [], "BootstrapBundle");
         if ($id !== $outputB) {
             return $outputB;
         }
 
-        // Translate with AdminBSB bundle.
         $outputA = $this->getTranslator()->trans($id, [], "AdminBSBBundle");
         if ($id !== $outputA) {
             return $outputA;
         }
 
-        // Translate.
         return $this->getTranslator()->trans($id);
     }
 }
