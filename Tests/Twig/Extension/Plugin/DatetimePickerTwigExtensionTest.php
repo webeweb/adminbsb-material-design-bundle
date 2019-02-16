@@ -197,6 +197,7 @@ EOT;
 
         $this->assertEquals("webeweb.adminbsb.twig.extension.plugin.datetime_picker", DatetimePickerTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
+        $this->assertSame($this->translator, $obj->getTranslator());
     }
 
     /**
