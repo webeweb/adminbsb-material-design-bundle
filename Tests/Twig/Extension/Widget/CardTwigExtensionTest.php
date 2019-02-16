@@ -14,8 +14,8 @@ namespace WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Widget;
 use Twig_Node;
 use Twig_SimpleFunction;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\TypographyTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget\CardTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension;
 
 /**
  * Card widget Twig extension test.
@@ -66,7 +66,7 @@ class CardTwigExtensionTest extends AbstractTestCase {
         $obj = new CardTwigExtension($this->twigEnvironment, $this->typographyTwigExtension);
 
         $arg = ["content" => "content"];
-        $res = '<h2 class="card-header"></h2>';
+        $res = '<h2 class="card-header">content</h2>';
         $this->assertEquals($res, $obj->adminBSBCardHeaderFunction($arg));
 
     }
@@ -124,8 +124,9 @@ class CardTwigExtensionTest extends AbstractTestCase {
 
         $obj = new CardTwigExtension($this->twigEnvironment, $this->typographyTwigExtension);
 
-        $this->assertEquals("webeweb.adminbsb.twig.extension.form.checkbox", CardTwigExtension::SERVICE_NAME);
+        $this->assertEquals("webeweb.adminbsb.twig.extension.widget.card", CardTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
+        $this->assertSame($this->typographyTwigExtension, $obj->getTypographyTwigExtension());
     }
 
     /**
