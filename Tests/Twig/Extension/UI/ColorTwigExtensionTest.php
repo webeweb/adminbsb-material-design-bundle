@@ -28,7 +28,6 @@ class ColorTwigExtensionTest extends AbstractTestCase {
      * Tests the adminBSBColorMaterialDesignFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testColorMaterialDesignFunction() {
 
