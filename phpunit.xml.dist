@@ -30,7 +30,6 @@
             <exclude>Tests/Provider/</exclude>
             <exclude>Tests/Twig/Extension/Menu/</exclude>
             <exclude>Tests/Twig/Extension/UI/ColorTwigExtensionTest.php</exclude>
-            <exclude>Tests/Twig/Extension/Widget/</exclude>
         </testsuite>
     </testsuites>
 </phpunit>
