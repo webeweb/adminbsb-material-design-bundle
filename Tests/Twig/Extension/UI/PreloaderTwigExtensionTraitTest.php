@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Twig\Extension\UI;
+namespace WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\UI;
 
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 use WBW\Bundle\AdminBSBBundle\Tests\Fixtures\Twig\Extension\UI\TestPreloaderTwigExtensionTrait;
@@ -19,7 +19,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\PreloaderTwigExtension;
  * Preloader Twig extension trait test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package Twig\Extension\UI
+ * @package WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\UI
  */
 class PreloaderTwigExtensionTraitTest extends AbstractTestCase {
 
