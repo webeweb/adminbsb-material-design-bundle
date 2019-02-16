@@ -13,6 +13,7 @@ namespace Twig\Extension\UI;
 
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 use WBW\Bundle\AdminBSBBundle\Tests\Fixtures\Twig\Extension\UI\TestModalTwigExtensionTrait;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\TypographyTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ModalTwigExtension;
 
 /**
@@ -22,6 +23,23 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ModalTwigExtension;
  * @package Twig\Extension\UI
  */
 class ModalTwigExtensionTraitTest extends AbstractTestCase {
+
+    /**
+     * Typography Twig extension.
+     *
+     * @var TypographyTwigExtension
+     */
+    private $typographyTwigExtension;
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function setUp() {
+        parent::setUp();
+
+        // Set a Typography Twig extension mock.
+        $this->typographyTwigExtension = new TypographyTwigExtension($this->twigEnvironment);
+    }
 
     /**
      * Tests the __construct() method.
@@ -43,7 +61,7 @@ class ModalTwigExtensionTraitTest extends AbstractTestCase {
     public function testSetModalTwigExtension() {
 
         // Set a Modal Twig extension mock.
-        $modalTwigExtension = new ModalTwigExtension($this->twigEnvironment);
+        $modalTwigExtension = new ModalTwigExtension($this->twigEnvironment, $this->typographyTwigExtension);
 
         $obj = new TestModalTwigExtensionTrait();
 

@@ -32,10 +32,11 @@ abstract class AbstractModalTwigExtension extends AbstractTwigExtension {
      * Constructor.
      *
      * @param Twig_Environment $twigEnvironment The Twig environment.
+     * @param TypographyTwigExtension $typographyTwigExtension The Typography Twig extension.
      */
-    public function __construct(Twig_Environment $twigEnvironment) {
+    public function __construct(Twig_Environment $twigEnvironment, TypographyTwigExtension $typographyTwigExtension) {
         parent::__construct($twigEnvironment);
-        $this->setTypographyTwigExtension(new TypographyTwigExtension($twigEnvironment));
+        $this->setTypographyTwigExtension($typographyTwigExtension);
     }
 
     /**
