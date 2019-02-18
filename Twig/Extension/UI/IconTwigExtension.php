@@ -47,7 +47,7 @@ class IconTwigExtension extends AbstractIconTwigExtension implements IconRendere
      * @return string Returns the AdminBSB material design icon.
      */
     public function adminBSBIconMaterialDesignFunction(array $args = []) {
-        return $this->adminBSBIcon(ArrayHelper::get($args, "name"), ArrayHelper::get($args, "style"), self::fixColor(ArrayHelper::get($args, "color"), "col-"));
+        return $this->adminBSBIcon(ArrayHelper::get($args, "name"), ArrayHelper::get($args, "style"), self::materialDesignColor(ArrayHelper::get($args, "color"), "col-"));
     }
 
     /**

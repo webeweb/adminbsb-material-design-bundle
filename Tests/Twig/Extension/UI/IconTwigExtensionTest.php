@@ -92,8 +92,8 @@ class IconTwigExtensionTest extends AbstractTestCase {
 
         $obj = new IconTwigExtension($this->twigEnvironment);
 
-        $arg = ["name" => "person", "color" => "black", "style" => "margin: 4px;"];
-        $res = '<i class="material-icons col-black" style="margin: 4px;">person</i>';
+        $arg = ["name" => "person", "color" => "pink", "style" => "margin: 4px;"];
+        $res = '<i class="material-icons col-pink" style="margin: 4px;">person</i>';
         $this->assertEquals($res, $obj->adminBSBIconMaterialDesignFunction($arg));
     }
 
@@ -106,8 +106,8 @@ class IconTwigExtensionTest extends AbstractTestCase {
 
         $obj = new IconTwigExtension($this->twigEnvironment);
 
-        $arg = ["color" => "black"];
-        $res = '<i class="material-icons col-black">home</i>';
+        $arg = ["color" => "pink"];
+        $res = '<i class="material-icons col-pink">home</i>';
         $this->assertEquals($res, $obj->adminBSBIconMaterialDesignFunction($arg));
     }
 

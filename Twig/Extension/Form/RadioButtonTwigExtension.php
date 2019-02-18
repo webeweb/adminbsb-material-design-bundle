@@ -47,7 +47,7 @@ class RadioButtonTwigExtension extends AbstractRadioButtonTwigExtension {
      * @return string Returns the AdminBSB radio button "Material design".
      */
     public function adminBSBRadioButtonMaterialDesignFunction(array $args = []) {
-        return $this->adminBSBRadioButton(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "name"), ArrayHelper::get($args, "id"), ArrayHelper::get($args, "checked", false), ArrayHelper::get($args, "disabled", false), ArrayHelper::get($args, "withGap", false), ArrayHelper::get($args, "class", "") . self::fixColor(ArrayHelper::get($args, "color", "red"), " radio-col-"));
+        return $this->adminBSBRadioButton(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "name"), ArrayHelper::get($args, "id"), ArrayHelper::get($args, "checked", false), ArrayHelper::get($args, "disabled", false), ArrayHelper::get($args, "withGap", false), ArrayHelper::get($args, "class", "") . self::materialDesignColor(ArrayHelper::get($args, "color", "red"), " radio-col-"));
     }
 
     /**

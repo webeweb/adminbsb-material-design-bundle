@@ -39,7 +39,7 @@ class ProgressBarTwigExtension extends BaseTwigExtension {
      * @return string Returns the AdminBSB progress bar "Material design".
      */
     public function adminBSBProgressBarMaterialDesignFunction(array $args = []) {
-        return $this->bootstrapProgressBar(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "value", 50), ArrayHelper::get($args, "min", 0), ArrayHelper::get($args, "max", 100), ArrayHelper::get($args, "striped", false), ArrayHelper::get($args, "animated", false), AbstractTwigExtension::fixColor(ArrayHelper::get($args, "color", "red"), "bg-"));
+        return $this->bootstrapProgressBar(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "value", 50), ArrayHelper::get($args, "min", 0), ArrayHelper::get($args, "max", 100), ArrayHelper::get($args, "striped", false), ArrayHelper::get($args, "animated", false), AbstractTwigExtension::materialDesignColor(ArrayHelper::get($args, "color", "red"), "bg-"));
     }
 
     /**

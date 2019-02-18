@@ -13,6 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Twig\Extension;
 
 use Twig_Environment;
 use WBW\Bundle\AdminBSBBundle\Provider\Color\DefaultColorProvider;
+use WBW\Bundle\CoreBundle\Helper\ColorHelper;
 use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension as BaseTwigExtension;
 
 /**
@@ -34,16 +35,25 @@ abstract class AbstractTwigExtension extends BaseTwigExtension {
     }
 
     /**
-     * Fix a color.
+     * Material Design color.
      *
-     * @param string $name The color name.
-     * @param string $prefix The color prefix.
-     * @return string Returns the prefix color in case of success, default color otherwise.
+     * @param string $name The name.
+     * @param string $prefix The prefix.
+     * @return string Returns the Material Design color.
      */
-    public static function fixColor($name, $prefix = "") {
-        if (false === array_key_exists($name, DefaultColorProvider::getColors())) {
-            $name = "red";
+    public static function materialDesignColor($name, $prefix = "") {
+
+        $colors = ColorHelper::getMaterialDesignColorPalette();
+
+        $color = $colors[0];
+
+        foreach ($colors as $current) {
+            if ($name !== $current->getName()) {
+                continue;
+            }
+            $color = $current;
         }
-        return $prefix . $name;
+
+        return implode("", [$prefix, $color->getName()]);
     }
 }

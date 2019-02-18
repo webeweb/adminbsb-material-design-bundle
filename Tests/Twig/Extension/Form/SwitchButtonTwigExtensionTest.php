@@ -47,8 +47,8 @@ class SwitchButtonTwigExtensionTest extends AbstractTestCase {
 
         $obj = new SwitchButtonTwigExtension($this->twigEnvironment);
 
-        $arg = ["offLabel" => "offLabel", "name" => "name", "checked" => true, "disabled" => true, "onLabel" => "onLabel", "color" => "black"];
-        $res = '<div class="switch"><label>offLabel<input name="name" type="checkbox" checked="checked" disabled="disabled"><span class="lever switch-col-black"></span>onLabel</label></div>';
+        $arg = ["offLabel" => "offLabel", "name" => "name", "checked" => true, "disabled" => true, "onLabel" => "onLabel", "color" => "pink"];
+        $res = '<div class="switch"><label>offLabel<input name="name" type="checkbox" checked="checked" disabled="disabled"><span class="lever switch-col-pink"></span>onLabel</label></div>';
         $this->assertEquals($res, $obj->adminBSBSwitchButtonMaterialDesignFunction($arg));
     }
 
@@ -75,8 +75,8 @@ class SwitchButtonTwigExtensionTest extends AbstractTestCase {
 
         $obj = new SwitchButtonTwigExtension($this->twigEnvironment);
 
-        $arg = ["color" => "black"];
-        $res = '<div class="switch"><label><input type="checkbox"><span class="lever switch-col-black"></span></label></div>';
+        $arg = ["color" => "pink"];
+        $res = '<div class="switch"><label><input type="checkbox"><span class="lever switch-col-pink"></span></label></div>';
         $this->assertEquals($res, $obj->adminBSBSwitchButtonMaterialDesignFunction($arg));
     }
 

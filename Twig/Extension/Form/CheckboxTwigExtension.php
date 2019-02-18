@@ -46,7 +46,7 @@ class CheckboxTwigExtension extends AbstractCheckboxTwigExtension {
      * @return string Returns the AdminBSB checkbox "Material design".
      */
     public function adminBSBCheckboxMaterialDesignFunction(array $args = []) {
-        return $this->adminBSBCheckbox(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "name"), ArrayHelper::get($args, "id"), ArrayHelper::get($args, "checked", false), ArrayHelper::get($args, "disabled", false), ArrayHelper::get($args, "filledIn", false), ArrayHelper::get($args, "class", "") . self::fixColor(ArrayHelper::get($args, "color", "red"), " chk-col-"));
+        return $this->adminBSBCheckbox(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "name"), ArrayHelper::get($args, "id"), ArrayHelper::get($args, "checked", false), ArrayHelper::get($args, "disabled", false), ArrayHelper::get($args, "filledIn", false), ArrayHelper::get($args, "class", "") . self::materialDesignColor(ArrayHelper::get($args, "color", "red"), " chk-col-"));
     }
 
     /**

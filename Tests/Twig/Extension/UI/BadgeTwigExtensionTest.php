@@ -243,8 +243,8 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
 
         $obj = new BadgeTwigExtension($this->twigEnvironment);
 
-        $arg = ["content" => "content", "label" => "label", "color" => "black", "link" => "http://domain.tld"];
-        $res = '<a class="list-group-item" href="http://domain.tld"><span class="badge bg-black">content</span>label</a>';
+        $arg = ["content" => "content", "label" => "label", "color" => "pink", "link" => "http://domain.tld"];
+        $res = '<a class="list-group-item" href="http://domain.tld"><span class="badge bg-pink">content</span>label</a>';
         $this->assertEquals($res, $obj->adminBSBButtonBadgeListFunction($arg));
     }
 
@@ -257,8 +257,8 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
 
         $obj = new BadgeTwigExtension($this->twigEnvironment);
 
-        $arg = ["color" => "black"];
-        $res = '<a class="list-group-item" href="javascript:void(0);"><span class="badge bg-black"></span></a>';
+        $arg = ["color" => "pink"];
+        $res = '<a class="list-group-item" href="javascript:void(0);"><span class="badge bg-pink"></span></a>';
         $this->assertEquals($res, $obj->adminBSBButtonBadgeListFunction($arg));
     }
 
@@ -327,8 +327,8 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
 
         $obj = new BadgeTwigExtension($this->twigEnvironment);
 
-        $arg = ["content" => "content", "label" => "label", "large" => true, "color" => "black"];
-        $res = '<button class="btn bg-black btn-block waves-effect btn-lg" type="button">content<span class="badge">label</span></button>';
+        $arg = ["content" => "content", "label" => "label", "large" => true, "color" => "pink"];
+        $res = '<button class="btn bg-pink btn-block waves-effect btn-lg" type="button">content<span class="badge">label</span></button>';
         $this->assertEquals($res, $obj->adminBSBButtonBadgeMaterialDesignFunction($arg));
     }
 
@@ -341,8 +341,8 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
 
         $obj = new BadgeTwigExtension($this->twigEnvironment);
 
-        $arg = ["color" => "black"];
-        $res = '<button class="btn bg-black btn-block waves-effect" type="button"><span class="badge"></span></button>';
+        $arg = ["color" => "pink"];
+        $res = '<button class="btn bg-pink btn-block waves-effect" type="button"><span class="badge"></span></button>';
         $this->assertEquals($res, $obj->adminBSBButtonBadgeMaterialDesignFunction($arg));
     }
 

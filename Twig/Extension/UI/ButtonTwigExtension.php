@@ -82,7 +82,7 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
      * @return string Returns the AdminBSB button "Material design".
      */
     public function adminBSBButtonMaterialDesignFunction(array $args = []) {
-        return $this->adminBSBButton(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "title"), ArrayHelper::get($args, "size", false), ArrayHelper::get($args, "block", false), ArrayHelper::get($args, "disable", false), AbstractTwigExtension::fixColor(ArrayHelper::get($args, "color", "red"), "bg-"), ArrayHelper::get($args, "icon"), ArrayHelper::get($args, "circle", false));
+        return $this->adminBSBButton(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "title"), ArrayHelper::get($args, "size", false), ArrayHelper::get($args, "block", false), ArrayHelper::get($args, "disable", false), AbstractTwigExtension::materialDesignColor(ArrayHelper::get($args, "color", "red"), "bg-"), ArrayHelper::get($args, "icon"), ArrayHelper::get($args, "circle", false));
     }
 
     /**

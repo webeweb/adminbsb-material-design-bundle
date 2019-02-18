@@ -66,7 +66,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
      * @return string Returns the AdminBSB list badge.
      */
     public function adminBSBButtonBadgeListFunction(array $args = []) {
-        return $this->adminBSBBadge(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "label"), false, self::fixColor(ArrayHelper::get($args, "color", "red"), "bg-"), true, ArrayHelper::get($args, "link"));
+        return $this->adminBSBBadge(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "label"), false, self::materialDesignColor(ArrayHelper::get($args, "color", "red"), "bg-"), true, ArrayHelper::get($args, "link"));
     }
 
     /**
@@ -76,7 +76,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
      * @return string Returns the AdminBSB button badge "Material design".
      */
     public function adminBSBButtonBadgeMaterialDesignFunction(array $args = []) {
-        return $this->adminBSBBadge(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "label"), ArrayHelper::get($args, "large", false), self::fixColor(ArrayHelper::get($args, "color", "red"), "bg-"));
+        return $this->adminBSBBadge(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "label"), ArrayHelper::get($args, "large", false), self::materialDesignColor(ArrayHelper::get($args, "color", "red"), "bg-"));
     }
 
     /**

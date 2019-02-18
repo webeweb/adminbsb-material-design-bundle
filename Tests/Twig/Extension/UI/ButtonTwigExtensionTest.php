@@ -440,8 +440,8 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
-        $arg = ["content" => "content", "title" => "title", "size" => "lg", "disable" => true, "icon" => "person", "color" => "black"];
-        $res = '<button class="btn bg-black waves-effect btn-lg" title="title" type="button" data-toggle="tooltip" disabled="disabled"><i class="material-icons" style="margin: -4px 2px 0; vertical-align: sub;">person</i>content</button>';
+        $arg = ["content" => "content", "title" => "title", "size" => "lg", "disable" => true, "icon" => "person", "color" => "pink"];
+        $res = '<button class="btn bg-pink waves-effect btn-lg" title="title" type="button" data-toggle="tooltip" disabled="disabled"><i class="material-icons" style="margin: -4px 2px 0; vertical-align: sub;">person</i>content</button>';
         $this->assertEquals($res, $obj->adminBSBButtonMaterialDesignFunction($arg));
     }
 
@@ -482,8 +482,8 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
-        $arg = ["color" => "black"];
-        $res = '<button class="btn bg-black waves-effect" type="button"></button>';
+        $arg = ["color" => "pink"];
+        $res = '<button class="btn bg-pink waves-effect" type="button"></button>';
         $this->assertEquals($res, $obj->adminBSBButtonMaterialDesignFunction($arg));
     }
 

@@ -33,50 +33,50 @@ class PreloaderTwigExtension extends AbstractPreloaderTwigExtension {
      * Displays an AdminBSB preloader "Material design" L.
      *
      * @param array $args The arguments.
-     * @return string Retruns the AdminBSB preloader "Material design" L.
+     * @return string Returns the AdminBSB preloader "Material design" L.
      */
     public function adminBSBPreloaderMaterialDesignLFunction(array $args = []) {
-        return $this->adminBSBPreloader(self::fixColor(ArrayHelper::get($args, "color", "red"), "pl-"), "l");
+        return $this->adminBSBPreloader(self::materialDesignColor(ArrayHelper::get($args, "color", "red"), "pl-"), "l");
     }
 
     /**
      * Displays an AdminBSB preloader "Material design" S.
      *
      * @param array $args The arguments.
-     * @return string Retruns the AdminBSB preloader "Material design" S.
+     * @return string Returns the AdminBSB preloader "Material design" S.
      */
     public function adminBSBPreloaderMaterialDesignSFunction(array $args = []) {
-        return $this->adminBSBPreloader(self::fixColor(ArrayHelper::get($args, "color", "red"), "pl-"), "s");
+        return $this->adminBSBPreloader(self::materialDesignColor(ArrayHelper::get($args, "color", "red"), "pl-"), "s");
     }
 
     /**
      * Displays an AdminBSB preloader "Material design" SM.
      *
      * @param array $args The arguments.
-     * @return string Retruns the AdminBSB preloader "Material design" SM.
+     * @return string Returns the AdminBSB preloader "Material design" SM.
      */
     public function adminBSBPreloaderMaterialDesignSMFunction(array $args = []) {
-        return $this->adminBSBPreloader(self::fixColor(ArrayHelper::get($args, "color", "red"), "pl-"), "sm");
+        return $this->adminBSBPreloader(self::materialDesignColor(ArrayHelper::get($args, "color", "red"), "pl-"), "sm");
     }
 
     /**
      * Displays an AdminBSB preloader "Material design" XL.
      *
      * @param array $args The arguments.
-     * @return string Retruns the AdminBSB preloader "Material design" XL.
+     * @return string Returns the AdminBSB preloader "Material design" XL.
      */
     public function adminBSBPreloaderMaterialDesignXLFunction(array $args = []) {
-        return $this->adminBSBPreloader(self::fixColor(ArrayHelper::get($args, "color", "red"), "pl-"), "xl");
+        return $this->adminBSBPreloader(self::materialDesignColor(ArrayHelper::get($args, "color", "red"), "pl-"), "xl");
     }
 
     /**
      * Displays an AdminBSB preloader "Material design" XS.
      *
      * @param array $args The arguments.
-     * @return string Retruns the AdminBSB preloader "Material design" XS.
+     * @return string Returns the AdminBSB preloader "Material design" XS.
      */
     public function adminBSBPreloaderMaterialDesignXSFunction(array $args = []) {
-        return $this->adminBSBPreloader(self::fixColor(ArrayHelper::get($args, "color", "red"), "pl-"), "xs");
+        return $this->adminBSBPreloader(self::materialDesignColor(ArrayHelper::get($args, "color", "red"), "pl-"), "xs");
     }
 
     /**

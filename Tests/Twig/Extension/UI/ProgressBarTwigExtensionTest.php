@@ -33,8 +33,8 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
 
         $obj = new ProgressBarTwigExtension($this->twigEnvironment);
 
-        $arg = ["content" => "content", "value" => 75, "min" => 1, "max" => 150, "striped" => true, "animated" => true, "color" => "black"];
-        $res = '<div class="progress"><div class="progress-bar bg-black progress-bar-striped active" style="width: 75%;" role="progressbar" aria-valuenow="75" aria-valuemin="1" aria-valuemax="150%">content</div></div>';
+        $arg = ["content" => "content", "value" => 75, "min" => 1, "max" => 150, "striped" => true, "animated" => true, "color" => "pink"];
+        $res = '<div class="progress"><div class="progress-bar bg-pink progress-bar-striped active" style="width: 75%;" role="progressbar" aria-valuenow="75" aria-valuemin="1" aria-valuemax="150%">content</div></div>';
         $this->assertEquals($res, $obj->adminBSBProgressBarMaterialDesignFunction($arg));
     }
 
@@ -61,8 +61,8 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
 
         $obj = new ProgressBarTwigExtension($this->twigEnvironment);
 
-        $arg = ["color" => "black"];
-        $res = '<div class="progress"><div class="progress-bar bg-black" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%"><span class="sr-only">50%</span></div></div>';
+        $arg = ["color" => "pink"];
+        $res = '<div class="progress"><div class="progress-bar bg-pink" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%"><span class="sr-only">50%</span></div></div>';
         $this->assertEquals($res, $obj->adminBSBProgressBarMaterialDesignFunction($arg));
     }
 
