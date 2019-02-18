@@ -1,9 +1,29 @@
 # Tests/Fixtures/app/config/routing_test.yml
-adminbsb:
+fosuuser:
     resource: "@AdminBSBBundle/Resources/config/routing/fosuser.yml"
     prefix:   "/"
 
 adminbsb_blank_action:
     path:     "/blank"
     defaults: { _controller: "WBW\\Bundle\\AdminBSBBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::blankAction" }
+    methods:  ["GET"]
+
+adminbsb_error404_action:
+    path:     "/error404"
+    defaults: { _controller: "WBW\\Bundle\\AdminBSBBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::error404Action" }
+    methods:  ["GET"]
+
+adminbsb_error500_action:
+    path:     "/error500"
+    defaults: { _controller: "WBW\\Bundle\\AdminBSBBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::error500Action" }
+    methods:  ["GET"]
+
+adminbsb_login_action:
+    path:     "/login"
+    defaults: { _controller: "WBW\\Bundle\\AdminBSBBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::loginAction" }
+    methods:  ["GET"]
+
+adminbsb_register_action:
+    path:     "/register"
+    defaults: { _controller: "WBW\\Bundle\\AdminBSBBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::registerAction" }
     methods:  ["GET"]
