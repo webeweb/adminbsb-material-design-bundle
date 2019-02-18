@@ -14,11 +14,11 @@ namespace WBW\Bundle\AdminBSBBundle\Tests\Fixtures\Entity;
 use FOS\UserBundle\Model\User as BaseUser;
 
 /**
- * User entity.
+ * Test user entity.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Fixtures\Entity
  */
-class User extends BaseUser {
+class TestUser extends BaseUser {
 
 }
