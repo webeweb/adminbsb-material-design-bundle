@@ -1,11 +1,11 @@
 {# Resources/views/layout/section.html.twig #}
 {% extends "@AdminBSB/layout.html.twig" %}
 
-{% block adminBSBHeadTitle %}{{ ApplicationThemeProvider.title|default("AdminBSB Material Design") }}{% endblock %}
+{% block adminBSBTitle %}{{ ApplicationThemeProvider.title|default("AdminBSB Material Design") }}{% endblock %}
 
-{% block adminBSBBodyClasses %}theme-red{% endblock %}
+{% block adminBSBAttributes %} class="theme-red"{% endblock %}
 
-{% block adminBSBBodyContent %}
+{% block adminBSBContainer %}
     {{ parent() }}
     <div class="page-loader-wrapper">
         <div class="loader">
@@ -73,12 +73,12 @@
     <section class="content">
         <div class="container-fluid">
             {% if (0 < app.session.flashbag.peekAll()|length) %}
-                {% include "@AdminBSB/include/flashbag.html.twig" %}
+                {% include "@AdminBSB/layout/flashbag.html.twig" %}
             {% endif %}
-            {% block adminBSBBodySection %}
+            {% block adminBSBContent %}
             {% endblock %}
             {% if ("dev" == app.environment) %}
-                {% include "@Bootstrap/include/twig-console.html.twig" %}
+                {% include "@Bootstrap/layout/twig-console.html.twig" %}
             {% endif %}
         </div>
     </section>
