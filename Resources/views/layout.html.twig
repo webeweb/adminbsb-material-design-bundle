@@ -2,34 +2,35 @@
 {% extends "@Bootstrap/layout.html.twig" %}
 
 {% block bootstrapFormTheme %}
-    {% if (form is defined) %}
-        {% form_theme form "@AdminBSB/../TwigBundle/views/Form/adminbsb_layout.html.twig" %}
-    {% endif %}
+    {% block adminBSBFormTheme %}
+        {% if (form is defined) %}
+            {% form_theme form "@AdminBSB/layout/form/adminbsb_layout.html.twig" %}
+        {% endif %}
+    {% endblock %}
 {% endblock %}
 
 {% block bootstrapStylesheets %}
     {{ parent() }}
-    <!-- Google fonts -->
-    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin,cyrillic-ext">
-    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    {% include "@AdminBSB/include/styles.html.twig" with {"theme": "bootstrap" } %}
     {% block adminBSBStylesheets %}
+        <!-- Google fonts -->
+        <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin,cyrillic-ext">
+        <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        {% include "@AdminBSB/layout/stylesheets.html.twig" with {"theme": "bootstrap" } %}
     {% endblock %}
 {% endblock %}
 
-{% block bootstrapTitle %}{{ block("adminBSBTitle") }}{% endblock %}
+{% block bootstrapTitle %}{% block adminBSBTitle %}{% endblock %}{% endblock %}
 
-{% block bootstrapAttributes %}{{ parent() }} class="{{ block("adminBSBAttributes") }}"{% endblock %}
+{% block bootstrapAttributes %}{% block adminBSBAttributes %}{% endblock %}{% endblock %}
 
 {% block bootstrapContainer %}
-    {{ parent() }}
     {% block adminBSBContainer %}
     {% endblock %}
 {% endblock %}
 
 {% block bootstrapJavascripts %}
     {{ parent() }}
-    {% include "@AdminBSB/include/scripts.html.twig" with {"theme": "bootstrap" } %}
     {% block adminBSBJavascripts %}
+        {% include "@AdminBSB/layout/javascripts.html.twig" with {"theme": "bootstrap" } %}
     {% endblock %}
 {% endblock %}
