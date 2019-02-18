@@ -24,10 +24,7 @@
     <testsuites>
         <testsuite name="webeweb/adminbsb-material-design-bundle">
             <directory suffix="Test.php">./Tests</directory>
-            <exclude>Tests/Controller/</exclude>
             <exclude>Tests/Helper/</exclude>
-            <exclude>Tests/Provider/</exclude>
-            <exclude>Tests/Twig/Extension/UI/ColorTwigExtensionTest.php</exclude>
         </testsuite>
     </testsuites>
 </phpunit>
