@@ -13,7 +13,6 @@ namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget;
 
 use Twig_Environment;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\AdminBSBRendererTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\RendererTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\TypographyTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\TypographyTwigExtensionTrait;
