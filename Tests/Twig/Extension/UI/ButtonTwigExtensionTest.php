@@ -34,22 +34,8 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
-        $arg = ["content" => "content", "title" => "title", "size" => "lg", "disable" => true, "icon" => "person"];
-        $res = '<button class="btn btn-danger waves-effect btn-lg" title="title" type="button" data-toggle="tooltip" disabled="disabled"><i class="material-icons" style="margin: -4px 2px 0; vertical-align: sub;">person</i>content</button>';
-        $this->assertEquals($res, $obj->adminBSBButtonDangerFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonDangerFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonDangerFunctionWithBlock() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["block" => true];
-        $res = '<button class="btn btn-danger waves-effect btn-block" type="button"></button>';
+        $arg = ["content" => "content", "title" => "title", "size" => "lg", "disabled" => true, "icon" => "person"];
+        $res = '<button class="btn btn-danger waves-effect btn-lg" title="title" type="button" data-toggle="tooltip" data-placement="top" disabled="disabled"><i class="material-icons" style="margin: -4px 2px 0; vertical-align: sub;">person</i>content</button>';
         $this->assertEquals($res, $obj->adminBSBButtonDangerFunction($arg));
     }
 
@@ -64,76 +50,6 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["circle" => true];
         $res = '<button class="btn btn-danger waves-effect btn-circle waves-circle waves-float" type="button"></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonDangerFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonDangerFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonDangerFunctionWithContent() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["content" => "content"];
-        $res = '<button class="btn btn-danger waves-effect" type="button">content</button>';
-        $this->assertEquals($res, $obj->adminBSBButtonDangerFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonDangerFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonDangerFunctionWithDisable() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["disable" => true];
-        $res = '<button class="btn btn-danger waves-effect" type="button" disabled="disabled"></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonDangerFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonDangerFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonDangerFunctionWithIcon() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["icon" => "person"];
-        $res = '<button class="btn btn-danger waves-effect" type="button"><i class="material-icons">person</i></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonDangerFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonDangerFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonDangerFunctionWithSize() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["size" => "lg"];
-        $res = '<button class="btn btn-danger waves-effect btn-lg" type="button"></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonDangerFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonDangerFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonDangerFunctionWithTitle() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["title" => "title"];
-        $res = '<button class="btn btn-danger waves-effect" title="title" type="button" data-toggle="tooltip"></button>';
         $this->assertEquals($res, $obj->adminBSBButtonDangerFunction($arg));
     }
 
@@ -160,22 +76,8 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
-        $arg = ["content" => "content", "title" => "title", "size" => "lg", "disable" => true, "icon" => "person"];
-        $res = '<button class="btn btn-default waves-effect btn-lg" title="title" type="button" data-toggle="tooltip" disabled="disabled"><i class="material-icons" style="margin: -4px 2px 0; vertical-align: sub;">person</i>content</button>';
-        $this->assertEquals($res, $obj->adminBSBButtonDefaultFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonDefaultFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonDefaultFunctionWithBlock() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["block" => true];
-        $res = '<button class="btn btn-default waves-effect btn-block" type="button"></button>';
+        $arg = ["content" => "content", "title" => "title", "size" => "lg", "disabled" => true, "icon" => "person"];
+        $res = '<button class="btn btn-default waves-effect btn-lg" title="title" type="button" data-toggle="tooltip" data-placement="top" disabled="disabled"><i class="material-icons" style="margin: -4px 2px 0; vertical-align: sub;">person</i>content</button>';
         $this->assertEquals($res, $obj->adminBSBButtonDefaultFunction($arg));
     }
 
@@ -190,76 +92,6 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["circle" => true];
         $res = '<button class="btn btn-default waves-effect btn-circle waves-circle waves-float" type="button"></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonDefaultFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonDefaultFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonDefaultFunctionWithContent() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["content" => "content"];
-        $res = '<button class="btn btn-default waves-effect" type="button">content</button>';
-        $this->assertEquals($res, $obj->adminBSBButtonDefaultFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonDefaultFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonDefaultFunctionWithDisable() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["disable" => true];
-        $res = '<button class="btn btn-default waves-effect" type="button" disabled="disabled"></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonDefaultFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonDefaultFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonDefaultFunctionWithIcon() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["icon" => "person"];
-        $res = '<button class="btn btn-default waves-effect" type="button"><i class="material-icons">person</i></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonDefaultFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonDefaultFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonDefaultFunctionWithSize() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["size" => "lg"];
-        $res = '<button class="btn btn-default waves-effect btn-lg" type="button"></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonDefaultFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonDefaultFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonDefaultFunctionWithTitle() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["title" => "title"];
-        $res = '<button class="btn btn-default waves-effect" title="title" type="button" data-toggle="tooltip"></button>';
         $this->assertEquals($res, $obj->adminBSBButtonDefaultFunction($arg));
     }
 
@@ -286,22 +118,8 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
-        $arg = ["content" => "content", "title" => "title", "size" => "lg", "disable" => true, "icon" => "person"];
-        $res = '<button class="btn btn-info waves-effect btn-lg" title="title" type="button" data-toggle="tooltip" disabled="disabled"><i class="material-icons" style="margin: -4px 2px 0; vertical-align: sub;">person</i>content</button>';
-        $this->assertEquals($res, $obj->adminBSBButtonInfoFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonDangerFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonInfoFunctionWithBlock() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["block" => true];
-        $res = '<button class="btn btn-info waves-effect btn-block" type="button"></button>';
+        $arg = ["content" => "content", "title" => "title", "size" => "lg", "disabled" => true, "icon" => "person"];
+        $res = '<button class="btn btn-info waves-effect btn-lg" title="title" type="button" data-toggle="tooltip" data-placement="top" disabled="disabled"><i class="material-icons" style="margin: -4px 2px 0; vertical-align: sub;">person</i>content</button>';
         $this->assertEquals($res, $obj->adminBSBButtonInfoFunction($arg));
     }
 
@@ -316,76 +134,6 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["circle" => true];
         $res = '<button class="btn btn-info waves-effect btn-circle waves-circle waves-float" type="button"></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonInfoFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonInfoFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonInfoFunctionWithContent() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["content" => "content"];
-        $res = '<button class="btn btn-info waves-effect" type="button">content</button>';
-        $this->assertEquals($res, $obj->adminBSBButtonInfoFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonInfoFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonInfoFunctionWithDisable() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["disable" => true];
-        $res = '<button class="btn btn-info waves-effect" type="button" disabled="disabled"></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonInfoFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonInfoFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonInfoFunctionWithIcon() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["icon" => "person"];
-        $res = '<button class="btn btn-info waves-effect" type="button"><i class="material-icons">person</i></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonInfoFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonInfoFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonInfoFunctionWithSize() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["size" => "lg"];
-        $res = '<button class="btn btn-info waves-effect btn-lg" type="button"></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonInfoFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonInfoFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonInfoFunctionWithTitle() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["title" => "title"];
-        $res = '<button class="btn btn-info waves-effect" title="title" type="button" data-toggle="tooltip"></button>';
         $this->assertEquals($res, $obj->adminBSBButtonInfoFunction($arg));
     }
 
@@ -440,22 +188,8 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
-        $arg = ["content" => "content", "title" => "title", "size" => "lg", "disable" => true, "icon" => "person", "color" => "pink"];
-        $res = '<button class="btn bg-pink waves-effect btn-lg" title="title" type="button" data-toggle="tooltip" disabled="disabled"><i class="material-icons" style="margin: -4px 2px 0; vertical-align: sub;">person</i>content</button>';
-        $this->assertEquals($res, $obj->adminBSBButtonMaterialDesignFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonMaterialDesignFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonMaterialDesignFunctionWithBlock() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["block" => true];
-        $res = '<button class="btn bg-red waves-effect btn-block" type="button"></button>';
+        $arg = ["content" => "content", "title" => "title", "size" => "lg", "disabled" => true, "icon" => "person", "color" => "pink"];
+        $res = '<button class="btn bg-pink waves-effect btn-lg" title="title" type="button" data-toggle="tooltip" data-placement="top" disabled="disabled"><i class="material-icons" style="margin: -4px 2px 0; vertical-align: sub;">person</i>content</button>';
         $this->assertEquals($res, $obj->adminBSBButtonMaterialDesignFunction($arg));
     }
 
@@ -470,90 +204,6 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["circle" => true];
         $res = '<button class="btn bg-red waves-effect btn-circle waves-circle waves-float" type="button"></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonMaterialDesignFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonMaterialDesignFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonMaterialDesignFunctionWithColor() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["color" => "pink"];
-        $res = '<button class="btn bg-pink waves-effect" type="button"></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonMaterialDesignFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonMaterialDesignFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonMaterialDesignFunctionWithContent() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["content" => "content"];
-        $res = '<button class="btn bg-red waves-effect" type="button">content</button>';
-        $this->assertEquals($res, $obj->adminBSBButtonMaterialDesignFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonMaterialDesignFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonMaterialDesignFunctionWithDisable() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["disable" => true];
-        $res = '<button class="btn bg-red waves-effect" type="button" disabled="disabled"></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonMaterialDesignFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonMaterialDesignFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonMaterialDesignFunctionWithIcon() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["icon" => "person"];
-        $res = '<button class="btn bg-red waves-effect" type="button"><i class="material-icons">person</i></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonMaterialDesignFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonMaterialDesignFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonMaterialDesignFunctionWithSize() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["size" => "lg"];
-        $res = '<button class="btn bg-red waves-effect btn-lg" type="button"></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonMaterialDesignFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonMaterialDesignFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonMaterialDesignFunctionWithTitle() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["title" => "title"];
-        $res = '<button class="btn bg-red waves-effect" title="title" type="button" data-toggle="tooltip"></button>';
         $this->assertEquals($res, $obj->adminBSBButtonMaterialDesignFunction($arg));
     }
 
@@ -580,22 +230,8 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
-        $arg = ["content" => "content", "title" => "title", "size" => "lg", "disable" => true, "icon" => "person"];
-        $res = '<button class="btn btn-primary waves-effect btn-lg" title="title" type="button" data-toggle="tooltip" disabled="disabled"><i class="material-icons" style="margin: -4px 2px 0; vertical-align: sub;">person</i>content</button>';
-        $this->assertEquals($res, $obj->adminBSBButtonPrimaryFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonPrimaryFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonPrimaryFunctionWithBlock() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["block" => true];
-        $res = '<button class="btn btn-primary waves-effect btn-block" type="button"></button>';
+        $arg = ["content" => "content", "title" => "title", "size" => "lg", "disabled" => true, "icon" => "person"];
+        $res = '<button class="btn btn-primary waves-effect btn-lg" title="title" type="button" data-toggle="tooltip" data-placement="top" disabled="disabled"><i class="material-icons" style="margin: -4px 2px 0; vertical-align: sub;">person</i>content</button>';
         $this->assertEquals($res, $obj->adminBSBButtonPrimaryFunction($arg));
     }
 
@@ -610,76 +246,6 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["circle" => true];
         $res = '<button class="btn btn-primary waves-effect btn-circle waves-circle waves-float" type="button"></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonPrimaryFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonPrimaryFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonPrimaryFunctionWithContent() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["content" => "content"];
-        $res = '<button class="btn btn-primary waves-effect" type="button">content</button>';
-        $this->assertEquals($res, $obj->adminBSBButtonPrimaryFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonPrimaryFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonPrimaryFunctionWithDisable() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["disable" => true];
-        $res = '<button class="btn btn-primary waves-effect" type="button" disabled="disabled"></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonPrimaryFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonPrimaryFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonPrimaryFunctionWithIcon() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["icon" => "person"];
-        $res = '<button class="btn btn-primary waves-effect" type="button"><i class="material-icons">person</i></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonPrimaryFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonPrimaryFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonPrimaryFunctionWithSize() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["size" => "lg"];
-        $res = '<button class="btn btn-primary waves-effect btn-lg" type="button"></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonPrimaryFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonPrimaryFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonPrimaryFunctionWithTitle() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["title" => "title"];
-        $res = '<button class="btn btn-primary waves-effect" title="title" type="button" data-toggle="tooltip"></button>';
         $this->assertEquals($res, $obj->adminBSBButtonPrimaryFunction($arg));
     }
 
@@ -706,22 +272,8 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
-        $arg = ["content" => "content", "title" => "title", "size" => "lg", "disable" => true, "icon" => "person"];
-        $res = '<button class="btn btn-success waves-effect btn-lg" title="title" type="button" data-toggle="tooltip" disabled="disabled"><i class="material-icons" style="margin: -4px 2px 0; vertical-align: sub;">person</i>content</button>';
-        $this->assertEquals($res, $obj->adminBSBButtonSuccessFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonSuccessFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonSuccessFunctionWithBlock() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["block" => true];
-        $res = '<button class="btn btn-success waves-effect btn-block" type="button"></button>';
+        $arg = ["content" => "content", "title" => "title", "size" => "lg", "disabled" => true, "icon" => "person"];
+        $res = '<button class="btn btn-success waves-effect btn-lg" title="title" type="button" data-toggle="tooltip" data-placement="top" disabled="disabled"><i class="material-icons" style="margin: -4px 2px 0; vertical-align: sub;">person</i>content</button>';
         $this->assertEquals($res, $obj->adminBSBButtonSuccessFunction($arg));
     }
 
@@ -736,76 +288,6 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["circle" => true];
         $res = '<button class="btn btn-success waves-effect btn-circle waves-circle waves-float" type="button"></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonSuccessFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonSuccessFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonSuccessFunctionWithContent() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["content" => "content"];
-        $res = '<button class="btn btn-success waves-effect" type="button">content</button>';
-        $this->assertEquals($res, $obj->adminBSBButtonSuccessFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonSuccessFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonSuccessFunctionWithDisable() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["disable" => true];
-        $res = '<button class="btn btn-success waves-effect" type="button" disabled="disabled"></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonSuccessFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonSuccessFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonSuccessFunctionWithIcon() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["icon" => "person"];
-        $res = '<button class="btn btn-success waves-effect" type="button"><i class="material-icons">person</i></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonSuccessFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonSuccessFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonSuccessFunctionWithSize() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["size" => "lg"];
-        $res = '<button class="btn btn-success waves-effect btn-lg" type="button"></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonSuccessFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonSuccessFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonSuccessFunctionWithTitle() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["title" => "title"];
-        $res = '<button class="btn btn-success waves-effect" title="title" type="button" data-toggle="tooltip"></button>';
         $this->assertEquals($res, $obj->adminBSBButtonSuccessFunction($arg));
     }
 
@@ -832,22 +314,8 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
-        $arg = ["content" => "content", "title" => "title", "size" => "lg", "disable" => true, "icon" => "person"];
-        $res = '<button class="btn btn-warning waves-effect btn-lg" title="title" type="button" data-toggle="tooltip" disabled="disabled"><i class="material-icons" style="margin: -4px 2px 0; vertical-align: sub;">person</i>content</button>';
-        $this->assertEquals($res, $obj->adminBSBButtonWarningFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonWarningFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonWarningFunctionWithBlock() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["block" => true];
-        $res = '<button class="btn btn-warning waves-effect btn-block" type="button"></button>';
+        $arg = ["content" => "content", "title" => "title", "size" => "lg", "disabled" => true, "icon" => "person"];
+        $res = '<button class="btn btn-warning waves-effect btn-lg" title="title" type="button" data-toggle="tooltip" data-placement="top" disabled="disabled"><i class="material-icons" style="margin: -4px 2px 0; vertical-align: sub;">person</i>content</button>';
         $this->assertEquals($res, $obj->adminBSBButtonWarningFunction($arg));
     }
 
@@ -862,76 +330,6 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["circle" => true];
         $res = '<button class="btn btn-warning waves-effect btn-circle waves-circle waves-float" type="button"></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonWarningFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonWarningFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonWarningFunctionWithContent() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["content" => "content"];
-        $res = '<button class="btn btn-warning waves-effect" type="button">content</button>';
-        $this->assertEquals($res, $obj->adminBSBButtonWarningFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonWarningFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonWarningFunctionWithDisable() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["disable" => true];
-        $res = '<button class="btn btn-warning waves-effect" type="button" disabled="disabled"></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonWarningFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonWarningFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonWarningFunctionWithIcon() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["icon" => "person"];
-        $res = '<button class="btn btn-warning waves-effect" type="button"><i class="material-icons">person</i></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonWarningFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonWarningFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonWarningFunctionWithSize() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["size" => "lg"];
-        $res = '<button class="btn btn-warning waves-effect btn-lg" type="button"></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonWarningFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonWarningFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonWarningFunctionWithTitle() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["title" => "title"];
-        $res = '<button class="btn btn-warning waves-effect" title="title" type="button" data-toggle="tooltip"></button>';
         $this->assertEquals($res, $obj->adminBSBButtonWarningFunction($arg));
     }
 

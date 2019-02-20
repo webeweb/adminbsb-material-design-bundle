@@ -11,8 +11,9 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\AdminBSBRendererTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Button\ButtonRenderer;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\RendererTwigExtension;
+use WBW\Bundle\BootstrapBundle\Button\ButtonInterface;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension as BaseTwigExtension;
 
 /**
@@ -27,42 +28,31 @@ abstract class AbstractButtonTwigExtension extends BaseTwigExtension {
     /**
      * Displays an AdminBSB button.
      *
-     * @param string $content The button content.
-     * @param string $title The button title.
-     * @param string $size The button size.
-     * @param bool $block Block button ?
-     * @param bool $disable Disable button ?
-     * @param string $class The button class.
-     * @param string $icon The button icon.
-     * @param bool $circle Circle button ?
+     * @param ButtonInterface $button The button.
+     * @param string $icon The icon.
+     * @param bool $circle Circle ?
      * @return string Returns the AdminBSB button.
      */
-    protected function adminBSBButton($content, $title, $size, $block, $disable, $class, $icon, $circle) {
+    protected function adminBSBButton(ButtonInterface $button, $icon, $circle) {
 
-        // Disable the parameters.
-        $circle = null !== $content ? false : $circle;
-        $style  = null !== $content ? "margin: -4px 2px 0; vertical-align: sub;" : "";
+        // Fix some parameters.
+        $circle = null !== $button->getContent() ? false : $circle;
+        $style  = null !== $button->getContent() ? "margin: -4px 2px 0; vertical-align: sub;" : "";
 
-        // Initialize the values.
-        $sizes = ["lg", "sm", "xs"];
-
-        // Initialize the attributes.
         $attributes = [];
 
-        $attributes["class"]       = ["btn", $class, "waves-effect"];
-        $attributes["class"][]     = true === $block ? "btn-block" : null;
-        $attributes["class"][]     = true === $circle ? "btn-circle" . ("lg" === $size ? "-lg" : "") . " waves-circle waves-float" : null;
-        $attributes["class"][]     = true !== $circle && true === in_array($size, $sizes) ? "btn-" . $size : null;
-        $attributes["title"]       = $title;
-        $attributes["type"]        = "button";
-        $attributes["data-toggle"] = null !== $title ? "tooltip" : null;
-        $attributes["disabled"]    = true === $disable ? "disabled" : null;
+        $attributes["class"]          = ["btn", ButtonRenderer::renderType($button), "waves-effect"];
+        $attributes["class"][]        = ButtonRenderer::renderBlock($button);
+        $attributes["class"][]        = ButtonRenderer::renderCircle($button, $circle);
+        $attributes["title"]          = ButtonRenderer::renderTitle($button);
+        $attributes["type"]           = "button";
+        $attributes["data-toggle"]    = ButtonRenderer::renderDataToggle($button);
+        $attributes["data-placement"] = ButtonRenderer::renderDataPlacement($button);
+        $attributes["disabled"]       = ButtonRenderer::renderDisabled($button);
 
-        // Handle the parameters.
         $glyphicon = null !== $icon ? RendererTwigExtension::renderIcon($this->getTwigEnvironment(), $icon, $style) : "";
-        $innerHTML = null !== $content ? $content : "";
+        $innerHTML = ButtonRenderer::renderContent($button);
 
-        // Return the HTML.
         return static::coreHTMLElement("button", $glyphicon . $innerHTML, $attributes);
     }
 }

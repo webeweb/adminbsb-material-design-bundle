@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
 use Twig_SimpleFilter;
 use Twig_SimpleFunction;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Button\ButtonFactory;
 use WBW\Library\Core\Argument\ArrayHelper;
 use WBW\Library\Core\Argument\StringHelper;
 
@@ -39,7 +39,7 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
      * @return string Returns the AdminBSB button "Danger".
      */
     public function adminBSBButtonDangerFunction(array $args = []) {
-        return $this->adminBSBButton(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "title"), ArrayHelper::get($args, "size", false), ArrayHelper::get($args, "block", false), ArrayHelper::get($args, "disable", false), "btn-danger", ArrayHelper::get($args, "icon"), ArrayHelper::get($args, "circle", false));
+        return $this->adminBSBButton(ButtonFactory::parseDangerButton($args), ArrayHelper::get($args, "icon"), ArrayHelper::get($args, "circle", false));
     }
 
     /**
@@ -49,7 +49,7 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
      * @return string Returns the AdminBSB button "Default".
      */
     public function adminBSBButtonDefaultFunction(array $args = []) {
-        return $this->adminBSBButton(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "title"), ArrayHelper::get($args, "size", false), ArrayHelper::get($args, "block", false), ArrayHelper::get($args, "disable", false), "btn-default", ArrayHelper::get($args, "icon"), ArrayHelper::get($args, "circle", false));
+        return $this->adminBSBButton(ButtonFactory::parseDefaultButton($args), ArrayHelper::get($args, "icon"), ArrayHelper::get($args, "circle", false));
     }
 
     /**
@@ -59,7 +59,7 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
      * @return string Returns the AdminBSB button "Info".
      */
     public function adminBSBButtonInfoFunction(array $args = []) {
-        return $this->adminBSBButton(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "title"), ArrayHelper::get($args, "size", false), ArrayHelper::get($args, "block", false), ArrayHelper::get($args, "disable", false), "btn-info", ArrayHelper::get($args, "icon"), ArrayHelper::get($args, "circle", false));
+        return $this->adminBSBButton(ButtonFactory::parseInfoButton($args), ArrayHelper::get($args, "icon"), ArrayHelper::get($args, "circle", false));
     }
 
     /**
@@ -82,7 +82,7 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
      * @return string Returns the AdminBSB button "Material design".
      */
     public function adminBSBButtonMaterialDesignFunction(array $args = []) {
-        return $this->adminBSBButton(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "title"), ArrayHelper::get($args, "size", false), ArrayHelper::get($args, "block", false), ArrayHelper::get($args, "disable", false), AbstractTwigExtension::materialDesignColor(ArrayHelper::get($args, "color", "red"), "bg-"), ArrayHelper::get($args, "icon"), ArrayHelper::get($args, "circle", false));
+        return $this->adminBSBButton(ButtonFactory::parseMaterialDesignButton($args), ArrayHelper::get($args, "icon"), ArrayHelper::get($args, "circle", false));
     }
 
     /**
@@ -92,7 +92,7 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
      * @return string Returns the AdminBSB button "Primary".
      */
     public function adminBSBButtonPrimaryFunction(array $args = []) {
-        return $this->adminBSBButton(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "title"), ArrayHelper::get($args, "size", false), ArrayHelper::get($args, "block", false), ArrayHelper::get($args, "disable", false), "btn-primary", ArrayHelper::get($args, "icon"), ArrayHelper::get($args, "circle", false));
+        return $this->adminBSBButton(ButtonFactory::parsePrimaryButton($args), ArrayHelper::get($args, "icon"), ArrayHelper::get($args, "circle", false));
     }
 
     /**
@@ -102,7 +102,7 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
      * @return string Returns the AdminBSB button "Success".
      */
     public function adminBSBButtonSuccessFunction(array $args = []) {
-        return $this->adminBSBButton(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "title"), ArrayHelper::get($args, "size", false), ArrayHelper::get($args, "block", false), ArrayHelper::get($args, "disable", false), "btn-success", ArrayHelper::get($args, "icon"), ArrayHelper::get($args, "circle", false));
+        return $this->adminBSBButton(ButtonFactory::parseSuccessButton($args), ArrayHelper::get($args, "icon"), ArrayHelper::get($args, "circle", false));
     }
 
     /**
@@ -112,7 +112,7 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
      * @return string Returns the AdminBSB button "Warning".
      */
     public function adminBSBButtonWarningFunction(array $args = []) {
-        return $this->adminBSBButton(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "title"), ArrayHelper::get($args, "size", false), ArrayHelper::get($args, "block", false), ArrayHelper::get($args, "disable", false), "btn-warning", ArrayHelper::get($args, "icon"), ArrayHelper::get($args, "circle", false));
+        return $this->adminBSBButton(ButtonFactory::parseWarningButton($args), ArrayHelper::get($args, "icon"), ArrayHelper::get($args, "circle", false));
     }
 
     /**
