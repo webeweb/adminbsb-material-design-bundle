@@ -152,34 +152,6 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the adminBSBButtonLinkFilter() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonLinkFilter() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = $obj->adminBSBButtonMaterialDesignFunction();
-        $res = '<a class="btn bg-red waves-effect" href="https://github.com"></a>';
-        $this->assertEquals($res, $obj->adminBSBButtonLinkFilter($arg, "https://github.com"));
-    }
-
-    /**
-     * Tests the adminBSBButtonLinkFilter() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonLinkFilterWithoutArguments() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = $obj->adminBSBButtonMaterialDesignFunction();
-        $res = '<a class="btn bg-red waves-effect" href="javascript:void(0);"></a>';
-        $this->assertEquals($res, $obj->adminBSBButtonLinkFilter($arg));
-    }
-
-    /**
      * Tests the adminBSBButtonMaterialDesignFunction() method.
      *
      * @return void
@@ -370,12 +342,17 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFilters();
-        $this->assertCount(1, $res);
+        $this->assertCount(2, $res);
 
         $this->assertInstanceOf(Twig_SimpleFilter::class, $res [0]);
         $this->assertEquals("adminBSBButtonLink", $res [0]->getName());
-        $this->assertEquals([$obj, "adminBSBButtonLinkFilter"], $res[0]->getCallable());
+        $this->assertEquals([$obj, "bootstrapButtonLinkFilter"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFilter::class, $res [1]);
+        $this->assertEquals("adminBSBButtonSubmit", $res [1]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonSubmitFilter"], $res[1]->getCallable());
+        $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
     }
 
     /**

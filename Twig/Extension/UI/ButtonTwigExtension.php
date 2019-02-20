@@ -15,7 +15,6 @@ use Twig_SimpleFilter;
 use Twig_SimpleFunction;
 use WBW\Bundle\AdminBSBBundle\Button\ButtonFactory;
 use WBW\Library\Core\Argument\ArrayHelper;
-use WBW\Library\Core\Argument\StringHelper;
 
 /**
  * Button Twig extension.
@@ -60,19 +59,6 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
      */
     public function adminBSBButtonInfoFunction(array $args = []) {
         return $this->adminBSBButton(ButtonFactory::parseInfoButton($args), ArrayHelper::get($args, "icon"), ArrayHelper::get($args, "circle", false));
-    }
-
-    /**
-     * Displays an AdminBSB button "Link".
-     *
-     * @param string $button The button.
-     * @param string $link The link.
-     * @return string Returns the AdminBSB button "Link".
-     */
-    public function adminBSBButtonLinkFilter($button, $link = self::DEFAULT_HREF) {
-        $searches = ["<button", "type=\"button\"", "</button>"];
-        $replaces = ["<a", "href=\"" . $link . "\"", "</a>"];
-        return StringHelper::replace($button, $searches, $replaces);
     }
 
     /**
@@ -122,7 +108,8 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
      */
     public function getFilters() {
         return [
-            new Twig_SimpleFilter("adminBSBButtonLink", [$this, "adminBSBButtonLinkFilter"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFilter("adminBSBButtonLink", [$this, "bootstrapButtonLinkFilter"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFilter("adminBSBButtonSubmit", [$this, "bootstrapButtonSubmitFilter"], ["is_safe" => ["html"]]),
         ];
     }
 
