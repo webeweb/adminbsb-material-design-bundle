@@ -31,6 +31,7 @@ class MaterialDesignButtonTest extends AbstractTestCase {
 
         $obj = new MaterialDesignButton("color");
 
+        $this->assertEquals("bg-", $obj->getPrefix());
         $this->assertEquals("color", $obj->getType());
     }
 }
