@@ -1,11 +1,11 @@
-{# Resources/FOSUserBundle/views/Resetting/register.html.twig #}
+{# Resources/FOSUserBundle/views/Resetting/check_email.html.twig #}
 {% extends "@AdminBSB/layout.html.twig" %}
 
-{% block adminBSBHeadTitle %}{{ ApplicationThemeProvider.title|default("AdminBSB Material Design") }} - {{ "resetting.request.submit"|trans({}, "FOSUserBundle") }}{% endblock %}
+{% block adminBSBTitle %}{{ ApplicationThemeProvider.title|default("AdminBSB Material Design") }} - {{ "resetting.request.submit"|trans({}, "FOSUserBundle") }}{% endblock %}
 
-{% block adminBSBBodyClasses %}fp-page{% endblock %}
+{% block adminBSBAttributes %} class="fp-page"{% endblock %}
 
-{% block adminBSBBodyContent %}
+{% block adminBSBContainer %}
     {{ parent() }}
     <div class="fp-box">
         <div class="logo">
