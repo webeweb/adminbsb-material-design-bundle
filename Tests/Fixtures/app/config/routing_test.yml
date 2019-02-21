@@ -17,13 +17,3 @@ adminbsb_error500_action:
     path:     "/error500"
     defaults: { _controller: "WBW\\Bundle\\AdminBSBBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::error500Action" }
     methods:  ["GET"]
-
-adminbsb_login_action:
-    path:     "/login"
-    defaults: { _controller: "WBW\\Bundle\\AdminBSBBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::loginAction" }
-    methods:  ["GET"]
-
-adminbsb_register_action:
-    path:     "/register"
-    defaults: { _controller: "WBW\\Bundle\\AdminBSBBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::registerAction" }
-    methods:  ["GET"]
