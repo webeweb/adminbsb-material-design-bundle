@@ -96,7 +96,6 @@ class LayoutControllerTest extends AbstractWebTestCase {
 
         // Make a GET request.
         $client->request("GET", "/register/");
-        echo $client->getResponse()->getContent() . "\n";
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
 
         // Get the response.
