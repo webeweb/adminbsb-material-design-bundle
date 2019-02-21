@@ -48,6 +48,7 @@ before_script:
 
 script:
     - vendor/bin/phpunit --coverage-clover build/logs/clover.xml
+    - cat Tests/Fixtures/app/var/logs/test.log
 
 after_success:
     - php coveralls.phar -v
