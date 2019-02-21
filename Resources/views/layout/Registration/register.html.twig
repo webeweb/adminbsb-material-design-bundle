@@ -1,11 +1,11 @@
-{# Resources/FOSUserBundle/views/Registration/register.html.twig #}
+{# Resources/layout/Registration/register.html.twig #}
 {% extends "@AdminBSB/layout.html.twig" %}
 
-{% block adminBSBHeadTitle %}{{ ApplicationThemeProvider.title|default("AdminBSB Material Design") }} - {{ "layout.register"|trans({}, "FOSUserBundle") }}{% endblock %}
+{% block adminBSBTitle %}{{ ApplicationThemeProvider.title|default("AdminBSB Material Design") }} - {{ "layout.register"|trans({}, "FOSUserBundle") }}{% endblock %}
 
-{% block adminBSBBodyClasses %}signup-page{% endblock %}
+{% block adminBSBAttributes %} class="signup-page"{% endblock %}
 
-{% block adminBSBBodyContent %}
+{% block adminBSBContainer %}
     {{ parent() }}
     <div class="signup-box">
         <div class="logo">
