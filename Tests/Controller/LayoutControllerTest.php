@@ -37,11 +37,107 @@ class LayoutControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests the error404Action() method.
+     * Tests the Resources/views/layout/Resetting/check_email.html.twig template.
      *
      * @return void
      */
-    public function testError404Action() {
+    public function testFOSUserCheckEmailAction() {
+
+        // Create a client.
+        $client = static::createClient();
+
+        // Make a GET request.
+        $client->request("GET", "/resetting/check-email?username=username");
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+
+        // Get the response.
+        $response = $client->getResponse()->getContent();
+
+        $this->assertContains("<title>AdminBSB Material Design - Reset password</title>", $response);
+
+        $this->assertContains("<body class=\"fp-page\">", $response);
+
+        $this->assertContains("<div class=\"fp-box\">", $response);
+    }
+
+    /**
+     * Tests the Resources/views/layout/Security/login.html.twig template.
+     *
+     * @return void
+     */
+    public function testFOSUserLoginAction() {
+
+        // Create a client.
+        $client = static::createClient();
+
+        // Make a GET request.
+        $client->request("GET", "/login");
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+
+        // Get the response.
+        $response = $client->getResponse()->getContent();
+
+        $this->assertContains("<title>AdminBSB Material Design - Log in</title>", $response);
+
+        $this->assertContains("<body class=\"login-page\">", $response);
+
+        $this->assertContains("<div class=\"login-box\">", $response);
+    }
+
+    /**
+     * Tests the Resources/views/layout/Registration/register.html.twig template.
+     *
+     * @return void
+     */
+    public function testFOSUserRegisterAction() {
+
+        // Create a client.
+        $client = static::createClient();
+
+        // Make a GET request.
+        $client->request("GET", "/register/");
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+
+        // Get the response.
+        $response = $client->getResponse()->getContent();
+
+        $this->assertContains("<title>AdminBSB Material Design - Register</title>", $response);
+
+        $this->assertContains("<body class=\"signup-page\">", $response);
+
+        $this->assertContains("<div class=\"signup-box\">", $response);
+    }
+
+    /**
+     * Tests the Resources/views/layout/Resetting/request.html.twig template.
+     *
+     * @return void
+     */
+    public function testFOSUserRequestAction() {
+
+        // Create a client.
+        $client = static::createClient();
+
+        // Make a GET request.
+        $client->request("GET", "/resetting/request");
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+
+        // Get the response.
+        $response = $client->getResponse()->getContent();
+
+        $this->assertContains("<title>AdminBSB Material Design - Reset password</title>", $response);
+
+        $this->assertContains("<body class=\"fp-page\">", $response);
+
+        $this->assertContains("<div class=\"fp-box\">", $response);
+    }
+
+    /**
+     * Tests the Resources/views/layout/Exception/error404.html.twig template.
+     *
+     * @return void
+     */
+    public function testTwigError404Action() {
 
         // Create a client.
         $client = static::createClient();
@@ -62,11 +158,11 @@ class LayoutControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests the error500Action() method.
+     * Tests the Resources/views/layout/Exception/error500.html.twig template.
      *
      * @return void
      */
-    public function testError500Action() {
+    public function testTwigError500Action() {
 
         // Create a client.
         $client = static::createClient();
