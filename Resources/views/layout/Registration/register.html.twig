@@ -21,7 +21,7 @@
                             <i class="material-icons">person</i>
                         </span>
                         <div class="form-line">
-                            <input class="form-control" name="fos_user_registration_form[username]" type="text" placeholder="{{ "form.username"|trans({}, "FOSUserBundle") }}" maxlength="180" pattern=".{2,}"  id="fos_user_registration_form_username" autofocus>
+                            <input class="form-control" name="fos_user_registration_form[username]" type="text" placeholder="{{ "form.username"|trans({}, "FOSUserBundle") }}" maxlength="180" pattern=".{2,}" id="fos_user_registration_form_username" autofocus>
                         </div>
                     </div>
                     <div class="input-group">
@@ -56,7 +56,9 @@
                     <div class="m-t-25 m-b--5 align-center">
                         <a href="{{ path("fos_user_security_login") }}">{{ "layout.login"|trans({}, "FOSUserBundle") }}</a>
                     </div>
-                    <input name="fos_user_registration_form[_token]" type="hidden" value="{{ form._token.vars.value }}" />
+                    {% if (form._token is defined) %}
+                        <input name="fos_user_registration_form[_token]" type="hidden" value="{{ form._token.vars.value }}"/>
+                    {% endif %}
                 </form>
             </div>
         </div>
