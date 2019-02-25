@@ -1,9 +1,9 @@
 # Tests/Fixtures/app/config/routing_test.yml
-fos_user_bundle:
+fos_user:
     resource: "@AdminBSBBundle/Resources/config/routing/fosuser.yml"
     prefix:   "/"
 
-twig_bundle:
+twig:
     resource: "@TwigBundle/Resources/config/routing/errors.xml"
     prefix:   "/error"
 
