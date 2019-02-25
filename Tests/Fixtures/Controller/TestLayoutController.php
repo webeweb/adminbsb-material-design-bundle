@@ -28,36 +28,6 @@ class TestLayoutController extends AbstractController {
      * @return Response Returns the response.
      */
     public function blankAction() {
-
-        // Return the response.
         return $this->render("@AdminBSB/layout/blank.html.twig");
-    }
-
-    /**
-     * Displays an error template.
-     *
-     * @return Response Returns the response.
-     */
-    public function error404Action() {
-
-        // Return the response.
-        return $this->render("@AdminBSB/layout/Exception/error404.html.twig", [
-            "status_code" => 404,
-            "status_text" => "Not found",
-        ]);
-    }
-
-    /**
-     * Displays an error template.
-     *
-     * @return Response Returns the response.
-     */
-    public function error500Action() {
-
-        // Return the response.
-        return $this->render("@AdminBSB/layout/Exception/error500.html.twig", [
-            "status_code" => 500,
-            "status_text" => "Internal server error",
-        ]);
     }
 }

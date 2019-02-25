@@ -1,19 +1,13 @@
 # Tests/Fixtures/app/config/routing_test.yml
-fosuuser:
+fos_user_bundle:
     resource: "@AdminBSBBundle/Resources/config/routing/fosuser.yml"
     prefix:   "/"
+
+twig_bundle:
+    resource: "@TwigBundle/Resources/config/routing/errors.xml"
+    prefix:   "/error"
 
 adminbsb_blank_action:
     path:     "/blank"
     defaults: { _controller: "WBW\\Bundle\\AdminBSBBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::blankAction" }
-    methods:  ["GET"]
-
-adminbsb_error404_action:
-    path:     "/error404"
-    defaults: { _controller: "WBW\\Bundle\\AdminBSBBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::error404Action" }
-    methods:  ["GET"]
-
-adminbsb_error500_action:
-    path:     "/error500"
-    defaults: { _controller: "WBW\\Bundle\\AdminBSBBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::error500Action" }
     methods:  ["GET"]
