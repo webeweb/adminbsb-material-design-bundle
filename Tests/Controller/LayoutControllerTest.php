@@ -143,18 +143,18 @@ class LayoutControllerTest extends AbstractWebTestCase {
         $client = static::createClient();
 
         // Make a GET request.
-        $client->request("GET", "/error404");
+        $client->request("GET", "/error/404.html");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
 
         // Get the response.
         $response = $client->getResponse()->getContent();
 
-        $this->assertContains("<title>AdminBSB Material Design - 404 Not found</title>", $response);
+        $this->assertContains("<title>AdminBSB Material Design - 404 Not Found</title>", $response);
 
         $this->assertContains("<body class=\"four-zero-four\">", $response);
 
         $this->assertContains("<div class=\"error-code\">404</div>", $response);
-        $this->assertContains("<div class=\"error-message\">Not found</div>", $response);
+        $this->assertContains("<div class=\"error-message\">Not Found</div>", $response);
     }
 
     /**
@@ -168,17 +168,17 @@ class LayoutControllerTest extends AbstractWebTestCase {
         $client = static::createClient();
 
         // Make a GET request.
-        $client->request("GET", "/error500");
+        $client->request("GET", "/error/500.html");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
 
         // Get the response.
         $response = $client->getResponse()->getContent();
 
-        $this->assertContains("<title>AdminBSB Material Design - 500 Internal server error</title>", $response);
+        $this->assertContains("<title>AdminBSB Material Design - 500 Internal Server Error</title>", $response);
 
         $this->assertContains("<body class=\"five-zero-zero\">", $response);
 
         $this->assertContains("<div class=\"error-code\">500</div>", $response);
-        $this->assertContains("<div class=\"error-message\">Internal server error</div>", $response);
+        $this->assertContains("<div class=\"error-message\">Internal Server Error</div>", $response);
     }
 }
