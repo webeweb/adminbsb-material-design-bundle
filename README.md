@@ -118,9 +118,8 @@ Open a command console and execute the following commands to download the latest
 stable version of this package:
 
 ```bash
-$ mkdir adminbsb-material-design-bundle
+$ git clone https://github.com/webeweb/adminbsb-material-design-bundle.git
 $ cd adminbsb-material-design-bundle
-$ git clone https://github.com/webeweb/adminbsb-material-design-bundle.git .
 $ composer install
 ```
 
