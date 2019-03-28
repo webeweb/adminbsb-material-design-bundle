@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
-use Twig_SimpleFunction;
+use Twig\TwigFunction;
 use WBW\Library\Core\Argument\ArrayHelper;
 
 /**
@@ -42,11 +42,11 @@ class ModalTwigExtension extends AbstractModalTwigExtension {
     /**
      * Get the Twig functions.
      *
-     * @return Twig_SimpleFunction[] Returns the Twig functions.
+     * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("adminBSBModalHeader", [$this, "adminBSBModalHeaderFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBModalHeader", [$this, "adminBSBModalHeaderFunction"], ["is_safe" => ["html"]]),
         ];
     }
 }

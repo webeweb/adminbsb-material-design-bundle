@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Menu;
 
 use Symfony\Component\Translation\TranslatorInterface;
-use Twig_Environment;
+use Twig\Environment;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\RendererTwigExtension;
 use WBW\Bundle\CoreBundle\Navigation\NavigationNode;
@@ -34,10 +34,10 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
     /**
      * Constructor.
      *
-     * @param Twig_Environment $twigEnvironment The Twig environment.
+     * @param Environment $twigEnvironment The Twig environment.
      * @param TranslatorInterface $translator The translator.
      */
-    public function __construct(Twig_Environment $twigEnvironment, TranslatorInterface $translator) {
+    public function __construct(Environment $twigEnvironment, TranslatorInterface $translator) {
         parent::__construct($twigEnvironment);
         $this->setTranslator($translator);
     }

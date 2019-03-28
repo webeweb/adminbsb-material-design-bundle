@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Widget;
 
-use Twig_Node;
-use Twig_SimpleFunction;
+use Twig\Node\Node;
+use Twig\TwigFunction;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\TypographyTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget\CardTwigExtension;
@@ -68,7 +68,6 @@ class CardTwigExtensionTest extends AbstractTestCase {
         $arg = ["content" => "content"];
         $res = '<h2 class="card-header">content</h2>';
         $this->assertEquals($res, $obj->adminBSBCardHeaderFunction($arg));
-
     }
 
     /**
@@ -83,7 +82,6 @@ class CardTwigExtensionTest extends AbstractTestCase {
         $arg = ["description" => "description"];
         $res = '<h2 class="card-header"><small>description</small></h2>';
         $this->assertEquals($res, $obj->adminBSBCardHeaderFunction($arg));
-
     }
 
     /**
@@ -98,7 +96,6 @@ class CardTwigExtensionTest extends AbstractTestCase {
         $arg = ["icon" => "person"];
         $res = '<h2 class="card-header"><i class="material-icons" style="margin: -4px 4px 0 0; vertical-align: sub;">person</i></h2>';
         $this->assertEquals($res, $obj->adminBSBCardHeaderFunction($arg));
-
     }
 
     /**
@@ -141,9 +138,9 @@ class CardTwigExtensionTest extends AbstractTestCase {
         $res = $obj->getFunctions();
         $this->assertCount(1, $res);
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
+        $this->assertInstanceOf(TwigFunction::class, $res[0]);
         $this->assertEquals("adminBSBCardHeader", $res[0]->getName());
         $this->assertEquals([$obj, "adminBSBCardHeaderFunction"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
     }
 }

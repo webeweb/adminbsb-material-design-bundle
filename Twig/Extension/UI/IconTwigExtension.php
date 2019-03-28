@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
-use Twig_SimpleFunction;
+use Twig\TwigFunction;
 use WBW\Bundle\CoreBundle\Renderer\IconRendererInterface;
 use WBW\Library\Core\Argument\ArrayHelper;
 
@@ -53,12 +53,12 @@ class IconTwigExtension extends AbstractIconTwigExtension implements IconRendere
     /**
      * Get the Twig functions.
      *
-     * @return Twig_SimpleFunction[] Returns the Twig functions.
+     * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("adminBSBIconBasic", [$this, "adminBSBIconBasicFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBIconMaterialDesign", [$this, "adminBSBIconMaterialDesignFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBIconBasic", [$this, "adminBSBIconBasicFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBIconMaterialDesign", [$this, "adminBSBIconMaterialDesignFunction"], ["is_safe" => ["html"]]),
         ];
     }
 

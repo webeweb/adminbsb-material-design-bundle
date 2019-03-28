@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
-use Twig_SimpleFunction;
+use Twig\TwigFunction;
 use WBW\Library\Core\Argument\ArrayHelper;
 
 /**
@@ -82,15 +82,15 @@ class PreloaderTwigExtension extends AbstractPreloaderTwigExtension {
     /**
      * Get the Twig functions.
      *
-     * @return Twig_SimpleFunction[] Returns the Twig functions.
+     * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("adminBSBPreloaderMaterialDesignL", [$this, "adminBSBPreloaderMaterialDesignLFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBPreloaderMaterialDesignS", [$this, "adminBSBPreloaderMaterialDesignSFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBPreloaderMaterialDesignSM", [$this, "adminBSBPreloaderMaterialDesignSMFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBPreloaderMaterialDesignXL", [$this, "adminBSBPreloaderMaterialDesignXLFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBPreloaderMaterialDesignXS", [$this, "adminBSBPreloaderMaterialDesignXSFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBPreloaderMaterialDesignL", [$this, "adminBSBPreloaderMaterialDesignLFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBPreloaderMaterialDesignS", [$this, "adminBSBPreloaderMaterialDesignSFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBPreloaderMaterialDesignSM", [$this, "adminBSBPreloaderMaterialDesignSMFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBPreloaderMaterialDesignXL", [$this, "adminBSBPreloaderMaterialDesignXLFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBPreloaderMaterialDesignXS", [$this, "adminBSBPreloaderMaterialDesignXSFunction"], ["is_safe" => ["html"]]),
         ];
     }
 }

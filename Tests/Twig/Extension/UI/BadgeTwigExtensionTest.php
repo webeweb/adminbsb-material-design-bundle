@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\UI;
 
-use Twig_Node;
-use Twig_SimpleFunction;
+use Twig\Node\Node;
+use Twig\TwigFunction;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\BadgeTwigExtension;
 
@@ -637,44 +637,44 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
         $res = $obj->getFunctions();
         $this->assertCount(8, $res);
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
+        $this->assertInstanceOf(TwigFunction::class, $res[0]);
         $this->assertEquals("adminBSBButtonBadgeDanger", $res[0]->getName());
         $this->assertEquals([$obj, "adminBSBButtonBadgeDangerFunction"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
+        $this->assertInstanceOf(TwigFunction::class, $res[1]);
         $this->assertEquals("adminBSBButtonBadgeDefault", $res[1]->getName());
         $this->assertEquals([$obj, "adminBSBButtonBadgeDefaultFunction"], $res[1]->getCallable());
-        $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[1]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[2]);
+        $this->assertInstanceOf(TwigFunction::class, $res[2]);
         $this->assertEquals("adminBSBButtonBadgeInfo", $res[2]->getName());
         $this->assertEquals([$obj, "adminBSBButtonBadgeInfoFunction"], $res[2]->getCallable());
-        $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[2]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[3]);
+        $this->assertInstanceOf(TwigFunction::class, $res[3]);
         $this->assertEquals("adminBSBButtonBadgeList", $res[3]->getName());
         $this->assertEquals([$obj, "adminBSBButtonBadgeListFunction"], $res[3]->getCallable());
-        $this->assertEquals(["html"], $res[3]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[3]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[4]);
+        $this->assertInstanceOf(TwigFunction::class, $res[4]);
         $this->assertEquals("adminBSBButtonBadgeMaterialDesign", $res[4]->getName());
         $this->assertEquals([$obj, "adminBSBButtonBadgeMaterialDesignFunction"], $res[4]->getCallable());
-        $this->assertEquals(["html"], $res[4]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[4]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[5]);
+        $this->assertInstanceOf(TwigFunction::class, $res[5]);
         $this->assertEquals("adminBSBButtonBadgePrimary", $res[5]->getName());
         $this->assertEquals([$obj, "adminBSBButtonBadgePrimaryFunction"], $res[5]->getCallable());
-        $this->assertEquals(["html"], $res[5]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[5]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[6]);
+        $this->assertInstanceOf(TwigFunction::class, $res[6]);
         $this->assertEquals("adminBSBButtonBadgeSuccess", $res[6]->getName());
         $this->assertEquals([$obj, "adminBSBButtonBadgeSuccessFunction"], $res[6]->getCallable());
-        $this->assertEquals(["html"], $res[6]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[6]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[7]);
+        $this->assertInstanceOf(TwigFunction::class, $res[7]);
         $this->assertEquals("adminBSBButtonBadgeWarning", $res[7]->getName());
         $this->assertEquals([$obj, "adminBSBButtonBadgeWarningFunction"], $res[7]->getCallable());
-        $this->assertEquals(["html"], $res[7]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[7]->getSafe(new Node()));
     }
 }

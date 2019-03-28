@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\UI;
 
-use Twig_Node;
-use Twig_SimpleFunction;
+use Twig\Node\Node;
+use Twig\TwigFunction;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\IconTwigExtension;
 
@@ -50,7 +50,6 @@ class IconTwigExtensionTest extends AbstractTestCase {
         $arg = ["name" => "person"];
         $res = '<i class="material-icons">person</i>';
         $this->assertEquals($res, $obj->adminBSBIconBasicFunction($arg));
-
     }
 
     /**
@@ -65,7 +64,6 @@ class IconTwigExtensionTest extends AbstractTestCase {
         $arg = ["style" => "margin: 4px;"];
         $res = '<i class="material-icons" style="margin: 4px;">home</i>';
         $this->assertEquals($res, $obj->adminBSBIconBasicFunction($arg));
-
     }
 
     /**
@@ -80,7 +78,6 @@ class IconTwigExtensionTest extends AbstractTestCase {
         $arg = [];
         $res = '<i class="material-icons">home</i>';
         $this->assertEquals($res, $obj->adminBSBIconBasicFunction($arg));
-
     }
 
     /**
@@ -178,14 +175,14 @@ class IconTwigExtensionTest extends AbstractTestCase {
         $res = $obj->getFunctions();
         $this->assertCount(2, $res);
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
+        $this->assertInstanceOf(TwigFunction::class, $res[0]);
         $this->assertEquals("adminBSBIconBasic", $res[0]->getName());
         $this->assertEquals([$obj, "adminBSBIconBasicFunction"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
+        $this->assertInstanceOf(TwigFunction::class, $res[1]);
         $this->assertEquals("adminBSBIconMaterialDesign", $res[1]->getName());
         $this->assertEquals([$obj, "adminBSBIconMaterialDesignFunction"], $res[1]->getCallable());
-        $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[1]->getSafe(new Node()));
     }
 }

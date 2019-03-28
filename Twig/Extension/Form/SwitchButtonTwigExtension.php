@@ -11,8 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Form;
 
-use Twig_SimpleFunction;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractAdminBSBTwigExtension;
+use Twig\TwigFunction;
 use WBW\Library\Core\Argument\ArrayHelper;
 
 /**
@@ -53,12 +52,12 @@ class SwitchButtonTwigExtension extends AbstractSwitchButtonTwigExtension {
     /**
      * Get the Twig functions.
      *
-     * @return Twig_SimpleFunction[] Returns the Twig functions.
+     * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("adminBSBSwitchButtonBasic", [$this, "adminBSBSwitchButtonBasicFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBSwitchButtonMaterialDesign", [$this, "adminBSBSwitchButtonMaterialDesignFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBSwitchButtonBasic", [$this, "adminBSBSwitchButtonBasicFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBSwitchButtonMaterialDesign", [$this, "adminBSBSwitchButtonMaterialDesignFunction"], ["is_safe" => ["html"]]),
         ];
     }
 }

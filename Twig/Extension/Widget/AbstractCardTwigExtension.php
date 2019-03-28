@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget;
 
-use Twig_Environment;
+use Twig\Environment;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\RendererTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\TypographyTwigExtension;
@@ -31,10 +31,10 @@ abstract class AbstractCardTwigExtension extends AbstractTwigExtension {
     /**
      * Constructor.
      *
-     * @param Twig_Environment $twigEnvironment The Twig environment.
+     * @param Environment $twigEnvironment The Twig environment.
      * @param TypographyTwigExtension $typographyTwigExtension The Typography Twig extension.
      */
-    public function __construct(Twig_Environment $twigEnvironment, TypographyTwigExtension $typographyTwigExtension) {
+    public function __construct(Environment $twigEnvironment, TypographyTwigExtension $typographyTwigExtension) {
         parent::__construct($twigEnvironment);
         $this->setTypographyTwigExtension($typographyTwigExtension);
     }

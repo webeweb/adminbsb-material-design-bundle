@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
-use Twig_SimpleFilter;
-use Twig_SimpleFunction;
+use Twig\TwigFilter;
+use Twig\TwigFunction;
 use WBW\Bundle\AdminBSBBundle\ProgressBar\ProgressBarFactory;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarTwigExtension as BaseTwigExtension;
 
@@ -44,7 +44,7 @@ class ProgressBarTwigExtension extends BaseTwigExtension {
     /**
      * Get the Twig filters.
      *
-     * @return Twig_SimpleFilter[] Returns the Twig filters.
+     * @return TwigFilter[] Returns the Twig filters.
      */
     public function getFilters() {
         return [];
@@ -53,16 +53,16 @@ class ProgressBarTwigExtension extends BaseTwigExtension {
     /**
      * Get the Twig functions.
      *
-     * @return Twig_SimpleFunction[] Returns the Twig functions.
+     * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("adminBSBProgressBarBasic", [$this, "bootstrapProgressBarBasicFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBProgressBarDanger", [$this, "bootstrapProgressBarDangerFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBProgressBarInfo", [$this, "bootstrapProgressBarInfoFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBProgressBarMaterialDesign", [$this, "adminBSBProgressBarMaterialDesignFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBProgressBarSuccess", [$this, "bootstrapProgressBarSuccessFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBProgressBarWarning", [$this, "bootstrapProgressBarWarningFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBProgressBarBasic", [$this, "bootstrapProgressBarBasicFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBProgressBarDanger", [$this, "bootstrapProgressBarDangerFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBProgressBarInfo", [$this, "bootstrapProgressBarInfoFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBProgressBarMaterialDesign", [$this, "adminBSBProgressBarMaterialDesignFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBProgressBarSuccess", [$this, "bootstrapProgressBarSuccessFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBProgressBarWarning", [$this, "bootstrapProgressBarWarningFunction"], ["is_safe" => ["html"]]),
         ];
     }
 }

@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Plugin;
 
 use Symfony\Component\Translation\TranslatorInterface;
-use Twig_Environment;
+use Twig\Environment;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Bundle\CoreBundle\Service\TranslatorTrait;
 use WBW\Library\Core\Argument\StringHelper;
@@ -49,18 +49,18 @@ abstract class AbstractDatetimePickerTwigExtension extends AbstractTwigExtension
 EOT;
 
     /**
-     * Default date format.
-     *
-     * @var string
-     */
-    const DEFAULT_DATE_FORMAT = "YYYY-MM-DD";
-
-    /**
      * Default datetime format.
      *
      * @var string
      */
     const DEFAULT_DATETIME_FORMAT = self::DEFAULT_DATE_FORMAT . " - " . self::DEFAULT_TIME_FORMAT;
+
+    /**
+     * Default date format.
+     *
+     * @var string
+     */
+    const DEFAULT_DATE_FORMAT = "YYYY-MM-DD";
 
     /**
      * Default time format.
@@ -72,10 +72,10 @@ EOT;
     /**
      * Constructor.
      *
-     * @param Twig_Environment $twigEnvironment The Twig environment.
+     * @param Environment $twigEnvironment The Twig environment.
      * @param TranslatorInterface $translator The translator.
      */
-    public function __construct(Twig_Environment $twigEnvironment, TranslatorInterface $translator) {
+    public function __construct(Environment $twigEnvironment, TranslatorInterface $translator) {
         parent::__construct($twigEnvironment);
         $this->setTranslator($translator);
     }

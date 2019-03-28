@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Plugin;
 
-use Twig_SimpleFunction;
+use Twig\TwigFunction;
 use WBW\Library\Core\Argument\ArrayHelper;
 
 /**
@@ -62,13 +62,13 @@ class DatetimePickerTwigExtension extends AbstractDatetimePickerTwigExtension {
     /**
      * Get the Twig functions.
      *
-     * @return Twig_SimpleFunction[] Returns the Twig functions.
+     * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("adminBSBDatePicker", [$this, "adminBSBDatePickerFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBDatetimePicker", [$this, "adminBSBDatetimePickerFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBTimePicker", [$this, "adminBSBTimePickerFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBDatePicker", [$this, "adminBSBDatePickerFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBDatetimePicker", [$this, "adminBSBDatetimePickerFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBTimePicker", [$this, "adminBSBTimePickerFunction"], ["is_safe" => ["html"]]),
         ];
     }
 }

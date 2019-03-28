@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Form;
 
-use Twig_SimpleFunction;
+use Twig\TwigFunction;
 use WBW\Library\Core\Argument\ArrayHelper;
 
 /**
@@ -52,12 +52,12 @@ class CheckboxTwigExtension extends AbstractCheckboxTwigExtension {
     /**
      * Get the Twig functions.
      *
-     * @return Twig_SimpleFunction[] Returns the Twig functions.
+     * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("adminBSBCheckboxBasic", [$this, "adminBSBCheckboxBasicFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBCheckboxMaterialDesign", [$this, "adminBSBCheckboxMaterialDesignFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBCheckboxBasic", [$this, "adminBSBCheckboxBasicFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBCheckboxMaterialDesign", [$this, "adminBSBCheckboxMaterialDesignFunction"], ["is_safe" => ["html"]]),
         ];
     }
 }

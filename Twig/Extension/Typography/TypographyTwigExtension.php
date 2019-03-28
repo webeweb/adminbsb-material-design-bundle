@@ -11,7 +11,8 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography;
 
-use Twig_SimpleFunction;
+use Twig\TwigFilter;
+use Twig\TwigFunction;
 use WBW\Library\Core\Argument\ArrayHelper;
 
 /**
@@ -82,7 +83,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
     /**
      * Get the Twig filters.
      *
-     * @return Twig_SimpleFilter[] Returns the Twig filters.
+     * @return TwigFilter[] Returns the Twig filters.
      */
     public function getFilters() {
         return [];
@@ -91,25 +92,25 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
     /**
      * Get the Twig functions.
      *
-     * @return Twig_SimpleFunction[] Returns the Twig functions.
+     * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("adminBSBBold", [$this, "adminBSBBoldFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBDeleted", [$this, "bootstrapDeletedFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBHeading1", [$this, "bootstrapHeading1Function"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBHeading2", [$this, "bootstrapHeading2Function"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBHeading3", [$this, "bootstrapHeading3Function"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBHeading4", [$this, "bootstrapHeading4Function"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBHeading5", [$this, "bootstrapHeading5Function"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBHeading6", [$this, "bootstrapHeading6Function"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBInserted", [$this, "bootstrapInsertedFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBItalic", [$this, "adminBSBItalicFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBLineThrough", [$this, "adminBSBLineThroughFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBMarked", [$this, "bootstrapMarkedFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBOverline", [$this, "adminBSBOverlineFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBSmall", [$this, "bootstrapSmallFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBUnderline", [$this, "adminBSBUnderlineFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBBold", [$this, "adminBSBBoldFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBDeleted", [$this, "bootstrapDeletedFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBHeading1", [$this, "bootstrapHeading1Function"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBHeading2", [$this, "bootstrapHeading2Function"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBHeading3", [$this, "bootstrapHeading3Function"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBHeading4", [$this, "bootstrapHeading4Function"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBHeading5", [$this, "bootstrapHeading5Function"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBHeading6", [$this, "bootstrapHeading6Function"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBInserted", [$this, "bootstrapInsertedFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBItalic", [$this, "adminBSBItalicFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBLineThrough", [$this, "adminBSBLineThroughFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBMarked", [$this, "bootstrapMarkedFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBOverline", [$this, "adminBSBOverlineFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBSmall", [$this, "bootstrapSmallFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBUnderline", [$this, "adminBSBUnderlineFunction"], ["is_safe" => ["html"]]),
         ];
     }
 }

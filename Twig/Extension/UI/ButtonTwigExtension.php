@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
-use Twig_SimpleFilter;
-use Twig_SimpleFunction;
+use Twig\TwigFilter;
+use Twig\TwigFunction;
 use WBW\Bundle\AdminBSBBundle\Button\ButtonFactory;
 use WBW\Library\Core\Argument\ArrayHelper;
 
@@ -108,25 +108,25 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
      */
     public function getFilters() {
         return [
-            new Twig_SimpleFilter("adminBSBButtonLink", [$this, "bootstrapButtonLinkFilter"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFilter("adminBSBButtonSubmit", [$this, "bootstrapButtonSubmitFilter"], ["is_safe" => ["html"]]),
+            new TwigFilter("adminBSBButtonLink", [$this, "bootstrapButtonLinkFilter"], ["is_safe" => ["html"]]),
+            new TwigFilter("adminBSBButtonSubmit", [$this, "bootstrapButtonSubmitFilter"], ["is_safe" => ["html"]]),
         ];
     }
 
     /**
      * Get the Twig functions.
      *
-     * @return Twig_SimpleFunction[] Returns the Twig functions.
+     * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("adminBSBButtonDanger", [$this, "adminBSBButtonDangerFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBButtonDefault", [$this, "adminBSBButtonDefaultFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBButtonInfo", [$this, "adminBSBButtonInfoFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBButtonMaterialDesign", [$this, "adminBSBButtonMaterialDesignFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBButtonPrimary", [$this, "adminBSBButtonPrimaryFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBButtonSuccess", [$this, "adminBSBButtonSuccessFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("adminBSBButtonWarning", [$this, "adminBSBButtonWarningFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBButtonDanger", [$this, "adminBSBButtonDangerFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBButtonDefault", [$this, "adminBSBButtonDefaultFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBButtonInfo", [$this, "adminBSBButtonInfoFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBButtonMaterialDesign", [$this, "adminBSBButtonMaterialDesignFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBButtonPrimary", [$this, "adminBSBButtonPrimaryFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBButtonSuccess", [$this, "adminBSBButtonSuccessFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("adminBSBButtonWarning", [$this, "adminBSBButtonWarningFunction"], ["is_safe" => ["html"]]),
         ];
     }
 }
