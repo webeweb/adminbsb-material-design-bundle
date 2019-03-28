@@ -53,7 +53,7 @@ class SwitchButtonTwigExtension extends AbstractSwitchButtonTwigExtension {
     /**
      * Get the Twig functions.
      *
-     * @return array Returns the Twig functions.
+     * @return Twig_SimpleFunction[] Returns the Twig functions.
      */
     public function getFunctions() {
         return [
