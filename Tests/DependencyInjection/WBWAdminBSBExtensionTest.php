@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Tests\DependencyInjection;
 
-use WBW\Bundle\AdminBSBBundle\DependencyInjection\AdminBSBExtension;
+use WBW\Bundle\AdminBSBBundle\DependencyInjection\WBWAdminBSBExtension;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\CheckboxTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\RadioButtonTwigExtension;
@@ -34,7 +34,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget\CardTwigExtension;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests\DependencyInjection
  */
-class AdminBSBExtensionTest extends AbstractTestCase {
+class WBWAdminBSBExtensionTest extends AbstractTestCase {
 
     /**
      * {@inheritdoc}
@@ -50,7 +50,7 @@ class AdminBSBExtensionTest extends AbstractTestCase {
      */
     public function testLoad() {
 
-        $obj = new AdminBSBExtension();
+        $obj = new WBWAdminBSBExtension();
 
         $obj->load([], $this->containerBuilder);
 

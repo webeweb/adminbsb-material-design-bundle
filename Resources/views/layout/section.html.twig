@@ -1,5 +1,5 @@
 {# Resources/views/layout/section.html.twig #}
-{% extends "@AdminBSB/layout.html.twig" %}
+{% extends "@WBWAdminBSB/layout.html.twig" %}
 
 {% block adminBSBTitle %}{{ ApplicationThemeProvider.title|default("AdminBSB Material Design") }}{% endblock %}
 
@@ -19,11 +19,11 @@
                     </div>
                 </div>
             </div>
-            <p>{{ "views.layout.loader.wait"|trans({}, "AdminBSBBundle") }}</p>
+            <p>{{ "views.layout.loader.wait"|trans({}, "WBWAdminBSBBundle") }}</p>
         </div>
     </div>
     <div class="overlay"></div>
-    {% include "@AdminBSB/provider/search.html.twig" %}
+    {% include "@WBWAdminBSB/provider/search.html.twig" %}
     <nav class="navbar">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -52,18 +52,18 @@
                 {% if (UserInfoThemeProvider is defined and UserInfoThemeProvider.view is not null) %}
                     {% include UserInfoThemeProvider.view with {"provider": UserInfoThemeProvider} %}
                 {% else %}
-                    {% include "@AdminBSB/provider/user-info.html.twig" %}
+                    {% include "@WBWAdminBSB/provider/user-info.html.twig" %}
                 {% endif %}
             {% endif %}
             {% if (NavigationThemeProvider is defined and NavigationThemeProvider.view is not null) %}
                 {% include NavigationThemeProvider.view with {"provider": NavigationThemeProvider} %}
             {% else %}
-                {% include "@AdminBSB/provider/navigation.html.twig" %}
+                {% include "@WBWAdminBSB/provider/navigation.html.twig" %}
             {% endif %}
             {% if (FooterThemeProvider is defined and FooterThemeProvider.view is not null) %}
                 {% include FooterThemeProvider.view with {"provider": FooterThemeProvider} %}
             {% else %}
-                {% include "@AdminBSB/provider/footer.html.twig" %}
+                {% include "@WBWAdminBSB/provider/footer.html.twig" %}
             {% endif %}
         </aside>
         <aside class="right-sidebar" id="rightsidebar">
@@ -73,7 +73,7 @@
     <section class="content">
         <div class="container-fluid">
             {% if (0 < app.session.flashbag.peekAll()|length) %}
-                {% include "@AdminBSB/layout/flashbag.html.twig" %}
+                {% include "@WBWAdminBSB/layout/flashbag.html.twig" %}
             {% endif %}
             {% block adminBSBContent %}
             {% endblock %}

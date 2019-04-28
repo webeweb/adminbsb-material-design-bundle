@@ -4,7 +4,7 @@
 {% block bootstrapFormTheme %}
     {% block adminBSBFormTheme %}
         {% if (form is defined) %}
-            {% form_theme form "@AdminBSB/layout/Form/adminbsb_layout.html.twig" %}
+            {% form_theme form "@WBWAdminBSB/layout/Form/adminbsb_layout.html.twig" %}
         {% endif %}
     {% endblock %}
 {% endblock %}
@@ -15,7 +15,7 @@
         <!-- Google fonts -->
         <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin,cyrillic-ext">
         <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        {% include "@AdminBSB/layout/stylesheets.html.twig" with {"theme": "bootstrap" } %}
+        {% include "@WBWAdminBSB/layout/stylesheets.html.twig" with {"theme": "bootstrap" } %}
     {% endblock %}
 {% endblock %}
 
@@ -31,6 +31,6 @@
 {% block bootstrapJavascripts %}
     {{ parent() }}
     {% block adminBSBJavascripts %}
-        {% include "@AdminBSB/layout/javascripts.html.twig" with {"theme": "bootstrap" } %}
+        {% include "@WBWAdminBSB/layout/javascripts.html.twig" with {"theme": "bootstrap" } %}
     {% endblock %}
 {% endblock %}

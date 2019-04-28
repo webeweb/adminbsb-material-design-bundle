@@ -1,4 +1,4 @@
-# Resources/translations/AdminBSB.en.yml
+# Resources/translations/WBWAdminBSBBundle.en.yml
 TwigBundle:
     views:
         Exception:

@@ -12,6 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
+use WBW\Bundle\AdminBSBBundle\DependencyInjection\WBWAdminBSBExtension;
 use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
 
 /**
@@ -20,12 +21,19 @@ use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle
  */
-class AdminBSBBundle extends Bundle implements AssetsProviderInterface {
+class WBWAdminBSBBundle extends Bundle implements AssetsProviderInterface {
 
     /**
      * {@inheritdoc}
      */
     public function getAssetsRelativeDirectory() {
         return "/Resources/assets";
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getContainerExtension() {
+        return new WBWAdminBSBExtension();
     }
 }

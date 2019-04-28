@@ -22,7 +22,7 @@ use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\DependencyInjection
  */
-class AdminBSBExtension extends Extension {
+class WBWAdminBSBExtension extends Extension {
 
     /**
      * {@inheritdoc}

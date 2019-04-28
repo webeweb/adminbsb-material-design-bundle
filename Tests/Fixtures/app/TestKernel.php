@@ -31,7 +31,7 @@ class TestKernel extends AbstractKernel {
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
-            new WBW\Bundle\AdminBSBBundle\AdminBSBBundle(),
+            new WBW\Bundle\AdminBSBBundle\WBWAdminBSBBundle(),
             new WBW\Bundle\BootstrapBundle\BootstrapBundle(),
             new WBW\Bundle\CoreBundle\CoreBundle(),
             new WBW\Bundle\JQuery\DataTablesBundle\JQueryDataTablesBundle(),

@@ -11,7 +11,8 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Tests;
 
-use WBW\Bundle\AdminBSBBundle\AdminBSBBundle;
+use WBW\Bundle\AdminBSBBundle\DependencyInjection\WBWAdminBSBExtension;
+use WBW\Bundle\AdminBSBBundle\WBWAdminBSBBundle;
 
 /**
  * AdminBSB bundle test.
@@ -19,7 +20,7 @@ use WBW\Bundle\AdminBSBBundle\AdminBSBBundle;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests
  */
-class AdminBSBBundleTest extends AbstractTestCase {
+class WBWAdminBSBBundleTest extends AbstractTestCase {
 
     /**
      * Tests the getAssetsRelativeDirectory() method.
@@ -28,9 +29,22 @@ class AdminBSBBundleTest extends AbstractTestCase {
      */
     public function testGetAssetsRelativeDirectory() {
 
-        $obj = new AdminBSBBundle();
+        $obj = new WBWAdminBSBBundle();
 
         $res = "/Resources/assets";
         $this->assertEquals($res, $obj->getAssetsRelativeDirectory());
+    }
+
+    /**
+     * Tests the getContainerExtension() method.
+     *
+     * @return void
+     */
+    public function testGetContainerExtension() {
+
+        $obj = new WBWAdminBSBBundle();
+
+        $res = $obj->getContainerExtension();
+        $this->assertInstanceOf(WBWAdminBSBExtension::class, $res);
     }
 }

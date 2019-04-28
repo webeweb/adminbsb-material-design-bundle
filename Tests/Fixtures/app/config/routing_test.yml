@@ -1,13 +1,13 @@
 # Tests/Fixtures/app/config/routing_test.yml
 fos_user:
-    resource: "@AdminBSBBundle/Resources/config/routing/fosuser.yml"
+    resource: "@WBWAdminBSBBundle/Resources/config/routing/fosuser.yml"
     prefix:   "/"
 
 twig:
     resource: "@TwigBundle/Resources/config/routing/errors.xml"
     prefix:   "/error"
 
-adminbsb_blank_action:
+wbw_adminbsb_blank_action:
     path:     "/blank"
     defaults: { _controller: "WBW\\Bundle\\AdminBSBBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::blankAction" }
     methods:  ["GET"]
