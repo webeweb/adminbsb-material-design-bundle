@@ -159,7 +159,7 @@ class IconTwigExtensionTest extends AbstractTestCase {
 
         $obj = new IconTwigExtension($this->twigEnvironment);
 
-        $this->assertEquals("webeweb.adminbsb.twig.extension.ui.icon", IconTwigExtension::SERVICE_NAME);
+        $this->assertEquals("wbw.adminbsb.twig.extension.ui.icon", IconTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 

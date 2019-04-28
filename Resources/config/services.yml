@@ -1,80 +1,80 @@
 # Resources/config/services.yml
 services:
 
-    webeweb.adminbsb.twig.extension.form.checkbox:
+    wbw.adminbsb.twig.extension.form.checkbox:
         class:     WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\CheckboxTwigExtension
         arguments: ["@twig"]
         tags:
             - { name: "twig.extension" }
 
-    webeweb.adminbsb.twig.extension.form.radio_button:
+    wbw.adminbsb.twig.extension.form.radio_button:
         class:     WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\RadioButtonTwigExtension
         arguments: ["@twig"]
         tags:
             - { name: "twig.extension" }
 
-    webeweb.adminbsb.twig.extension.form.switch_button:
+    wbw.adminbsb.twig.extension.form.switch_button:
         class: WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\SwitchButtonTwigExtension
         arguments: ["@twig"]
         tags:
             - { name: "twig.extension" }
 
-    webeweb.adminbsb.twig.extension.menu.multi_level_menu:
+    wbw.adminbsb.twig.extension.menu.multi_level_menu:
         class:     WBW\Bundle\AdminBSBBundle\Twig\Extension\Menu\MultiLevelMenuTwigExtension
         arguments: ["@twig" ,"@translator"]
         tags:
             - { name: "twig.extension" }
 
-    webeweb.adminbsb.twig.extension.plugin.datetime_picker:
+    wbw.adminbsb.twig.extension.plugin.datetime_picker:
         class:     WBW\Bundle\AdminBSBBundle\Twig\Extension\Plugin\DatetimePickerTwigExtension
         arguments: ["@twig", "@translator"]
         tags:
             - { name: "twig.extension" }
 
-    webeweb.adminbsb.twig.extension.typography:
+    wbw.adminbsb.twig.extension.typography:
         class:     WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\TypographyTwigExtension
         arguments: ["@twig"]
         tags:
             - { name: "twig.extension" }
 
-    webeweb.adminbsb.twig.extension.ui.badge:
+    wbw.adminbsb.twig.extension.ui.badge:
         class:     WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\BadgeTwigExtension
         arguments: ["@twig"]
         tags:
             - { name: "twig.extension" }
 
-    webeweb.adminbsb.twig.extension.ui.button:
+    wbw.adminbsb.twig.extension.ui.button:
         class:     WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ButtonTwigExtension
         arguments: ["@twig"]
         tags:
             - { name: "twig.extension" }
 
-    webeweb.adminbsb.twig.extension.ui.icon:
+    wbw.adminbsb.twig.extension.ui.icon:
         class:     WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\IconTwigExtension
         arguments: ["@twig"]
         tags:
             - { name: "twig.extension" }
 
-    webeweb.adminbsb.twig.extension.ui.modal:
+    wbw.adminbsb.twig.extension.ui.modal:
         class:     WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ModalTwigExtension
-        arguments: ["@twig", "@webeweb.adminbsb.twig.extension.typography"]
+        arguments: ["@twig", "@wbw.adminbsb.twig.extension.typography"]
         tags:
             - { name: "twig.extension" }
 
-    webeweb.adminbsb.twig.extension.ui.preloader:
+    wbw.adminbsb.twig.extension.ui.preloader:
         class:     WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\PreloaderTwigExtension
         arguments: ["@twig"]
         tags:
             - { name: "twig.extension" }
 
-    webeweb.adminbsb.twig.extension.ui.progress_bar:
+    wbw.adminbsb.twig.extension.ui.progress_bar:
         class:     WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ProgressBarTwigExtension
         arguments: ["@twig"]
         tags:
             - { name: "twig.extension" }
 
-    webeweb.adminbsb.twig.extension.widget.card:
+    wbw.adminbsb.twig.extension.widget.card:
         class:     WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget\CardTwigExtension
-        arguments: ["@twig", "@webeweb.adminbsb.twig.extension.typography"]
+        arguments: ["@twig", "@wbw.adminbsb.twig.extension.typography"]
         tags:
             - { name: "twig.extension" }

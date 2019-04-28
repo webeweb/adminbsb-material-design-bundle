@@ -121,7 +121,7 @@ class CardTwigExtensionTest extends AbstractTestCase {
 
         $obj = new CardTwigExtension($this->twigEnvironment, $this->typographyTwigExtension);
 
-        $this->assertEquals("webeweb.adminbsb.twig.extension.widget.card", CardTwigExtension::SERVICE_NAME);
+        $this->assertEquals("wbw.adminbsb.twig.extension.widget.card", CardTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
         $this->assertSame($this->typographyTwigExtension, $obj->getTypographyTwigExtension());
     }

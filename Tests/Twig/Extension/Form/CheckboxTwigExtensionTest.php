@@ -187,7 +187,7 @@ class CheckboxTwigExtensionTest extends AbstractTestCase {
 
         $obj = new CheckboxTwigExtension($this->twigEnvironment);
 
-        $this->assertEquals("webeweb.adminbsb.twig.extension.form.checkbox", CheckboxTwigExtension::SERVICE_NAME);
+        $this->assertEquals("wbw.adminbsb.twig.extension.form.checkbox", CheckboxTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 

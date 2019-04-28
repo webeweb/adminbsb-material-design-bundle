@@ -28,7 +28,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.adminbsb.twig.extension.typography";
+    const SERVICE_NAME = "wbw.adminbsb.twig.extension.typography";
 
     /**
      * Displays an AdminBSB bold text.

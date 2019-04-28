@@ -159,7 +159,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
 
         $obj = new ProgressBarTwigExtension($this->twigEnvironment);
 
-        $this->assertEquals("webeweb.adminbsb.twig.extension.ui.progress_bar", ProgressBarTwigExtension::SERVICE_NAME);
+        $this->assertEquals("wbw.adminbsb.twig.extension.ui.progress_bar", ProgressBarTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 

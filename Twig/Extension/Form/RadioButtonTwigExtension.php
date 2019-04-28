@@ -27,7 +27,7 @@ class RadioButtonTwigExtension extends AbstractRadioButtonTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.adminbsb.twig.extension.form.radio_button";
+    const SERVICE_NAME = "wbw.adminbsb.twig.extension.form.radio_button";
 
     /**
      * Displays an AdminBSB radio button "Basic".

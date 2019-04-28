@@ -28,7 +28,7 @@ class IconTwigExtension extends AbstractIconTwigExtension implements IconRendere
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.adminbsb.twig.extension.ui.icon";
+    const SERVICE_NAME = "wbw.adminbsb.twig.extension.ui.icon";
 
     /**
      * Displays an AdminBSB basic icon.

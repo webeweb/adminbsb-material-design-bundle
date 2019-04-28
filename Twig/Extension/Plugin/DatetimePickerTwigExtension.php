@@ -27,7 +27,7 @@ class DatetimePickerTwigExtension extends AbstractDatetimePickerTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.adminbsb.twig.extension.plugin.datetime_picker";
+    const SERVICE_NAME = "wbw.adminbsb.twig.extension.plugin.datetime_picker";
 
     /**
      * Displays an AdminBSB date picker.

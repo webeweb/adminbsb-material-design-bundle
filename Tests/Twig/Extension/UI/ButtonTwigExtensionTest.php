@@ -328,7 +328,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
-        $this->assertEquals("webeweb.adminbsb.twig.extension.ui.button", ButtonTwigExtension::SERVICE_NAME);
+        $this->assertEquals("wbw.adminbsb.twig.extension.ui.button", ButtonTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 

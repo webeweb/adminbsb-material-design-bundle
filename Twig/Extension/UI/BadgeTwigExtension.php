@@ -27,7 +27,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.adminbsb.twig.extension.ui.badge";
+    const SERVICE_NAME = "wbw.adminbsb.twig.extension.ui.badge";
 
     /**
      * Displays an AdminBSB button badge "Danger".

@@ -173,7 +173,7 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
 
         $obj = new PreloaderTwigExtension($this->twigEnvironment);
 
-        $this->assertEquals("webeweb.adminbsb.twig.extension.ui.preloader", PreloaderTwigExtension::SERVICE_NAME);
+        $this->assertEquals("wbw.adminbsb.twig.extension.ui.preloader", PreloaderTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 

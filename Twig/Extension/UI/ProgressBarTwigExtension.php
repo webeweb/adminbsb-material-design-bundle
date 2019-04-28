@@ -29,7 +29,7 @@ class ProgressBarTwigExtension extends BaseTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.adminbsb.twig.extension.ui.progress_bar";
+    const SERVICE_NAME = "wbw.adminbsb.twig.extension.ui.progress_bar";
 
     /**
      * Displays an AdminBSB progress bar "Material design".

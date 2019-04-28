@@ -29,7 +29,7 @@ class MultiLevelMenuTwigExtension extends AbstractMenuTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.adminbsb.twig.extension.menu.multi_level_menu";
+    const SERVICE_NAME = "wbw.adminbsb.twig.extension.menu.multi_level_menu";
 
     /**
      * Displays an AdminBSB multi level menu.

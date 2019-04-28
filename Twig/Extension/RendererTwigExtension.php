@@ -29,7 +29,7 @@ class RendererTwigExtension extends BaseTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.adminbsb.twig.extension.renderer";
+    const SERVICE_NAME = "wbw.adminbsb.twig.extension.renderer";
 
     /**
      * Constructor.

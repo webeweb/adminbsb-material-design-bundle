@@ -159,7 +159,7 @@ class SwitchButtonTwigExtensionTest extends AbstractTestCase {
 
         $obj = new SwitchButtonTwigExtension($this->twigEnvironment);
 
-        $this->assertEquals("webeweb.adminbsb.twig.extension.form.switch_button", SwitchButtonTwigExtension::SERVICE_NAME);
+        $this->assertEquals("wbw.adminbsb.twig.extension.form.switch_button", SwitchButtonTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 

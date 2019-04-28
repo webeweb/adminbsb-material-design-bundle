@@ -27,7 +27,7 @@ class CardTwigExtension extends AbstractCardTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.adminbsb.twig.extension.widget.card";
+    const SERVICE_NAME = "wbw.adminbsb.twig.extension.widget.card";
 
     /**
      * Displays an AdminBSB card header.
