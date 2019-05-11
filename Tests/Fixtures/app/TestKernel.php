@@ -32,10 +32,10 @@ class TestKernel extends AbstractKernel {
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
             new WBW\Bundle\AdminBSBBundle\WBWAdminBSBBundle(),
-            new WBW\Bundle\BootstrapBundle\BootstrapBundle(),
-            new WBW\Bundle\CoreBundle\CoreBundle(),
-            new WBW\Bundle\JQuery\DataTablesBundle\JQueryDataTablesBundle(),
-            new WBW\Bundle\SyntaxHighlighterBundle\SyntaxHighlighterBundle(),
+            new WBW\Bundle\BootstrapBundle\WBWBootstrapBundle(),
+            new WBW\Bundle\CoreBundle\WBWCoreBundle(),
+            new WBW\Bundle\JQuery\DataTablesBundle\WBWJQueryDataTablesBundle(),
+            new WBW\Bundle\SyntaxHighlighterBundle\WBWSyntaxHighlighterBundle(),
         ];
         return $bundles;
     }
