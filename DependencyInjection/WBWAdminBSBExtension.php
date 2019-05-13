@@ -29,11 +29,11 @@ class WBWAdminBSBExtension extends Extension {
      */
     public function load(array $configs, ContainerBuilder $container) {
 
-        // Create the file locator.
         $fileLocator = new FileLocator(__DIR__ . "/../Resources/config");
 
-        // Load the services.
         $serviceLoader = new YamlFileLoader($container, $fileLocator);
         $serviceLoader->load("services.yml");
+
+        $serviceLoader->load("twig.yml");
     }
 }
