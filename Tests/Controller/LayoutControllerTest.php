@@ -37,7 +37,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests the Resources/views/layout/Resetting/check_email.html.twig template.
+     * Tests the Resources/views/Resetting/check_email.html.twig template.
      *
      * @return void
      */
@@ -61,7 +61,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests the Resources/views/layout/Security/login.html.twig template.
+     * Tests the Resources/views/Security/login.html.twig template.
      *
      * @return void
      */
@@ -85,7 +85,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests the Resources/views/layout/Registration/register.html.twig template.
+     * Tests the Resources/views/Registration/register.html.twig template.
      *
      * @return void
      */
@@ -109,7 +109,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests the Resources/views/layout/Resetting/request.html.twig template.
+     * Tests the Resources/views/Resetting/request.html.twig template.
      *
      * @return void
      */
@@ -133,7 +133,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests the Resources/views/layout/Exception/error404.html.twig template.
+     * Tests the Resources/views/Exception/error404.html.twig template.
      *
      * @return void
      */
@@ -158,7 +158,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests the Resources/views/layout/Exception/error500.html.twig template.
+     * Tests the Resources/views/Exception/error500.html.twig template.
      *
      * @return void
      */
