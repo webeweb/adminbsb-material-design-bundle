@@ -1,13 +1,13 @@
-{# Resources/layout/exception/error404.html.twig #}
+{# Resources/views/Exception/error500.html.twig #}
 {% extends "@WBWAdminBSB/layout.html.twig" %}
 
 {% block adminBSBTitle %}{{ ApplicationThemeProvider.title|default("AdminBSB Material Design") }} - {{ status_code }} {{ status_text }}{% endblock %}
 
-{% block adminBSBAttributes %} class="four-zero-four"{% endblock %}
+{% block adminBSBAttributes %} class="five-zero-zero"{% endblock %}
 
 {% block adminBSBContainer %}
     {{ parent() }}
-    <div class="four-zero-four-container">
+    <div class="five-zero-zero-container">
         <div class="error-code">{{ status_code }}</div>
         <div class="error-message">{{ status_text }}</div>
         <div class="button-place">
