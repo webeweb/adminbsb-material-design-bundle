@@ -179,17 +179,17 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
      */
     private function translate($id) {
 
-        $outputC = $this->getTranslator()->trans($id, [], "CoreBundle");
+        $outputC = $this->getTranslator()->trans($id, [], "WBWCoreBundle");
         if ($id !== $outputC) {
             return $outputC;
         }
 
-        $outputB = $this->getTranslator()->trans($id, [], "BootstrapBundle");
+        $outputB = $this->getTranslator()->trans($id, [], "WBWBootstrapBundle");
         if ($id !== $outputB) {
             return $outputB;
         }
 
-        $outputA = $this->getTranslator()->trans($id, [], "AdminBSBBundle");
+        $outputA = $this->getTranslator()->trans($id, [], "WBWAdminBSBBundle");
         if ($id !== $outputA) {
             return $outputA;
         }
