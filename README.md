@@ -16,7 +16,7 @@ Based on the work of [AdminBSB - Free admin panel that is based on Bootstrap 3.x
 > done without prior notice to consumers of this package. Of course this code
 > will become stable at a certain point, but for now, use at your own risk.
 
-<img src="https://raw.githubusercontent.com/webeweb/adminbsb-material-design-bundle/master/Resources/doc/images/adminbsb-material-design_promo.png" alt="AdminBSB Material Design bundle" align="right" />
+<img src="https://raw.githubusercontent.com/webeweb/adminbsb-material-design-bundle/master/Resources/doc/screenshot_promo.png" alt="AdminBSB Material Design bundle" align="right" />
 
 Includes:
 
