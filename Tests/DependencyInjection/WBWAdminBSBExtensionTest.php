@@ -11,6 +11,9 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Tests\DependencyInjection;
 
+use Exception;
+use Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
+use WBW\Bundle\AdminBSBBundle\DependencyInjection\Configuration;
 use WBW\Bundle\AdminBSBBundle\DependencyInjection\WBWAdminBSBExtension;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\CheckboxTwigExtension;
@@ -37,38 +40,77 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget\CardTwigExtension;
 class WBWAdminBSBExtensionTest extends AbstractTestCase {
 
     /**
-     * {@inheritdoc}
+     * Configs.
+     *
+     * @var array
+     */
+    private $configs;
+
+    /**
+     * {@inheritDoc}
      */
     protected function setUp() {
         parent::setUp();
+
+        // Set a configs array mock.
+        $this->configs = [
+            "wbw_adminbsb" => [
+                "twig" => true,
+            ],
+        ];
+    }
+
+    /**
+     * Tests the getAlias() method.
+     *
+     * @return void
+     */
+    public function testGetAlias() {
+
+        $obj = new WBWAdminBSBExtension();
+
+        $this->assertEquals("wbw_adminbsb", $obj->getAlias());
+    }
+
+    /**
+     * Tests the getConfiguration() method.
+     *
+     * @return void
+     */
+    public function testGetConfiguration() {
+
+        $obj = new WBWAdminBSBExtension();
+
+        $this->assertInstanceOf(Configuration::class, $obj->getConfiguration([], $this->containerBuilder));
     }
 
     /**
      * Tests the load() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testLoad() {
 
         $obj = new WBWAdminBSBExtension();
 
-        $obj->load([], $this->containerBuilder);
+        $obj->load($this->configs, $this->containerBuilder);
 
-        // Form Twig extensions.
+        // Form Twig extensions
         $this->assertInstanceOf(CheckboxTwigExtension::class, $this->containerBuilder->get(CheckboxTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(RadioButtonTwigExtension::class, $this->containerBuilder->get(RadioButtonTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(SwitchButtonTwigExtension::class, $this->containerBuilder->get(SwitchButtonTwigExtension::SERVICE_NAME));
 
-        // Menu Twig extensions.
+        // Menu Twig extensions
         $this->assertInstanceOf(MultiLevelMenuTwigExtension::class, $this->containerBuilder->get(MultiLevelMenuTwigExtension::SERVICE_NAME));
 
-        // Plugin Twig extensions.
+        // Plugin Twig extensions
         $this->assertInstanceOf(DatetimePickerTwigExtension::class, $this->containerBuilder->get(DatetimePickerTwigExtension::SERVICE_NAME));
 
         // Typography Twig extensions.
         $this->assertInstanceOf(TypographyTwigExtension::class, $this->containerBuilder->get(TypographyTwigExtension::SERVICE_NAME));
 
-        // UI Twig extensions.
+        // UI Twig extensions
         $this->assertInstanceOf(BadgeTwigExtension::class, $this->containerBuilder->get(BadgeTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(ButtonTwigExtension::class, $this->containerBuilder->get(ButtonTwigExtension::SERVICE_NAME));
         //$this->assertInstanceOf(ColorTwigExtension::class, $this->containerBuilder->get(ColorTwigExtension::SERVICE_NAME));
@@ -77,7 +119,31 @@ class WBWAdminBSBExtensionTest extends AbstractTestCase {
         $this->assertInstanceOf(PreloaderTwigExtension::class, $this->containerBuilder->get(PreloaderTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(ProgressBarTwigExtension::class, $this->containerBuilder->get(ProgressBarTwigExtension::SERVICE_NAME));
 
-        // Widget Twig extensions.
+        // Widget Twig extensions
         $this->assertInstanceOf(CardTwigExtension::class, $this->containerBuilder->get(CardTwigExtension::SERVICE_NAME));
+    }
+
+    /**
+     * Tests the load() method.
+     *
+     * @return void
+     */
+    public function testLoadWithoutTwig() {
+
+        // Set the configs mock.
+        $this->configs["wbw_adminbsb"]["twig"] = false;
+
+        $obj = new WBWAdminBSBExtension();
+
+        $this->assertNull($obj->load($this->configs, $this->containerBuilder));
+
+        try {
+
+            $this->containerBuilder->get(CheckboxTwigExtension::SERVICE_NAME);
+        } catch (Exception $ex) {
+
+            $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
+            $this->assertContains(CheckboxTwigExtension::SERVICE_NAME, $ex->getMessage());
+        }
     }
 }

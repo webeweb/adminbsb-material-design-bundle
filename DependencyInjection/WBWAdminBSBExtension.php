@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\DependencyInjection;
 
+use Symfony\Component\Config\Definition\ConfigurationInterface;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
@@ -25,6 +26,13 @@ use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 class WBWAdminBSBExtension extends Extension {
 
     /**
+     * {@inheritDoc}
+     */
+    public function getAlias() {
+        return "wbw_adminbsb";
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function load(array $configs, ContainerBuilder $container) {
@@ -34,6 +42,13 @@ class WBWAdminBSBExtension extends Extension {
         $serviceLoader = new YamlFileLoader($container, $fileLocator);
         $serviceLoader->load("services.yml");
 
-        $serviceLoader->load("twig.yml");
+        /** @var ConfigurationInterface $configuration */
+        $configuration = $this->getConfiguration($configs, $container);
+
+        $config = $this->processConfiguration($configuration, $configs);
+
+        if (true === $config["twig"]) {
+            $serviceLoader->load("twig.yml");
+        }
     }
 }
