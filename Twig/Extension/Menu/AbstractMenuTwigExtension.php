@@ -54,9 +54,12 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
 
         $template[] = $this->adminBSBMenuHeader($tree);
         foreach ($tree->getNodes() as $current) {
+
             if (false === $this->isValidNode($current)) {
                 continue;
             }
+
+            /** @var NavigationNode $current */
             $template[] = $this->adminBSBMenuItem($current);
         }
 
