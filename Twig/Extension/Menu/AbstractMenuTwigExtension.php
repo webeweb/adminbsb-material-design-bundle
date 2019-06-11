@@ -110,9 +110,12 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
             $template[] = '<ul class="ml-menu">';
 
             foreach ($node->getNodes() as $current) {
+
                 if (false === $this->isValidNode($current)) {
                     continue;
                 }
+
+                /** @var NavigationNode $current */
                 $template[] = $this->adminBSBMenuItem($current);
             }
             $template[] = "</ul>";
