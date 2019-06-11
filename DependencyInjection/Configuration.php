@@ -13,6 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
+use WBW\Bundle\CoreBundle\DependencyInjection\ConfigurationHelper;
 
 /**
  * Configuration.
@@ -27,9 +28,9 @@ class Configuration implements ConfigurationInterface {
      */
     public function getConfigTreeBuilder() {
 
-        $treeBuilder = new TreeBuilder();
+        $treeBuilder = new TreeBuilder(WBWAdminBSBExtension::EXTENSION_ALIAS);
 
-        $rootNode = $treeBuilder->root("wbw_adminbsb");
+        $rootNode = ConfigurationHelper::getRootNode($treeBuilder, WBWAdminBSBExtension::EXTENSION_ALIAS);
         $rootNode->children()
             ->booleanNode("twig")->defaultTrue()->info("Load Twig extensions")->end()
             ->end();

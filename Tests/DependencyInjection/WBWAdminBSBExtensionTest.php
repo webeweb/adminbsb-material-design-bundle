@@ -54,10 +54,20 @@ class WBWAdminBSBExtensionTest extends AbstractTestCase {
 
         // Set a configs array mock.
         $this->configs = [
-            "wbw_adminbsb" => [
+            WBWAdminBSBExtension::EXTENSION_ALIAS => [
                 "twig" => true,
             ],
         ];
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
+
+        $this->assertEquals("wbw_adminbsb", WBWAdminBSBExtension::EXTENSION_ALIAS);
     }
 
     /**
@@ -69,7 +79,7 @@ class WBWAdminBSBExtensionTest extends AbstractTestCase {
 
         $obj = new WBWAdminBSBExtension();
 
-        $this->assertEquals("wbw_adminbsb", $obj->getAlias());
+        $this->assertEquals(WBWAdminBSBExtension::EXTENSION_ALIAS, $obj->getAlias());
     }
 
     /**
@@ -131,7 +141,7 @@ class WBWAdminBSBExtensionTest extends AbstractTestCase {
     public function testLoadWithoutTwig() {
 
         // Set the configs mock.
-        $this->configs["wbw_adminbsb"]["twig"] = false;
+        $this->configs[WBWAdminBSBExtension::EXTENSION_ALIAS]["twig"] = false;
 
         $obj = new WBWAdminBSBExtension();
 

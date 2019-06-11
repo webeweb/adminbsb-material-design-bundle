@@ -26,10 +26,17 @@ use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 class WBWAdminBSBExtension extends Extension {
 
     /**
+     * Extension alias.
+     *
+     * @var string
+     */
+    const EXTENSION_ALIAS = "wbw_adminbsb";
+
+    /**
      * {@inheritDoc}
      */
     public function getAlias() {
-        return "wbw_adminbsb";
+        return self::EXTENSION_ALIAS;
     }
 
     /**
