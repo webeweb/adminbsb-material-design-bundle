@@ -90,9 +90,10 @@ EOT;
      */
     public function testConstruct() {
 
+        $this->assertEquals("wbw.adminbsb.twig.extension.menu.multi_level_menu", MultiLevelMenuTwigExtension::SERVICE_NAME);
+
         $obj = new MultiLevelMenuTwigExtension($this->twigEnvironment, $this->translator);
 
-        $this->assertEquals("wbw.adminbsb.twig.extension.menu.multi_level_menu", MultiLevelMenuTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
         $this->assertSame($this->translator, $obj->getTranslator());
     }

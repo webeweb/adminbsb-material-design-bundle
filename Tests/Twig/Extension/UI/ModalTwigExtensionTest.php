@@ -105,9 +105,10 @@ class ModalTwigExtensionTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
+        $this->assertEquals("wbw.adminbsb.twig.extension.ui.modal", ModalTwigExtension::SERVICE_NAME);
+
         $obj = new ModalTwigExtension($this->twigEnvironment, $this->typographyTwigExtension);
 
-        $this->assertEquals("wbw.adminbsb.twig.extension.ui.modal", ModalTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
         $this->assertSame($this->typographyTwigExtension, $obj->getTypographyTwigExtension());
     }

@@ -619,9 +619,10 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
+        $this->assertEquals("wbw.adminbsb.twig.extension.ui.badge", BadgeTwigExtension::SERVICE_NAME);
+
         $obj = new BadgeTwigExtension($this->twigEnvironment);
 
-        $this->assertEquals("wbw.adminbsb.twig.extension.ui.badge", BadgeTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 
