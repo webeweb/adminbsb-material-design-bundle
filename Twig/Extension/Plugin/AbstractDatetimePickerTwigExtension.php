@@ -11,9 +11,9 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Plugin;
 
-use Symfony\Component\Translation\TranslatorInterface;
 use Twig\Environment;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
+use WBW\Bundle\CoreBundle\Component\BaseTranslatorInterface;
 use WBW\Bundle\CoreBundle\Service\TranslatorTrait;
 use WBW\Library\Core\Argument\StringHelper;
 
@@ -73,9 +73,9 @@ EOT;
      * Constructor.
      *
      * @param Environment $twigEnvironment The Twig environment.
-     * @param TranslatorInterface $translator The translator.
+     * @param BaseTranslatorInterface $translator The translator.
      */
-    public function __construct(Environment $twigEnvironment, TranslatorInterface $translator) {
+    public function __construct(Environment $twigEnvironment, BaseTranslatorInterface $translator) {
         parent::__construct($twigEnvironment);
         $this->setTranslator($translator);
     }
@@ -96,8 +96,8 @@ EOT;
 
         $weekStarts = [0, 1, 2, 3, 4, 5, 6];
 
-        $cancelText   = $this->getTranslator()->trans("label.cancel", [], "BootstrapBundle");
-        $clearText    = $this->getTranslator()->trans("label.delete", [], "BootstrapBundle");
+        $cancelText   = $this->getTranslator()->trans("label.cancel", [], "WBWBootstrapBundle");
+        $clearText    = $this->getTranslator()->trans("label.delete", [], "WBWBootstrapBundle");
         $bClearButton = StringHelper::parseBoolean($clearButton);
         $bDate        = StringHelper::parseBoolean($date);
         $bTime        = StringHelper::parseBoolean($time);
