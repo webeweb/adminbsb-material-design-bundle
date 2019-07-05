@@ -27,7 +27,7 @@ class WBWAdminBSBBundle extends Bundle implements AssetsProviderInterface {
      * {@inheritdoc}
      */
     public function getAssetsRelativeDirectory() {
-        return "/Resources/assets";
+        return self::ASSETS_RELATIVE_DIRECTORY;
     }
 
     /**

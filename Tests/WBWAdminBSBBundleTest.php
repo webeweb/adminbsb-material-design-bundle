@@ -13,6 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Tests;
 
 use WBW\Bundle\AdminBSBBundle\DependencyInjection\WBWAdminBSBExtension;
 use WBW\Bundle\AdminBSBBundle\WBWAdminBSBBundle;
+use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
 
 /**
  * AdminBSB bundle test.
@@ -31,8 +32,7 @@ class WBWAdminBSBBundleTest extends AbstractTestCase {
 
         $obj = new WBWAdminBSBBundle();
 
-        $res = "/Resources/assets";
-        $this->assertEquals($res, $obj->getAssetsRelativeDirectory());
+        $this->assertEquals(AssetsProviderInterface::ASSETS_RELATIVE_DIRECTORY, $obj->getAssetsRelativeDirectory());
     }
 
     /**
@@ -44,7 +44,6 @@ class WBWAdminBSBBundleTest extends AbstractTestCase {
 
         $obj = new WBWAdminBSBBundle();
 
-        $res = $obj->getContainerExtension();
-        $this->assertInstanceOf(WBWAdminBSBExtension::class, $res);
+        $this->assertInstanceOf(WBWAdminBSBExtension::class, $obj->getContainerExtension());
     }
 }
