@@ -78,7 +78,7 @@
             {% block adminBSBContent %}
             {% endblock %}
             {% if ("dev" == app.environment) %}
-                {% include "@WBWBootstrap/layout/twig-console.html.twig" %}
+                {% include "@WBWBootstrap/layout/twig-console.html.twig" with {"bootstrapVersion": "3"} %}
             {% endif %}
         </div>
     </section>
