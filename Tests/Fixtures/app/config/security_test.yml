@@ -1,6 +1,9 @@
 # Tests/Fixtures/App/config/security_test.yml
 security:
 
+    encoders:
+        FOS\UserBundle\Model\UserInterface: sha512
+
     firewalls:
         dev:
             pattern:  "^/(_(profiler|wdt)|css|images|js)/"
