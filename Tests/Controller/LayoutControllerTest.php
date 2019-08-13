@@ -22,6 +22,17 @@ use WBW\Bundle\AdminBSBBundle\Tests\AbstractWebTestCase;
 class LayoutControllerTest extends AbstractWebTestCase {
 
     /**
+     * {@inheritDoc}
+     */
+    public static function setUpBeforeClass() {
+        parent::setUpBeforeClass();
+
+        parent::setUpSchemaTool();
+
+        parent::setUpUserFixtures();
+    }
+
+    /**
      * Tests the blankAction() method.
      *
      * @return void
@@ -130,6 +141,30 @@ class LayoutControllerTest extends AbstractWebTestCase {
         $this->assertContains("<body class=\"fp-page\">", $response);
 
         $this->assertContains("<div class=\"fp-box\">", $response);
+    }
+
+    /**
+     * Tests the Resources/views/Resetting/reset.html.twig template.
+     *
+     * @return void
+     */
+    public function testFOSUserResetAction() {
+
+        // Create a client.
+        $client = static::createClient();
+
+        // Make a GET request.
+        $client->request("GET", "/resetting/reset/confirmationToken");
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+
+        // Get the response.
+        $response = $client->getResponse()->getContent();
+
+        $this->assertContains("<title>AdminBSB Material Design - Reset password</title>", $response);
+
+        $this->assertContains("<body class=\"signup-page\">", $response);
+
+        $this->assertContains("<div class=\"signup-box\">", $response);
     }
 
     /**
