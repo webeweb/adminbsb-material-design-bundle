@@ -1,0 +1,12 @@
+<script type="text/javascript">
+    $("selector").bootstrapMaterialDatePicker({
+        cancelText: "label.cancel",
+        clearButton: true,
+        clearText: "label.delete",
+        date: true,
+        format: "DD/MM/YYYY HH mm",
+        lang: "fr",
+        time: true,
+        weekStart: 1
+    });
+</script>

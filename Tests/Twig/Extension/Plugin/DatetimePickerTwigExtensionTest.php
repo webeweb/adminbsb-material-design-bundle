@@ -34,21 +34,8 @@ class DatetimePickerTwigExtensionTest extends AbstractTestCase {
         $obj = new DatetimePickerTwigExtension($this->twigEnvironment, $this->translator);
 
         $arg = ["selector" => "selector", "clearButton" => true, "format" => "DD/MM/YYYY", "lang" => "fr", "weekStart" => 1];
-        $res = <<< EOT
-<script type="text/javascript">
-    $("selector").bootstrapMaterialDatePicker({
-        cancelText: "label.cancel",
-        clearButton: true,
-        clearText: "label.delete",
-        date: true,
-        format: "DD/MM/YYYY",
-        lang: "fr",
-        time: false,
-        weekStart: 1
-    });
-</script>
-EOT;
-        $this->assertEquals($res, $obj->adminBSBDatePickerFunction($arg));
+        $res = file_get_contents(__DIR__ . "/testAdminBSBDatePickerFunction.html.txt");
+        $this->assertEquals($res, $obj->adminBSBDatePickerFunction($arg) . "\n");
     }
 
     /**
@@ -61,21 +48,8 @@ EOT;
         $obj = new DatetimePickerTwigExtension($this->twigEnvironment, $this->translator);
 
         $arg = ["selector" => "selector"];
-        $res = <<<'EOT'
-<script type="text/javascript">
-    $("selector").bootstrapMaterialDatePicker({
-        cancelText: "label.cancel",
-        clearButton: false,
-        clearText: "label.delete",
-        date: true,
-        format: "YYYY-MM-DD",
-        lang: "en",
-        time: false,
-        weekStart: 0
-    });
-</script>
-EOT;
-        $this->assertEquals($res, $obj->adminBSBDatePickerFunction($arg));
+        $res = file_get_contents(__DIR__ . "/testAdminBSBDatePickerFunctionWithSelectorOnly.html.txt");
+        $this->assertEquals($res, $obj->adminBSBDatePickerFunction($arg) . "\n");
     }
 
     /**
@@ -88,21 +62,8 @@ EOT;
         $obj = new DatetimePickerTwigExtension($this->twigEnvironment, $this->translator);
 
         $arg = ["selector" => "selector", "clearButton" => true, "format" => "DD/MM/YYYY HH mm", "lang" => "fr", "weekStart" => 1];
-        $res = <<<'EOT'
-<script type="text/javascript">
-    $("selector").bootstrapMaterialDatePicker({
-        cancelText: "label.cancel",
-        clearButton: true,
-        clearText: "label.delete",
-        date: true,
-        format: "DD/MM/YYYY HH mm",
-        lang: "fr",
-        time: true,
-        weekStart: 1
-    });
-</script>
-EOT;
-        $this->assertEquals($res, $obj->adminBSBDatetimePickerFunction($arg));
+        $res = file_get_contents(__DIR__ . "/testAdminBSBDatetimePickerFunction.html.txt");
+        $this->assertEquals($res, $obj->adminBSBDatetimePickerFunction($arg) . "\n");
     }
 
     /**
@@ -115,21 +76,8 @@ EOT;
         $obj = new DatetimePickerTwigExtension($this->twigEnvironment, $this->translator);
 
         $arg = ["selector" => "selector"];
-        $res = <<< EOT
-<script type="text/javascript">
-    $("selector").bootstrapMaterialDatePicker({
-        cancelText: "label.cancel",
-        clearButton: false,
-        clearText: "label.delete",
-        date: true,
-        format: "YYYY-MM-DD - HH:mm",
-        lang: "en",
-        time: true,
-        weekStart: 0
-    });
-</script>
-EOT;
-        $this->assertEquals($res, $obj->adminBSBDatetimePickerFunction($arg));
+        $res = file_get_contents(__DIR__ . "/testAdminBSBDatetimePickerFunctionWithSelectorOnly.html.txt");
+        $this->assertEquals($res, $obj->adminBSBDatetimePickerFunction($arg) . "\n");
     }
 
     /**
@@ -142,21 +90,8 @@ EOT;
         $obj = new DatetimePickerTwigExtension($this->twigEnvironment, $this->translator);
 
         $arg = ["selector" => "selector", "clearButton" => true, "format" => "HH mm", "lang" => "fr"];
-        $res = <<< EOT
-<script type="text/javascript">
-    $("selector").bootstrapMaterialDatePicker({
-        cancelText: "label.cancel",
-        clearButton: true,
-        clearText: "label.delete",
-        date: false,
-        format: "HH mm",
-        lang: "fr",
-        time: true,
-        weekStart: 0
-    });
-</script>
-EOT;
-        $this->assertEquals($res, $obj->adminBSBTimePickerFunction($arg));
+        $res = file_get_contents(__DIR__ . "/testAdminBSBTimePickerFunction.html.txt");
+        $this->assertEquals($res, $obj->adminBSBTimePickerFunction($arg) . "\n");
     }
 
     /**
@@ -169,21 +104,8 @@ EOT;
         $obj = new DatetimePickerTwigExtension($this->twigEnvironment, $this->translator);
 
         $arg = ["selector" => "selector"];
-        $res = <<< EOT
-<script type="text/javascript">
-    $("selector").bootstrapMaterialDatePicker({
-        cancelText: "label.cancel",
-        clearButton: false,
-        clearText: "label.delete",
-        date: false,
-        format: "HH:mm",
-        lang: "en",
-        time: true,
-        weekStart: 0
-    });
-</script>
-EOT;
-        $this->assertEquals($res, $obj->adminBSBTimePickerFunction($arg));
+        $res = file_get_contents(__DIR__ . "/testAdminBSBTimePickerFunctionWithSelectorOnly.html.txt");
+        $this->assertEquals($res, $obj->adminBSBTimePickerFunction($arg) . "\n");
     }
 
     /**
