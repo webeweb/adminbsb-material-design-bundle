@@ -1,4 +1,4 @@
-# Resources/config/routing/fosuser.yml
+# Resources/config/routing/fos_user.yml
 fos_user_change_password:
     prefix:   "/profile"
     resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"

@@ -1,6 +1,6 @@
 # Tests/Fixtures/app/config/routing_test.yml
 fos_user:
-    resource: "@WBWAdminBSBBundle/Resources/config/routing/fosuser.yml"
+    resource: "@WBWAdminBSBBundle/Resources/config/routing/fos_user.yml"
     prefix:   "/"
 
 twig:
