@@ -2,7 +2,7 @@
 security:
 
     encoders:
-        FOS\UserBundle\Model\UserInterface: sha512
+        FOS\UserBundle\Model\UserInterface: "sha512"
 
     firewalls:
         dev:

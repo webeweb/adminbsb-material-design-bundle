@@ -4,7 +4,7 @@ imports:
     - { resource: "services_test.yml" }
 
 parameters:
-    locale: en
+    locale: "en"
 
 framework:
     csrf_protection:      ~
@@ -39,8 +39,8 @@ doctrine:
         naming_strategy:             "doctrine.orm.naming_strategy.underscore"
 
 fos_user:
-    db_driver:     orm
-    firewall_name: main
+    db_driver:     "orm"
+    firewall_name: "main"
     from_email:
         address:     "no-reply@github.com"
         sender_name: "GitHub"
@@ -56,7 +56,7 @@ monolog:
 swiftmailer:
     host:      "localhost"
     password:  null
-    spool:     { type: memory }
+    spool:     { type: "memory" }
     transport: "smtp"
     username:  "no-reply@github.com"
 
