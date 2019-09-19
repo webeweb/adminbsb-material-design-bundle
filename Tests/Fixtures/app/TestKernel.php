@@ -35,7 +35,6 @@ class TestKernel extends AbstractKernel {
             new WBW\Bundle\BootstrapBundle\WBWBootstrapBundle(),
             new WBW\Bundle\CoreBundle\WBWCoreBundle(),
             new WBW\Bundle\JQuery\DataTablesBundle\WBWJQueryDataTablesBundle(),
-            new WBW\Bundle\SyntaxHighlighterBundle\WBWSyntaxHighlighterBundle(),
         ];
         return $bundles;
     }

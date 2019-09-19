@@ -93,9 +93,10 @@ in the `app/AppKernel.php` file of your project:
     public function registerBundles() {
         $bundles = [
             // ...
-            new WBW\Bundle\AdminBSBBundle\AdminBSBBundle(),
-            new WBW\Bundle\BootstrapBundle\BootstrapBundle(),
-            new WBW\Bundle\JQuery\DataTablesBundle\JQueryDataTablesBundle(),
+            new WBW\Bundle\AdminBSBBundle\WBWAdminBSBBundle(),
+            new WBW\Bundle\BootstrapBundle\WBWBootstrapBundle(),
+            new WBW\Bundle\CoreBundle\WBWCoreBundle(),
+            new WBW\Bundle\JQuery\DataTablesBundle\WBWJQueryDataTablesBundle(),
         ];
 
         // ...
