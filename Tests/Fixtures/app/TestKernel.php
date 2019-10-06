@@ -22,6 +22,13 @@ class TestKernel extends AbstractKernel {
     /**
      * {@inheritdoc}
      */
+    public function getTestsDir() {
+        return __DIR__ . "/../..";
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function registerBundles() {
         $bundles = [
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
@@ -37,12 +44,5 @@ class TestKernel extends AbstractKernel {
             new WBW\Bundle\JQuery\DataTablesBundle\WBWJQueryDataTablesBundle(),
         ];
         return $bundles;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getTestsDir() {
-        return __DIR__ . "/../..";
     }
 }

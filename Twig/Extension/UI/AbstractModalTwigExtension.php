@@ -13,9 +13,9 @@ namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
 use Twig\Environment;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\RendererTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\TypographyTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\TypographyTwigExtensionTrait;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\RendererTwigExtension;
 
 /**
  * Abstract modal Twig extension.
