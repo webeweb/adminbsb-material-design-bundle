@@ -32,7 +32,7 @@ class BreadcrumbNodeActionNewUsersGroupTest extends AbstractTestCase {
 
         $obj = new BreadcrumbNodeActionNewUsersGroup("route");
 
-        $this->assertEquals("navigation.node.action.new", $obj->getId());
+        $this->assertEquals("navigation.node.action.new", $obj->getLabel());
         $this->assertEquals("mi:group_add", $obj->getIcon());
         $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_URL, $obj->getMatcher());
         $this->assertEquals("route", $obj->getUri());

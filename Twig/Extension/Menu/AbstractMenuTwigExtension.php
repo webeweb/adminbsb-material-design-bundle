@@ -78,7 +78,7 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
 
         $attributes["class"] = "header";
 
-        $innerHTML = null !== $tree->getId() ? $this->translate($tree->getId()) : "";
+        $innerHTML = null !== $tree->getId() ? $this->translate($tree->getLabel()) : "";
 
         return static::coreHTMLElement("li", $innerHTML, $attributes);
     }
@@ -134,7 +134,7 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
      */
     private function adminBSBMenuItemLabel(NavigationNode $node) {
 
-        $innerHTML = null !== $node->getId() ? $this->translate($node->getId()) : "";
+        $innerHTML = null !== $node->getId() ? $this->translate($node->getLabel()) : "";
 
         if (null === $node->getIcon()) {
             return $innerHTML;
