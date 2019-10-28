@@ -39,12 +39,11 @@ class LayoutControllerTest extends AbstractWebTestCase {
      */
     public function testBlankAction() {
 
-        // Create a client.
-        $client = static::createClient();
+        $client = $this->client;
 
-        // Make a GET request.
         $client->request("GET", "/blank");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
     }
 
     /**
@@ -54,20 +53,16 @@ class LayoutControllerTest extends AbstractWebTestCase {
      */
     public function testFOSUserCheckEmailAction() {
 
-        // Create a client.
-        $client = static::createClient();
+        $client = $this->client;
 
-        // Make a GET request.
         $client->request("GET", "/resetting/check-email?username=username");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
 
-        // Get the response.
+        // Check the response.
         $response = $client->getResponse()->getContent();
-
         $this->assertContains("<title>AdminBSB Material Design - Reset password</title>", $response);
-
         $this->assertContains("<body class=\"fp-page\">", $response);
-
         $this->assertContains("<div class=\"fp-box\">", $response);
     }
 
@@ -78,20 +73,16 @@ class LayoutControllerTest extends AbstractWebTestCase {
      */
     public function testFOSUserLoginAction() {
 
-        // Create a client.
-        $client = static::createClient();
+        $client = $this->client;
 
-        // Make a GET request.
         $client->request("GET", "/login");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
 
-        // Get the response.
+        // Check the response.
         $response = $client->getResponse()->getContent();
-
         $this->assertContains("<title>AdminBSB Material Design - Log in</title>", $response);
-
         $this->assertContains("<body class=\"login-page\">", $response);
-
         $this->assertContains("<div class=\"login-box\">", $response);
     }
 
@@ -102,20 +93,16 @@ class LayoutControllerTest extends AbstractWebTestCase {
      */
     public function testFOSUserRegisterAction() {
 
-        // Create a client.
-        $client = static::createClient();
+        $client = $this->client;
 
-        // Make a GET request.
         $client->request("GET", "/register/");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
 
-        // Get the response.
+        // Check the response.
         $response = $client->getResponse()->getContent();
-
         $this->assertContains("<title>AdminBSB Material Design - Register</title>", $response);
-
         $this->assertContains("<body class=\"signup-page\">", $response);
-
         $this->assertContains("<div class=\"signup-box\">", $response);
     }
 
@@ -126,20 +113,16 @@ class LayoutControllerTest extends AbstractWebTestCase {
      */
     public function testFOSUserRequestAction() {
 
-        // Create a client.
-        $client = static::createClient();
+        $client = $this->client;
 
-        // Make a GET request.
         $client->request("GET", "/resetting/request");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
 
-        // Get the response.
+        // Check the response.
         $response = $client->getResponse()->getContent();
-
         $this->assertContains("<title>AdminBSB Material Design - Reset password</title>", $response);
-
         $this->assertContains("<body class=\"fp-page\">", $response);
-
         $this->assertContains("<div class=\"fp-box\">", $response);
     }
 
@@ -150,20 +133,16 @@ class LayoutControllerTest extends AbstractWebTestCase {
      */
     public function testFOSUserResetAction() {
 
-        // Create a client.
-        $client = static::createClient();
+        $client = $this->client;
 
-        // Make a GET request.
         $client->request("GET", "/resetting/reset/confirmationToken");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
 
-        // Get the response.
+        // Check the response.
         $response = $client->getResponse()->getContent();
-
         $this->assertContains("<title>AdminBSB Material Design - Reset password</title>", $response);
-
         $this->assertContains("<body class=\"signup-page\">", $response);
-
         $this->assertContains("<div class=\"signup-box\">", $response);
     }
 
@@ -174,20 +153,16 @@ class LayoutControllerTest extends AbstractWebTestCase {
      */
     public function testTwigError404Action() {
 
-        // Create a client.
-        $client = static::createClient();
+        $client = $this->client;
 
-        // Make a GET request.
         $client->request("GET", "/error/404.html");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
 
-        // Get the response.
+        // Check the response.
         $response = $client->getResponse()->getContent();
-
         $this->assertContains("<title>AdminBSB Material Design - 404 Not Found</title>", $response);
-
         $this->assertContains("<body class=\"four-zero-four\">", $response);
-
         $this->assertContains("<div class=\"error-code\">404</div>", $response);
         $this->assertContains("<div class=\"error-message\">Not Found</div>", $response);
     }
@@ -199,20 +174,16 @@ class LayoutControllerTest extends AbstractWebTestCase {
      */
     public function testTwigError500Action() {
 
-        // Create a client.
-        $client = static::createClient();
+        $client = $this->client;
 
-        // Make a GET request.
         $client->request("GET", "/error/500.html");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
 
-        // Get the response.
+        // Check the response.
         $response = $client->getResponse()->getContent();
-
         $this->assertContains("<title>AdminBSB Material Design - 500 Internal Server Error</title>", $response);
-
         $this->assertContains("<body class=\"five-zero-zero\">", $response);
-
         $this->assertContains("<div class=\"error-code\">500</div>", $response);
         $this->assertContains("<div class=\"error-message\">Internal Server Error</div>", $response);
     }
