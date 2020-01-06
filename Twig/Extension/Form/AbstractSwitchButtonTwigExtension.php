@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Form;
 
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
-use WBW\Library\Core\Argument\StringHelper;
+use WBW\Library\Core\Argument\Helper\StringHelper;
 
 /**
  * Abstract switch button Twig extension.
@@ -50,7 +50,7 @@ abstract class AbstractSwitchButtonTwigExtension extends AbstractTwigExtension {
         $rLabel = null !== $onLabel ? $onLabel : "";
 
         $span  = static::coreHTMLElement("span", null, ["class" => ["lever", $class]]);
-        $input = StringHelper::replace($template, ["%attributes%", "%innerHTML%"], [StringHelper::parseArray($attributes), $span]);
+        $input = str_replace(["%attributes%", "%innerHTML%"], [StringHelper::parseArray($attributes), $span], $template);
         $label = static::coreHTMLElement("label", $lLabel . $input . $rLabel);
 
         return static::coreHTMLElement("div", $label, ["class" => "switch"]);

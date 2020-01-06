@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\ProgressBar;
 
 use WBW\Bundle\BootstrapBundle\ProgressBar\ProgressBarFactory as BaseFactory;
 use WBW\Bundle\BootstrapBundle\ProgressBar\ProgressBarInterface;
-use WBW\Library\Core\Argument\ArrayHelper;
+use WBW\Library\Core\Argument\Helper\ArrayHelper;
 
 /**
  * Progress bar factory.

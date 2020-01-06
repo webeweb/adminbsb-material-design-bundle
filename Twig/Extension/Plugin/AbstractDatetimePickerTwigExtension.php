@@ -15,7 +15,7 @@ use Symfony\Component\Translation\TranslatorInterface;
 use Twig\Environment;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Bundle\CoreBundle\Service\TranslatorTrait;
-use WBW\Library\Core\Argument\StringHelper;
+use WBW\Library\Core\Argument\Helper\StringHelper;
 
 /**
  * Abstract Datetime picker Twig extension.
@@ -106,6 +106,6 @@ EOT;
         $searches = ["%selector%", "%cancelText%", "%clearButton%", "%clearText%", "%date%", "%format%", "%lang%", "%time%", "%weekStart%"];
         $replaces = [$selector, $cancelText, $bClearButton, $clearText, $bDate, $format, $lang, $bTime, $iWeekStart];
 
-        return StringHelper::replace(self::DATETIMEPICKER, $searches, $replaces);
+        return str_replace($searches, $replaces, self::DATETIMEPICKER);
     }
 }

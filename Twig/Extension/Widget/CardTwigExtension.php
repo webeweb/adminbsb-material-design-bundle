@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget;
 
 use Twig\TwigFunction;
-use WBW\Library\Core\Argument\ArrayHelper;
+use WBW\Library\Core\Argument\Helper\ArrayHelper;
 
 /**
  * Card Twig extension.

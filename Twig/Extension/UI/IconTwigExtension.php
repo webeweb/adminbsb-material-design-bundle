@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
 use Twig\TwigFunction;
 use WBW\Bundle\CoreBundle\Renderer\IconRendererInterface;
-use WBW\Library\Core\Argument\ArrayHelper;
+use WBW\Library\Core\Argument\Helper\ArrayHelper;
 
 /**
  * Icon Twig extension.

@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography;
 
 use Twig\TwigFilter;
 use Twig\TwigFunction;
-use WBW\Library\Core\Argument\ArrayHelper;
+use WBW\Library\Core\Argument\Helper\ArrayHelper;
 
 /**
  * Typography Twig extension.

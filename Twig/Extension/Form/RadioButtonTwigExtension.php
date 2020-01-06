@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Form;
 
 use Twig\TwigFunction;
-use WBW\Library\Core\Argument\ArrayHelper;
+use WBW\Library\Core\Argument\Helper\ArrayHelper;
 
 /**
  * Radio button Twig extension.

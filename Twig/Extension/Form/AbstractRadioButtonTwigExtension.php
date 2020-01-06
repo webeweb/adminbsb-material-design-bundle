@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Form;
 
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
-use WBW\Library\Core\Argument\StringHelper;
+use WBW\Library\Core\Argument\Helper\StringHelper;
 
 /**
  * Abstract radio button Twig extension.
@@ -50,6 +50,6 @@ abstract class AbstractRadioButtonTwigExtension extends AbstractTwigExtension {
 
         $innerHTML = static::coreHTMLElement("label", $content, ["for" => $attributes["id"]]);
 
-        return StringHelper::replace($template, ["%attributes%", "%innerHTML%"], [StringHelper::parseArray($attributes), $innerHTML]);
+        return str_replace(["%attributes%", "%innerHTML%"], [StringHelper::parseArray($attributes), $innerHTML], $template);
     }
 }

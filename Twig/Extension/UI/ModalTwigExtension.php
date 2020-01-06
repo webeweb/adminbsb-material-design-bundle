@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
 use Twig\TwigFunction;
-use WBW\Library\Core\Argument\ArrayHelper;
+use WBW\Library\Core\Argument\Helper\ArrayHelper;
 
 /**
  * Modal Twig extension.

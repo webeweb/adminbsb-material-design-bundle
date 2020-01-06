@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
-use WBW\Library\Core\Argument\StringHelper;
+use WBW\Library\Core\Argument\Helper\StringHelper;
 
 /**
  * Abstract badge Twig extension.
@@ -55,6 +55,6 @@ abstract class AbstractBadgeTwigExtension extends AbstractTwigExtension {
         $spanLabel = null !== $label ? $label : "";
         $href      = null !== $link ? $link : self::DEFAULT_HREF;
 
-        return StringHelper::replace($template, ["%attributes%", "%innerHTML%", "%label%", "%href%"], [StringHelper::parseArray($attributes), $innerHTML, $spanLabel, $href]);
+        return str_replace(["%attributes%", "%innerHTML%", "%label%", "%href%"], [StringHelper::parseArray($attributes), $innerHTML, $spanLabel, $href], $template);
     }
 }

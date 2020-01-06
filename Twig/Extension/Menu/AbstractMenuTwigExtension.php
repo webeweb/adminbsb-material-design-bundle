@@ -18,7 +18,6 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\RendererTwigExtension;
 use WBW\Bundle\CoreBundle\Navigation\NavigationNode;
 use WBW\Bundle\CoreBundle\Navigation\NavigationTree;
 use WBW\Bundle\CoreBundle\Service\TranslatorTrait;
-use WBW\Library\Core\Argument\StringHelper;
 
 /**
  * Abstract multi level menu Twig extension.
@@ -144,7 +143,7 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
 
         $glyphicon = RendererTwigExtension::renderIcon($this->getTwigEnvironment(), $node->getIcon());
 
-        return StringHelper::replace($template, ["%glyphicon%", "%innerHTML%"], [$glyphicon, $innerHTML]);
+        return str_replace(["%glyphicon%", "%innerHTML%"], [$glyphicon, $innerHTML], $template);
     }
 
     /**
