@@ -11,7 +11,16 @@ adminbsb-material-design-bundle
 
 Integrate AdminBSB Material Design theme with Symfony 2 and more.
 
-Based on the work of [AdminBSB - Free admin panel that is based on Bootstrap 3.x with Material Design](https://github.com/gurayyarar/AdminBSBMaterialDesign/)
+##### Inspired by [AdminBSB - Free admin panel that is based on Bootstrap 3.x with Material Design](https://github.com/gurayyarar/AdminBSBMaterialDesign/)
+
+AdminBSB - Material Design is a fully responsive and free admin template. It was
+developed with Bootstrap 3.x Framework and Google Material Design of powers.
+
+It's really easy to customize and usage. You can use for from 320px to large
+resolution pixels of new generation screens and mobile devices. (Fully Responsive
+Material Design)
+
+[![Preview AdminBSB Material Design](https://img.shields.io/badge/live%20preview-AdminBSB%20Material%20Design-blue.svg?style=flat-square)](https://gurayyarar.github.io/AdminBSBMaterialDesign/)
 
 > IMPORTANT NOTICE: This package is still under development. Any changes will be
 > done without prior notice to consumers of this package. Of course this code
@@ -64,14 +73,13 @@ Includes:
 - [waitMe 1.15](https://github.com/vadimsva/waitMe/)
 - [Waves](http://fian.my.id/Waves/)
 
----
+If you like this package, pay me a beer (or a coffee)
+[![paypal.me](https://img.shields.io/badge/paypal.me-webeweb-0070ba.svg?style=flat-square&logo=paypal)](https://www.paypal.me/webeweb)
 
 ## Compatibility
 
 [![PHP](https://img.shields.io/packagist/php-v/webeweb/adminbsb-material-design-bundle.svg?style=flat-square)](http://php.net)
 [![Symfony](https://img.shields.io/badge/symfony-%5E2.7%7C%5E3.0%7C%5E4.0-brightness.svg?style=flat-square)](https://symfony.com)
-
----
 
 ## Installation
 
@@ -111,8 +119,6 @@ Once the bundle is added then do:
 $ php bin/console assets:install
 ```
 
----
-
 ## Testing
 
 To test the package, is better to clone this repository on your computer.
@@ -131,9 +137,12 @@ Once all required libraries are installed then do:
 $ vendor/bin/phpunit
 ```
 
----
-
 ## License
 
 `adminbsb-material-design-bundle` is released under the MIT License. See the bundled
 [LICENSE](LICENSE) file for details.
+
+## Donate
+
+If you like this work, please consider donating at
+[![paypal.me](https://img.shields.io/badge/paypal.me-webeweb-0070ba.svg?style=flat-square&logo=paypal)](https://www.paypal.me/webeweb)
