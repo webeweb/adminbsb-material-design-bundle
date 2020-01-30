@@ -40,7 +40,7 @@ matrix:
         -   php: "nightly"
 
 before_install:
-    - echo "memory_limit=4096M" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
+    - echo "memory_limit=5120M" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
     - if [ "" != "$SYMFONY_VERSION" ]; then composer require "symfony/symfony:${SYMFONY_VERSION}" --no-update; else composer require "symfony/symfony:3.4.*"; fi;
 
 install:
