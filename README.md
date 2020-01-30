@@ -11,6 +11,10 @@ adminbsb-material-design-bundle
 
 Integrate AdminBSB Material Design theme with Symfony 2 and more.
 
+> IMPORTANT NOTICE: This package is still under development. Any changes will be
+> done without prior notice to consumers of this package. Of course this code
+> will become stable at a certain point, but for now, use at your own risk.
+
 ##### Inspired by [AdminBSB - Free admin panel that is based on Bootstrap 3.x with Material Design](https://github.com/gurayyarar/AdminBSBMaterialDesign/)
 
 AdminBSB - Material Design is a fully responsive and free admin template. It was
@@ -21,10 +25,6 @@ resolution pixels of new generation screens and mobile devices. (Fully Responsiv
 Material Design)
 
 [![Preview AdminBSB Material Design](https://img.shields.io/badge/live%20preview-AdminBSB%20Material%20Design-blue.svg?style=flat-square)](https://gurayyarar.github.io/AdminBSBMaterialDesign/)
-
-> IMPORTANT NOTICE: This package is still under development. Any changes will be
-> done without prior notice to consumers of this package. Of course this code
-> will become stable at a certain point, but for now, use at your own risk.
 
 <img src="https://raw.githubusercontent.com/webeweb/adminbsb-material-design-bundle/master/Resources/doc/screenshot_promo.png" alt="AdminBSB Material Design bundle" align="right" />
 
