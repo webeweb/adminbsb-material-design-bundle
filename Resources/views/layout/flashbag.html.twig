@@ -1,6 +1,8 @@
 {# Resources/views/layout/flashbag.html.twig #}
-<div class="row clearfix">
-    <div class="{{ bootstrapGrid({"lg": 12, "recopy": true}) }}">
-        {% include "@WBWBootstrap/layout/flashbag.html.twig" %}
+{% if (0 < app.session.flashbag.peekAll() | length) %}
+    <div class="row clearfix">
+        <div class="{{ bootstrapGrid({"lg": 12, "recopy": true}) }}">
+            {% include "@WBWBootstrap/layout/flashbag.html.twig" %}
+        </div>
     </div>
-</div>
+{% endif %}
