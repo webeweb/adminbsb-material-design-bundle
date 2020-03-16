@@ -54,7 +54,7 @@ Includes:
 - [jQuery InputMask 3.3.1](https://github.com/RobinHerbots/Inputmask/) (jQuery plug-in)
 - [jQuery Knob](https://github.com/aterrien/jQuery-Knob/) (jQuery plug-in)
 - jQuery SlimScroll 1.3.0 (jQuery plug-in)
-- [jQuery Sparlines 2.3.2](http://omnipotent.net/jquery.sparkline/) (jQuery plug-in)
+- [jQuery Sparklines 2.3.2](http://omnipotent.net/jquery.sparkline/) (jQuery plug-in)
 - [jQuery Spinner 0.2.1](https://vsn4ik.github.io/jquery.spinner/) (jQuery plug-in)
 - [jQuery Steps 1.1.0](http://www.jquery-steps.com/) (jQuery plug-in)
 - [jQuery Validation 1.15.1](http://jqueryvalidation.org/) (jQuery plug-in)
