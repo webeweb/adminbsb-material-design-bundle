@@ -28,11 +28,22 @@ class Configuration implements ConfigurationInterface {
      */
     public function getConfigTreeBuilder() {
 
+        $assets  = ConfigurationHelper::loadYamlConfig(__DIR__, "assets");
+        $plugins = $assets["assets"]["wbw.adminbsb.asset.adminbsb"]["plugins"];
+
         $treeBuilder = new TreeBuilder(WBWAdminBSBExtension::EXTENSION_ALIAS);
 
         $rootNode = ConfigurationHelper::getRootNode($treeBuilder, WBWAdminBSBExtension::EXTENSION_ALIAS);
-        $rootNode->children()
-            ->booleanNode("twig")->defaultTrue()->info("Load Twig extensions")->end()
+        $rootNode
+            ->children()
+                ->booleanNode("twig")->defaultTrue()->info("Load Twig extensions")->end()
+                ->arrayNode("plugins")->info("AdminBSB plug-ins")
+                    ->prototype("scalar")
+                        ->validate()
+                            ->ifNotInArray(array_keys($plugins))
+                            ->thenInvalid("The AdminBSB plug-in %s is not supported. Please choose one of " . json_encode(array_keys($plugins)))
+                        ->end()
+                ->end()
             ->end();
 
         return $treeBuilder;
