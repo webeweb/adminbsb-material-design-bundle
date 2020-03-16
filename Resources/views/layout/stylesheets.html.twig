@@ -1,5 +1,43 @@
 {# Resources/views/layout/stylesheets.html.twig #}
-{% include "@WBWJQueryDataTables/layout/stylesheets.html.twig" with {"dtTheme": "bootstrap" } %}
-{% include "@WBWAdminBSB/layout/stylesheet/bootstrap-material-datetimepicker.html.twig" %}
-{% include "@WBWAdminBSB/layout/stylesheet/waves.html.twig" %}
-{% include "@WBWAdminBSB/layout/stylesheet/adminbsb.html.twig" %}
+{% include "@WBWJQueryDataTables/layout/stylesheets.html.twig" %}
+{% set _webPath    = "bundles/wbwadminbsb" %}
+{% set _plugins    = getContainerParameter("wbw.adminbsb.asset.adminbsb").plugins %}
+{% set _appPlugins = getContainerParameter("wbw_adminbsb.plugins") %}
+{% for _appPlugin in _appPlugins %}
+    {% set _replaces = {
+        "{{ version }}": _plugins[_appPlugin].version,
+    } %}
+    {% for _javascript in _plugins[_appPlugin].stylesheets %}
+        {% if ("prod" != app.environment and true == loop.first) %}
+            <!-- {{ _plugins[_appPlugin].description }} -->
+        {% endif %}
+        {% set _path = (_webPath ~ _javascript) | replace(_replaces) %}
+        <script type="text/javascript" src="{{ asset(_path) }}"></script>
+    {% endfor %}
+{% endfor %}
+<link type="text/css" rel="stylesheet" href="{{ asset(_webPath ~ "/css/style.min.css") }}">
+<link type="text/css" rel="stylesheet" href="{{ asset(_webPath ~ "/css/themes/all-themes.min.css") }}">
+<style type="text/css">
+    .form-line.focused .form-label {
+        font-weight: bold;
+        color: #555;
+    }
+
+    /* to have same appearance as .form-group.form-float label */
+    .form-line .form-label {
+        position: absolute;
+        top: -10px;
+        left: 0;
+        cursor: text;
+        font-size: 12px;
+        font-weight: bold;
+        color: #555;
+    }
+
+    .btn span.glyphicon {
+        margin: -4px 0 !important;
+        position: relative;
+        top: -1px !important;
+        vertical-align: sub;
+    }
+</style>
