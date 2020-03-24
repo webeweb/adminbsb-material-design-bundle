@@ -7,68 +7,68 @@ assets:
                 version:     3.5.0
                 description: "Animate.css"
                 stylesheets:
-                    - "/animate-css/animate.min.css"
+                    - "/plugins/animate-css/animate.min.css"
                 javascripts:
             autosize:
                 version:     3.0.17
                 description: "Autosize"
                 stylesheets:
                 javascripts:
-                    - "/autosize/autosize.min.js"
+                    - "/plugins/autosize/autosize.min.js"
             bootstrap:
                 version:     3.3.6
                 description: "Bootstrap"
                 stylesheets:
-                    - "/bootstrap/css/bootstrap.min.css"
+                    - "/plugins/bootstrap/css/bootstrap.min.css"
                 javascripts:
-                    - "/bootstrap/js/bootstrap.min.js"
+                    - "/plugins/bootstrap/js/bootstrap.min.js"
             bootstrap_colorpicker:
                 version:     2.3.3
                 description: "Bootstrap Colorpicker"
                 stylesheets:
-                    - "/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css"
+                    - "/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css"
                 javascripts:
-                    - "/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"
+                    - "/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"
             bootstrap_material_datetimepicker:
                 version:
                 description: "Bootstrap Material Datetimepicker"
                 stylesheets:
-                    - "/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css"
+                    - "/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css"
                 javascripts:
-                    - "/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"
+                    - "/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"
             bootstrap_notify:
                 version:     3.1.3
                 description: "Bootstrap Notify"
                 stylesheets:
                 javascripts:
-                    - "/bootstrap-notify/bootstrap-notify.min.js"
+                    - "/plugins/bootstrap-notify/bootstrap-notify.min.js"
             bootstrap_select:
                 version:     1.1.10
                 description: "Bootstrap Select"
                 stylesheets:
-                    - "/bootstrap-select/css/bootstrap-select.min.css"
+                    - "/plugins/bootstrap-select/css/bootstrap-select.min.css"
                 javascripts:
-                    - "/bootstrap-select/js/bootstrap-select.min.js"
+                    - "/plugins/bootstrap-select/js/bootstrap-select.min.js"
             bootstrap_tagsinput:
                 version:
                 description: "Bootstrap Tagsinput"
                 stylesheets:
-                    - "/bootstrap-tagsinput/bootstrap-tagsinput.css"
+                    - "/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css"
                 javascripts:
-                    - "/bootstrap-tagsinput/bootstrap-tagsinput.min.js"
+                    - "/plugins/bootstrap-tagsinput/bootstrap-tagsinput.min.js"
             chart_js:
                 version:     2.2.1
                 description: "Chart.js"
                 stylesheets:
                 javascripts:
-                    - "/chartjs/Chart.min.js"
+                    - "/plugins/chartjs/Chart.min.js"
             chosen:
                 version:     1.6.1
                 description: "Chosen"
                 stylesheets:
-                    - "/chosen/chosen.min.css"
+                    - "/plugins/chosen/chosen.min.css"
                 javascripts:
-                    - "/chosen/chosen.jquery.min.js"
+                    - "/plugins/chosen/chosen.jquery.min.js"
             ckeditor:
                 version:     4.5.10
                 description: "CKEditor"
@@ -78,191 +78,191 @@ assets:
                 version:
                 description: "Dropzone"
                 stylesheets:
-                    - "/dropzone/min/dropzone.min.css"
+                    - "/plugins/dropzone/min/dropzone.min.css"
                 javascripts:
-                    - "/dropzone/min/dropzone.min.js"
+                    - "/plugins/dropzone/min/dropzone.min.js"
             editable_table_widget:
                 version:
                 description: "Editable Widget"
                 stylesheets:
                 javascripts:
-                    - "/editable-table/mindmup-editabletable.js"
+                    - "/plugins/editable-table/mindmup-editabletable.js"
             flot:
                 version:     0.8.3
                 description: "Flot"
                 stylesheets:
                 javascripts:
-                    - "/flot-charts/jquery.flot.js"
+                    - "/plugins/flot-charts/jquery.flot.js"
             font_awesome:
                 version:     4.6.3
                 description: "Font Awesome"
                 stylesheets:
-                    - "/font-awesome/font-awesome.min.css"
+                    - "/plugins/font-awesome/font-awesome.min.css"
                 javascripts:
             gmaps_js:
                 version:     0.4.24
                 description: "GMaps.js"
                 stylesheets:
                 javascripts:
-                    - "/gmaps/gmaps.min.js"
+                    - "/plugins/gmaps/gmaps.min.js"
             ion_range_slider:
                 version:     2.1.4
                 description: "Ion.RangeSlider"
                 stylesheets:
-                    - "/ion-rangeslider/ion.rangeSlider.css"
+                    - "/plugins/ion-rangeslider/ion.rangeSlider.css"
                 javascripts:
-                    - "/ion-rangeslider/ion.rangeSlider.min.js"
+                    - "/plugins/ion-rangeslider/ion.rangeSlider.min.js"
             jquery:
                 version:     1.12.4
                 description: "jQuery"
                 stylesheets:
                 javascripts:
-                    - "/jquery/jquery.min.js"
+                    - "/plugins/jquery/jquery.min.js"
             jquery_cookie:
                 version:     1.4.1
                 description: "jQuery Cookie"
                 stylesheets:
                 javascripts:
-                    - "/jquery-cookie/jquery.cookie.js"
+                    - "/plugins/jquery-cookie/jquery.cookie.js"
             jquery_count_to:
                 version:
                 description: "jQuery countTo"
                 stylesheets:
                 javascripts:
-                    - "/jquery-counto/jquery.countTo.js"
+                    - "/plugins/jquery-counto/jquery.countTo.js"
             jquery_datatables:
                 version:     1.10.12
                 description: "jQuery DataTables"
                 stylesheets:
-                    - "/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.min.css"
+                    - "/plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.min.css"
                 javascripts:
-                    - "/jquery-datatable/jquery.dataTable.js"
-                    - "/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.min.js"
-                    - "/jquery-datatable/skin/bootstrap/js/dataTables.buttons.min.js"
-                    - "/jquery-datatable/extensions/export/button.flash.min.js"
-                    - "/jquery-datatable/extensions/export/button.html5.min.js"
-                    - "/jquery-datatable/extensions/export/button.print.min.js"
-                    - "/jquery-datatable/extensions/export/jszip.min.js"
-                    - "/jquery-datatable/extensions/export/pdfmake.min.js"
-                    - "/jquery-datatable/extensions/export/vfs_fonts.js"
+                    - "/plugins/jquery-datatable/jquery.dataTable.js"
+                    - "/plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.min.js"
+                    - "/plugins/jquery-datatable/skin/bootstrap/js/dataTables.buttons.min.js"
+                    - "/plugins/jquery-datatable/extensions/export/button.flash.min.js"
+                    - "/plugins/jquery-datatable/extensions/export/button.html5.min.js"
+                    - "/plugins/jquery-datatable/extensions/export/button.print.min.js"
+                    - "/plugins/jquery-datatable/extensions/export/jszip.min.js"
+                    - "/plugins/jquery-datatable/extensions/export/pdfmake.min.js"
+                    - "/plugins/jquery-datatable/extensions/export/vfs_fonts.js"
             jquery_input_mask:
                 version:     3.3.1
                 description: "jQuery InputMask"
                 stylesheets:
                 javascripts:
-                    - "/jquery-inputmask/inputmask/jquery.inputmask.js"
+                    - "/plugins/jquery-inputmask/inputmask/jquery.inputmask.js"
             jquery_knob:
                 version:
                 description: "jQuery Knob"
                 stylesheets:
                 javascripts:
-                    - "/jquery-knob/jquery.knob.min.js"
+                    - "/plugins/jquery-knob/jquery.knob.min.js"
             jquery_slim_scroll:
                 version:     1.3.0
                 description: "jQuery SlimScroll"
                 stylesheets:
                 javascripts:
-                    - "/jquery-slimscroll/jquery.slimscroll.js"
+                    - "/plugins/jquery-slimscroll/jquery.slimscroll.js"
             jquery_sparklines:
                 version:     2.3.2
                 description: "jQuery SparkLines"
                 stylesheets:
                 javascripts:
-                    - "/jquery-sparkline/jquery.sparkline.js"
+                    - "/plugins/jquery-sparkline/jquery.sparkline.js"
             jquery_spinner:
                 version:     0.2.1
                 description: "jQuery Spinner"
                 stylesheets:
-                    - "/jquery-spinner/bootstrap.spinner.css"
+                    - "/plugins/jquery-spinner/bootstrap.spinner.css"
                 javascripts:
-                    - "/jquery-spinner/jquery.spinner.min.js"
+                    - "/plugins/jquery-spinner/jquery.spinner.min.js"
             jquery_steps:
                 version:     1.1.0
                 description: "jQuery Steps"
                 stylesheets:
-                    - "/jquery-steps/jquery.steps.css"
+                    - "/plugins/jquery-steps/jquery.steps.css"
                 javascripts:
-                    - "/jquery-steps/jquery.steps.min.js"
+                    - "/plugins/jquery-steps/jquery.steps.min.js"
             jquery_validation:
                 version:     1.15.1
                 description: "jQuery Validation"
                 stylesheets:
                 javascripts:
-                    - "/jquery-validation/jquery.validate.js"
+                    - "/plugins/jquery-validation/jquery.validate.js"
             jquery_light_gallery:
                 version:     1.2.21
                 description: "jQuery lightGalery"
                 stylesheets:
-                    - "/light-gallery/css/lightgallery.min.css"
+                    - "/plugins/light-gallery/css/lightgallery.min.css"
                 javascripts:
-                    - "/light-gallery/js/lightgallery.min.js"
+                    - "/plugins/light-gallery/js/lightgallery.min.js"
             jquery_multi_select:
                 version:     0.9.12
                 description: "jQuery MultiSelect"
                 stylesheets:
-                    - "/multi-select/multi-select.css"
+                    - "/plugins/multi-select/multi-select.css"
                 javascripts:
-                    - "/multi-select/jquery.multi-select.js"
+                    - "/plugins/multi-select/jquery.multi-select.js"
             jquery_nestable:
                 version:
                 description: "jQuery Nestable"
                 stylesheets:
-                    - "/nestable/jquery-nestable.css"
+                    - "/plugins/nestable/jquery-nestable.css"
                 javascripts:
-                    - "/nestable/jquery.nestable.js"
+                    - "/plugins/nestable/jquery.nestable.js"
             jvector_map:
                 version:     1.2.2
                 description: "jVector Map"
                 stylesheets:
-                    - "/jvectormap/jquery-jvectormap.css"
+                    - "/plugins/jvectormap/jquery-jvectormap.css"
                 javascripts:
-                    - "/jvectormap/jquery-jvectormap.min.js"
+                    - "/plugins/jvectormap/jquery-jvectormap.min.js"
             material_design_iconic_font:
                 version:
                 description: "Material Design Iconic Font"
                 stylesheets:
-                    - "/material-design-iconic-font/material-design-iconic-font.min.css"
+                    - "/plugins/material-design-iconic-font/material-design-iconic-font.min.css"
                 javascripts:
             materialize:
                 version:     0.97.7
                 description: "Materialize"
                 stylesheets:
-                    - "/materialize-css/css/materialize.min.css"
+                    - "/plugins/materialize-css/css/materialize.min.css"
                 javascripts:
-                    - "/materialize-css/js/materialize.min.js"
+                    - "/plugins/materialize-css/js/materialize.min.js"
             moment_js:
                 version:     2.14.1
                 description: "Moment.js"
                 stylesheets:
                 javascripts:
-                    - "/momentjs/moment.js"
+                    - "/plugins/momentjs/moment.js"
             moris_js:
                 version:     0.5.0
                 description: "Moris.js"
                 stylesheets:
-                    - "/morrisjs/morris.css"
+                    - "/plugins/morrisjs/morris.css"
                 javascripts:
-                    - "/morrisjs/morris.min.js"
+                    - "/plugins/morrisjs/morris.min.js"
             no_ui_slider:
                 version:     8.5.1
                 description: "noUiSlider"
                 stylesheets:
-                    - "/nouislider/nouislider.min.css"
+                    - "/plugins/nouislider/nouislider.min.css"
                 javascripts:
-                    - "/nouislider/nouislider.min.js"
+                    - "/plugins/nouislider/nouislider.min.js"
             raphael:
                 version:     2.2.0
                 description: "Raphaël"
                 stylesheets:
                 javascripts:
-                    - "/raphael/raphael.min.js"
+                    - "/plugins/raphael/raphael.min.js"
             sweet_alert:
                 version:
                 description: "SweetAlert"
                 stylesheets:
-                    - "/sweetalert/sweetalert.css"
+                    - "/plugins/sweetalert/sweetalert.css"
                 javascripts:
-                    - "/sweetalert/sweetalert.min.js"
+                    - "/plugins/sweetalert/sweetalert.min.js"
             tiny_mce:
                 version:     4.4.1
                 description: "TinyMCE"
@@ -272,13 +272,13 @@ assets:
                 version:     1.15
                 description: "waitMe"
                 stylesheets:
-                    - "/waitme/waitMe.min.css"
+                    - "/plugins/waitme/waitMe.min.css"
                 javascripts:
-                    - "/waitme/waitMe.min.js"
+                    - "/plugins/waitme/waitMe.min.js"
             waves:
                 version:
                 description: "Waves"
                 stylesheets:
-                    - "/node-waves/waves.min.css"
+                    - "/plugins/node-waves/waves.min.css"
                 javascripts:
-                    - "/node-waves/waves.min.js"
+                    - "/plugins/node-waves/waves.min.js"
