@@ -12,7 +12,7 @@
             <!-- {{ _plugins[_appPlugin].description }} -->
         {% endif %}
         {% set _path = (_webPath ~ _javascript) | replace(_replaces) %}
-        <script type="text/javascript" src="{{ asset(_path) }}"></script>
+        <link type="text/css" rel="stylesheet" href="{{ asset(_path) }}">
     {% endfor %}
 {% endfor %}
 <link type="text/css" rel="stylesheet" href="{{ asset(_webPath ~ "/css/style.min.css") }}">
