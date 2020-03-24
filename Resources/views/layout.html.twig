@@ -11,6 +11,7 @@
 
 {% block bootstrapStylesheets %}
     {{ parent() }}
+    {% include "@WBWJQueryDataTables/layout/stylesheets.html.twig" %}
     {% block adminBSBStylesheets %}
         <!-- Google fonts -->
         <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin,cyrillic-ext">
@@ -30,6 +31,7 @@
 
 {% block bootstrapJavascripts %}
     {{ parent() }}
+    {% include "@WBWJQueryDataTables/layout/javascripts.html.twig" %}
     {% block adminBSBJavascripts %}
         {% include "@WBWAdminBSB/layout/javascripts.html.twig" %}
     {% endblock %}
