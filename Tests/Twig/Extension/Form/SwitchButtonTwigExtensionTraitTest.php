@@ -24,18 +24,6 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\SwitchButtonTwigExtension;
 class SwitchButtonTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestSwitchButtonTwigExtensionTrait();
-
-        $this->assertNull($obj->getSwitchButtonTwigExtension());
-    }
-
-    /**
      * Tests the setSwitchButtonTwigExtension() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class SwitchButtonTwigExtensionTraitTest extends AbstractTestCase {
 
         $obj->setSwitchButtonTwigExtension($switchButtonTwigExtension);
         $this->assertSame($switchButtonTwigExtension, $obj->getSwitchButtonTwigExtension());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestSwitchButtonTwigExtensionTrait();
+
+        $this->assertNull($obj->getSwitchButtonTwigExtension());
     }
 }

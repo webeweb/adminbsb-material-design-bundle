@@ -165,20 +165,6 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.adminbsb.twig.extension.ui.preloader", PreloaderTwigExtension::SERVICE_NAME);
-
-        $obj = new PreloaderTwigExtension($this->twigEnvironment);
-
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-    }
-
-    /**
      * Tests the getFunctions() method.
      *
      * @return void
@@ -214,5 +200,19 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("adminBSBPreloaderMaterialDesignXS", $res[4]->getName());
         $this->assertEquals([$obj, "adminBSBPreloaderMaterialDesignXSFunction"], $res[4]->getCallable());
         $this->assertEquals(["html"], $res[4]->getSafe(new Node()));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.adminbsb.twig.extension.ui.preloader", PreloaderTwigExtension::SERVICE_NAME);
+
+        $obj = new PreloaderTwigExtension($this->twigEnvironment);
+
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 }

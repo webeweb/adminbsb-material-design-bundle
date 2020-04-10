@@ -42,18 +42,6 @@ class ModalTwigExtensionTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestModalTwigExtensionTrait();
-
-        $this->assertNull($obj->getModalTwigExtension());
-    }
-
-    /**
      * Tests the setModalTwigExtension() method.
      *
      * @return void
@@ -67,5 +55,17 @@ class ModalTwigExtensionTraitTest extends AbstractTestCase {
 
         $obj->setModalTwigExtension($modalTwigExtension);
         $this->assertSame($modalTwigExtension, $obj->getModalTwigExtension());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestModalTwigExtensionTrait();
+
+        $this->assertNull($obj->getModalTwigExtension());
     }
 }

@@ -24,18 +24,6 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\IconTwigExtension;
 class IconTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestIconTwigExtensionTrait();
-
-        $this->assertNull($obj->getIconTwigExtension());
-    }
-
-    /**
      * Tests the setIconTwigExtension() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class IconTwigExtensionTraitTest extends AbstractTestCase {
 
         $obj->setIconTwigExtension($iconTwigExtension);
         $this->assertSame($iconTwigExtension, $obj->getIconTwigExtension());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestIconTwigExtensionTrait();
+
+        $this->assertNull($obj->getIconTwigExtension());
     }
 }

@@ -24,18 +24,6 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\RadioButtonTwigExtension;
 class RadioButtonTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestRadioButtonTwigExtensionTrait();
-
-        $this->assertNull($obj->getRadioButtonTwigExtension());
-    }
-
-    /**
      * Tests the setRadioButtonTwigExtension() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class RadioButtonTwigExtensionTraitTest extends AbstractTestCase {
 
         $obj->setRadioButtonTwigExtension($radioButtonTwigExtension);
         $this->assertSame($radioButtonTwigExtension, $obj->getRadioButtonTwigExtension());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestRadioButtonTwigExtensionTrait();
+
+        $this->assertNull($obj->getRadioButtonTwigExtension());
     }
 }

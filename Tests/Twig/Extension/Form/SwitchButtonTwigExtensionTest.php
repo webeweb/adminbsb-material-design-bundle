@@ -151,20 +151,6 @@ class SwitchButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.adminbsb.twig.extension.form.switch_button", SwitchButtonTwigExtension::SERVICE_NAME);
-
-        $obj = new SwitchButtonTwigExtension($this->twigEnvironment);
-
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-    }
-
-    /**
      * Tests the getFunctions() method.
      *
      * @return void
@@ -185,5 +171,19 @@ class SwitchButtonTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("adminBSBSwitchButtonMaterialDesign", $res[1]->getName());
         $this->assertEquals([$obj, "adminBSBSwitchButtonMaterialDesignFunction"], $res[1]->getCallable());
         $this->assertEquals(["html"], $res[1]->getSafe(new Node()));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.adminbsb.twig.extension.form.switch_button", SwitchButtonTwigExtension::SERVICE_NAME);
+
+        $obj = new SwitchButtonTwigExtension($this->twigEnvironment);
+
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 }

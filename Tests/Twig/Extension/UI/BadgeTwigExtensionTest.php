@@ -613,20 +613,6 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.adminbsb.twig.extension.ui.badge", BadgeTwigExtension::SERVICE_NAME);
-
-        $obj = new BadgeTwigExtension($this->twigEnvironment);
-
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-    }
-
-    /**
      * Tests the getFunctions() method.
      *
      * @return void
@@ -677,5 +663,19 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("adminBSBButtonBadgeWarning", $res[7]->getName());
         $this->assertEquals([$obj, "adminBSBButtonBadgeWarningFunction"], $res[7]->getCallable());
         $this->assertEquals(["html"], $res[7]->getSafe(new Node()));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.adminbsb.twig.extension.ui.badge", BadgeTwigExtension::SERVICE_NAME);
+
+        $obj = new BadgeTwigExtension($this->twigEnvironment);
+
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 }

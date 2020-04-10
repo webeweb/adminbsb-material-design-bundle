@@ -179,20 +179,6 @@ class RadioButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.adminbsb.twig.extension.form.radio_button", RadioButtonTwigExtension::SERVICE_NAME);
-
-        $obj = new RadioButtonTwigExtension($this->twigEnvironment);
-
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-    }
-
-    /**
      * Tests the getFunctions() method.
      *
      * @return void
@@ -213,5 +199,19 @@ class RadioButtonTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("adminBSBRadioButtonMaterialDesign", $res[1]->getName());
         $this->assertEquals([$obj, "adminBSBRadioButtonMaterialDesignFunction"], $res[1]->getCallable());
         $this->assertEquals(["html"], $res[1]->getSafe(new Node()));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.adminbsb.twig.extension.form.radio_button", RadioButtonTwigExtension::SERVICE_NAME);
+
+        $obj = new RadioButtonTwigExtension($this->twigEnvironment);
+
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 }

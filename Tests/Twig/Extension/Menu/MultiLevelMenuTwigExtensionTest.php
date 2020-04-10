@@ -84,21 +84,6 @@ EOT;
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.adminbsb.twig.extension.menu.multi_level_menu", MultiLevelMenuTwigExtension::SERVICE_NAME);
-
-        $obj = new MultiLevelMenuTwigExtension($this->twigEnvironment, $this->translator);
-
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-        $this->assertSame($this->translator, $obj->getTranslator());
-    }
-
-    /**
      * Tests the getFunctions() method.
      *
      * @return void
@@ -114,5 +99,20 @@ EOT;
         $this->assertEquals("adminBSBMultiLevelMenu", $res[0]->getName());
         $this->assertEquals([$obj, "adminBSBMultiLevelMenuFunction"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.adminbsb.twig.extension.menu.multi_level_menu", MultiLevelMenuTwigExtension::SERVICE_NAME);
+
+        $obj = new MultiLevelMenuTwigExtension($this->twigEnvironment, $this->translator);
+
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
+        $this->assertSame($this->translator, $obj->getTranslator());
     }
 }

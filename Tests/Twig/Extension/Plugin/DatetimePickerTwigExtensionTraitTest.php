@@ -24,18 +24,6 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Plugin\DatetimePickerTwigExtension;
 class DatetimePickerTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestDatetimePickerTwigExtensionTrait();
-
-        $this->assertNull($obj->getDatetimePickerTwigExtension());
-    }
-
-    /**
      * Tests the setDatetimePickerTwigExtension() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class DatetimePickerTwigExtensionTraitTest extends AbstractTestCase {
 
         $obj->setDatetimePickerTwigExtension($datetimePickerTwigExtension);
         $this->assertSame($datetimePickerTwigExtension, $obj->getDatetimePickerTwigExtension());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestDatetimePickerTwigExtensionTrait();
+
+        $this->assertNull($obj->getDatetimePickerTwigExtension());
     }
 }

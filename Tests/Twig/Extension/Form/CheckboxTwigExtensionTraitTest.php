@@ -24,18 +24,6 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\CheckboxTwigExtension;
 class CheckboxTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestCheckboxTwigExtensionTrait();
-
-        $this->assertNull($obj->getCheckboxTwigExtension());
-    }
-
-    /**
      * Tests the setCheckboxTwigExtension() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class CheckboxTwigExtensionTraitTest extends AbstractTestCase {
 
         $obj->setCheckboxTwigExtension($checkboxTwigExtension);
         $this->assertSame($checkboxTwigExtension, $obj->getCheckboxTwigExtension());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestCheckboxTwigExtensionTrait();
+
+        $this->assertNull($obj->getCheckboxTwigExtension());
     }
 }

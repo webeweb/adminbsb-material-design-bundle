@@ -113,21 +113,6 @@ class CardTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.adminbsb.twig.extension.widget.card", CardTwigExtension::SERVICE_NAME);
-
-        $obj = new CardTwigExtension($this->twigEnvironment, $this->typographyTwigExtension);
-
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-        $this->assertSame($this->typographyTwigExtension, $obj->getTypographyTwigExtension());
-    }
-
-    /**
      * Tests the getFunctions() method.
      *
      * @return void
@@ -143,5 +128,20 @@ class CardTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("adminBSBCardHeader", $res[0]->getName());
         $this->assertEquals([$obj, "adminBSBCardHeaderFunction"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.adminbsb.twig.extension.widget.card", CardTwigExtension::SERVICE_NAME);
+
+        $obj = new CardTwigExtension($this->twigEnvironment, $this->typographyTwigExtension);
+
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
+        $this->assertSame($this->typographyTwigExtension, $obj->getTypographyTwigExtension());
     }
 }

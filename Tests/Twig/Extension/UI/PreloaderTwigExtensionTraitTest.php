@@ -24,18 +24,6 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\PreloaderTwigExtension;
 class PreloaderTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestPreloaderTwigExtensionTrait();
-
-        $this->assertNull($obj->getPreloaderTwigExtension());
-    }
-
-    /**
      * Tests the setPreloaderTwigExtension() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class PreloaderTwigExtensionTraitTest extends AbstractTestCase {
 
         $obj->setPreloaderTwigExtension($preloaderTwigExtension);
         $this->assertSame($preloaderTwigExtension, $obj->getPreloaderTwigExtension());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestPreloaderTwigExtensionTrait();
+
+        $this->assertNull($obj->getPreloaderTwigExtension());
     }
 }

@@ -109,21 +109,6 @@ class DatetimePickerTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.adminbsb.twig.extension.plugin.datetime_picker", DatetimePickerTwigExtension::SERVICE_NAME);
-
-        $obj = new DatetimePickerTwigExtension($this->twigEnvironment, $this->translator);
-
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-        $this->assertSame($this->translator, $obj->getTranslator());
-    }
-
-    /**
      * Tests the getFunctions() method.
      *
      * @return void
@@ -149,5 +134,20 @@ class DatetimePickerTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("adminBSBTimePicker", $res[2]->getName());
         $this->assertEquals([$obj, "adminBSBTimePickerFunction"], $res[2]->getCallable());
         $this->assertEquals(["html"], $res[2]->getSafe(new Node()));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.adminbsb.twig.extension.plugin.datetime_picker", DatetimePickerTwigExtension::SERVICE_NAME);
+
+        $obj = new DatetimePickerTwigExtension($this->twigEnvironment, $this->translator);
+
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
+        $this->assertSame($this->translator, $obj->getTranslator());
     }
 }

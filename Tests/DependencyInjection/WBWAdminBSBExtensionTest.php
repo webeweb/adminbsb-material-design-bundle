@@ -61,16 +61,6 @@ class WBWAdminBSBExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw_adminbsb", WBWAdminBSBExtension::EXTENSION_ALIAS);
-    }
-
-    /**
      * Tests the getAlias() method.
      *
      * @return void
@@ -155,5 +145,15 @@ class WBWAdminBSBExtensionTest extends AbstractTestCase {
             $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
             $this->assertContains(CheckboxTwigExtension::SERVICE_NAME, $ex->getMessage());
         }
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw_adminbsb", WBWAdminBSBExtension::EXTENSION_ALIAS);
     }
 }

@@ -179,20 +179,6 @@ class CheckboxTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.adminbsb.twig.extension.form.checkbox", CheckboxTwigExtension::SERVICE_NAME);
-
-        $obj = new CheckboxTwigExtension($this->twigEnvironment);
-
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-    }
-
-    /**
      * Tests the getFunctions() method.
      *
      * @return void
@@ -213,5 +199,19 @@ class CheckboxTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("adminBSBCheckboxMaterialDesign", $res[1]->getName());
         $this->assertEquals([$obj, "adminBSBCheckboxMaterialDesignFunction"], $res[1]->getCallable());
         $this->assertEquals(["html"], $res[1]->getSafe(new Node()));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.adminbsb.twig.extension.form.checkbox", CheckboxTwigExtension::SERVICE_NAME);
+
+        $obj = new CheckboxTwigExtension($this->twigEnvironment);
+
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 }

@@ -42,18 +42,6 @@ class CardTwigExtensionTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestCardTwigExtensionTrait();
-
-        $this->assertNull($obj->getCardTwigExtension());
-    }
-
-    /**
      * Tests the setCardTwigExtension() method.
      *
      * @return void
@@ -67,5 +55,17 @@ class CardTwigExtensionTraitTest extends AbstractTestCase {
 
         $obj->setCardTwigExtension($CardTwigExtension);
         $this->assertSame($CardTwigExtension, $obj->getCardTwigExtension());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestCardTwigExtensionTrait();
+
+        $this->assertNull($obj->getCardTwigExtension());
     }
 }
