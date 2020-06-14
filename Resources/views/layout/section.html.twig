@@ -3,7 +3,7 @@
 
 {% block adminBSBTitle %}{{ ApplicationThemeProvider.title|default("AdminBSB Material Design") }}{% endblock %}
 
-{% block adminBSBAttributes %} class="theme-red"{% endblock %}
+{% block adminBSBAttributes %} class="theme-{{ getContainerParameter("wbw_adminbsb.skin") }}"{% endblock %}
 
 {% block adminBSBContainer %}
     {{ parent() }}

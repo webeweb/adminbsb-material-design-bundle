@@ -24,7 +24,6 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Plugin\DatetimePickerTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\TypographyTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\BadgeTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ButtonTwigExtension;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ColorTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\IconTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ModalTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\PreloaderTwigExtension;

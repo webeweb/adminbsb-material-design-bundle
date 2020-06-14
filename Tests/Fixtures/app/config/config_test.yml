@@ -70,6 +70,7 @@ twig:
     strict_variables: "%kernel.debug%"
 
 wbw_adminbsb:
+    skin   : "red"
     plugins:
         - "animate_css"
         - "autosize"

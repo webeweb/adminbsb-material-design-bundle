@@ -13,6 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
+use WBW\Bundle\AdminBSBBundle\Theme\SkinsThemeProvider;
 use WBW\Bundle\CoreBundle\DependencyInjection\ConfigurationHelper;
 
 /**
@@ -30,6 +31,7 @@ class Configuration implements ConfigurationInterface {
 
         $assets  = ConfigurationHelper::loadYamlConfig(__DIR__, "assets");
         $plugins = $assets["assets"]["wbw.adminbsb.asset.adminbsb"]["plugins"];
+        $skins   = SkinsThemeProvider::enumSkins();
 
         $treeBuilder = new TreeBuilder(WBWAdminBSBExtension::EXTENSION_ALIAS);
 
@@ -37,6 +39,12 @@ class Configuration implements ConfigurationInterface {
         $rootNode
             ->children()
                 ->booleanNode("twig")->defaultTrue()->info("Load Twig extensions")->end()
+                ->scalarNode("skin")->defaultValue("red")->info("AdminBSB skin")
+                    ->validate()
+                        ->ifNotInArray($skins)
+                        ->thenInvalid("The AdminBSB skin %s is not supported. Please choose one of " . json_encode($skins))
+                    ->end()
+                ->end()
                 ->arrayNode("plugins")->info("AdminBSB plug-ins")
                     ->prototype("scalar")
                         ->validate()

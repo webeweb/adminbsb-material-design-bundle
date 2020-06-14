@@ -60,6 +60,7 @@ class WBWAdminBSBExtension extends Extension {
         }
 
         ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "twig");
+        ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "skin");
         ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "plugins");
 
         $assets = ConfigurationHelper::loadYamlConfig(__DIR__, "assets");
