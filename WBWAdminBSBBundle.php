@@ -14,6 +14,7 @@ namespace WBW\Bundle\AdminBSBBundle;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use WBW\Bundle\AdminBSBBundle\DependencyInjection\WBWAdminBSBExtension;
 use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\SkeletonProviderInterface;
 
 /**
  * AdminBSB bundle.
@@ -21,7 +22,7 @@ use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle
  */
-class WBWAdminBSBBundle extends Bundle implements AssetsProviderInterface {
+class WBWAdminBSBBundle extends Bundle implements AssetsProviderInterface, SkeletonProviderInterface {
 
     /**
      * {@inheritdoc}
@@ -35,5 +36,12 @@ class WBWAdminBSBBundle extends Bundle implements AssetsProviderInterface {
      */
     public function getContainerExtension() {
         return new WBWAdminBSBExtension();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getSkeletonRelativeDirectory() {
+        return self::SKELETON_RELATIVE_DIRECTORY;
     }
 }

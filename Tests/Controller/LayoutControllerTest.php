@@ -12,6 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Tests\Controller;
 
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractWebTestCase;
+use WBW\Bundle\CoreBundle\Helper\SkeletonHelper;
 
 /**
  * Layout controller test.
@@ -28,8 +29,14 @@ class LayoutControllerTest extends AbstractWebTestCase {
         parent::setUpBeforeClass();
 
         parent::setUpSchemaTool();
-
         parent::setUpUserFixtures();
+
+        // Set up the directories.
+        $skeletonDirectory  = getcwd() . "/Resources/skeleton";
+        $resourcesDirectory = getcwd() . "/Tests/Fixtures/app/Resources";
+
+        // Copy skeleton.
+        SkeletonHelper::copySkeleton($skeletonDirectory, $resourcesDirectory);
     }
 
     /**

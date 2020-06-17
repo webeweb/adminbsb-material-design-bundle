@@ -46,4 +46,17 @@ class WBWAdminBSBBundleTest extends AbstractTestCase {
 
         $this->assertInstanceOf(WBWAdminBSBExtension::class, $obj->getContainerExtension());
     }
+
+    /**
+     * Tests the getSkeletonRelativeDirectory() method.
+     *
+     * @return void
+     */
+    public function testGetSkeletonRelativeDirectory() {
+
+        $obj = new WBWAdminBSBBundle();
+        $obj->setContainer($this->containerBuilder);
+
+        $this->assertEquals("/Resources/skeleton", $obj->getSkeletonRelativeDirectory());
+    }
 }
