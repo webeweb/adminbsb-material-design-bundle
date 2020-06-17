@@ -24,7 +24,6 @@
     <testsuites>
         <testsuite name="webeweb/adminbsb-material-design-bundle">
             <directory suffix="Test.php">./Tests</directory>
-            <exclude>Tests/Helper/</exclude>
         </testsuite>
     </testsuites>
 </phpunit>
