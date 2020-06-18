@@ -1,2 +1,19 @@
 {# Resources/skeleton/TwigBundle/views/Exception/error404.html.twig #}
 {% extends "@WBWAdminBSB/Exception/error404.html.twig" %}
+
+{% block adminBSBStylesheets %}
+    {{ parent() }}
+
+{% endblock %}
+
+{% block adminBSBTitle %}{{ parent() }}{% endblock %}
+
+{% block adminBSBContainer %}
+    {{ parent() }}
+
+{% endblock %}
+
+{% block adminBSBJavascripts %}
+    {{ parent() }}
+
+{% endblock %}

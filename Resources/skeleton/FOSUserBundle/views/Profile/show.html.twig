@@ -1,2 +1,19 @@
 {# Resources/skeleton/FOSUserBundle/views/Profile/show.html.twig #}
 {% extends "@AWBWdminBSB/Profile/show.html.twig" %}
+
+{% block adminBSBStylesheets %}
+    {{ parent() }}
+
+{% endblock %}
+
+{% block adminBSBTitle %}{{ parent() }}{% endblock %}
+
+{% block adminBSBContent %}
+    {{ parent() }}
+
+{% endblock %}
+
+{% block adminBSBJavascripts %}
+    {{ parent() }}
+
+{% endblock %}

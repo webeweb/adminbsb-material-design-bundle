@@ -1,2 +1,21 @@
 {# Resources/skeleton/FOSUserBundle/views/Registration/register.html.twig #}
 {% extends "@WBWAdminBSB/Registration/register.html.twig" %}
+
+{% block adminBSBStylesheets %}
+    {{ parent() }}
+
+{% endblock %}
+
+{% block adminBSBTitle %}{{ parent() }}{% endblock %}
+
+{% block adminBSBAttributes %}{{ parent() }}{% endblock %}
+
+{% block adminBSBContainer %}
+    {{ parent() }}
+
+{% endblock %}
+
+{% block adminBSBJavascripts %}
+    {{ parent() }}
+
+{% endblock %}

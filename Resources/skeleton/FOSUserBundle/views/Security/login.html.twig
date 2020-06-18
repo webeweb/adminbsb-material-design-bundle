@@ -1,2 +1,21 @@
 {# Resources/skeleton/FOSUserBundle/views/Security/login.html.twig #}
 {% extends "@WBWAdminBSB/Security/login.html.twig" %}
+
+{% block adminBSBStylesheets %}
+    {{ parent() }}
+
+{% endblock %}
+
+{% block adminBSBTitle %}{{ parent() }}{% endblock %}
+
+{% block adminBSBAttributes %}{{ parent() }}{% endblock %}
+
+{% block adminBSBContainer %}
+    {{ parent() }}
+
+{% endblock %}
+
+{% block adminBSBJavascripts %}
+    {{ parent() }}
+
+{% endblock %}
