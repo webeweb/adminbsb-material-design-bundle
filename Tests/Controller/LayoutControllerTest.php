@@ -69,8 +69,8 @@ class LayoutControllerTest extends AbstractWebTestCase {
         // Check the response.
         $response = $client->getResponse()->getContent();
         $this->assertContains("<title>AdminBSB Material Design - Reset password</title>", $response);
-        $this->assertContains("<body class=\"fp-page\">", $response);
-        $this->assertContains("<div class=\"fp-box\">", $response);
+        $this->assertContains('<body class="fp-page">', $response);
+        $this->assertContains('<div class="fp-box">', $response);
     }
 
     /**
@@ -89,8 +89,8 @@ class LayoutControllerTest extends AbstractWebTestCase {
         // Check the response.
         $response = $client->getResponse()->getContent();
         $this->assertContains("<title>AdminBSB Material Design - Log in</title>", $response);
-        $this->assertContains("<body class=\"login-page\">", $response);
-        $this->assertContains("<div class=\"login-box\">", $response);
+        $this->assertContains('<body class="login-page">', $response);
+        $this->assertContains('<div class="login-box">', $response);
     }
 
     /**
@@ -109,8 +109,8 @@ class LayoutControllerTest extends AbstractWebTestCase {
         // Check the response.
         $response = $client->getResponse()->getContent();
         $this->assertContains("<title>AdminBSB Material Design - Register</title>", $response);
-        $this->assertContains("<body class=\"signup-page\">", $response);
-        $this->assertContains("<div class=\"signup-box\">", $response);
+        $this->assertContains('<body class="signup-page">', $response);
+        $this->assertContains('<div class="signup-box">', $response);
     }
 
     /**
@@ -129,8 +129,8 @@ class LayoutControllerTest extends AbstractWebTestCase {
         // Check the response.
         $response = $client->getResponse()->getContent();
         $this->assertContains("<title>AdminBSB Material Design - Reset password</title>", $response);
-        $this->assertContains("<body class=\"fp-page\">", $response);
-        $this->assertContains("<div class=\"fp-box\">", $response);
+        $this->assertContains('<body class="fp-page">', $response);
+        $this->assertContains('<div class="fp-box">', $response);
     }
 
     /**
@@ -149,8 +149,8 @@ class LayoutControllerTest extends AbstractWebTestCase {
         // Check the response.
         $response = $client->getResponse()->getContent();
         $this->assertContains("<title>AdminBSB Material Design - Reset password</title>", $response);
-        $this->assertContains("<body class=\"signup-page\">", $response);
-        $this->assertContains("<div class=\"signup-box\">", $response);
+        $this->assertContains('<body class="signup-page">', $response);
+        $this->assertContains('<div class="signup-box">', $response);
     }
 
     /**
@@ -169,9 +169,9 @@ class LayoutControllerTest extends AbstractWebTestCase {
         // Check the response.
         $response = $client->getResponse()->getContent();
         $this->assertContains("<title>AdminBSB Material Design - 404 Not Found</title>", $response);
-        $this->assertContains("<body class=\"four-zero-four\">", $response);
-        $this->assertContains("<div class=\"error-code\">404</div>", $response);
-        $this->assertContains("<div class=\"error-message\">Not Found</div>", $response);
+        $this->assertContains('<body class="four-zero-four">', $response);
+        $this->assertContains('<div class="error-code">404</div>', $response);
+        $this->assertContains('<div class="error-message">Not Found</div>', $response);
     }
 
     /**
@@ -190,8 +190,8 @@ class LayoutControllerTest extends AbstractWebTestCase {
         // Check the response.
         $response = $client->getResponse()->getContent();
         $this->assertContains("<title>AdminBSB Material Design - 500 Internal Server Error</title>", $response);
-        $this->assertContains("<body class=\"five-zero-zero\">", $response);
-        $this->assertContains("<div class=\"error-code\">500</div>", $response);
-        $this->assertContains("<div class=\"error-message\">Internal Server Error</div>", $response);
+        $this->assertContains('<body class="five-zero-zero">', $response);
+        $this->assertContains('<div class="error-code">500</div>', $response);
+        $this->assertContains('<div class="error-message">Internal Server Error</div>', $response);
     }
 }
