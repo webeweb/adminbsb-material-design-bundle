@@ -15,6 +15,8 @@ use Symfony\Component\Translation\TranslatorInterface;
 use Twig\Environment;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\RendererTwigExtension;
+use WBW\Bundle\CoreBundle\Navigation\AbstractNavigationNode;
+use WBW\Bundle\CoreBundle\Navigation\HeaderNode;
 use WBW\Bundle\CoreBundle\Navigation\NavigationNode;
 use WBW\Bundle\CoreBundle\Navigation\NavigationTree;
 use WBW\Bundle\CoreBundle\Service\TranslatorTrait;
@@ -42,138 +44,148 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB menu.
+     * Displays an AdminBSB  menu.
      *
-     * @param NavigationTree $tree The tree.
-     * @return string Returns the AdminBSB menu.
+     * @param NavigationTree $tree The navigation tree.
+     * @return string Returns the Admin BSB menu.
      */
     protected function adminBSBMenu(NavigationTree $tree) {
 
-        $template = [];
+        $templates = [];
 
-        $template[] = $this->adminBSBMenuHeader($tree);
         foreach ($tree->getNodes() as $current) {
-
-            if (false === $this->isValidNode($current)) {
-                continue;
-            }
-
-            /** @var NavigationNode $current */
-            $template[] = $this->adminBSBMenuItem($current);
+            $templates[] = $this->renderNode($current);
         }
 
-        return implode("\n", $template);
+        return implode("\n", $templates);
     }
 
     /**
-     * Displays an AdminBSB menu header.
+     * Render an anchor.
      *
-     * @param NavigationTree $tree The tree.
-     * @return string Returns the AdminBSB menu header.
+     * @param NavigationNode $node The navigation node.
+     * @param int $level The level.
+     * @return string Returns the rendered anchor.
      */
-    private function adminBSBMenuHeader(NavigationTree $tree) {
+    private function renderAnchor(NavigationNode $node, $level = 0) {
 
-        $attributes = [];
+        $attributes = [
+            "href"   => $node->getUri(),
+            "target" => $node->getTarget(),
+        ];
 
-        $attributes["class"] = "header";
+        if (0 < $node->size()) {
+            $attributes["class"] = "menu-toggle";
+        }
 
-        $innerHTML = null !== $tree->getId() ? $this->translate($tree->getLabel()) : "";
+        $icon = $this->renderIcon($node);
+        $span = $this->renderSpan($node);
 
-        return static::coreHTMLElement("li", $innerHTML, $attributes);
+        return static::coreHTMLElement("a", "\n${icon}{$span}", $attributes) . "\n";
     }
 
     /**
-     * Displays an AdminBSB menu item.
+     * Render a dropdown.
      *
-     * @param NavigationNode $node The node.
-     * @return string Returns the AdminBSB menu item.
+     * @param NavigationNode $node The navigation node.
+     * @param array $items The items.
+     * @return string Returns the rendered dropdown.
      */
-    private function adminBSBMenuItem(NavigationNode $node) {
+    private function renderDropdown(NavigationNode $node, array $items) {
 
-        // Initialize the multi level menu.
-        $multiLevelMenu = false;
+        $innerHTML = implode("\n", $items);
+
+        $dropdown = static::coreHTMLElement("ul", "\n{$innerHTML}", ["class" => "ml-menu"]);
+
+        return "{$dropdown}\n";
+    }
+
+    /**
+     * Render an header node.
+     *
+     * @param HeaderNode $node The header node.
+     * @param int $level The level.
+     * @return string Returns the rendered header node.
+     */
+    private function renderHeader(HeaderNode $node, $level = 0) {
+        return self::coreHTMLElement("li", $node->getLabel(), ["class" => "header"]);
+    }
+
+    /**
+     * Render an icon.
+     *
+     * @param NavigationNode $node The navigation node.
+     * @return string Returns the rendered icon.
+     */
+    private function renderIcon(NavigationNode $node) {
+        if (null === $node->getIcon()) {
+            return "";
+        }
+        return RendererTwigExtension::renderIcon($this->getTwigEnvironment(), $node->getIcon()) . "\n";
+    }
+
+    /**
+     * Render a navigation node.
+     *
+     * @param NavigationNode $node The navigation node.
+     * @param int $level The level.
+     * @return string Returns the rendered navigation node.
+     */
+    private function renderNavigation(NavigationNode $node, $level = 0) {
+
+        $anchor = $this->renderAnchor($node, $level);
+
+        $attributes = true === $node->getActive() ? ["class" => "active"] : [];
+
+        if (0 === $node->size()) {
+            return static::coreHTMLElement("li", "\n{$anchor}", $attributes);
+        }
+
+        $items = [];
         foreach ($node->getNodes() as $current) {
-            if (false === $this->isValidNode($current)) {
-                continue;
-            }
-            $multiLevelMenu = true;
-            break;
+            $items[] = $this->renderNode($current, $level + 1);
         }
 
-        $template = [];
+        $dropdown = $this->renderDropdown($node, $items);
 
-        $template[] = "<li" . (true === $node->getActive() ? ' class="active"' : "") . ">";
-        $template[] = $this->adminBSBMenuItemLink($node, (true === $multiLevelMenu ? "menu-toggle" : null));
-
-        if (true === $multiLevelMenu) {
-            $template[] = '<ul class="ml-menu">';
-
-            foreach ($node->getNodes() as $current) {
-
-                if (false === $this->isValidNode($current)) {
-                    continue;
-                }
-
-                /** @var NavigationNode $current */
-                $template[] = $this->adminBSBMenuItem($current);
-            }
-            $template[] = "</ul>";
-        }
-
-        $template [] = "</li>";
-
-        return implode("\n", $template);
+        return static::coreHTMLElement("li", "\n{$anchor}{$dropdown}", $attributes);
     }
 
     /**
-     * Displays an AdminBSB menu item label.
+     * Render a node.
      *
-     * @param NavigationNode $node The node.
-     * @return string Returns the AdminBSB menu label.
+     * @param AbstractNavigationNode $node The node.
+     * @param int $level The level.
+     * @return string Returns the rendered node.
      */
-    private function adminBSBMenuItemLabel(NavigationNode $node) {
+    private function renderNode(AbstractNavigationNode $node, $level = 0) {
+
+        if (false === $node->isDisplayable()) {
+            return "";
+        }
+
+        if (true === ($node instanceof HeaderNode)) {
+            return $this->renderHeader($node, $level);
+        }
+
+        if (true === ($node instanceof NavigationNode)) {
+            return $this->renderNavigation($node, $level);
+        }
+
+        return "";
+    }
+
+    /**
+     * Render a span.
+     *
+     * @param NavigationNode $node The navigation node.
+     * @return string Returns the rendered span.
+     */
+    private function renderSpan(NavigationNode $node) {
 
         $innerHTML = null !== $node->getId() ? $this->translate($node->getLabel()) : "";
 
-        if (null === $node->getIcon()) {
-            return $innerHTML;
-        }
-
-        $template = "%glyphicon%<span>%innerHTML%</span>";
-
-        $glyphicon = RendererTwigExtension::renderIcon($this->getTwigEnvironment(), $node->getIcon());
-
-        return str_replace(["%glyphicon%", "%innerHTML%"], [$glyphicon, $innerHTML], $template);
-    }
-
-    /**
-     * Displays an AdminBSB menu item link.
-     *
-     * @param NavigationNode $node The node.
-     * @param string $class The class.
-     * @return string Returns the AdminBSB menu item link.
-     */
-    private function adminBSBMenuItemLink(NavigationNode $node, $class) {
-
-        $attributes = [];
-
-        $attributes["class"]  = $class;
-        $attributes["href"]   = $node->getUri();
-        $attributes["target"] = $node->getTarget();
-
-        $innerHTML = $this->adminBSBMenuItemLabel($node);
-
-        return static::coreHTMLElement("a", $innerHTML, $attributes);
-    }
-
-    /**
-     * Determines if a node is valid.
-     *
-     * @param mixed $node The node.
-     * @return bool Returns true in case of success, false otherwise.
-     */
-    private function isValidNode($node) {
-        return true === ($node instanceof NavigationNode) && true === $node->isDisplayable();
+        return static::coreHTMLElement("span", $innerHTML) . "\n";
     }
 
     /**
@@ -184,19 +196,19 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
      */
     private function translate($id) {
 
-        $outputC = $this->getTranslator()->trans($id, [], "WBWCoreBundle");
-        if ($id !== $outputC) {
-            return $outputC;
+        $core = $this->getTranslator()->trans($id, [], "WBWCoreBundle");
+        if ($id !== $core) {
+            return $core;
         }
 
-        $outputB = $this->getTranslator()->trans($id, [], "WBWBootstrapBundle");
-        if ($id !== $outputB) {
-            return $outputB;
+        $bootstrap = $this->getTranslator()->trans($id, [], "WBWBootstrapBundle");
+        if ($id !== $bootstrap) {
+            return $bootstrap;
         }
 
-        $outputA = $this->getTranslator()->trans($id, [], "WBWAdminBSBBundle");
-        if ($id !== $outputA) {
-            return $outputA;
+        $adminBSB = $this->getTranslator()->trans($id, [], "WBWAdminBSBBundle");
+        if ($id !== $adminBSB) {
+            return $adminBSB;
         }
 
         return $this->getTranslator()->trans($id);

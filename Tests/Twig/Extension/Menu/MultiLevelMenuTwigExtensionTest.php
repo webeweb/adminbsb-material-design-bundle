@@ -17,6 +17,7 @@ use Twig\TwigFunction;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Menu\MultiLevelMenuTwigExtension;
 use WBW\Bundle\CoreBundle\Navigation\BreadcrumbNode;
+use WBW\Bundle\CoreBundle\Navigation\HeaderNode;
 use WBW\Bundle\CoreBundle\Navigation\NavigationNode;
 use WBW\Bundle\CoreBundle\Navigation\NavigationTree;
 
@@ -42,7 +43,9 @@ class MultiLevelMenuTwigExtensionTest extends AbstractTestCase {
         parent::setUp();
 
         // Set a Navigation tree mock.
-        $this->navigationTree = new NavigationTree("Main navigation");
+        $this->navigationTree = new NavigationTree("Navigation tree");
+
+        $this->navigationTree->addNode(new HeaderNode("Main navigation"));
 
         $this->navigationTree->addNode(new NavigationNode("Users", "person"));
         $this->navigationTree->getLastNode()->setEnable(true);
@@ -66,20 +69,8 @@ class MultiLevelMenuTwigExtensionTest extends AbstractTestCase {
 
         $obj = new MultiLevelMenuTwigExtension($this->twigEnvironment, $this->translator);
 
-        $res = <<< EOT
-<li class="header">Main navigation</li>
-<li class="active">
-<a class="menu-toggle"><i class="material-icons">person</i><span>Users</span></a>
-<ul class="ml-menu">
-<li>
-<a href="/app/users/new"><i class="material-icons">add_circle_outline</i><span>New</span></a>
-</li>
-<li class="active">
-<a href="/app/users/index"><i class="material-icons">view_list</i><span>List</span></a>
-</li>
-</ul>
-</li>
-EOT;
+        $res = file_get_contents(__DIR__ . "/MultiLevelMenuTwigExtensionTest.testAdminBSBMultiLevelMenuFunction.html.txt");
+
         $this->assertEquals($res, $obj->adminBSBMultiLevelMenuFunction($this->navigationTree, Request::create("/app/users/index")));
     }
 
