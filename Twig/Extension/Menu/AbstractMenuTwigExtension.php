@@ -74,7 +74,7 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
             "target" => $node->getTarget(),
         ];
 
-        if (0 < $node->size()) {
+        if (0 < $node->size() && true === $node->isDisplayable()) {
             $attributes["class"] = "menu-toggle";
         }
 
