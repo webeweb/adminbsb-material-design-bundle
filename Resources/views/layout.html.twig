@@ -13,7 +13,9 @@
     {{ parent() }}
     {% include "@WBWJQueryDataTables/layout/stylesheets.html.twig" %}
     {% block adminBSBStylesheets %}
-        <!-- Google fonts -->
+        {% if ("prod" != app.environment) %}
+            <!-- Google fonts -->
+        {% endif %}
         <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin,cyrillic-ext">
         <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         {% include "@WBWAdminBSB/layout/stylesheets.html.twig" %}
