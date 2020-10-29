@@ -61,20 +61,37 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
     }
 
     /**
+     * Determines if a node is a menu toggle.
+     *
+     * @param NavigationNode $node
+     * @return bool Returns true in case of success, false otherwise.
+     */
+    protected function isMenuToggle(NavigationNode $node) {
+
+        foreach ($node->getNodes() as $current) {
+
+            if (true === ($current instanceof NavigationNode) && true === $current->isDisplayable()) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
      * Render an anchor.
      *
      * @param NavigationNode $node The navigation node.
-     * @param int $level The level.
      * @return string Returns the rendered anchor.
      */
-    private function renderAnchor(NavigationNode $node, $level = 0) {
+    private function renderAnchor(NavigationNode $node) {
 
         $attributes = [
             "href"   => $node->getUri(),
             "target" => $node->getTarget(),
         ];
 
-        if (0 < $node->size() && true === $node->isDisplayable()) {
+        if ($this->isMenuToggle($node)) {
             $attributes["class"] = "menu-toggle";
         }
 
@@ -104,10 +121,9 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
      * Render an header node.
      *
      * @param HeaderNode $node The header node.
-     * @param int $level The level.
      * @return string Returns the rendered header node.
      */
-    private function renderHeader(HeaderNode $node, $level = 0) {
+    private function renderHeader(HeaderNode $node) {
         return self::coreHTMLElement("li", $node->getLabel(), ["class" => "header"]);
     }
 
@@ -165,7 +181,7 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
         }
 
         if (true === ($node instanceof HeaderNode)) {
-            return $this->renderHeader($node, $level);
+            return $this->renderHeader($node);
         }
 
         if (true === ($node instanceof NavigationNode)) {
