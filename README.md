@@ -1,8 +1,8 @@
 adminbsb-material-design-bundle
 ===============================
 
-[![Build Status](https://img.shields.io/travis/webeweb/adminbsb-material-design-bundle/master.svg?style=flat-square)](https://travis-ci.com/webeweb/adminbsb-material-design-bundle)
-[![Coverage Status](https://img.shields.io/coveralls/webeweb/adminbsb-material-design-bundle/master.svg?style=flat-square)](https://coveralls.io/github/webeweb/adminbsb-material-design-bundle?branch=master)
+[![Build Status](https://img.shields.io/github/workflow/status/webeweb/adminbsb-material-design-bundle/build?style=flat-square)](https://github.com/webeweb/adminbsb-material-design-bundle/actions)
+[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/webeweb/adminbsb-material-design-bundle/master.svg?style=flat-square)](https://coveralls.io/github/webeweb/adminbsb-material-design-bundle?branch=master)
 [![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/quality/g/webeweb/adminbsb-material-design-bundle/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/webeweb/adminbsb-material-design-bundle/?branch=master)
 [![Latest Stable Version](https://img.shields.io/packagist/v/webeweb/adminbsb-material-design-bundle.svg?style=flat-square)](https://packagist.org/packages/webeweb/adminbsb-material-design-bundle)
 [![Latest Unstable Version](https://img.shields.io/packagist/vpre/webeweb/adminbsb-material-design-bundle.svg?style=flat-square)](https://packagist.org/packages/webeweb/adminbsb-material-design-bundle)
@@ -79,7 +79,7 @@ If you like this package, pay me a beer (or a coffee)
 ## Compatibility
 
 [![PHP](https://img.shields.io/packagist/php-v/webeweb/adminbsb-material-design-bundle.svg?style=flat-square)](http://php.net)
-[![Symfony](https://img.shields.io/badge/symfony-%5E2.7%7C%5E3.0%7C%5E4.0-brightness.svg?style=flat-square)](https://symfony.com)
+[![Symfony](https://img.shields.io/badge/symfony-%5E3.4%7C%5E4.0-brightness.svg?style=flat-square)](https://symfony.com)
 
 ## Installation
 
