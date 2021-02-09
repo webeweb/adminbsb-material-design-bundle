@@ -29,11 +29,11 @@ abstract class AbstractButtonTwigExtension extends BaseTwigExtension {
      * Displays an AdminBSB button.
      *
      * @param ButtonInterface $button The button.
-     * @param string $icon The icon.
+     * @param string|null $icon The icon.
      * @param bool $circle Circle ?
      * @return string Returns the AdminBSB button.
      */
-    protected function adminBSBButton(ButtonInterface $button, $icon, $circle) {
+    protected function adminBSBButton(ButtonInterface $button, ?string $icon, bool $circle): string {
 
         // Fix some parameters.
         $circle = null !== $button->getContent() ? false : $circle;

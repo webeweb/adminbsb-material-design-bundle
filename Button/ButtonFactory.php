@@ -29,7 +29,7 @@ class ButtonFactory extends BaseFactory {
      * @param string $color The color.
      * @return ButtonInterface Returns the Material Design button.
      */
-    public static function newMaterialDesignButton($color) {
+    public static function newMaterialDesignButton(string $color): ButtonInterface {
         return new MaterialDesignButton($color);
     }
 
@@ -39,7 +39,7 @@ class ButtonFactory extends BaseFactory {
      * @param array $args The arguments.
      * @return ButtonInterface Returns the Material Design button.
      */
-    public static function parseMaterialDesignButton(array $args) {
+    public static function parseMaterialDesignButton(array $args): ButtonInterface {
         return static::parseButton(static::newMaterialDesignButton(ArrayHelper::get($args, "color", "red")), $args);
     }
 }

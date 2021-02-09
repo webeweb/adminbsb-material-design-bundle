@@ -28,26 +28,14 @@ class TypographyTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetTypographyTwigExtension() {
+    public function testSetTypographyTwigExtension(): void {
 
         // Set a Typography Twig extension mock.
-        $typographyTwigExtension = new TypographyTwigExtension($this->twigEnvironment, $this->translator);
+        $typographyTwigExtension = new TypographyTwigExtension($this->twigEnvironment);
 
         $obj = new TestTypographyTwigExtensionTrait();
 
         $obj->setTypographyTwigExtension($typographyTwigExtension);
         $this->assertSame($typographyTwigExtension, $obj->getTypographyTwigExtension());
-    }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj = new TestTypographyTwigExtensionTrait();
-
-        $this->assertNull($obj->getTypographyTwigExtension());
     }
 }

@@ -11,9 +11,9 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Plugin;
 
-use Symfony\Component\Translation\TranslatorInterface;
 use Twig\Environment;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
+use WBW\Bundle\CoreBundle\Component\Translation\BaseTranslatorInterface;
 use WBW\Bundle\CoreBundle\Service\TranslatorTrait;
 use WBW\Library\Core\Argument\Helper\StringHelper;
 
@@ -73,9 +73,9 @@ EOT;
      * Constructor.
      *
      * @param Environment $twigEnvironment The Twig environment.
-     * @param TranslatorInterface $translator The translator.
+     * @param BaseTranslatorInterface $translator The translator.
      */
-    public function __construct(Environment $twigEnvironment, TranslatorInterface $translator) {
+    public function __construct(Environment $twigEnvironment, $translator) {
         parent::__construct($twigEnvironment);
         $this->setTranslator($translator);
     }
@@ -92,7 +92,7 @@ EOT;
      * @param string $weekStart The week start.
      * @return string Returns the AdminBSB datetime picker.
      */
-    protected function adminBSBDatetimePicker($selector, $clearButton, $date, $format, $lang, $time, $weekStart) {
+    protected function adminBSBDatetimePicker(string $selector, bool $clearButton, bool $date, string $format, string $lang, bool $time, string $weekStart): string {
 
         $weekStarts = [0, 1, 2, 3, 4, 5, 6];
 
@@ -106,6 +106,6 @@ EOT;
         $searches = ["%selector%", "%cancelText%", "%clearButton%", "%clearText%", "%date%", "%format%", "%lang%", "%time%", "%weekStart%"];
         $replaces = [$selector, $cancelText, $bClearButton, $clearText, $bDate, $format, $lang, $bTime, $iWeekStart];
 
-        return str_replace($searches, $replaces, self::DATETIMEPICKER);
+        return str_replace($searches, $replaces, static::DATETIMEPICKER);
     }
 }

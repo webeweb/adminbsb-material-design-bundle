@@ -29,7 +29,7 @@ abstract class AbstractPreloaderTwigExtension extends AbstractTwigExtension {
      * @param string $size The size.
      * @return string Returns the AdminBSB preloader.
      */
-    protected function adminBSBPreloader($class, $size) {
+    protected function adminBSBPreloader(string $class, string $size): string {
 
         $sizes = ["xs", "sm", "l", "xl"];
 

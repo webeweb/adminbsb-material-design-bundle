@@ -35,7 +35,7 @@ class RadioButtonTwigExtension extends AbstractRadioButtonTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the AdminBSB radio button "Basic".
      */
-    public function adminBSBRadioButtonBasicFunction(array $args = []) {
+    public function adminBSBRadioButtonBasicFunction(array $args = []): string {
         return $this->adminBSBRadioButton(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "name"), ArrayHelper::get($args, "id"), ArrayHelper::get($args, "checked", false), ArrayHelper::get($args, "disabled", false), ArrayHelper::get($args, "withGap", false), ArrayHelper::get($args, "class"));
     }
 
@@ -45,8 +45,8 @@ class RadioButtonTwigExtension extends AbstractRadioButtonTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the AdminBSB radio button "Material design".
      */
-    public function adminBSBRadioButtonMaterialDesignFunction(array $args = []) {
-        return $this->adminBSBRadioButton(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "name"), ArrayHelper::get($args, "id"), ArrayHelper::get($args, "checked", false), ArrayHelper::get($args, "disabled", false), ArrayHelper::get($args, "withGap", false), ArrayHelper::get($args, "class", "") . self::materialDesignColor(ArrayHelper::get($args, "color", "red"), " radio-col-"));
+    public function adminBSBRadioButtonMaterialDesignFunction(array $args = []): string {
+        return $this->adminBSBRadioButton(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "name"), ArrayHelper::get($args, "id"), ArrayHelper::get($args, "checked", false), ArrayHelper::get($args, "disabled", false), ArrayHelper::get($args, "withGap", false), ArrayHelper::get($args, "class", "") . static::materialDesignColor(ArrayHelper::get($args, "color", "red"), " radio-col-"));
     }
 
     /**
@@ -54,7 +54,7 @@ class RadioButtonTwigExtension extends AbstractRadioButtonTwigExtension {
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    public function getFunctions() {
+    public function getFunctions(): array {
         return [
             new TwigFunction("adminBSBRadioButtonBasic", [$this, "adminBSBRadioButtonBasicFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("adminBSBRadioButtonMaterialDesign", [$this, "adminBSBRadioButtonMaterialDesignFunction"], ["is_safe" => ["html"]]),

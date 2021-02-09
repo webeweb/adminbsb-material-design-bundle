@@ -26,16 +26,16 @@ abstract class AbstractCheckboxTwigExtension extends AbstractTwigExtension {
     /**
      * Displays a AdminBSB checkbox.
      *
-     * @param string $content The content.
-     * @param string $name The name.
-     * @param string $id The id.
+     * @param string|null $content The content.
+     * @param string|null $name The name.
+     * @param string|null $id The id.
      * @param bool $checked Checked ?
      * @param bool $disabled Disabled ?
      * @param bool $filledIn Filled in ?
-     * @param string $class The class.
+     * @param string|null $class The class.
      * @return string Returns the AdminBSB checkbox.
      */
-    protected function adminBSBCheckbox($content, $name, $id, $checked, $disabled, $filledIn, $class) {
+    protected function adminBSBCheckbox(?string $content, ?string $name, ?string $id, bool $checked, bool $disabled, bool $filledIn, ?string $class): string {
 
         $template = "<input %attributes%>%innerHTML%";
 

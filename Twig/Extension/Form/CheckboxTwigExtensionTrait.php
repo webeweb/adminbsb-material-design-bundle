@@ -22,25 +22,26 @@ trait CheckboxTwigExtensionTrait {
     /**
      * Checkbox Twig extension.
      *
-     * @var CheckboxTwigExtension
+     * @var CheckboxTwigExtension|null
      */
     private $checkboxTwigExtension;
 
     /**
      * Get the checkbox Twig extension.
      *
-     * @return CheckboxTwigExtension Returns the checkbox Twig extension.
+     * @return CheckboxTwigExtension|null Returns the checkbox Twig extension.
      */
-    public function getCheckboxTwigExtension() {
+    public function getCheckboxTwigExtension(): ?CheckboxTwigExtension {
         return $this->checkboxTwigExtension;
     }
 
     /**
      * Set the checkbox Twig extension.
      *
-     * @param CheckboxTwigExtension $checkboxTwigExtension The checkbox Twig extension.
+     * @param CheckboxTwigExtension|null $checkboxTwigExtension The checkbox Twig extension.
+     * @return self Returns this instance.
      */
-    protected function setCheckboxTwigExtension(CheckboxTwigExtension $checkboxTwigExtension = null) {
+    protected function setCheckboxTwigExtension(?CheckboxTwigExtension $checkboxTwigExtension): self {
         $this->checkboxTwigExtension = $checkboxTwigExtension;
         return $this;
     }

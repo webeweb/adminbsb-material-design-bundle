@@ -29,7 +29,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBButtonBadgeDangerFunction() {
+    public function testAdminBSBButtonBadgeDangerFunction(): void {
 
         $obj = new BadgeTwigExtension($this->twigEnvironment);
 
@@ -43,49 +43,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBButtonBadgeDangerFunctionWithContent() {
-
-        $obj = new BadgeTwigExtension($this->twigEnvironment);
-
-        $arg = ["content" => "content"];
-        $res = '<button class="btn btn-danger btn-block waves-effect" type="button">content<span class="badge"></span></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonBadgeDangerFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonBadgeDangerFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonBadgeDangerFunctionWithLabel() {
-
-        $obj = new BadgeTwigExtension($this->twigEnvironment);
-
-        $arg = ["label" => "label"];
-        $res = '<button class="btn btn-danger btn-block waves-effect" type="button"><span class="badge">label</span></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonBadgeDangerFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonBadgeDangerFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonBadgeDangerFunctionWithLarge() {
-
-        $obj = new BadgeTwigExtension($this->twigEnvironment);
-
-        $arg = ["large" => true];
-        $res = '<button class="btn btn-danger btn-block waves-effect btn-lg" type="button"><span class="badge"></span></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonBadgeDangerFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonBadgeDangerFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonBadgeDangerFunctionWithoutArguments() {
+    public function testAdminBSBButtonBadgeDangerFunctionWithoutArguments(): void {
 
         $obj = new BadgeTwigExtension($this->twigEnvironment);
 
@@ -99,7 +57,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBButtonBadgeDefaultFunction() {
+    public function testAdminBSBButtonBadgeDefaultFunction(): void {
 
         $obj = new BadgeTwigExtension($this->twigEnvironment);
 
@@ -113,49 +71,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBButtonBadgeDefaultFunctionWithContent() {
-
-        $obj = new BadgeTwigExtension($this->twigEnvironment);
-
-        $arg = ["content" => "content"];
-        $res = '<button class="btn btn-default btn-block waves-effect" type="button">content<span class="badge"></span></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonBadgeDefaultFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonBadgeDefaultFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonBadgeDefaultFunctionWithLabel() {
-
-        $obj = new BadgeTwigExtension($this->twigEnvironment);
-
-        $arg = ["label" => "label"];
-        $res = '<button class="btn btn-default btn-block waves-effect" type="button"><span class="badge">label</span></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonBadgeDefaultFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonBadgeDefaultFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonBadgeDefaultFunctionWithLarge() {
-
-        $obj = new BadgeTwigExtension($this->twigEnvironment);
-
-        $arg = ["large" => true];
-        $res = '<button class="btn btn-default btn-block waves-effect btn-lg" type="button"><span class="badge"></span></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonBadgeDefaultFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonBadgeDefaultFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonBadgeDefaultFunctionWithoutArguments() {
+    public function testAdminBSBButtonBadgeDefaultFunctionWithoutArguments(): void {
 
         $obj = new BadgeTwigExtension($this->twigEnvironment);
 
@@ -169,7 +85,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBButtonBadgeInfoFunction() {
+    public function testAdminBSBButtonBadgeInfoFunction(): void {
 
         $obj = new BadgeTwigExtension($this->twigEnvironment);
 
@@ -183,49 +99,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBButtonBadgeInfoFunctionWithContent() {
-
-        $obj = new BadgeTwigExtension($this->twigEnvironment);
-
-        $arg = ["content" => "content"];
-        $res = '<button class="btn btn-info btn-block waves-effect" type="button">content<span class="badge"></span></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonBadgeInfoFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonBadgeInfoFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonBadgeInfoFunctionWithLabel() {
-
-        $obj = new BadgeTwigExtension($this->twigEnvironment);
-
-        $arg = ["label" => "label"];
-        $res = '<button class="btn btn-info btn-block waves-effect" type="button"><span class="badge">label</span></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonBadgeInfoFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonBadgeInfoFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonBadgeInfoFunctionWithLarge() {
-
-        $obj = new BadgeTwigExtension($this->twigEnvironment);
-
-        $arg = ["large" => true];
-        $res = '<button class="btn btn-info btn-block waves-effect btn-lg" type="button"><span class="badge"></span></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonBadgeInfoFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonBadgeInfoFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonBadgeInfoFunctionWithoutArguments() {
+    public function testAdminBSBButtonBadgeInfoFunctionWithoutArguments(): void {
 
         $obj = new BadgeTwigExtension($this->twigEnvironment);
 
@@ -239,7 +113,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBButtonBadgeListFunction() {
+    public function testAdminBSBButtonBadgeListFunction(): void {
 
         $obj = new BadgeTwigExtension($this->twigEnvironment);
 
@@ -253,63 +127,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBButtonBadgeListFunctionWithColor() {
-
-        $obj = new BadgeTwigExtension($this->twigEnvironment);
-
-        $arg = ["color" => "pink"];
-        $res = '<a class="list-group-item" href="javascript:void(0);"><span class="badge bg-pink"></span></a>';
-        $this->assertEquals($res, $obj->adminBSBButtonBadgeListFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonBadgeListFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonBadgeListFunctionWithContent() {
-
-        $obj = new BadgeTwigExtension($this->twigEnvironment);
-
-        $arg = ["content" => "content"];
-        $res = '<a class="list-group-item" href="javascript:void(0);"><span class="badge bg-red">content</span></a>';
-        $this->assertEquals($res, $obj->adminBSBButtonBadgeListFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonBadgeListFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonBadgeListFunctionWithLabel() {
-
-        $obj = new BadgeTwigExtension($this->twigEnvironment);
-
-        $arg = ["label" => "label"];
-        $res = '<a class="list-group-item" href="javascript:void(0);"><span class="badge bg-red"></span>label</a>';
-        $this->assertEquals($res, $obj->adminBSBButtonBadgeListFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonBadgeListFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonBadgeListFunctionWithLink() {
-
-        $obj = new BadgeTwigExtension($this->twigEnvironment);
-
-        $arg = ["link" => "http://domain.tld"];
-        $res = '<a class="list-group-item" href="http://domain.tld"><span class="badge bg-red"></span></a>';
-        $this->assertEquals($res, $obj->adminBSBButtonBadgeListFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonBadgeListFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonBadgeListFunctionWithoutArguments() {
+    public function testAdminBSBButtonBadgeListFunctionWithoutArguments(): void {
 
         $obj = new BadgeTwigExtension($this->twigEnvironment);
 
@@ -323,7 +141,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBButtonBadgeMaterialDesignFunction() {
+    public function testAdminBSBButtonBadgeMaterialDesignFunction(): void {
 
         $obj = new BadgeTwigExtension($this->twigEnvironment);
 
@@ -337,63 +155,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBButtonBadgeMaterialDesignFunctionWithColor() {
-
-        $obj = new BadgeTwigExtension($this->twigEnvironment);
-
-        $arg = ["color" => "pink"];
-        $res = '<button class="btn bg-pink btn-block waves-effect" type="button"><span class="badge"></span></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonBadgeMaterialDesignFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonBadgeMaterialDesignFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonBadgeMaterialDesignFunctionWithContent() {
-
-        $obj = new BadgeTwigExtension($this->twigEnvironment);
-
-        $arg = ["content" => "content"];
-        $res = '<button class="btn bg-red btn-block waves-effect" type="button">content<span class="badge"></span></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonBadgeMaterialDesignFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonBadgeMaterialDesignFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonBadgeMaterialDesignFunctionWithLabel() {
-
-        $obj = new BadgeTwigExtension($this->twigEnvironment);
-
-        $arg = ["label" => "label"];
-        $res = '<button class="btn bg-red btn-block waves-effect" type="button"><span class="badge">label</span></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonBadgeMaterialDesignFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonBadgeMaterialDesignFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonBadgeMaterialDesignFunctionWithLarge() {
-
-        $obj = new BadgeTwigExtension($this->twigEnvironment);
-
-        $arg = ["large" => true];
-        $res = '<button class="btn bg-red btn-block waves-effect btn-lg" type="button"><span class="badge"></span></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonBadgeMaterialDesignFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonBadgeMaterialDesignFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonBadgeMaterialDesignFunctionWithoutArguments() {
+    public function testAdminBSBButtonBadgeMaterialDesignFunctionWithoutArguments(): void {
 
         $obj = new BadgeTwigExtension($this->twigEnvironment);
 
@@ -407,7 +169,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBButtonBadgePrimaryFunction() {
+    public function testAdminBSBButtonBadgePrimaryFunction(): void {
 
         $obj = new BadgeTwigExtension($this->twigEnvironment);
 
@@ -421,49 +183,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBButtonBadgePrimaryFunctionWithContent() {
-
-        $obj = new BadgeTwigExtension($this->twigEnvironment);
-
-        $arg = ["content" => "content"];
-        $res = '<button class="btn btn-primary btn-block waves-effect" type="button">content<span class="badge"></span></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonBadgePrimaryFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonBadgePrimaryFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonBadgePrimaryFunctionWithLabel() {
-
-        $obj = new BadgeTwigExtension($this->twigEnvironment);
-
-        $arg = ["label" => "label"];
-        $res = '<button class="btn btn-primary btn-block waves-effect" type="button"><span class="badge">label</span></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonBadgePrimaryFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonBadgePrimaryFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonBadgePrimaryFunctionWithLarge() {
-
-        $obj = new BadgeTwigExtension($this->twigEnvironment);
-
-        $arg = ["large" => true];
-        $res = '<button class="btn btn-primary btn-block waves-effect btn-lg" type="button"><span class="badge"></span></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonBadgePrimaryFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonBadgePrimaryFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonBadgePrimaryFunctionWithoutArguments() {
+    public function testAdminBSBButtonBadgePrimaryFunctionWithoutArguments(): void {
 
         $obj = new BadgeTwigExtension($this->twigEnvironment);
 
@@ -477,7 +197,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBButtonBadgeSuccessFunction() {
+    public function testAdminBSBButtonBadgeSuccessFunction(): void {
 
         $obj = new BadgeTwigExtension($this->twigEnvironment);
 
@@ -491,49 +211,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBButtonBadgeSuccessFunctionWithContent() {
-
-        $obj = new BadgeTwigExtension($this->twigEnvironment);
-
-        $arg = ["content" => "content"];
-        $res = '<button class="btn btn-success btn-block waves-effect" type="button">content<span class="badge"></span></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonBadgeSuccessFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonBadgeSuccessFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonBadgeSuccessFunctionWithLabel() {
-
-        $obj = new BadgeTwigExtension($this->twigEnvironment);
-
-        $arg = ["label" => "label"];
-        $res = '<button class="btn btn-success btn-block waves-effect" type="button"><span class="badge">label</span></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonBadgeSuccessFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonBadgeSuccessFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonBadgeSuccessFunctionWithLarge() {
-
-        $obj = new BadgeTwigExtension($this->twigEnvironment);
-
-        $arg = ["large" => true];
-        $res = '<button class="btn btn-success btn-block waves-effect btn-lg" type="button"><span class="badge"></span></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonBadgeSuccessFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonBadgeSuccessFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonBadgeSuccessFunctionWithoutArguments() {
+    public function testAdminBSBButtonBadgeSuccessFunctionWithoutArguments(): void {
 
         $obj = new BadgeTwigExtension($this->twigEnvironment);
 
@@ -547,7 +225,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBButtonBadgeWarningFunction() {
+    public function testAdminBSBButtonBadgeWarningFunction(): void {
 
         $obj = new BadgeTwigExtension($this->twigEnvironment);
 
@@ -561,49 +239,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBButtonBadgeWarningFunctionWithContent() {
-
-        $obj = new BadgeTwigExtension($this->twigEnvironment);
-
-        $arg = ["content" => "content"];
-        $res = '<button class="btn btn-warning btn-block waves-effect" type="button">content<span class="badge"></span></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonBadgeWarningFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonBadgeWarningFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonBadgeWarningFunctionWithLabel() {
-
-        $obj = new BadgeTwigExtension($this->twigEnvironment);
-
-        $arg = ["label" => "label"];
-        $res = '<button class="btn btn-warning btn-block waves-effect" type="button"><span class="badge">label</span></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonBadgeWarningFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonBadgeWarningFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonBadgeWarningFunctionWithLarge() {
-
-        $obj = new BadgeTwigExtension($this->twigEnvironment);
-
-        $arg = ["large" => true];
-        $res = '<button class="btn btn-warning btn-block waves-effect btn-lg" type="button"><span class="badge"></span></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonBadgeWarningFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonBadgeWarningFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonBadgeWarningFunctionWithoutArguments() {
+    public function testAdminBSBButtonBadgeWarningFunctionWithoutArguments(): void {
 
         $obj = new BadgeTwigExtension($this->twigEnvironment);
 
@@ -617,7 +253,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new BadgeTwigExtension($this->twigEnvironment);
 
@@ -670,7 +306,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.adminbsb.twig.extension.ui.badge", BadgeTwigExtension::SERVICE_NAME);
 

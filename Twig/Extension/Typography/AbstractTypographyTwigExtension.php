@@ -25,50 +25,50 @@ abstract class AbstractTypographyTwigExtension extends BaseTwigExtension {
     /**
      * Displays an AdminBSB bold text.
      *
-     * @param string $content The content.
+     * @param string|null $content The content.
      * @return string Returns the AdminBSB bold text.
      */
-    protected function adminBSBBold($content) {
+    protected function adminBSBBold(?string $content): string {
         return static::coreHTMLElement("span", $content, ["class" => "font-bold"]);
     }
 
     /**
      * Displays an AdminBSB italic text.
      *
-     * @param string $content The content.
+     * @param string|null $content The content.
      * @return string Returns the AdminBSB italic text.
      */
-    protected function adminBSBItalic($content) {
+    protected function adminBSBItalic(?string $content): string {
         return static::coreHTMLElement("span", $content, ["class" => "font-italic"]);
     }
 
     /**
      * Displays an AdminBSB line through text.
      *
-     * @param string $content The content.
+     * @param string|null $content The content.
      * @return string Returns the AdminBSB line through text.
      */
-    protected function adminBSBLineThrough($content) {
+    protected function adminBSBLineThrough(?string $content): string {
         return static::coreHTMLElement("span", $content, ["class" => "font-line-through"]);
     }
 
     /**
      * Displays an AdminBSB overlined text.
      *
-     * @param string $content The content.
+     * @param string|null $content The content.
      * @return string Returns the AdminBSB overlined text.
      */
-    protected function adminBSBOverline($content) {
+    protected function adminBSBOverline(?string $content): string {
         return static::coreHTMLElement("span", $content, ["class" => "font-overline"]);
     }
 
     /**
      * Displays an AdminBSB underlined text.
      *
-     * @param string $content The content.
+     * @param string|null $content The content.
      * @return string Returns the AdminBSB underlined text.
      */
-    protected function adminBSBUnderline($content) {
+    protected function adminBSBUnderline(?string $content): string {
         return static::coreHTMLElement("span", $content, ["class" => "font-underline"]);
     }
 }

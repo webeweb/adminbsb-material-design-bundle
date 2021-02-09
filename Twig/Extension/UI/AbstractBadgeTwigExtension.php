@@ -26,15 +26,15 @@ abstract class AbstractBadgeTwigExtension extends AbstractTwigExtension {
     /**
      * Displays an AdminBSB badge.
      *
-     * @param string $content The content.
-     * @param string $label The label.
+     * @param string|null $content The content.
+     * @param string|null $label The label.
      * @param bool $large Large ?
      * @param string $class The class.
      * @param bool $list List ?
-     * @param string $link The link.
+     * @param string|null $link The link.
      * @return string Returns the AdminBSB badge.
      */
-    protected function adminBSBBadge($content, $label, $large, $class, $list = false, $link = null) {
+    protected function adminBSBBadge(?string $content, ?string $label, bool $large, string $class, bool $list = false, string $link = null): string {
 
         $template = '<button %attributes%>%innerHTML%<span class="badge">%label%</span></button>';
         if (true === $list) {

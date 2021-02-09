@@ -36,7 +36,7 @@ class IconTwigExtension extends AbstractIconTwigExtension implements IconRendere
      * @param array $args The arguments.
      * @return string Returns the AdminBSB basic icon.
      */
-    public function adminBSBIconBasicFunction(array $args = []) {
+    public function adminBSBIconBasicFunction(array $args = []): string {
         return $this->adminBSBIcon(ArrayHelper::get($args, "name"), ArrayHelper::get($args, "style"));
     }
 
@@ -46,8 +46,8 @@ class IconTwigExtension extends AbstractIconTwigExtension implements IconRendere
      * @param array $args The arguments.
      * @return string Returns the AdminBSB material design icon.
      */
-    public function adminBSBIconMaterialDesignFunction(array $args = []) {
-        return $this->adminBSBIcon(ArrayHelper::get($args, "name"), ArrayHelper::get($args, "style"), self::materialDesignColor(ArrayHelper::get($args, "color"), "col-"));
+    public function adminBSBIconMaterialDesignFunction(array $args = []): string {
+        return $this->adminBSBIcon(ArrayHelper::get($args, "name"), ArrayHelper::get($args, "style"), static::materialDesignColor(ArrayHelper::get($args, "color"), "col-"));
     }
 
     /**
@@ -55,7 +55,7 @@ class IconTwigExtension extends AbstractIconTwigExtension implements IconRendere
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    public function getFunctions() {
+    public function getFunctions(): array {
         return [
             new TwigFunction("adminBSBIconBasic", [$this, "adminBSBIconBasicFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("adminBSBIconMaterialDesign", [$this, "adminBSBIconMaterialDesignFunction"], ["is_safe" => ["html"]]),
@@ -65,7 +65,7 @@ class IconTwigExtension extends AbstractIconTwigExtension implements IconRendere
     /**
      * {@inheritdoc}
      */
-    public function renderIcon($name, $style) {
+    public function renderIcon(?string $name, ?string $style): string {
         return $this->adminBSBIconBasicFunction(["name" => $name, "style" => $style]);
     }
 }

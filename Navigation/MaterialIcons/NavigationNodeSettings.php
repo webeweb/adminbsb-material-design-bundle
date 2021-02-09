@@ -24,10 +24,10 @@ class NavigationNodeSettings extends NavigationNode {
     /**
      * Constructor.
      *
-     * @param string $route The route.
+     * @param string|null $uri The URI.
      * @param string $matcher The matcher.
      */
-    public function __construct($route = null, $matcher = self::NAVIGATION_MATCHER_URL) {
-        parent::__construct("navigation.node.settings", "mi:settings", $route, $matcher);
+    public function __construct(string $uri = null, string $matcher = self::NAVIGATION_MATCHER_URL) {
+        parent::__construct("navigation.node.settings", "mi:settings", $uri, $matcher);
     }
 }

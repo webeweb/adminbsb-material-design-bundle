@@ -34,7 +34,7 @@ class ModalTwigExtensionTraitTest extends AbstractTestCase {
     /**
      * {@inheritdoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set a Typography Twig extension mock.
@@ -46,7 +46,7 @@ class ModalTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetModalTwigExtension() {
+    public function testSetModalTwigExtension(): void {
 
         // Set a Modal Twig extension mock.
         $modalTwigExtension = new ModalTwigExtension($this->twigEnvironment, $this->typographyTwigExtension);
@@ -55,17 +55,5 @@ class ModalTwigExtensionTraitTest extends AbstractTestCase {
 
         $obj->setModalTwigExtension($modalTwigExtension);
         $this->assertSame($modalTwigExtension, $obj->getModalTwigExtension());
-    }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj = new TestModalTwigExtensionTrait();
-
-        $this->assertNull($obj->getModalTwigExtension());
     }
 }

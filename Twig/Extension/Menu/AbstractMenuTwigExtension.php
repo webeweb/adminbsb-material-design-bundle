@@ -11,10 +11,10 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Menu;
 
-use Symfony\Component\Translation\TranslatorInterface;
 use Twig\Environment;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\RendererTwigExtension;
+use WBW\Bundle\CoreBundle\Component\Translation\BaseTranslatorInterface;
 use WBW\Bundle\CoreBundle\Navigation\AbstractNavigationNode;
 use WBW\Bundle\CoreBundle\Navigation\HeaderNode;
 use WBW\Bundle\CoreBundle\Navigation\NavigationNode;
@@ -36,9 +36,9 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
      * Constructor.
      *
      * @param Environment $twigEnvironment The Twig environment.
-     * @param TranslatorInterface $translator The translator.
+     * @param BaseTranslatorInterface $translator The translator.
      */
-    public function __construct(Environment $twigEnvironment, TranslatorInterface $translator) {
+    public function __construct(Environment $twigEnvironment, $translator) {
         parent::__construct($twigEnvironment);
         $this->setTranslator($translator);
     }
@@ -49,7 +49,7 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
      * @param NavigationTree $tree The navigation tree.
      * @return string Returns the Admin BSB menu.
      */
-    protected function adminBSBMenu(NavigationTree $tree) {
+    protected function adminBSBMenu(NavigationTree $tree): string {
 
         $templates = [];
 
@@ -66,7 +66,7 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
      * @param NavigationNode $node
      * @return bool Returns true in case of success, false otherwise.
      */
-    protected function isMenuToggle(NavigationNode $node) {
+    protected function isMenuToggle(NavigationNode $node): bool {
 
         foreach ($node->getNodes() as $current) {
 
@@ -84,7 +84,7 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
      * @param NavigationNode $node The navigation node.
      * @return string Returns the rendered anchor.
      */
-    private function renderAnchor(NavigationNode $node) {
+    private function renderAnchor(NavigationNode $node): string {
 
         $attributes = [
             "href"   => $node->getUri(),
@@ -108,7 +108,7 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
      * @param array $items The items.
      * @return string Returns the rendered dropdown.
      */
-    private function renderDropdown(NavigationNode $node, array $items) {
+    private function renderDropdown(NavigationNode $node, array $items): string {
 
         $innerHTML = implode("\n", $items);
 
@@ -123,8 +123,8 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
      * @param HeaderNode $node The header node.
      * @return string Returns the rendered header node.
      */
-    private function renderHeader(HeaderNode $node) {
-        return self::coreHTMLElement("li", $node->getLabel(), ["class" => "header"]);
+    private function renderHeader(HeaderNode $node): string {
+        return static::coreHTMLElement("li", $node->getLabel(), ["class" => "header"]);
     }
 
     /**
@@ -133,7 +133,7 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
      * @param NavigationNode $node The navigation node.
      * @return string Returns the rendered icon.
      */
-    private function renderIcon(NavigationNode $node) {
+    private function renderIcon(NavigationNode $node): string {
         if (null === $node->getIcon()) {
             return "";
         }
@@ -147,9 +147,9 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
      * @param int $level The level.
      * @return string Returns the rendered navigation node.
      */
-    private function renderNavigation(NavigationNode $node, $level = 0) {
+    private function renderNavigation(NavigationNode $node, int $level = 0): string {
 
-        $anchor = $this->renderAnchor($node, $level);
+        $anchor = $this->renderAnchor($node);
 
         $attributes = true === $node->getActive() ? ["class" => "active"] : [];
 
@@ -174,7 +174,7 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
      * @param int $level The level.
      * @return string Returns the rendered node.
      */
-    private function renderNode(AbstractNavigationNode $node, $level = 0) {
+    private function renderNode(AbstractNavigationNode $node, int $level = 0): string {
 
         if (false === $node->isDisplayable()) {
             return "";
@@ -197,7 +197,7 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
      * @param NavigationNode $node The navigation node.
      * @return string Returns the rendered span.
      */
-    private function renderSpan(NavigationNode $node) {
+    private function renderSpan(NavigationNode $node): string {
 
         $innerHTML = null !== $node->getId() ? $this->translate($node->getLabel()) : "";
 
@@ -210,7 +210,7 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
      * @param string $id The translation id.
      * @return string Returns the translation in case of success, id otherwise.
      */
-    private function translate($id) {
+    private function translate(string $id): string {
 
         $core = $this->getTranslator()->trans($id, [], "WBWCoreBundle");
         if ($id !== $core) {

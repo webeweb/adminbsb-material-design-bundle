@@ -29,7 +29,7 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBPreloaderMaterialDesignLFunction() {
+    public function testAdminBSBPreloaderMaterialDesignLFunction(): void {
 
         $obj = new PreloaderTwigExtension($this->twigEnvironment);
 
@@ -43,7 +43,7 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBPreloaderMaterialDesignLFunctionWithoutArguments() {
+    public function testAdminBSBPreloaderMaterialDesignLFunctionWithoutArguments(): void {
 
         $obj = new PreloaderTwigExtension($this->twigEnvironment);
 
@@ -57,7 +57,7 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBPreloaderMaterialDesignSFunction() {
+    public function testAdminBSBPreloaderMaterialDesignSFunction(): void {
 
         $obj = new PreloaderTwigExtension($this->twigEnvironment);
 
@@ -71,7 +71,7 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBPreloaderMaterialDesignSFunctionWithoutArguments() {
+    public function testAdminBSBPreloaderMaterialDesignSFunctionWithoutArguments(): void {
 
         $obj = new PreloaderTwigExtension($this->twigEnvironment);
 
@@ -85,7 +85,7 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBPreloaderMaterialDesignSMFunction() {
+    public function testAdminBSBPreloaderMaterialDesignSMFunction(): void {
 
         $obj = new PreloaderTwigExtension($this->twigEnvironment);
 
@@ -99,7 +99,7 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBPreloaderMaterialDesignSMFunctionWithoutArguments() {
+    public function testAdminBSBPreloaderMaterialDesignSMFunctionWithoutArguments(): void {
 
         $obj = new PreloaderTwigExtension($this->twigEnvironment);
 
@@ -113,7 +113,7 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBPreloaderMaterialDesignXLFunction() {
+    public function testAdminBSBPreloaderMaterialDesignXLFunction(): void {
 
         $obj = new PreloaderTwigExtension($this->twigEnvironment);
 
@@ -127,7 +127,7 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBPreloaderMaterialDesignXLFunctionWithoutArguments() {
+    public function testAdminBSBPreloaderMaterialDesignXLFunctionWithoutArguments(): void {
 
         $obj = new PreloaderTwigExtension($this->twigEnvironment);
 
@@ -141,7 +141,7 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBPreloaderMaterialDesignXSFunction() {
+    public function testAdminBSBPreloaderMaterialDesignXSFunction(): void {
 
         $obj = new PreloaderTwigExtension($this->twigEnvironment);
 
@@ -155,7 +155,7 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBPreloaderMaterialDesignXSFunctionWithoutArguments() {
+    public function testAdminBSBPreloaderMaterialDesignXSFunctionWithoutArguments(): void {
 
         $obj = new PreloaderTwigExtension($this->twigEnvironment);
 
@@ -169,7 +169,7 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new PreloaderTwigExtension($this->twigEnvironment);
 
@@ -207,7 +207,7 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.adminbsb.twig.extension.ui.preloader", PreloaderTwigExtension::SERVICE_NAME);
 

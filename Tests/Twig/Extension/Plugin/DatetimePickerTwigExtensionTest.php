@@ -29,7 +29,7 @@ class DatetimePickerTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBDatePickerFunction() {
+    public function testAdminBSBDatePickerFunction(): void {
 
         $obj = new DatetimePickerTwigExtension($this->twigEnvironment, $this->translator);
 
@@ -39,25 +39,11 @@ class DatetimePickerTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the adminBSBDatePickerFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBDatePickerFunctionWithSelectorOnly() {
-
-        $obj = new DatetimePickerTwigExtension($this->twigEnvironment, $this->translator);
-
-        $arg = ["selector" => "selector"];
-        $res = file_get_contents(__DIR__ . "/DatetimePickerTwigExtensionTest.testAdminBSBDatePickerFunctionWithSelectorOnly.html.txt");
-        $this->assertEquals($res, $obj->adminBSBDatePickerFunction($arg) . "\n");
-    }
-
-    /**
      * Tests the adminBSBDatetimePickerFunction() method.
      *
      * @return void
      */
-    public function testAdminBSBDatetimePickerFunction() {
+    public function testAdminBSBDatetimePickerFunction(): void {
 
         $obj = new DatetimePickerTwigExtension($this->twigEnvironment, $this->translator);
 
@@ -67,25 +53,11 @@ class DatetimePickerTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the adminBSBDatetimePickerFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBDatetimePickerFunctionWithSelectorOnly() {
-
-        $obj = new DatetimePickerTwigExtension($this->twigEnvironment, $this->translator);
-
-        $arg = ["selector" => "selector"];
-        $res = file_get_contents(__DIR__ . "/DatetimePickerTwigExtensionTest.testAdminBSBDatetimePickerFunctionWithSelectorOnly.html.txt");
-        $this->assertEquals($res, $obj->adminBSBDatetimePickerFunction($arg) . "\n");
-    }
-
-    /**
      * Tests the adminBSBTimePickerFunction() method.
      *
      * @return void
      */
-    public function testAdminBSBTimePickerFunction() {
+    public function testAdminBSBTimePickerFunction(): void {
 
         $obj = new DatetimePickerTwigExtension($this->twigEnvironment, $this->translator);
 
@@ -95,25 +67,11 @@ class DatetimePickerTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the adminBSBTimePickerFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBTimePickerFunctionWithSelectorOnly() {
-
-        $obj = new DatetimePickerTwigExtension($this->twigEnvironment, $this->translator);
-
-        $arg = ["selector" => "selector"];
-        $res = file_get_contents(__DIR__ . "/DatetimePickerTwigExtensionTest.testAdminBSBTimePickerFunctionWithSelectorOnly.html.txt");
-        $this->assertEquals($res, $obj->adminBSBTimePickerFunction($arg) . "\n");
-    }
-
-    /**
      * Tests the getFunctions() method.
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new DatetimePickerTwigExtension($this->twigEnvironment, $this->translator);
 
@@ -141,7 +99,7 @@ class DatetimePickerTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.adminbsb.twig.extension.plugin.datetime_picker", DatetimePickerTwigExtension::SERVICE_NAME);
 

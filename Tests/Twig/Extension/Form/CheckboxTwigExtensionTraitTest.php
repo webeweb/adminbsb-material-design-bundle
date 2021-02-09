@@ -28,7 +28,7 @@ class CheckboxTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetCheckboxTwigExtension() {
+    public function testSetCheckboxTwigExtension(): void {
 
         // Set a Checkbox Twig extension mock.
         $checkboxTwigExtension = new CheckboxTwigExtension($this->twigEnvironment);
@@ -37,17 +37,5 @@ class CheckboxTwigExtensionTraitTest extends AbstractTestCase {
 
         $obj->setCheckboxTwigExtension($checkboxTwigExtension);
         $this->assertSame($checkboxTwigExtension, $obj->getCheckboxTwigExtension());
-    }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj = new TestCheckboxTwigExtensionTrait();
-
-        $this->assertNull($obj->getCheckboxTwigExtension());
     }
 }

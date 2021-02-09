@@ -29,7 +29,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBProgressBarMaterialDesignFunction() {
+    public function testAdminBSBProgressBarMaterialDesignFunction(): void {
 
         $obj = new ProgressBarTwigExtension($this->twigEnvironment);
         $obj->setVersion(3);
@@ -44,7 +44,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBProgressBarMaterialDesignFunctionWithoutArguments() {
+    public function testAdminBSBProgressBarMaterialDesignFunctionWithoutArguments(): void {
 
         $obj = new ProgressBarTwigExtension($this->twigEnvironment);
         $obj->setVersion(3);
@@ -59,7 +59,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFilters() {
+    public function testGetFilters(): void {
 
         $obj = new ProgressBarTwigExtension($this->twigEnvironment);
         $res = $obj->getFilters();
@@ -71,7 +71,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new ProgressBarTwigExtension($this->twigEnvironment);
 
@@ -114,7 +114,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.adminbsb.twig.extension.ui.progress_bar", ProgressBarTwigExtension::SERVICE_NAME);
 

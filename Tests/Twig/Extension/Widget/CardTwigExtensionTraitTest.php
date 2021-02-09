@@ -34,7 +34,7 @@ class CardTwigExtensionTraitTest extends AbstractTestCase {
     /**
      * {@inheritdoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set a Typography Twig extension mock.
@@ -46,7 +46,7 @@ class CardTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetCardTwigExtension() {
+    public function testSetCardTwigExtension(): void {
 
         // Set a Card Twig extension mock.
         $CardTwigExtension = new CardTwigExtension($this->twigEnvironment, $this->typographyTwigExtension);
@@ -55,17 +55,5 @@ class CardTwigExtensionTraitTest extends AbstractTestCase {
 
         $obj->setCardTwigExtension($CardTwigExtension);
         $this->assertSame($CardTwigExtension, $obj->getCardTwigExtension());
-    }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj = new TestCardTwigExtensionTrait();
-
-        $this->assertNull($obj->getCardTwigExtension());
     }
 }

@@ -27,7 +27,7 @@ class TestLayoutController extends AbstractController {
      *
      * @return Response Returns the response.
      */
-    public function blankAction() {
+    public function blankAction(): Response {
         return $this->render("@WBWAdminBSB/layout/blank.html.twig");
     }
 }

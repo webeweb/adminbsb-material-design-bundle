@@ -8,6 +8,6 @@ twig:
     prefix:   "/error"
 
 wbw_adminbsb_blank_action:
-    path:     "/blank"
+    path: "/blank"
     defaults: { _controller: "WBW\\Bundle\\AdminBSBBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::blankAction" }
-    methods:  ["GET"]
+    methods: [ "GET" ]

@@ -39,7 +39,7 @@ class MultiLevelMenuTwigExtensionTest extends AbstractTestCase {
     /**
      * {@inheritdoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set a Navigation tree mock.
@@ -65,7 +65,7 @@ class MultiLevelMenuTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBMultiLevelMenuFunction() {
+    public function testAdminBSBMultiLevelMenuFunction(): void {
 
         $obj = new MultiLevelMenuTwigExtension($this->twigEnvironment, $this->translator);
 
@@ -79,7 +79,7 @@ class MultiLevelMenuTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new MultiLevelMenuTwigExtension($this->twigEnvironment, $this->translator);
 
@@ -97,7 +97,7 @@ class MultiLevelMenuTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.adminbsb.twig.extension.menu.multi_level_menu", MultiLevelMenuTwigExtension::SERVICE_NAME);
 

@@ -29,7 +29,7 @@ class ProgressBarFactory extends BaseFactory {
      * @param string $color The color.
      * @return ProgressBarInterface Returns the Material Design progress bar.
      */
-    public static function newMaterialDesignProgressBar($color) {
+    public static function newMaterialDesignProgressBar(string $color): ProgressBarInterface {
         return new MaterialDesignProgressBar($color);
     }
 
@@ -39,7 +39,7 @@ class ProgressBarFactory extends BaseFactory {
      * @param array $args The arguments.
      * @return ProgressBarInterface Returns the Material Design progress bar.
      */
-    public static function parseMaterialDesignProgressBar(array $args) {
+    public static function parseMaterialDesignProgressBar(array $args): ProgressBarInterface {
         return static::parseProgressBar(static::newMaterialDesignProgressBar(ArrayHelper::get($args, "color", "red")), $args);
     }
 }

@@ -28,7 +28,7 @@ class SwitchButtonTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetSwitchButtonTwigExtension() {
+    public function testSetSwitchButtonTwigExtension(): void {
 
         // Set a Switch button Twig extension mock.
         $switchButtonTwigExtension = new SwitchButtonTwigExtension($this->twigEnvironment);
@@ -37,17 +37,5 @@ class SwitchButtonTwigExtensionTraitTest extends AbstractTestCase {
 
         $obj->setSwitchButtonTwigExtension($switchButtonTwigExtension);
         $this->assertSame($switchButtonTwigExtension, $obj->getSwitchButtonTwigExtension());
-    }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj = new TestSwitchButtonTwigExtensionTrait();
-
-        $this->assertNull($obj->getSwitchButtonTwigExtension());
     }
 }

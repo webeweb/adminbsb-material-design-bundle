@@ -29,7 +29,7 @@ class RadioButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBRadioButtonBasicFunction() {
+    public function testAdminBSBRadioButtonBasicFunction(): void {
 
         $obj = new RadioButtonTwigExtension($this->twigEnvironment);
 
@@ -43,7 +43,7 @@ class RadioButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBRadioButtonMaterialDesignFunction() {
+    public function testAdminBSBRadioButtonMaterialDesignFunction(): void {
 
         $obj = new RadioButtonTwigExtension($this->twigEnvironment);
 
@@ -57,119 +57,7 @@ class RadioButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBRadioButtonMaterialDesignFunctionWithChecked() {
-
-        $obj = new RadioButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["checked" => true];
-        $res = '<input class="radio-col-red" type="radio" checked="checked"><label></label>';
-        $this->assertEquals($res, $obj->adminBSBRadioButtonMaterialDesignFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBRadioButtonMaterialDesignFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBRadioButtonMaterialDesignFunctionWithClass() {
-
-        $obj = new RadioButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["class" => "class"];
-        $res = '<input class="class radio-col-red" type="radio"><label></label>';
-        $this->assertEquals($res, $obj->adminBSBRadioButtonMaterialDesignFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBRadioButtonMaterialDesignFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBRadioButtonMaterialDesignFunctionWithColor() {
-
-        $obj = new RadioButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["color" => "pink"];
-        $res = '<input class="radio-col-pink" type="radio"><label></label>';
-        $this->assertEquals($res, $obj->adminBSBRadioButtonMaterialDesignFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBRadioButtonMaterialDesignFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBRadioButtonMaterialDesignFunctionWithContent() {
-
-        $obj = new RadioButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["content" => "content"];
-        $res = '<input class="radio-col-red" type="radio"><label>content</label>';
-        $this->assertEquals($res, $obj->adminBSBRadioButtonMaterialDesignFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBRadioButtonMaterialDesignFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBRadioButtonMaterialDesignFunctionWithDisabled() {
-
-        $obj = new RadioButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["disabled" => true];
-        $res = '<input class="radio-col-red" type="radio" disabled="disabled"><label></label>';
-        $this->assertEquals($res, $obj->adminBSBRadioButtonMaterialDesignFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBRadioButtonMaterialDesignFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBRadioButtonMaterialDesignFunctionWithId() {
-
-        $obj = new RadioButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["id" => "id"];
-        $res = '<input class="radio-col-red" type="radio" id="id"><label for="id"></label>';
-        $this->assertEquals($res, $obj->adminBSBRadioButtonMaterialDesignFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBRadioButtonMaterialDesignFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBRadioButtonMaterialDesignFunctionWithName() {
-
-        $obj = new RadioButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["name" => "name"];
-        $res = '<input class="radio-col-red" name="name" type="radio"><label></label>';
-        $this->assertEquals($res, $obj->adminBSBRadioButtonMaterialDesignFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBRadioButtonMaterialDesignFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBRadioButtonMaterialDesignFunctionWithWithGap() {
-
-        $obj = new RadioButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["withGap" => true];
-        $res = '<input class="with-gap radio-col-red" type="radio"><label></label>';
-        $this->assertEquals($res, $obj->adminBSBRadioButtonMaterialDesignFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBRadioButtonMaterialDesignFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBRadioButtonMaterialDesignFunctionWithoutArguments() {
+    public function testAdminBSBRadioButtonMaterialDesignFunctionWithoutArguments(): void {
 
         $obj = new RadioButtonTwigExtension($this->twigEnvironment);
 
@@ -183,7 +71,7 @@ class RadioButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new RadioButtonTwigExtension($this->twigEnvironment);
 
@@ -206,7 +94,7 @@ class RadioButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.adminbsb.twig.extension.form.radio_button", RadioButtonTwigExtension::SERVICE_NAME);
 

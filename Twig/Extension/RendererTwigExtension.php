@@ -45,7 +45,7 @@ class RendererTwigExtension extends BaseTwigExtension {
      *
      * @return TwigFilter[] Returns the Twig filters.
      */
-    public function getFilters() {
+    public function getFilters(): array {
         return [];
     }
 
@@ -57,7 +57,7 @@ class RendererTwigExtension extends BaseTwigExtension {
      * @param string $style The icon style.
      * @return string Returns a rendered icon.
      */
-    public static function renderIcon(Environment $twigEnvironment, $name, $style = null) {
+    public static function renderIcon(Environment $twigEnvironment, string $name, string $style = null): string {
 
         // Determines the handler.
         $handler = explode(":", $name);

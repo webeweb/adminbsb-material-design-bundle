@@ -35,7 +35,7 @@ class ModalTwigExtension extends AbstractModalTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the AdminBSB modal header.
      */
-    public function adminBSBModalHeaderFunction(array $args = []) {
+    public function adminBSBModalHeaderFunction(array $args = []): string {
         return $this->adminBSBModalHeader(ArrayHelper::get($args, "content", ""), ArrayHelper::get($args, "icon"));
     }
 
@@ -44,7 +44,7 @@ class ModalTwigExtension extends AbstractModalTwigExtension {
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    public function getFunctions() {
+    public function getFunctions(): array {
         return [
             new TwigFunction("adminBSBModalHeader", [$this, "adminBSBModalHeaderFunction"], ["is_safe" => ["html"]]),
         ];

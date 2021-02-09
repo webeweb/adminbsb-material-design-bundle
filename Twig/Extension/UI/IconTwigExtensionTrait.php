@@ -22,25 +22,26 @@ trait IconTwigExtensionTrait {
     /**
      * Icon Twig extension.
      *
-     * @var IconTwigExtension
+     * @var IconTwigExtension|null
      */
     private $iconTwigExtension;
 
     /**
      * Get the icon Twig extension.
      *
-     * @return IconTwigExtension Returns the icon Twig extension.
+     * @return IconTwigExtension|null Returns the icon Twig extension.
      */
-    public function getIconTwigExtension() {
+    public function getIconTwigExtension(): ?IconTwigExtension {
         return $this->iconTwigExtension;
     }
 
     /**
      * Set the icon Twig extension.
      *
-     * @param IconTwigExtension $iconTwigExtension The icon Twig extension.
+     * @param IconTwigExtension|null $iconTwigExtension The icon Twig extension.
+     * @return self Returns this instance.
      */
-    protected function setIconTwigExtension(IconTwigExtension $iconTwigExtension = null) {
+    protected function setIconTwigExtension(?IconTwigExtension $iconTwigExtension): self {
         $this->iconTwigExtension = $iconTwigExtension;
         return $this;
     }

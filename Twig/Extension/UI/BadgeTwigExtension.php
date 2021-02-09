@@ -35,7 +35,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the AdminBSB button badge "Danger".
      */
-    public function adminBSBButtonBadgeDangerFunction(array $args = []) {
+    public function adminBSBButtonBadgeDangerFunction(array $args = []): string {
         return $this->adminBSBBadge(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "label"), ArrayHelper::get($args, "large", false), "btn-danger");
     }
 
@@ -45,7 +45,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the AdminBSB button badge "Default".
      */
-    public function adminBSBButtonBadgeDefaultFunction(array $args = []) {
+    public function adminBSBButtonBadgeDefaultFunction(array $args = []): string {
         return $this->adminBSBBadge(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "label"), ArrayHelper::get($args, "large", false), "btn-default");
     }
 
@@ -55,7 +55,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the AdminBSB button badge "Info".
      */
-    public function adminBSBButtonBadgeInfoFunction(array $args = []) {
+    public function adminBSBButtonBadgeInfoFunction(array $args = []): string {
         return $this->adminBSBBadge(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "label"), ArrayHelper::get($args, "large", false), "btn-info");
     }
 
@@ -65,8 +65,8 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the AdminBSB list badge.
      */
-    public function adminBSBButtonBadgeListFunction(array $args = []) {
-        return $this->adminBSBBadge(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "label"), false, self::materialDesignColor(ArrayHelper::get($args, "color", "red"), "bg-"), true, ArrayHelper::get($args, "link"));
+    public function adminBSBButtonBadgeListFunction(array $args = []): string {
+        return $this->adminBSBBadge(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "label"), false, static::materialDesignColor(ArrayHelper::get($args, "color", "red"), "bg-"), true, ArrayHelper::get($args, "link"));
     }
 
     /**
@@ -75,8 +75,8 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the AdminBSB button badge "Material design".
      */
-    public function adminBSBButtonBadgeMaterialDesignFunction(array $args = []) {
-        return $this->adminBSBBadge(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "label"), ArrayHelper::get($args, "large", false), self::materialDesignColor(ArrayHelper::get($args, "color", "red"), "bg-"));
+    public function adminBSBButtonBadgeMaterialDesignFunction(array $args = []): string {
+        return $this->adminBSBBadge(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "label"), ArrayHelper::get($args, "large", false), static::materialDesignColor(ArrayHelper::get($args, "color", "red"), "bg-"));
     }
 
     /**
@@ -85,7 +85,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the AdminBSB button badge "Primary".
      */
-    public function adminBSBButtonBadgePrimaryFunction(array $args = []) {
+    public function adminBSBButtonBadgePrimaryFunction(array $args = []): string {
         return $this->adminBSBBadge(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "label"), ArrayHelper::get($args, "large", false), "btn-primary");
     }
 
@@ -95,7 +95,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the AdminBSB button badge "Success".
      */
-    public function adminBSBButtonBadgeSuccessFunction(array $args = []) {
+    public function adminBSBButtonBadgeSuccessFunction(array $args = []): string {
         return $this->adminBSBBadge(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "label"), ArrayHelper::get($args, "large", false), "btn-success");
     }
 
@@ -105,7 +105,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the AdminBSB button badge "Warning".
      */
-    public function adminBSBButtonBadgeWarningFunction(array $args = []) {
+    public function adminBSBButtonBadgeWarningFunction(array $args = []): string {
         return $this->adminBSBBadge(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "label"), ArrayHelper::get($args, "large", false), "btn-warning");
     }
 
@@ -114,7 +114,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    public function getFunctions() {
+    public function getFunctions(): array {
         return [
             new TwigFunction("adminBSBButtonBadgeDanger", [$this, "adminBSBButtonBadgeDangerFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("adminBSBButtonBadgeDefault", [$this, "adminBSBButtonBadgeDefaultFunction"], ["is_safe" => ["html"]]),

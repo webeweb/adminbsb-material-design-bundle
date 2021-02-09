@@ -33,7 +33,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
     /**
      * {@inheritdoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set the Arguments mock.
@@ -53,7 +53,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewMaterialDesignProgressBar() {
+    public function testNewMaterialDesignProgressBar(): void {
 
         $obj = ProgressBarFactory::newMaterialDesignProgressBar("color");
 
@@ -65,7 +65,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testParseMaterialDesignProgressBar() {
+    public function testParseMaterialDesignProgressBar(): void {
 
         $obj = ProgressBarFactory::parseMaterialDesignProgressBar($this->args);
 

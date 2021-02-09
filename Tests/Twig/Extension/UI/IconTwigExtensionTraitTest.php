@@ -28,7 +28,7 @@ class IconTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetIconTwigExtension() {
+    public function testSetIconTwigExtension(): void {
 
         // Set a Icon Twig extension mock.
         $iconTwigExtension = new IconTwigExtension($this->twigEnvironment);
@@ -37,17 +37,5 @@ class IconTwigExtensionTraitTest extends AbstractTestCase {
 
         $obj->setIconTwigExtension($iconTwigExtension);
         $this->assertSame($iconTwigExtension, $obj->getIconTwigExtension());
-    }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj = new TestIconTwigExtensionTrait();
-
-        $this->assertNull($obj->getIconTwigExtension());
     }
 }

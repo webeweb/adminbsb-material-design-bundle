@@ -29,7 +29,7 @@ class IconTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBIconBasicFunction() {
+    public function testAdminBSBIconBasicFunction(): void {
 
         $obj = new IconTwigExtension($this->twigEnvironment);
 
@@ -43,35 +43,7 @@ class IconTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBIconBasicFunctionWithName() {
-
-        $obj = new IconTwigExtension($this->twigEnvironment);
-
-        $arg = ["name" => "person"];
-        $res = '<i class="material-icons">person</i>';
-        $this->assertEquals($res, $obj->adminBSBIconBasicFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBBasicFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBIconBasicFunctionWithStyle() {
-
-        $obj = new IconTwigExtension($this->twigEnvironment);
-
-        $arg = ["style" => "margin: 4px;"];
-        $res = '<i class="material-icons" style="margin: 4px;">home</i>';
-        $this->assertEquals($res, $obj->adminBSBIconBasicFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBBasicFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBIconBasicFunctionWithoutArguments() {
+    public function testAdminBSBIconBasicFunctionWithoutArguments(): void {
 
         $obj = new IconTwigExtension($this->twigEnvironment);
 
@@ -85,7 +57,7 @@ class IconTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBIconMaterialDesignFunction() {
+    public function testAdminBSBIconMaterialDesignFunction(): void {
 
         $obj = new IconTwigExtension($this->twigEnvironment);
 
@@ -99,49 +71,7 @@ class IconTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBIconMaterialDesignFunctionWithColor() {
-
-        $obj = new IconTwigExtension($this->twigEnvironment);
-
-        $arg = ["color" => "pink"];
-        $res = '<i class="material-icons col-pink">home</i>';
-        $this->assertEquals($res, $obj->adminBSBIconMaterialDesignFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBIconMaterialDesignFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBIconMaterialDesignFunctionWithName() {
-
-        $obj = new IconTwigExtension($this->twigEnvironment);
-
-        $arg = ["name" => "person"];
-        $res = '<i class="material-icons col-red">person</i>';
-        $this->assertEquals($res, $obj->adminBSBIconMaterialDesignFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBIconMaterialDesignFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBIconMaterialDesignFunctionWithStyle() {
-
-        $obj = new IconTwigExtension($this->twigEnvironment);
-
-        $arg = ["style" => "margin: 4px;"];
-        $res = '<i class="material-icons col-red" style="margin: 4px;">home</i>';
-        $this->assertEquals($res, $obj->adminBSBIconMaterialDesignFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBIconMaterialDesignFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBIconMaterialDesignFunctionWithoutArguments() {
+    public function testAdminBSBIconMaterialDesignFunctionWithoutArguments(): void {
 
         $obj = new IconTwigExtension($this->twigEnvironment);
 
@@ -155,7 +85,7 @@ class IconTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new IconTwigExtension($this->twigEnvironment);
 
@@ -178,7 +108,7 @@ class IconTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.adminbsb.twig.extension.ui.icon", IconTwigExtension::SERVICE_NAME);
 

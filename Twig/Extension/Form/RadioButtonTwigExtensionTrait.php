@@ -22,25 +22,26 @@ trait RadioButtonTwigExtensionTrait {
     /**
      * Radio button Twig extension.
      *
-     * @var RadioButtonTwigExtension
+     * @var RadioButtonTwigExtension|null
      */
     private $radioButtonTwigExtension;
 
     /**
      * Get the Radio button Twig extension.
      *
-     * @return RadioButtonTwigExtension Returns the radio button Twig extension.
+     * @return RadioButtonTwigExtension|null Returns the radio button Twig extension.
      */
-    public function getRadioButtonTwigExtension() {
+    public function getRadioButtonTwigExtension(): ?RadioButtonTwigExtension {
         return $this->radioButtonTwigExtension;
     }
 
     /**
      * Set the radio button Twig extension.
      *
-     * @param RadioButtonTwigExtension $radioButtonTwigExtension The Radio button Twig extension.
+     * @param RadioButtonTwigExtension|null $radioButtonTwigExtension The Radio button Twig extension.
+     * @return self Returns this instance.
      */
-    protected function setRadioButtonTwigExtension(RadioButtonTwigExtension $radioButtonTwigExtension = null) {
+    protected function setRadioButtonTwigExtension(?RadioButtonTwigExtension $radioButtonTwigExtension): self {
         $this->radioButtonTwigExtension = $radioButtonTwigExtension;
         return $this;
     }

@@ -27,9 +27,9 @@ class ButtonRenderer extends BaseRenderer {
      *
      * @param ButtonInterface $button The button.
      * @param bool $circle Circle ?
-     * @return string Returns the rendered circle.
+     * @return string|null Returns the rendered circle.
      */
-    public static function renderCircle(ButtonInterface $button, $circle) {
+    public static function renderCircle(ButtonInterface $button, bool $circle): ?string {
 
         if (true !== $circle) {
             return static::renderSize($button);

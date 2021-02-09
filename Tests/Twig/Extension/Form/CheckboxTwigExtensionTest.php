@@ -29,7 +29,7 @@ class CheckboxTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBCheckboxBasicFunction() {
+    public function testAdminBSBCheckboxBasicFunction(): void {
 
         $obj = new CheckboxTwigExtension($this->twigEnvironment);
 
@@ -43,7 +43,7 @@ class CheckboxTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBCheckboxMaterialDesignFunction() {
+    public function testAdminBSBCheckboxMaterialDesignFunction(): void {
 
         $obj = new CheckboxTwigExtension($this->twigEnvironment);
 
@@ -57,119 +57,7 @@ class CheckboxTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBCheckboxMaterialDesignFunctionWithChecked() {
-
-        $obj = new CheckboxTwigExtension($this->twigEnvironment);
-
-        $arg = ["checked" => true];
-        $res = '<input class="chk-col-red" type="checkbox" checked="checked"><label></label>';
-        $this->assertEquals($res, $obj->adminBSBCheckboxMaterialDesignFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBCheckboxMaterialDesignFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBCheckboxMaterialDesignFunctionWithClass() {
-
-        $obj = new CheckboxTwigExtension($this->twigEnvironment);
-
-        $arg = ["class" => "class"];
-        $res = '<input class="class chk-col-red" type="checkbox"><label></label>';
-        $this->assertEquals($res, $obj->adminBSBCheckboxMaterialDesignFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBCheckboxMaterialDesignFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBCheckboxMaterialDesignFunctionWithColor() {
-
-        $obj = new CheckboxTwigExtension($this->twigEnvironment);
-
-        $arg = ["color" => "pink"];
-        $res = '<input class="chk-col-pink" type="checkbox"><label></label>';
-        $this->assertEquals($res, $obj->adminBSBCheckboxMaterialDesignFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBCheckboxMaterialDesignFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBCheckboxMaterialDesignFunctionWithContent() {
-
-        $obj = new CheckboxTwigExtension($this->twigEnvironment);
-
-        $arg = ["content" => "content"];
-        $res = '<input class="chk-col-red" type="checkbox"><label>content</label>';
-        $this->assertEquals($res, $obj->adminBSBCheckboxMaterialDesignFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBCheckboxMaterialDesignFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBCheckboxMaterialDesignFunctionWithDisabled() {
-
-        $obj = new CheckboxTwigExtension($this->twigEnvironment);
-
-        $arg = ["disabled" => true];
-        $res = '<input class="chk-col-red" type="checkbox" disabled="disabled"><label></label>';
-        $this->assertEquals($res, $obj->adminBSBCheckboxMaterialDesignFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBCheckboxMaterialDesignFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBCheckboxMaterialDesignFunctionWithFilledIn() {
-
-        $obj = new CheckboxTwigExtension($this->twigEnvironment);
-
-        $arg = ["filledIn" => true];
-        $res = '<input class="filled-in chk-col-red" type="checkbox"><label></label>';
-        $this->assertEquals($res, $obj->adminBSBCheckboxMaterialDesignFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBCheckboxMaterialDesignFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBCheckboxMaterialDesignFunctionWithId() {
-
-        $obj = new CheckboxTwigExtension($this->twigEnvironment);
-
-        $arg = ["id" => "id"];
-        $res = '<input class="chk-col-red" type="checkbox" id="id"><label for="id"></label>';
-        $this->assertEquals($res, $obj->adminBSBCheckboxMaterialDesignFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBCheckboxMaterialDesignFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBCheckboxMaterialDesignFunctionWithName() {
-
-        $obj = new CheckboxTwigExtension($this->twigEnvironment);
-
-        $arg = ["name" => "name"];
-        $res = '<input class="chk-col-red" name="name" type="checkbox"><label></label>';
-        $this->assertEquals($res, $obj->adminBSBCheckboxMaterialDesignFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBCheckboxMaterialDesignFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBCheckboxMaterialDesignFunctionWithoutArguments() {
+    public function testAdminBSBCheckboxMaterialDesignFunctionWithoutArguments(): void {
 
         $obj = new CheckboxTwigExtension($this->twigEnvironment);
 
@@ -183,7 +71,7 @@ class CheckboxTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new CheckboxTwigExtension($this->twigEnvironment);
 
@@ -206,7 +94,7 @@ class CheckboxTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.adminbsb.twig.extension.form.checkbox", CheckboxTwigExtension::SERVICE_NAME);
 

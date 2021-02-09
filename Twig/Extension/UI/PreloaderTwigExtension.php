@@ -35,8 +35,8 @@ class PreloaderTwigExtension extends AbstractPreloaderTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the AdminBSB preloader "Material design" L.
      */
-    public function adminBSBPreloaderMaterialDesignLFunction(array $args = []) {
-        return $this->adminBSBPreloader(self::materialDesignColor(ArrayHelper::get($args, "color", "red"), "pl-"), "l");
+    public function adminBSBPreloaderMaterialDesignLFunction(array $args = []): string {
+        return $this->adminBSBPreloader(static::materialDesignColor(ArrayHelper::get($args, "color", "red"), "pl-"), "l");
     }
 
     /**
@@ -45,8 +45,8 @@ class PreloaderTwigExtension extends AbstractPreloaderTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the AdminBSB preloader "Material design" S.
      */
-    public function adminBSBPreloaderMaterialDesignSFunction(array $args = []) {
-        return $this->adminBSBPreloader(self::materialDesignColor(ArrayHelper::get($args, "color", "red"), "pl-"), "s");
+    public function adminBSBPreloaderMaterialDesignSFunction(array $args = []): string {
+        return $this->adminBSBPreloader(static::materialDesignColor(ArrayHelper::get($args, "color", "red"), "pl-"), "s");
     }
 
     /**
@@ -55,8 +55,8 @@ class PreloaderTwigExtension extends AbstractPreloaderTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the AdminBSB preloader "Material design" SM.
      */
-    public function adminBSBPreloaderMaterialDesignSMFunction(array $args = []) {
-        return $this->adminBSBPreloader(self::materialDesignColor(ArrayHelper::get($args, "color", "red"), "pl-"), "sm");
+    public function adminBSBPreloaderMaterialDesignSMFunction(array $args = []): string {
+        return $this->adminBSBPreloader(static::materialDesignColor(ArrayHelper::get($args, "color", "red"), "pl-"), "sm");
     }
 
     /**
@@ -65,8 +65,8 @@ class PreloaderTwigExtension extends AbstractPreloaderTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the AdminBSB preloader "Material design" XL.
      */
-    public function adminBSBPreloaderMaterialDesignXLFunction(array $args = []) {
-        return $this->adminBSBPreloader(self::materialDesignColor(ArrayHelper::get($args, "color", "red"), "pl-"), "xl");
+    public function adminBSBPreloaderMaterialDesignXLFunction(array $args = []): string {
+        return $this->adminBSBPreloader(static::materialDesignColor(ArrayHelper::get($args, "color", "red"), "pl-"), "xl");
     }
 
     /**
@@ -75,8 +75,8 @@ class PreloaderTwigExtension extends AbstractPreloaderTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the AdminBSB preloader "Material design" XS.
      */
-    public function adminBSBPreloaderMaterialDesignXSFunction(array $args = []) {
-        return $this->adminBSBPreloader(self::materialDesignColor(ArrayHelper::get($args, "color", "red"), "pl-"), "xs");
+    public function adminBSBPreloaderMaterialDesignXSFunction(array $args = []): string {
+        return $this->adminBSBPreloader(static::materialDesignColor(ArrayHelper::get($args, "color", "red"), "pl-"), "xs");
     }
 
     /**
@@ -84,7 +84,7 @@ class PreloaderTwigExtension extends AbstractPreloaderTwigExtension {
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    public function getFunctions() {
+    public function getFunctions(): array {
         return [
             new TwigFunction("adminBSBPreloaderMaterialDesignL", [$this, "adminBSBPreloaderMaterialDesignLFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("adminBSBPreloaderMaterialDesignS", [$this, "adminBSBPreloaderMaterialDesignSFunction"], ["is_safe" => ["html"]]),

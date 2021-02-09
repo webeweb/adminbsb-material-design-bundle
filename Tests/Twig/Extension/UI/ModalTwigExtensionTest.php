@@ -35,7 +35,7 @@ class ModalTwigExtensionTest extends AbstractTestCase {
     /**
      * {@inheritdoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set a Typography Twig extension mock.
@@ -47,21 +47,7 @@ class ModalTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBModalHeaderFunctionWithContent() {
-
-        $obj = new ModalTwigExtension($this->twigEnvironment, $this->typographyTwigExtension);
-
-        $arg = ["content" => "content"];
-        $res = '<h3 class="modal-title">content</h3>';
-        $this->assertEquals($res, $obj->adminBSBModalHeaderFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBModalHeaderFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBModalHeaderFunctionWithContentAndIcon() {
+    public function testAdminBSBModalHeaderFunction(): void {
 
         $obj = new ModalTwigExtension($this->twigEnvironment, $this->typographyTwigExtension);
 
@@ -75,21 +61,7 @@ class ModalTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBModalHeaderFunctionWithIcon() {
-
-        $obj = new ModalTwigExtension($this->twigEnvironment, $this->typographyTwigExtension);
-
-        $arg = ["icon" => "person"];
-        $res = '<h3 class="modal-title"><i class="material-icons" style="margin: -4px 0; vertical-align: sub;">person</i></h3>';
-        $this->assertEquals($res, $obj->adminBSBModalHeaderFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBModalHeaderFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBModalHeaderFunctionWithoutArguments() {
+    public function testAdminBSBModalHeaderFunctionWithoutArguments(): void {
 
         $obj = new ModalTwigExtension($this->twigEnvironment, $this->typographyTwigExtension);
 
@@ -103,7 +75,7 @@ class ModalTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new ModalTwigExtension($this->twigEnvironment, $this->typographyTwigExtension);
 
@@ -121,7 +93,7 @@ class ModalTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.adminbsb.twig.extension.ui.modal", ModalTwigExtension::SERVICE_NAME);
 

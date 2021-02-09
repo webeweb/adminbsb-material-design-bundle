@@ -37,7 +37,7 @@ class ProgressBarTwigExtension extends BaseTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the AdminBSB progress bar "Material design".
      */
-    public function adminBSBProgressBarMaterialDesignFunction(array $args = []) {
+    public function adminBSBProgressBarMaterialDesignFunction(array $args = []): string {
         return $this->bootstrapProgressBar(ProgressBarFactory::parseMaterialDesignProgressBar($args));
     }
 
@@ -46,7 +46,7 @@ class ProgressBarTwigExtension extends BaseTwigExtension {
      *
      * @return TwigFilter[] Returns the Twig filters.
      */
-    public function getFilters() {
+    public function getFilters(): array {
         return [];
     }
 
@@ -55,7 +55,7 @@ class ProgressBarTwigExtension extends BaseTwigExtension {
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    public function getFunctions() {
+    public function getFunctions(): array {
         return [
             new TwigFunction("adminBSBProgressBarBasic", [$this, "bootstrapProgressBarBasicFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("adminBSBProgressBarDanger", [$this, "bootstrapProgressBarDangerFunction"], ["is_safe" => ["html"]]),

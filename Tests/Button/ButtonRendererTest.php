@@ -28,7 +28,7 @@ class ButtonRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderCircle() {
+    public function testRenderCircle(): void {
 
         // Set a Button mock.
         $button = new DefaultButton();
@@ -43,7 +43,7 @@ class ButtonRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderCircleWithCircle() {
+    public function testRenderCircleWithCircle(): void {
 
         // Set a Button mock.
         $button = new DefaultButton();
@@ -58,7 +58,7 @@ class ButtonRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderCircleWithCircleLG() {
+    public function testRenderCircleWithCircleLG(): void {
 
         // Set a Button mock.
         $button = new DefaultButton();

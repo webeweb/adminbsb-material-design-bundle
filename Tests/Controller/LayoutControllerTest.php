@@ -25,7 +25,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
     /**
      * {@inheritDoc}
      */
-    public static function setUpBeforeClass() {
+    public static function setUpBeforeClass(): void {
         parent::setUpBeforeClass();
 
         parent::setUpSchemaTool();
@@ -44,7 +44,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
      *
      * @return void
      */
-    public function testBlankAction() {
+    public function testBlankAction(): void {
 
         $client = $this->client;
 
@@ -58,7 +58,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
      *
      * @return void
      */
-    public function testFOSUserCheckEmailAction() {
+    public function testFOSUserCheckEmailAction(): void {
 
         $client = $this->client;
 
@@ -68,9 +68,9 @@ class LayoutControllerTest extends AbstractWebTestCase {
 
         // Check the response.
         $response = $client->getResponse()->getContent();
-        $this->assertContains("<title>AdminBSB Material Design - Reset password</title>", $response);
-        $this->assertContains('<body class="fp-page">', $response);
-        $this->assertContains('<div class="fp-box">', $response);
+        $this->assertStringContainsString("<title>AdminBSB Material Design - Reset password</title>", $response);
+        $this->assertStringContainsString('<body class="fp-page">', $response);
+        $this->assertStringContainsString('<div class="fp-box">', $response);
     }
 
     /**
@@ -78,7 +78,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
      *
      * @return void
      */
-    public function testFOSUserLoginAction() {
+    public function testFOSUserLoginAction(): void {
 
         $client = $this->client;
 
@@ -88,9 +88,9 @@ class LayoutControllerTest extends AbstractWebTestCase {
 
         // Check the response.
         $response = $client->getResponse()->getContent();
-        $this->assertContains("<title>AdminBSB Material Design - Log in</title>", $response);
-        $this->assertContains('<body class="login-page">', $response);
-        $this->assertContains('<div class="login-box">', $response);
+        $this->assertStringContainsString("<title>AdminBSB Material Design - Log in</title>", $response);
+        $this->assertStringContainsString('<body class="login-page">', $response);
+        $this->assertStringContainsString('<div class="login-box">', $response);
     }
 
     /**
@@ -98,7 +98,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
      *
      * @return void
      */
-    public function testFOSUserRegisterAction() {
+    public function testFOSUserRegisterAction(): void {
 
         $client = $this->client;
 
@@ -108,9 +108,9 @@ class LayoutControllerTest extends AbstractWebTestCase {
 
         // Check the response.
         $response = $client->getResponse()->getContent();
-        $this->assertContains("<title>AdminBSB Material Design - Register</title>", $response);
-        $this->assertContains('<body class="signup-page">', $response);
-        $this->assertContains('<div class="signup-box">', $response);
+        $this->assertStringContainsString("<title>AdminBSB Material Design - Register</title>", $response);
+        $this->assertStringContainsString('<body class="signup-page">', $response);
+        $this->assertStringContainsString('<div class="signup-box">', $response);
     }
 
     /**
@@ -118,7 +118,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
      *
      * @return void
      */
-    public function testFOSUserRequestAction() {
+    public function testFOSUserRequestAction(): void {
 
         $client = $this->client;
 
@@ -128,9 +128,9 @@ class LayoutControllerTest extends AbstractWebTestCase {
 
         // Check the response.
         $response = $client->getResponse()->getContent();
-        $this->assertContains("<title>AdminBSB Material Design - Reset password</title>", $response);
-        $this->assertContains('<body class="fp-page">', $response);
-        $this->assertContains('<div class="fp-box">', $response);
+        $this->assertStringContainsString("<title>AdminBSB Material Design - Reset password</title>", $response);
+        $this->assertStringContainsString('<body class="fp-page">', $response);
+        $this->assertStringContainsString('<div class="fp-box">', $response);
     }
 
     /**
@@ -138,7 +138,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
      *
      * @return void
      */
-    public function testFOSUserResetAction() {
+    public function testFOSUserResetAction(): void {
 
         $client = $this->client;
 
@@ -148,9 +148,9 @@ class LayoutControllerTest extends AbstractWebTestCase {
 
         // Check the response.
         $response = $client->getResponse()->getContent();
-        $this->assertContains("<title>AdminBSB Material Design - Reset password</title>", $response);
-        $this->assertContains('<body class="signup-page">', $response);
-        $this->assertContains('<div class="signup-box">', $response);
+        $this->assertStringContainsString("<title>AdminBSB Material Design - Reset password</title>", $response);
+        $this->assertStringContainsString('<body class="signup-page">', $response);
+        $this->assertStringContainsString('<div class="signup-box">', $response);
     }
 
     /**
@@ -158,7 +158,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
      *
      * @return void
      */
-    public function testTwigError404Action() {
+    public function testTwigError404Action(): void {
 
         $client = $this->client;
 
@@ -168,10 +168,10 @@ class LayoutControllerTest extends AbstractWebTestCase {
 
         // Check the response.
         $response = $client->getResponse()->getContent();
-        $this->assertContains("<title>AdminBSB Material Design - 404 Not Found</title>", $response);
-        $this->assertContains('<body class="four-zero-four">', $response);
-        $this->assertContains('<div class="error-code">404</div>', $response);
-        $this->assertContains('<div class="error-message">Not Found</div>', $response);
+        $this->assertStringContainsString("<title>AdminBSB Material Design - 404 Not Found</title>", $response);
+        $this->assertStringContainsString('<body class="four-zero-four">', $response);
+        $this->assertStringContainsString('<div class="error-code">404</div>', $response);
+        $this->assertStringContainsString('<div class="error-message">Not Found</div>', $response);
     }
 
     /**
@@ -179,7 +179,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
      *
      * @return void
      */
-    public function testTwigError500Action() {
+    public function testTwigError500Action(): void {
 
         $client = $this->client;
 
@@ -189,9 +189,9 @@ class LayoutControllerTest extends AbstractWebTestCase {
 
         // Check the response.
         $response = $client->getResponse()->getContent();
-        $this->assertContains("<title>AdminBSB Material Design - 500 Internal Server Error</title>", $response);
-        $this->assertContains('<body class="five-zero-zero">', $response);
-        $this->assertContains('<div class="error-code">500</div>', $response);
-        $this->assertContains('<div class="error-message">Internal Server Error</div>', $response);
+        $this->assertStringContainsString("<title>AdminBSB Material Design - 500 Internal Server Error</title>", $response);
+        $this->assertStringContainsString('<body class="five-zero-zero">', $response);
+        $this->assertStringContainsString('<div class="error-code">500</div>', $response);
+        $this->assertStringContainsString('<div class="error-message">Internal Server Error</div>', $response);
     }
 }

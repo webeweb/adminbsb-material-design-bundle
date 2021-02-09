@@ -36,7 +36,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the AdminBSB bold text.
      */
-    public function adminBSBBoldFunction(array $args = []) {
+    public function adminBSBBoldFunction(array $args = []): string {
         return $this->adminBSBBold(ArrayHelper::get($args, "content"));
     }
 
@@ -46,7 +46,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the AdminBSB italic text.
      */
-    public function adminBSBItalicFunction(array $args = []) {
+    public function adminBSBItalicFunction(array $args = []): string {
         return $this->adminBSBItalic(ArrayHelper::get($args, "content"));
     }
 
@@ -56,7 +56,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the AdminBSB line through text.
      */
-    public function adminBSBLineThroughFunction(array $args = []) {
+    public function adminBSBLineThroughFunction(array $args = []): string {
         return $this->adminBSBLineThrough(ArrayHelper::get($args, "content"));
     }
 
@@ -66,7 +66,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the AdminBSB overlined text.
      */
-    public function adminBSBOverlineFunction(array $args = []) {
+    public function adminBSBOverlineFunction(array $args = []): string {
         return $this->adminBSBOverline(ArrayHelper::get($args, "content"));
     }
 
@@ -76,7 +76,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the AdminBSB underline text.
      */
-    public function adminBSBUnderlineFunction(array $args = []) {
+    public function adminBSBUnderlineFunction(array $args = []): string {
         return $this->adminBSBUnderline(ArrayHelper::get($args, "content"));
     }
 
@@ -85,7 +85,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
      *
      * @return TwigFilter[] Returns the Twig filters.
      */
-    public function getFilters() {
+    public function getFilters(): array {
         return [];
     }
 
@@ -94,7 +94,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    public function getFunctions() {
+    public function getFunctions(): array {
         return [
             new TwigFunction("adminBSBBold", [$this, "adminBSBBoldFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("adminBSBDeleted", [$this, "bootstrapDeletedFunction"], ["is_safe" => ["html"]]),

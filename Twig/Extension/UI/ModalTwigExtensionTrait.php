@@ -22,25 +22,26 @@ trait ModalTwigExtensionTrait {
     /**
      * Modal Twig extension.
      *
-     * @var ModalTwigExtension
+     * @var ModalTwigExtension|null
      */
     private $modalTwigExtension;
 
     /**
      * Get the modal Twig extension.
      *
-     * @return ModalTwigExtension Returns the modal Twig extension.
+     * @return ModalTwigExtension|null Returns the modal Twig extension.
      */
-    public function getModalTwigExtension() {
+    public function getModalTwigExtension(): ?ModalTwigExtension {
         return $this->modalTwigExtension;
     }
 
     /**
      * Set the modal Twig extension.
      *
-     * @param ModalTwigExtension $modalTwigExtension The modal Twig extension.
+     * @param ModalTwigExtension|null $modalTwigExtension The modal Twig extension.
+     * @return self Returns this instance.
      */
-    protected function setModalTwigExtension(ModalTwigExtension $modalTwigExtension = null) {
+    protected function setModalTwigExtension(?ModalTwigExtension $modalTwigExtension): self {
         $this->modalTwigExtension = $modalTwigExtension;
         return $this;
     }

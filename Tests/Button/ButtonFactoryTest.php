@@ -33,7 +33,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     /**
      * {@inheritdoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set the Arguments mock.
@@ -53,7 +53,7 @@ class ButtonFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewMaterialDesignButton() {
+    public function testNewMaterialDesignButton(): void {
 
         $obj = ButtonFactory::newMaterialDesignButton("color");
 
@@ -66,7 +66,7 @@ class ButtonFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testParseMaterialDesignButton() {
+    public function testParseMaterialDesignButton(): void {
 
         $obj = ButtonFactory::parseMaterialDesignButton($this->args);
 

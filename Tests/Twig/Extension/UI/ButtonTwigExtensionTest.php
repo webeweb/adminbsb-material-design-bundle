@@ -30,7 +30,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBButtonDangerFunction() {
+    public function testAdminBSBButtonDangerFunction(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -44,21 +44,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBButtonDangerFunctionWithCircle() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["circle" => true];
-        $res = '<button class="btn btn-danger waves-effect btn-circle waves-circle waves-float" type="button"></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonDangerFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonDangerFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonDangerFunctionWithoutArguments() {
+    public function testAdminBSBButtonDangerFunctionWithoutArguments(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -72,7 +58,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBButtonDefaultFunction() {
+    public function testAdminBSBButtonDefaultFunction(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -86,21 +72,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBButtonDefaultFunctionWithCircle() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["circle" => true];
-        $res = '<button class="btn btn-default waves-effect btn-circle waves-circle waves-float" type="button"></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonDefaultFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonDefaultFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonDefaultFunctionWithoutArguments() {
+    public function testAdminBSBButtonDefaultFunctionWithoutArguments(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -114,7 +86,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBButtonInfoFunction() {
+    public function testAdminBSBButtonInfoFunction(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -128,21 +100,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBButtonInfoFunctionWithCircle() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["circle" => true];
-        $res = '<button class="btn btn-info waves-effect btn-circle waves-circle waves-float" type="button"></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonInfoFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonInfoFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonInfoFunctionWithoutArguments() {
+    public function testAdminBSBButtonInfoFunctionWithoutArguments(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -156,7 +114,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBButtonMaterialDesignFunction() {
+    public function testAdminBSBButtonMaterialDesignFunction(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -170,21 +128,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBButtonMaterialDesignFunctionWithCircle() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["circle" => true];
-        $res = '<button class="btn bg-red waves-effect btn-circle waves-circle waves-float" type="button"></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonMaterialDesignFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonMaterialDesignFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonMaterialDesignFunctionWithoutArguments() {
+    public function testAdminBSBButtonMaterialDesignFunctionWithoutArguments(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -198,7 +142,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBButtonPrimaryFunction() {
+    public function testAdminBSBButtonPrimaryFunction(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -212,21 +156,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBButtonPrimaryFunctionWithCircle() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["circle" => true];
-        $res = '<button class="btn btn-primary waves-effect btn-circle waves-circle waves-float" type="button"></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonPrimaryFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonPrimaryFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonPrimaryFunctionWithoutArguments() {
+    public function testAdminBSBButtonPrimaryFunctionWithoutArguments(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -240,7 +170,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBButtonSuccessFunction() {
+    public function testAdminBSBButtonSuccessFunction(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -254,21 +184,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBButtonSuccessFunctionWithCircle() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["circle" => true];
-        $res = '<button class="btn btn-success waves-effect btn-circle waves-circle waves-float" type="button"></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonSuccessFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBButtonSuccessFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonSuccessFunctionWithoutArguments() {
+    public function testAdminBSBButtonSuccessFunctionWithoutArguments(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -282,7 +198,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBButtonWarningFunction() {
+    public function testAdminBSBButtonWarningFunction(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -292,25 +208,11 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the adminBSBButtonWarningFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBButtonWarningFunctionWithCircle() {
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["circle" => true];
-        $res = '<button class="btn btn-warning waves-effect btn-circle waves-circle waves-float" type="button"></button>';
-        $this->assertEquals($res, $obj->adminBSBButtonWarningFunction($arg));
-    }
-
-    /**
      * Tests the adminBSBButtonSuccessFunction() method.
      *
      * @return void
      */
-    public function testAdminBSBButtonWarningFunctionWithoutArguments() {
+    public function testAdminBSBButtonWarningFunctionWithoutArguments(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -324,7 +226,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFilters() {
+    public function testGetFilters(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -347,7 +249,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -395,7 +297,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.adminbsb.twig.extension.ui.button", ButtonTwigExtension::SERVICE_NAME);
 

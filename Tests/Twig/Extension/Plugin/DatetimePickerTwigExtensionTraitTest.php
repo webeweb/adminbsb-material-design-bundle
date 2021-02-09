@@ -28,7 +28,7 @@ class DatetimePickerTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetDatetimePickerTwigExtension() {
+    public function testSetDatetimePickerTwigExtension(): void {
 
         // Set a Datetime picker Twig extension mock.
         $datetimePickerTwigExtension = new DatetimePickerTwigExtension($this->twigEnvironment, $this->translator);
@@ -37,17 +37,5 @@ class DatetimePickerTwigExtensionTraitTest extends AbstractTestCase {
 
         $obj->setDatetimePickerTwigExtension($datetimePickerTwigExtension);
         $this->assertSame($datetimePickerTwigExtension, $obj->getDatetimePickerTwigExtension());
-    }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj = new TestDatetimePickerTwigExtensionTrait();
-
-        $this->assertNull($obj->getDatetimePickerTwigExtension());
     }
 }

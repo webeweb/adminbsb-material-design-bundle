@@ -22,15 +22,15 @@ class TestKernel extends AbstractKernel {
     /**
      * {@inheritdoc}
      */
-    public function getTestsDir() {
+    public function getTestsDir(): string {
         return __DIR__ . "/../..";
     }
 
     /**
      * {@inheritdoc}
      */
-    public function registerBundles() {
-        $bundles = [
+    public function registerBundles(): array {
+        return [
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new FOS\UserBundle\FOSUserBundle,
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
@@ -43,6 +43,5 @@ class TestKernel extends AbstractKernel {
             new WBW\Bundle\CoreBundle\WBWCoreBundle(),
             new WBW\Bundle\JQuery\DataTablesBundle\WBWJQueryDataTablesBundle(),
         ];
-        return $bundles;
     }
 }

@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle;
 
+use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use WBW\Bundle\AdminBSBBundle\DependencyInjection\WBWAdminBSBExtension;
 use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
@@ -27,21 +28,21 @@ class WBWAdminBSBBundle extends Bundle implements AssetsProviderInterface, Skele
     /**
      * {@inheritdoc}
      */
-    public function getAssetsRelativeDirectory() {
-        return self::ASSETS_RELATIVE_DIRECTORY;
+    public function getAssetsRelativeDirectory(): string {
+        return static::ASSETS_RELATIVE_DIRECTORY;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getContainerExtension() {
+    public function getContainerExtension(): Extension {
         return new WBWAdminBSBExtension();
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getSkeletonRelativeDirectory() {
-        return self::SKELETON_RELATIVE_DIRECTORY;
+    public function getSkeletonRelativeDirectory(): string {
+        return static::SKELETON_RELATIVE_DIRECTORY;
     }
 }

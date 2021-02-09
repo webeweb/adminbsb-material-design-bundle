@@ -22,25 +22,26 @@ trait DatetimePickerTwigExtensionTrait {
     /**
      * Datetime picker Twig extension.
      *
-     * @var DatetimePickerTwigExtension
+     * @var DatetimePickerTwigExtension|null
      */
     private $datetimePickerTwigExtension;
 
     /**
      * Get the datetime picker Twig extension.
      *
-     * @return DatetimePickerTwigExtension Returns the datetime picker Twig extension.
+     * @return DatetimePickerTwigExtension|null Returns the datetime picker Twig extension.
      */
-    public function getDatetimePickerTwigExtension() {
+    public function getDatetimePickerTwigExtension(): ?DatetimePickerTwigExtension {
         return $this->datetimePickerTwigExtension;
     }
 
     /**
      * Set the datetime picker Twig extension.
      *
-     * @param DatetimePickerTwigExtension $datetimePickerTwigExtension The datetime picker Twig extension.
+     * @param DatetimePickerTwigExtension|null $datetimePickerTwigExtension The datetime picker Twig extension.
+     * @return self Returns this instance.
      */
-    protected function setDatetimePickerTwigExtension(DatetimePickerTwigExtension $datetimePickerTwigExtension = null) {
+    protected function setDatetimePickerTwigExtension(?DatetimePickerTwigExtension $datetimePickerTwigExtension): self {
         $this->datetimePickerTwigExtension = $datetimePickerTwigExtension;
         return $this;
     }

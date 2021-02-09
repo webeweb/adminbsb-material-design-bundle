@@ -27,7 +27,7 @@ class SkinsThemeProviderTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testEnumSkins() {
+    public function testEnumSkins(): void {
 
         $res = [
             SkinsThemeProvider::SKIN_RED,
@@ -59,7 +59,7 @@ class SkinsThemeProviderTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("red", SkinsThemeProvider::SKIN_RED);
         $this->assertEquals("pink", SkinsThemeProvider::SKIN_PINK);

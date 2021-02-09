@@ -36,14 +36,14 @@ class WBWAdminBSBExtension extends Extension {
     /**
      * {@inheritDoc}
      */
-    public function getAlias() {
-        return self::EXTENSION_ALIAS;
+    public function getAlias(): string {
+        return static::EXTENSION_ALIAS;
     }
 
     /**
      * {@inheritdoc}
      */
-    public function load(array $configs, ContainerBuilder $container) {
+    public function load(array $configs, ContainerBuilder $container): void {
 
         $fileLocator = new FileLocator(__DIR__ . "/../Resources/config");
 

@@ -28,7 +28,7 @@ class PreloaderTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetPreloaderTwigExtension() {
+    public function testSetPreloaderTwigExtension(): void {
 
         // Set a Preloader Twig extension mock.
         $preloaderTwigExtension = new PreloaderTwigExtension($this->twigEnvironment);
@@ -37,17 +37,5 @@ class PreloaderTwigExtensionTraitTest extends AbstractTestCase {
 
         $obj->setPreloaderTwigExtension($preloaderTwigExtension);
         $this->assertSame($preloaderTwigExtension, $obj->getPreloaderTwigExtension());
-    }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj = new TestPreloaderTwigExtensionTrait();
-
-        $this->assertNull($obj->getPreloaderTwigExtension());
     }
 }

@@ -21,14 +21,14 @@ use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Navigation\MaterialIcons
  */
-class NavigationNodeNewUserTest extends AbstractTestCase {
+class NavigationNodeActionNewUserTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new NavigationNodeActionNewUser("route");
 

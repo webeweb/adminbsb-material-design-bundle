@@ -26,14 +26,14 @@ class MaterialDesignButton extends AbstractButton {
      *
      * @param string $color The color.
      */
-    public function __construct($color) {
+    public function __construct(string $color) {
         parent::__construct($color);
     }
 
     /**
      * {@inheritdoc}
      */
-    public function getPrefix() {
+    public function getPrefix(): string {
         return "bg-";
     }
 }

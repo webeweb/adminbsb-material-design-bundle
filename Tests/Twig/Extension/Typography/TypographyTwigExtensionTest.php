@@ -29,7 +29,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBBoldFunction() {
+    public function testAdminBSBBoldFunction(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -43,7 +43,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBBoldFunctionWithoutArguments() {
+    public function testAdminBSBBoldFunctionWithoutArguments(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -57,7 +57,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBItalicFunction() {
+    public function testAdminBSBItalicFunction(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -71,7 +71,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBItalicFunctionWithoutArguments() {
+    public function testAdminBSBItalicFunctionWithoutArguments(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -85,7 +85,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBLineThroughFunction() {
+    public function testAdminBSBLineThroughFunction(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -99,7 +99,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBLineThroughFunctionWithoutArguments() {
+    public function testAdminBSBLineThroughFunctionWithoutArguments(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -113,7 +113,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBOverlineFunction() {
+    public function testAdminBSBOverlineFunction(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -127,7 +127,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBOverlineFunctionWithoutArguments() {
+    public function testAdminBSBOverlineFunctionWithoutArguments(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -141,7 +141,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBUnderlineFunction() {
+    public function testAdminBSBUnderlineFunction(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -155,7 +155,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBUnderlineFunctionWithoutArguments() {
+    public function testAdminBSBUnderlineFunctionWithoutArguments(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -169,7 +169,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFilters() {
+    public function testGetFilters(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
         $res = $obj->getFilters();
@@ -181,7 +181,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -269,7 +269,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.adminbsb.twig.extension.typography", TypographyTwigExtension::SERVICE_NAME);
 

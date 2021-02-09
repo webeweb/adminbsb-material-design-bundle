@@ -48,7 +48,7 @@ class WBWAdminBSBExtensionTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set a configs array mock.
@@ -64,7 +64,7 @@ class WBWAdminBSBExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetAlias() {
+    public function testGetAlias(): void {
 
         $obj = new WBWAdminBSBExtension();
 
@@ -76,7 +76,7 @@ class WBWAdminBSBExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetConfiguration() {
+    public function testGetConfiguration(): void {
 
         $obj = new WBWAdminBSBExtension();
 
@@ -89,7 +89,7 @@ class WBWAdminBSBExtensionTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testLoad() {
+    public function testLoad(): void {
 
         $obj = new WBWAdminBSBExtension();
 
@@ -127,7 +127,7 @@ class WBWAdminBSBExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testLoadWithoutTwig() {
+    public function testLoadWithoutTwig(): void {
 
         // Set the configs mock.
         $this->configs[WBWAdminBSBExtension::EXTENSION_ALIAS]["twig"] = false;
@@ -142,7 +142,7 @@ class WBWAdminBSBExtensionTest extends AbstractTestCase {
         } catch (Exception $ex) {
 
             $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
-            $this->assertContains(CheckboxTwigExtension::SERVICE_NAME, $ex->getMessage());
+            $this->assertStringContainsString(CheckboxTwigExtension::SERVICE_NAME, $ex->getMessage());
         }
     }
 
@@ -151,7 +151,7 @@ class WBWAdminBSBExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw_adminbsb", WBWAdminBSBExtension::EXTENSION_ALIAS);
     }

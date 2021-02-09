@@ -35,7 +35,7 @@ class CheckboxTwigExtension extends AbstractCheckboxTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the AdminBSB checkbox "Basic".
      */
-    public function adminBSBCheckboxBasicFunction(array $args = []) {
+    public function adminBSBCheckboxBasicFunction(array $args = []): string {
         return $this->adminBSBCheckbox(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "name"), ArrayHelper::get($args, "id"), ArrayHelper::get($args, "checked", false), ArrayHelper::get($args, "disabled", false), ArrayHelper::get($args, "filledIn", false), ArrayHelper::get($args, "class"));
     }
 
@@ -45,8 +45,8 @@ class CheckboxTwigExtension extends AbstractCheckboxTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the AdminBSB checkbox "Material design".
      */
-    public function adminBSBCheckboxMaterialDesignFunction(array $args = []) {
-        return $this->adminBSBCheckbox(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "name"), ArrayHelper::get($args, "id"), ArrayHelper::get($args, "checked", false), ArrayHelper::get($args, "disabled", false), ArrayHelper::get($args, "filledIn", false), ArrayHelper::get($args, "class", "") . self::materialDesignColor(ArrayHelper::get($args, "color", "red"), " chk-col-"));
+    public function adminBSBCheckboxMaterialDesignFunction(array $args = []): string {
+        return $this->adminBSBCheckbox(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "name"), ArrayHelper::get($args, "id"), ArrayHelper::get($args, "checked", false), ArrayHelper::get($args, "disabled", false), ArrayHelper::get($args, "filledIn", false), ArrayHelper::get($args, "class", "") . static::materialDesignColor(ArrayHelper::get($args, "color", "red"), " chk-col-"));
     }
 
     /**
@@ -54,7 +54,7 @@ class CheckboxTwigExtension extends AbstractCheckboxTwigExtension {
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    public function getFunctions() {
+    public function getFunctions(): array {
         return [
             new TwigFunction("adminBSBCheckboxBasic", [$this, "adminBSBCheckboxBasicFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("adminBSBCheckboxMaterialDesign", [$this, "adminBSBCheckboxMaterialDesignFunction"], ["is_safe" => ["html"]]),

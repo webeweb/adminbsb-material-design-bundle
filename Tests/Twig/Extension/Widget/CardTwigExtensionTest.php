@@ -35,7 +35,7 @@ class CardTwigExtensionTest extends AbstractTestCase {
     /**
      * {@inheritdoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set a Typography Twig extension mock.
@@ -47,7 +47,7 @@ class CardTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBCardHeaderFunction() {
+    public function testAdminBSBCardHeaderFunction(): void {
 
         $obj = new CardTwigExtension($this->twigEnvironment, $this->typographyTwigExtension);
 
@@ -61,7 +61,7 @@ class CardTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBCardHeaderFunctionWithContent() {
+    public function testAdminBSBCardHeaderFunctionWithContent(): void {
 
         $obj = new CardTwigExtension($this->twigEnvironment, $this->typographyTwigExtension);
 
@@ -75,7 +75,7 @@ class CardTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBCardHeaderFunctionWithDescription() {
+    public function testAdminBSBCardHeaderFunctionWithDescription(): void {
 
         $obj = new CardTwigExtension($this->twigEnvironment, $this->typographyTwigExtension);
 
@@ -89,7 +89,7 @@ class CardTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBCardHeaderFunctionWithIcon() {
+    public function testAdminBSBCardHeaderFunctionWithIcon(): void {
 
         $obj = new CardTwigExtension($this->twigEnvironment, $this->typographyTwigExtension);
 
@@ -103,7 +103,7 @@ class CardTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBCardHeaderFunctionWithoutArguments() {
+    public function testAdminBSBCardHeaderFunctionWithoutArguments(): void {
 
         $obj = new CardTwigExtension($this->twigEnvironment, $this->typographyTwigExtension);
 
@@ -117,7 +117,7 @@ class CardTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new CardTwigExtension($this->twigEnvironment, $this->typographyTwigExtension);
 
@@ -135,7 +135,7 @@ class CardTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.adminbsb.twig.extension.widget.card", CardTwigExtension::SERVICE_NAME);
 

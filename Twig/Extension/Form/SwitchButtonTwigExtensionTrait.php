@@ -22,25 +22,26 @@ trait SwitchButtonTwigExtensionTrait {
     /**
      * Switch button Twig extension.
      *
-     * @var SwitchButtonTwigExtension
+     * @var SwitchButtonTwigExtension|null
      */
     private $switchButtonTwigExtension;
 
     /**
      * Get the Switch button Twig extension.
      *
-     * @return SwitchButtonTwigExtension Returns the switch button Twig extension.
+     * @return SwitchButtonTwigExtension|null Returns the switch button Twig extension.
      */
-    public function getSwitchButtonTwigExtension() {
+    public function getSwitchButtonTwigExtension(): ?SwitchButtonTwigExtension {
         return $this->switchButtonTwigExtension;
     }
 
     /**
      * Set the switch button Twig extension.
      *
-     * @param SwitchButtonTwigExtension $switchButtonTwigExtension The Switch button Twig extension.
+     * @param SwitchButtonTwigExtension|null $switchButtonTwigExtension The Switch button Twig extension.
+     * @return self Returns this instance.
      */
-    protected function setSwitchButtonTwigExtension(SwitchButtonTwigExtension $switchButtonTwigExtension = null) {
+    protected function setSwitchButtonTwigExtension(?SwitchButtonTwigExtension $switchButtonTwigExtension): self {
         $this->switchButtonTwigExtension = $switchButtonTwigExtension;
         return $this;
     }

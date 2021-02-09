@@ -28,7 +28,7 @@ class WBWAdminBSBBundleTest extends AbstractTestCase {
      *
      * @retrun void
      */
-    public function testGetAssetsRelativeDirectory() {
+    public function testGetAssetsRelativeDirectory(): void {
 
         $obj = new WBWAdminBSBBundle();
 
@@ -40,7 +40,7 @@ class WBWAdminBSBBundleTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetContainerExtension() {
+    public function testGetContainerExtension(): void {
 
         $obj = new WBWAdminBSBBundle();
 
@@ -52,7 +52,7 @@ class WBWAdminBSBBundleTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetSkeletonRelativeDirectory() {
+    public function testGetSkeletonRelativeDirectory(): void {
 
         $obj = new WBWAdminBSBBundle();
         $obj->setContainer($this->containerBuilder);

@@ -22,25 +22,26 @@ trait PreloaderTwigExtensionTrait {
     /**
      * Preloader Twig extension.
      *
-     * @var PreloaderTwigExtension
+     * @var PreloaderTwigExtension|null
      */
     private $preloaderTwigExtension;
 
     /**
      * Get the preloader Twig extension.
      *
-     * @return PreloaderTwigExtension Returns the preloader Twig extension.
+     * @return PreloaderTwigExtension|null Returns the preloader Twig extension.
      */
-    public function getPreloaderTwigExtension() {
+    public function getPreloaderTwigExtension(): ?PreloaderTwigExtension {
         return $this->preloaderTwigExtension;
     }
 
     /**
      * Set the preloader Twig extension.
      *
-     * @param PreloaderTwigExtension $preloaderTwigExtension The preloader Twig extension.
+     * @param PreloaderTwigExtension|null $preloaderTwigExtension The preloader Twig extension.
+     * @return self Returns this instance.
      */
-    protected function setPreloaderTwigExtension(PreloaderTwigExtension $preloaderTwigExtension = null) {
+    protected function setPreloaderTwigExtension(?PreloaderTwigExtension $preloaderTwigExtension): self {
         $this->preloaderTwigExtension = $preloaderTwigExtension;
         return $this;
     }

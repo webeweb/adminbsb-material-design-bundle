@@ -43,10 +43,10 @@ abstract class AbstractModalTwigExtension extends AbstractTwigExtension {
      * Displays an AdminBSB modal header.
      *
      * @param string $content The content.
-     * @param string $icon The icon.
+     * @param string|null $icon The icon.
      * @return string Returns the AdminBSB modal header.
      */
-    protected function adminBSBModalHeader($content, $icon) {
+    protected function adminBSBModalHeader(string $content, ?string $icon): string {
 
         $innerHTML = $content;
         if (null !== $icon) {

@@ -38,7 +38,7 @@ class MultiLevelMenuTwigExtension extends AbstractMenuTwigExtension {
      * @param Request $request The request.
      * @return string Returns the AdminBSB multi level menu.
      */
-    public function adminBSBMultiLevelMenuFunction(NavigationTree $tree, Request $request) {
+    public function adminBSBMultiLevelMenuFunction(NavigationTree $tree, Request $request): string {
         NavigationTreeHelper::activeTree($tree, $request);
         return $this->adminBSBMenu($tree);
     }
@@ -48,7 +48,7 @@ class MultiLevelMenuTwigExtension extends AbstractMenuTwigExtension {
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    public function getFunctions() {
+    public function getFunctions(): array {
         return [
             new TwigFunction("adminBSBMultiLevelMenu", [$this, "adminBSBMultiLevelMenuFunction"], ["is_safe" => ["html"]]),
         ];

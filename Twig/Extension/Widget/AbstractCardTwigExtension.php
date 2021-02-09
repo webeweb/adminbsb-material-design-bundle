@@ -43,11 +43,11 @@ abstract class AbstractCardTwigExtension extends AbstractTwigExtension {
      * Displays an AdminBSB card header.
      *
      * @param string $content The content.
-     * @param string $description The description.
-     * @param string $icon The icon.
+     * @param string|null $description The description.
+     * @param string|null $icon The icon.
      * @return string Returns the AdminBSB card header.
      */
-    protected function adminBSBCardHeader($content, $description, $icon) {
+    protected function adminBSBCardHeader(string $content, ?string $description, ?string $icon): string {
 
         $innerHTML = $content;
         if (null !== $description) {

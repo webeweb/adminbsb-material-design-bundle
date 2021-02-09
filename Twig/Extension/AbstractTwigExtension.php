@@ -12,7 +12,6 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension;
 
 use Twig\Environment;
-use WBW\Bundle\AdminBSBBundle\Provider\Color\DefaultColorProvider;
 use WBW\Bundle\CoreBundle\Helper\ColorHelper;
 use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension as BaseTwigExtension;
 
@@ -37,11 +36,11 @@ abstract class AbstractTwigExtension extends BaseTwigExtension {
     /**
      * Material Design color.
      *
-     * @param string $name The name.
+     * @param string|null $name The name.
      * @param string $prefix The prefix.
      * @return string Returns the Material Design color.
      */
-    public static function materialDesignColor($name, $prefix = "") {
+    public static function materialDesignColor(?string $name, string $prefix = ""): string {
 
         $colors = ColorHelper::getMaterialDesignColorPalette();
 

@@ -35,7 +35,7 @@ class SwitchButtonTwigExtension extends AbstractSwitchButtonTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the AdminBSB switch button "Basic".
      */
-    public function adminBSBSwitchButtonBasicFunction(array $args = []) {
+    public function adminBSBSwitchButtonBasicFunction(array $args = []): string {
         return $this->adminBSBSwitchButton(ArrayHelper::get($args, "offLabel"), ArrayHelper::get($args, "name"), ArrayHelper::get($args, "checked", false), ArrayHelper::get($args, "disabled", false), ArrayHelper::get($args, "onLabel"), ArrayHelper::get($args, "attr", []), null);
     }
 
@@ -45,8 +45,8 @@ class SwitchButtonTwigExtension extends AbstractSwitchButtonTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the AdminBSB switch button "Material design".
      */
-    public function adminBSBSwitchButtonMaterialDesignFunction(array $args = []) {
-        return $this->adminBSBSwitchButton(ArrayHelper::get($args, "offLabel"), ArrayHelper::get($args, "name"), ArrayHelper::get($args, "checked", false), ArrayHelper::get($args, "disabled", false), ArrayHelper::get($args, "onLabel"), ArrayHelper::get($args, "attr", []), self::materialDesignColor(ArrayHelper::get($args, "color", "red"), " switch-col-"));
+    public function adminBSBSwitchButtonMaterialDesignFunction(array $args = []): string {
+        return $this->adminBSBSwitchButton(ArrayHelper::get($args, "offLabel"), ArrayHelper::get($args, "name"), ArrayHelper::get($args, "checked", false), ArrayHelper::get($args, "disabled", false), ArrayHelper::get($args, "onLabel"), ArrayHelper::get($args, "attr", []), static::materialDesignColor(ArrayHelper::get($args, "color", "red"), " switch-col-"));
     }
 
     /**
@@ -54,7 +54,7 @@ class SwitchButtonTwigExtension extends AbstractSwitchButtonTwigExtension {
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    public function getFunctions() {
+    public function getFunctions(): array {
         return [
             new TwigFunction("adminBSBSwitchButtonBasic", [$this, "adminBSBSwitchButtonBasicFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("adminBSBSwitchButtonMaterialDesign", [$this, "adminBSBSwitchButtonMaterialDesignFunction"], ["is_safe" => ["html"]]),

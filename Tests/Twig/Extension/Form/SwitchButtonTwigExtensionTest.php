@@ -29,7 +29,7 @@ class SwitchButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBSwitchButtonBasicFunction() {
+    public function testAdminBSBSwitchButtonBasicFunction(): void {
 
         $obj = new SwitchButtonTwigExtension($this->twigEnvironment);
 
@@ -43,7 +43,7 @@ class SwitchButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBSwitchButtonMaterialDesignFunction() {
+    public function testAdminBSBSwitchButtonMaterialDesignFunction(): void {
 
         $obj = new SwitchButtonTwigExtension($this->twigEnvironment);
 
@@ -57,91 +57,7 @@ class SwitchButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdminBSBSwitchButtonMaterialDesignFunctionWithChecked() {
-
-        $obj = new SwitchButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["checked" => true];
-        $res = '<div class="switch"><label><input type="checkbox" checked="checked"><span class="lever switch-col-red"></span></label></div>';
-        $this->assertEquals($res, $obj->adminBSBSwitchButtonMaterialDesignFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBSwitchButtonMaterialDesignFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBSwitchButtonMaterialDesignFunctionWithColor() {
-
-        $obj = new SwitchButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["color" => "pink"];
-        $res = '<div class="switch"><label><input type="checkbox"><span class="lever switch-col-pink"></span></label></div>';
-        $this->assertEquals($res, $obj->adminBSBSwitchButtonMaterialDesignFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBSwitchButtonMaterialDesignFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBSwitchButtonMaterialDesignFunctionWithDisabled() {
-
-        $obj = new SwitchButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["disabled" => true];
-        $res = '<div class="switch"><label><input type="checkbox" disabled="disabled"><span class="lever switch-col-red"></span></label></div>';
-        $this->assertEquals($res, $obj->adminBSBSwitchButtonMaterialDesignFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBSwitchButtonMaterialDesignFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBSwitchButtonMaterialDesignFunctionWithName() {
-
-        $obj = new SwitchButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["name" => "name"];
-        $res = '<div class="switch"><label><input name="name" type="checkbox"><span class="lever switch-col-red"></span></label></div>';
-        $this->assertEquals($res, $obj->adminBSBSwitchButtonMaterialDesignFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBSwitchButtonMaterialDesignFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBSwitchButtonMaterialDesignFunctionWithOffLabel() {
-
-        $obj = new SwitchButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["offLabel" => "offLabel"];
-        $res = '<div class="switch"><label>offLabel<input type="checkbox"><span class="lever switch-col-red"></span></label></div>';
-        $this->assertEquals($res, $obj->adminBSBSwitchButtonMaterialDesignFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBSwitchButtonMaterialDesignFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBSwitchButtonMaterialDesignFunctionWithOnLabel() {
-
-        $obj = new SwitchButtonTwigExtension($this->twigEnvironment);
-
-        $arg = ["onLabel" => "onLabel"];
-        $res = '<div class="switch"><label><input type="checkbox"><span class="lever switch-col-red"></span>onLabel</label></div>';
-        $this->assertEquals($res, $obj->adminBSBSwitchButtonMaterialDesignFunction($arg));
-    }
-
-    /**
-     * Tests the adminBSBSwitchButtonMaterialDesignFunction() method.
-     *
-     * @return void
-     */
-    public function testAdminBSBSwitchButtonMaterialDesignFunctionWithoutArguments() {
+    public function testAdminBSBSwitchButtonMaterialDesignFunctionWithoutArguments(): void {
 
         $obj = new SwitchButtonTwigExtension($this->twigEnvironment);
 
@@ -155,7 +71,7 @@ class SwitchButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new SwitchButtonTwigExtension($this->twigEnvironment);
 
@@ -178,7 +94,7 @@ class SwitchButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.adminbsb.twig.extension.form.switch_button", SwitchButtonTwigExtension::SERVICE_NAME);
 

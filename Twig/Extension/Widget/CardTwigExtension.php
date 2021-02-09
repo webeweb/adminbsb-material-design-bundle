@@ -35,7 +35,7 @@ class CardTwigExtension extends AbstractCardTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the AdminBSB card header.
      */
-    public function adminBSBCardHeaderFunction(array $args = []) {
+    public function adminBSBCardHeaderFunction(array $args = []): string {
         return $this->adminBSBCardHeader(ArrayHelper::get($args, "content", ""), ArrayHelper::get($args, "description"), ArrayHelper::get($args, "icon"));
     }
 
@@ -44,7 +44,7 @@ class CardTwigExtension extends AbstractCardTwigExtension {
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    public function getFunctions() {
+    public function getFunctions(): array {
         return [
             new TwigFunction("adminBSBCardHeader", [$this, "adminBSBCardHeaderFunction"], ["is_safe" => ["html"]]),
         ];

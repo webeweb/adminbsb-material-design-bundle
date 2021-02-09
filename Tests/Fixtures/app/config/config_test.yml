@@ -7,19 +7,19 @@ parameters:
     locale: "en"
 
 framework:
-    csrf_protection:      ~
-    default_locale:       "%locale%"
-    form:                 true
+    csrf_protection: ~
+    default_locale:  "%locale%"
+    form:            true
     router:
         resource:            "%kernel.root_dir%/config/routing_test.yml"
         strict_requirements: true
-    secret:               "ThisTokenIsNotSoSecretChangeIt"
+    secret:          "ThisTokenIsNotSoSecretChangeIt"
     session:
         storage_id: "session.storage.mock_file"
     templating:
-        engines: ["twig"]
-    test:                 ~
-    translator:     { fallbacks: ["%locale%"] }
+        engines: [ "twig" ]
+    test:            ~
+    translator: { fallbacks: [ "%locale%" ] }
     validation:
         enabled: false
 
@@ -60,7 +60,7 @@ monolog:
 swiftmailer:
     host:      "localhost"
     password:  null
-    spool:     { type: "memory" }
+    spool: { type: "memory" }
     transport: "smtp"
     username:  "no-reply@github.com"
 
@@ -70,7 +70,7 @@ twig:
     strict_variables: "%kernel.debug%"
 
 wbw_adminbsb:
-    skin   : "red"
+    skin: "red"
     plugins:
         - "animate_css"
         - "autosize"

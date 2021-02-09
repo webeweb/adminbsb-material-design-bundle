@@ -35,8 +35,8 @@ class DatetimePickerTwigExtension extends AbstractDatetimePickerTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the AdminBSB date picker.
      */
-    public function adminBSBDatePickerFunction(array $args = []) {
-        return $this->adminBSBDatetimePicker(ArrayHelper::get($args, "selector"), ArrayHelper::get($args, "clearButton", false), true, ArrayHelper::get($args, "format", self::DEFAULT_DATE_FORMAT), ArrayHelper::get($args, "lang", "en"), false, ArrayHelper::get($args, "weekStart", 0));
+    public function adminBSBDatePickerFunction(array $args = []): string {
+        return $this->adminBSBDatetimePicker(ArrayHelper::get($args, "selector"), ArrayHelper::get($args, "clearButton", false), true, ArrayHelper::get($args, "format", static::DEFAULT_DATE_FORMAT), ArrayHelper::get($args, "lang", "en"), false, ArrayHelper::get($args, "weekStart", 0));
     }
 
     /**
@@ -45,8 +45,8 @@ class DatetimePickerTwigExtension extends AbstractDatetimePickerTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the AdminBSB datetime picker.
      */
-    public function adminBSBDatetimePickerFunction(array $args = []) {
-        return $this->adminBSBDatetimePicker(ArrayHelper::get($args, "selector"), ArrayHelper::get($args, "clearButton", false), ArrayHelper::get($args, "date", true), ArrayHelper::get($args, "format", self::DEFAULT_DATETIME_FORMAT), ArrayHelper::get($args, "lang", "en"), ArrayHelper::get($args, "time", true), ArrayHelper::get($args, "weekStart", 0));
+    public function adminBSBDatetimePickerFunction(array $args = []): string {
+        return $this->adminBSBDatetimePicker(ArrayHelper::get($args, "selector"), ArrayHelper::get($args, "clearButton", false), ArrayHelper::get($args, "date", true), ArrayHelper::get($args, "format", static::DEFAULT_DATETIME_FORMAT), ArrayHelper::get($args, "lang", "en"), ArrayHelper::get($args, "time", true), ArrayHelper::get($args, "weekStart", 0));
     }
 
     /**
@@ -55,8 +55,8 @@ class DatetimePickerTwigExtension extends AbstractDatetimePickerTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the AdminBSB time picker.
      */
-    public function adminBSBTimePickerFunction(array $args = []) {
-        return $this->adminBSBDatetimePicker(ArrayHelper::get($args, "selector"), ArrayHelper::get($args, "clearButton", false), false, ArrayHelper::get($args, "format", self::DEFAULT_TIME_FORMAT), ArrayHelper::get($args, "lang", "en"), true, 0);
+    public function adminBSBTimePickerFunction(array $args = []): string {
+        return $this->adminBSBDatetimePicker(ArrayHelper::get($args, "selector"), ArrayHelper::get($args, "clearButton", false), false, ArrayHelper::get($args, "format", static::DEFAULT_TIME_FORMAT), ArrayHelper::get($args, "lang", "en"), true, 0);
     }
 
     /**
@@ -64,7 +64,7 @@ class DatetimePickerTwigExtension extends AbstractDatetimePickerTwigExtension {
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    public function getFunctions() {
+    public function getFunctions(): array {
         return [
             new TwigFunction("adminBSBDatePicker", [$this, "adminBSBDatePickerFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("adminBSBDatetimePicker", [$this, "adminBSBDatetimePickerFunction"], ["is_safe" => ["html"]]),

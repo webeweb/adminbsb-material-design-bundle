@@ -25,12 +25,12 @@ abstract class AbstractIconTwigExtension extends AbstractTwigExtension {
     /**
      * Displays an AdminBSB icon.
      *
-     * @param string $name The icon name.
-     * @param string $style The icon style.
-     * @param string $class The icon class.
+     * @param string|null $name The icon name.
+     * @param string|null $style The icon style.
+     * @param string|null $class The icon class.
      * @return string Returns the AdminBSB icon.
      */
-    protected function adminBSBIcon($name, $style, $class = null) {
+    protected function adminBSBIcon(?string $name, ?string $style, string $class = null): string {
 
         $attributes = [];
 

@@ -28,7 +28,7 @@ class RadioButtonTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetRadioButtonTwigExtension() {
+    public function testSetRadioButtonTwigExtension(): void {
 
         // Set a Radio button Twig extension mock.
         $radioButtonTwigExtension = new RadioButtonTwigExtension($this->twigEnvironment);
@@ -37,17 +37,5 @@ class RadioButtonTwigExtensionTraitTest extends AbstractTestCase {
 
         $obj->setRadioButtonTwigExtension($radioButtonTwigExtension);
         $this->assertSame($radioButtonTwigExtension, $obj->getRadioButtonTwigExtension());
-    }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj = new TestRadioButtonTwigExtensionTrait();
-
-        $this->assertNull($obj->getRadioButtonTwigExtension());
     }
 }
