@@ -106,6 +106,6 @@ EOT;
         $searches = ["%selector%", "%cancelText%", "%clearButton%", "%clearText%", "%date%", "%format%", "%lang%", "%time%", "%weekStart%"];
         $replaces = [$selector, $cancelText, $bClearButton, $clearText, $bDate, $format, $lang, $bTime, $iWeekStart];
 
-        return str_replace($searches, $replaces, static::DATETIMEPICKER);
+        return str_replace($searches, $replaces, self::DATETIMEPICKER);
     }
 }

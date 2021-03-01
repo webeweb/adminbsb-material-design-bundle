@@ -29,7 +29,7 @@ class WBWAdminBSBBundle extends Bundle implements AssetsProviderInterface, Skele
      * {@inheritdoc}
      */
     public function getAssetsRelativeDirectory(): string {
-        return static::ASSETS_RELATIVE_DIRECTORY;
+        return self::ASSETS_RELATIVE_DIRECTORY;
     }
 
     /**
@@ -43,6 +43,6 @@ class WBWAdminBSBBundle extends Bundle implements AssetsProviderInterface, Skele
      * {@inheritDoc}
      */
     public function getSkeletonRelativeDirectory(): string {
-        return static::SKELETON_RELATIVE_DIRECTORY;
+        return self::SKELETON_RELATIVE_DIRECTORY;
     }
 }
