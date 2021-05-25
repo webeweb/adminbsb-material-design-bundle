@@ -18,6 +18,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase as WebTestCase;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests
+ * @abstract
  */
 abstract class AbstractWebTestCase extends WebTestCase {
 
