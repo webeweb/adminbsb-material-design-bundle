@@ -32,8 +32,8 @@ class LayoutControllerTest extends AbstractWebTestCase {
         parent::setUpUserFixtures();
 
         // Set up the directories.
-        $skeletonDirectory  = getcwd() . "/Resources/skeleton";
-        $resourcesDirectory = getcwd() . "/Tests/Fixtures/app/Resources";
+        $skeletonDirectory  = realpath(__DIR__ . "/../../Resources/skeleton");
+        $resourcesDirectory = realpath(__DIR__ . "/../Fixtures/app/Resources");
 
         // Copy skeleton.
         SkeletonHelper::copySkeleton($skeletonDirectory, $resourcesDirectory);
