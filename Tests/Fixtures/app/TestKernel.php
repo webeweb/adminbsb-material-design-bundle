@@ -15,7 +15,6 @@ use WBW\Bundle\CoreBundle\Tests\AbstractKernel;
  * Test kernel.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\JQuery\DataTablesBundle\Tests\Fixtures\App
  */
 class TestKernel extends AbstractKernel {
 
