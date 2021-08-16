@@ -17,6 +17,34 @@
 <link type="text/css" rel="stylesheet" href="{{ asset(_webPath ~ "/css/style.min.css") }}">
 <link type="text/css" rel="stylesheet" href="{{ asset(_webPath ~ "/css/themes/all-themes.min.css") }}">
 <style type="text/css">
+    /* === Buttons ========================================================= */
+    .btn:not(.btn-link):not(.btn-circle) i.fa {
+        font-size: inherit !important;
+        position: relative;
+        top: inherit !important;
+    }
+
+    .btn span.glyphicon {
+        margin: -4px 0 !important;
+        position: relative;
+        top: -1px !important;
+        vertical-align: sub;
+    }
+
+    /* === DataTables ====================================================== */
+    table.dataTable {
+        width: 100% !important;
+    }
+
+    /* === Forms =========================================================== */
+    div.error ul {
+        list-style: none;
+    }
+
+    div.error ul li {
+        color: #F44336;
+    }
+
     .form-line.focused .form-label {
         font-weight: bold;
         color: #555;
@@ -33,10 +61,26 @@
         color: #555;
     }
 
-    .btn span.glyphicon {
-        margin: -4px 0 !important;
-        position: relative;
-        top: -1px !important;
-        vertical-align: sub;
+    /* === Sidebar menu ==================================================== */
+    .sidebar .menu .list .ml-menu li.active a.toggled:not(.menu-toggle) {
+        margin-left: 0px !important;
+    }
+
+    .sidebar .menu .list .ml-menu li.active a.toggled:not(.menu-toggle)::before {
+        content: none !important;
+    }
+
+    /* === DataTables ====================================================== */
+    table.dataTable {
+        width: 100% !important;
+    }
+
+    /* === Forms =========================================================== */
+    div.error ul {
+        list-style: none;
+    }
+
+    div.error ul li {
+        color: #F44336;
     }
 </style>
