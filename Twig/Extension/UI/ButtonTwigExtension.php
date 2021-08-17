@@ -14,7 +14,7 @@ namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 use Twig\TwigFilter;
 use Twig\TwigFunction;
 use WBW\Bundle\AdminBSBBundle\Button\ButtonFactory;
-use WBW\Library\Core\Argument\Helper\ArrayHelper;
+use WBW\Library\Types\Helper\ArrayHelper;
 
 /**
  * Button Twig extension.

@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Button;
 
 use WBW\Bundle\BootstrapBundle\Button\ButtonFactory as BaseFactory;
 use WBW\Bundle\BootstrapBundle\Button\ButtonInterface;
-use WBW\Library\Core\Argument\Helper\ArrayHelper;
+use WBW\Library\Types\Helper\ArrayHelper;
 
 /**
  * Button factory.
