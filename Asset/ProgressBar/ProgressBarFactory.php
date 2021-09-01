@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\ProgressBar;
+namespace WBW\Bundle\AdminBSBBundle\Asset\ProgressBar;
 
 use WBW\Bundle\BootstrapBundle\ProgressBar\ProgressBarFactory as BaseFactory;
 use WBW\Bundle\BootstrapBundle\ProgressBar\ProgressBarInterface;
@@ -19,7 +19,7 @@ use WBW\Library\Types\Helper\ArrayHelper;
  * Progress bar factory.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBBundle\ProgressBar
+ * @package WBW\Bundle\AdminBSBBundle\Asset\ProgressBar
  */
 class ProgressBarFactory extends BaseFactory {
 

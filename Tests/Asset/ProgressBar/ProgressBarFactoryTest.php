@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Tests\ProgressBar;
+namespace WBW\Bundle\AdminBSBBundle\Tests\Asset\ProgressBar;
 
-use WBW\Bundle\AdminBSBBundle\ProgressBar\MaterialDesignProgressBar;
-use WBW\Bundle\AdminBSBBundle\ProgressBar\ProgressBarFactory;
+use WBW\Bundle\AdminBSBBundle\Asset\ProgressBar\MaterialDesignProgressBar;
+use WBW\Bundle\AdminBSBBundle\Asset\ProgressBar\ProgressBarFactory;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 
 /**
  * Progress bar factory test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBBundle\Tests\ProgressBar
+ * @package WBW\Bundle\AdminBSBBundle\Tests\Asset\ProgressBar
  */
 class ProgressBarFactoryTest extends AbstractTestCase {
 
