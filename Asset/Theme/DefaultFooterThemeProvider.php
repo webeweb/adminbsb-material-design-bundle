@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Theme;
+namespace WBW\Bundle\AdminBSBBundle\Asset\Theme;
 
 use WBW\Bundle\CoreBundle\Theme\DefaultFooterThemeProvider as BaseFooterThemeProvider;
 
@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Theme\DefaultFooterThemeProvider as BaseFooterThemePro
  * Default footer theme provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBBundle\Theme
+ * @package WBW\Bundle\AdminBSBBundle\Asset\Theme
  */
 class DefaultFooterThemeProvider extends BaseFooterThemeProvider {
 

@@ -9,18 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Tests\Theme;
+namespace WBW\Bundle\AdminBSBBundle\Tests\Asset\Theme;
 
-use WBW\Bundle\AdminBSBBundle\Theme\DefaultUserInfoThemeProvider;
+use WBW\Bundle\AdminBSBBundle\Asset\Theme\DefaultBreadcrumbsThemeProvider;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
- * Default user info theme provider test.
+ * Default breadcrumbs theme provider test
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBBundle\Tests\Theme
+ * @package WBW\Bundle\AdminBSBBundle\Tests\Asset\Theme
  */
-class DefaultUserInfoThemeProviderTest extends AbstractTestCase {
+class DefaultBreadcrumbsThemeProviderTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.
@@ -29,7 +29,7 @@ class DefaultUserInfoThemeProviderTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $obj = new DefaultUserInfoThemeProvider();
+        $obj = new DefaultBreadcrumbsThemeProvider();
 
         $this->assertNotNull($obj);
     }

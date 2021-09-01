@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Theme;
+namespace WBW\Bundle\AdminBSBBundle\Asset\Theme;
 
 /**
  * Skins theme provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBBundle\Theme
+ * @package WBW\Bundle\AdminBSBBundle\Asset\Theme
  */
 class SkinsThemeProvider {
 

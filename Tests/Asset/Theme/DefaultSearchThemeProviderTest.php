@@ -9,18 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Tests\Theme;
+namespace WBW\Bundle\AdminBSBBundle\Tests\Asset\Theme;
 
-use WBW\Bundle\AdminBSBBundle\Theme\DefaultTasksDropDownThemeProvider;
+use WBW\Bundle\AdminBSBBundle\Asset\Theme\DefaultSearchThemeProvider;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
- * Default tasks drop down theme provider test.
+ * Default search theme provider test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBBundle\Tests\Theme
+ * @package WBW\Bundle\AdminBSBBundle\Tests\Asset\Theme
  */
-class DefaultTasksDropDownThemeProviderTest extends AbstractTestCase {
+class DefaultSearchThemeProviderTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.
@@ -29,7 +29,7 @@ class DefaultTasksDropDownThemeProviderTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $obj = new DefaultTasksDropDownThemeProvider();
+        $obj = new DefaultSearchThemeProvider();
 
         $this->assertNotNull($obj);
     }

@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Theme;
+namespace WBW\Bundle\AdminBSBBundle\Asset\Theme;
 
-use WBW\Bundle\CoreBundle\Theme\DefaultNotificationsDropDownThemeProvider as BaseNotificationsDropDownThemeProvider;
+use WBW\Bundle\CoreBundle\Theme\DefaultNavigationThemeProvider as BaseNavigationThemeProvider;
 
 /**
- * Default notifications drop down theme provider.
+ * Default navigation theme provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBBundle\Theme
+ * @package WBW\Bundle\AdminBSBBundle\Asset\Theme
  */
-class DefaultNotificationsDropDownThemeProvider extends BaseNotificationsDropDownThemeProvider {
+class DefaultNavigationThemeProvider extends BaseNavigationThemeProvider {
 
     /**
      * Constructor.

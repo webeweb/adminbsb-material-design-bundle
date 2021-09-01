@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
-use WBW\Bundle\AdminBSBBundle\Theme\SkinsThemeProvider;
+use WBW\Bundle\AdminBSBBundle\Asset\Theme\SkinsThemeProvider;
 use WBW\Bundle\CoreBundle\DependencyInjection\ConfigurationHelper;
 
 /**

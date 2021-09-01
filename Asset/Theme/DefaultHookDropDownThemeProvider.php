@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Theme;
+namespace WBW\Bundle\AdminBSBBundle\Asset\Theme;
 
-use WBW\Bundle\CoreBundle\Theme\DefaultTasksDropDownThemeProvider as BaseTasksDropDownThemeProvider;
+use WBW\Bundle\CoreBundle\Theme\DefaultHookDropDownThemeProvider as BaseHookDropDownThemeProvider;
 
 /**
- * Default tasks drop down theme provider.
+ * Default hook drop down theme provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBBundle\Theme
+ * @package WBW\Bundle\AdminBSBBundle\Asset\Theme
  */
-class DefaultTasksDropDownThemeProvider extends BaseTasksDropDownThemeProvider {
+class DefaultHookDropDownThemeProvider extends BaseHookDropDownThemeProvider {
 
     /**
      * Constructor.

@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Theme;
+namespace WBW\Bundle\AdminBSBBundle\Asset\Theme;
 
-use WBW\Bundle\CoreBundle\Theme\DefaultHookDropDownThemeProvider as BaseHookDropDownThemeProvider;
+use WBW\Bundle\CoreBundle\Theme\DefaultSearchThemeProvider as BaseSearchThemeProvider;
 
 /**
- * Default hook drop down theme provider.
+ * Default search theme provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBBundle\Theme
+ * @package WBW\Bundle\AdminBSBBundle\Asset\Theme
  */
-class DefaultHookDropDownThemeProvider extends BaseHookDropDownThemeProvider {
+class DefaultSearchThemeProvider extends BaseSearchThemeProvider {
 
     /**
      * Constructor.

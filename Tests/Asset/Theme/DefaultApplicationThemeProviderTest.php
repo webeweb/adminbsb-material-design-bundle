@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Tests\Theme;
+namespace WBW\Bundle\AdminBSBBundle\Tests\Asset\Theme;
 
-use WBW\Bundle\AdminBSBBundle\Theme\DefaultApplicationThemeProvider;
+use WBW\Bundle\AdminBSBBundle\Asset\Theme\DefaultApplicationThemeProvider;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Default application theme provider test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBBundle\Tests\Theme
+ * @package WBW\Bundle\AdminBSBBundle\Tests\Asset\Theme
  */
 class DefaultApplicationThemeProviderTest extends AbstractTestCase {
 
