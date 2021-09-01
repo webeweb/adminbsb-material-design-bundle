@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Button;
+namespace WBW\Bundle\AdminBSBBundle\Asset\Button;
 
 use WBW\Bundle\BootstrapBundle\Button\ButtonInterface;
 use WBW\Bundle\BootstrapBundle\Button\ButtonRenderer as BaseRenderer;
@@ -18,7 +18,7 @@ use WBW\Bundle\BootstrapBundle\Button\ButtonRenderer as BaseRenderer;
  * Button renderer.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBBundle\Button
+ * @package WBW\Bundle\AdminBSBBundle\Asset\Button
  */
 class ButtonRenderer extends BaseRenderer {
 

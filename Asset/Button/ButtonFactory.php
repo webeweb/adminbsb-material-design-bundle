@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Button;
+namespace WBW\Bundle\AdminBSBBundle\Asset\Button;
 
 use WBW\Bundle\BootstrapBundle\Button\ButtonFactory as BaseFactory;
 use WBW\Bundle\BootstrapBundle\Button\ButtonInterface;
@@ -19,7 +19,7 @@ use WBW\Library\Types\Helper\ArrayHelper;
  * Button factory.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBBundle\Button
+ * @package WBW\Bundle\AdminBSBBundle\Asset\Button
  */
 class ButtonFactory extends BaseFactory {
 
