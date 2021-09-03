@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Tests\Fixtures\Provider\DataTables;
+namespace WBW\Bundle\AdminBSBBundle\Tests\Fixtures\DataTables\Provider;
 
-use WBW\Bundle\AdminBSBBundle\Provider\DataTables\AbstractDataTablesProvider;
-use WBW\Bundle\JQuery\DataTablesBundle\API\DataTablesColumnInterface;
+use WBW\Bundle\AdminBSBBundle\DataTables\Provider\AbstractDataTablesProvider;
+use WBW\Bundle\JQuery\DataTablesBundle\Api\DataTablesColumnInterface;
 
 /**
  * Test DataTables provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBBundle\Tests\Fixtures\Provider\DataTables
+ * @package WBW\Bundle\AdminBSBBundle\Tests\Fixtures\DataTables\Provider
  */
 class TestDataTablesProvider extends AbstractDataTablesProvider {
 

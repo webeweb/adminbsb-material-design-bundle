@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Provider\DataTables;
+namespace WBW\Bundle\AdminBSBBundle\DataTables\Provider;
 
-use WBW\Bundle\JQuery\DataTablesBundle\API\DataTablesOptionsInterface;
+use WBW\Bundle\JQuery\DataTablesBundle\Api\DataTablesOptionsInterface;
 use WBW\Bundle\JQuery\DataTablesBundle\Provider\AbstractDataTablesProvider as BaseDataTablesProvider;
 
 /**
  * Abstract DataTables provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBBundle\Provider\DataTables
+ * @package WBW\Bundle\AdminBSBBundle\DataTables\Provider
  * @abstract
  */
 abstract class AbstractDataTablesProvider extends BaseDataTablesProvider {

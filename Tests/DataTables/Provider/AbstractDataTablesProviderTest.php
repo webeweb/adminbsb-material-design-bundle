@@ -9,19 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Tests\Provider\DataTables;
+namespace WBW\Bundle\AdminBSBBundle\Tests\DataTables\Provider;
 
-use WBW\Bundle\AdminBSBBundle\Provider\DataTables\AbstractDataTablesProvider;
+use WBW\Bundle\AdminBSBBundle\DataTables\Provider\AbstractDataTablesProvider;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
-use WBW\Bundle\AdminBSBBundle\Tests\Fixtures\Provider\DataTables\TestDataTablesProvider;
+use WBW\Bundle\AdminBSBBundle\Tests\Fixtures\DataTables\Provider\TestDataTablesProvider;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension;
-use WBW\Bundle\JQuery\DataTablesBundle\API\DataTablesOptionsInterface;
+use WBW\Bundle\JQuery\DataTablesBundle\Api\DataTablesOptionsInterface;
 
 /**
  * Abstract DataTables provider test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBBundle\Tests\Provider\DataTables
+ * @package WBW\Bundle\AdminBSBBundle\Tests\DataTables\Provider
  */
 class AbstractDataTablesProviderTest extends AbstractTestCase {
 
