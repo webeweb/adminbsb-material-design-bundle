@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Asset\ProgressBar;
 
-use WBW\Bundle\BootstrapBundle\ProgressBar\ProgressBarFactory as BaseFactory;
-use WBW\Bundle\BootstrapBundle\ProgressBar\ProgressBarInterface;
+use WBW\Bundle\BootstrapBundle\Asset\ProgressBar\ProgressBarFactory as BaseFactory;
+use WBW\Bundle\BootstrapBundle\Asset\ProgressBar\ProgressBarInterface;
 use WBW\Library\Types\Helper\ArrayHelper;
 
 /**

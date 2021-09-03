@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Asset\ProgressBar;
 
-use WBW\Bundle\BootstrapBundle\ProgressBar\AbstractProgressBar;
+use WBW\Bundle\BootstrapBundle\Asset\ProgressBar\AbstractProgressBar;
 
 /**
  * Material Design progress bar.

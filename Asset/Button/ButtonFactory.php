@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Asset\Button;
 
-use WBW\Bundle\BootstrapBundle\Button\ButtonFactory as BaseFactory;
-use WBW\Bundle\BootstrapBundle\Button\ButtonInterface;
+use WBW\Bundle\BootstrapBundle\Asset\Button\ButtonFactory as BaseFactory;
+use WBW\Bundle\BootstrapBundle\Asset\Button\ButtonInterface;
 use WBW\Library\Types\Helper\ArrayHelper;
 
 /**

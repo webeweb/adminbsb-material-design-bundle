@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Asset\Button;
 
-use WBW\Bundle\BootstrapBundle\Button\AbstractButton;
+use WBW\Bundle\BootstrapBundle\Asset\Button\AbstractButton;
 
 /**
  * Material Design button.

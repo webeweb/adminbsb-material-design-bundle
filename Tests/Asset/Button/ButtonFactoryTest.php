@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Tests\Asset\Button;
 
 use WBW\Bundle\AdminBSBBundle\Asset\Button\ButtonFactory;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
-use WBW\Bundle\BootstrapBundle\Button\ButtonInterface;
+use WBW\Bundle\BootstrapBundle\Asset\Button\ButtonInterface;
 
 /**
  * Button factory test.
