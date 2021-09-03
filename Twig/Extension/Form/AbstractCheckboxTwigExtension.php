@@ -39,14 +39,14 @@ abstract class AbstractCheckboxTwigExtension extends AbstractTwigExtension {
 
         $template = "<input %attributes%>%innerHTML%";
 
-        $attributes = [];
-
-        $attributes["class"]    = [true === $filledIn ? "filled-in" : null, $class];
-        $attributes["name"]     = $name;
-        $attributes["type"]     = "checkbox";
-        $attributes["id"]       = $id;
-        $attributes["checked"]  = true === $checked ? "checked" : null;
-        $attributes["disabled"] = true === $disabled ? "disabled" : null;
+        $attributes = [
+            "class"    => [true === $filledIn ? "filled-in" : null, $class],
+            "name"     => $name,
+            "type"     => "checkbox",
+            "id"       => $id,
+            "checked"  => true === $checked ? "checked" : null,
+            "disabled" => true === $disabled ? "disabled" : null,
+        ];
 
         $innerHTML = static::coreHTMLElement("label", $content, ["for" => $attributes["id"]]);
 

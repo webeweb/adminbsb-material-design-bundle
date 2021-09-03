@@ -39,14 +39,18 @@ abstract class AbstractRadioButtonTwigExtension extends AbstractTwigExtension {
 
         $template = "<input %attributes%>%innerHTML%";
 
-        $attributes = [];
+        $attributes = [
+            "class"    => [
+                true === $withGap ? "with-gap" : null,
+                $class,
+            ],
+            "name"     => $name,
+            "type"     => "radio",
+            "id"       => $id,
+            "checked"  => true === $checked ? "checked" : null,
+            "disabled" => true === $disabled ? "disabled" : null,
+        ];
 
-        $attributes["class"]    = [true === $withGap ? "with-gap" : null, $class];
-        $attributes["name"]     = $name;
-        $attributes["type"]     = "radio";
-        $attributes["id"]       = $id;
-        $attributes["checked"]  = true === $checked ? "checked" : null;
-        $attributes["disabled"] = true === $disabled ? "disabled" : null;
 
         $innerHTML = static::coreHTMLElement("label", $content, ["for" => $attributes["id"]]);
 

@@ -32,10 +32,13 @@ abstract class AbstractIconTwigExtension extends AbstractTwigExtension {
      */
     protected function adminBSBIcon(?string $name, ?string $style, string $class = null): string {
 
-        $attributes = [];
-
-        $attributes["class"] = ["material-icons", $class];
-        $attributes["style"] = $style;
+        $attributes = [
+            "class" => [
+                "material-icons",
+                $class,
+            ],
+            "style" => $style,
+        ];
 
         $innerHTML = null !== $name ? $name : "home";
 

@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
 use WBW\Bundle\AdminBSBBundle\Asset\Button\ButtonRenderer;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\RendererTwigExtension;
-use WBW\Bundle\BootstrapBundle\Button\ButtonInterface;
+use WBW\Bundle\BootstrapBundle\Asset\Button\ButtonInterface;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension as BaseTwigExtension;
 
 /**
@@ -39,16 +39,21 @@ abstract class AbstractButtonTwigExtension extends BaseTwigExtension {
         $circle = null !== $button->getContent() ? false : $circle;
         $style  = null !== $button->getContent() ? "margin: -4px 2px 0; vertical-align: sub;" : "";
 
-        $attributes = [];
+        $attributes = [
+            "class"          => [
+                "btn",
+                ButtonRenderer::renderType($button),
+                "waves-effect",
+                ButtonRenderer::renderBlock($button),
+                ButtonRenderer::renderCircle($button, $circle),
+            ],
+            "title"          => ButtonRenderer::renderTitle($button),
+            "type"           => "button",
+            "data-toggle"    => ButtonRenderer::renderDataToggle($button),
+            "data-placement" => ButtonRenderer::renderDataPlacement($button),
+            "disabled"       => ButtonRenderer::renderDisabled($button),
+        ];
 
-        $attributes["class"]          = ["btn", ButtonRenderer::renderType($button), "waves-effect"];
-        $attributes["class"][]        = ButtonRenderer::renderBlock($button);
-        $attributes["class"][]        = ButtonRenderer::renderCircle($button, $circle);
-        $attributes["title"]          = ButtonRenderer::renderTitle($button);
-        $attributes["type"]           = "button";
-        $attributes["data-toggle"]    = ButtonRenderer::renderDataToggle($button);
-        $attributes["data-placement"] = ButtonRenderer::renderDataPlacement($button);
-        $attributes["disabled"]       = ButtonRenderer::renderDisabled($button);
 
         $glyphicon = null !== $icon ? RendererTwigExtension::renderIcon($this->getTwigEnvironment(), $icon, $style) : "";
         $innerHTML = ButtonRenderer::renderContent($button);

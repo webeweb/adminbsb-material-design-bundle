@@ -41,14 +41,28 @@ abstract class AbstractBadgeTwigExtension extends AbstractTwigExtension {
             $template = '<a class="list-group-item" href="%href%"><span %attributes%>%innerHTML%</span>%label%</a>';
         }
 
-        $attributes = [];
+        $attributes = null;
 
         if (true === $list) {
-            $attributes["class"] = ["badge", $class];
+
+            $attributes = [
+                "class" => [
+                    "badge",
+                    $class,
+                ],
+            ];
         } else {
-            $attributes["class"]   = ["btn", $class, "btn-block", "waves-effect"];
-            $attributes["class"][] = true === $large ? "btn-lg" : null;
-            $attributes["type"]    = "button";
+
+            $attributes = [
+                "class" => [
+                    "btn",
+                    $class,
+                    "btn-block",
+                    "waves-effect",
+                    true === $large ? "btn-lg" : null,
+                ],
+                "type"  => "button",
+            ];
         }
 
         $innerHTML = null !== $content ? $content : "";

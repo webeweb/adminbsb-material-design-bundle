@@ -33,10 +33,12 @@ abstract class AbstractPreloaderTwigExtension extends AbstractTwigExtension {
 
         $sizes = ["xs", "sm", "l", "xl"];
 
-        $attributes = [];
-
-        $attributes["class"][] = "preloader";
-        $attributes["class"][] = true === in_array($size, $sizes) ? "pl-size-" . $size : null;
+        $attributes = [
+            "class" => [
+                "preloader",
+                true === in_array($size, $sizes) ? "pl-size-" . $size : null,
+            ],
+        ];
 
         $content   = '<div class="circle-clipper left"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div>';
         $innerHTML = static::coreHTMLElement("div", $content, ["class" => ["spinner-layer", $class]]);
