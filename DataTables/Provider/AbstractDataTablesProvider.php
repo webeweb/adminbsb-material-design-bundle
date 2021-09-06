@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\DataTables\Provider;
 
+use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Bundle\JQuery\DataTablesBundle\Api\DataTablesOptionsInterface;
 use WBW\Bundle\JQuery\DataTablesBundle\Provider\AbstractDataTablesProvider as BaseDataTablesProvider;
 
@@ -36,6 +37,13 @@ abstract class AbstractDataTablesProvider extends BaseDataTablesProvider {
      * @var string
      */
     const COLUMN_WIDTH_DATE = "120px";
+
+    /**
+     * Column width "icon".
+     *
+     * @var string
+     */
+    const COLUMN_WIDTH_ICON = "20px";
 
     /**
      * Column width "label".
@@ -69,6 +77,33 @@ abstract class AbstractDataTablesProvider extends BaseDataTablesProvider {
         return $dtOptions;
     }
 
+
+    /**
+     * Align right.
+     *
+     * @param string|null $content The content.
+     * @return string Returns the right-aligned content.
+     */
+    protected function alignRight(?string $content): string {
+        if (null === $content || "" === $content) {
+            return "";
+        }
+        return AbstractTwigExtension::coreHTMLElement("span", $content, ["class" => "pull-right"]);
+    }
+
+
+    /**
+     * Put italic.
+     *
+     * @param string|null $content The content.
+     * @return string Returns the italic.
+     */
+    protected function putItalic(?string $content): string {
+        if (null === $content || "" === $content) {
+            return "";
+        }
+        return AbstractTwigExtension::coreHTMLElement("em", $content);
+    }
     /**
      * {@inheritDoc}
      */

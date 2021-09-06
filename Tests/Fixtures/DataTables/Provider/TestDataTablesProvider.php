@@ -25,6 +25,13 @@ class TestDataTablesProvider extends AbstractDataTablesProvider {
     /**
      * {@inheritDoc}
      */
+    public function alignRight(?string $content): string {
+        return parent::alignRight($content);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function getColumns(): array {
         return [];
     }
@@ -55,6 +62,13 @@ class TestDataTablesProvider extends AbstractDataTablesProvider {
      */
     public function getView(): ?string {
         return null;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function putItalic(?string $content): string {
+        return parent::putItalic($content);
     }
 
     /**

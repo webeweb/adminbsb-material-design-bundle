@@ -42,6 +42,35 @@ class AbstractDataTablesProviderTest extends AbstractTestCase {
         $this->buttonTwigExtension = new ButtonTwigExtension($this->twigEnvironment);
     }
 
+
+    /**
+     * Tests the alignRight() methods.
+     *
+     * @return void
+     */
+    public function testAlignRight() {
+
+        $obj = new TestDataTablesProvider($this->router, $this->translator, $this->buttonTwigExtension);
+
+        $this->assertEquals("", $obj->alignRight(null));
+        $this->assertEquals("", $obj->alignRight(""));
+        $this->assertEquals('<span class="pull-right">content</span>', $obj->alignRight("content"));
+    }
+
+
+    /**
+     * Tests the putItalic() methods.
+     *
+     * @return void
+     */
+    public function testPutItalic() {
+
+        $obj = new TestDataTablesProvider($this->router, $this->translator, $this->buttonTwigExtension);
+
+        $this->assertEquals("", $obj->putItalic(null));
+        $this->assertEquals("", $obj->putItalic(""));
+        $this->assertEquals("<em>content</em>", $obj->putItalic("content"));
+    }
     /**
      * Tests the getOptions() method.
      *
@@ -66,6 +95,7 @@ class AbstractDataTablesProviderTest extends AbstractTestCase {
 
         $this->assertEquals("160px", AbstractDataTablesProvider::COLUMN_WIDTH_ACTIONS);
         $this->assertEquals("120px", AbstractDataTablesProvider::COLUMN_WIDTH_DATE);
+        $this->assertEquals("20px", AbstractDataTablesProvider::COLUMN_WIDTH_ICON);
         $this->assertEquals("160px", AbstractDataTablesProvider::COLUMN_WIDTH_LABEL);
         $this->assertEquals("80px", AbstractDataTablesProvider::COLUMN_WIDTH_THUMBNAIL);
         $this->assertEquals("40px", AbstractDataTablesProvider::COLUMN_WIDTH_UNIT);
