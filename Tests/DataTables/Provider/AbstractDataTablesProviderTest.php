@@ -93,11 +93,20 @@ class AbstractDataTablesProviderTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $this->assertEquals("160px", AbstractDataTablesProvider::COLUMN_WIDTH_ACTIONS);
-        $this->assertEquals("120px", AbstractDataTablesProvider::COLUMN_WIDTH_DATE);
-        $this->assertEquals("20px", AbstractDataTablesProvider::COLUMN_WIDTH_ICON);
-        $this->assertEquals("160px", AbstractDataTablesProvider::COLUMN_WIDTH_LABEL);
-        $this->assertEquals("80px", AbstractDataTablesProvider::COLUMN_WIDTH_THUMBNAIL);
-        $this->assertEquals("40px", AbstractDataTablesProvider::COLUMN_WIDTH_UNIT);
+        $this->assertEquals("20px", AbstractDataTablesProvider::COLUMN_WIDTH_XXS);
+        $this->assertEquals("40px", AbstractDataTablesProvider::COLUMN_WIDTH_XS);
+        $this->assertEquals("80px", AbstractDataTablesProvider::COLUMN_WIDTH_S);
+        $this->assertEquals("120px", AbstractDataTablesProvider::COLUMN_WIDTH_M);
+        $this->assertEquals("160px", AbstractDataTablesProvider::COLUMN_WIDTH_L);
+        $this->assertEquals("200px", AbstractDataTablesProvider::COLUMN_WIDTH_XL);
+        $this->assertEquals("240px", AbstractDataTablesProvider::COLUMN_WIDTH_XXL);
+        $this->assertEquals("280px", AbstractDataTablesProvider::COLUMN_WIDTH_XXXL);
+
+        $this->assertEquals(AbstractDataTablesProvider::COLUMN_WIDTH_L, AbstractDataTablesProvider::COLUMN_WIDTH_ACTIONS);
+        $this->assertEquals(AbstractDataTablesProvider::COLUMN_WIDTH_M, AbstractDataTablesProvider::COLUMN_WIDTH_DATE);
+        $this->assertEquals(AbstractDataTablesProvider::COLUMN_WIDTH_XXS, AbstractDataTablesProvider::COLUMN_WIDTH_ICON);
+        $this->assertEquals(AbstractDataTablesProvider::COLUMN_WIDTH_L, AbstractDataTablesProvider::COLUMN_WIDTH_LABEL);
+        $this->assertEquals(AbstractDataTablesProvider::COLUMN_WIDTH_S, AbstractDataTablesProvider::COLUMN_WIDTH_THUMBNAIL);
+        $this->assertEquals(AbstractDataTablesProvider::COLUMN_WIDTH_XS, AbstractDataTablesProvider::COLUMN_WIDTH_UNIT);
     }
 }

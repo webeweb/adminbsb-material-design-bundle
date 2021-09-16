@@ -29,54 +29,98 @@ abstract class AbstractDataTablesProvider extends BaseDataTablesProvider {
      *
      * @var string
      */
-    const COLUMN_WIDTH_ACTIONS = "160px";
+    const COLUMN_WIDTH_ACTIONS = self::COLUMN_WIDTH_L;
 
     /**
      * Column width "date"
      *
      * @var string
      */
-    const COLUMN_WIDTH_DATE = "120px";
+    const COLUMN_WIDTH_DATE = self::COLUMN_WIDTH_M;
 
     /**
      * Column width "icon".
      *
      * @var string
      */
-    const COLUMN_WIDTH_ICON = "20px";
+    const COLUMN_WIDTH_ICON = self::COLUMN_WIDTH_XXS;
+
+    /**
+     * Column width "l".
+     *
+     * @var string
+     */
+    const COLUMN_WIDTH_L = "160px";
 
     /**
      * Column width "label".
      *
      * @var string
      */
-    const COLUMN_WIDTH_LABEL = "160px";
+    const COLUMN_WIDTH_LABEL = self::COLUMN_WIDTH_L;
+
+    /**
+     * Column width "m".
+     *
+     * @var string
+     */
+    const COLUMN_WIDTH_M = "120px";
+
+    /**
+     * Column width "s".
+     *
+     * @var string
+     */
+    const COLUMN_WIDTH_S = "80px";
 
     /**
      * Column width "thumbnail".
      *
      * @var string
      */
-    const COLUMN_WIDTH_THUMBNAIL = "80px";
+    const COLUMN_WIDTH_THUMBNAIL = self::COLUMN_WIDTH_S;
 
     /**
      * Column width "unit".
      *
      * @var string
      */
-    const COLUMN_WIDTH_UNIT = "40px";
+    const COLUMN_WIDTH_UNIT = self::COLUMN_WIDTH_XS;
 
     /**
-     * {@inheritDoc}
+     * Column width "xl".
+     *
+     * @var string
      */
-    public function getOptions(): DataTablesOptionsInterface {
+    const COLUMN_WIDTH_XL = "200px";
 
-        $dtOptions = parent::getOptions();
-        $dtOptions->setOption("searchDelay", 2500);
+    /**
+     * Column width "xs".
+     *
+     * @var string
+     */
+    const COLUMN_WIDTH_XS = "40px";
 
-        return $dtOptions;
-    }
+    /**
+     * Column width "xxl".
+     *
+     * @var string
+     */
+    const COLUMN_WIDTH_XXL = "240px";
 
+    /**
+     * Column width "xxs".
+     *
+     * @var string
+     */
+    const COLUMN_WIDTH_XXS = "20px";
+
+    /**
+     * Column width "xxxl".
+     *
+     * @var string
+     */
+    const COLUMN_WIDTH_XXXL = "280px";
 
     /**
      * Align right.
@@ -91,6 +135,16 @@ abstract class AbstractDataTablesProvider extends BaseDataTablesProvider {
         return AbstractTwigExtension::coreHTMLElement("span", $content, ["class" => "pull-right"]);
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    public function getOptions(): DataTablesOptionsInterface {
+
+        $dtOptions = parent::getOptions();
+        $dtOptions->setOption("searchDelay", 2500);
+
+        return $dtOptions;
+    }
 
     /**
      * Put italic.
@@ -104,6 +158,7 @@ abstract class AbstractDataTablesProvider extends BaseDataTablesProvider {
         }
         return AbstractTwigExtension::coreHTMLElement("em", $content);
     }
+
     /**
      * {@inheritDoc}
      */
