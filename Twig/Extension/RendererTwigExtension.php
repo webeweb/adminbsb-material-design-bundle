@@ -59,7 +59,6 @@ class RendererTwigExtension extends BaseTwigExtension {
      */
     public static function renderIcon(Environment $twigEnvironment, string $name, string $style = null): string {
 
-        // Determines the handler.
         $handler = explode(":", $name);
         if (1 === count($handler)) {
             array_unshift($handler, "mi");
@@ -68,7 +67,6 @@ class RendererTwigExtension extends BaseTwigExtension {
             return "";
         }
 
-        // Swith into handler.
         switch ($handler[0]) {
 
             case "mi": // Material design
@@ -80,7 +78,6 @@ class RendererTwigExtension extends BaseTwigExtension {
                 break;
         }
 
-        // Return the output.
         return $output;
     }
 }

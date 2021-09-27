@@ -66,6 +66,9 @@ class IconTwigExtension extends AbstractIconTwigExtension implements IconRendere
      * {@inheritdoc}
      */
     public function renderIcon(?string $name, ?string $style): string {
-        return $this->adminBSBIconBasicFunction(["name" => $name, "style" => $style]);
+        return $this->adminBSBIconBasicFunction([
+            "name"  => $name,
+            "style" => $style,
+        ]);
     }
 }

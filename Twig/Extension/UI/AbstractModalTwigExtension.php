@@ -53,6 +53,9 @@ abstract class AbstractModalTwigExtension extends AbstractTwigExtension {
             $innerHTML = RendererTwigExtension::renderIcon($this->getTwigEnvironment(), $icon, "margin: -4px 0; vertical-align: sub;") . $innerHTML;
         }
 
-        return $this->getTypographyTwigExtension()->bootstrapHeading3Function(["class" => "modal-title", "content" => $innerHTML]);
+        return $this->getTypographyTwigExtension()->bootstrapHeading3Function([
+            "class"   => "modal-title",
+            "content" => $innerHTML,
+        ]);
     }
 }

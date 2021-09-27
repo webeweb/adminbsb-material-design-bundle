@@ -57,6 +57,9 @@ abstract class AbstractCardTwigExtension extends AbstractTwigExtension {
             $innerHTML = RendererTwigExtension::renderIcon($this->getTwigEnvironment(), $icon, "margin: -4px 4px 0 0; vertical-align: sub;") . $innerHTML;
         }
 
-        return $this->getTypographyTwigExtension()->bootstrapHeading2Function(["class" => "card-header", "content" => $innerHTML]);
+        return $this->getTypographyTwigExtension()->bootstrapHeading2Function([
+            "class"   => "card-header",
+            "content" => $innerHTML,
+        ]);
     }
 }
