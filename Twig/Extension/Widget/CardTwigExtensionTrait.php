@@ -24,7 +24,7 @@ trait CardTwigExtensionTrait {
      *
      * @var CardTwigExtension|null
      */
-    private $CardTwigExtension;
+    private $cardTwigExtension;
 
     /**
      * Get the Card Twig extension.
@@ -32,17 +32,17 @@ trait CardTwigExtensionTrait {
      * @return CardTwigExtension|null Returns the Card Twig extension.
      */
     public function getCardTwigExtension(): ?CardTwigExtension {
-        return $this->CardTwigExtension;
+        return $this->cardTwigExtension;
     }
 
     /**
      * Set the Card Twig extension.
      *
-     * @param CardTwigExtension|null $CardTwigExtension The Card Twig extension.
+     * @param CardTwigExtension|null $cardTwigExtension The Card Twig extension.
      * @return self Returns this instance.
      */
-    protected function setCardTwigExtension(?CardTwigExtension $CardTwigExtension): self {
-        $this->CardTwigExtension = $CardTwigExtension;
+    protected function setCardTwigExtension(?CardTwigExtension $cardTwigExtension): self {
+        $this->cardTwigExtension = $cardTwigExtension;
         return $this;
     }
 }

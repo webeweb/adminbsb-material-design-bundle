@@ -49,11 +49,11 @@ class CardTwigExtensionTraitTest extends AbstractTestCase {
     public function testSetCardTwigExtension(): void {
 
         // Set a Card Twig extension mock.
-        $CardTwigExtension = new CardTwigExtension($this->twigEnvironment, $this->typographyTwigExtension);
+        $cardTwigExtension = new CardTwigExtension($this->twigEnvironment, $this->typographyTwigExtension);
 
         $obj = new TestCardTwigExtensionTrait();
 
-        $obj->setCardTwigExtension($CardTwigExtension);
-        $this->assertSame($CardTwigExtension, $obj->getCardTwigExtension());
+        $obj->setCardTwigExtension($cardTwigExtension);
+        $this->assertSame($cardTwigExtension, $obj->getCardTwigExtension());
     }
 }

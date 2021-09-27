@@ -32,30 +32,30 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
     const SERVICE_NAME = "wbw.adminbsb.twig.extension.ui.button";
 
     /**
-     * Displays an AdminBSB button "Danger".
+     * Displays an AdminBSB button "danger".
      *
      * @param array $args The arguments.
-     * @return string Returns the AdminBSB button "Danger".
+     * @return string Returns the AdminBSB button "danger".
      */
     public function adminBSBButtonDangerFunction(array $args = []): string {
         return $this->adminBSBButton(ButtonFactory::parseDangerButton($args), ArrayHelper::get($args, "icon"), ArrayHelper::get($args, "circle", false));
     }
 
     /**
-     * Displays an AdminBSB button "Default".
+     * Displays an AdminBSB button "default".
      *
      * @param array $args The arguments.
-     * @return string Returns the AdminBSB button "Default".
+     * @return string Returns the AdminBSB button "default".
      */
     public function adminBSBButtonDefaultFunction(array $args = []): string {
         return $this->adminBSBButton(ButtonFactory::parseDefaultButton($args), ArrayHelper::get($args, "icon"), ArrayHelper::get($args, "circle", false));
     }
 
     /**
-     * Displays an AdminBSB button "Info".
+     * Displays an AdminBSB button "info".
      *
      * @param array $args The arguments.
-     * @return string Returns the AdminBSB button "Info".
+     * @return string Returns the AdminBSB button "info".
      */
     public function adminBSBButtonInfoFunction(array $args = []): string {
         return $this->adminBSBButton(ButtonFactory::parseInfoButton($args), ArrayHelper::get($args, "icon"), ArrayHelper::get($args, "circle", false));
@@ -72,30 +72,30 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB button "Primary".
+     * Displays an AdminBSB button "primary".
      *
      * @param array $args The arguments.
-     * @return string Returns the AdminBSB button "Primary".
+     * @return string Returns the AdminBSB button "primary".
      */
     public function adminBSBButtonPrimaryFunction(array $args = []): string {
         return $this->adminBSBButton(ButtonFactory::parsePrimaryButton($args), ArrayHelper::get($args, "icon"), ArrayHelper::get($args, "circle", false));
     }
 
     /**
-     * Displays an AdminBSB button "Success".
+     * Displays an AdminBSB button "success".
      *
      * @param array $args The arguments.
-     * @return string Returns the AdminBSB button "Success".
+     * @return string Returns the AdminBSB button "success".
      */
     public function adminBSBButtonSuccessFunction(array $args = []): string {
         return $this->adminBSBButton(ButtonFactory::parseSuccessButton($args), ArrayHelper::get($args, "icon"), ArrayHelper::get($args, "circle", false));
     }
 
     /**
-     * Displays an AdminBSB button "Warning".
+     * Displays an AdminBSB button "warning".
      *
      * @param array $args The arguments.
-     * @return string Returns the AdminBSB button "Warning".
+     * @return string Returns the AdminBSB button "warning".
      */
     public function adminBSBButtonWarningFunction(array $args = []): string {
         return $this->adminBSBButton(ButtonFactory::parseWarningButton($args), ArrayHelper::get($args, "icon"), ArrayHelper::get($args, "circle", false));

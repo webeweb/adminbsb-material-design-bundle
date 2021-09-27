@@ -30,10 +30,10 @@ class SwitchButtonTwigExtension extends AbstractSwitchButtonTwigExtension {
     const SERVICE_NAME = "wbw.adminbsb.twig.extension.form.switch_button";
 
     /**
-     * Displays an AdminBSB switch button "Basic".
+     * Displays an AdminBSB switch button "basic".
      *
      * @param array $args The arguments.
-     * @return string Returns the AdminBSB switch button "Basic".
+     * @return string Returns the AdminBSB switch button "basic".
      */
     public function adminBSBSwitchButtonBasicFunction(array $args = []): string {
         return $this->adminBSBSwitchButton(ArrayHelper::get($args, "offLabel"), ArrayHelper::get($args, "name"), ArrayHelper::get($args, "checked", false), ArrayHelper::get($args, "disabled", false), ArrayHelper::get($args, "onLabel"), ArrayHelper::get($args, "attr", []), null);

@@ -30,10 +30,10 @@ class CheckboxTwigExtension extends AbstractCheckboxTwigExtension {
     const SERVICE_NAME = "wbw.adminbsb.twig.extension.form.checkbox";
 
     /**
-     * Displays an AdminBSB checkbox "Basic".
+     * Displays an AdminBSB checkbox "basic".
      *
      * @param array $args The arguments.
-     * @return string Returns the AdminBSB checkbox "Basic".
+     * @return string Returns the AdminBSB checkbox "basic".
      */
     public function adminBSBCheckboxBasicFunction(array $args = []): string {
         return $this->adminBSBCheckbox(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "name"), ArrayHelper::get($args, "id"), ArrayHelper::get($args, "checked", false), ArrayHelper::get($args, "disabled", false), ArrayHelper::get($args, "filledIn", false), ArrayHelper::get($args, "class"));

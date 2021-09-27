@@ -14,7 +14,7 @@ namespace WBW\Bundle\AdminBSBBundle\Tests\Fixtures\Twig\Extension\Widget;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget\CardTwigExtensionTrait;
 
 /**
- * Test Card Twig extension trait.
+ * Test card Twig extension trait.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Fixtures\Twig\Extension\Widget

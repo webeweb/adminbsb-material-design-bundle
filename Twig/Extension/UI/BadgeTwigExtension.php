@@ -30,30 +30,30 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
     const SERVICE_NAME = "wbw.adminbsb.twig.extension.ui.badge";
 
     /**
-     * Displays an AdminBSB button badge "Danger".
+     * Displays an AdminBSB button badge "danger".
      *
      * @param array $args The arguments.
-     * @return string Returns the AdminBSB button badge "Danger".
+     * @return string Returns the AdminBSB button badge "danger".
      */
     public function adminBSBButtonBadgeDangerFunction(array $args = []): string {
         return $this->adminBSBBadge(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "label"), ArrayHelper::get($args, "large", false), "btn-danger");
     }
 
     /**
-     * Displays an AdminBSB button badge "Default".
+     * Displays an AdminBSB button badge "default".
      *
      * @param array $args The arguments.
-     * @return string Returns the AdminBSB button badge "Default".
+     * @return string Returns the AdminBSB button badge "default".
      */
     public function adminBSBButtonBadgeDefaultFunction(array $args = []): string {
         return $this->adminBSBBadge(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "label"), ArrayHelper::get($args, "large", false), "btn-default");
     }
 
     /**
-     * Displays an AdminBSB button badge "Info".
+     * Displays an AdminBSB button badge "info".
      *
      * @param array $args The arguments.
-     * @return string Returns the AdminBSB button badge "Info".
+     * @return string Returns the AdminBSB button badge "info".
      */
     public function adminBSBButtonBadgeInfoFunction(array $args = []): string {
         return $this->adminBSBBadge(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "label"), ArrayHelper::get($args, "large", false), "btn-info");
@@ -80,30 +80,30 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB button badge "Primary".
+     * Displays an AdminBSB button badge "primary".
      *
      * @param array $args The arguments.
-     * @return string Returns the AdminBSB button badge "Primary".
+     * @return string Returns the AdminBSB button badge "primary".
      */
     public function adminBSBButtonBadgePrimaryFunction(array $args = []): string {
         return $this->adminBSBBadge(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "label"), ArrayHelper::get($args, "large", false), "btn-primary");
     }
 
     /**
-     * Displays an AdminBSB button badge "Success".
+     * Displays an AdminBSB button badge "success".
      *
      * @param array $args The arguments.
-     * @return string Returns the AdminBSB button badge "Success".
+     * @return string Returns the AdminBSB button badge "success".
      */
     public function adminBSBButtonBadgeSuccessFunction(array $args = []): string {
         return $this->adminBSBBadge(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "label"), ArrayHelper::get($args, "large", false), "btn-success");
     }
 
     /**
-     * Displays an AdminBSB button badge "Warning".
+     * Displays an AdminBSB button badge "warning".
      *
      * @param array $args The arguments.
-     * @return string Returns the AdminBSB button badge "Warning".
+     * @return string Returns the AdminBSB button badge "warning".
      */
     public function adminBSBButtonBadgeWarningFunction(array $args = []): string {
         return $this->adminBSBBadge(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "label"), ArrayHelper::get($args, "large", false), "btn-warning");
