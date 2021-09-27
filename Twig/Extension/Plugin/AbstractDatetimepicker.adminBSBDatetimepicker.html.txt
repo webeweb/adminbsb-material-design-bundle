@@ -1,0 +1,12 @@
+<script type="text/javascript">
+    $("%selector%").bootstrapMaterialDatePicker({
+        cancelText: "%cancelText%",
+        clearButton: %clearButton%,
+        clearText: "%clearText%",
+        date: %date%,
+        format: "%format%",
+        lang: "%lang%",
+        time: %time%,
+        weekStart: %weekStart%
+    });
+</script>

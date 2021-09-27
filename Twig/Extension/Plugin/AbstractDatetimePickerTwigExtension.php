@@ -29,26 +29,6 @@ abstract class AbstractDatetimePickerTwigExtension extends AbstractTwigExtension
     use TranslatorTrait;
 
     /**
-     * Datetime picker.
-     *
-     * @var string
-     */
-    const DATETIMEPICKER = <<< EOT
-<script type="text/javascript">
-    $("%selector%").bootstrapMaterialDatePicker({
-        cancelText: "%cancelText%",
-        clearButton: %clearButton%,
-        clearText: "%clearText%",
-        date: %date%,
-        format: "%format%",
-        lang: "%lang%",
-        time: %time%,
-        weekStart: %weekStart%
-    });
-</script>
-EOT;
-
-    /**
      * Default datetime format.
      *
      * @var string
@@ -106,6 +86,8 @@ EOT;
         $searches = ["%selector%", "%cancelText%", "%clearButton%", "%clearText%", "%date%", "%format%", "%lang%", "%time%", "%weekStart%"];
         $replaces = [$selector, $cancelText, $bClearButton, $clearText, $bDate, $format, $lang, $bTime, $iWeekStart];
 
-        return str_replace($searches, $replaces, self::DATETIMEPICKER);
+        $template = file_get_contents(__DIR__. "/AbstractDatetimepicker.adminBSBDatetimepicker.html.txt");
+
+        return str_replace($searches, $replaces, $template);
     }
 }
