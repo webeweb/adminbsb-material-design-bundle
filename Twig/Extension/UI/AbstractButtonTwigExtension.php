@@ -54,7 +54,6 @@ abstract class AbstractButtonTwigExtension extends BaseTwigExtension {
             "disabled"       => ButtonRenderer::renderDisabled($button),
         ];
 
-
         $glyphicon = null !== $icon ? RendererTwigExtension::renderIcon($this->getTwigEnvironment(), $icon, $style) : "";
         $innerHTML = ButtonRenderer::renderContent($button);
 
