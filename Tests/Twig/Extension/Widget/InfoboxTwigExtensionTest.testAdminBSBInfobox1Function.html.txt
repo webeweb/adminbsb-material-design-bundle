@@ -1,0 +1,4 @@
+<div class="info-box">
+    <div class="icon bg-red"><i class="material-icons">shopping_cart</i></div>
+    <div class="content"><div class="text">NEW ORDERS</div><div class="number">125</div></div>
+</div>
