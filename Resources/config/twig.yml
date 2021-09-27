@@ -91,3 +91,10 @@ services:
         public: true
         tags:
             - { name: "twig.extension" }
+
+    wbw.adminbsb.twig.extension.widget.infobox:
+        class:  WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget\InfoboxTwigExtension
+        arguments: [ "@twig" ]
+        public: true
+        tags:
+            - { name: "twig.extension" }

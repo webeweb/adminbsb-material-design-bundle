@@ -29,6 +29,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ModalTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\PreloaderTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ProgressBarTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget\CardTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget\InfoboxTwigExtension;
 
 /**
  * AdminBSB extension test.
@@ -120,6 +121,7 @@ class WBWAdminBSBExtensionTest extends AbstractTestCase {
 
         // Widget Twig extensions
         $this->assertInstanceOf(CardTwigExtension::class, $this->containerBuilder->get(CardTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(InfoboxTwigExtension::class, $this->containerBuilder->get(InfoboxTwigExtension::SERVICE_NAME));
     }
 
     /**
