@@ -86,7 +86,7 @@ abstract class AbstractDatetimePickerTwigExtension extends AbstractTwigExtension
         $searches = ["%selector%", "%cancelText%", "%clearButton%", "%clearText%", "%date%", "%format%", "%lang%", "%time%", "%weekStart%"];
         $replaces = [$selector, $cancelText, $bClearButton, $clearText, $bDate, $format, $lang, $bTime, $iWeekStart];
 
-        $template = file_get_contents(__DIR__. "/AbstractDatetimepicker.adminBSBDatetimepicker.html.txt");
+        $template = file_get_contents(__DIR__ . "/AbstractDatetimepicker.adminBSBDatetimepicker.html.txt");
 
         return str_replace($searches, $replaces, $template);
     }

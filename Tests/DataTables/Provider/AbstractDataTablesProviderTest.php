@@ -42,7 +42,6 @@ class AbstractDataTablesProviderTest extends AbstractTestCase {
         $this->buttonTwigExtension = new ButtonTwigExtension($this->twigEnvironment);
     }
 
-
     /**
      * Tests the alignRight() methods.
      *
@@ -57,20 +56,6 @@ class AbstractDataTablesProviderTest extends AbstractTestCase {
         $this->assertEquals('<span class="pull-right">content</span>', $obj->alignRight("content"));
     }
 
-
-    /**
-     * Tests the putItalic() methods.
-     *
-     * @return void
-     */
-    public function testPutItalic() {
-
-        $obj = new TestDataTablesProvider($this->router, $this->translator, $this->buttonTwigExtension);
-
-        $this->assertEquals("", $obj->putItalic(null));
-        $this->assertEquals("", $obj->putItalic(""));
-        $this->assertEquals("<em>content</em>", $obj->putItalic("content"));
-    }
     /**
      * Tests the getOptions() method.
      *
@@ -84,6 +69,20 @@ class AbstractDataTablesProviderTest extends AbstractTestCase {
         $this->assertInstanceOf(DataTablesOptionsInterface::class, $res);
 
         $this->assertEquals(2500, $res->getOption("searchDelay"));
+    }
+
+    /**
+     * Tests the putItalic() methods.
+     *
+     * @return void
+     */
+    public function testPutItalic() {
+
+        $obj = new TestDataTablesProvider($this->router, $this->translator, $this->buttonTwigExtension);
+
+        $this->assertEquals("", $obj->putItalic(null));
+        $this->assertEquals("", $obj->putItalic(""));
+        $this->assertEquals("<em>content</em>", $obj->putItalic("content"));
     }
 
     /**

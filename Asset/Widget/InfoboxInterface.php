@@ -27,13 +27,6 @@ interface InfoboxInterface {
     public function getClass(): ?string;
 
     /**
-     * Set the class.
-     *
-     * @param string|null $class The class.
-     * @return InfoboxInterface Returns this infobox.
-     */
-    public function setClass(?string $class): InfoboxInterface;
-    /**
      * Get the color.
      *
      * @return string|null Returns the color.
@@ -67,6 +60,14 @@ interface InfoboxInterface {
      * @return string|null Returns the icon name.
      */
     public function getIconName(): ?string;
+
+    /**
+     * Set the class.
+     *
+     * @param string|null $class The class.
+     * @return InfoboxInterface Returns this infobox.
+     */
+    public function setClass(?string $class): InfoboxInterface;
 
     /**
      * Set the color.
