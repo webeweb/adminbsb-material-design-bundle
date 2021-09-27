@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension;
 
 use Twig\Environment;
-use WBW\Bundle\CoreBundle\Helper\ColorHelper;
+use WBW\Bundle\AdminBSBBundle\Asset\Color\ColorHelper;
 use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension as BaseTwigExtension;
 
 /**
@@ -41,18 +41,6 @@ abstract class AbstractTwigExtension extends BaseTwigExtension {
      * @return string Returns the Material Design color.
      */
     public static function materialDesignColor(?string $name, string $prefix = ""): string {
-
-        $colors = ColorHelper::getMaterialDesignColorPalette();
-
-        $color = $colors[0];
-
-        foreach ($colors as $current) {
-            if ($name !== $current->getName()) {
-                continue;
-            }
-            $color = $current;
-        }
-
-        return implode("", [$prefix, $color->getName()]);
+        return ColorHelper::materialDesignColor($name, $prefix);
     }
 }
