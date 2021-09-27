@@ -73,12 +73,12 @@ class InfoboxFactory {
      * @param array $args The arguments.
      * @return InfoboxInterface Returns the infobox.
      */
-    protected static function parseInfobox(InfoboxInterface $infobox, array $args): InfoboxInterface {
+    protected static function parseInfobox(InfoboxInterface $infobox, array $args, ?string $defaultColor, ?string $defaultIconColor): InfoboxInterface {
 
-        $infobox->setColor(ArrayHelper::get($args, "color"));
+        $infobox->setColor(ArrayHelper::get($args, "color", $defaultColor));
         $infobox->setContentNumber(ArrayHelper::get($args, "contentNumber"));
         $infobox->setContentText(ArrayHelper::get($args, "contentText"));
-        $infobox->setIconColor(ArrayHelper::get($args, "iconColor"));
+        $infobox->setIconColor(ArrayHelper::get($args, "iconColor", $defaultIconColor));
         $infobox->setIconName(ArrayHelper::get($args, "iconName"));
 
         return $infobox;
@@ -91,7 +91,7 @@ class InfoboxFactory {
      * @return InfoboxInterface Returns the infobox 1.
      */
     public static function parseInfobox1(array $args): InfoboxInterface {
-        return static::parseInfobox(static::newInfobox1(), $args);
+        return static::parseInfobox(static::newInfobox1(), $args, null, "red");
     }
 
     /**
@@ -101,7 +101,7 @@ class InfoboxFactory {
      * @return InfoboxInterface Returns the infobox 2.
      */
     public static function parseInfobox2(array $args): InfoboxInterface {
-        return static::parseInfobox(static::newInfobox2(), $args);
+        return static::parseInfobox(static::newInfobox2(), $args, "red", null);
     }
 
     /**
@@ -111,7 +111,7 @@ class InfoboxFactory {
      * @return InfoboxInterface Returns the infobox 3.
      */
     public static function parseInfobox3(array $args): InfoboxInterface {
-        return static::parseInfobox(static::newInfobox3(), $args);
+        return static::parseInfobox(static::newInfobox3(), $args, "red", null);
     }
 
     /**
@@ -121,7 +121,7 @@ class InfoboxFactory {
      * @return InfoboxInterface Returns the infobox 4.
      */
     public static function parseInfobox4(array $args): InfoboxInterface {
-        return static::parseInfobox(static::newInfobox4(), $args);
+        return static::parseInfobox(static::newInfobox4(), $args, "red", null);
     }
 
     /**
@@ -131,6 +131,6 @@ class InfoboxFactory {
      * @return InfoboxInterface Returns the infobox 5.
      */
     public static function parseInfobox5(array $args): InfoboxInterface {
-        return static::parseInfobox(static::newInfobox5(), $args);
+        return static::parseInfobox(static::newInfobox5(), $args, null, "red");
     }
 }
