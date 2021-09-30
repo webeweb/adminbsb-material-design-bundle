@@ -115,7 +115,7 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
         }
 
         $innerHTML = implode("\n", $items);
-        $dropdown  = static::coreHTMLElement("ul", "\n$innerHTML", ["class" => "ml-menu"]);
+        $dropdown  = static::coreHTMLElement("ul", "\n$innerHTML\n", ["class" => "ml-menu"]);
 
         return "$dropdown\n";
     }
@@ -162,7 +162,13 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
 
         $items = [];
         foreach ($node->getNodes() as $current) {
-            $items[] = $this->renderNode($current, $level + 1);
+
+            $item = $this->renderNode($current, $level + 1);
+            if ("" === $item) {
+                continue;
+            }
+
+            $items[] = $item;
         }
 
         $dropdown = $this->renderDropdown($node, $items);
