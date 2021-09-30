@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractKernel;
 class TestKernel extends AbstractKernel {
 
     /**
-     * {@inheritdoc}
+     * {@inheriDdoc}
      */
     public function getTestsDir(): string {
         return __DIR__ . "/../..";

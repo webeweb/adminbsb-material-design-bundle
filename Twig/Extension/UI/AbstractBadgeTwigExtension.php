@@ -41,8 +41,6 @@ abstract class AbstractBadgeTwigExtension extends AbstractTwigExtension {
             $template = '<a class="list-group-item" href="%href%"><span %attributes%>%innerHTML%</span>%label%</a>';
         }
 
-        $attributes = null;
-
         if (true === $list) {
 
             $attributes = [

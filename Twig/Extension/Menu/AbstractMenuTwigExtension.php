@@ -98,7 +98,7 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
         $icon = $this->renderIcon($node);
         $span = $this->renderSpan($node);
 
-        return static::coreHTMLElement("a", "\n${icon}{$span}", $attributes) . "\n";
+        return static::coreHTMLElement("a", "\n$icon$span", $attributes) . "\n";
     }
 
     /**
@@ -111,10 +111,9 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
     private function renderDropdown(NavigationNode $node, array $items): string {
 
         $innerHTML = implode("\n", $items);
+        $dropdown  = static::coreHTMLElement("ul", "\n$innerHTML", ["class" => "ml-menu"]);
 
-        $dropdown = static::coreHTMLElement("ul", "\n{$innerHTML}", ["class" => "ml-menu"]);
-
-        return "{$dropdown}\n";
+        return "$dropdown\n";
     }
 
     /**
@@ -154,7 +153,7 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
         $attributes = true === $node->getActive() ? ["class" => "active"] : [];
 
         if (0 === $node->size()) {
-            return static::coreHTMLElement("li", "\n{$anchor}", $attributes);
+            return static::coreHTMLElement("li", "\n$anchor", $attributes);
         }
 
         $items = [];
@@ -164,7 +163,7 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
 
         $dropdown = $this->renderDropdown($node, $items);
 
-        return static::coreHTMLElement("li", "\n{$anchor}{$dropdown}", $attributes);
+        return static::coreHTMLElement("li", "\n$anchor$dropdown", $attributes);
     }
 
     /**

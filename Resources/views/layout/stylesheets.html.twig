@@ -16,7 +16,7 @@
 {% endfor %}
 <link type="text/css" rel="stylesheet" href="{{ asset(_webPath ~ "/css/style.min.css") }}">
 <link type="text/css" rel="stylesheet" href="{{ asset(_webPath ~ "/css/themes/all-themes.min.css") }}">
-<style type="text/css">
+<style>
     /* === Buttons ========================================================= */
     .btn:not(.btn-link):not(.btn-circle) i.fa {
         font-size: inherit !important;
@@ -63,7 +63,7 @@
 
     /* === Sidebar menu ==================================================== */
     .sidebar .menu .list .ml-menu li.active a.toggled:not(.menu-toggle) {
-        margin-left: 0px !important;
+        margin-left: 0 !important;
     }
 
     .sidebar .menu .list .ml-menu li.active a.toggled:not(.menu-toggle)::before {
