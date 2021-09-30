@@ -110,6 +110,10 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
      */
     private function renderDropdown(NavigationNode $node, array $items): string {
 
+        if (0 === count($items)) {
+            return "";
+        }
+
         $innerHTML = implode("\n", $items);
         $dropdown  = static::coreHTMLElement("ul", "\n$innerHTML", ["class" => "ml-menu"]);
 
