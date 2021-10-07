@@ -1,7 +1,7 @@
 {# Resources/views/Registration/register.html.twig #}
 {% extends "@WBWAdminBSB/layout.html.twig" %}
 
-{% block adminBSBTitle %}{{ ApplicationThemeProvider.title|default("AdminBSB Material Design") }} - {{ "layout.register"|trans({}, "FOSUserBundle") }}{% endblock %}
+{% block adminBSBTitle %}{{ ApplicationThemeProvider.title | default("AdminBSB Material Design") }} - {{ "layout.register" | trans({}, "FOSUserBundle") }}{% endblock %}
 
 {% block adminBSBAttributes %} class="signup-page"{% endblock %}
 
@@ -9,19 +9,19 @@
     {{ parent() }}
     <div class="signup-box">
         <div class="logo">
-            <a href="{{ ApplicationThemeProvider.home|default("javascript: void(0);") }}">{{ ApplicationThemeProvider.name|default("AdminBSB<b>MaterielDesign</b>")|raw }}</a>
-            <small>{{ ApplicationThemeProvider.description|default("AdminBSB Material Design") }}</small>
+            <a href="{{ ApplicationThemeProvider.home | default("javascript: void(0);") }}">{{ ApplicationThemeProvider.name | default("AdminBSB<b>MaterielDesign</b>") | raw }}</a>
+            <small>{{ ApplicationThemeProvider.description | default("AdminBSB Material Design") }}</small>
         </div>
         <div class="card">
             <div class="body">
                 <form action="{{ path("fos_user_registration_register") }}" method="POST" id="sign_up">
-                    <div class="msg">{{ "layout.register"|trans({}, "FOSUserBundle") }}</div>
+                    <div class="msg">{{ "layout.register" | trans({}, "FOSUserBundle") }}</div>
                     <div class="input-group">
                         <span class="input-group-addon">
                             <i class="material-icons">person</i>
                         </span>
                         <div class="form-line">
-                            <input class="form-control" name="fos_user_registration_form[username]" type="text" placeholder="{{ "form.username"|trans({}, "FOSUserBundle") }}" maxlength="180" pattern=".{2,}" id="fos_user_registration_form_username" autofocus>
+                            <input class="form-control" name="fos_user_registration_form[username]" type="text" placeholder="{{ "form.username" | trans({}, "FOSUserBundle") }}" maxlength="180" pattern=".{2,}" id="fos_user_registration_form_username" autofocus>
                         </div>
                     </div>
                     <div class="input-group">
@@ -29,7 +29,7 @@
                             <i class="material-icons">email</i>
                         </span>
                         <div class="form-line">
-                            <input class="form-control" name="fos_user_registration_form[email]" type="email" placeholder="{{ "form.email"|trans({}, "FOSUserBundle") }}" id="fos_user_registration_form_email">
+                            <input class="form-control" name="fos_user_registration_form[email]" type="email" placeholder="{{ "form.email" | trans({}, "FOSUserBundle") }}" id="fos_user_registration_form_email">
                         </div>
                     </div>
                     <div class="input-group">
@@ -37,7 +37,7 @@
                             <i class="material-icons">lock</i>
                         </span>
                         <div class="form-line">
-                            <input class="form-control" name="fos_user_registration_form[plainPassword][first]" type="password" placeholder="{{ "form.password"|trans({}, "FOSUserBundle") }}" minlength="6" id="fos_user_registration_form_plainPassword_first">
+                            <input class="form-control" name="fos_user_registration_form[plainPassword][first]" type="password" placeholder="{{ "form.password" | trans({}, "FOSUserBundle") }}" minlength="6" id="fos_user_registration_form_plainPassword_first">
                         </div>
                     </div>
                     <div class="input-group">
@@ -45,16 +45,16 @@
                             <i class="material-icons">lock</i>
                         </span>
                         <div class="form-line">
-                            <input class="form-control" name="fos_user_registration_form[plainPassword][second]" type="password" placeholder="{{ "form.password_confirmation"|trans({}, "FOSUserBundle") }}" minlength="6" id="fos_user_registration_form_plainPassword_second">
+                            <input class="form-control" name="fos_user_registration_form[plainPassword][second]" type="password" placeholder="{{ "form.password_confirmation" | trans({}, "FOSUserBundle") }}" minlength="6" id="fos_user_registration_form_plainPassword_second">
                         </div>
                     </div>
                     <!--<div class="form-group">
                         <input class="filled-in chk-col-pink" name="fos_user_registration_form[terms]" type="checkbox" checked="checked" id="fos_user_registration_form_terms" readonly>
-                        <label for="terms">{{ 'views.FOSUserBundle.have_read_agree_terms_use'|trans({'%href%': 'javascript:void(0);'}, 'WBWAdminBSB')|raw }}</label>
+                        <label for="terms">{{ 'views.FOSUserBundle.have_read_agree_terms_use' | trans({'%href%': 'javascript:void(0);'}, 'WBWAdminBSB') | raw }}</label>
                     </div>-->
-                    <button class="btn btn-block btn-lg bg-pink waves-effect" type="submit">{{ "registration.submit"|trans({}, "FOSUserBundle")|upper }}</button>
+                    <button class="btn btn-block btn-lg bg-pink waves-effect" type="submit">{{ "registration.submit" | trans({}, "FOSUserBundle") | upper }}</button>
                     <div class="m-t-25 m-b--5 align-center">
-                        <a href="{{ path("fos_user_security_login") }}">{{ "layout.login"|trans({}, "FOSUserBundle") }}</a>
+                        <a href="{{ path("fos_user_security_login") }}">{{ "layout.login" | trans({}, "FOSUserBundle") }}</a>
                     </div>
                     {% if (form._token is defined) %}
                         <input name="fos_user_registration_form[_token]" type="hidden" value="{{ form._token.vars.value }}"/>

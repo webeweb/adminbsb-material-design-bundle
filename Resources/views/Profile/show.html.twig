@@ -1,7 +1,7 @@
 {# Resources/views/Profile/show.html.twig #}
 {% extends "@WBWAdminBSB/layout/section.html.twig" %}
 
-{% block adminBSBTitle %}{{ ApplicationThemeProvider.title|default("AdminBSB Material Design") }} - {{ "layout.logged_in_as"|trans({"%username%": app.user.username}, "FOSUserBundle") }}{% endblock %}
+{% block adminBSBTitle %}{{ ApplicationThemeProvider.title | default("AdminBSB Material Design") }} - {{ "layout.logged_in_as" | trans({"%username%": app.user.username}, "FOSUserBundle") }}{% endblock %}
 
 {% block adminBSBContent %}
     {{ parent() }}
@@ -9,11 +9,11 @@
         <div class="{{ bootstrapGrid({"lg": 12, "md": 12, "sm": 12, "xs": 12}) }}">
             <div class="card">
                 <div class="header bg-{{ getContainerParameter("wbw_adminbsb.skin") }}">
-                    {{ adminBSBCardHeader({"icon": "person", "content": "layout.logged_in_as"|trans({"%username%": app.user.username}, "FOSUserBundle")}) }}
+                    {{ adminBSBCardHeader({"icon": "person", "content": "layout.logged_in_as" | trans({"%username%": app.user.username}, "FOSUserBundle")}) }}
                 </div>
                 <div class="body">
-                    <p>{{ 'profile.show.username'|trans({}, "FOSUserBundle") }}: {{ user.username }}</p>
-                    <p>{{ 'profile.show.email'|trans({}, "FOSUserBundle") }}: {{ user.email }}</p>
+                    <p>{{ 'profile.show.username' | trans([], "FOSUserBundle") }}: {{ user.username }}</p>
+                    <p>{{ 'profile.show.email' | trans([], "FOSUserBundle") }}: {{ user.email }}</p>
                 </div>
             </div>
         </div>

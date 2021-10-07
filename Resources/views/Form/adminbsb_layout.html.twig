@@ -2,43 +2,43 @@
 {% use "form_div_layout.html.twig" %}
 
 {% block form_label %}
-    {% set label_attr = label_attr|merge({'class': (label_attr.class|default('') ~ ' form-label')|trim}) %}
+    {% set label_attr = label_attr | merge({'class': (label_attr.class | default('') ~ ' form-label') | trim}) %}
     {% if label is not same as(false) %}
         {% if not compound %}
-            {% set label_attr = label_attr|merge({'for': id}) %}
+            {% set label_attr = label_attr | merge({'for': id}) %}
         {% endif %}
         {# % if required %}
-            {% set label_attr = label_attr|merge({'class': (label_attr.class|default('') ~ ' required')|trim}) %}
+            {% set label_attr = label_attr | merge({'class': (label_attr.class | default('') ~ ' required') | trim}) %}
         {% endif % #}
         {% if label is empty %}
             {% if label_format is not empty %}
-                {% set label = label_format|replace({
+                {% set label = label_format | replace({
                     '%name%': name,
                     '%id%': id,
                 }) %}
             {% else %}
-                {% set label = name|humanize %}
+                {% set label = name | humanize %}
             {% endif %}
         {% endif %}
-        <label{% for attrname, attrvalue in label_attr %} {{ attrname }}="{{ attrvalue }}"{% endfor %}>{{ translation_domain is same as(false) ? label : label|trans({}, translation_domain) }}</label>
+        <label{% for attrname, attrvalue in label_attr %} {{ attrname }}="{{ attrvalue }}"{% endfor %}>{{ translation_domain is same as(false) ? label : label | trans({}, translation_domain) }}</label>
     {% endif %}
 {% endblock form_label %}
 
 {% block form_row %}
 
     {# Initialize #}
-    {% set adminBSBIcon = adminBSB.icon|default(null) %}
+    {% set adminBSBIcon       = adminBSB.icon | default(null) %}
     {% set adminBSBIsCheckbox = checked is defined %}
-    {% set adminBSBIsDate = (adminBSB.date is defined and adminBSB.date) or date_pattern is defined %}
+    {% set adminBSBIsDate     = (adminBSB.date is defined and adminBSB.date) or date_pattern is defined %}
     {% set adminBSBIsDisabled = (adminBSB.disabled is defined and adminBSB.disabled) ? " disabled" : "" %}
-    {% set adminBSBIsError = 0 < errors|length ? " error" : "" %}
-    {% set adminBSBIsEuro = adminBSB.euro|default(false) %}
-    {% set adminBSBIsFile = adminBSB.file|default(false) %}
-    {% set adminBSBIsFocused = 0 < value|length ? " focused" : "" %}
-    {% set adminBSBIsRadio = choices|default(false) and expanded|default(false) %}
-    {% set adminBSBIsSelect = choices|default(false) %}
-    {% set adminBSBIsSlider = adminBSB.slider is defined and adminBSB.slider %}
-    {% set adminBSBIsSpinner = adminBSB.spinner is defined and adminBSB.spinner %}
+    {% set adminBSBIsError    = 0 < errors | length ? " error" : "" %}
+    {% set adminBSBIsEuro     = adminBSB.euro | default(false) %}
+    {% set adminBSBIsFile     = adminBSB.file | default(false) %}
+    {% set adminBSBIsFocused  = 0 < value | length ? " focused" : "" %}
+    {% set adminBSBIsRadio    = choices | default(false) and expanded | default(false) %}
+    {% set adminBSBIsSelect   = choices | default(false) %}
+    {% set adminBSBIsSlider   = adminBSB.slider is defined and adminBSB.slider %}
+    {% set adminBSBIsSpinner  = adminBSB.spinner is defined and adminBSB.spinner %}
 
     {# Check the grid #}
     {% set adminBSBGrid = bootstrapGrid({"lg": 12, "md": 12, "sm": 12, "xs": 12}) %}
@@ -54,7 +54,7 @@
         {{ form_label(form) }}
         {{ form_errors(form) }}
     {% elseif adminBSBIsDate %} {# Date #}
-        <b>{{ label|trans }}</b>
+        <b>{{ label | trans }}</b>
         <div class="input-group">
             <span class="input-group-addon">
                 <i class="material-icons">date_range</i>
@@ -65,7 +65,7 @@
             </div>
         </div>
     {% elseif adminBSBIsEuro %} {# €uro #}
-        <b>{{ label|trans }}</b>
+        <b>{{ label | trans }}</b>
         <div class="input-group">
             <span class="input-group-addon">
                 <i class="material-icons">euro_symbol</i>
@@ -85,7 +85,7 @@
         {{ form_widget(form, {"div_class": adminBSBGrid}) }}
         {{ form_errors(form) }}
     {% elseif adminBSBIsSelect %} {# Select #}
-        {% set adminBSBSelectSearch = adminBSB.selectSearch|default(false) %}
+        {% set adminBSBSelectSearch = adminBSB.selectSearch | default(false) %}
         {% if (adminBSBIcon is not null) %}
             {{ form_label(form) }}
             <div class="input-group">
@@ -101,12 +101,12 @@
             {{ form_errors(form) }}
         {% endif %}
     {% elseif adminBSBIsSpinner %} {# Spinner #}
-        {% set adminBSBSpinnerMin = adminBSB.spinnerMin|default(0) %}
-        {% set adminBSBSpinnerMax = adminBSB.spinnerMax|default(65536) %}
-        {% set adminBSBSpinnerStep = adminBSB.spinnerStep|default(1) %}
-        {% set adminBSBSpinnerPrecision = adminBSB.spinnerPrecision|default(0) %}
-        {% set adminBSBSpinnerRule = adminBSB.spinnerType|default("quantity") %}
-        <b>{{ label|trans }}</b>
+        {% set adminBSBSpinnerMin = adminBSB.spinnerMin | default(0) %}
+        {% set adminBSBSpinnerMax = adminBSB.spinnerMax | default(65536) %}
+        {% set adminBSBSpinnerStep = adminBSB.spinnerStep | default(1) %}
+        {% set adminBSBSpinnerPrecision = adminBSB.spinnerPrecision | default(0) %}
+        {% set adminBSBSpinnerRule = adminBSB.spinnerType | default("quantity") %}
+        <b>{{ label | trans }}</b>
         <div class="input-group spinner" data-trigger="spinner">
             {% if (adminBSBIcon is not null) %}
                 <span class="input-group-addon">
@@ -126,7 +126,7 @@
         {% if (adminBSBIcon is not null) %}
             <i class="material-icons">{{ adminBSBIcon }}</i>
         {% endif %}
-        <b>{{ label|trans }}</b>
+        <b>{{ label | trans }}</b>
         {{ form_widget(form, {"attr": {"class": "form-control"} }) }}
         {{ form_errors(form) }}
     {% else %} {# Text #}

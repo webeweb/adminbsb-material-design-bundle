@@ -1,7 +1,7 @@
 {# Resources/views/layout/section.html.twig #}
 {% extends "@WBWAdminBSB/layout.html.twig" %}
 
-{% block adminBSBTitle %}{{ ApplicationThemeProvider.title|default("AdminBSB Material Design") }}{% endblock %}
+{% block adminBSBTitle %}{{ ApplicationThemeProvider.title | default("AdminBSB Material Design") }}{% endblock %}
 
 {% block adminBSBAttributes %} class="theme-{{ getContainerParameter("wbw_adminbsb.skin") }}"{% endblock %}
 
@@ -19,7 +19,7 @@
                     </div>
                 </div>
             </div>
-            <p>{{ "views.layout.loader.wait"|trans({}, "WBWAdminBSBBundle") }}</p>
+            <p>{{ "views.layout.loader.wait" | trans({}, "WBWAdminBSBBundle") }}</p>
         </div>
     </div>
     <div class="overlay"></div>
@@ -29,7 +29,7 @@
             <div class="navbar-header">
                 <a class="navbar-toggle collapsed" href="javascript:void(0);" aria-expanded="false" data-target="#navbar-collapse" data-toggle="collapse"></a>
                 <a class="bars" href="javascript:void(0);"></a>
-                <a class="navbar-brand" href="javascript:void(0);">{{ ApplicationThemeProvider.name|default("")|raw }}</a>
+                <a class="navbar-brand" href="javascript:void(0);">{{ ApplicationThemeProvider.name | default("") | raw }}</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -71,7 +71,7 @@
     </section>
     <section class="content">
         <div class="container-fluid">
-            {% if (0 < app.session.flashbag.peekAll()|length) %}
+            {% if (0 < app.session.flashbag.peekAll() | length) %}
                 {% include "@WBWAdminBSB/layout/flashbag.html.twig" %}
             {% endif %}
             {% block adminBSBContent %}
