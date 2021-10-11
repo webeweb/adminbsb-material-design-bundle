@@ -93,24 +93,24 @@
 #
 # @param FormInterface $form The form.
 # @param string|null $icon The icon.
-# @param bool|null $search Search ?
+# @param bool|null $liveSearch Live search ?
 # @return string Returns the inpuit "select".
 #}
-{% macro inputSelect(form, icon, search) %}
-    {% set _icon   = icon | default(null) %}
-    {% set _search = search | default(false) %}
+{% macro inputSelect(form, icon, liveSearch) %}
+    {% set _icon       = icon | default(null) %}
+    {% set _liveSearch = liveSearch | default(false) %}
     {% if (_icon is not null) %}
         {{ form_label(form) }}
         <div class="input-group">
             <span class="input-group-addon">
                 <i class="material-icons">{{ _icon }}</i>
             </span>
-            {{ form_widget(form, {"attr": {"class": "form-control show-tick", "data-live-search": _search} }) }}
+            {{ form_widget(form, {"attr": {"class": "form-control show-tick", "data-live-search": _liveSearch} }) }}
             {{ form_errors(form) }}
         </div>
     {% else %}
         {{ form_label(form) }}
-        {{ form_widget(form, {"attr": {"class": "form-control show-tick", "data-live-search": _search} }) }}
+        {{ form_widget(form, {"attr": {"class": "form-control show-tick", "data-live-search": _liveSearch} }) }}
         {{ form_errors(form) }}
     {% endif %}
 {% endmacro %}

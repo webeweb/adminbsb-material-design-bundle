@@ -50,7 +50,7 @@
     {% elseif (true == _isRadio) %}
         {{ formMacros.inputRadio(form) }}
     {% elseif (true == _isSelect) %}
-        {{ formMacros.inputSelect(form, adminBSB.icon | default(null), adminBSB.search | default(null)) }}
+        {{ formMacros.inputSelect(form, adminBSB.icon | default(null), adminBSB.liveSearch | default(null)) }}
     {% elseif (true == _isSlider) %}
         {{ formMacros.inputSlider(form, adminBSB.icon | default(null)) }}
     {% elseif (true == _isSpinner) %}
