@@ -1,0 +1,202 @@
+{# Resources/Form/form_macros.html.twig #}
+
+{#
+# Displays an input "checkbox".
+#
+# @param FormInterface $form The form.
+# @param bool|null $filledIn Filled in ?.
+# @param string|null $color The color.
+# @return string Returns the input "checkbox".
+#}
+{% macro inputCheckbox(form, filledIn, color) %}
+    {% set _filledIn = filledIn | default(true) ? " filled-in" : "" %}
+    {% set _color    = null != color ? " chk-col-" ~ color : "" %}
+    {{ form_widget(form, {"attr": {"class": "form-control" ~ _filledIn ~ _color } }) }}
+    {{ form_label(form) }}
+    {{ form_errors(form) }}
+{% endmacro %}
+
+{#
+# Displays an input "date".
+#
+# @param FormInterface $form The form.
+# @param string|null $icon The icon.
+# @param string|null $errors The errors.
+# @param string|null $value The value.
+# @return string Returns the input "date".
+#}
+{% macro inputDate(form, icon, errors, value) %}
+    {% set _icon     = icon | default("date_range") %}
+    {% set _disabled = true == form.vars.disabled ? " disabled" : "" %}
+    {% set _error    = 0 < errors | length ? " error" : "" %}
+    {% set _focused  = 0 < value | length ? " focused" : "" %}
+    <b>{{ label|trans }}</b>
+    <div class="input-group">
+        <span class="input-group-addon">
+            <i class="material-icons">{{ _icon }}</i>
+        </span>
+        <div class="form-line{{ _disabled }}{{ _error }}{{ _focused }}">
+            {{ form_widget(form, {"attr": {"class": "form-control date", "placeholder" : "Ex : 2016-07-30"} }) }}
+            {{ form_errors(form) }}
+        </div>
+    </div>
+{% endmacro %}
+
+{#
+# Displays a input "money".
+#
+# @param FormInterface $form The form.
+# @param string|null $icon The icon.
+# @return string Returns the input "money".
+#}
+{% macro inputMoney(form, icon) %}
+    {% set _icon = icon | default("euro_symbol") %}
+    <b>{{ label|trans }}</b>
+    <div class="input-group">
+        <span class="input-group-addon">
+            <i class="material-icons">{{ _icon }}</i>
+        </span>
+        <div class="form-line">
+            {{ form_widget(form, {"attr": {"class": "form-control money-euro", "placeholder": "Ex : 99.99 €"} }) }}
+            {{ form_errors(form) }}
+        </div>
+    </div>
+{% endmacro %}
+
+{#
+# Displays a input "file".
+#
+# @param FormInterface $form The form.
+# @return string Returns the input "file".
+#}
+{% macro inputFile(form) %}
+    <div class="form-group">
+        {{ form_label(form) }}
+        {{ form_widget(form) }}
+        {{ form_errors(form) }}
+    </div>
+{% endmacro %}
+
+{#
+# Displays a input "radio".
+#
+# @param FormInterface $form The form.
+# @return string Returns the input "radio".
+#}
+{% macro inputRadio(form) %}
+    {{ form_widget(form) }}
+    {{ form_errors(form) }}
+{% endmacro %}
+
+{#
+# Displays an input "select".
+#
+# @param FormInterface $form The form.
+# @param string|null $icon The icon.
+# @param bool|null $search Search ?
+# @return string Returns the inpuit "select".
+#}
+{% macro inputSelect(form, icon, search) %}
+    {% set _icon   = icon | default(null) %}
+    {% set _search = search | default(false) %}
+    {% if (_icon is not null) %}
+        {{ form_label(form) }}
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="material-icons">{{ _icon }}</i>
+            </span>
+            {{ form_widget(form, {"attr": {"class": "form-control show-tick", "data-live-search": _search} }) }}
+            {{ form_errors(form) }}
+        </div>
+    {% else %}
+        {{ form_label(form) }}
+        {{ form_widget(form, {"attr": {"class": "form-control show-tick", "data-live-search": _search} }) }}
+        {{ form_errors(form) }}
+    {% endif %}
+{% endmacro %}
+
+{#
+# Displays a input "slider".
+#
+# @param FormInterface $form The form.
+# @param string|null $icon The icon.
+# @return string Returns the input "slider".
+#}
+{% macro inputSlider(form, icon) %}
+    {% if (icon is not null) %}
+        <i class="material-icons">{{ icon }}</i>
+    {% endif %}
+    <b>{{ label|trans }}</b>
+    {{ form_widget(form, {"attr": {"class": "form-control"} }) }}
+    {{ form_errors(form) }}
+{% endmacro %}
+
+{#
+# Displays a input "spinner".
+#
+# @param FormInterface $form The form.
+# @param string|null $icon The icon.
+# @param string|null $rule The rule.
+# @param int|null $min The min.
+# @param int|null $max The max.
+# @param float|null $step The step.
+# @param float|null $precision The precision.
+# @return string Returns the input "spinner".
+#}
+{% macro inputSpinner(form, icon, rule, min, max, step, precision) %}
+    {% set _min       = min | default(0) %}
+    {% set _max       = max | default(65536) %}
+    {% set _step      = step | default(1) %}
+    {% set _precision = precision | default(0) %}
+    {% set _rule      = type | default("quantity") %}
+    <b>{{ label|trans }}</b>
+    <div class="input-group spinner" data-trigger="spinner">
+        {% if (icon is not null) %}
+            <span class="input-group-addon">
+                <i class="material-icons">{{ icon }}</i>
+            </span>
+        {% endif %}
+        <div class="form-line">
+            {{ form_widget(form, {"attr": {"class": "form-control text-center", "data-rule" : _rule, "data-min": _min, "data-max": _max, "data-step": _step, "data-precision": _precision}, "type": "text" }) }}
+            {{ form_errors(form) }}
+        </div>
+        <span class="input-group-addon">
+            <a href="javascript: void(0);" class="spin-up" data-spin="up"><i class="glyphicon glyphicon-chevron-up"></i></a>
+            <a href="javascript: void(0);" class="spin-down" data-spin="down"><i class="glyphicon glyphicon-chevron-down"></i></a>
+        </span>
+    </div>
+{% endmacro %}
+
+{#
+# Displays a input "text".
+#
+# @param FormInterface $form The form.
+# @param string|null $icon The icon.
+# @param string|null $errors The errors.
+# @param string|null $value The value.
+# @return string Returns the input "text".
+#}
+{% macro inputText(form, icon, errors, value) %}
+    {% set _disabled = true == form.vars.disabled ? " disabled" : "" %}
+    {% set _error    = 0 < errors | length ? " error" : "" %}
+    {% set _focused  = 0 < value | length ? " focused" : "" %}
+    {% if (icon is not null) %}
+        <div class="input-group">
+                <span class="input-group-addon">
+                    <i class="material-icons">{{ icon }}</i>
+                </span>
+            <div class="form-line{{ _disabled }}{{ _error }}{{ _focused }}">
+                {{ form_widget(form, {"attr": {"class": "form-control", "placeholder": label} }) }}
+                {{ form_errors(form) }}
+            </div>
+        </div>
+    {% else %}
+        <div class="form-group form-float">
+            <div class="form-line{{ _disabled }}{{ _error }}{{ _focused }}">
+                {{ form_widget(form, {"attr": {"class": "form-control"} }) }}
+                {{ form_label(form) }}
+                {{ form_errors(form) }}
+            </div>
+        </div>
+    {% endif %}
+{% endmacro %}
