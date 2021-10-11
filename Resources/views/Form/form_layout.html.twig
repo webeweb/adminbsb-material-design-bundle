@@ -56,7 +56,7 @@
     {% elseif (true == _isSpinner) %}
         {{ formMacros.inputSpinner(form, adminBSB.icon | default(null), adminBSB.rule | default(null), adminBSB.min | default(null), adminBSB.max | default(null), adminBSB.step | default(null), adminBSB.precision | default(null)) }}
     {% else %}
-        {{ formMacros.inputText(form, adminBSB.icon | default(null), errors, value) }}
+        {{ formMacros.inputText(form, adminBSB.icon | default(null), errors, value, label) }}
     {% endif %}
 
 {% endblock form_row %}

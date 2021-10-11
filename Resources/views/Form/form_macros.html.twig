@@ -174,19 +174,21 @@
 # @param string|null $icon The icon.
 # @param string|null $errors The errors.
 # @param string|null $value The value.
+# @param string|null $label The label.
 # @return string Returns the input "text".
 #}
-{% macro inputText(form, icon, errors, value) %}
-    {% set _disabled = true == form.vars.disabled ? " disabled" : "" %}
-    {% set _error    = 0 < errors | length ? " error" : "" %}
-    {% set _focused  = 0 < value | length ? " focused" : "" %}
+{% macro inputText(form, icon, errors, value, label) %}
+    {% set _disabled    = true == form.vars.disabled ? " disabled" : "" %}
+    {% set _error       = 0 < errors | length ? " error" : "" %}
+    {% set _focused     = 0 < value | length ? " focused" : "" %}
+    {% set _placeholder = label %}
     {% if (icon is not null) %}
         <div class="input-group">
                 <span class="input-group-addon">
                     <i class="material-icons">{{ icon }}</i>
                 </span>
             <div class="form-line{{ _disabled }}{{ _error }}{{ _focused }}">
-                {{ form_widget(form, {"attr": {"class": "form-control", "placeholder": label} }) }}
+                {{ form_widget(form, {"attr": {"class": "form-control", "placeholder": _placeholder} }) }}
                 {{ form_errors(form) }}
             </div>
         </div>
