@@ -200,9 +200,9 @@ assets:
                 version:     0.9.12
                 description: "jQuery MultiSelect"
                 stylesheets:
-                    - "/plugins/multi-select/multi-select.css"
+                    - "/plugins/multi-select/css/multi-select.css"
                 javascripts:
-                    - "/plugins/multi-select/jquery.multi-select.js"
+                    - "/plugins/multi-select/js/jquery.multi-select.js"
             jquery_nestable:
                 version:
                 description: "jQuery Nestable"
