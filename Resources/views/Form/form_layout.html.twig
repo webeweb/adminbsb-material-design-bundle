@@ -1,6 +1,16 @@
 {# Resources/Form/form_layout.html.twig #}
 {% use "form_div_layout.html.twig" %}
 
+{% block form_errors %}
+    {% if (0 < errors | length %}
+        <ul class="form-errors">
+            {% for error in errors %}
+                <li>{{ error.message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock form_errors %}
+
 {% block form_label %}
     {% set label_attr = label_attr|merge({'class': (label_attr.class|default('') ~ ' form-label')|trim}) %}
     {% if label is not same as(false) %}
