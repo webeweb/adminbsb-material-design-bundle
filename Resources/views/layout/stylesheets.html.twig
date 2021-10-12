@@ -10,7 +10,7 @@
         {% if ("prod" != app.environment and true == loop.first) %}
             <!-- {{ _plugins[_appPlugin].description }} -->
         {% endif %}
-        {% set _path = (_webPath ~ _javascript) | replace(_replaces) %}
+        {% set _path = (_webPath ~ _javascript)|replace(_replaces) %}
         <link type="text/css" rel="stylesheet" href="{{ asset(_path) }}">
     {% endfor %}
 {% endfor %}

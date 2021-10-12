@@ -1,7 +1,7 @@
 {# Resources/views/Resetting/check_email.html.twig #}
 {% extends "@WBWAdminBSB/layout.html.twig" %}
 
-{% block adminBSBTitle %}{{ ApplicationThemeProvider.title | default("AdminBSB Material Design") }} - {{ "resetting.request.submit" | trans({}, "FOSUserBundle") }}{% endblock %}
+{% block adminBSBTitle %}{{ ApplicationThemeProvider.title|default("AdminBSB Material Design") }} - {{ "resetting.request.submit"|trans([], "FOSUserBundle") }}{% endblock %}
 
 {% block adminBSBAttributes %} class="fp-page"{% endblock %}
 
@@ -9,16 +9,16 @@
     {{ parent() }}
     <div class="fp-box">
         <div class="logo">
-            <a href="{{ ApplicationThemeProvider.home | default("javascript: void(0);") }}">{{ ApplicationThemeProvider.name | default("AdminBSB<b>MaterielDesign</b>") | raw }}</a>
-            <small>{{ ApplicationThemeProvider.description | default("AdminBSB Material Design") }}</small>
+            <a href="{{ ApplicationThemeProvider.home|default("javascript: void(0);") }}">{{ ApplicationThemeProvider.name|default("AdminBSB<b>MaterielDesign</b>")|raw }}</a>
+            <small>{{ ApplicationThemeProvider.description|default("AdminBSB Material Design") }}</small>
         </div>
         <div class="card">
             <div class="body">
                 <div class="msg">
-                    {{ "registration.check_email" | trans({"%email%": app.request.query.get("username")}, "FOSUserBundle") }}
+                    {{ "registration.check_email"|trans({"%email%": app.request.query.get("username")}, "FOSUserBundle") }}
                 </div>
                 <div class="row m-t-20 m-b--5 align-center">
-                    <a href="{{ path("fos_user_security_login") }}">{{ "layout.login" | trans({}, "FOSUserBundle") }}</a>
+                    <a href="{{ path("fos_user_security_login") }}">{{ "layout.login"|trans([], "FOSUserBundle") }}</a>
                 </div>
             </div>
         </div>

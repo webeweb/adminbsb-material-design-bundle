@@ -1,7 +1,7 @@
 {# Resources/views/Security/login.html.twig #}
 {% extends "@WBWAdminBSB/layout.html.twig" %}
 
-{% block adminBSBTitle %}{{ ApplicationThemeProvider.title | default("AdminBSB Material Design") }} - {{ "layout.login" | trans({}, "FOSUserBundle") }}{% endblock %}
+{% block adminBSBTitle %}{{ ApplicationThemeProvider.title|default("AdminBSB Material Design") }} - {{ "layout.login"|trans([], "FOSUserBundle") }}{% endblock %}
 
 {% block adminBSBAttributes %} class="login-page"{% endblock %}
 
@@ -9,21 +9,21 @@
     {{ parent() }}
     <div class="login-box">
         <div class="logo">
-            <a href="{{ ApplicationThemeProvider.home | default("javascript: void(0);") }}">{{ ApplicationThemeProvider.name | default("AdminBSB<b>MaterielDesign</b>") | raw }}</a>
-            <small>{{ ApplicationThemeProvider.description | default("AdminBSB Material Design") }}</small>
+            <a href="{{ ApplicationThemeProvider.home|default("javascript: void(0);") }}">{{ ApplicationThemeProvider.name|default("AdminBSB<b>MaterielDesign</b>")|raw }}</a>
+            <small>{{ ApplicationThemeProvider.description|default("AdminBSB Material Design") }}</small>
         </div>
         <div class="card">
             <div class="body">
                 <form action="{{ path("fos_user_security_check") }}" method="POST" id="sign_in">
-                    <div class="msg">{{ "layout.login" | trans({}, "FOSUserBundle") }}</div>
+                    <div class="msg">{{ "layout.login"|trans([], "FOSUserBundle") }}</div>
                     <div class="input-group">
                         <span class="input-group-addon">
                             <i class="material-icons">person</i>
                         </span>
                         <div class="form-line{{ error ? "error" : "" }}">
-                            <input class="form-control" name="_username" type="text" value="{{ last_username }}" placeholder="{{ "form.username" | trans({}, "FOSUserBundle") }}" autofocus>
+                            <input class="form-control" name="_username" type="text" value="{{ last_username }}" placeholder="{{ "form.username"|trans([], "FOSUserBundle") }}" autofocus>
                             {% if (error) %}
-                                <label class="error" for="_username">{{ error.messageKey | trans(error.messageData, "security") }}</label>
+                                <label class="error" for="_username">{{ error.messageKey|trans(error.messageData, "security") }}</label>
                             {% endif %}
                         </div>
                     </div>
@@ -32,27 +32,27 @@
                             <i class="material-icons">lock</i>
                         </span>
                         <div class="form-line">
-                            <input class="form-control" name="_password" type="password" placeholder="{{ "form.password" | trans({}, "FOSUserBundle") }}">
+                            <input class="form-control" name="_password" type="password" placeholder="{{ "form.password"|trans([], "FOSUserBundle") }}">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-7 p-t-5">
                             <input class="filled-in chk-col-pink" name="_remember_me" type="checkbox" id="rememberme">
-                            <label for="rememberme">{{ "security.login.remember_me" | trans({}, "FOSUserBundle") }}</label>
+                            <label for="rememberme">{{ "security.login.remember_me"|trans([], "FOSUserBundle") }}</label>
                         </div>
                         <div class="col-xs-5">
-                            <button class="btn btn-block bg-pink waves-effect" type="submit">{{ "security.login.submit" | trans({}, "FOSUserBundle") | upper }}</button>
+                            <button class="btn btn-block bg-pink waves-effect" type="submit">{{ "security.login.submit"|trans([], "FOSUserBundle")|upper }}</button>
                         </div>
                     </div>
                     <div class="row m-t-15 m-b--20">
                         <div class="col-xs-6">
-                            {% if (UserInfoThemeProvider.provideRegisterLink() | default(false)) %}
-                                <a href="{{ path("fos_user_registration_register") }}">{{ "layout.register" | trans({}, "FOSUserBundle") }}</a>
+                            {% if (UserInfoThemeProvider.provideRegisterLink()|default(false)) %}
+                                <a href="{{ path("fos_user_registration_register") }}">{{ "layout.register"|trans([], "FOSUserBundle") }}</a>
                             {% endif %}
                         </div>
                         <div class="col-xs-6 align-right">
-                            {% if (UserInfoThemeProvider.provideResettingLink() | default(false)) %}
-                                <a href="{{ path("fos_user_resetting_request") }}">{{ "resetting.request.submit" | trans({}, "FOSUserBundle") }}</a>
+                            {% if (UserInfoThemeProvider.provideResettingLink()|default(false)) %}
+                                <a href="{{ path("fos_user_resetting_request") }}">{{ "resetting.request.submit"|trans([], "FOSUserBundle") }}</a>
                             {% endif %}
                         </div>
                     </div>

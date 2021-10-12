@@ -2,7 +2,7 @@
 {% use "form_div_layout.html.twig" %}
 
 {% block form_errors %}
-    {% if (0 < errors | length %}
+    {% if (0 < errors|length %}
         <ul class="form-errors">
             {% for error in errors %}
                 <li>{{ error.message }}</li>
@@ -30,7 +30,7 @@
                 {% set label = name|humanize %}
             {% endif %}
         {% endif %}
-        <label{% for attrname, attrvalue in label_attr %} {{ attrname }}="{{ attrvalue }}"{% endfor %}>{{ translation_domain is same as(false) ? label : label|trans({}, translation_domain) }}</label>
+        <label{% for attrname, attrvalue in label_attr %} {{ attrname }}="{{ attrvalue }}"{% endfor %}>{{ translation_domain is same as(false) ? label : label|trans([], translation_domain) }}</label>
     {% endif %}
 {% endblock form_label %}
 
@@ -43,30 +43,30 @@
     {% set _isDate     = adminBSB.date is defined or date_pattern is defined %}
     {% set _isEuro     = adminBSB.euro is defined %}
     {% set _isFile     = adminBSB.file is defined %}
-    {% set _isRadio    = choices is defined and expanded | default(false) %}
+    {% set _isRadio    = choices is defined and expanded|default(false) %}
     {% set _isSelect   = choices is defined %}
     {% set _isSlider   = adminBSB.slider is defined and adminBSB.slider %}
     {% set _isSpinner  = adminBSB.spinner is defined and adminBSB.spinner %}
 
     {# Components #}
     {% if (true == _isCheckbox) %}
-        {{ formMacros.inputCheckbox(form, adminBSB.filledIn | default(null), adminBSB.color | default(null)) }}
+        {{ formMacros.inputCheckbox(form, adminBSB.filledIn|default(null), adminBSB.color|default(null)) }}
     {% elseif (true == _isDate) %}
-        {{ formMacros.inputDate(form, adminBSB.icon | default(null), errors, value) }}
+        {{ formMacros.inputDate(form, adminBSB.icon|default(null), errors, value) }}
     {% elseif (true == _isEuro) %}
-        {{ formMacros.inputMoney(form, adminBSB.icon | default(null)) }}
+        {{ formMacros.inputMoney(form, adminBSB.icon|default(null)) }}
     {% elseif (true == _isFile) %}
         {{ formMacros.inputFile(form) }}
     {% elseif (true == _isRadio) %}
         {{ formMacros.inputRadio(form) }}
     {% elseif (true == _isSelect) %}
-        {{ formMacros.inputSelect(form, adminBSB.icon | default(null), adminBSB.liveSearch | default(null)) }}
+        {{ formMacros.inputSelect(form, adminBSB.icon|default(null), adminBSB.liveSearch|default(null)) }}
     {% elseif (true == _isSlider) %}
-        {{ formMacros.inputSlider(form, adminBSB.icon | default(null)) }}
+        {{ formMacros.inputSlider(form, adminBSB.icon|default(null)) }}
     {% elseif (true == _isSpinner) %}
-        {{ formMacros.inputSpinner(form, adminBSB.icon | default(null), adminBSB.rule | default(null), adminBSB.min | default(null), adminBSB.max | default(null), adminBSB.step | default(null), adminBSB.precision | default(null)) }}
+        {{ formMacros.inputSpinner(form, adminBSB.icon|default(null), adminBSB.rule|default(null), adminBSB.min|default(null), adminBSB.max|default(null), adminBSB.step|default(null), adminBSB.precision|default(null)) }}
     {% else %}
-        {{ formMacros.inputText(form, adminBSB.icon | default(null), errors, value, label) }}
+        {{ formMacros.inputText(form, adminBSB.icon|default(null), errors, value, label) }}
     {% endif %}
 
 {% endblock form_row %}
