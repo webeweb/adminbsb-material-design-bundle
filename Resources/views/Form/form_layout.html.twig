@@ -2,7 +2,7 @@
 {% use "form_div_layout.html.twig" %}
 
 {% block form_errors %}
-    {% if (0 < errors|length %}
+    {% if (0 < errors|length) %}
         <ul class="form-errors">
             {% for error in errors %}
                 <li>{{ error.message }}</li>
