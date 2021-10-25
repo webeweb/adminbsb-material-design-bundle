@@ -82,6 +82,8 @@ services:
         class:  WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ProgressBarTwigExtension
         arguments: [ "@twig" ]
         public: true
+        calls:
+            - [ "setVersion", [ "%wbw_bootstrap.version%" ] ]
         tags:
             - { name: "twig.extension" }
 

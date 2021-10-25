@@ -92,6 +92,9 @@ class WBWAdminBSBExtensionTest extends AbstractTestCase {
      */
     public function testLoad(): void {
 
+        // Set the Container builder.
+        $this->containerBuilder->getParameterBag()->set("wbw_bootstrap.version", 3);
+
         $obj = new WBWAdminBSBExtension();
 
         $obj->load($this->configs, $this->containerBuilder);
@@ -107,7 +110,7 @@ class WBWAdminBSBExtensionTest extends AbstractTestCase {
         // Plugin Twig extensions
         $this->assertInstanceOf(DatetimePickerTwigExtension::class, $this->containerBuilder->get(DatetimePickerTwigExtension::SERVICE_NAME));
 
-        // Typography Twig extensions.
+        // Typography Twig extensions
         $this->assertInstanceOf(TypographyTwigExtension::class, $this->containerBuilder->get(TypographyTwigExtension::SERVICE_NAME));
 
         // UI Twig extensions
