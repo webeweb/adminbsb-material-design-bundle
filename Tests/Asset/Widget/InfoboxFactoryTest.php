@@ -42,11 +42,19 @@ class InfoboxFactoryTest extends AbstractTestCase {
 
         // Set the Arguments mock.
         $this->args = [
-            "color"         => "color",
-            "contentNumber" => "contentNumber",
-            "contentText"   => "contentText",
-            "iconColor"     => "iconColor",
-            "iconName"      => "iconName",
+            "color"             => "color",
+            "contentNumber"     => "contentNumber",
+            "contentText"       => "contentText",
+            "iconColor"         => "iconColor",
+            "iconName"          => "iconName",
+            "countTo"           => [
+                "data-from"           => 0,
+                "data-to"             => 125,
+                "data-speed"          => 1000,
+                "data-fresh-interval" => 20,
+            ],
+            "hoverExpandEffect" => true,
+            "hoverZoomEffect"   => true,
         ];
     }
 
@@ -126,6 +134,10 @@ class InfoboxFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["contentText"], $obj->getContentText());
         $this->assertEquals($this->args["iconColor"], $obj->getIconColor());
         $this->assertEquals($this->args["iconName"], $obj->getIconName());
+
+        $this->assertEquals($this->args["countTo"], $obj->getCountTo());
+        $this->assertEquals($this->args["hoverExpandEffect"], $obj->getHoverExpandEffect());
+        $this->assertEquals($this->args["hoverZoomEffect"], $obj->getHoverZoomEffect());
     }
 
     /**
@@ -144,6 +156,10 @@ class InfoboxFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["contentText"], $obj->getContentText());
         $this->assertEquals($this->args["iconColor"], $obj->getIconColor());
         $this->assertEquals($this->args["iconName"], $obj->getIconName());
+
+        $this->assertEquals($this->args["countTo"], $obj->getCountTo());
+        $this->assertEquals($this->args["hoverExpandEffect"], $obj->getHoverExpandEffect());
+        $this->assertEquals($this->args["hoverZoomEffect"], $obj->getHoverZoomEffect());
     }
 
     /**
@@ -162,6 +178,10 @@ class InfoboxFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["contentText"], $obj->getContentText());
         $this->assertEquals($this->args["iconColor"], $obj->getIconColor());
         $this->assertEquals($this->args["iconName"], $obj->getIconName());
+
+        $this->assertEquals($this->args["countTo"], $obj->getCountTo());
+        $this->assertEquals($this->args["hoverExpandEffect"], $obj->getHoverExpandEffect());
+        $this->assertEquals($this->args["hoverZoomEffect"], $obj->getHoverZoomEffect());
     }
 
     /**
@@ -180,6 +200,10 @@ class InfoboxFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["contentText"], $obj->getContentText());
         $this->assertEquals($this->args["iconColor"], $obj->getIconColor());
         $this->assertEquals($this->args["iconName"], $obj->getIconName());
+
+        $this->assertEquals($this->args["countTo"], $obj->getCountTo());
+        $this->assertEquals($this->args["hoverExpandEffect"], $obj->getHoverExpandEffect());
+        $this->assertEquals($this->args["hoverZoomEffect"], $obj->getHoverZoomEffect());
     }
 
     /**
@@ -198,5 +222,9 @@ class InfoboxFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["contentText"], $obj->getContentText());
         $this->assertEquals($this->args["iconColor"], $obj->getIconColor());
         $this->assertEquals($this->args["iconName"], $obj->getIconName());
+
+        $this->assertEquals($this->args["countTo"], $obj->getCountTo());
+        $this->assertEquals($this->args["hoverExpandEffect"], $obj->getHoverExpandEffect());
+        $this->assertEquals($this->args["hoverZoomEffect"], $obj->getHoverZoomEffect());
     }
 }

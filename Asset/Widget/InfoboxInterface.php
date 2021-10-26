@@ -48,6 +48,27 @@ interface InfoboxInterface {
     public function getContentText(): ?string;
 
     /**
+     * Get the count to.
+     *
+     * @return array|null Returns the count to.
+     */
+    public function getCountTo(): ?array;
+
+    /**
+     * Get the hover expand effect.
+     *
+     * @return bool|null Returns the hover expand effect.
+     */
+    public function getHoverExpandEffect(): ?bool;
+
+    /**
+     * Get the hover zoom effect.
+     *
+     * @return bool|null Returns the hover zoom effect.
+     */
+    public function getHoverZoomEffect(): ?bool;
+
+    /**
      * Get the icon color.
      *
      * @return string|null Returns the icon color.
@@ -92,6 +113,30 @@ interface InfoboxInterface {
      * @return InfoboxInterface Returns this infobox.
      */
     public function setContentText(?string $contentText): InfoboxInterface;
+
+    /**
+     * Set the count to.
+     *
+     * @param array|null $countTo The count to.
+     * @return InfoboxInterface Returns this infobox.
+     */
+    public function setCountTo(?array $countTo): InfoboxInterface;
+
+    /**
+     * Set the hover expand effect.
+     *
+     * @param bool|null $hoverExpandEffect The hover expand effect.
+     * @return InfoboxInterface Returns this infobox.
+     */
+    public function setHoverExpandEffect(?bool $hoverExpandEffect): InfoboxInterface;
+
+    /**
+     * Set the hover zoom effect.
+     *
+     * @param bool|null $hoverZoomEffect The hover zoom effect.
+     * @return InfoboxInterface Returns this infobox.
+     */
+    public function setHoverZoomEffect(?bool $hoverZoomEffect): InfoboxInterface;
 
     /**
      * Set the icon color.

@@ -39,6 +39,36 @@ class InfoboxRendererTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the renderHoverExpandEffect() method.
+     *
+     * @return void
+     */
+    public function testRenderHoverExpandEffect(): void {
+
+        // Set an Infobox mock.
+        $infobox = new Infobox1();
+        $infobox->setHoverExpandEffect(true);
+
+        $res = InfoboxRenderer::renderHoverExpandEffect($infobox);
+        $this->assertEquals("hover-expand-effect", $res);
+    }
+
+    /**
+     * Tests the renderHoverZoomEffect() method.
+     *
+     * @return void
+     */
+    public function testRenderHoverZoomEffect(): void {
+
+        // Set an Infobox mock.
+        $infobox = new Infobox1();
+        $infobox->setHoverZoomEffect(true);
+
+        $res = InfoboxRenderer::renderHoverZoomEffect($infobox);
+        $this->assertEquals("hover-zoom-effect", $res);
+    }
+
+    /**
      * Tests the renderIconColor() method.
      *
      * @return void

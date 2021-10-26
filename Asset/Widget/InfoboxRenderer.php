@@ -32,6 +32,26 @@ class InfoboxRenderer {
     }
 
     /**
+     * Render an hover expand effect.
+     *
+     * @param InfoboxInterface $infobox The infobox.
+     * @return string|null Returns the hover expand effect.
+     */
+    public static function renderHoverExpandEffect(InfoboxInterface $infobox): ?string {
+        return true === $infobox->getHoverExpandEffect() ? "hover-expand-effect" : null;
+    }
+
+    /**
+     * Render an hover zoom effect.
+     *
+     * @param InfoboxInterface $infobox The infobox.
+     * @return string|null Returns the hover zoom effect.
+     */
+    public static function renderHoverZoomEffect(InfoboxInterface $infobox): ?string {
+        return true === $infobox->getHoverZoomEffect() ? "hover-zoom-effect" : null;
+    }
+
+    /**
      * Render an icon color.
      *
      * @param InfoboxInterface $infobox The infobox.

@@ -81,6 +81,10 @@ class InfoboxFactory {
         $infobox->setIconColor(ArrayHelper::get($args, "iconColor", $defaultIconColor));
         $infobox->setIconName(ArrayHelper::get($args, "iconName"));
 
+        $infobox->setCountTo(ArrayHelper::get($args, "countTo", []));
+        $infobox->setHoverExpandEffect(ArrayHelper::get($args, "hoverExpandEffect", false));
+        $infobox->setHoverZoomEffect(ArrayHelper::get($args, "hoverZoomEffect", false));
+
         return $infobox;
     }
 

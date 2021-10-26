@@ -37,7 +37,12 @@ abstract class AbstractInfoboxTwigExtension extends AbstractTwigExtension {
 
         $icon   = RendererTwigExtension::renderIcon($this->getTwigEnvironment(), $infobox->getIconName());
         $text   = static::coreHTMLElement("div", $infobox->getContentText(), ["class" => "text"]);
-        $number = static::coreHTMLElement("div", $infobox->getContentNumber(), ["class" => "number"]);
+        $number = static::coreHTMLElement("div", $infobox->getContentNumber(), array_merge([
+            "class" => [
+                "number",
+                0 < count($infobox->getCountTo()) ? "count-to" : null,
+            ],
+        ], $infobox->getCountTo()));
 
         $color = InfoboxRenderer::renderIconColor($infobox);
 
@@ -63,6 +68,8 @@ abstract class AbstractInfoboxTwigExtension extends AbstractTwigExtension {
             "class" => [
                 $infobox->getClass(),
                 InfoboxRenderer::renderColor($infobox),
+                InfoboxRenderer::renderHoverZoomEffect($infobox),
+                InfoboxRenderer::renderHoverExpandEffect($infobox),
             ],
         ]);
     }

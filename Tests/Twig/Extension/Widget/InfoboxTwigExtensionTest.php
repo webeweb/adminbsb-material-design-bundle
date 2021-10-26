@@ -33,10 +33,10 @@ class InfoboxTwigExtensionTest extends AbstractTestCase {
 
         $obj = new InfoboxTwigExtension($this->twigEnvironment);
 
-        $exp = file_get_contents(__DIR__ . "/InfoboxTwigExtensionTest.testAdminBSBInfobox1Function.html.txt");
+        $arg = ["iconName" => "shopping_cart", "iconColor" => "red", "contentText" => "NEW ORDERS", "contentNumber" => 125];
+        $res = file_get_contents(__DIR__ . "/InfoboxTwigExtensionTest.testAdminBSBInfobox1Function.html.txt");
 
-        $res = $obj->adminBSBInfobox1Function(["iconName" => "shopping_cart", "iconColor" => "red", "contentText" => "NEW ORDERS", "contentNumber" => 125]);
-        $this->assertEquals($exp, $res);
+        $this->assertEquals($res, $obj->adminBSBInfobox1Function($arg));
     }
 
     /**
@@ -48,10 +48,10 @@ class InfoboxTwigExtensionTest extends AbstractTestCase {
 
         $obj = new InfoboxTwigExtension($this->twigEnvironment);
 
-        $exp = file_get_contents(__DIR__ . "/InfoboxTwigExtensionTest.testAdminBSBInfobox2Function.html.txt");
+        $arg = ["color" => "red", "iconName" => "shopping_cart", "contentText" => "NEW ORDERS", "contentNumber" => 125];
+        $res = file_get_contents(__DIR__ . "/InfoboxTwigExtensionTest.testAdminBSBInfobox2Function.html.txt");
 
-        $res = $obj->adminBSBInfobox2Function(["color" => "red", "iconName" => "shopping_cart", "contentText" => "NEW ORDERS", "contentNumber" => 125]);
-        $this->assertEquals($exp, $res);
+        $this->assertEquals($res, $obj->adminBSBInfobox2Function($arg));
     }
 
     /**
@@ -63,10 +63,10 @@ class InfoboxTwigExtensionTest extends AbstractTestCase {
 
         $obj = new InfoboxTwigExtension($this->twigEnvironment);
 
-        $exp = file_get_contents(__DIR__ . "/InfoboxTwigExtensionTest.testAdminBSBInfobox3Function.html.txt");
+        $arg = ["color" => "red", "iconName" => "shopping_cart", "contentText" => "NEW ORDERS", "contentNumber" => 125];
+        $res = file_get_contents(__DIR__ . "/InfoboxTwigExtensionTest.testAdminBSBInfobox3Function.html.txt");
 
-        $res = $obj->adminBSBInfobox3Function(["color" => "red", "iconName" => "shopping_cart", "contentText" => "NEW ORDERS", "contentNumber" => 125]);
-        $this->assertEquals($exp, $res);
+        $this->assertEquals($res, $obj->adminBSBInfobox3Function($arg));
     }
 
     /**
@@ -78,10 +78,10 @@ class InfoboxTwigExtensionTest extends AbstractTestCase {
 
         $obj = new InfoboxTwigExtension($this->twigEnvironment);
 
-        $exp = file_get_contents(__DIR__ . "/InfoboxTwigExtensionTest.testAdminBSBInfobox4Function.html.txt");
+        $arg = ["color" => "red", "iconName" => "shopping_cart", "contentText" => "NEW ORDERS", "contentNumber" => 125];
+        $res = file_get_contents(__DIR__ . "/InfoboxTwigExtensionTest.testAdminBSBInfobox4Function.html.txt");
 
-        $res = $obj->adminBSBInfobox4Function(["color" => "red", "iconName" => "shopping_cart", "contentText" => "NEW ORDERS", "contentNumber" => 125]);
-        $this->assertEquals($exp, $res);
+        $this->assertEquals($res, $obj->adminBSBInfobox4Function($arg));
     }
 
     /**
@@ -93,10 +93,15 @@ class InfoboxTwigExtensionTest extends AbstractTestCase {
 
         $obj = new InfoboxTwigExtension($this->twigEnvironment);
 
-        $exp = file_get_contents(__DIR__ . "/InfoboxTwigExtensionTest.testAdminBSBInfobox5Function.html.txt");
+        $arg = ["iconColor" => "red", "iconName" => "shopping_cart", "contentText" => "NEW ORDERS", "contentNumber" => 125, "hoverZoomEffect" => true, "hoverExpandEffect" => true, "countTo" => [
+            "data-from"           => 0,
+            "data-to"             => 125,
+            "data-speed"          => 1000,
+            "data-fresh-interval" => 20,
+        ]];
+        $res = file_get_contents(__DIR__ . "/InfoboxTwigExtensionTest.testAdminBSBInfobox5Function.html.txt");
 
-        $res = $obj->adminBSBInfobox5Function(["iconColor" => "red", "iconName" => "shopping_cart", "contentText" => "NEW ORDERS", "contentNumber" => 125]);
-        $this->assertEquals($exp, $res);
+        $this->assertEquals($res, $obj->adminBSBInfobox5Function($arg));
     }
 
     /**

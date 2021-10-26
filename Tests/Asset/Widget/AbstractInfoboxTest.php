@@ -75,6 +75,45 @@ class AbstractInfoboxTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the setCountTo() method.
+     *
+     * @return void
+     */
+    public function testSetCountTo(): void {
+
+        $obj = new TestInfobox();
+
+        $obj->setCountTo([]);
+        $this->assertEquals([], $obj->getCountTo());
+    }
+
+    /**
+     * Tests the setHoverExpandEffect() method.
+     *
+     * @return void
+     */
+    public function testSetHoverExpandEffect(): void {
+
+        $obj = new TestInfobox();
+
+        $obj->setHoverExpandEffect(true);
+        $this->assertTrue($obj->getHoverExpandEffect());
+    }
+
+    /**
+     * Tests the setHoverZoomEffect() method.
+     *
+     * @return void
+     */
+    public function testSetHoverZoomEffect(): void {
+
+        $obj = new TestInfobox();
+
+        $obj->setHoverZoomEffect(true);
+        $this->assertTrue($obj->getHoverZoomEffect());
+    }
+
+    /**
      * Tests the setIconColor() method.
      *
      * @return void
@@ -111,9 +150,12 @@ class AbstractInfoboxTest extends AbstractTestCase {
 
         $this->assertNull($obj->getClass());
         $this->assertNull($obj->getColor());
+        $this->assertNull($obj->getCountTo());
         $this->assertNull($obj->getIconColor());
         $this->assertNull($obj->getIconName());
         $this->assertNull($obj->getContentNumber());
         $this->assertNull($obj->getContentText());
+        $this->assertNull($obj->getHoverExpandEffect());
+        $this->assertNull($obj->getHoverZoomEffect());
     }
 }

@@ -48,6 +48,27 @@ abstract class AbstractInfobox implements InfoboxInterface {
     private $contentText;
 
     /**
+     * Count to.
+     *
+     * @var array|null
+     */
+    private $countTo;
+
+    /**
+     * Hover expand effect.
+     *
+     * @var bool|null
+     */
+    private $hoverExpandEffect;
+
+    /**
+     * Hover zoom effect.
+     *
+     * @var bool|null
+     */
+    private $hoverZoomEffect;
+
+    /**
      * Icon color.
      *
      * @var string|null
@@ -101,6 +122,27 @@ abstract class AbstractInfobox implements InfoboxInterface {
     /**
      * {@inheritDoc}
      */
+    public function getCountTo(): ?array {
+        return $this->countTo;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getHoverExpandEffect(): ?bool {
+        return $this->hoverExpandEffect;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getHoverZoomEffect(): ?bool {
+        return $this->hoverZoomEffect;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function getIconColor(): ?string {
         return $this->iconColor;
     }
@@ -141,6 +183,30 @@ abstract class AbstractInfobox implements InfoboxInterface {
      */
     public function setContentText(?string $contentText): InfoboxInterface {
         $this->contentText = $contentText;
+        return $this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setCountTo(?array $countTo): InfoboxInterface {
+        $this->countTo = $countTo;
+        return $this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setHoverExpandEffect(?bool $hoverExpandEffect): InfoboxInterface {
+        $this->hoverExpandEffect = $hoverExpandEffect;
+        return $this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setHoverZoomEffect(?bool $hoverZoomEffect): InfoboxInterface {
+        $this->hoverZoomEffect = $hoverZoomEffect;
         return $this;
     }
 
