@@ -35,6 +35,7 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["color" => "pink"];
         $res = '<div class="preloader pl-size-l"><div class="spinner-layer pl-pink"><div class="circle-clipper left"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>';
+
         $this->assertEquals($res, $obj->adminBSBPreloaderMaterialDesignLFunction($arg));
     }
 
@@ -49,6 +50,7 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<div class="preloader pl-size-l"><div class="spinner-layer pl-red"><div class="circle-clipper left"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>';
+
         $this->assertEquals($res, $obj->adminBSBPreloaderMaterialDesignLFunction($arg));
     }
 
@@ -63,6 +65,7 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["color" => "pink"];
         $res = '<div class="preloader"><div class="spinner-layer pl-pink"><div class="circle-clipper left"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>';
+
         $this->assertEquals($res, $obj->adminBSBPreloaderMaterialDesignSFunction($arg));
     }
 
@@ -77,6 +80,7 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<div class="preloader"><div class="spinner-layer pl-red"><div class="circle-clipper left"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>';
+
         $this->assertEquals($res, $obj->adminBSBPreloaderMaterialDesignSFunction($arg));
     }
 
@@ -91,6 +95,7 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["color" => "pink"];
         $res = '<div class="preloader pl-size-sm"><div class="spinner-layer pl-pink"><div class="circle-clipper left"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>';
+
         $this->assertEquals($res, $obj->adminBSBPreloaderMaterialDesignSMFunction($arg));
     }
 
@@ -105,6 +110,7 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<div class="preloader pl-size-sm"><div class="spinner-layer pl-red"><div class="circle-clipper left"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>';
+
         $this->assertEquals($res, $obj->adminBSBPreloaderMaterialDesignSMFunction($arg));
     }
 
@@ -119,6 +125,7 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["color" => "pink"];
         $res = '<div class="preloader pl-size-xl"><div class="spinner-layer pl-pink"><div class="circle-clipper left"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>';
+
         $this->assertEquals($res, $obj->adminBSBPreloaderMaterialDesignXLFunction($arg));
     }
 
@@ -133,6 +140,7 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<div class="preloader pl-size-xl"><div class="spinner-layer pl-red"><div class="circle-clipper left"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>';
+
         $this->assertEquals($res, $obj->adminBSBPreloaderMaterialDesignXLFunction($arg));
     }
 
@@ -147,6 +155,7 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["color" => "pink"];
         $res = '<div class="preloader pl-size-xs"><div class="spinner-layer pl-pink"><div class="circle-clipper left"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>';
+
         $this->assertEquals($res, $obj->adminBSBPreloaderMaterialDesignXSFunction($arg));
     }
 
@@ -161,6 +170,7 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<div class="preloader pl-size-xs"><div class="spinner-layer pl-red"><div class="circle-clipper left"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>';
+
         $this->assertEquals($res, $obj->adminBSBPreloaderMaterialDesignXSFunction($arg));
     }
 

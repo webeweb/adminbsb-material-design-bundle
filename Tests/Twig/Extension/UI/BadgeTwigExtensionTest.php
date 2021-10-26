@@ -35,6 +35,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content", "label" => "label", "large" => true];
         $res = '<button class="btn btn-danger btn-block waves-effect btn-lg" type="button">content<span class="badge">label</span></button>';
+
         $this->assertEquals($res, $obj->adminBSBButtonBadgeDangerFunction($arg));
     }
 
@@ -49,6 +50,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<button class="btn btn-danger btn-block waves-effect" type="button"><span class="badge"></span></button>';
+
         $this->assertEquals($res, $obj->adminBSBButtonBadgeDangerFunction($arg));
     }
 
@@ -63,6 +65,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content", "label" => "label", "large" => true];
         $res = '<button class="btn btn-default btn-block waves-effect btn-lg" type="button">content<span class="badge">label</span></button>';
+
         $this->assertEquals($res, $obj->adminBSBButtonBadgeDefaultFunction($arg));
     }
 
@@ -77,6 +80,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<button class="btn btn-default btn-block waves-effect" type="button"><span class="badge"></span></button>';
+
         $this->assertEquals($res, $obj->adminBSBButtonBadgeDefaultFunction($arg));
     }
 
@@ -91,6 +95,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content", "label" => "label", "large" => true];
         $res = '<button class="btn btn-info btn-block waves-effect btn-lg" type="button">content<span class="badge">label</span></button>';
+
         $this->assertEquals($res, $obj->adminBSBButtonBadgeInfoFunction($arg));
     }
 
@@ -105,6 +110,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<button class="btn btn-info btn-block waves-effect" type="button"><span class="badge"></span></button>';
+
         $this->assertEquals($res, $obj->adminBSBButtonBadgeInfoFunction($arg));
     }
 
@@ -119,6 +125,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content", "label" => "label", "color" => "pink", "link" => "http://domain.tld"];
         $res = '<a class="list-group-item" href="http://domain.tld"><span class="badge bg-pink">content</span>label</a>';
+
         $this->assertEquals($res, $obj->adminBSBButtonBadgeListFunction($arg));
     }
 
@@ -133,6 +140,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<a class="list-group-item" href="javascript:void(0);"><span class="badge bg-red"></span></a>';
+
         $this->assertEquals($res, $obj->adminBSBButtonBadgeListFunction($arg));
     }
 
@@ -147,6 +155,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content", "label" => "label", "large" => true, "color" => "pink"];
         $res = '<button class="btn bg-pink btn-block waves-effect btn-lg" type="button">content<span class="badge">label</span></button>';
+
         $this->assertEquals($res, $obj->adminBSBButtonBadgeMaterialDesignFunction($arg));
     }
 
@@ -161,6 +170,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<button class="btn bg-red btn-block waves-effect" type="button"><span class="badge"></span></button>';
+
         $this->assertEquals($res, $obj->adminBSBButtonBadgeMaterialDesignFunction($arg));
     }
 
@@ -175,6 +185,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content", "label" => "label", "large" => true];
         $res = '<button class="btn btn-primary btn-block waves-effect btn-lg" type="button">content<span class="badge">label</span></button>';
+
         $this->assertEquals($res, $obj->adminBSBButtonBadgePrimaryFunction($arg));
     }
 
@@ -189,6 +200,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<button class="btn btn-primary btn-block waves-effect" type="button"><span class="badge"></span></button>';
+
         $this->assertEquals($res, $obj->adminBSBButtonBadgePrimaryFunction($arg));
     }
 
@@ -203,6 +215,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content", "label" => "label", "large" => true];
         $res = '<button class="btn btn-success btn-block waves-effect btn-lg" type="button">content<span class="badge">label</span></button>';
+
         $this->assertEquals($res, $obj->adminBSBButtonBadgeSuccessFunction($arg));
     }
 
@@ -217,6 +230,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<button class="btn btn-success btn-block waves-effect" type="button"><span class="badge"></span></button>';
+
         $this->assertEquals($res, $obj->adminBSBButtonBadgeSuccessFunction($arg));
     }
 
@@ -231,6 +245,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content", "label" => "label", "large" => true];
         $res = '<button class="btn btn-warning btn-block waves-effect btn-lg" type="button">content<span class="badge">label</span></button>';
+
         $this->assertEquals($res, $obj->adminBSBButtonBadgeWarningFunction($arg));
     }
 
@@ -245,6 +260,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<button class="btn btn-warning btn-block waves-effect" type="button"><span class="badge"></span></button>';
+
         $this->assertEquals($res, $obj->adminBSBButtonBadgeWarningFunction($arg));
     }
 

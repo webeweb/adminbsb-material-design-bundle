@@ -35,6 +35,7 @@ class DatetimePickerTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["selector" => "selector", "clearButton" => true, "format" => "DD/MM/YYYY", "lang" => "fr", "weekStart" => 1];
         $res = file_get_contents(__DIR__ . "/DatetimePickerTwigExtensionTest.testAdminBSBDatePickerFunction.html.txt");
+
         $this->assertEquals($res, $obj->adminBSBDatePickerFunction($arg) . "\n");
     }
 
@@ -49,6 +50,7 @@ class DatetimePickerTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["selector" => "selector", "clearButton" => true, "format" => "DD/MM/YYYY HH mm", "lang" => "fr", "weekStart" => 1];
         $res = file_get_contents(__DIR__ . "/DatetimePickerTwigExtensionTest.testAdminBSBDatetimePickerFunction.html.txt");
+
         $this->assertEquals($res, $obj->adminBSBDatetimePickerFunction($arg) . "\n");
     }
 
@@ -63,6 +65,7 @@ class DatetimePickerTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["selector" => "selector", "clearButton" => true, "format" => "HH mm", "lang" => "fr"];
         $res = file_get_contents(__DIR__ . "/DatetimePickerTwigExtensionTest.testAdminBSBTimePickerFunction.html.txt");
+
         $this->assertEquals($res, $obj->adminBSBTimePickerFunction($arg) . "\n");
     }
 

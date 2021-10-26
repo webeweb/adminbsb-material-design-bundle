@@ -36,6 +36,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content", "title" => "title", "size" => "lg", "disabled" => true, "icon" => "person"];
         $res = '<button class="btn btn-danger waves-effect btn-lg" title="title" type="button" data-toggle="tooltip" data-placement="top" disabled="disabled"><i class="material-icons" style="margin: -4px 2px 0; vertical-align: sub;">person</i>content</button>';
+
         $this->assertEquals($res, $obj->adminBSBButtonDangerFunction($arg));
     }
 
@@ -50,6 +51,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<button class="btn btn-danger waves-effect" type="button"></button>';
+
         $this->assertEquals($res, $obj->adminBSBButtonDangerFunction($arg));
     }
 
@@ -64,6 +66,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content", "title" => "title", "size" => "lg", "disabled" => true, "icon" => "person"];
         $res = '<button class="btn btn-default waves-effect btn-lg" title="title" type="button" data-toggle="tooltip" data-placement="top" disabled="disabled"><i class="material-icons" style="margin: -4px 2px 0; vertical-align: sub;">person</i>content</button>';
+
         $this->assertEquals($res, $obj->adminBSBButtonDefaultFunction($arg));
     }
 
@@ -78,6 +81,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<button class="btn btn-default waves-effect" type="button"></button>';
+
         $this->assertEquals($res, $obj->adminBSBButtonDefaultFunction($arg));
     }
 
@@ -92,6 +96,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content", "title" => "title", "size" => "lg", "disabled" => true, "icon" => "person"];
         $res = '<button class="btn btn-info waves-effect btn-lg" title="title" type="button" data-toggle="tooltip" data-placement="top" disabled="disabled"><i class="material-icons" style="margin: -4px 2px 0; vertical-align: sub;">person</i>content</button>';
+
         $this->assertEquals($res, $obj->adminBSBButtonInfoFunction($arg));
     }
 
@@ -106,6 +111,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<button class="btn btn-info waves-effect" type="button"></button>';
+
         $this->assertEquals($res, $obj->adminBSBButtonInfoFunction($arg));
     }
 
@@ -120,6 +126,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content", "title" => "title", "size" => "lg", "disabled" => true, "icon" => "person", "color" => "pink"];
         $res = '<button class="btn bg-pink waves-effect btn-lg" title="title" type="button" data-toggle="tooltip" data-placement="top" disabled="disabled"><i class="material-icons" style="margin: -4px 2px 0; vertical-align: sub;">person</i>content</button>';
+
         $this->assertEquals($res, $obj->adminBSBButtonMaterialDesignFunction($arg));
     }
 
@@ -134,6 +141,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<button class="btn bg-red waves-effect" type="button"></button>';
+
         $this->assertEquals($res, $obj->adminBSBButtonMaterialDesignFunction($arg));
     }
 
@@ -148,6 +156,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content", "title" => "title", "size" => "lg", "disabled" => true, "icon" => "person"];
         $res = '<button class="btn btn-primary waves-effect btn-lg" title="title" type="button" data-toggle="tooltip" data-placement="top" disabled="disabled"><i class="material-icons" style="margin: -4px 2px 0; vertical-align: sub;">person</i>content</button>';
+
         $this->assertEquals($res, $obj->adminBSBButtonPrimaryFunction($arg));
     }
 
@@ -162,6 +171,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<button class="btn btn-primary waves-effect" type="button"></button>';
+
         $this->assertEquals($res, $obj->adminBSBButtonPrimaryFunction($arg));
     }
 
@@ -176,6 +186,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content", "title" => "title", "size" => "lg", "disabled" => true, "icon" => "person"];
         $res = '<button class="btn btn-success waves-effect btn-lg" title="title" type="button" data-toggle="tooltip" data-placement="top" disabled="disabled"><i class="material-icons" style="margin: -4px 2px 0; vertical-align: sub;">person</i>content</button>';
+
         $this->assertEquals($res, $obj->adminBSBButtonSuccessFunction($arg));
     }
 
@@ -190,6 +201,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<button class="btn btn-success waves-effect" type="button"></button>';
+
         $this->assertEquals($res, $obj->adminBSBButtonSuccessFunction($arg));
     }
 
@@ -204,6 +216,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content", "title" => "title", "size" => "lg", "disabled" => true, "icon" => "person"];
         $res = '<button class="btn btn-warning waves-effect btn-lg" title="title" type="button" data-toggle="tooltip" data-placement="top" disabled="disabled"><i class="material-icons" style="margin: -4px 2px 0; vertical-align: sub;">person</i>content</button>';
+
         $this->assertEquals($res, $obj->adminBSBButtonWarningFunction($arg));
     }
 
@@ -218,6 +231,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<button class="btn btn-warning waves-effect" type="button"></button>';
+
         $this->assertEquals($res, $obj->adminBSBButtonWarningFunction($arg));
     }
 

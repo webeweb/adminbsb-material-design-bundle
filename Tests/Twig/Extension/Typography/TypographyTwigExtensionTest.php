@@ -35,6 +35,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content"];
         $res = '<span class="font-bold">content</span>';
+
         $this->assertEquals($res, $obj->adminBSBBoldFunction($arg));
     }
 
@@ -49,6 +50,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<span class="font-bold"></span>';
+
         $this->assertEquals($res, $obj->adminBSBBoldFunction($arg));
     }
 
@@ -63,6 +65,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content"];
         $res = '<span class="font-italic">content</span>';
+
         $this->assertEquals($res, $obj->adminBSBItalicFunction($arg));
     }
 
@@ -77,6 +80,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<span class="font-italic"></span>';
+
         $this->assertEquals($res, $obj->adminBSBItalicFunction($arg));
     }
 
@@ -91,6 +95,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content"];
         $res = '<span class="font-line-through">content</span>';
+
         $this->assertEquals($res, $obj->adminBSBLineThroughFunction($arg));
     }
 
@@ -105,6 +110,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<span class="font-line-through"></span>';
+
         $this->assertEquals($res, $obj->adminBSBLineThroughFunction($arg));
     }
 
@@ -119,6 +125,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content"];
         $res = '<span class="font-overline">content</span>';
+
         $this->assertEquals($res, $obj->adminBSBOverlineFunction($arg));
     }
 
@@ -133,6 +140,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<span class="font-overline"></span>';
+
         $this->assertEquals($res, $obj->adminBSBOverlineFunction($arg));
     }
 
@@ -147,6 +155,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content"];
         $res = '<span class="font-underline">content</span>';
+
         $this->assertEquals($res, $obj->adminBSBUnderlineFunction($arg));
     }
 
@@ -161,6 +170,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<span class="font-underline"></span>';
+
         $this->assertEquals($res, $obj->adminBSBUnderlineFunction($arg));
     }
 

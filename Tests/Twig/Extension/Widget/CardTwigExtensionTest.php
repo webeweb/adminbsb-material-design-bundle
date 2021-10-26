@@ -53,6 +53,7 @@ class CardTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content", "description" => "description", "icon" => "person"];
         $res = '<h2 class="card-header"><i class="material-icons" style="margin: -4px 4px 0 0; vertical-align: sub;">person</i>content<small>description</small></h2>';
+
         $this->assertEquals($res, $obj->adminBSBCardHeaderFunction($arg));
     }
 
@@ -67,6 +68,7 @@ class CardTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content"];
         $res = '<h2 class="card-header">content</h2>';
+
         $this->assertEquals($res, $obj->adminBSBCardHeaderFunction($arg));
     }
 
@@ -81,6 +83,7 @@ class CardTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["description" => "description"];
         $res = '<h2 class="card-header"><small>description</small></h2>';
+
         $this->assertEquals($res, $obj->adminBSBCardHeaderFunction($arg));
     }
 
@@ -95,6 +98,7 @@ class CardTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["icon" => "person"];
         $res = '<h2 class="card-header"><i class="material-icons" style="margin: -4px 4px 0 0; vertical-align: sub;">person</i></h2>';
+
         $this->assertEquals($res, $obj->adminBSBCardHeaderFunction($arg));
     }
 
@@ -109,6 +113,7 @@ class CardTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<h2 class="card-header"></h2>';
+
         $this->assertEquals($res, $obj->adminBSBCardHeaderFunction($arg));
     }
 

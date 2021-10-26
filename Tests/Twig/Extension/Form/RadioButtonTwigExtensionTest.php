@@ -35,6 +35,7 @@ class RadioButtonTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<input type="radio"><label></label>';
+
         $this->assertEquals($res, $obj->adminBSBRadioButtonBasicFunction($arg));
     }
 
@@ -49,6 +50,7 @@ class RadioButtonTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content", "name" => "name", "id" => "id", "checked" => true, "disabled" => true, "withGap" => true, "class" => "class", "color" => "pink"];
         $res = '<input class="with-gap class radio-col-pink" name="name" type="radio" id="id" checked="checked" disabled="disabled"><label for="id">content</label>';
+
         $this->assertEquals($res, $obj->adminBSBRadioButtonMaterialDesignFunction($arg));
     }
 
@@ -63,6 +65,7 @@ class RadioButtonTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<input class="radio-col-red" type="radio"><label></label>';
+
         $this->assertEquals($res, $obj->adminBSBRadioButtonMaterialDesignFunction($arg));
     }
 

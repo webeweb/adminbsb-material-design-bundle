@@ -53,6 +53,7 @@ class ModalTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content", "icon" => "person"];
         $res = '<h3 class="modal-title"><i class="material-icons" style="margin: -4px 0; vertical-align: sub;">person</i>content</h3>';
+
         $this->assertEquals($res, $obj->adminBSBModalHeaderFunction($arg));
     }
 
@@ -67,6 +68,7 @@ class ModalTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<h3 class="modal-title"></h3>';
+
         $this->assertEquals($res, $obj->adminBSBModalHeaderFunction($arg));
     }
 

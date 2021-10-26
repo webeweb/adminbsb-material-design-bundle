@@ -35,6 +35,7 @@ class CheckboxTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<input type="checkbox"><label></label>';
+
         $this->assertEquals($res, $obj->adminBSBCheckboxBasicFunction($arg));
     }
 
@@ -49,6 +50,7 @@ class CheckboxTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content", "name" => "name", "id" => "id", "checked" => true, "disabled" => true, "filledIn" => true, "class" => "class", "color" => "pink"];
         $res = '<input class="filled-in class chk-col-pink" name="name" type="checkbox" id="id" checked="checked" disabled="disabled"><label for="id">content</label>';
+
         $this->assertEquals($res, $obj->adminBSBCheckboxMaterialDesignFunction($arg));
     }
 
@@ -63,6 +65,7 @@ class CheckboxTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<input class="chk-col-red" type="checkbox"><label></label>';
+
         $this->assertEquals($res, $obj->adminBSBCheckboxMaterialDesignFunction($arg));
     }
 
