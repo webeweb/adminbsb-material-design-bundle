@@ -129,7 +129,7 @@ assets:
                 description: "jQuery countTo"
                 stylesheets:
                 javascripts:
-                    - "/plugins/jquery-counto/jquery.countTo.js"
+                    - "/plugins/jquery-countto/jquery.countTo.js"
             jquery_datatables:
                 version:     1.10.12
                 description: "jQuery DataTables"
