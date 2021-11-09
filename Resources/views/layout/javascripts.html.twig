@@ -14,6 +14,9 @@
         <script type="text/javascript" src="{{ asset(_path) }}"></script>
     {% endfor %}
 {% endfor %}
+{% if ("prod" != app.environment) %}
+    <!-- AdminBSB Material Design -->
+{% endif %}
 <script type="text/javascript" src="{{ asset(_webPath ~ "/js/admin.js") }}"></script>
 <script type="text/javascript">
     // Skin changer
