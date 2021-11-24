@@ -40,6 +40,7 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
      */
     public function __construct(Environment $twigEnvironment, $translator) {
         parent::__construct($twigEnvironment);
+
         $this->setTranslator($translator);
     }
 

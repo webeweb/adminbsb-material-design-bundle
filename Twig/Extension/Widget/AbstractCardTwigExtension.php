@@ -36,6 +36,7 @@ abstract class AbstractCardTwigExtension extends AbstractTwigExtension {
      */
     public function __construct(Environment $twigEnvironment, TypographyTwigExtension $typographyTwigExtension) {
         parent::__construct($twigEnvironment);
+
         $this->setTypographyTwigExtension($typographyTwigExtension);
     }
 
