@@ -1,0 +1,28 @@
+{# Resources/views/output.html.twig #}
+{% extends "@WBWBootstrap/output.html.twig" %}
+
+{% block bootstrapFormTheme %}
+    {% block adminBSBFormTheme %}
+        {% if (form is defined) %}
+            {% form_theme form "@WBWAdminBSB/Form/form_layout.html.twig" %}
+        {% endif %}
+    {% endblock %}
+{% endblock %}
+
+{% block bootstrapContainer %}
+    {{ parent() }}
+    {% block adminBSBContainer %}
+    {% endblock %}
+{% endblock %}
+
+{% block bootstrapStylesheets %}
+    {{ parent() }}
+    {% block adminBSBStylesheets %}
+    {% endblock %}
+{% endblock %}
+
+{% block bootstrapJavascripts %}
+    {{ parent() }}
+    {% block adminBSBJavascripts %}
+    {% endblock %}
+{% endblock %}
