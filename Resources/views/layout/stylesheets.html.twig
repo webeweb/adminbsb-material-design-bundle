@@ -14,6 +14,9 @@
         <link type="text/css" rel="stylesheet" href="{{ asset(_path) }}">
     {% endfor %}
 {% endfor %}
+{% if ("prod" != app.environment) %}
+    <!-- AdminBSB Material Design -->
+{% endif %}
 <link type="text/css" rel="stylesheet" href="{{ asset(_webPath ~ "/css/style.min.css") }}">
 <link type="text/css" rel="stylesheet" href="{{ asset(_webPath ~ "/css/themes/all-themes.min.css") }}">
 <style>
@@ -76,19 +79,5 @@
         font-size: 20px !important;
         margin: 2px;
         text-align: center;
-    }
-
-    /* === DataTables ====================================================== */
-    table.dataTable {
-        width: 100% !important;
-    }
-
-    /* === Forms =========================================================== */
-    div.error ul {
-        list-style: none;
-    }
-
-    div.error ul li {
-        color: #F44336;
     }
 </style>
