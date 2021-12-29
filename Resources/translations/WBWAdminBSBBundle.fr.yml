@@ -1,11 +1,5 @@
 # Resources/translations/WBWAdminBSBBundle.en.yml
-TwigBundle:
-    views:
-        Exception:
-            go_homepage: "Aller à l'accueil"
-
-views:
-    layout:
-        loader:
-            wait: "Patientez SVP..."
-        search: "Commencez à taper..."
+label:
+    go_homepage:  "Aller à l'accueil"
+    please_wait:  "Patientez SVP..."
+    start_typing: "Commencez à taper..."

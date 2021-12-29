@@ -11,14 +11,12 @@
 
 {% block bootstrapStylesheets %}
     {{ parent() }}
-    {% include "@WBWJQueryDataTables/layout/stylesheets.html.twig" %}
+    {% include "@WBWJQueryDataTables/assets/stylesheets.html.twig" %}
     {% block adminBSBStylesheets %}
-        {% if ("prod" != app.environment) %}
-            <!-- Google fonts -->
-        {% endif %}
+        {% if ("prod" != app.environment) %}<!-- Google fonts -->{% endif %}
         <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin,cyrillic-ext">
         <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        {% include "@WBWAdminBSB/layout/stylesheets.html.twig" %}
+        {% include "@WBWAdminBSB/assets/stylesheets.html.twig" %}
     {% endblock %}
 {% endblock %}
 
@@ -33,8 +31,8 @@
 
 {% block bootstrapJavascripts %}
     {{ parent() }}
-    {% include "@WBWJQueryDataTables/layout/javascripts.html.twig" %}
+    {% include "@WBWJQueryDataTables/assets/javascripts.html.twig" %}
     {% block adminBSBJavascripts %}
-        {% include "@WBWAdminBSB/layout/javascripts.html.twig" %}
+        {% include "@WBWAdminBSB/assets/javascripts.html.twig" %}
     {% endblock %}
 {% endblock %}

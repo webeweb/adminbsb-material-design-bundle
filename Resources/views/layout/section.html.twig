@@ -7,23 +7,25 @@
 
 {% block adminBSBContainer %}
     {{ parent() }}
-    <div class="page-loader-wrapper">
-        <div class="loader">
-            <div class="preloader">
-                <div class="spinner-layer pl-red">
-                    <div class="circle-clipper left">
-                        <div class="circle"></div>
-                    </div>
-                    <div class="circle-clipper right">
-                        <div class="circle"></div>
+    {% block adminBSBPageLoader %}
+        <div class="page-loader-wrapper">
+            <div class="loader">
+                <div class="preloader">
+                    <div class="spinner-layer pl-red">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
                     </div>
                 </div>
+                <p>{{ "label.please_wait"|trans([], "WBWAdminBSBBundle") }}</p>
             </div>
-            <p>{{ "views.layout.loader.wait"|trans([], "WBWAdminBSBBundle") }}</p>
         </div>
-    </div>
+    {% endblock %}
     <div class="overlay"></div>
-    {% include "@WBWAdminBSB/Theme/search.html.twig" %}
+    {% include "@WBWAdminBSB/layout/section/search.html.twig" %}
     <nav class="navbar">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -32,17 +34,19 @@
                 <a class="navbar-brand" href="javascript:void(0);">{{ ApplicationThemeProvider.name|default("")|raw }}</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    {% if (HookDropDownThemeProvider is defined and HookDropDownThemeProvider.view is not null) %}
-                        {% include HookDropDownThemeProvider.view with {"provider": HookDropDownThemeProvider} %}
-                    {% endif %}
-                    {% if (NotificationsDropDownThemeProvider is defined and NotificationsDropDownThemeProvider.view is not null) %}
-                        {% include NotificationsDropDownThemeProvider.view with {"provider": NotificationsDropDownThemeProvider} %}
-                    {% endif %}
-                    {% if (TasksDropDownThemeProvider is defined and TasksDropDownThemeProvider.view is not null) %}
-                        {% include TasksDropDownThemeProvider.view with {"provider": TasksDropDownThemeProvider} %}
-                    {% endif %}
-                </ul>
+                {% block adminBSBNavbarCollapse %}
+                    <ul class="nav navbar-nav navbar-right">
+                        {% if (HookDropDownThemeProvider is defined and HookDropDownThemeProvider.view is not null) %}
+                            {% include HookDropDownThemeProvider.view with {"provider": HookDropDownThemeProvider} %}
+                        {% endif %}
+                        {% if (NotificationsDropDownThemeProvider is defined and NotificationsDropDownThemeProvider.view is not null) %}
+                            {% include NotificationsDropDownThemeProvider.view with {"provider": NotificationsDropDownThemeProvider} %}
+                        {% endif %}
+                        {% if (TasksDropDownThemeProvider is defined and TasksDropDownThemeProvider.view is not null) %}
+                            {% include TasksDropDownThemeProvider.view with {"provider": TasksDropDownThemeProvider} %}
+                        {% endif %}
+                    </ul>
+                {% endblock %}
             </div>
         </div>
     </nav>
@@ -52,18 +56,18 @@
                 {% if (UserInfoThemeProvider is defined and UserInfoThemeProvider.view is not null) %}
                     {% include UserInfoThemeProvider.view with {"provider": UserInfoThemeProvider} %}
                 {% else %}
-                    {% include "@WBWAdminBSB/Theme/user-info.html.twig" %}
+                    {% include "@WBWAdminBSB/layout/section/user_info.html.twig" %}
                 {% endif %}
             {% endif %}
             {% if (NavigationThemeProvider is defined and NavigationThemeProvider.view is not null) %}
                 {% include NavigationThemeProvider.view with {"provider": NavigationThemeProvider} %}
             {% else %}
-                {% include "@WBWAdminBSB/Theme/navigation.html.twig" %}
+                {% include "@WBWAdminBSB/layout/section/navigation.html.twig" %}
             {% endif %}
             {% if (FooterThemeProvider is defined and FooterThemeProvider.view is not null) %}
                 {% include FooterThemeProvider.view with {"provider": FooterThemeProvider} %}
             {% else %}
-                {% include "@WBWAdminBSB/Theme/footer.html.twig" %}
+                {% include "@WBWAdminBSB/layout/section/footer.html.twig" %}
             {% endif %}
         </aside>
         <aside class="right-sidebar" id="rightsidebar">

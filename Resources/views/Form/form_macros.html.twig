@@ -9,8 +9,10 @@
 # @return string Returns the input "checkbox".
 #}
 {% macro inputCheckbox(form, filledIn, color) %}
+
     {% set _filledIn = filledIn|default(true) ? " filled-in" : "" %}
     {% set _color    = null != color ? " chk-col-" ~ color : "" %}
+
     {{ form_widget(form, {"attr": {"class": "form-control" ~ _filledIn ~ _color } }) }}
     {{ form_label(form) }}
     {{ form_errors(form) }}
@@ -26,10 +28,12 @@
 # @return string Returns the input "date".
 #}
 {% macro inputDate(form, icon, errors, value) %}
+
     {% set _icon     = icon|default("date_range") %}
     {% set _disabled = true == form.vars.disabled ? " disabled" : "" %}
     {% set _error    = 0 < errors|length ? " error" : "" %}
     {% set _focused  = 0 < value|length ? " focused" : "" %}
+
     <b>{{ label|trans }}</b>
     <div class="input-group">
         <span class="input-group-addon">
@@ -50,7 +54,9 @@
 # @return string Returns the input "money".
 #}
 {% macro inputMoney(form, icon) %}
+
     {% set _icon = icon|default("euro_symbol") %}
+
     <b>{{ label|trans }}</b>
     <div class="input-group">
         <span class="input-group-addon">
@@ -97,8 +103,10 @@
 # @return string Returns the inpuit "select".
 #}
 {% macro inputSelect(form, icon, liveSearch) %}
+
     {% set _icon       = icon|default(null) %}
     {% set _liveSearch = liveSearch|default(false) %}
+
     {% if (_icon is not null) %}
         {{ form_label(form) }}
         <div class="input-group">
@@ -123,9 +131,11 @@
 # @return string Returns the input "slider".
 #}
 {% macro inputSlider(form, icon) %}
+
     {% if (icon is not null) %}
         <i class="material-icons">{{ icon }}</i>
     {% endif %}
+
     <b>{{ label|trans }}</b>
     {{ form_widget(form, {"attr": {"class": "form-control"} }) }}
     {{ form_errors(form) }}
@@ -144,11 +154,13 @@
 # @return string Returns the input "spinner".
 #}
 {% macro inputSpinner(form, icon, rule, min, max, step, precision) %}
+
     {% set _min       = min|default(0) %}
     {% set _max       = max|default(65536) %}
     {% set _step      = step|default(1) %}
     {% set _precision = precision|default(0) %}
     {% set _rule      = type|default("quantity") %}
+
     <b>{{ label|trans }}</b>
     <div class="input-group spinner" data-trigger="spinner">
         {% if (icon is not null) %}
@@ -178,10 +190,12 @@
 # @return string Returns the input "text".
 #}
 {% macro inputText(form, icon, errors, value, label) %}
+
     {% set _disabled    = true == form.vars.disabled ? " disabled" : "" %}
     {% set _error       = 0 < errors|length ? " error" : "" %}
     {% set _focused     = 0 < value|length ? " focused" : "" %}
     {% set _placeholder = label %}
+
     {% if (icon is not null) %}
         <div class="input-group">
                 <span class="input-group-addon">

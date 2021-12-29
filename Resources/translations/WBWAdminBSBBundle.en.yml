@@ -1,11 +1,5 @@
 # Resources/translations/WBWAdminBSBBundle.en.yml
-TwigBundle:
-    views:
-        Exception:
-            go_homepage: "Go homepage"
-
-views:
-    layout:
-        loader:
-            wait: "Please wait..."
-        search: "Start typing..."
+label:
+    go_homepage:  "Go homepage"
+    please_wait:  "Please wait..."
+    start_typing: "Start typing..."

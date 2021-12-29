@@ -1,22 +1,24 @@
-{# Resources/views/layout/javascripts.html.twig #}
+{# Resources/views/assets/javascripts.html.twig #}
 {% set _webPath    = "bundles/wbwadminbsb" %}
 {% set _plugins    = getContainerParameter("wbw.adminbsb.asset.adminbsb").plugins %}
 {% set _appPlugins = getContainerParameter("wbw_adminbsb.plugins") %}
+
 {% for _appPlugin in _appPlugins %}
+
     {% set _replaces = {
         "{{ version }}": _plugins[_appPlugin].version,
     } %}
+
     {% for _javascript in _plugins[_appPlugin].javascripts %}
-        {% if ("prod" != app.environment and true == loop.first) %}
-            <!-- {{ _plugins[_appPlugin].description }} -->
-        {% endif %}
+
+        {% if ("prod" != app.environment and true == loop.first) %}<!-- {{ _plugins[_appPlugin].description }} -->{% endif %}
+
         {% set _path = (_webPath ~ _javascript)|replace(_replaces) %}
         <script type="text/javascript" src="{{ asset(_path) }}"></script>
     {% endfor %}
 {% endfor %}
-{% if ("prod" != app.environment) %}
-    <!-- AdminBSB Material Design -->
-{% endif %}
+
+{% if ("prod" != app.environment) %}<!-- AdminBSB Material Design -->{% endif %}
 <script type="text/javascript" src="{{ asset(_webPath ~ "/js/admin.js") }}"></script>
 <script type="text/javascript">
     // Skin changer

@@ -1,7 +1,7 @@
-{# Resources/views/ChangePassword/change_password.html.twig #}
+{# Resources/views/bundles/FOSUserBundle/Profile/edit.html.twig #}
 {% extends "@WBWAdminBSB/layout/section.html.twig" %}
 
-{% block adminBSBTitle %}{{ ApplicationThemeProvider.title|default("AdminBSB Material Design") }} - {{ "change_password.submit"|trans([], "FOSUserBundle") }}{% endblock %}
+{% block adminBSBTitle %}{{ ApplicationThemeProvider.title|default("AdminBSB Material Design") }} - {{ "profile.edit.submit"|trans([], "FOSUserBundle") }}{% endblock %}
 
 {% block adminBSBContent %}
     {{ parent() }}
@@ -9,23 +9,23 @@
         <div class="{{ bootstrapGrid({"lg": 12, "md": 12, "sm": 12, "xs": 12}) }}">
             <div class="card">
                 <div class="header bg-{{ getContainerParameter("wbw_adminbsb.skin") }}">
-                    {{ adminBSBCardHeader({"icon": "lock", "content": "change_password.submit"|trans([], "FOSUserBundle")}) }}
+                    {{ adminBSBCardHeader({"icon": "person", "content": "profile.edit.submit"|trans([], "FOSUserBundle")}) }}
                 </div>
                 <div class="body">
                     {{ form_start(form) }}
                     <div class="row clearfix">
                         <div class="{{ bootstrapGrid({"lg": 4, "md": 4, "sm": 12, "xs": 12}) }}">
-                            {{ form_row(form.current_password, {"adminBSB": {"icon": "lock"} }) }}
+                            {{ form_row(form.username, {"adminBSB": {"icon": "person"} }) }}
                         </div>
                     </div>
                     <div class="row clearfix">
                         <div class="{{ bootstrapGrid({"lg": 4, "md": 4, "sm": 12, "xs": 12}) }}">
-                            {{ form_row(form.plainPassword.first, {"adminBSB": {"icon": "lock_outline"} }) }}
+                            {{ form_row(form.email, {"adminBSB": {"icon": "email"} }) }}
                         </div>
                     </div>
                     <div class="row clearfix">
                         <div class="{{ bootstrapGrid({"lg": 4, "md": 4, "sm": 12, "xs": 12}) }}">
-                            {{ form_row(form.plainPassword.second, {"adminBSB": {"icon": "lock_outline"} }) }}
+                            {{ form_row(form.current_password, {"adminBSB":{"icon": "lock"} }) }}
                         </div>
                     </div>
                     <div class="align-right">

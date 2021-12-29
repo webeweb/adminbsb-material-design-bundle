@@ -1,4 +1,4 @@
-{# Resources/views/Theme/user-info.html.twig #}
+{# Resources/views/layout/section/user_info.html.twig #}
 <div class="user-info">
     <div class="image">
         <img src="{{ asset("bundles/wbwadminbsb/images/user.png") }}" height="48" width="48" alt="User"/>
@@ -11,7 +11,7 @@
             <ul class="dropdown-menu pull-right">
                 <li><a href="{{ path("fos_user_profile_edit") }}"><i class="material-icons">person</i>{{ "profile.edit.submit"|trans([], "FOSUserBundle") }}</a></li>
                 <li><a href="{{ path("fos_user_change_password") }}"><i class="material-icons">lock</i>{{ "form.password"|trans([], "FOSUserBundle") }}</a></li>
-                <li class="divider" role="seperator"></li>
+                <li class="divider" role="separator"></li>
                 <li><a href="{{ path("fos_user_security_logout") }}"><i class="material-icons">input</i>{{ "layout.logout"|trans([], "FOSUserBundle") }}</a></li>
             </ul>
         </div>
