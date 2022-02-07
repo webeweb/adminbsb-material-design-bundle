@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Tests\DataTables\Provider;
 
-use WBW\Bundle\AdminBSBBundle\DataTables\Provider\AbstractDataTablesProvider;
+use Symfony\Component\Routing\RouterInterface;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 use WBW\Bundle\AdminBSBBundle\Tests\Fixtures\DataTables\Provider\TestDataTablesProvider;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension;
@@ -33,27 +33,31 @@ class AbstractDataTablesProviderTest extends AbstractTestCase {
     private $buttonTwigExtension;
 
     /**
+     * DataTables provider.
+     *
+     * @var TestDataTablesProvider
+     */
+    private $dataTablesProvider;
+
+    /**
      * {@inheritDoc}
      */
     protected function setUp(): void {
         parent::setUp();
 
+        // Set a generate() closure.
+        $generate = function($name, $parameters = [], $referenceType = RouterInterface::ABSOLUTE_PATH) {
+            return $name;
+        };
+
+        // Set the Router mock.
+        $this->router->expects($this->any())->method("generate")->willReturnCallback($generate);
+
         // Set a Button Twig extension mock.
         $this->buttonTwigExtension = new ButtonTwigExtension($this->twigEnvironment);
-    }
 
-    /**
-     * Tests the alignRight() methods.
-     *
-     * @return void
-     */
-    public function testAlignRight() {
-
-        $obj = new TestDataTablesProvider($this->router, $this->translator, $this->buttonTwigExtension);
-
-        $this->assertEquals("", $obj->alignRight(null));
-        $this->assertEquals("", $obj->alignRight(""));
-        $this->assertEquals('<span class="pull-right">content</span>', $obj->alignRight("content"));
+        // Set a DataTables provider mock.
+        $this->dataTablesProvider = new TestDataTablesProvider($this->router, $this->translator, $this->buttonTwigExtension);
     }
 
     /**
@@ -63,49 +67,11 @@ class AbstractDataTablesProviderTest extends AbstractTestCase {
      */
     public function testGetOptions(): void {
 
-        $obj = new TestDataTablesProvider($this->router, $this->translator, $this->buttonTwigExtension);
+        $obj = $this->dataTablesProvider;
 
         $res = $obj->getOptions();
         $this->assertInstanceOf(DataTablesOptionsInterface::class, $res);
 
         $this->assertEquals(2500, $res->getOption("searchDelay"));
-    }
-
-    /**
-     * Tests the putItalic() methods.
-     *
-     * @return void
-     */
-    public function testPutItalic() {
-
-        $obj = new TestDataTablesProvider($this->router, $this->translator, $this->buttonTwigExtension);
-
-        $this->assertEquals("", $obj->putItalic(null));
-        $this->assertEquals("", $obj->putItalic(""));
-        $this->assertEquals("<em>content</em>", $obj->putItalic("content"));
-    }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $this->assertEquals("20px", AbstractDataTablesProvider::COLUMN_WIDTH_XXS);
-        $this->assertEquals("40px", AbstractDataTablesProvider::COLUMN_WIDTH_XS);
-        $this->assertEquals("80px", AbstractDataTablesProvider::COLUMN_WIDTH_S);
-        $this->assertEquals("120px", AbstractDataTablesProvider::COLUMN_WIDTH_M);
-        $this->assertEquals("160px", AbstractDataTablesProvider::COLUMN_WIDTH_L);
-        $this->assertEquals("200px", AbstractDataTablesProvider::COLUMN_WIDTH_XL);
-        $this->assertEquals("240px", AbstractDataTablesProvider::COLUMN_WIDTH_XXL);
-        $this->assertEquals("280px", AbstractDataTablesProvider::COLUMN_WIDTH_XXXL);
-
-        $this->assertEquals(AbstractDataTablesProvider::COLUMN_WIDTH_L, AbstractDataTablesProvider::COLUMN_WIDTH_ACTIONS);
-        $this->assertEquals(AbstractDataTablesProvider::COLUMN_WIDTH_M, AbstractDataTablesProvider::COLUMN_WIDTH_DATE);
-        $this->assertEquals(AbstractDataTablesProvider::COLUMN_WIDTH_XXS, AbstractDataTablesProvider::COLUMN_WIDTH_ICON);
-        $this->assertEquals(AbstractDataTablesProvider::COLUMN_WIDTH_L, AbstractDataTablesProvider::COLUMN_WIDTH_LABEL);
-        $this->assertEquals(AbstractDataTablesProvider::COLUMN_WIDTH_S, AbstractDataTablesProvider::COLUMN_WIDTH_THUMBNAIL);
-        $this->assertEquals(AbstractDataTablesProvider::COLUMN_WIDTH_XS, AbstractDataTablesProvider::COLUMN_WIDTH_UNIT);
     }
 }
