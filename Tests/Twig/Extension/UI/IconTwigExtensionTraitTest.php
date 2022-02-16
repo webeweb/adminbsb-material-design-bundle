@@ -24,7 +24,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\IconTwigExtension;
 class IconTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setIconTwigExtension() method.
+     * Tests setIconTwigExtension()
      *
      * @return void
      */

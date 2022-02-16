@@ -25,7 +25,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ProgressBarTwigExtension;
 class ProgressBarTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the adminBSBProgressBarMaterialDesignFunction() method.
+     * Tests adminBSBProgressBarMaterialDesignFunction()
      *
      * @return void
      */
@@ -41,7 +41,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the adminBSBProgressBarMaterialDesignFunction() method.
+     * Tests adminBSBProgressBarMaterialDesignFunction()
      *
      * @return void
      */
@@ -57,7 +57,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFilters() method.
+     * Tests getFilters()
      *
      * @return void
      */
@@ -69,7 +69,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFunctions() method.
+     * Tests getFunctions()
      *
      * @return void
      */
@@ -112,7 +112,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

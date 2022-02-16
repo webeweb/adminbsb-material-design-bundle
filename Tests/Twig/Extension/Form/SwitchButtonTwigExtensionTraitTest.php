@@ -24,7 +24,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\SwitchButtonTwigExtension;
 class SwitchButtonTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setSwitchButtonTwigExtension() method.
+     * Tests setSwitchButtonTwigExtension()
      *
      * @return void
      */

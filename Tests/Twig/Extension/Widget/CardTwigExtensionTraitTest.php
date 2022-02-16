@@ -42,7 +42,7 @@ class CardTwigExtensionTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setCardTwigExtension() method.
+     * Tests setCardTwigExtension()
      *
      * @return void
      */

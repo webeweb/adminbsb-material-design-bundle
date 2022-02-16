@@ -23,7 +23,7 @@ use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 class MaterialDesignButtonTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

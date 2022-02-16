@@ -24,7 +24,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget\InfoboxTwigExtension;
 class InfoboxTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setInfoboxTwigExtension() method.
+     * Tests setInfoboxTwigExtension()
      *
      * @return void
      */

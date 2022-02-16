@@ -40,7 +40,7 @@ class AssetsHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the listAssets() method.
+     * Tests listAssets()
      *
      * @return void
      */

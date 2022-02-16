@@ -61,7 +61,7 @@ class AbstractDataTablesProviderTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getOptions() method.
+     * Tests getOptions()
      *
      * @return void
      */

@@ -25,7 +25,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Plugin\DatetimePickerTwigExtension;
 class DatetimePickerTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the adminBSBDatePickerFunction() method.
+     * Tests adminBSBDatePickerFunction()
      *
      * @return void
      */
@@ -40,7 +40,7 @@ class DatetimePickerTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the adminBSBDatetimePickerFunction() method.
+     * Tests adminBSBDatetimePickerFunction()
      *
      * @return void
      */
@@ -55,7 +55,7 @@ class DatetimePickerTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the adminBSBTimePickerFunction() method.
+     * Tests adminBSBTimePickerFunction()
      *
      * @return void
      */
@@ -70,7 +70,7 @@ class DatetimePickerTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFunctions() method.
+     * Tests getFunctions()
      *
      * @return void
      */
@@ -98,7 +98,7 @@ class DatetimePickerTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

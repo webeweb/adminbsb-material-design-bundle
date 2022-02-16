@@ -23,7 +23,7 @@ use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 class SkinsThemeProviderTest extends AbstractTestCase {
 
     /**
-     * Tests the enumSkins() method.
+     * Tests enumSkins()
      *
      * @return void
      */
@@ -55,7 +55,7 @@ class SkinsThemeProviderTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

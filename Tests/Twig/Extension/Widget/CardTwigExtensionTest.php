@@ -43,7 +43,7 @@ class CardTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the adminBSBCardHeaderFunction() method.
+     * Tests adminBSBCardHeaderFunction()
      *
      * @return void
      */
@@ -58,7 +58,7 @@ class CardTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the adminBSBCardHeaderFunction() method.
+     * Tests adminBSBCardHeaderFunction()
      *
      * @return void
      */
@@ -73,7 +73,7 @@ class CardTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the adminBSBCardHeaderFunction() method.
+     * Tests adminBSBCardHeaderFunction()
      *
      * @return void
      */
@@ -88,7 +88,7 @@ class CardTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the adminBSBCardHeaderFunction() method.
+     * Tests adminBSBCardHeaderFunction()
      *
      * @return void
      */
@@ -103,7 +103,7 @@ class CardTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the adminBSBCardHeaderFunction() method.
+     * Tests adminBSBCardHeaderFunction()
      *
      * @return void
      */
@@ -118,7 +118,7 @@ class CardTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFunctions() method.
+     * Tests getFunctions()
      *
      * @return void
      */
@@ -136,7 +136,7 @@ class CardTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

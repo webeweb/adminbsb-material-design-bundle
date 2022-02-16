@@ -25,7 +25,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\BadgeTwigExtension;
 class BadgeTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the adminBSBButtonBadgeDangerFunction() method.
+     * Tests adminBSBButtonBadgeDangerFunction()
      *
      * @return void
      */
@@ -40,7 +40,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the adminBSBButtonBadgeDangerFunction() method.
+     * Tests adminBSBButtonBadgeDangerFunction()
      *
      * @return void
      */
@@ -55,7 +55,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the adminBSBButtonBadgeDefaultFunction() method.
+     * Tests adminBSBButtonBadgeDefaultFunction()
      *
      * @return void
      */
@@ -70,7 +70,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the adminBSBButtonBadgeDefaultFunction() method.
+     * Tests adminBSBButtonBadgeDefaultFunction()
      *
      * @return void
      */
@@ -85,7 +85,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the adminBSBButtonBadgeInfoFunction() method.
+     * Tests adminBSBButtonBadgeInfoFunction()
      *
      * @return void
      */
@@ -100,7 +100,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the adminBSBButtonBadgeInfoFunction() method.
+     * Tests adminBSBButtonBadgeInfoFunction()
      *
      * @return void
      */
@@ -115,7 +115,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the adminBSBButtonBadgeListFunction() method.
+     * Tests adminBSBButtonBadgeListFunction()
      *
      * @return void
      */
@@ -130,7 +130,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the adminBSBButtonBadgeListFunction() method.
+     * Tests adminBSBButtonBadgeListFunction()
      *
      * @return void
      */
@@ -145,7 +145,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the adminBSBButtonBadgeMaterialDesignFunction() method.
+     * Tests adminBSBButtonBadgeMaterialDesignFunction()
      *
      * @return void
      */
@@ -160,7 +160,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the adminBSBButtonBadgeMaterialDesignFunction() method.
+     * Tests adminBSBButtonBadgeMaterialDesignFunction()
      *
      * @return void
      */
@@ -175,7 +175,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the adminBSBButtonBadgePrimaryFunction() method.
+     * Tests adminBSBButtonBadgePrimaryFunction()
      *
      * @return void
      */
@@ -190,7 +190,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the adminBSBButtonBadgePrimaryFunction() method.
+     * Tests adminBSBButtonBadgePrimaryFunction()
      *
      * @return void
      */
@@ -205,7 +205,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the adminBSBButtonBadgeSuccessFunction() method.
+     * Tests adminBSBButtonBadgeSuccessFunction()
      *
      * @return void
      */
@@ -220,7 +220,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the adminBSBButtonBadgeSuccessFunction() method.
+     * Tests adminBSBButtonBadgeSuccessFunction()
      *
      * @return void
      */
@@ -235,7 +235,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the adminBSBButtonBadgeWarningFunction() method.
+     * Tests adminBSBButtonBadgeWarningFunction()
      *
      * @return void
      */
@@ -250,7 +250,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the adminBSBButtonBadgeWarningFunction() method.
+     * Tests adminBSBButtonBadgeWarningFunction()
      *
      * @return void
      */
@@ -265,7 +265,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFunctions() method.
+     * Tests getFunctions()
      *
      * @return void
      */
@@ -318,7 +318,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

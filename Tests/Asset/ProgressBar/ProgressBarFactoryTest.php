@@ -49,7 +49,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newMaterialDesignProgressBar() method.
+     * Tests newMaterialDesignProgressBar()
      *
      * @return void
      */
@@ -61,7 +61,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseMaterialDesignProgressBar() method.
+     * Tests parseMaterialDesignProgressBar()
      *
      * @return void
      */

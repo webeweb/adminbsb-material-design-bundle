@@ -24,7 +24,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Plugin\DatetimePickerTwigExtension;
 class DatetimePickerTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setDatetimePickerTwigExtension() method.
+     * Tests setDatetimePickerTwigExtension()
      *
      * @return void
      */

@@ -40,7 +40,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests the blankAction() method.
+     * Tests blankAction()
      *
      * @return void
      */

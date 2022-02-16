@@ -43,7 +43,7 @@ class ModalTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the adminBSBModalHeaderFunction() method.
+     * Tests adminBSBModalHeaderFunction()
      *
      * @return void
      */
@@ -58,7 +58,7 @@ class ModalTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the adminBSBModalHeaderFunction() method.
+     * Tests adminBSBModalHeaderFunction()
      *
      * @return void
      */
@@ -73,7 +73,7 @@ class ModalTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFunctions() method.
+     * Tests getFunctions()
      *
      * @return void
      */
@@ -91,7 +91,7 @@ class ModalTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

@@ -59,7 +59,7 @@ class InfoboxFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newInfobox1() method.
+     * Tests newInfobox1()
      *
      * @retun void
      */
@@ -71,7 +71,7 @@ class InfoboxFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newInfobox2() method.
+     * Tests newInfobox2()
      *
      * @retun void
      */
@@ -83,7 +83,7 @@ class InfoboxFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newInfobox3() method.
+     * Tests newInfobox3()
      *
      * @retun void
      */
@@ -95,7 +95,7 @@ class InfoboxFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newInfobox4() method.
+     * Tests newInfobox4()
      *
      * @retun void
      */
@@ -107,7 +107,7 @@ class InfoboxFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newInfobox5() method.
+     * Tests newInfobox5()
      *
      * @retun void
      */
@@ -119,7 +119,7 @@ class InfoboxFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseInfobox1() method.
+     * Tests parseInfobox1()
      *
      * @return void
      */
@@ -141,7 +141,7 @@ class InfoboxFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseInfobox2() method.
+     * Tests parseInfobox2()
      *
      * @return void
      */
@@ -163,7 +163,7 @@ class InfoboxFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseInfobox3() method.
+     * Tests parseInfobox3()
      *
      * @return void
      */
@@ -185,7 +185,7 @@ class InfoboxFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseInfobox4() method.
+     * Tests parseInfobox4()
      *
      * @return void
      */
@@ -207,7 +207,7 @@ class InfoboxFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseInfobox5() method.
+     * Tests parseInfobox5()
      *
      * @return void
      */

@@ -23,7 +23,7 @@ use WBW\Bundle\AdminBSBBundle\Tests\Fixtures\Asset\Widget\TestInfobox;
 class AbstractInfoboxTest extends AbstractTestCase {
 
     /**
-     * Tests the setClass() method.
+     * Tests setClass()
      *
      * @return void
      */
@@ -36,7 +36,7 @@ class AbstractInfoboxTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setColor() method.
+     * Tests setColor()
      *
      * @return void
      */
@@ -49,7 +49,7 @@ class AbstractInfoboxTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setContentNumber() method.
+     * Tests setContentNumber()
      *
      * @return void
      */
@@ -62,7 +62,7 @@ class AbstractInfoboxTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setContentText() method.
+     * Tests setContentText()
      *
      * @return void
      */
@@ -75,7 +75,7 @@ class AbstractInfoboxTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setCountTo() method.
+     * Tests setCountTo()
      *
      * @return void
      */
@@ -88,7 +88,7 @@ class AbstractInfoboxTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setHoverExpandEffect() method.
+     * Tests setHoverExpandEffect()
      *
      * @return void
      */
@@ -101,7 +101,7 @@ class AbstractInfoboxTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setHoverZoomEffect() method.
+     * Tests setHoverZoomEffect()
      *
      * @return void
      */
@@ -114,7 +114,7 @@ class AbstractInfoboxTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setIconColor() method.
+     * Tests setIconColor()
      *
      * @return void
      */
@@ -127,7 +127,7 @@ class AbstractInfoboxTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setIconName() method.
+     * Tests setIconName()
      *
      * @return void
      */
@@ -140,7 +140,7 @@ class AbstractInfoboxTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

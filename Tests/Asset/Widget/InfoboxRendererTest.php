@@ -24,7 +24,7 @@ use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 class InfoboxRendererTest extends AbstractTestCase {
 
     /**
-     * Tests the renderColor() method.
+     * Tests renderColor()
      *
      * @return void
      */
@@ -39,7 +39,7 @@ class InfoboxRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the renderHoverExpandEffect() method.
+     * Tests renderHoverExpandEffect()
      *
      * @return void
      */
@@ -54,7 +54,7 @@ class InfoboxRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the renderHoverZoomEffect() method.
+     * Tests renderHoverZoomEffect()
      *
      * @return void
      */
@@ -69,7 +69,7 @@ class InfoboxRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the renderIconColor() method.
+     * Tests renderIconColor()
      *
      * @return void
      */

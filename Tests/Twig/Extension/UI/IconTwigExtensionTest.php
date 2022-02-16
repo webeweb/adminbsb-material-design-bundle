@@ -25,7 +25,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\IconTwigExtension;
 class IconTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the adminBSBBasicFunction() method.
+     * Tests adminBSBBasicFunction()
      *
      * @return void
      */
@@ -40,7 +40,7 @@ class IconTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the adminBSBBasicFunction() method.
+     * Tests adminBSBBasicFunction()
      *
      * @return void
      */
@@ -55,7 +55,7 @@ class IconTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the adminBSBIconMaterialDesignFunction() method.
+     * Tests adminBSBIconMaterialDesignFunction()
      *
      * @return void
      */
@@ -70,7 +70,7 @@ class IconTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the adminBSBIconMaterialDesignFunction() method.
+     * Tests adminBSBIconMaterialDesignFunction()
      *
      * @return void
      */
@@ -85,7 +85,7 @@ class IconTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFunctions() method.
+     * Tests getFunctions()
      *
      * @return void
      */
@@ -108,7 +108,7 @@ class IconTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */
