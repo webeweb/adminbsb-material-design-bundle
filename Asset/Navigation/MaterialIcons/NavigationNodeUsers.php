@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Navigation\NavigationNode;
 /**
  * Navigation node "Users"
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Asset\Navigation\MaterialIcons
  */
 class NavigationNodeUsers extends NavigationNode {

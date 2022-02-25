@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Navigation\BreadcrumbNode;
 /**
  * Breadcrumb node action "New".
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Asset\Navigation\MaterialIcons
  */
 class BreadcrumbNodeActionNew extends BreadcrumbNode {

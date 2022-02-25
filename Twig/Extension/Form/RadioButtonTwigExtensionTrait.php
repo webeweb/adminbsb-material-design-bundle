@@ -14,7 +14,7 @@ namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Form;
 /**
  * Radio button Twig extension trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\Form
  */
 trait RadioButtonTwigExtensionTrait {

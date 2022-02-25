@@ -20,7 +20,7 @@ use WBW\Bundle\JQuery\DataTablesBundle\Api\DataTablesOptionsInterface;
 /**
  * Abstract DataTables provider test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Tests\DataTables\Provider
  */
 class AbstractDataTablesProviderTest extends AbstractTestCase {

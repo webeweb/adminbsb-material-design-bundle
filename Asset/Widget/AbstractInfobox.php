@@ -14,7 +14,7 @@ namespace WBW\Bundle\AdminBSBBundle\Asset\Widget;
 /**
  * Abstract infobox.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Asset\Widget
  */
 abstract class AbstractInfobox implements InfoboxInterface {

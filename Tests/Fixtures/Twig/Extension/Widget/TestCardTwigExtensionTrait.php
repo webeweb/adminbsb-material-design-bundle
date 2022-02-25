@@ -16,7 +16,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget\CardTwigExtensionTrait;
 /**
  * Test card Twig extension trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Fixtures\Twig\Extension\Widget
  */
 class TestCardTwigExtensionTrait {

@@ -17,7 +17,7 @@ use WBW\Library\Types\Helper\ArrayHelper;
 /**
  * Preloader Twig extension.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\UI
  */
 class PreloaderTwigExtension extends AbstractPreloaderTwigExtension {

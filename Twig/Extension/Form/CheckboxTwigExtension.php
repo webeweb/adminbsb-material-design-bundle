@@ -17,7 +17,7 @@ use WBW\Library\Types\Helper\ArrayHelper;
 /**
  * Checkbox Twig extension.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\Form
  */
 class CheckboxTwigExtension extends AbstractCheckboxTwigExtension {

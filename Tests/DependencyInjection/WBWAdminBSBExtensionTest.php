@@ -34,7 +34,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget\InfoboxTwigExtension;
 /**
  * AdminBSB extension test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Tests\DependencyInjection
  */
 class WBWAdminBSBExtensionTest extends AbstractTestCase {

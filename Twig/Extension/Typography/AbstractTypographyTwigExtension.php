@@ -16,7 +16,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension as Bas
 /**
  * Abstract typography Twig extension.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography
  * @abstract
  */

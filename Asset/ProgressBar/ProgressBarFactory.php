@@ -18,7 +18,7 @@ use WBW\Library\Types\Helper\ArrayHelper;
 /**
  * Progress bar factory.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Asset\ProgressBar
  */
 class ProgressBarFactory extends BaseFactory {

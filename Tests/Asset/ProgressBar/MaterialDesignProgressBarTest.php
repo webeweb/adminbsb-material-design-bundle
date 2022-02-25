@@ -17,7 +17,7 @@ use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 /**
  * Material Design progress bar test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Asset\ProgressBar
  */
 class MaterialDesignProgressBarTest extends AbstractTestCase {

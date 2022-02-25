@@ -18,7 +18,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Plugin\DatetimePickerTwigExtension;
 /**
  * Datetime picker Twig extension trait test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Plugin
  */
 class DatetimePickerTwigExtensionTraitTest extends AbstractTestCase {

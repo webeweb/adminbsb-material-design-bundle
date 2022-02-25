@@ -18,7 +18,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\RadioButtonTwigExtension;
 /**
  * Radio button Twig extension trait test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Form
  */
 class RadioButtonTwigExtensionTraitTest extends AbstractTestCase {

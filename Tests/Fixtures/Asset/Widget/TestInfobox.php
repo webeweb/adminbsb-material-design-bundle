@@ -16,7 +16,7 @@ use WBW\Bundle\AdminBSBBundle\Asset\Widget\AbstractInfobox;
 /**
  * Test infobox.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Fixtures\Asset\Widget
  */
 class TestInfobox extends AbstractInfobox {

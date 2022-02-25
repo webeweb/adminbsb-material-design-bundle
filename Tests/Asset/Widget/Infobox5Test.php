@@ -17,7 +17,7 @@ use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 /**
  * Infobox 5 test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Asset\Widget
  */
 class Infobox5Test extends AbstractTestCase {

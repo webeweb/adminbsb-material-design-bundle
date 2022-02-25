@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\DependencyInjection\ConfigurationHelper;
 /**
  * AdminBSB Material Design extension.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\DependencyInjection
  */
 class WBWAdminBSBExtension extends Extension {

@@ -17,7 +17,7 @@ use WBW\Bundle\AdminBSBBundle\Controller\AbstractController;
 /**
  * Test layout controller.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Fixtures\Controller
  */
 class TestLayoutController extends AbstractController {

@@ -17,7 +17,7 @@ use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 /**
  * Material Design button test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Asset\Button
  */
 class MaterialDesignButtonTest extends AbstractTestCase {

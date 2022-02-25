@@ -17,7 +17,7 @@ use WBW\Library\Types\Helper\ArrayHelper;
 /**
  * Radio button Twig extension.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\Form
  */
 class RadioButtonTwigExtension extends AbstractRadioButtonTwigExtension {

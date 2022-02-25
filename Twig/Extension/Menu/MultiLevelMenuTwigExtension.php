@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Navigation\NavigationTreeHelper;
 /**
  * Multi level menu Twig extension.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\Menu
  */
 class MultiLevelMenuTwigExtension extends AbstractMenuTwigExtension {

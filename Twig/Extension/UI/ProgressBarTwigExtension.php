@@ -19,7 +19,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarTwigExtension
 /**
  * Progress bar Twig extension.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\UI
  */
 class ProgressBarTwigExtension extends BaseTwigExtension {

@@ -14,7 +14,7 @@ namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Plugin;
 /**
  * Datetime picker Twig extension trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\Plugin
  */
 trait DatetimePickerTwigExtensionTrait {

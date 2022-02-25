@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension as BaseTwigExtens
 /**
  * Abstract Twig extension.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension
  * @abstract
  */

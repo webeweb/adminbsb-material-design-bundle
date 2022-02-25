@@ -18,7 +18,7 @@ use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 /**
  * Progress bar factory test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Asset\ProgressBar
  */
 class ProgressBarFactoryTest extends AbstractTestCase {

@@ -17,7 +17,7 @@ use WBW\Bundle\JQuery\DataTablesBundle\Provider\AbstractDataTablesProvider as Ba
 /**
  * Abstract DataTables provider.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\DataTables\Provider
  * @abstract
  */

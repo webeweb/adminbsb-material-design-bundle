@@ -19,7 +19,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget\CardTwigExtension;
 /**
  * Card Twig extension trait test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Widget
  */
 class CardTwigExtensionTraitTest extends AbstractTestCase {

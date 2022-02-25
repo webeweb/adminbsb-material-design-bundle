@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
 /**
  * Breadcrumb node action "Import" test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Asset\Navigation\MaterialIcons
  */
 class BreadcrumbNodeActionImportTest extends AbstractTestCase {

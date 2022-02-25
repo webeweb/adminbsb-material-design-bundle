@@ -18,7 +18,7 @@ use WBW\Bundle\BootstrapBundle\Asset\Button\DefaultButton;
 /**
  * Button renderer test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Asset\Button
  */
 class ButtonRendererTest extends AbstractTestCase {

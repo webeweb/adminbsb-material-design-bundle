@@ -14,7 +14,7 @@ namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget;
 /**
  * Card Twig extension trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget
  */
 trait CardTwigExtensionTrait {

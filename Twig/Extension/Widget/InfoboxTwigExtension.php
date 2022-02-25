@@ -17,7 +17,7 @@ use WBW\Bundle\AdminBSBBundle\Asset\Widget\InfoboxFactory;
 /**
  * Infobox Twig extension.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget
  */
 class InfoboxTwigExtension extends AbstractInfoboxTwigExtension {

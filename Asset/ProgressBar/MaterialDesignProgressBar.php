@@ -16,7 +16,7 @@ use WBW\Bundle\BootstrapBundle\Asset\ProgressBar\AbstractProgressBar;
 /**
  * Material Design progress bar.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Asset\ProgressBar
  */
 class MaterialDesignProgressBar extends AbstractProgressBar {

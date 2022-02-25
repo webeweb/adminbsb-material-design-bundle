@@ -16,7 +16,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ProgressBarTwigExtensionTrait;
 /**
  * Test progress bar Twig extension trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Fixtures\Twig\Extension\UI
  */
 class TestProgressBarTwigExtensionTrait {

@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
 /**
  * Navigation node action "Import" test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Asset\Navigation\MaterialIcons
  */
 class NavigationNodeActionImportTest extends AbstractTestCase {

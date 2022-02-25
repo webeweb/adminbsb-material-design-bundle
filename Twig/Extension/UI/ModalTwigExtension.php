@@ -17,7 +17,7 @@ use WBW\Library\Types\Helper\ArrayHelper;
 /**
  * Modal Twig extension.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\UI
  */
 class ModalTwigExtension extends AbstractModalTwigExtension {

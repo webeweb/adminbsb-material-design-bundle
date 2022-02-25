@@ -20,7 +20,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget\CardTwigExtension;
 /**
  * Card widget Twig extension test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Widget
  */
 class CardTwigExtensionTest extends AbstractTestCase {

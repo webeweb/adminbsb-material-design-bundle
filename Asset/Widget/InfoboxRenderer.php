@@ -16,7 +16,7 @@ use WBW\Bundle\AdminBSBBundle\Asset\Color\ColorHelper;
 /**
  * Infobox renderer.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Asset\Widget
  */
 class InfoboxRenderer {

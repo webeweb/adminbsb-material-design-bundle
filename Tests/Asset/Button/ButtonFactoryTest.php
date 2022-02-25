@@ -18,7 +18,7 @@ use WBW\Bundle\BootstrapBundle\Asset\Button\ButtonInterface;
 /**
  * Button factory test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Asset\Button
  */
 class ButtonFactoryTest extends AbstractTestCase {

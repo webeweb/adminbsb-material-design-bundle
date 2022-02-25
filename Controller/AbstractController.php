@@ -16,7 +16,7 @@ use WBW\Bundle\BootstrapBundle\Controller\AbstractController as BaseController;
 /**
  * Abstract controller.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Controller
  * @abstract
  */

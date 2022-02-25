@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
 /**
  * AdminBSB bundle test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Tests
  */
 class WBWAdminBSBBundleTest extends AbstractTestCase {

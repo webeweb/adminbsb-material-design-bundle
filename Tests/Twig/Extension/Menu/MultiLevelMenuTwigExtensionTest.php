@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Navigation\NavigationTree;
 /**
  * Multi level menu Twig extension test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Menu
  */
 class MultiLevelMenuTwigExtensionTest extends AbstractTestCase {

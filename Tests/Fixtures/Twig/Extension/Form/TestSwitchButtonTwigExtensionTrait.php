@@ -16,7 +16,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\SwitchButtonTwigExtensionTrait
 /**
  * Test switch button Twig extension trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Fixtures\Twig\Extension\Form
  */
 class TestSwitchButtonTwigExtensionTrait {

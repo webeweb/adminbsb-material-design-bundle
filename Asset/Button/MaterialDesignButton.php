@@ -16,7 +16,7 @@ use WBW\Bundle\BootstrapBundle\Asset\Button\AbstractButton;
 /**
  * Material Design button.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Asset\Button
  */
 class MaterialDesignButton extends AbstractButton {

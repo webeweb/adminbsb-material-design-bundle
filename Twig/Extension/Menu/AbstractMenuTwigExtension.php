@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Service\TranslatorTrait;
 /**
  * Abstract multi level menu Twig extension.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Twig\Extension\Menu
  * @abstract
  */

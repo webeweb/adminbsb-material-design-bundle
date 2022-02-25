@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Provider\SkeletonProviderInterface;
 /**
  * AdminBSB bundle.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle
  */
 class WBWAdminBSBBundle extends Bundle implements AssetsProviderInterface, SkeletonProviderInterface {

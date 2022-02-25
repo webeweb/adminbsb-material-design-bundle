@@ -19,7 +19,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\SwitchButtonTwigExtension;
 /**
  * Switch button Twig extension test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Form
  */
 class SwitchButtonTwigExtensionTest extends AbstractTestCase {

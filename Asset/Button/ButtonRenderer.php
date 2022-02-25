@@ -17,7 +17,7 @@ use WBW\Bundle\BootstrapBundle\Asset\Button\ButtonRenderer as BaseRenderer;
 /**
  * Button renderer.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Asset\Button
  */
 class ButtonRenderer extends BaseRenderer {
