@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Tests\Asset\Button;
+namespace WBW\Bundle\AdminBSBBundle\Tests\Renderer\Assets;
 
-use WBW\Bundle\AdminBSBBundle\Asset\Button\ButtonRenderer;
+use WBW\Bundle\AdminBSBBundle\Renderer\Assets\ButtonRenderer;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Assets\Button\DefaultButton;
 
@@ -19,7 +19,7 @@ use WBW\Bundle\BootstrapBundle\Assets\Button\DefaultButton;
  * Button renderer test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\AdminBSBBundle\Tests\Asset\Button
+ * @package WBW\Bundle\AdminBSBBundle\Tests\Renderer\Assets
  */
 class ButtonRendererTest extends AbstractTestCase {
 

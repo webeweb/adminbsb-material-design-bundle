@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Asset\Button;
+namespace WBW\Bundle\AdminBSBBundle\Assets\Button;
 
 use WBW\Bundle\BootstrapBundle\Assets\AbstractButton;
 

@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
 use Twig\TwigFilter;
 use Twig\TwigFunction;
-use WBW\Bundle\AdminBSBBundle\Asset\Button\ButtonFactory;
+use WBW\Bundle\AdminBSBBundle\Factory\ButtonFactory;
 use WBW\Library\Types\Helper\ArrayHelper;
 
 /**

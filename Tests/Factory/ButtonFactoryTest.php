@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Tests\Asset\Button;
+namespace WBW\Bundle\AdminBSBBundle\Tests\Factory;
 
-use WBW\Bundle\AdminBSBBundle\Asset\Button\ButtonFactory;
+use WBW\Bundle\AdminBSBBundle\Factory\ButtonFactory;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Assets\ButtonInterface;
 
@@ -19,7 +19,7 @@ use WBW\Bundle\BootstrapBundle\Assets\ButtonInterface;
  * Button factory test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\AdminBSBBundle\Tests\Asset\Button
+ * @package WBW\Bundle\AdminBSBBundle\Tests\Factory
  */
 class ButtonFactoryTest extends AbstractTestCase {
 

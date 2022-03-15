@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Tests\Asset\Button;
+namespace WBW\Bundle\AdminBSBBundle\Tests\Assets\Button;
 
-use WBW\Bundle\AdminBSBBundle\Asset\Button\MaterialDesignButton;
+use WBW\Bundle\AdminBSBBundle\Assets\Button\MaterialDesignButton;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 
 /**
  * Material Design button test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\AdminBSBBundle\Tests\Asset\Button
+ * @package WBW\Bundle\AdminBSBBundle\Tests\Assets\Button
  */
 class MaterialDesignButtonTest extends AbstractTestCase {
 
