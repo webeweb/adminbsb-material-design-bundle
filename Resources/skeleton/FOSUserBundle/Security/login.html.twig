@@ -1,5 +1,5 @@
-{# Resources/skeleton/TwigBundle/views/Exception/error404.html.twig #}
-{% extends "@WBWAdminBSB/bundles/TwigBundle/Exception/error404.html.twig" %}
+{# Resources/skeleton/FOSUserBundle/Security/login.html.twig #}
+{% extends "@WBWAdminBSB/bundles/FOSUserBundle/Security/login.html.twig" %}
 
 {% block adminBSBStylesheets %}
     {{ parent() }}
@@ -7,6 +7,8 @@
 {% endblock %}
 
 {% block adminBSBTitle %}{{ parent() }}{% endblock %}
+
+{% block adminBSBAttributes %}{{ parent() }}{% endblock %}
 
 {% block adminBSBContainer %}
     {{ parent() }}

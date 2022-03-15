@@ -1,5 +1,5 @@
-{# Resources/skeleton/FOSUserBundle/views/Profile/edit.html.twig #}
-{% extends "@WBWAdminBSB/bundles/FOSUserBundle/Profile/edit.html.twig" %}
+{# Resources/skeleton/TwigBundle/Exception/error.html.twig #}
+{% extends "@WBWAdminBSB/bundles/TwigBundle/Exception/error500.html.twig" %}
 
 {% block adminBSBStylesheets %}
     {{ parent() }}
@@ -8,7 +8,7 @@
 
 {% block adminBSBTitle %}{{ parent() }}{% endblock %}
 
-{% block adminBSBContent %}
+{% block adminBSBContainer %}
     {{ parent() }}
 
 {% endblock %}
