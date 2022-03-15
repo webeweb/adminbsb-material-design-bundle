@@ -12,7 +12,7 @@ framework:
     default_locale:  "%locale%"
     form:            true
     router:
-        resource:            "%kernel.root_dir%/config/routing_test.yml"
+        resource:            "%kernel.project_dir%/config/routing_test.yml"
         strict_requirements: true
     secret:          "ThisTokenIsNotSoSecretChangeIt"
     session:
@@ -28,14 +28,14 @@ framework:
 doctrine:
     dbal:
         driver: "pdo_sqlite"
-        path:   "%kernel.root_dir%/var/test.sqlite"
+        path:   "%kernel.project_dir%/var/test.sqlite"
     orm:
         auto_generate_proxy_classes: "%kernel.debug%"
         auto_mapping:                true
         mappings:
             WBWAdminBSBBundle:
                 dir:       "Tests/Fixtures/app/config/doctrine"
-                type:      "yml"
+                type:      "xml"
                 is_bundle: true
                 prefix:    "WBW\\Bundle\\AdminBSBBundle\\Tests\\Fixtures\\Entity"
         naming_strategy:             "doctrine.orm.naming_strategy.underscore"
