@@ -1,6 +1,13 @@
 # Resources/config/twig.yml
 services:
 
+    wbw.adminbsb.twig.extension.assets:
+        class:  WBW\Bundle\AdminBSBBundle\Twig\Extension\AssetsTwigExtension
+        arguments: [ "@twig" ]
+        public: true
+        tags:
+            - { name: "twig.extension" }
+
     wbw.adminbsb.twig.extension.form.checkbox:
         class:  WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\CheckboxTwigExtension
         arguments: [ "@twig" ]

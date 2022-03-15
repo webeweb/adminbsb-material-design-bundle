@@ -12,24 +12,23 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension;
 
 use Twig\Environment;
-use Twig\TwigFilter;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\IconTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\AssetsTwigExtension as BaseTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\AssetsTwigExtension as BaseAssetsTwigExtension;
 
 /**
- * Renderer Twig extension.
+ * Assets Twig extension.
  *
  * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension
  */
-class RendererTwigExtension extends BaseTwigExtension {
+class AssetsTwigExtension extends BaseAssetsTwigExtension {
 
     /**
      * Service name.
      *
      * @var string
      */
-    const SERVICE_NAME = "wbw.adminbsb.twig.extension.renderer";
+    const SERVICE_NAME = "wbw.adminbsb.twig.extension.assets";
 
     /**
      * Constructor.
@@ -41,11 +40,16 @@ class RendererTwigExtension extends BaseTwigExtension {
     }
 
     /**
-     * Get the Twig filters.
-     *
-     * @return TwigFilter[] Returns the Twig filters.
+     * {@inheritDoc}
      */
     public function getFilters(): array {
+        return [];
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getFunctions(): array {
         return [];
     }
 
@@ -59,7 +63,7 @@ class RendererTwigExtension extends BaseTwigExtension {
             array_unshift($handler, "mi");
         }
         if (2 !== count($handler)) {
-            return "";
+            return null;
         }
 
         switch ($handler[0]) {

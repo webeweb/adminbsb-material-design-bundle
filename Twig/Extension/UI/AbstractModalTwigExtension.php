@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
 use Twig\Environment;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\RendererTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\AssetsTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\TypographyTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\TypographyTwigExtensionTrait;
 
@@ -51,7 +51,7 @@ abstract class AbstractModalTwigExtension extends AbstractTwigExtension {
 
         $innerHTML = $content;
         if (null !== $icon) {
-            $innerHTML = RendererTwigExtension::renderIcon($this->getTwigEnvironment(), $icon, "margin: -4px 0; vertical-align: sub;") . $innerHTML;
+            $innerHTML = AssetsTwigExtension::renderIcon($this->getTwigEnvironment(), $icon, "margin: -4px 0; vertical-align: sub;") . $innerHTML;
         }
 
         return $this->getTypographyTwigExtension()->bootstrapHeading3Function([

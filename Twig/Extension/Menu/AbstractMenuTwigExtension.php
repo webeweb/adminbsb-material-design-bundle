@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Menu;
 
 use Twig\Environment;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\RendererTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\AssetsTwigExtension;
 use WBW\Bundle\CoreBundle\Translation\BaseTranslatorInterface;
 use WBW\Bundle\CoreBundle\Translation\TranslatorTrait;
 use WBW\Library\Symfony\Assets\AbstractNavigationNode;
@@ -141,7 +141,7 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
         if (null === $node->getIcon()) {
             return "";
         }
-        return RendererTwigExtension::renderIcon($this->getTwigEnvironment(), $node->getIcon()) . "\n";
+        return AssetsTwigExtension::renderIcon($this->getTwigEnvironment(), $node->getIcon()) . "\n";
     }
 
     /**

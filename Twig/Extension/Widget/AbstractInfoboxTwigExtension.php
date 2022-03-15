@@ -16,7 +16,7 @@ use WBW\Bundle\AdminBSBBundle\Assets\InfoboxInterface;
 use WBW\Bundle\AdminBSBBundle\Assets\Widget\Infobox5;
 use WBW\Bundle\AdminBSBBundle\Renderer\Assets\InfoboxRenderer;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\RendererTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\AssetsTwigExtension;
 
 /**
  * Abstract infobox Twig extension.
@@ -35,7 +35,7 @@ abstract class AbstractInfoboxTwigExtension extends AbstractTwigExtension {
      */
     protected function adminBSBInfobox(InfoboxInterface $infobox): string {
 
-        $icon   = RendererTwigExtension::renderIcon($this->getTwigEnvironment(), $infobox->getIconName());
+        $icon   = AssetsTwigExtension::renderIcon($this->getTwigEnvironment(), $infobox->getIconName());
         $text   = static::coreHTMLElement("div", $infobox->getContentText(), ["class" => "text"]);
         $number = static::coreHTMLElement("div", $infobox->getContentNumber(), array_merge([
             "class" => [

@@ -12,15 +12,15 @@
 namespace WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension;
 
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\RendererTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\AssetsTwigExtension;
 
 /**
- * Renderer Twig extension test.
+ * Assets Twig extension test.
  *
  * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension
  */
-class RendererTwigExtensionTest extends AbstractTestCase {
+class AssetsTwigExtensionTest extends AbstractTestCase {
 
     /**
      * Tests getFilters()
@@ -29,8 +29,22 @@ class RendererTwigExtensionTest extends AbstractTestCase {
      */
     public function testGetFilters(): void {
 
-        $obj = new RendererTwigExtension($this->twigEnvironment);
+        $obj = new AssetsTwigExtension($this->twigEnvironment);
+
         $res = $obj->getFilters();
+        $this->assertCount(0, $res);
+    }
+
+    /**
+     * Tests getFunctions()
+     *
+     * @return void
+     */
+    public function testGetFunctions(): void {
+
+        $obj = new AssetsTwigExtension($this->twigEnvironment);
+
+        $res = $obj->getFunctions();
         $this->assertCount(0, $res);
     }
 
@@ -42,7 +56,7 @@ class RendererTwigExtensionTest extends AbstractTestCase {
     public function testRenderIconWithDefault(): void {
 
         $res = '<i class="material-icons">home</i>';
-        $this->assertEquals($res, RendererTwigExtension::renderIcon($this->twigEnvironment, "home"));
+        $this->assertEquals($res, AssetsTwigExtension::renderIcon($this->twigEnvironment, "home"));
     }
 
     /**
@@ -53,7 +67,7 @@ class RendererTwigExtensionTest extends AbstractTestCase {
     public function testRenderIconWithMaterialIcon(): void {
 
         $res = '<i class="material-icons">home</i>';
-        $this->assertEquals($res, RendererTwigExtension::renderIcon($this->twigEnvironment, "mi:home"));
+        $this->assertEquals($res, AssetsTwigExtension::renderIcon($this->twigEnvironment, "mi:home"));
     }
 
     /**
@@ -64,7 +78,7 @@ class RendererTwigExtensionTest extends AbstractTestCase {
     public function testRenderIconWithOther(): void {
 
         $res = '<span class="glyphicon glyphicon-home" aria-hidden="true"></span>';
-        $this->assertEquals($res, RendererTwigExtension::renderIcon($this->twigEnvironment, "g:home"));
+        $this->assertEquals($res, AssetsTwigExtension::renderIcon($this->twigEnvironment, "g:home"));
     }
 
     /**
@@ -75,7 +89,7 @@ class RendererTwigExtensionTest extends AbstractTestCase {
     public function testRenderIconWithoutArguments(): void {
 
         $res = "";
-        $this->assertEquals($res, RendererTwigExtension::renderIcon($this->twigEnvironment, "::"));
+        $this->assertEquals($res, AssetsTwigExtension::renderIcon($this->twigEnvironment, "::"));
     }
 
     /**
@@ -85,9 +99,9 @@ class RendererTwigExtensionTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $this->assertEquals("wbw.adminbsb.twig.extension.renderer", RendererTwigExtension::SERVICE_NAME);
+        $this->assertEquals("wbw.adminbsb.twig.extension.assets", AssetsTwigExtension::SERVICE_NAME);
 
-        $obj = new RendererTwigExtension($this->twigEnvironment);
+        $obj = new AssetsTwigExtension($this->twigEnvironment);
 
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }

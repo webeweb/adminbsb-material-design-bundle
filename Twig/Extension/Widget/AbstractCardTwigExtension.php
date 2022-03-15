@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget;
 
 use Twig\Environment;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
-use WBW\Bundle\AdminBSBBundle\Twig\Extension\RendererTwigExtension;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\AssetsTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\TypographyTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\TypographyTwigExtensionTrait;
 
@@ -55,7 +55,7 @@ abstract class AbstractCardTwigExtension extends AbstractTwigExtension {
             $innerHTML .= static::coreHTMLElement("small", $description);
         }
         if (null !== $icon) {
-            $innerHTML = RendererTwigExtension::renderIcon($this->getTwigEnvironment(), $icon, "margin: -4px 4px 0 0; vertical-align: sub;") . $innerHTML;
+            $innerHTML = AssetsTwigExtension::renderIcon($this->getTwigEnvironment(), $icon, "margin: -4px 4px 0 0; vertical-align: sub;") . $innerHTML;
         }
 
         return $this->getTypographyTwigExtension()->bootstrapHeading2Function([

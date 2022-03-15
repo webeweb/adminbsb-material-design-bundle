@@ -16,6 +16,7 @@ use Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
 use WBW\Bundle\AdminBSBBundle\DependencyInjection\Configuration;
 use WBW\Bundle\AdminBSBBundle\DependencyInjection\WBWAdminBSBExtension;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
+use WBW\Bundle\AdminBSBBundle\Twig\Extension\AssetsTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\CheckboxTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\RadioButtonTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\SwitchButtonTwigExtension;
@@ -98,6 +99,9 @@ class WBWAdminBSBExtensionTest extends AbstractTestCase {
         $obj = new WBWAdminBSBExtension();
 
         $obj->load($this->configs, $this->containerBuilder);
+
+        // Twig extensions
+        $this->assertInstanceOf(AssetsTwigExtension::class, $this->containerBuilder->get(AssetsTwigExtension::SERVICE_NAME));
 
         // Form Twig extensions
         $this->assertInstanceOf(CheckboxTwigExtension::class, $this->containerBuilder->get(CheckboxTwigExtension::SERVICE_NAME));
