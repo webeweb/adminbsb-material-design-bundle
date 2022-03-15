@@ -14,6 +14,7 @@ namespace WBW\Bundle\AdminBSBBundle\DependencyInjection;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 use WBW\Bundle\AdminBSBBundle\Asset\Theme\SkinsThemeProvider;
+use WBW\Bundle\AdminBSBBundle\Provider\Theme\SkinThemeProviderInterface;
 use WBW\Bundle\CoreBundle\Config\ConfigurationHelper;
 
 /**
@@ -25,13 +26,43 @@ use WBW\Bundle\CoreBundle\Config\ConfigurationHelper;
 class Configuration implements ConfigurationInterface {
 
     /**
+     * Enumerates the skins.
+     *
+     * @return string[] Returns the skins enumeration.
+     */
+    public static function enumSkins(): array {
+        return [
+            SkinThemeProviderInterface::SKIN_RED,
+            SkinThemeProviderInterface::SKIN_PINK,
+            SkinThemeProviderInterface::SKIN_PURPLE,
+            SkinThemeProviderInterface::SKIN_DEEP_PURPLE,
+            SkinThemeProviderInterface::SKIN_INDIGO,
+            SkinThemeProviderInterface::SKIN_BLUE,
+            SkinThemeProviderInterface::SKIN_LIGHT_BLUE,
+            SkinThemeProviderInterface::SKIN_CYAN,
+            SkinThemeProviderInterface::SKIN_TEAL,
+            SkinThemeProviderInterface::SKIN_GREEN,
+            SkinThemeProviderInterface::SKIN_LIGHT_GREEN,
+            SkinThemeProviderInterface::SKIN_LIME,
+            SkinThemeProviderInterface::SKIN_YELLOW,
+            SkinThemeProviderInterface::SKIN_AMBER,
+            SkinThemeProviderInterface::SKIN_ORANGE,
+            SkinThemeProviderInterface::SKIN_DEEP_ORANGE,
+            SkinThemeProviderInterface::SKIN_BROWN,
+            SkinThemeProviderInterface::SKIN_GREY,
+            SkinThemeProviderInterface::SKIN_BLUE_GREY,
+            SkinThemeProviderInterface::SKIN_BLACK,
+        ];
+    }
+
+    /**
      * {@inheritDoc}
      */
     public function getConfigTreeBuilder(): TreeBuilder {
 
         $assets  = ConfigurationHelper::loadYamlConfig(__DIR__, "assets");
         $plugins = $assets["assets"]["wbw.adminbsb.asset.adminbsb"]["plugins"];
-        $skins   = SkinsThemeProvider::enumSkins();
+        $skins   = static::enumSkins();
 
         $treeBuilder = new TreeBuilder(WBWAdminBSBExtension::EXTENSION_ALIAS);
 
@@ -39,18 +70,19 @@ class Configuration implements ConfigurationInterface {
         $rootNode
             ->children()
                 ->booleanNode("twig")->defaultTrue()->info("Load Twig extensions")->end()
-                ->scalarNode("skin")->defaultValue("red")->info("AdminBSB skin")
-                    ->validate()
-                        ->ifNotInArray($skins)
-                        ->thenInvalid("The AdminBSB skin %s is not supported. Please choose one of " . json_encode($skins))
-                    ->end()
-                ->end()
                 ->arrayNode("plugins")->info("AdminBSB plug-ins")
                     ->prototype("scalar")
                         ->validate()
                             ->ifNotInArray(array_keys($plugins))
                             ->thenInvalid("The AdminBSB plug-in %s is not supported. Please choose one of " . json_encode(array_keys($plugins)))
                         ->end()
+                    ->end()
+                ->end()
+                ->scalarNode("skin")->defaultValue("red")->info("AdminBSB skin")
+                    ->validate()
+                        ->ifNotInArray($skins)
+                        ->thenInvalid("The AdminBSB skin %s is not supported. Please choose one of " . json_encode($skins))
+                    ->end()
                 ->end()
             ->end();
 

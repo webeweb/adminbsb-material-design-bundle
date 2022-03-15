@@ -3,21 +3,23 @@
 /*
  * This file is part of the adminbsb-material-design-bundle package.
  *
- * (c) 2020 WEBEWEB
+ * (c) 2022 WEBEWEB
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Asset\Theme;
+namespace WBW\Bundle\AdminBSBBundle\Provider\Theme;
+
+use WBW\Library\Symfony\Provider\ThemeProviderInterface;
 
 /**
- * Skins theme provider.
+ * Skin theme provider interface.
  *
- * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\AdminBSBBundle\Asset\Theme
+ * @author webeweb <https://github.com/webeweb>
+ * @package WBW\Bundle\AdminBSBBundle\Provider\Theme
  */
-class SkinsThemeProvider {
+interface SkinThemeProviderInterface extends ThemeProviderInterface {
 
     /**
      * Skin "amber".
@@ -158,34 +160,4 @@ class SkinsThemeProvider {
      * @var string
      */
     const SKIN_YELLOW = "yellow";
-
-    /**
-     * Enumerates the skins.
-     *
-     * @return string[] Returns the skins enumeration.
-     */
-    public static function enumSkins(): array {
-        return [
-            self::SKIN_RED,
-            self::SKIN_PINK,
-            self::SKIN_PURPLE,
-            self::SKIN_DEEP_PURPLE,
-            self::SKIN_INDIGO,
-            self::SKIN_BLUE,
-            self::SKIN_LIGHT_BLUE,
-            self::SKIN_CYAN,
-            self::SKIN_TEAL,
-            self::SKIN_GREEN,
-            self::SKIN_LIGHT_GREEN,
-            self::SKIN_LIME,
-            self::SKIN_YELLOW,
-            self::SKIN_AMBER,
-            self::SKIN_ORANGE,
-            self::SKIN_DEEP_ORANGE,
-            self::SKIN_BROWN,
-            self::SKIN_GREY,
-            self::SKIN_BLUE_GREY,
-            self::SKIN_BLACK,
-        ];
-    }
 }
