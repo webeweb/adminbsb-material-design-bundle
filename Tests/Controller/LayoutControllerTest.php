@@ -33,7 +33,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
 
         // Set up the directories.
         $skeletonDirectory  = realpath(__DIR__ . "/../../Resources/skeleton");
-        $resourcesDirectory = realpath(__DIR__ . "/../Fixtures/app/Resources");
+        $resourcesDirectory = realpath(__DIR__ . "/../Fixtures/app/templates/bundles");
 
         // Copy skeleton.
         SkeletonHelper::copySkeleton($skeletonDirectory, $resourcesDirectory);
