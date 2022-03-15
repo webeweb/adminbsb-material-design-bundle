@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\UI;
 
 use Twig\TwigFilter;
 use Twig\TwigFunction;
-use WBW\Bundle\AdminBSBBundle\Asset\ProgressBar\ProgressBarFactory;
+use WBW\Bundle\AdminBSBBundle\Factory\ProgressBarFactory;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarTwigExtension as BaseTwigExtension;
 
 /**

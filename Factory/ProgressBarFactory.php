@@ -9,17 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Asset\ProgressBar;
+namespace WBW\Bundle\AdminBSBBundle\Factory;
 
-use WBW\Bundle\BootstrapBundle\Factory\ProgressBarFactory as BaseFactory;
+use WBW\Bundle\AdminBSBBundle\Assets\ProgressBar\MaterialDesignProgressBar;
 use WBW\Bundle\BootstrapBundle\Assets\ProgressBarInterface;
+use WBW\Bundle\BootstrapBundle\Factory\ProgressBarFactory as BaseFactory;
 use WBW\Library\Types\Helper\ArrayHelper;
 
 /**
  * Progress bar factory.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\AdminBSBBundle\Asset\ProgressBar
+ * @package WBW\Bundle\AdminBSBBundle\Factory
  */
 class ProgressBarFactory extends BaseFactory {
 

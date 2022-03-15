@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Tests\Asset\ProgressBar;
+namespace WBW\Bundle\AdminBSBBundle\Tests\Factory;
 
-use WBW\Bundle\AdminBSBBundle\Asset\ProgressBar\MaterialDesignProgressBar;
-use WBW\Bundle\AdminBSBBundle\Asset\ProgressBar\ProgressBarFactory;
+use WBW\Bundle\AdminBSBBundle\Assets\ProgressBar\MaterialDesignProgressBar;
+use WBW\Bundle\AdminBSBBundle\Factory\ProgressBarFactory;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 
 /**
  * Progress bar factory test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\AdminBSBBundle\Tests\Asset\ProgressBar
+ * @package WBW\Bundle\AdminBSBBundle\Tests\Factory
  */
 class ProgressBarFactoryTest extends AbstractTestCase {
 
@@ -36,7 +36,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
     protected function setUp(): void {
         parent::setUp();
 
-        // Set the Arguments mock.
+        // Set the arguments mock.
         $this->args = [
             "color"    => "pink",
             "content"  => "content",

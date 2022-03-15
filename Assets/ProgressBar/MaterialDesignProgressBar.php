@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Asset\ProgressBar;
+namespace WBW\Bundle\AdminBSBBundle\Assets\ProgressBar;
 
 use WBW\Bundle\BootstrapBundle\Assets\AbstractProgressBar;
 
@@ -17,7 +17,7 @@ use WBW\Bundle\BootstrapBundle\Assets\AbstractProgressBar;
  * Material Design progress bar.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\AdminBSBBundle\Asset\ProgressBar
+ * @package WBW\Bundle\AdminBSBBundle\Assets\ProgressBar
  */
 class MaterialDesignProgressBar extends AbstractProgressBar {
 

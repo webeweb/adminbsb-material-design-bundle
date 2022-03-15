@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Tests\Asset\ProgressBar;
+namespace WBW\Bundle\AdminBSBBundle\Tests\Assets\ProgressBar;
 
-use WBW\Bundle\AdminBSBBundle\Asset\ProgressBar\MaterialDesignProgressBar;
+use WBW\Bundle\AdminBSBBundle\Assets\ProgressBar\MaterialDesignProgressBar;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 
 /**
  * Material Design progress bar test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\AdminBSBBundle\Tests\Asset\ProgressBar
+ * @package WBW\Bundle\AdminBSBBundle\Tests\Assets\ProgressBar
  */
 class MaterialDesignProgressBarTest extends AbstractTestCase {
 
