@@ -9,20 +9,22 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Asset\Widget;
+namespace WBW\Bundle\AdminBSBBundle\Assets\Widget;
+
+use WBW\Bundle\AdminBSBBundle\Assets\AbstractInfobox;
 
 /**
- * Infobox 3.
+ * Infobox 1.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\AdminBSBBundle\Asset\Widget
+ * @package WBW\Bundle\AdminBSBBundle\Assets\Widget
  */
-class Infobox3 extends AbstractInfobox {
+class Infobox1 extends AbstractInfobox {
 
     /**
      * Constructor.
      */
     public function __construct() {
-        parent::__construct("info-box-2");
+        parent::__construct("info-box");
     }
 }

@@ -9,21 +9,21 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Tests\Asset\Widget;
+namespace WBW\Bundle\AdminBSBBundle\Tests\Factory;
 
-use WBW\Bundle\AdminBSBBundle\Asset\Widget\Infobox1;
-use WBW\Bundle\AdminBSBBundle\Asset\Widget\Infobox2;
-use WBW\Bundle\AdminBSBBundle\Asset\Widget\Infobox3;
-use WBW\Bundle\AdminBSBBundle\Asset\Widget\Infobox4;
-use WBW\Bundle\AdminBSBBundle\Asset\Widget\Infobox5;
-use WBW\Bundle\AdminBSBBundle\Asset\Widget\InfoboxFactory;
+use WBW\Bundle\AdminBSBBundle\Assets\Widget\Infobox1;
+use WBW\Bundle\AdminBSBBundle\Assets\Widget\Infobox2;
+use WBW\Bundle\AdminBSBBundle\Assets\Widget\Infobox3;
+use WBW\Bundle\AdminBSBBundle\Assets\Widget\Infobox4;
+use WBW\Bundle\AdminBSBBundle\Assets\Widget\Infobox5;
+use WBW\Bundle\AdminBSBBundle\Factory\InfoboxFactory;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 
 /**
  * Infobox factory test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\AdminBSBBundle\Tests\Asset\Widget
+ * @package WBW\Bundle\AdminBSBBundle\Tests\Factory
  */
 class InfoboxFactoryTest extends AbstractTestCase {
 

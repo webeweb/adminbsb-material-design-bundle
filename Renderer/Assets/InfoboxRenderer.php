@@ -9,15 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Asset\Widget;
+namespace WBW\Bundle\AdminBSBBundle\Renderer\Assets;
 
 use WBW\Bundle\AdminBSBBundle\Asset\Color\ColorHelper;
+use WBW\Bundle\AdminBSBBundle\Assets\InfoboxInterface;
 
 /**
  * Infobox renderer.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\AdminBSBBundle\Asset\Widget
+ * @package WBW\Bundle\AdminBSBBundle\Renderer\Assets
  */
 class InfoboxRenderer {
 

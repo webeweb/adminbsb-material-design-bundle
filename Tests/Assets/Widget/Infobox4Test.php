@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Tests\Asset\Widget;
+namespace WBW\Bundle\AdminBSBBundle\Tests\Assets\Widget;
 
-use WBW\Bundle\AdminBSBBundle\Asset\Widget\Infobox4;
+use WBW\Bundle\AdminBSBBundle\Assets\Widget\Infobox4;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 
 /**
  * Infobox 4 test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\AdminBSBBundle\Tests\Asset\Widget
+ * @package WBW\Bundle\AdminBSBBundle\Tests\Assets\Widget
  */
 class Infobox4Test extends AbstractTestCase {
 

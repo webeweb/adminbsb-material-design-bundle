@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Asset\Widget;
+namespace WBW\Bundle\AdminBSBBundle\Assets;
 
 /**
  * Abstract infobox.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\AdminBSBBundle\Asset\Widget
+ * @package WBW\Bundle\AdminBSBBundle\Assets
  */
 abstract class AbstractInfobox implements InfoboxInterface {
 

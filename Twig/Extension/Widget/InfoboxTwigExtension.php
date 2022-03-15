@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget;
 
 use Twig\TwigFunction;
-use WBW\Bundle\AdminBSBBundle\Asset\Widget\InfoboxFactory;
+use WBW\Bundle\AdminBSBBundle\Factory\InfoboxFactory;
 
 /**
  * Infobox Twig extension.

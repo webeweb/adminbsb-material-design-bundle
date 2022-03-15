@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Tests\Asset\Widget;
+namespace WBW\Bundle\AdminBSBBundle\Tests\Renderer\Assets;
 
-use WBW\Bundle\AdminBSBBundle\Asset\Widget\Infobox1;
-use WBW\Bundle\AdminBSBBundle\Asset\Widget\InfoboxRenderer;
+use WBW\Bundle\AdminBSBBundle\Assets\Widget\Infobox1;
+use WBW\Bundle\AdminBSBBundle\Renderer\Assets\InfoboxRenderer;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 
 /**
  * Infobox renderer test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\AdminBSBBundle\Tests\Asset\Widget
+ * @package WBW\Bundle\AdminBSBBundle\Tests\Renderer\Assets
  */
 class InfoboxRendererTest extends AbstractTestCase {
 

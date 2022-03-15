@@ -9,15 +9,21 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Asset\Widget;
+namespace WBW\Bundle\AdminBSBBundle\Factory;
 
+use WBW\Bundle\AdminBSBBundle\Assets\InfoboxInterface;
+use WBW\Bundle\AdminBSBBundle\Assets\Widget\Infobox1;
+use WBW\Bundle\AdminBSBBundle\Assets\Widget\Infobox2;
+use WBW\Bundle\AdminBSBBundle\Assets\Widget\Infobox3;
+use WBW\Bundle\AdminBSBBundle\Assets\Widget\Infobox4;
+use WBW\Bundle\AdminBSBBundle\Assets\Widget\Infobox5;
 use WBW\Library\Types\Helper\ArrayHelper;
 
 /**
  * Infobox factory.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\AdminBSBBundle\Asset\Widget
+ * @package WBW\Bundle\AdminBSBBundle\Factory
  */
 class InfoboxFactory {
 

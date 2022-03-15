@@ -12,9 +12,9 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget;
 
 use WBW\Bundle\AdminBSBBundle\Asset\Color\ColorHelper;
-use WBW\Bundle\AdminBSBBundle\Asset\Widget\Infobox5;
-use WBW\Bundle\AdminBSBBundle\Asset\Widget\InfoboxInterface;
-use WBW\Bundle\AdminBSBBundle\Asset\Widget\InfoboxRenderer;
+use WBW\Bundle\AdminBSBBundle\Assets\InfoboxInterface;
+use WBW\Bundle\AdminBSBBundle\Assets\Widget\Infobox5;
+use WBW\Bundle\AdminBSBBundle\Renderer\Assets\InfoboxRenderer;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\RendererTwigExtension;
 

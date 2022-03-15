@@ -9,18 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Tests\Asset\Widget;
+namespace WBW\Bundle\AdminBSBBundle\Tests\Assets\Widget;
 
-use WBW\Bundle\AdminBSBBundle\Asset\Widget\Infobox5;
+use WBW\Bundle\AdminBSBBundle\Assets\Widget\Infobox2;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 
 /**
- * Infobox 5 test.
+ * Infobox 2 test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\AdminBSBBundle\Tests\Asset\Widget
+ * @package WBW\Bundle\AdminBSBBundle\Tests\Assets\Widget
  */
-class Infobox5Test extends AbstractTestCase {
+class Infobox2Test extends AbstractTestCase {
 
     /**
      * Tests __construct()
@@ -29,8 +29,8 @@ class Infobox5Test extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $obj = new Infobox5();
+        $obj = new Infobox2();
 
-        $this->assertEquals("info-box-4", $obj->getClass());
+        $this->assertEquals("info-box", $obj->getClass());
     }
 }
