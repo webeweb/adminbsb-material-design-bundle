@@ -7,7 +7,7 @@ parameters:
     locale: "en"
 
 framework:
-    assets: true
+    assets:          true
     csrf_protection: ~
     default_locale:  "%locale%"
     form:            true

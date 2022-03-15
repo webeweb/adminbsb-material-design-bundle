@@ -13,8 +13,8 @@ namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Menu;
 
 use Symfony\Component\HttpFoundation\Request;
 use Twig\TwigFunction;
-use WBW\Library\Symfony\Assets\Navigation\NavigationTree;
 use WBW\Bundle\CoreBundle\Helper\Assets\NavigationNodeHelper;
+use WBW\Library\Symfony\Assets\Navigation\NavigationTree;
 
 /**
  * Multi level menu Twig extension.

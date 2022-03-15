@@ -49,6 +49,19 @@ class WBWAdminBSBBundleTest extends AbstractTestCase {
     }
 
     /**
+     * Tests getSkeletonRelativeDirectory()
+     *
+     * @return void
+     */
+    public function testGetSkeletonRelativeDirectory(): void {
+
+        $obj = new WBWAdminBSBBundle();
+        $obj->setContainer($this->containerBuilder);
+
+        $this->assertEquals("/Resources/skeleton", $obj->getSkeletonRelativeDirectory());
+    }
+
+    /**
      * Tests listAssets()
      *
      * @return void
@@ -104,17 +117,5 @@ class WBWAdminBSBBundleTest extends AbstractTestCase {
         $this->assertRegExp("/sweetalert\.zip$/", $res[++$i]);
         $this->assertRegExp("/tinymce\.zip$/", $res[++$i]);
         $this->assertRegExp("/waitme\.zip$/", $res[++$i]);
-    }
-    /**
-     * Tests getSkeletonRelativeDirectory()
-     *
-     * @return void
-     */
-    public function testGetSkeletonRelativeDirectory(): void {
-
-        $obj = new WBWAdminBSBBundle();
-        $obj->setContainer($this->containerBuilder);
-
-        $this->assertEquals("/Resources/skeleton", $obj->getSkeletonRelativeDirectory());
     }
 }

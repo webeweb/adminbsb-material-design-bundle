@@ -15,11 +15,11 @@ use Twig\Environment;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\RendererTwigExtension;
 use WBW\Bundle\CoreBundle\Translation\BaseTranslatorInterface;
+use WBW\Bundle\CoreBundle\Translation\TranslatorTrait;
 use WBW\Library\Symfony\Assets\AbstractNavigationNode;
 use WBW\Library\Symfony\Assets\Navigation\HeaderNode;
 use WBW\Library\Symfony\Assets\Navigation\NavigationNode;
 use WBW\Library\Symfony\Assets\Navigation\NavigationTree;
-use WBW\Bundle\CoreBundle\Translation\TranslatorTrait;
 
 /**
  * Abstract multi level menu Twig extension.
