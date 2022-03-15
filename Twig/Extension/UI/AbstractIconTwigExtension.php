@@ -42,6 +42,6 @@ abstract class AbstractIconTwigExtension extends AbstractTwigExtension {
 
         $innerHTML = null !== $name ? $name : "home";
 
-        return static::coreHTMLElement("i", $innerHTML, $attributes);
+        return static::coreHtmlElement("i", $innerHTML, $attributes);
     }
 }

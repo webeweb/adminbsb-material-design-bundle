@@ -36,8 +36,8 @@ abstract class AbstractInfoboxTwigExtension extends AbstractTwigExtension {
     protected function adminBSBInfobox(InfoboxInterface $infobox): string {
 
         $icon   = AssetsTwigExtension::renderIcon($this->getTwigEnvironment(), $infobox->getIconName());
-        $text   = static::coreHTMLElement("div", $infobox->getContentText(), ["class" => "text"]);
-        $number = static::coreHTMLElement("div", $infobox->getContentNumber(), array_merge([
+        $text   = static::coreHtmlElement("div", $infobox->getContentText(), ["class" => "text"]);
+        $number = static::coreHtmlElement("div", $infobox->getContentNumber(), array_merge([
             "class" => [
                 "number",
                 0 < count($infobox->getCountTo()) ? "count-to" : null,
@@ -55,16 +55,16 @@ abstract class AbstractInfoboxTwigExtension extends AbstractTwigExtension {
             $color = null;
         }
 
-        $divIcon = static::coreHTMLElement("div", $icon, [
+        $divIcon = static::coreHtmlElement("div", $icon, [
             "class" => [
                 "icon",
                 $color,
             ],
         ]);
 
-        $divContent = static::coreHTMLElement("div", "$text$number", ["class" => "content"]);
+        $divContent = static::coreHtmlElement("div", "$text$number", ["class" => "content"]);
 
-        return static::coreHTMLElement("div", "\n    $divIcon\n    $divContent\n", [
+        return static::coreHtmlElement("div", "\n    $divIcon\n    $divContent\n", [
             "class" => [
                 $infobox->getClass(),
                 InfoboxRenderer::renderColor($infobox),

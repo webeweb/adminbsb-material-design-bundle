@@ -29,7 +29,7 @@ abstract class AbstractTypographyTwigExtension extends BaseTwigExtension {
      * @return string Returns the AdminBSB bold text.
      */
     protected function adminBSBBold(?string $content): string {
-        return static::coreHTMLElement("span", $content, ["class" => "font-bold"]);
+        return static::coreHtmlElement("span", $content, ["class" => "font-bold"]);
     }
 
     /**
@@ -39,7 +39,7 @@ abstract class AbstractTypographyTwigExtension extends BaseTwigExtension {
      * @return string Returns the AdminBSB italic text.
      */
     protected function adminBSBItalic(?string $content): string {
-        return static::coreHTMLElement("span", $content, ["class" => "font-italic"]);
+        return static::coreHtmlElement("span", $content, ["class" => "font-italic"]);
     }
 
     /**
@@ -49,7 +49,7 @@ abstract class AbstractTypographyTwigExtension extends BaseTwigExtension {
      * @return string Returns the AdminBSB line through text.
      */
     protected function adminBSBLineThrough(?string $content): string {
-        return static::coreHTMLElement("span", $content, ["class" => "font-line-through"]);
+        return static::coreHtmlElement("span", $content, ["class" => "font-line-through"]);
     }
 
     /**
@@ -59,7 +59,7 @@ abstract class AbstractTypographyTwigExtension extends BaseTwigExtension {
      * @return string Returns the AdminBSB overlined text.
      */
     protected function adminBSBOverline(?string $content): string {
-        return static::coreHTMLElement("span", $content, ["class" => "font-overline"]);
+        return static::coreHtmlElement("span", $content, ["class" => "font-overline"]);
     }
 
     /**
@@ -69,6 +69,6 @@ abstract class AbstractTypographyTwigExtension extends BaseTwigExtension {
      * @return string Returns the AdminBSB underlined text.
      */
     protected function adminBSBUnderline(?string $content): string {
-        return static::coreHTMLElement("span", $content, ["class" => "font-underline"]);
+        return static::coreHtmlElement("span", $content, ["class" => "font-underline"]);
     }
 }

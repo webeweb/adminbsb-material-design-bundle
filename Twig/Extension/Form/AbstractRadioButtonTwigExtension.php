@@ -51,7 +51,7 @@ abstract class AbstractRadioButtonTwigExtension extends AbstractTwigExtension {
             "disabled" => true === $disabled ? "disabled" : null,
         ];
 
-        $innerHTML = static::coreHTMLElement("label", $content, ["for" => $attributes["id"]]);
+        $innerHTML = static::coreHtmlElement("label", $content, ["for" => $attributes["id"]]);
 
         return str_replace(["%attributes%", "%innerHTML%"], [StringHelper::parseArray($attributes), $innerHTML], $template);
     }

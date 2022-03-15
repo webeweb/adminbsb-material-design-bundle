@@ -49,10 +49,10 @@ abstract class AbstractSwitchButtonTwigExtension extends AbstractTwigExtension {
         $lLabel = null !== $offLabel ? $offLabel : "";
         $rLabel = null !== $onLabel ? $onLabel : "";
 
-        $span  = static::coreHTMLElement("span", null, ["class" => ["lever", $class]]);
+        $span  = static::coreHtmlElement("span", null, ["class" => ["lever", $class]]);
         $input = str_replace(["%attributes%", "%innerHTML%"], [StringHelper::parseArray($attributes), $span], $template);
-        $label = static::coreHTMLElement("label", $lLabel . $input . $rLabel);
+        $label = static::coreHtmlElement("label", $lLabel . $input . $rLabel);
 
-        return static::coreHTMLElement("div", $label, ["class" => "switch"]);
+        return static::coreHtmlElement("div", $label, ["class" => "switch"]);
     }
 }

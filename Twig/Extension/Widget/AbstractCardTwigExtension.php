@@ -52,7 +52,7 @@ abstract class AbstractCardTwigExtension extends AbstractTwigExtension {
 
         $innerHTML = $content;
         if (null !== $description) {
-            $innerHTML .= static::coreHTMLElement("small", $description);
+            $innerHTML .= static::coreHtmlElement("small", $description);
         }
         if (null !== $icon) {
             $innerHTML = AssetsTwigExtension::renderIcon($this->getTwigEnvironment(), $icon, "margin: -4px 4px 0 0; vertical-align: sub;") . $innerHTML;

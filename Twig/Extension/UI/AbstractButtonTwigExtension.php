@@ -57,6 +57,6 @@ abstract class AbstractButtonTwigExtension extends BaseTwigExtension {
         $glyphicon = null !== $icon ? AssetsTwigExtension::renderIcon($this->getTwigEnvironment(), $icon, $style) : "";
         $innerHTML = ButtonRenderer::renderContent($button);
 
-        return static::coreHTMLElement("button", $glyphicon . $innerHTML, $attributes);
+        return static::coreHtmlElement("button", $glyphicon . $innerHTML, $attributes);
     }
 }

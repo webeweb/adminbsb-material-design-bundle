@@ -99,7 +99,7 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
         $icon = $this->renderIcon($node);
         $span = $this->renderSpan($node);
 
-        return static::coreHTMLElement("a", "\n$icon$span", $attributes) . "\n";
+        return static::coreHtmlElement("a", "\n$icon$span", $attributes) . "\n";
     }
 
     /**
@@ -116,7 +116,7 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
         }
 
         $innerHTML = implode("\n", $items);
-        $dropdown  = static::coreHTMLElement("ul", "\n$innerHTML\n", ["class" => "ml-menu"]);
+        $dropdown  = static::coreHtmlElement("ul", "\n$innerHTML\n", ["class" => "ml-menu"]);
 
         return "$dropdown\n";
     }
@@ -128,7 +128,7 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
      * @return string Returns the rendered header node.
      */
     private function renderHeader(HeaderNode $node): string {
-        return static::coreHTMLElement("li", $node->getLabel(), ["class" => "header"]);
+        return static::coreHtmlElement("li", $node->getLabel(), ["class" => "header"]);
     }
 
     /**
@@ -158,7 +158,7 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
         $attributes = true === $node->getActive() ? ["class" => "active"] : [];
 
         if (0 === $node->size()) {
-            return static::coreHTMLElement("li", "\n$anchor", $attributes);
+            return static::coreHtmlElement("li", "\n$anchor", $attributes);
         }
 
         $items = [];
@@ -174,7 +174,7 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
 
         $dropdown = $this->renderDropdown($node, $items);
 
-        return static::coreHTMLElement("li", "\n$anchor$dropdown", $attributes);
+        return static::coreHtmlElement("li", "\n$anchor$dropdown", $attributes);
     }
 
     /**
@@ -211,7 +211,7 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
 
         $innerHTML = null !== $node->getId() ? $this->translate($node->getLabel()) : "";
 
-        return static::coreHTMLElement("span", $innerHTML) . "\n";
+        return static::coreHtmlElement("span", $innerHTML) . "\n";
     }
 
     /**

@@ -41,13 +41,13 @@ abstract class AbstractPreloaderTwigExtension extends AbstractTwigExtension {
         ];
 
         $content   = '<div class="circle-clipper left"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div>';
-        $innerHTML = static::coreHTMLElement("div", $content, [
+        $innerHTML = static::coreHtmlElement("div", $content, [
             "class" => [
                 "spinner-layer",
                 $class,
             ],
         ]);
 
-        return static::coreHTMLElement("div", $innerHTML, $attributes);
+        return static::coreHtmlElement("div", $innerHTML, $attributes);
     }
 }
