@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Asset\Color;
+namespace WBW\Bundle\AdminBSBBundle\Helper;
 
 use WBW\Library\Symfony\Factory\ColorFactory as BaseColorFactory;
 
@@ -17,7 +17,7 @@ use WBW\Library\Symfony\Factory\ColorFactory as BaseColorFactory;
  * Color helper.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\AdminBSBBundle\Asset\Color
+ * @package WBW\Bundle\AdminBSBBundle\Helper
  */
 class ColorHelper {
 

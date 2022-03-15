@@ -9,19 +9,24 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\AdminBSBBundle\Tests\Asset\Color;
+namespace WBW\Bundle\AdminBSBBundle\Tests\Helper;
 
-use WBW\Bundle\AdminBSBBundle\Asset\Color\ColorHelper;
+use WBW\Bundle\AdminBSBBundle\Helper\ColorHelper;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 
 /**
  * Color helper test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\AdminBSBBundle\Tests\Asset\Color
+ * @package WBW\Bundle\AdminBSBBundle\Tests\Helper
  */
 class ColorHelperTest extends AbstractTestCase {
 
+    /**
+     * Tests materialDesignColor()
+     *
+     * @return void
+     */
     public function testMaterialDesignColor(): void {
 
         $this->assertEquals("red", ColorHelper::materialDesignColor(null));

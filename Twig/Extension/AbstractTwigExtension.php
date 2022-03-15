@@ -12,7 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension;
 
 use Twig\Environment;
-use WBW\Bundle\AdminBSBBundle\Asset\Color\ColorHelper;
+use WBW\Bundle\AdminBSBBundle\Helper\ColorHelper;
 use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension as BaseTwigExtension;
 
 /**

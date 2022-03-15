@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Renderer\Assets;
 
-use WBW\Bundle\AdminBSBBundle\Asset\Color\ColorHelper;
 use WBW\Bundle\AdminBSBBundle\Assets\InfoboxInterface;
+use WBW\Bundle\AdminBSBBundle\Helper\ColorHelper;
 
 /**
  * Infobox renderer.
