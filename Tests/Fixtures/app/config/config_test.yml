@@ -57,6 +57,14 @@ monolog:
             path:  "%kernel.logs_dir%/test.log"
             type:  "stream"
 
+# SwiftMailer configuration
+swiftmailer:
+    host:      "localhost"
+    password:  null
+    spool: { type: "memory" }
+    transport: "smtp"
+    username:  "no-reply@github.com"
+
 # Twig configuration
 twig:
     debug:            "%kernel.debug%"
