@@ -19,13 +19,6 @@ use WBW\Bundle\CoreBundle\Tests\AbstractKernel;
 class TestKernel extends AbstractKernel {
 
     /**
-     * {@inheriDdoc}
-     */
-    public function getTestsDir(): string {
-        return __DIR__ . "/../..";
-    }
-
-    /**
      * {@inheritdoc}
      */
     public function registerBundles(): array {
@@ -35,7 +28,6 @@ class TestKernel extends AbstractKernel {
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Bundle\MonologBundle\MonologBundle(),
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
-            new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
             new WBW\Bundle\AdminBSBBundle\WBWAdminBSBBundle(),
             new WBW\Bundle\BootstrapBundle\WBWBootstrapBundle(),

@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Tests\Asset\Navigation\MaterialIcons;
 
 use WBW\Bundle\AdminBSBBundle\Asset\Navigation\MaterialIcons\NavigationNodeUsersGroups;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
+use WBW\Library\Symfony\Assets\NavigationNodeInterface;
 
 /**
  * Navigation node "Users groups" test.
@@ -34,7 +34,7 @@ class NavigationNodeUsersGroupsTest extends AbstractTestCase {
 
         $this->assertEquals("navigation.node.usersGroups", $obj->getLabel());
         $this->assertEquals("mi:group", $obj->getIcon());
-        $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_URL, $obj->getMatcher());
+        $this->assertEquals(NavigationNodeInterface::MATCHER_URL, $obj->getMatcher());
         $this->assertEquals("route", $obj->getUri());
     }
 }

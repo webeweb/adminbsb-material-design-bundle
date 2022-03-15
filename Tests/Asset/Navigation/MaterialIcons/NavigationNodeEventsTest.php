@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Tests\Asset\Navigation\MaterialIcons;
 
 use WBW\Bundle\AdminBSBBundle\Asset\Navigation\MaterialIcons\NavigationNodeEvents;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
+use WBW\Library\Symfony\Assets\NavigationNodeInterface;
 
 /**
  * Navigation node "Events" test.
@@ -34,7 +34,7 @@ class NavigationNodeEventsTest extends AbstractTestCase {
 
         $this->assertEquals("navigation.node.events", $obj->getLabel());
         $this->assertEquals("mi:event", $obj->getIcon());
-        $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_URL, $obj->getMatcher());
+        $this->assertEquals(NavigationNodeInterface::MATCHER_URL, $obj->getMatcher());
         $this->assertEquals("route", $obj->getUri());
     }
 }

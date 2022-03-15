@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Asset\Button;
 
-use WBW\Bundle\BootstrapBundle\Asset\Button\ButtonInterface;
-use WBW\Bundle\BootstrapBundle\Asset\Button\ButtonRenderer as BaseRenderer;
+use WBW\Bundle\BootstrapBundle\Assets\ButtonInterface;
+use WBW\Bundle\BootstrapBundle\Renderer\Assets\ButtonRenderer as BaseRenderer;
 
 /**
  * Button renderer.

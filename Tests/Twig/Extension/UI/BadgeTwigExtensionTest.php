@@ -139,7 +139,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
         $obj = new BadgeTwigExtension($this->twigEnvironment);
 
         $arg = [];
-        $res = '<a class="list-group-item" href="javascript:void(0);"><span class="badge bg-red"></span></a>';
+        $res = '<a class="list-group-item" href="javascript: void(0);"><span class="badge bg-red"></span></a>';
 
         $this->assertEquals($res, $obj->adminBSBButtonBadgeListFunction($arg));
     }

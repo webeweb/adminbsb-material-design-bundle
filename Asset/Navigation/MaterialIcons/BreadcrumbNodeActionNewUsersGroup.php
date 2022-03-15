@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Asset\Navigation\MaterialIcons;
 
-use WBW\Bundle\CoreBundle\Navigation\BreadcrumbNode;
+use WBW\Library\Symfony\Assets\Navigation\BreadcrumbNode;
 
 /**
  * Breadcrumb node action "New users group".
@@ -27,7 +27,7 @@ class BreadcrumbNodeActionNewUsersGroup extends BreadcrumbNode {
      * @param string|null $uri The URI.
      * @param string $matcher The matcher.
      */
-    public function __construct(string $uri = null, string $matcher = self::NAVIGATION_MATCHER_URL) {
+    public function __construct(string $uri = null, string $matcher = self::MATCHER_URL) {
         parent::__construct("navigation.node.action.new", "mi:group_add", $uri, $matcher);
     }
 }

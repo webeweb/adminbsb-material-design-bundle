@@ -14,6 +14,7 @@ namespace WBW\Bundle\AdminBSBBundle\Tests;
 use WBW\Bundle\AdminBSBBundle\DependencyInjection\WBWAdminBSBExtension;
 use WBW\Bundle\AdminBSBBundle\WBWAdminBSBBundle;
 use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
+use WBW\Library\Symfony\Helper\AssetsHelper;
 
 /**
  * AdminBSB bundle test.
@@ -47,6 +48,63 @@ class WBWAdminBSBBundleTest extends AbstractTestCase {
         $this->assertInstanceOf(WBWAdminBSBExtension::class, $obj->getContainerExtension());
     }
 
+    /**
+     * Tests listAssets()
+     *
+     * @return void
+     */
+    public function testListAssets(): void {
+
+        $assets = realpath(__DIR__ . "/../Resources/assets");
+
+        $res = AssetsHelper::listAssets($assets);
+        $this->assertCount(42, $res);
+
+        $i = -1;
+
+        $this->assertRegExp("/animate-css\.zip$/", $res[++$i]);
+        $this->assertRegExp("/autosize\.zip$/", $res[++$i]);
+        $this->assertRegExp("/bootstrap-colorpicker\.zip$/", $res[++$i]);
+        $this->assertRegExp("/bootstrap-material-datetimepicker\.zip$/", $res[++$i]);
+        $this->assertRegExp("/bootstrap-notify\.zip$/", $res[++$i]);
+        $this->assertRegExp("/bootstrap-select\.zip$/", $res[++$i]);
+        $this->assertRegExp("/bootstrap-tagsinput\.zip$/", $res[++$i]);
+        $this->assertRegExp("/bootstrap\.zip$/", $res[++$i]);
+        $this->assertRegExp("/chartjs\.zip$/", $res[++$i]);
+        $this->assertRegExp("/chosen\.zip$/", $res[++$i]);
+        $this->assertRegExp("/ckeditor\.zip$/", $res[++$i]);
+        $this->assertRegExp("/dropzone\.zip$/", $res[++$i]);
+        $this->assertRegExp("/editable-table\.zip$/", $res[++$i]);
+        $this->assertRegExp("/flot-charts\.zip$/", $res[++$i]);
+        $this->assertRegExp("/font-awesome\.zip$/", $res[++$i]);
+        $this->assertRegExp("/gmaps\.zip$/", $res[++$i]);
+        $this->assertRegExp("/ion-rangeslider\.zip$/", $res[++$i]);
+        $this->assertRegExp("/jquery-cookie\.zip$/", $res[++$i]);
+        $this->assertRegExp("/jquery-countto\.zip$/", $res[++$i]);
+        $this->assertRegExp("/jquery-datatable\.zip$/", $res[++$i]);
+        $this->assertRegExp("/jquery-inputmask\.zip$/", $res[++$i]);
+        $this->assertRegExp("/jquery-knob\.zip$/", $res[++$i]);
+        $this->assertRegExp("/jquery-slimscroll\.zip$/", $res[++$i]);
+        $this->assertRegExp("/jquery-sparkline\.zip$/", $res[++$i]);
+        $this->assertRegExp("/jquery-spinner\.zip$/", $res[++$i]);
+        $this->assertRegExp("/jquery-steps\.zip$/", $res[++$i]);
+        $this->assertRegExp("/jquery-validation\.zip$/", $res[++$i]);
+        $this->assertRegExp("/jquery\.zip$/", $res[++$i]);
+        $this->assertRegExp("/jvectormap\.zip$/", $res[++$i]);
+        $this->assertRegExp("/light-gallery\.zip$/", $res[++$i]);
+        $this->assertRegExp("/material-design-iconic-font\.zip$/", $res[++$i]);
+        $this->assertRegExp("/materialize-css\.zip$/", $res[++$i]);
+        $this->assertRegExp("/momentjs\.zip$/", $res[++$i]);
+        $this->assertRegExp("/morrisjs\.zip$/", $res[++$i]);
+        $this->assertRegExp("/multi-select\.zip$/", $res[++$i]);
+        $this->assertRegExp("/nestable\.zip$/", $res[++$i]);
+        $this->assertRegExp("/node-waves\.zip$/", $res[++$i]);
+        $this->assertRegExp("/nouislider\.zip$/", $res[++$i]);
+        $this->assertRegExp("/raphael\.zip$/", $res[++$i]);
+        $this->assertRegExp("/sweetalert\.zip$/", $res[++$i]);
+        $this->assertRegExp("/tinymce\.zip$/", $res[++$i]);
+        $this->assertRegExp("/waitme\.zip$/", $res[++$i]);
+    }
     /**
      * Tests getSkeletonRelativeDirectory()
      *

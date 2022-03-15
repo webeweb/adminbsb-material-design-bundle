@@ -13,8 +13,8 @@ namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Menu;
 
 use Symfony\Component\HttpFoundation\Request;
 use Twig\TwigFunction;
-use WBW\Bundle\CoreBundle\Navigation\NavigationTree;
-use WBW\Bundle\CoreBundle\Navigation\NavigationTreeHelper;
+use WBW\Library\Symfony\Assets\Navigation\NavigationTree;
+use WBW\Bundle\CoreBundle\Helper\Assets\NavigationNodeHelper;
 
 /**
  * Multi level menu Twig extension.
@@ -39,7 +39,7 @@ class MultiLevelMenuTwigExtension extends AbstractMenuTwigExtension {
      * @return string Returns the AdminBSB multi level menu.
      */
     public function adminBSBMultiLevelMenuFunction(NavigationTree $tree, Request $request): string {
-        NavigationTreeHelper::activeTree($tree, $request);
+        NavigationNodeHelper::activeTree($tree, $request);
         return $this->adminBSBMenu($tree);
     }
 

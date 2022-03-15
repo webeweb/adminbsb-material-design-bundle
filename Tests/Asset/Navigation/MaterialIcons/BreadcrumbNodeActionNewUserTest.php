@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Tests\Asset\Navigation\MaterialIcons;
 
 use WBW\Bundle\AdminBSBBundle\Asset\Navigation\MaterialIcons\BreadcrumbNodeActionNewUser;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
+use WBW\Library\Symfony\Assets\NavigationNodeInterface;
 
 /**
  * Breadcrumb node action "New user" test.
@@ -34,7 +34,7 @@ class BreadcrumbNodeActionNewUserTest extends AbstractTestCase {
 
         $this->assertEquals("navigation.node.action.new", $obj->getLabel());
         $this->assertEquals("mi:person_add", $obj->getIcon());
-        $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_URL, $obj->getMatcher());
+        $this->assertEquals(NavigationNodeInterface::MATCHER_URL, $obj->getMatcher());
         $this->assertEquals("route", $obj->getUri());
     }
 }

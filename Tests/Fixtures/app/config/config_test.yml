@@ -7,6 +7,7 @@ parameters:
     locale: "en"
 
 framework:
+    assets: true
     csrf_protection: ~
     default_locale:  "%locale%"
     form:            true
@@ -32,11 +33,11 @@ doctrine:
         auto_generate_proxy_classes: "%kernel.debug%"
         auto_mapping:                true
         mappings:
-            WBWCoreBundle:
+            WBWAdminBSBBundle:
                 dir:       "Tests/Fixtures/app/config/doctrine"
                 type:      "yml"
                 is_bundle: true
-                prefix:    "WBW\\Bundle\\CoreBundle\\Tests\\Fixtures\\Entity"
+                prefix:    "WBW\\Bundle\\AdminBSBBundle\\Tests\\Fixtures\\Entity"
         naming_strategy:             "doctrine.orm.naming_strategy.underscore"
 
 # FOS User configuration
@@ -46,7 +47,7 @@ fos_user:
     from_email:
         address:     "no-reply@github.com"
         sender_name: "GitHub"
-    user_class:    WBW\Bundle\CoreBundle\Tests\Fixtures\Entity\TestUser
+    user_class:    WBW\Bundle\AdminBSBBundle\Tests\Fixtures\Entity\TestUser
 
 # Monolog configuration
 monolog:
@@ -55,14 +56,6 @@ monolog:
             level: "debug"
             path:  "%kernel.logs_dir%/test.log"
             type:  "stream"
-
-# SwiftMailer configuration
-swiftmailer:
-    host:      "localhost"
-    password:  null
-    spool: { type: "memory" }
-    transport: "smtp"
-    username:  "no-reply@github.com"
 
 # Twig configuration
 twig:

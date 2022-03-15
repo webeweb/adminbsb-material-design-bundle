@@ -16,10 +16,10 @@ use Twig\Node\Node;
 use Twig\TwigFunction;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Menu\MultiLevelMenuTwigExtension;
-use WBW\Bundle\CoreBundle\Navigation\BreadcrumbNode;
-use WBW\Bundle\CoreBundle\Navigation\HeaderNode;
-use WBW\Bundle\CoreBundle\Navigation\NavigationNode;
-use WBW\Bundle\CoreBundle\Navigation\NavigationTree;
+use WBW\Library\Symfony\Assets\Navigation\BreadcrumbNode;
+use WBW\Library\Symfony\Assets\Navigation\HeaderNode;
+use WBW\Library\Symfony\Assets\Navigation\NavigationNode;
+use WBW\Library\Symfony\Assets\Navigation\NavigationTree;
 
 /**
  * Multi level menu Twig extension test.

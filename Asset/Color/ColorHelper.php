@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Asset\Color;
 
-use WBW\Bundle\CoreBundle\Helper\ColorHelper as BaseColorHelper;
+use WBW\Library\Symfony\Factory\ColorFactory as BaseColorFactory;
 
 /**
  * Color helper.
@@ -30,7 +30,7 @@ class ColorHelper {
      */
     public static function materialDesignColor(?string $name, string $prefix = ""): string {
 
-        $colors = BaseColorHelper::getMaterialDesignColorPalette();
+        $colors = BaseColorFactory::newMaterialDesignColorPalette();
 
         $color = $colors[0];
 

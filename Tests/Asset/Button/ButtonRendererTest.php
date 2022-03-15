@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Tests\Asset\Button;
 
 use WBW\Bundle\AdminBSBBundle\Asset\Button\ButtonRenderer;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
-use WBW\Bundle\BootstrapBundle\Asset\Button\DefaultButton;
+use WBW\Bundle\BootstrapBundle\Assets\Button\DefaultButton;
 
 /**
  * Button renderer test.

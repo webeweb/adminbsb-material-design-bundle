@@ -13,7 +13,7 @@ namespace WBW\Bundle\AdminBSBBundle\Tests\Asset\Navigation\MaterialIcons;
 
 use WBW\Bundle\AdminBSBBundle\Asset\Navigation\MaterialIcons\NavigationNodeActionNewUsersGroup;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
+use WBW\Library\Symfony\Assets\NavigationNodeInterface;
 
 /**
  * Navigation node action "New users group" test.
@@ -34,7 +34,7 @@ class NavigationNodeActionNewUsersGroupTest extends AbstractTestCase {
 
         $this->assertEquals("navigation.node.action.new", $obj->getLabel());
         $this->assertEquals("mi:group_add", $obj->getIcon());
-        $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_URL, $obj->getMatcher());
+        $this->assertEquals(NavigationNodeInterface::MATCHER_URL, $obj->getMatcher());
         $this->assertEquals("route", $obj->getUri());
     }
 }

@@ -14,7 +14,7 @@ namespace WBW\Bundle\AdminBSBBundle\Twig\Extension;
 use Twig\Environment;
 use Twig\TwigFilter;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\IconTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\RendererTwigExtension as BaseTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\AssetsTwigExtension as BaseTwigExtension;
 
 /**
  * Renderer Twig extension.
@@ -50,14 +50,9 @@ class RendererTwigExtension extends BaseTwigExtension {
     }
 
     /**
-     * Render an icon.
-     *
-     * @param Environment $twigEnvironment The twig environment.
-     * @param string $name The icon name.
-     * @param string|null $style The icon style.
-     * @return string Returns a rendered icon.
+     * {@inheritDoc}
      */
-    public static function renderIcon(Environment $twigEnvironment, string $name, string $style = null): string {
+    public static function renderIcon(Environment $twigEnvironment, ?string $name, string $style = null): ?string {
 
         $handler = explode(":", $name);
         if (1 === count($handler)) {

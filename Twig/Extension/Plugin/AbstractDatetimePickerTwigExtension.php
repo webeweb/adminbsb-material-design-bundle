@@ -13,8 +13,8 @@ namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Plugin;
 
 use Twig\Environment;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
-use WBW\Bundle\CoreBundle\Component\Translation\BaseTranslatorInterface;
-use WBW\Bundle\CoreBundle\Service\TranslatorTrait;
+use WBW\Bundle\CoreBundle\Translation\BaseTranslatorInterface;
+use WBW\Bundle\CoreBundle\Translation\TranslatorTrait;
 use WBW\Library\Types\Helper\StringHelper;
 
 /**
