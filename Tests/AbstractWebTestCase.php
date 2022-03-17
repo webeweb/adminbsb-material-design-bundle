@@ -29,7 +29,7 @@ abstract class AbstractWebTestCase extends WebTestCase {
     /**
      * {@inheritDoc}
      */
-    public static function setUpUserFixtures(): void {
+    protected static function setUpUserFixtures(): void {
 
         $user = new TestUser();
         $user->setUsername("webeweb")
