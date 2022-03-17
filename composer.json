@@ -24,7 +24,6 @@
         "symfony/asset": "^4.4",
         "symfony/form": "^4.4",
         "symfony/framework-bundle": "^4.4",
-        "symfony/symfony": "^4.4",
         "twig/twig": "^2.10|^3.0",
         "webeweb/bootstrap-bundle": "^4.0",
         "webeweb/core-bundle": "^3.0",
