@@ -4,6 +4,10 @@ wbw_adminbsb_blank_action:
     defaults: { _controller: "WBW\\Bundle\\AdminBSBBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::blankAction" }
     methods: [ "GET" ]
 
+twig:
+    resource: "@TwigBundle/Resources/config/routing/errors.xml"
+    prefix:   "/error"
+
 fos_user_change_password:
     prefix:   "/profile"
     resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
@@ -22,7 +26,3 @@ fos_user_resetting:
 
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"
-
-twig:
-    resource: "@TwigBundle/Resources/config/routing/errors.xml"
-    prefix:   "/error"
