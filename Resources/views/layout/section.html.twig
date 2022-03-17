@@ -53,22 +53,10 @@
     <section>
         <aside class="sidebar" id="leftsidebar">
             {% if (app.user is not null) %}
-                {% if (UserInfoThemeProvider is defined and UserInfoThemeProvider.view is not null) %}
-                    {% include UserInfoThemeProvider.view with {"provider": UserInfoThemeProvider} %}
-                {% else %}
-                    {% include "@WBWAdminBSB/layout/_user_info.html.twig" %}
-                {% endif %}
+                {% include "@WBWAdminBSB/layout/_user_info.html.twig" %}
             {% endif %}
-            {% if (NavigationThemeProvider is defined and NavigationThemeProvider.view is not null) %}
-                {% include NavigationThemeProvider.view with {"provider": NavigationThemeProvider} %}
-            {% else %}
-                {% include "@WBWAdminBSB/layout/_navigation.html.twig" %}
-            {% endif %}
-            {% if (FooterThemeProvider is defined and FooterThemeProvider.view is not null) %}
-                {% include FooterThemeProvider.view with {"provider": FooterThemeProvider} %}
-            {% else %}
-                {% include "@WBWAdminBSB/layout/_footer.html.twig" %}
-            {% endif %}
+            {% include "@WBWAdminBSB/layout/_navigation.html.twig" %}
+            {% include "@WBWAdminBSB/layout/_footer.html.twig" %}
         </aside>
         <aside class="right-sidebar" id="rightsidebar">
         </aside>
