@@ -5,3 +5,4 @@
 /Tests/Fixtures/app/templates/bundles/*
 !/Tests/Fixtures/app/templates/bundles/WBWAdminBSBBundle
 /Tests/Fixtures/app/var/*
+!/Tests/Fixtures/app/var/.gitkeep
