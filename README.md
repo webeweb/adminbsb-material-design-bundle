@@ -5,7 +5,6 @@ adminbsb-material-design-bundle
 [![Coverage Status](https://img.shields.io/coveralls/github/webeweb/adminbsb-material-design-bundle/master.svg?style=flat-square)](https://coveralls.io/github/webeweb/adminbsb-material-design-bundle?branch=master)
 [![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/quality/g/webeweb/adminbsb-material-design-bundle/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/webeweb/adminbsb-material-design-bundle/?branch=master)
 [![Latest Stable Version](https://img.shields.io/packagist/v/webeweb/adminbsb-material-design-bundle.svg?style=flat-square)](https://packagist.org/packages/webeweb/adminbsb-material-design-bundle)
-[![Latest Unstable Version](https://img.shields.io/packagist/vpre/webeweb/adminbsb-material-design-bundle.svg?style=flat-square)](https://packagist.org/packages/webeweb/adminbsb-material-design-bundle)
 [![License](https://img.shields.io/packagist/l/webeweb/adminbsb-material-design-bundle.svg?style=flat-square)](https://packagist.org/packages/webeweb/adminbsb-material-design-bundle)
 [![composer.lock](https://img.shields.io/badge/.lock-uncommited-important.svg?style=flat-square)](https://packagist.org/packages/webeweb/adminbsb-material-design-bundle)
 
