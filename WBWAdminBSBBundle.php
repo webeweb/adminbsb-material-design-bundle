@@ -33,14 +33,14 @@ class WBWAdminBSBBundle extends Bundle implements AssetsProviderInterface, Skele
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getContainerExtension(): Extension {
         return new WBWAdminBSBExtension();
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getSkeletonRelativeDirectory(): string {
         return self::SKELETON_RELATIVE_DIRECTORY;

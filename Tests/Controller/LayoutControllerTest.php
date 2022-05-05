@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Helper\SkeletonHelper;
 class LayoutControllerTest extends AbstractWebTestCase {
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public static function setUpBeforeClass(): void {
         parent::setUpBeforeClass();

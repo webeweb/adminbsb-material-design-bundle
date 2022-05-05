@@ -24,7 +24,7 @@ use WBW\Bundle\JQuery\DataTablesBundle\Provider\AbstractDataTablesProvider as Ba
 abstract class AbstractDataTablesProvider extends BaseDataTablesProvider {
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getOptions(): DataTablesOptionsInterface {
 

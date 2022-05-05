@@ -40,21 +40,21 @@ class AssetsTwigExtension extends BaseAssetsTwigExtension {
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getFilters(): array {
         return [];
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getFunctions(): array {
         return [];
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public static function renderIcon(Environment $twigEnvironment, ?string $name, string $style = null): ?string {
 

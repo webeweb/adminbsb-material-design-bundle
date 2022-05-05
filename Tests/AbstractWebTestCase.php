@@ -27,7 +27,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase as WebTestCase;
 abstract class AbstractWebTestCase extends WebTestCase {
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     protected static function setUpUserFixtures(): void {
 

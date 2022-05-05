@@ -34,7 +34,7 @@ class WBWAdminBSBExtension extends Extension {
     const EXTENSION_ALIAS = "wbw_adminbsb";
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getAlias(): string {
         return self::EXTENSION_ALIAS;
