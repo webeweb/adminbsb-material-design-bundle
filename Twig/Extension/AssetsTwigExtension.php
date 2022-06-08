@@ -12,6 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension;
 
 use Twig\Environment;
+use Twig\TwigFunction;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\IconTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\AssetsTwigExtension as BaseAssetsTwigExtension;
 
@@ -40,6 +41,17 @@ class AssetsTwigExtension extends BaseAssetsTwigExtension {
     }
 
     /**
+     * Displays an icon.
+     *
+     * @param string|null $name The name.
+     * @param string|null $style The style.
+     * @return string|null Returns the icon.
+     */
+    public function adminBSBRenderIconFunction(?string $name, string $style = null): ?string {
+        return static::renderIcon($this->getTwigEnvironment(), $name, $style);
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function getFilters(): array {
@@ -50,7 +62,9 @@ class AssetsTwigExtension extends BaseAssetsTwigExtension {
      * {@inheritdoc}
      */
     public function getFunctions(): array {
-        return [];
+        return [
+            new TwigFunction("adminBSBRenderIcon", [$this, "adminBSBRenderIconFunction"], ["is_safe" => ["html"]]),
+        ];
     }
 
     /**
