@@ -15,6 +15,7 @@ use Symfony\Component\Routing\RouterInterface;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 use WBW\Bundle\AdminBSBBundle\Tests\Fixtures\DataTables\Provider\TestDataTablesProvider;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension;
+use WBW\Bundle\CoreBundle\Tests\TestCaseHelper;
 use WBW\Bundle\JQuery\DataTablesBundle\Api\DataTablesOptionsInterface;
 
 /**
@@ -45,10 +46,8 @@ class AbstractDataTablesProviderTest extends AbstractTestCase {
     protected function setUp(): void {
         parent::setUp();
 
-        // Set a generate() closure.
-        $generate = function($name, $parameters = [], $referenceType = RouterInterface::ABSOLUTE_PATH) {
-            return $name;
-        };
+        // Set a generate() callback.
+        $generate = TestCaseHelper::getRouterGenerateFunction();
 
         // Set the Router mock.
         $this->router->expects($this->any())->method("generate")->willReturnCallback($generate);
