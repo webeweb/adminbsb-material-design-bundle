@@ -31,6 +31,7 @@ class Configuration implements ConfigurationInterface {
      * @return string[] Returns the skins enumeration.
      */
     public static function enumSkins(): array {
+
         return [
             SkinThemeProviderInterface::SKIN_RED,
             SkinThemeProviderInterface::SKIN_PINK,

@@ -107,6 +107,7 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
      * @return array Returns the Twig filters.
      */
     public function getFilters(): array {
+
         return [
             new TwigFilter("adminBSBButtonLink", [$this, "bootstrapButtonLinkFilter"], ["is_safe" => ["html"]]),
             new TwigFilter("adminBSBButtonSubmit", [$this, "bootstrapButtonSubmitFilter"], ["is_safe" => ["html"]]),
@@ -119,6 +120,7 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
      * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions(): array {
+
         return [
             new TwigFunction("adminBSBButtonDanger", [$this, "adminBSBButtonDangerFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("adminBSBButtonDefault", [$this, "adminBSBButtonDefaultFunction"], ["is_safe" => ["html"]]),

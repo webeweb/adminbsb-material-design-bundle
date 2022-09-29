@@ -85,6 +85,7 @@ class InfoboxTwigExtension extends AbstractInfoboxTwigExtension {
      * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions(): array {
+
         return [
             new TwigFunction("adminBSBInfobox1", [$this, "adminBSBInfobox1Function"], ["is_safe" => ["html"]]),
             new TwigFunction("adminBSBInfobox2", [$this, "adminBSBInfobox2Function"], ["is_safe" => ["html"]]),

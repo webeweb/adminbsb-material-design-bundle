@@ -62,6 +62,7 @@ class AssetsTwigExtension extends BaseAssetsTwigExtension {
      * {@inheritdoc}
      */
     public function getFunctions(): array {
+
         return [
             new TwigFunction("adminBSBRenderIcon", [$this, "adminBSBRenderIconFunction"], ["is_safe" => ["html"]]),
         ];
