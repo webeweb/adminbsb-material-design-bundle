@@ -32,7 +32,9 @@ class WBWAdminBSBJQueryCountTo {
      * @param {function} handler The handler.
      * @return {undefined}
      */
-    static countToWith($el, url, options = null, handler = null) {
+    static countToWithUrl($el, url, options = null, handler = null) {
+
+        console.debug({$el, url, options, handler});
 
         $.get({
             url: url,
