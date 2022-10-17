@@ -15,6 +15,7 @@ use Exception;
 use Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
 use WBW\Bundle\AdminBSBBundle\DependencyInjection\Configuration;
 use WBW\Bundle\AdminBSBBundle\DependencyInjection\WBWAdminBSBExtension;
+use WBW\Bundle\AdminBSBBundle\Provider\JavascriptProvider;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AssetsTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\CheckboxTwigExtension;
@@ -100,6 +101,9 @@ class WBWAdminBSBExtensionTest extends AbstractTestCase {
 
         $obj->load($this->configs, $this->containerBuilder);
 
+        // Providers
+        $this->assertInstanceOf(JavascriptProvider::class, $this->containerBuilder->get(JavascriptProvider::SERVICE_NAME));
+
         // Twig extensions
         $this->assertInstanceOf(AssetsTwigExtension::class, $this->containerBuilder->get(AssetsTwigExtension::SERVICE_NAME));
 
@@ -129,6 +133,30 @@ class WBWAdminBSBExtensionTest extends AbstractTestCase {
         // Widget Twig extensions
         $this->assertInstanceOf(CardTwigExtension::class, $this->containerBuilder->get(CardTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(InfoboxTwigExtension::class, $this->containerBuilder->get(InfoboxTwigExtension::SERVICE_NAME));
+    }
+
+    /**
+     * Tests load()
+     *
+     * @return void
+     */
+    public function testLoadWithoutProviders(): void {
+
+        // Set the configs mock.
+        $this->configs[WBWAdminBSBExtension::EXTENSION_ALIAS]["providers"] = false;
+
+        $obj = new WBWAdminBSBExtension();
+
+        $this->assertNull($obj->load($this->configs, $this->containerBuilder));
+
+        try {
+
+            $this->containerBuilder->get(JavascriptProvider::SERVICE_NAME);
+        } catch (Exception $ex) {
+
+            $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
+            $this->assertStringContainsString(JavascriptProvider::SERVICE_NAME, $ex->getMessage());
+        }
     }
 
     /**

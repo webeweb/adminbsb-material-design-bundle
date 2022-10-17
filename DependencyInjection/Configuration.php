@@ -13,7 +13,6 @@ namespace WBW\Bundle\AdminBSBBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
-use WBW\Bundle\AdminBSBBundle\Asset\Theme\SkinsThemeProvider;
 use WBW\Bundle\AdminBSBBundle\Provider\Theme\SkinThemeProviderInterface;
 use WBW\Bundle\CoreBundle\Config\ConfigurationHelper;
 
@@ -70,6 +69,7 @@ class Configuration implements ConfigurationInterface {
         $rootNode = ConfigurationHelper::getRootNode($treeBuilder, WBWAdminBSBExtension::EXTENSION_ALIAS);
         $rootNode
             ->children()
+                ->booleanNode("providers")->defaultTrue()->info("Load providers")->end()
                 ->booleanNode("twig")->defaultTrue()->info("Load Twig extensions")->end()
                 ->arrayNode("plugins")->info("AdminBSB plug-ins")
                     ->prototype("scalar")
