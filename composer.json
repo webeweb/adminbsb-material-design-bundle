@@ -26,7 +26,7 @@
         "symfony/framework-bundle": "^4.4",
         "twig/twig": "^2.10|^3.0",
         "webeweb/bootstrap-bundle": "^4.0",
-        "webeweb/core-bundle": "^3.0",
+        "webeweb/core-bundle": "^3.14",
         "webeweb/core-library": "^8.34",
         "webeweb/jquery-datatables-bundle": "^3.35"
     },
