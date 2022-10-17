@@ -1,0 +1,62 @@
+{# Resources/views/assets/wbwAdminBSBJQueryCountTo.js.twig #}
+/**
+ * jQuery Count to.
+ */
+class WBWAdminBSBJQueryCountTo {
+
+    /**
+     * Displays a count to.
+     *
+     * @param {jQuery} $el The element.
+     * @param {int} to The to option.
+     * @param {Object} options The options.
+     * @return {jQuery} Returns the count to.
+     */
+    static countTo($el, to, options = null) {
+
+        console.debug({$el, to, options});
+
+        options = null !== options ? options : WBWAdminBSBJQueryCountTo.getOptionsDefault();
+
+        options.to = to;
+
+        return $el.countTo(options);
+    }
+
+    /**
+     * Displays a count to.
+     *
+     * @param {jQuery} $el The element.
+     * @param {String} url The URL.
+     * @param {Object} options The options.
+     * @param {function} handler The handler.
+     * @return {undefined}
+     */
+    static countToWith($el, url, options = null, handler = null) {
+
+        $.get({
+            url: url,
+        }).done((data) => {
+
+            const callback = "function" == typeof handler ? handler : (data) => {
+                return data.to;
+            }
+
+            WBWAdminBSBJQueryCountTo.countTo($el, callback(data), options);
+        });
+    }
+
+    /**
+     * Get the options by default.
+     *
+     * @return {Object} Returns the options.
+     */
+    static getOptionsDefault() {
+
+        return {
+            from           : 0,
+            speed          : 2000,
+            refreshInterval: 100,
+        };
+    }
+}
