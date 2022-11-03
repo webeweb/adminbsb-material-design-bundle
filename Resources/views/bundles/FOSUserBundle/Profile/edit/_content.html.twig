@@ -1,0 +1,21 @@
+{# Resources/views/bundles/FOSUserBundle/Profile/edit/_content.html.twig #}
+{{ form_start(form) }}
+<div class="row clearfix">
+    <div class="{{ bootstrapGrid({"lg": 4, "md": 4, "sm": 12, "xs": 12}) }}">
+        {{ form_row(form.username, {"adminBSB": {"icon": "person"} }) }}
+    </div>
+</div>
+<div class="row clearfix">
+    <div class="{{ bootstrapGrid({"lg": 4, "md": 4, "sm": 12, "xs": 12}) }}">
+        {{ form_row(form.email, {"adminBSB": {"icon": "email"} }) }}
+    </div>
+</div>
+<div class="row clearfix">
+    <div class="{{ bootstrapGrid({"lg": 4, "md": 4, "sm": 12, "xs": 12}) }}">
+        {{ form_row(form.current_password, {"adminBSB":{"icon": "lock"} }) }}
+    </div>
+</div>
+<div class="align-right">
+    {{ bootstrapFormButtonDefault({"cancel_href": path("fos_user_profile_show") }) }}
+</div>
+{{ form_end(form) }}

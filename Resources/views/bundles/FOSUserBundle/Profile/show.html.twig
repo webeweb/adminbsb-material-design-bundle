@@ -12,8 +12,7 @@
                     {{ adminBSBCardHeader({"icon": "person", "content": "layout.logged_in_as"|trans({"%username%": app.user.username}, "FOSUserBundle")}) }}
                 </div>
                 <div class="body">
-                    <p>{{ 'profile.show.username'|trans([], "FOSUserBundle") }}: {{ user.username }}</p>
-                    <p>{{ 'profile.show.email'|trans([], "FOSUserBundle") }}: {{ user.email }}</p>
+                    {% include "@WBWAdminBSB/bundles/FOSUserBundle/Profile/show/_content.html.twig" %}
                 </div>
             </div>
         </div>
