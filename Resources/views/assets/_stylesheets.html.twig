@@ -22,8 +22,30 @@
 <link type="text/css" rel="stylesheet" href="{{ asset(_webPath ~ "/css/style.min.css") }}">
 <link type="text/css" rel="stylesheet" href="{{ asset(_webPath ~ "/css/themes/all-themes.min.css") }}">
 <style>
+    /* === Left sidebar ==================================================== */
+    .sidebar .menu .list .ml-menu li.active a.toggled:not(.menu-toggle) {
+        margin-left: 0 !important;
+    }
+
+    .sidebar .menu .list .ml-menu li.active a.toggled:not(.menu-toggle)::before {
+        content: none !important;
+    }
+
+    .sidebar .menu .list li i.fa {
+        width: 24px !important;
+        height: 24px !important;
+        font-size: 20px !important;
+        margin: 2px;
+        text-align: center;
+    }
+
     /* === Buttons ========================================================= */
-    .btn:not(.btn-link):not(.btn-circle) i.fa {
+    .btn:not(.btn-link):not(.btn-circle) i.fa,
+    .btn:not(.btn-link):not(.btn-circle) i.fas,
+    .btn:not(.btn-link):not(.btn-circle) i.far,
+    .btn:not(.btn-link):not(.btn-circle) i.fal,
+    .btn:not(.btn-link):not(.btn-circle) i.fab,
+    .btn:not(.btn-link):not(.btn-circle) i.fad {
         font-size: inherit !important;
         position: relative;
         top: inherit !important;
@@ -64,22 +86,5 @@
         font-size: 12px;
         font-weight: bold;
         color: #555;
-    }
-
-    /* === Sidebar menu ==================================================== */
-    .sidebar .menu .list .ml-menu li.active a.toggled:not(.menu-toggle) {
-        margin-left: 0 !important;
-    }
-
-    .sidebar .menu .list .ml-menu li.active a.toggled:not(.menu-toggle)::before {
-        content: none !important;
-    }
-
-    .sidebar .menu .list li i.fa {
-        width: 24px !important;
-        height: 24px !important;
-        font-size: 20px !important;
-        margin: 2px;
-        text-align: center;
     }
 </style>
