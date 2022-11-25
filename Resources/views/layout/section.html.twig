@@ -52,13 +52,17 @@
     </nav>
     <section>
         <aside class="sidebar" id="leftsidebar">
-            {% if (app.user is not null) %}
-                {% include "@WBWAdminBSB/layout/_user_info.html.twig" %}
-            {% endif %}
-            {% include "@WBWAdminBSB/layout/_navigation.html.twig" %}
-            {% include "@WBWAdminBSB/layout/_footer.html.twig" %}
+            {% block adminBSBLeftSidebar %}
+                {% if (app.user is not null) %}
+                    {% include "@WBWAdminBSB/layout/_user_info.html.twig" %}
+                {% endif %}
+                {% include "@WBWAdminBSB/layout/_navigation.html.twig" %}
+                {% include "@WBWAdminBSB/layout/_footer.html.twig" %}
+            {% endblock %}
         </aside>
         <aside class="right-sidebar" id="rightsidebar">
+            {% block adminBSBRightSidebar %}
+            {% endblock %}
         </aside>
     </section>
     <section class="content">
