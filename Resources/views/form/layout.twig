@@ -1,4 +1,4 @@
-{# Resources/Form/form_layout.html.twig #}
+{# Resources/form/layout.html.twig #}
 {% use "form_div_layout.html.twig" %}
 
 {% block form_errors %}
@@ -36,7 +36,7 @@
 
 {% block form_row %}
 
-    {% import "@WBWAdminBSB/Form/form_macros.html.twig" as formMacros %}
+    {% import "@WBWAdminBSB/form/macros.html.twig" as formMacros %}
 
     {# Initialize #}
     {% set _isCheckbox = checked is defined %}
