@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\UI;
 
+use Twig\Extension\ExtensionInterface;
 use Twig\Node\Node;
 use Twig\TwigFunction;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
@@ -100,6 +101,8 @@ class ModalTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("wbw.adminbsb.twig.extension.ui.modal", ModalTwigExtension::SERVICE_NAME);
 
         $obj = new ModalTwigExtension($this->twigEnvironment, $this->typographyTwigExtension);
+
+        $this->assertInstanceOf(ExtensionInterface::class, $obj);
 
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
         $this->assertSame($this->typographyTwigExtension, $obj->getTypographyTwigExtension());

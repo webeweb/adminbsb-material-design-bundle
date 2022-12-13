@@ -12,6 +12,7 @@
 namespace WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Menu;
 
 use Symfony\Component\HttpFoundation\Request;
+use Twig\Extension\ExtensionInterface;
 use Twig\Node\Node;
 use Twig\TwigFunction;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
@@ -102,6 +103,8 @@ class MultiLevelMenuTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("wbw.adminbsb.twig.extension.menu.multi_level_menu", MultiLevelMenuTwigExtension::SERVICE_NAME);
 
         $obj = new MultiLevelMenuTwigExtension($this->twigEnvironment, $this->translator);
+
+        $this->assertInstanceOf(ExtensionInterface::class, $obj);
 
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
         $this->assertSame($this->translator, $obj->getTranslator());

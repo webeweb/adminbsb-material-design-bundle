@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Typography;
 
+use Twig\Extension\ExtensionInterface;
 use Twig\Node\Node;
 use Twig\TwigFunction;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
@@ -284,6 +285,8 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("wbw.adminbsb.twig.extension.typography", TypographyTwigExtension::SERVICE_NAME);
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $this->assertInstanceOf(ExtensionInterface::class, $obj);
 
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }

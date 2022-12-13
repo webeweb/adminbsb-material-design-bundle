@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\Form;
 
+use Twig\Extension\ExtensionInterface;
 use Twig\Node\Node;
 use Twig\TwigFunction;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
@@ -102,6 +103,8 @@ class CheckboxTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("wbw.adminbsb.twig.extension.form.checkbox", CheckboxTwigExtension::SERVICE_NAME);
 
         $obj = new CheckboxTwigExtension($this->twigEnvironment);
+
+        $this->assertInstanceOf(ExtensionInterface::class, $obj);
 
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }

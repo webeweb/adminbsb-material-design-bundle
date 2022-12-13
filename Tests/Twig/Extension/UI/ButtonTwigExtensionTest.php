@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Tests\Twig\Extension\UI;
 
+use Twig\Extension\ExtensionInterface;
 use Twig\Node\Node;
 use Twig\TwigFilter;
 use Twig\TwigFunction;
@@ -316,6 +317,8 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("wbw.adminbsb.twig.extension.ui.button", ButtonTwigExtension::SERVICE_NAME);
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
+
+        $this->assertInstanceOf(ExtensionInterface::class, $obj);
 
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
