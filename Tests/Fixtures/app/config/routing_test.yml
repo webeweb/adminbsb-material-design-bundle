@@ -1,9 +1,4 @@
 # Tests/Fixtures/app/config/routing_test.yml
-wbw_adminbsb_blank_action:
-    path: "/blank"
-    defaults: { _controller: "WBW\\Bundle\\AdminBSBBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::blankAction" }
-    methods: [ "GET" ]
-
 twig:
     resource: "@TwigBundle/Resources/config/routing/errors.xml"
     prefix:   "/error"
@@ -11,3 +6,22 @@ twig:
 fos_user:
     prefix:   "/"
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+wbw_core_twig:
+    prefix:   "/twig"
+    resource: "@WBWCoreBundle/Resources/config/routing/twig.yml"
+
+wbw_adminbsb_assets_javascripts:
+    path: "/assets/javascripts"
+    defaults: { _controller: "WBW\\Bundle\\AdminBSBBundle\\Tests\\Fixtures\\Controller\\TestViewsController::assetsJavascriptsAction" }
+    methods: [ "GET" ]
+
+wbw_adminbsb_assets_stylesheets:
+    path: "/assets/stylesheets"
+    defaults: { _controller: "WBW\\Bundle\\AdminBSBBundle\\Tests\\Fixtures\\Controller\\TestViewsController::assetsStylesheetsAction" }
+    methods: [ "GET" ]
+
+wbw_adminbsb_blank:
+    path: "/blank"
+    defaults: { _controller: "WBW\\Bundle\\AdminBSBBundle\\Tests\\Fixtures\\Controller\\TestViewsController::blankAction" }
+    methods: [ "GET" ]

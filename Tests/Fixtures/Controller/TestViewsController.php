@@ -15,12 +15,30 @@ use Symfony\Component\HttpFoundation\Response;
 use WBW\Bundle\AdminBSBBundle\Controller\AbstractController;
 
 /**
- * Test layout controller.
+ * Test views controller.
  *
  * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Fixtures\Controller
  */
-class TestLayoutController extends AbstractController {
+class TestViewsController extends AbstractController {
+
+    /**
+     * Render assets/_javascripts.html.twig
+     *
+     * @return Response Returns the response.
+     */
+    public function assetsJavascriptsAction(): Response {
+        return $this->render("@WBWAdminBSB/assets/_javascripts.html.twig");
+    }
+
+    /**
+     * Render assets/_stylesheets.html.twig
+     *
+     * @return Response Returns the response.
+     */
+    public function assetsStylesheetsAction(): Response {
+        return $this->render("@WBWAdminBSB/assets/_stylesheets.html.twig");
+    }
 
     /**
      * Displays a blank page.

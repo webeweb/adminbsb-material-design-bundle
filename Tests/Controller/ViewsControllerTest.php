@@ -11,16 +11,18 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Tests\Controller;
 
+use Symfony\Component\Routing\RouterInterface;
+use WBW\Bundle\AdminBSBBundle\Provider\JavascriptProvider;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractWebTestCase;
 use WBW\Bundle\CoreBundle\Helper\SkeletonHelper;
 
 /**
- * Layout controller test.
+ * Views controller test.
  *
  * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\AdminBSBBundle\Tests\Controller
  */
-class LayoutControllerTest extends AbstractWebTestCase {
+class ViewsControllerTest extends AbstractWebTestCase {
 
     /**
      * {@inheritdoc}
@@ -37,6 +39,47 @@ class LayoutControllerTest extends AbstractWebTestCase {
 
         // Copy skeleton.
         SkeletonHelper::copySkeleton($skeletonDirectory, $resourcesDirectory);
+    }
+
+    /**
+     * Tests assetsJavascriptsAction()
+     *
+     * @return void
+     */
+    public function testAssetsJavascriptsAction(): void {
+
+        $client = $this->client;
+
+        $client->request("GET", "/assets/javascripts");
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
+
+        /** @var RouterInterface $router */
+        $router = static::$kernel->getContainer()->get("router");
+
+        $provider = new JavascriptProvider();
+        foreach ($provider->getJavascripts() as $k => $v) {
+
+            $uri = $router->generate("wbw_core_twig_resource", ["name" => $k, "type" => "js"]);
+
+            $client->request("GET", $uri);
+            $this->assertEquals(200, $client->getResponse()->getStatusCode(), $v);
+            $this->assertEquals("application/javascript", $client->getResponse()->headers->get("Content-Type"), $v);
+        }
+    }
+
+    /**
+     * Tests assetsStylesheetsAction()
+     *
+     * @return void
+     */
+    public function testAssetsStylesheetsAction(): void {
+
+        $client = $this->client;
+
+        $client->request("GET", "/assets/stylesheets");
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
     }
 
     /**
