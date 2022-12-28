@@ -1,11 +1,11 @@
 # Tests/Fixtures/app/config/services_test.yml
 services:
 
-    WBW\Bundle\AdminBSBBundle\Tests\Fixtures\Controller\TestLayoutController:
-        alias:  "wbw.adminbsb.tests.fixtures.controller.test_layout"
+    WBW\Bundle\AdminBSBBundle\Tests\Fixtures\Controller\TestViewsController:
+        alias:  "wbw.adminbsb.tests.fixtures.controller.test_views"
         public: true
 
-    wbw.adminbsb.tests.fixtures.controller.test_layout:
-        class: WBW\Bundle\AdminBSBBundle\Tests\Fixtures\Controller\TestLayoutController
+    wbw.adminbsb.tests.fixtures.controller.test_views:
+        class: WBW\Bundle\AdminBSBBundle\Tests\Fixtures\Controller\TestViewsController
         calls:
             - [ "setContainer", [ "@service_container" ] ]
