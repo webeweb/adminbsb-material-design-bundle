@@ -34,7 +34,7 @@ class JavascriptProvider implements JavascriptProviderInterface {
     public function getJavascripts(): array {
 
         return [
-            "wbwAdminBSBJQueryCountTo" => "@WBWAdminBSB/assets/WBWAdminBSBJQueryCountTo.js.twig",
+            "WBWAdminBSBJQueryCountTo" => "@WBWAdminBSB/assets/WBWAdminBSBJQueryCountTo.js.twig",
         ];
     }
 }

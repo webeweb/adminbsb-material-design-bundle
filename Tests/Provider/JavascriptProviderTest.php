@@ -32,7 +32,7 @@ class JavascriptProviderTest extends AbstractTestCase {
     public function testGetJavascript(): void {
 
         $exp = [
-            "wbwAdminBSBJQueryCountTo" => "@WBWAdminBSB/assets/WBWAdminBSBJQueryCountTo.js.twig",
+            "WBWAdminBSBJQueryCountTo" => "@WBWAdminBSB/assets/WBWAdminBSBJQueryCountTo.js.twig",
         ];
 
         $obj = new JavascriptProvider();
