@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Tests\DependencyInjection;
 
-use Exception;
 use Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
+use Throwable;
 use WBW\Bundle\AdminBSBBundle\DependencyInjection\Configuration;
 use WBW\Bundle\AdminBSBBundle\DependencyInjection\WBWAdminBSBExtension;
 use WBW\Bundle\AdminBSBBundle\Provider\JavascriptProvider;
@@ -90,7 +90,7 @@ class WBWAdminBSBExtensionTest extends AbstractTestCase {
      * Tests load()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testLoad(): void {
 
@@ -152,7 +152,7 @@ class WBWAdminBSBExtensionTest extends AbstractTestCase {
         try {
 
             $this->containerBuilder->get(JavascriptProvider::SERVICE_NAME);
-        } catch (Exception $ex) {
+        } catch (Throwable $ex) {
 
             $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
             $this->assertStringContainsString(JavascriptProvider::SERVICE_NAME, $ex->getMessage());
@@ -176,7 +176,7 @@ class WBWAdminBSBExtensionTest extends AbstractTestCase {
         try {
 
             $this->containerBuilder->get(CheckboxTwigExtension::SERVICE_NAME);
-        } catch (Exception $ex) {
+        } catch (Throwable $ex) {
 
             $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
             $this->assertStringContainsString(CheckboxTwigExtension::SERVICE_NAME, $ex->getMessage());
