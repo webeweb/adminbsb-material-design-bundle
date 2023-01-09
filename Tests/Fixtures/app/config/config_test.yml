@@ -37,8 +37,8 @@ doctrine:
             WBWAdminBSBBundle:
                 dir:       "Tests/Fixtures/app/config/doctrine"
                 type:      "xml"
-                is_bundle: true
                 prefix:    "WBW\\Bundle\\AdminBSBBundle\\Tests\\Fixtures\\Entity"
+                is_bundle: true
         naming_strategy:             "doctrine.orm.naming_strategy.underscore"
 
 # FOS User configuration
