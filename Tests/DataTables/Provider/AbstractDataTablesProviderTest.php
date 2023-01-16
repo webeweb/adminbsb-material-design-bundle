@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Tests\DataTables\Provider;
 
-use Symfony\Component\Routing\RouterInterface;
 use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 use WBW\Bundle\AdminBSBBundle\Tests\Fixtures\DataTables\Provider\TestDataTablesProvider;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension;
