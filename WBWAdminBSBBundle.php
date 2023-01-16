@@ -26,6 +26,13 @@ use WBW\Bundle\CoreBundle\Provider\SkeletonProviderInterface;
 class WBWAdminBSBBundle extends Bundle implements AssetsProviderInterface, SkeletonProviderInterface {
 
     /**
+     * Translation domain.
+     *
+     * @var string
+     */
+    const TRANSLATION_DOMAIN = "WBWAdminBSBBundle";
+
+    /**
      * {@inheritdoc}
      */
     public function getAssetsRelativeDirectory(): string {
@@ -44,5 +51,14 @@ class WBWAdminBSBBundle extends Bundle implements AssetsProviderInterface, Skele
      */
     public function getSkeletonRelativeDirectory(): string {
         return self::SKELETON_RELATIVE_DIRECTORY;
+    }
+
+    /**
+     * Get the translation domain.
+     *
+     * @return string Returns the translation domain.
+     */
+    public static function getTranslationDomain(): string {
+        return self::TRANSLATION_DOMAIN;
     }
 }

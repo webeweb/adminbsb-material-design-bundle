@@ -62,6 +62,16 @@ class WBWAdminBSBBundleTest extends AbstractTestCase {
     }
 
     /**
+     * Tests getTranslationDomain()
+     *
+     * @return void
+     */
+    public function testGetTranslationDomain(): void {
+
+        $this->assertEquals(WBWAdminBSBBundle::TRANSLATION_DOMAIN, WBWAdminBSBBundle::getTranslationDomain());
+    }
+
+    /**
      * Tests listAssets()
      *
      * @return void
@@ -117,5 +127,15 @@ class WBWAdminBSBBundleTest extends AbstractTestCase {
         $this->assertRegExp("/sweetalert\.zip$/", $res[++$i]);
         $this->assertRegExp("/tinymce\.zip$/", $res[++$i]);
         $this->assertRegExp("/waitme\.zip$/", $res[++$i]);
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct(): void {
+
+        $this->assertEquals("WBWAdminBSBBundle", WBWAdminBSBBundle::TRANSLATION_DOMAIN);
     }
 }
