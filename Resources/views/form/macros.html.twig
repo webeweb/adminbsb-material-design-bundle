@@ -37,7 +37,7 @@
     <b>{{ label|trans }}</b>
     <div class="input-group">
         <span class="input-group-addon">
-            <i class="material-icons">{{ _icon }}</i>
+            {{ adminBSBRenderIcon(_icon) }}
         </span>
         <div class="form-line{{ _disabled }}{{ _error }}{{ _focused }}">
             {{ form_widget(form, {"attr": {"class": "form-control date", "placeholder" : "Ex : 2016-07-30"} }) }}
@@ -60,7 +60,7 @@
     <b>{{ label|trans }}</b>
     <div class="input-group">
         <span class="input-group-addon">
-            <i class="material-icons">{{ _icon }}</i>
+            {{ adminBSBRenderIcon(_icon) }}
         </span>
         <div class="form-line">
             {{ form_widget(form, {"attr": {"class": "form-control money-euro", "placeholder": "Ex : 99.99 €"} }) }}
@@ -111,7 +111,7 @@
         {{ form_label(form) }}
         <div class="input-group">
             <span class="input-group-addon">
-                <i class="material-icons">{{ _icon }}</i>
+                {{ adminBSBRenderIcon(_icon) }}
             </span>
             {{ form_widget(form, {"attr": {"class": "form-control show-tick", "data-live-search": _liveSearch} }) }}
             {{ form_errors(form) }}
