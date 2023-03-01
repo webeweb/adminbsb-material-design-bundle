@@ -68,7 +68,7 @@ class MultiLevelMenuTwigExtensionTest extends AbstractTestCase {
      */
     public function testAdminBSBMultiLevelMenuFunction(): void {
 
-        $obj = new MultiLevelMenuTwigExtension($this->twigEnvironment, $this->translator);
+        $obj = new MultiLevelMenuTwigExtension($this->twigEnvironment);
 
         $res = file_get_contents(__DIR__ . "/MultiLevelMenuTwigExtensionTest.testAdminBSBMultiLevelMenuFunction.html.txt");
 
@@ -82,7 +82,7 @@ class MultiLevelMenuTwigExtensionTest extends AbstractTestCase {
      */
     public function testGetFunctions(): void {
 
-        $obj = new MultiLevelMenuTwigExtension($this->twigEnvironment, $this->translator);
+        $obj = new MultiLevelMenuTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
         $this->assertCount(1, $res);
@@ -102,11 +102,10 @@ class MultiLevelMenuTwigExtensionTest extends AbstractTestCase {
 
         $this->assertEquals("wbw.adminbsb.twig.extension.menu.multi_level_menu", MultiLevelMenuTwigExtension::SERVICE_NAME);
 
-        $obj = new MultiLevelMenuTwigExtension($this->twigEnvironment, $this->translator);
+        $obj = new MultiLevelMenuTwigExtension($this->twigEnvironment);
 
         $this->assertInstanceOf(ExtensionInterface::class, $obj);
 
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-        $this->assertSame($this->translator, $obj->getTranslator());
     }
 }

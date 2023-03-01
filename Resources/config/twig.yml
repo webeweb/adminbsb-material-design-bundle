@@ -32,7 +32,7 @@ services:
     wbw.adminbsb.twig.extension.menu.multi_level_menu:
         class:  WBW\Bundle\AdminBSBBundle\Twig\Extension\Menu\MultiLevelMenuTwigExtension
         public: true
-        arguments: [ "@twig" ,"@translator" ]
+        arguments: [ "@twig" ]
         tags:
             - { name: "twig.extension" }
 

@@ -30,18 +30,13 @@ use WBW\Library\Symfony\Assets\Navigation\NavigationTree;
  */
 abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
 
-    use TranslatorTrait;
-
     /**
      * Constructor.
      *
      * @param Environment $twigEnvironment The Twig environment.
-     * @param BaseTranslatorInterface $translator The translator.
      */
-    public function __construct(Environment $twigEnvironment, $translator) {
+    public function __construct(Environment $twigEnvironment) {
         parent::__construct($twigEnvironment);
-
-        $this->setTranslator($translator);
     }
 
     /**
@@ -138,9 +133,11 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
      * @return string Returns the rendered icon.
      */
     private function renderIcon(NavigationNode $node): string {
+
         if (null === $node->getIcon()) {
             return "";
         }
+
         return AssetsTwigExtension::renderIcon($this->getTwigEnvironment(), $node->getIcon()) . "\n";
     }
 
@@ -209,34 +206,8 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
      */
     private function renderSpan(NavigationNode $node): string {
 
-        $innerHTML = null !== $node->getId() ? $this->translate($node->getLabel()) : "";
+        $innerHTML = null !== $node->getId() ? $node->getLabel() : "";
 
         return static::coreHtmlElement("span", $innerHTML) . "\n";
-    }
-
-    /**
-     * Translate.
-     *
-     * @param string $id The translation id.
-     * @return string Returns the translation in case of success, id otherwise.
-     */
-    private function translate(string $id): string {
-
-        $core = $this->getTranslator()->trans($id, [], "WBWCoreBundle");
-        if ($id !== $core) {
-            return $core;
-        }
-
-        $bootstrap = $this->getTranslator()->trans($id, [], "WBWBootstrapBundle");
-        if ($id !== $bootstrap) {
-            return $bootstrap;
-        }
-
-        $adminBSB = $this->getTranslator()->trans($id, [], "WBWAdminBSBBundle");
-        if ($id !== $adminBSB) {
-            return $adminBSB;
-        }
-
-        return $this->getTranslator()->trans($id);
     }
 }
