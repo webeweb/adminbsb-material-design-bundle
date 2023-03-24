@@ -1,7 +1,7 @@
 {
     "name": "webeweb/adminbsb-material-design-bundle",
     "type": "symfony-bundle",
-    "description": "Integrate AdminBSB Material Design theme with Symfony 2 and more",
+    "description": "Integrate AdminBSB Material Design theme with Symfony 4 and more",
     "keywords": [
         "adminbsb",
         "bundle",
