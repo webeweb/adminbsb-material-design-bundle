@@ -8,7 +8,7 @@ adminbsb-material-design-bundle
 [![License](https://img.shields.io/packagist/l/webeweb/adminbsb-material-design-bundle.svg?style=flat-square)](https://packagist.org/packages/webeweb/adminbsb-material-design-bundle)
 [![composer.lock](https://img.shields.io/badge/.lock-uncommited-important.svg?style=flat-square)](https://packagist.org/packages/webeweb/adminbsb-material-design-bundle)
 
-Integrate AdminBSB Material Design theme with Symfony 2 and more.
+Integrate AdminBSB Material Design theme with Symfony 4 and more.
 
 > IMPORTANT NOTICE: This package is still under development. Any changes will be
 > done without prior notice to consumers of this package. Of course this code
