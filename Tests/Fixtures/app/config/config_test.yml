@@ -23,7 +23,7 @@ framework:
     test:            true
     translator: { fallbacks: [ "%locale%" ] }
     validation:
-        enabled: true
+        enabled: false
 
 # Doctrine configuration
 doctrine:
