@@ -2,8 +2,10 @@
 services:
 
     WBW\Bundle\AdminBSBBundle\Tests\Fixtures\Controller\TestViewsController:
+        alias:  "wbw.adminbsb.tests.fixtures.controller.test_views"
         public: true
+
+    wbw.adminbsb.tests.fixtures.controller.test_views:
+        class: WBW\Bundle\AdminBSBBundle\Tests\Fixtures\Controller\TestViewsController
         calls:
-            - [ "setContainer", [ "@Psr\\Container\\ContainerInterface" ] ]
-        tags:
-            - { name: "container.service_subscriber" }
+            - [ "setContainer", [ "@service_container" ] ]

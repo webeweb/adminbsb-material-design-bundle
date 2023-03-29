@@ -11,19 +11,19 @@ framework:
     csrf_protection: ~
     default_locale:  "%locale%"
     form:            true
+    mailer:          true
     router:
         resource:            "%kernel.project_dir%/config/routing_test.yml"
         strict_requirements: true
     secret:          "ThisTokenIsNotSoSecretChangeIt"
     session:
-        handler_id:         null
-        cookie_secure:      "auto"
-        cookie_samesite:    "lax"
-        storage_factory_id: "session.storage.factory.mock_file"
-    test:            true
+        storage_id: "session.storage.mock_file"
+    templating:
+        engines: [ "twig" ]
+    test:            ~
     translator: { fallbacks: [ "%locale%" ] }
     validation:
-        enabled: true
+        enabled: false
 
 # Doctrine configuration
 doctrine:
@@ -49,8 +49,6 @@ fos_user:
         address:     "no-reply@github.com"
         sender_name: "GitHub"
     user_class:    WBW\Bundle\AdminBSBBundle\Tests\Fixtures\Entity\TestUser
-    service:
-        mailer: "fos_user.mailer.noop"
 
 # Monolog configuration
 monolog:
