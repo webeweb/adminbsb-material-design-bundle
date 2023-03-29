@@ -78,7 +78,7 @@ If you like this package, pay me a beer (or a coffee)
 ## Compatibility
 
 [![PHP](https://img.shields.io/packagist/php-v/webeweb/adminbsb-material-design-bundle.svg?style=flat-square)](http://php.net)
-[![Symfony](https://img.shields.io/badge/symfony-%5E4.4-brightness.svg?style=flat-square)](https://symfony.com)
+[![Symfony](https://img.shields.io/badge/symfony-%5E4.4%7C%5E5.0-brightness.svg?style=flat-square)](https://symfony.com)
 
 ## Installation
 
