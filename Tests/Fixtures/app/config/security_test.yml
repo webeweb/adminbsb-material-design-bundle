@@ -1,0 +1,13 @@
+# Tests/Fixtures/app/config/security_test.yml
+security:
+
+    firewalls:
+        dev:
+            pattern:  "^/(_(profiler|wdt)|css|images|js)/"
+            security: false
+        main:
+            lazy: ~
+
+    providers:
+        in_memory:
+            memory: ~
