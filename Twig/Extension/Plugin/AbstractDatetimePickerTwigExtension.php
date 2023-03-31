@@ -11,9 +11,9 @@
 
 namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Plugin;
 
+use Symfony\Contracts\Translation\TranslatorInterface;
 use Twig\Environment;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
-use WBW\Bundle\CoreBundle\Translation\BaseTranslatorInterface;
 use WBW\Bundle\CoreBundle\Translation\TranslatorTrait;
 use WBW\Library\Types\Helper\StringHelper;
 
@@ -53,9 +53,9 @@ abstract class AbstractDatetimePickerTwigExtension extends AbstractTwigExtension
      * Constructor.
      *
      * @param Environment $twigEnvironment The Twig environment.
-     * @param BaseTranslatorInterface $translator The translator.
+     * @param TranslatorInterface $translator The translator.
      */
-    public function __construct(Environment $twigEnvironment, $translator) {
+    public function __construct(Environment $twigEnvironment, TranslatorInterface $translator) {
         parent::__construct($twigEnvironment);
 
         $this->setTranslator($translator);
