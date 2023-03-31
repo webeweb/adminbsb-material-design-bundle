@@ -26,13 +26,6 @@ use WBW\Bundle\JQuery\DataTablesBundle\Api\DataTablesOptionsInterface;
 class AbstractDataTablesProviderTest extends AbstractTestCase {
 
     /**
-     * Button Twig extension.
-     *
-     * @var ButtonTwigExtension
-     */
-    private $buttonTwigExtension;
-
-    /**
      * DataTables provider.
      *
      * @var TestDataTablesProvider
@@ -52,10 +45,10 @@ class AbstractDataTablesProviderTest extends AbstractTestCase {
         $this->router->expects($this->any())->method("generate")->willReturnCallback($generate);
 
         // Set a Button Twig extension mock.
-        $this->buttonTwigExtension = new ButtonTwigExtension($this->twigEnvironment);
+        $buttonTwigExtension = new ButtonTwigExtension($this->twigEnvironment);
 
         // Set a DataTables provider mock.
-        $this->dataTablesProvider = new TestDataTablesProvider($this->router, $this->translator, $this->buttonTwigExtension);
+        $this->dataTablesProvider = new TestDataTablesProvider($this->router, $this->translator, $buttonTwigExtension);
     }
 
     /**
