@@ -8,10 +8,8 @@ parameters:
 
 framework:
     assets:          true
-    csrf_protection: ~
     default_locale:  "%locale%"
     form:            true
-    mailer:          true
     router:
         resource:            "%kernel.project_dir%/config/routing_test.yml"
         strict_requirements: true
