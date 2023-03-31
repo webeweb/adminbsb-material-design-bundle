@@ -30,9 +30,6 @@ class ViewsControllerTest extends AbstractWebTestCase {
     public static function setUpBeforeClass(): void {
         parent::setUpBeforeClass();
 
-        parent::setUpSchemaTool();
-        parent::setUpUserFixtures();
-
         // Set up the directories.
         $skeletonDirectory  = realpath(__DIR__ . "/../../Resources/skeleton");
         $resourcesDirectory = realpath(__DIR__ . "/../Fixtures/app/templates/bundles");
@@ -94,106 +91,6 @@ class ViewsControllerTest extends AbstractWebTestCase {
         $client->request("GET", "/blank");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
-    }
-
-    /**
-     * Tests the Resources/views/Resetting/check_email.html.twig template.
-     *
-     * @return void
-     */
-    public function testFOSUserCheckEmailAction(): void {
-
-        $client = $this->client;
-
-        $client->request("GET", "/resetting/check-email?username=username");
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
-        $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
-
-        // Check the response.
-        $response = $client->getResponse()->getContent();
-        $this->assertStringContainsString("<title>AdminBSB Material Design - Reset password</title>", $response);
-        $this->assertStringContainsString('<body class="fp-page">', $response);
-        $this->assertStringContainsString('<div class="fp-box">', $response);
-    }
-
-    /**
-     * Tests the Resources/views/Security/login.html.twig template.
-     *
-     * @return void
-     */
-    public function testFOSUserLoginAction(): void {
-
-        $client = $this->client;
-
-        $client->request("GET", "/login");
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
-        $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
-
-        // Check the response.
-        $response = $client->getResponse()->getContent();
-        $this->assertStringContainsString("<title>AdminBSB Material Design - Log in</title>", $response);
-        $this->assertStringContainsString('<body class="login-page">', $response);
-        $this->assertStringContainsString('<div class="login-box">', $response);
-    }
-
-    /**
-     * Tests the Resources/views/Registration/register.html.twig template.
-     *
-     * @return void
-     */
-    public function testFOSUserRegisterAction(): void {
-
-        $client = $this->client;
-
-        $client->request("GET", "/register/");
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
-        $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
-
-        // Check the response.
-        $response = $client->getResponse()->getContent();
-        $this->assertStringContainsString("<title>AdminBSB Material Design - Register</title>", $response);
-        $this->assertStringContainsString('<body class="signup-page">', $response);
-        $this->assertStringContainsString('<div class="signup-box">', $response);
-    }
-
-    /**
-     * Tests the Resources/views/Resetting/request.html.twig template.
-     *
-     * @return void
-     */
-    public function testFOSUserRequestAction(): void {
-
-        $client = $this->client;
-
-        $client->request("GET", "/resetting/request");
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
-        $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
-
-        // Check the response.
-        $response = $client->getResponse()->getContent();
-        $this->assertStringContainsString("<title>AdminBSB Material Design - Reset password</title>", $response);
-        $this->assertStringContainsString('<body class="fp-page">', $response);
-        $this->assertStringContainsString('<div class="fp-box">', $response);
-    }
-
-    /**
-     * Tests the Resources/views/Resetting/reset.html.twig template.
-     *
-     * @return void
-     */
-    public function testFOSUserResetAction(): void {
-
-        $client = $this->client;
-
-        $client->request("GET", "/resetting/reset/confirmationToken");
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
-        $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
-
-        // Check the response.
-        $response = $client->getResponse()->getContent();
-        $this->assertStringContainsString("<title>AdminBSB Material Design - Reset password</title>", $response);
-        $this->assertStringContainsString('<body class="signup-page">', $response);
-        $this->assertStringContainsString('<div class="signup-box">', $response);
     }
 
     /**
