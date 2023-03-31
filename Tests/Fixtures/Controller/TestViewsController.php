@@ -48,4 +48,30 @@ class TestViewsController extends AbstractController {
     public function blankAction(): Response {
         return $this->render("@WBWAdminBSB/blank.html.twig");
     }
+
+    /**
+     * Displays an error 404 page.
+     *
+     * @return Response Returns the response.
+     */
+    public function error404Action(): Response {
+
+        return $this->render("@WBWAdminBSB/bundles/TwigBundle/Exception/error404.html.twig", [
+            "status_code" => 404,
+            "status_text" => "Not Found",
+        ]);
+    }
+
+    /**
+     * Displays an error 500 page.
+     *
+     * @return Response Returns the response.
+     */
+    public function error500Action(): Response {
+
+        return $this->render("@WBWAdminBSB/bundles/TwigBundle/Exception/error500.html.twig", [
+            "status_code" => 500,
+            "status_text" => "Internal Server Error",
+        ]);
+    }
 }

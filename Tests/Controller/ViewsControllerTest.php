@@ -102,7 +102,7 @@ class ViewsControllerTest extends AbstractWebTestCase {
 
         $client = $this->client;
 
-        $client->request("GET", "/error/404.html");
+        $client->request("GET", "/error/404");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
 
@@ -123,7 +123,7 @@ class ViewsControllerTest extends AbstractWebTestCase {
 
         $client = $this->client;
 
-        $client->request("GET", "/error/500.html");
+        $client->request("GET", "/error/500");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
 
