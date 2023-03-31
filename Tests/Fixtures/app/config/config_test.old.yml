@@ -7,16 +7,16 @@ parameters:
     locale: "en"
 
 framework:
-    assets:          true
-    default_locale:  "%locale%"
-    form:            true
+    assets:         true
+    default_locale: "%locale%"
+    form:           true
     router:
-        resource:            "%kernel.project_dir%/config/routing_test.yml"
+        resource:            "%kernel.project_dir%/config/routing_test.old.yml"
         strict_requirements: true
-    secret:          "ThisTokenIsNotSoSecretChangeIt"
+    secret:         "ThisTokenIsNotSoSecretChangeIt"
     session:
         storage_id: "session.storage.mock_file"
-    test:            true
+    test:           true
     translator: { fallbacks: [ "%locale%" ] }
     validation:
         enabled: false

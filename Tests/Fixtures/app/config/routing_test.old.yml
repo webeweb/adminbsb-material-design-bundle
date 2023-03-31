@@ -1,4 +1,8 @@
-# Tests/Fixtures/app/config/routing_test.yml
+# Tests/Fixtures/app/config/routing_test.old.yml
+twig:
+    resource: "@TwigBundle/Resources/config/routing/errors.xml"
+    prefix:   "/error"
+
 wbw_core_twig:
     prefix:   "/twig"
     resource: "@WBWCoreBundle/Resources/config/routing/twig.yml"
@@ -16,14 +20,4 @@ wbw_adminbsb_assets_stylesheets:
 wbw_adminbsb_blank:
     path: "/blank"
     defaults: { _controller: "WBW\\Bundle\\AdminBSBBundle\\Tests\\Fixtures\\Controller\\TestViewsController::blankAction" }
-    methods: [ "GET" ]
-
-wbw_adminbsb_error_404:
-    path: "/error/404"
-    defaults: { _controller: "WBW\\Bundle\\AdminBSBBundle\\Tests\\Fixtures\\Controller\\TestViewsController::error404Action" }
-    methods: [ "GET" ]
-
-wbw_adminbsb_error_500:
-    path: "/error/500"
-    defaults: { _controller: "WBW\\Bundle\\AdminBSBBundle\\Tests\\Fixtures\\Controller\\TestViewsController::error500Action" }
     methods: [ "GET" ]
