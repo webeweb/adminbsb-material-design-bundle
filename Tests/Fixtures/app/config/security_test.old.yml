@@ -1,8 +1,5 @@
-# Tests/Fixtures/app/config/security_test.yml
+# Tests/Fixtures/app/config/security_test.old.yml
 security:
-
-    encoders:
-        FOS\UserBundle\Model\UserInterface: "sha512"
 
     firewalls:
         dev:

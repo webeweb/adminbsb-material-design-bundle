@@ -3,10 +3,6 @@ twig:
     resource: "@TwigBundle/Resources/config/routing/errors.xml"
     prefix:   "/error"
 
-fos_user:
-    prefix:   "/"
-    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
-
 wbw_core_twig:
     prefix:   "/twig"
     resource: "@WBWCoreBundle/Resources/config/routing/twig.yml"
