@@ -39,7 +39,7 @@ class ViewsControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests assetsJavascriptsAction()
+     * Tests the Resources/views/assets/_javascripts.html.twig
      *
      * @return void
      */
@@ -66,7 +66,7 @@ class ViewsControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests assetsStylesheetsAction()
+     * Tests the Resources/views/assets/_stylesheets.html.twig
      *
      * @return void
      */
@@ -94,7 +94,7 @@ class ViewsControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests the Resources/views/Exception/error404.html.twig template.
+     * Tests the Resources/views/bundles/TwigBundle/Exception/error404.html.twig
      *
      * @return void
      */
@@ -103,7 +103,7 @@ class ViewsControllerTest extends AbstractWebTestCase {
         $client = $this->client;
 
         $client->request("GET", "/error/404");
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertEquals(404, $client->getResponse()->getStatusCode());
         $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
 
         // Check the response.
@@ -115,7 +115,7 @@ class ViewsControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests the Resources/views/Exception/error500.html.twig template.
+     * Tests the Resources/views/bundles/TwigBundle/Exception/error404.html.twig
      *
      * @return void
      */
@@ -124,7 +124,7 @@ class ViewsControllerTest extends AbstractWebTestCase {
         $client = $this->client;
 
         $client->request("GET", "/error/500");
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertEquals(500, $client->getResponse()->getStatusCode());
         $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
 
         // Check the response.
