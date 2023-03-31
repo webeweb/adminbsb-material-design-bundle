@@ -46,6 +46,7 @@ twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
 
+# AdminBSB Material Design configuration
 wbw_adminbsb:
     skin: "red"
     plugins:

@@ -4,6 +4,6 @@ services:
     WBW\Bundle\AdminBSBBundle\Tests\Fixtures\Controller\TestViewsController:
         public: true
         calls:
-            - [ "setContainer", [ "@service_container" ] ]
+            - [ "setContainer", [ "@Psr\\Container\\ContainerInterface" ] ]
         tags:
             - { name: "container.service_subscriber" }
