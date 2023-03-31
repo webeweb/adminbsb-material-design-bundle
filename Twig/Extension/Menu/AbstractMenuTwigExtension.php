@@ -14,8 +14,6 @@ namespace WBW\Bundle\AdminBSBBundle\Twig\Extension\Menu;
 use Twig\Environment;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Bundle\AdminBSBBundle\Twig\Extension\AssetsTwigExtension;
-use WBW\Bundle\CoreBundle\Translation\BaseTranslatorInterface;
-use WBW\Bundle\CoreBundle\Translation\TranslatorTrait;
 use WBW\Library\Symfony\Assets\AbstractNavigationNode;
 use WBW\Library\Symfony\Assets\Navigation\HeaderNode;
 use WBW\Library\Symfony\Assets\Navigation\NavigationNode;
