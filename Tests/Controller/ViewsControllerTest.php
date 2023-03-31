@@ -98,7 +98,7 @@ class ViewsControllerTest extends AbstractWebTestCase {
      *
      * @return void
      */
-    public function testTwigError404Action(): void {
+    public function testError404Action(): void {
 
         $client = $this->client;
 
@@ -119,7 +119,7 @@ class ViewsControllerTest extends AbstractWebTestCase {
      *
      * @return void
      */
-    public function testTwigError500Action(): void {
+    public function testError500Action(): void {
 
         $client = $this->client;
 

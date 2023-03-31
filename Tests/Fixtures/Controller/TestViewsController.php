@@ -46,6 +46,6 @@ class TestViewsController extends AbstractController {
      * @return Response Returns the response.
      */
     public function blankAction(): Response {
-        return $this->render("@WBWAdminBSB/layout/blank.html.twig");
+        return $this->render("@WBWAdminBSB/blank.html.twig");
     }
 }
