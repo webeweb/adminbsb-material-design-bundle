@@ -39,7 +39,7 @@ class ViewsControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests the Resources/views/assets/_javascripts.html.twig
+     * Tests Resources/views/assets/_javascripts.html.twig
      *
      * @return void
      */
@@ -66,7 +66,7 @@ class ViewsControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests the Resources/views/assets/_stylesheets.html.twig
+     * Tests Resources/views/assets/_stylesheets.html.twig
      *
      * @return void
      */
@@ -94,7 +94,7 @@ class ViewsControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests the Resources/views/bundles/TwigBundle/Exception/error404.html.twig
+     * Tests Resources/views/bundles/TwigBundle/Exception/error404.html.twig
      *
      * @return void
      */
@@ -115,7 +115,7 @@ class ViewsControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests the Resources/views/bundles/TwigBundle/Exception/error404.html.twig
+     * Tests Resources/views/bundles/TwigBundle/Exception/error404.html.twig
      *
      * @return void
      */
