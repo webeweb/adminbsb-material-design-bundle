@@ -28,7 +28,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\AssetsTwigExtension;
 abstract class AbstractInfoboxTwigExtension extends AbstractTwigExtension {
 
     /**
-     * Displays an infobox.
+     * Display an infobox.
      *
      * @param InfoboxInterface $infobox The infobox.
      * @return string Returns the infobox.

@@ -23,7 +23,7 @@ use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 class ColorHelperTest extends AbstractTestCase {
 
     /**
-     * Tests materialDesignColor()
+     * Test materialDesignColor()
      *
      * @return void
      */

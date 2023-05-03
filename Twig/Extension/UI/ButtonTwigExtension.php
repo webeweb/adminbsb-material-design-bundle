@@ -32,7 +32,7 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
     const SERVICE_NAME = "wbw.adminbsb.twig.extension.ui.button";
 
     /**
-     * Displays an AdminBSB button "danger".
+     * Display an AdminBSB button "danger".
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB button "danger".
@@ -42,7 +42,7 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB button "default".
+     * Display an AdminBSB button "default".
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB button "default".
@@ -52,7 +52,7 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB button "info".
+     * Display an AdminBSB button "info".
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB button "info".
@@ -62,7 +62,7 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
     }
 
     /**
-     * Displays a AdminBSB button "Material design".
+     * Display a AdminBSB button "Material design".
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB button "Material design".
@@ -72,7 +72,7 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB button "primary".
+     * Display an AdminBSB button "primary".
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB button "primary".
@@ -82,7 +82,7 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB button "success".
+     * Display an AdminBSB button "success".
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB button "success".
@@ -92,7 +92,7 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB button "warning".
+     * Display an AdminBSB button "warning".
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB button "warning".

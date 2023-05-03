@@ -23,7 +23,7 @@ use WBW\Bundle\AdminBSBBundle\Tests\Fixtures\Assets\TestInfobox;
 class AbstractInfoboxTest extends AbstractTestCase {
 
     /**
-     * Tests setClass()
+     * Test setClass()
      *
      * @return void
      */
@@ -36,7 +36,7 @@ class AbstractInfoboxTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setColor()
+     * Test setColor()
      *
      * @return void
      */
@@ -49,7 +49,7 @@ class AbstractInfoboxTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setContentNumber()
+     * Test setContentNumber()
      *
      * @return void
      */
@@ -62,7 +62,7 @@ class AbstractInfoboxTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setContentText()
+     * Test setContentText()
      *
      * @return void
      */
@@ -75,7 +75,7 @@ class AbstractInfoboxTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setCountTo()
+     * Test setCountTo()
      *
      * @return void
      */
@@ -88,7 +88,7 @@ class AbstractInfoboxTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setHoverExpandEffect()
+     * Test setHoverExpandEffect()
      *
      * @return void
      */
@@ -101,7 +101,7 @@ class AbstractInfoboxTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setHoverZoomEffect()
+     * Test setHoverZoomEffect()
      *
      * @return void
      */
@@ -114,7 +114,7 @@ class AbstractInfoboxTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setIconColor()
+     * Test setIconColor()
      *
      * @return void
      */
@@ -127,7 +127,7 @@ class AbstractInfoboxTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setIconName()
+     * Test setIconName()
      *
      * @return void
      */
@@ -140,7 +140,7 @@ class AbstractInfoboxTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

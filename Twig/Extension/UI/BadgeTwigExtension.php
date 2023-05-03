@@ -30,7 +30,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
     const SERVICE_NAME = "wbw.adminbsb.twig.extension.ui.badge";
 
     /**
-     * Displays an AdminBSB button badge "danger".
+     * Display an AdminBSB button badge "danger".
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB button badge "danger".
@@ -40,7 +40,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB button badge "default".
+     * Display an AdminBSB button badge "default".
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB button badge "default".
@@ -50,7 +50,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB button badge "info".
+     * Display an AdminBSB button badge "info".
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB button badge "info".
@@ -60,7 +60,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB list badge.
+     * Display an AdminBSB list badge.
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB list badge.
@@ -70,7 +70,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB button badge "Material design".
+     * Display an AdminBSB button badge "Material design".
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB button badge "Material design".
@@ -80,7 +80,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB button badge "primary".
+     * Display an AdminBSB button badge "primary".
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB button badge "primary".
@@ -90,7 +90,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB button badge "success".
+     * Display an AdminBSB button badge "success".
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB button badge "success".
@@ -100,7 +100,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB button badge "warning".
+     * Display an AdminBSB button badge "warning".
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB button badge "warning".

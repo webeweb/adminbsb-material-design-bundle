@@ -24,7 +24,7 @@ use WBW\Library\Types\Helper\StringHelper;
 abstract class AbstractRadioButtonTwigExtension extends AbstractTwigExtension {
 
     /**
-     * Displays a AdminBSB radio button.
+     * Display a AdminBSB radio button.
      *
      * @param string|null $content The content.
      * @param string|null $name The name.

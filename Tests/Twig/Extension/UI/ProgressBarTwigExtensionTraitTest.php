@@ -24,7 +24,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ProgressBarTwigExtension;
 class ProgressBarTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests setProgressBarTwigExtension()
+     * Test setProgressBarTwigExtension()
      *
      * @return void
      */

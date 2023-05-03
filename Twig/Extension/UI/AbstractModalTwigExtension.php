@@ -41,7 +41,7 @@ abstract class AbstractModalTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB modal header.
+     * Display an AdminBSB modal header.
      *
      * @param string $content The content.
      * @param string|null $icon The icon.

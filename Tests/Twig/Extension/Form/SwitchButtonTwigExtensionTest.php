@@ -26,7 +26,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\SwitchButtonTwigExtension;
 class SwitchButtonTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests adminBSBSwitchButtonBasicFunction()
+     * Test adminBSBSwitchButtonBasicFunction()
      *
      * @return void
      */
@@ -41,7 +41,7 @@ class SwitchButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBSwitchButtonMaterialDesignFunction()
+     * Test adminBSBSwitchButtonMaterialDesignFunction()
      *
      * @return void
      */
@@ -56,7 +56,7 @@ class SwitchButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBSwitchButtonMaterialDesignFunction()
+     * Test adminBSBSwitchButtonMaterialDesignFunction()
      *
      * @return void
      */
@@ -71,7 +71,7 @@ class SwitchButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFunctions()
+     * Test getFunctions()
      *
      * @return void
      */
@@ -94,7 +94,7 @@ class SwitchButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

@@ -30,7 +30,7 @@ class RadioButtonTwigExtension extends AbstractRadioButtonTwigExtension {
     const SERVICE_NAME = "wbw.adminbsb.twig.extension.form.radio_button";
 
     /**
-     * Displays an AdminBSB radio button "basic".
+     * Display an AdminBSB radio button "basic".
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB radio button "basic".
@@ -40,7 +40,7 @@ class RadioButtonTwigExtension extends AbstractRadioButtonTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB radio button "Material design".
+     * Display an AdminBSB radio button "Material design".
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB radio button "Material design".

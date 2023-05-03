@@ -24,7 +24,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\CheckboxTwigExtension;
 class CheckboxTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests setCheckboxTwigExtension()
+     * Test setCheckboxTwigExtension()
      *
      * @return void
      */

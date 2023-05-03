@@ -26,7 +26,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension as BaseTwi
 abstract class AbstractButtonTwigExtension extends BaseTwigExtension {
 
     /**
-     * Displays an AdminBSB button.
+     * Display an AdminBSB button.
      *
      * @param ButtonInterface $button The button.
      * @param string|null $icon The icon.

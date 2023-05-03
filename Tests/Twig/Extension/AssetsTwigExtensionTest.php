@@ -26,7 +26,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\AssetsTwigExtension;
 class AssetsTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests adminBSBRenderIconFunction()
+     * Test adminBSBRenderIconFunction()
      *
      * @return void
      */
@@ -38,7 +38,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFilters()
+     * Test getFilters()
      *
      * @return void
      */
@@ -51,7 +51,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFunctions()
+     * Test getFunctions()
      *
      * @return void
      */
@@ -71,7 +71,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderIcon()
+     * Test renderIcon()
      *
      * @return void
      */
@@ -81,7 +81,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderIcon()
+     * Test renderIcon()
      *
      * @return void
      */
@@ -93,7 +93,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderIcon()
+     * Test renderIcon()
      *
      * @return void
      */
@@ -105,7 +105,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderIcon()
+     * Test renderIcon()
      *
      * @return void
      */
@@ -117,7 +117,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

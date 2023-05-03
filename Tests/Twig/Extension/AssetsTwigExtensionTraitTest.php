@@ -24,7 +24,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\AssetsTwigExtension;
 class AssetsTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests setAssetsTwigExtension()
+     * Test setAssetsTwigExtension()
      *
      * @return void
      */

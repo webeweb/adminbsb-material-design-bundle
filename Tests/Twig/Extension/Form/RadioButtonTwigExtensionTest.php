@@ -26,7 +26,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\RadioButtonTwigExtension;
 class RadioButtonTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests adminBSBRadioButtonBasicFunction()
+     * Test adminBSBRadioButtonBasicFunction()
      *
      * @return void
      */
@@ -41,7 +41,7 @@ class RadioButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBRadioButtonMaterialDesignFunction()
+     * Test adminBSBRadioButtonMaterialDesignFunction()
      *
      * @return void
      */
@@ -56,7 +56,7 @@ class RadioButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBRadioButtonMaterialDesignFunction()
+     * Test adminBSBRadioButtonMaterialDesignFunction()
      *
      * @return void
      */
@@ -71,7 +71,7 @@ class RadioButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFunctions()
+     * Test getFunctions()
      *
      * @return void
      */
@@ -94,7 +94,7 @@ class RadioButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

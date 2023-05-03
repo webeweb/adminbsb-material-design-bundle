@@ -26,7 +26,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Typography\TypographyTwigExtension;
 class TypographyTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests adminBSBBoldFunction()
+     * Test adminBSBBoldFunction()
      *
      * @return void
      */
@@ -41,7 +41,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBBoldFunction()
+     * Test adminBSBBoldFunction()
      *
      * @return void
      */
@@ -56,7 +56,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBItalicFunction()
+     * Test adminBSBItalicFunction()
      *
      * @return void
      */
@@ -71,7 +71,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBItalicFunction()
+     * Test adminBSBItalicFunction()
      *
      * @return void
      */
@@ -86,7 +86,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBLineThroughFunction()
+     * Test adminBSBLineThroughFunction()
      *
      * @return void
      */
@@ -101,7 +101,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBLineThroughFunction()
+     * Test adminBSBLineThroughFunction()
      *
      * @return void
      */
@@ -116,7 +116,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBOverlineFunction()
+     * Test adminBSBOverlineFunction()
      *
      * @return void
      */
@@ -131,7 +131,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBOverlineFunction()
+     * Test adminBSBOverlineFunction()
      *
      * @return void
      */
@@ -146,7 +146,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBUnderlineFunction()
+     * Test adminBSBUnderlineFunction()
      *
      * @return void
      */
@@ -161,7 +161,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBUnderlineFunction()
+     * Test adminBSBUnderlineFunction()
      *
      * @return void
      */
@@ -176,7 +176,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFilters()
+     * Test getFilters()
      *
      * @return void
      */
@@ -188,7 +188,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFunctions()
+     * Test getFunctions()
      *
      * @return void
      */
@@ -276,7 +276,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

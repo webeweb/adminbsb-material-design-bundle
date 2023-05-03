@@ -23,7 +23,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
 abstract class AbstractPreloaderTwigExtension extends AbstractTwigExtension {
 
     /**
-     * Displays an AdminBSB preloader.
+     * Display an AdminBSB preloader.
      *
      * @param string $class The class.
      * @param string $size The size.

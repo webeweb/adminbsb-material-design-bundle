@@ -24,7 +24,7 @@ use WBW\Library\Types\Helper\StringHelper;
 abstract class AbstractBadgeTwigExtension extends AbstractTwigExtension {
 
     /**
-     * Displays an AdminBSB badge.
+     * Display an AdminBSB badge.
      *
      * @param string|null $content The content.
      * @param string|null $label The label.

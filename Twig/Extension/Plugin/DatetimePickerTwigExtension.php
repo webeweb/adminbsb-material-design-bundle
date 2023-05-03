@@ -30,7 +30,7 @@ class DatetimePickerTwigExtension extends AbstractDatetimePickerTwigExtension {
     const SERVICE_NAME = "wbw.adminbsb.twig.extension.plugin.datetime_picker";
 
     /**
-     * Displays an AdminBSB date picker.
+     * Display an AdminBSB date picker.
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB date picker.
@@ -40,7 +40,7 @@ class DatetimePickerTwigExtension extends AbstractDatetimePickerTwigExtension {
     }
 
     /**
-     * Displays a AdminBSB datetime picker.
+     * Display a AdminBSB datetime picker.
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB datetime picker.
@@ -50,7 +50,7 @@ class DatetimePickerTwigExtension extends AbstractDatetimePickerTwigExtension {
     }
 
     /**
-     * Displays a time picker.
+     * Display a time picker.
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB time picker.

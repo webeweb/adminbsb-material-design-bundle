@@ -30,7 +30,7 @@ class CheckboxTwigExtension extends AbstractCheckboxTwigExtension {
     const SERVICE_NAME = "wbw.adminbsb.twig.extension.form.checkbox";
 
     /**
-     * Displays an AdminBSB checkbox "basic".
+     * Display an AdminBSB checkbox "basic".
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB checkbox "basic".
@@ -40,7 +40,7 @@ class CheckboxTwigExtension extends AbstractCheckboxTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB checkbox "Material design".
+     * Display an AdminBSB checkbox "Material design".
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB checkbox "Material design".

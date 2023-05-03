@@ -42,7 +42,7 @@ class ModalTwigExtensionTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setModalTwigExtension()
+     * Test setModalTwigExtension()
      *
      * @return void
      */

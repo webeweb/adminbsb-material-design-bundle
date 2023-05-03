@@ -49,7 +49,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests newMaterialDesignButton()
+     * Test newMaterialDesignButton()
      *
      * @return void
      */
@@ -62,7 +62,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests parseMaterialDesignButton()
+     * Test parseMaterialDesignButton()
      *
      * @return void
      */

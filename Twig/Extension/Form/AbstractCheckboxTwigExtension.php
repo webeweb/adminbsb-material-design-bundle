@@ -24,7 +24,7 @@ use WBW\Library\Types\Helper\StringHelper;
 abstract class AbstractCheckboxTwigExtension extends AbstractTwigExtension {
 
     /**
-     * Displays a AdminBSB checkbox.
+     * Display a AdminBSB checkbox.
      *
      * @param string|null $content The content.
      * @param string|null $name The name.

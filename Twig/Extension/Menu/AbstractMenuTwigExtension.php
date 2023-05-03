@@ -38,7 +38,7 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB  menu.
+     * Display an AdminBSB  menu.
      *
      * @param NavigationTree $tree The navigation tree.
      * @return string Returns the Admin BSB menu.
@@ -55,7 +55,7 @@ abstract class AbstractMenuTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Determines if a node is a menu toggle.
+     * Determine if a node is a menu toggle.
      *
      * @param NavigationNode $node
      * @return bool Returns true in case of success, false otherwise.

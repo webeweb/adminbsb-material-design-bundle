@@ -26,7 +26,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\CheckboxTwigExtension;
 class CheckboxTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests adminBSBCheckboxBasicFunction()
+     * Test adminBSBCheckboxBasicFunction()
      *
      * @return void
      */
@@ -41,7 +41,7 @@ class CheckboxTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBCheckboxMaterialDesignFunction()
+     * Test adminBSBCheckboxMaterialDesignFunction()
      *
      * @return void
      */
@@ -56,7 +56,7 @@ class CheckboxTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBCheckboxMaterialDesignFunction()
+     * Test adminBSBCheckboxMaterialDesignFunction()
      *
      * @return void
      */
@@ -71,7 +71,7 @@ class CheckboxTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFunctions()
+     * Test getFunctions()
      *
      * @return void
      */
@@ -94,7 +94,7 @@ class CheckboxTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

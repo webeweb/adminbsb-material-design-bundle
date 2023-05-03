@@ -41,7 +41,7 @@ class TestViewsController extends AbstractController {
     }
 
     /**
-     * Displays a blank page.
+     * Display a blank page.
      *
      * @return Response Returns the response.
      */

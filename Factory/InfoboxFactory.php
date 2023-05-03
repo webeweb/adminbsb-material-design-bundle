@@ -28,7 +28,7 @@ use WBW\Library\Types\Helper\ArrayHelper;
 class InfoboxFactory {
 
     /**
-     * Creates a new infobox 1.
+     * Create a new infobox 1.
      *
      * @return InfoboxInterface Returns the infobox 1.
      */
@@ -37,7 +37,7 @@ class InfoboxFactory {
     }
 
     /**
-     * Creates a new infobox 2.
+     * Create a new infobox 2.
      *
      * @return InfoboxInterface Returns the infobox 2.
      */
@@ -46,7 +46,7 @@ class InfoboxFactory {
     }
 
     /**
-     * Creates a new infobox 3.
+     * Create a new infobox 3.
      *
      * @return InfoboxInterface Returns the infobox 3.
      */
@@ -55,7 +55,7 @@ class InfoboxFactory {
     }
 
     /**
-     * Creates a new infobox 4.
+     * Create a new infobox 4.
      *
      * @return InfoboxInterface Returns the infobox 4.
      */
@@ -64,7 +64,7 @@ class InfoboxFactory {
     }
 
     /**
-     * Creates a new infobox 5.
+     * Create a new infobox 5.
      *
      * @return InfoboxInterface Returns the infobox 5.
      */
@@ -73,7 +73,7 @@ class InfoboxFactory {
     }
 
     /**
-     * Parses an infobox.
+     * Parse an infobox.
      *
      * @param InfoboxInterface $infobox The infobox.
      * @param array $args The arguments.
@@ -95,7 +95,7 @@ class InfoboxFactory {
     }
 
     /**
-     * Parses an infobox 1.
+     * Parse an infobox 1.
      *
      * @param array $args The arguments.
      * @return InfoboxInterface Returns the infobox 1.
@@ -105,7 +105,7 @@ class InfoboxFactory {
     }
 
     /**
-     * Parses an infobox 2.
+     * Parse an infobox 2.
      *
      * @param array $args The arguments.
      * @return InfoboxInterface Returns the infobox 2.
@@ -115,7 +115,7 @@ class InfoboxFactory {
     }
 
     /**
-     * Parses an infobox 3.
+     * Parse an infobox 3.
      *
      * @param array $args The arguments.
      * @return InfoboxInterface Returns the infobox 3.
@@ -125,7 +125,7 @@ class InfoboxFactory {
     }
 
     /**
-     * Parses an infobox 4.
+     * Parse an infobox 4.
      *
      * @param array $args The arguments.
      * @return InfoboxInterface Returns the infobox 4.
@@ -135,7 +135,7 @@ class InfoboxFactory {
     }
 
     /**
-     * Parses an infobox 5.
+     * Parse an infobox 5.
      *
      * @param array $args The arguments.
      * @return InfoboxInterface Returns the infobox 5.

@@ -24,7 +24,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ButtonTwigExtension;
 class ButtonTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests setButtonTwigExtension()
+     * Test setButtonTwigExtension()
      *
      * @return void
      */

@@ -24,7 +24,7 @@ use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 class ConfigurationTest extends AbstractTestCase {
 
     /**
-     * Tests enumSkins()
+     * Test enumSkins()
      *
      * @return void
      */

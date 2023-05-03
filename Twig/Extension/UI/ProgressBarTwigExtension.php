@@ -32,7 +32,7 @@ class ProgressBarTwigExtension extends BaseTwigExtension {
     const SERVICE_NAME = "wbw.adminbsb.twig.extension.ui.progress_bar";
 
     /**
-     * Displays an AdminBSB progress bar "Material design".
+     * Display an AdminBSB progress bar "Material design".
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB progress bar "Material design".

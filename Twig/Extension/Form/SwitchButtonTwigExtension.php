@@ -30,7 +30,7 @@ class SwitchButtonTwigExtension extends AbstractSwitchButtonTwigExtension {
     const SERVICE_NAME = "wbw.adminbsb.twig.extension.form.switch_button";
 
     /**
-     * Displays an AdminBSB switch button "basic".
+     * Display an AdminBSB switch button "basic".
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB switch button "basic".
@@ -40,7 +40,7 @@ class SwitchButtonTwigExtension extends AbstractSwitchButtonTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB switch button "Material design".
+     * Display an AdminBSB switch button "Material design".
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB switch button "Material design".

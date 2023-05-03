@@ -23,7 +23,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\AbstractTwigExtension;
 abstract class AbstractIconTwigExtension extends AbstractTwigExtension {
 
     /**
-     * Displays an AdminBSB icon.
+     * Display an AdminBSB icon.
      *
      * @param string|null $name The icon name.
      * @param string|null $style The icon style.

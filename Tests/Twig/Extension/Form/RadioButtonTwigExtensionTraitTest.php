@@ -24,7 +24,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Form\RadioButtonTwigExtension;
 class RadioButtonTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests setRadioButtonTwigExtension()
+     * Test setRadioButtonTwigExtension()
      *
      * @return void
      */

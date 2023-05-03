@@ -31,7 +31,7 @@ class IconTwigExtension extends AbstractIconTwigExtension implements IconRendere
     const SERVICE_NAME = "wbw.adminbsb.twig.extension.ui.icon";
 
     /**
-     * Displays an AdminBSB basic icon.
+     * Display an AdminBSB basic icon.
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB basic icon.
@@ -41,7 +41,7 @@ class IconTwigExtension extends AbstractIconTwigExtension implements IconRendere
     }
 
     /**
-     * Displays an AdminBSB material design icon.
+     * Display an AdminBSB material design icon.
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB material design icon.

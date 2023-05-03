@@ -62,7 +62,7 @@ class MultiLevelMenuTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBMultiLevelMenuFunction()
+     * Test adminBSBMultiLevelMenuFunction()
      *
      * @return void
      */
@@ -76,7 +76,7 @@ class MultiLevelMenuTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFunctions()
+     * Test getFunctions()
      *
      * @return void
      */
@@ -94,7 +94,7 @@ class MultiLevelMenuTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

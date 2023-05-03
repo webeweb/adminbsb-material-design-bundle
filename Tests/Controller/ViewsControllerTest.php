@@ -39,7 +39,7 @@ class ViewsControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests Resources/views/assets/_javascripts.html.twig
+     * Test Resources/views/assets/_javascripts.html.twig
      *
      * @return void
      */
@@ -66,7 +66,7 @@ class ViewsControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests Resources/views/assets/_stylesheets.html.twig
+     * Test Resources/views/assets/_stylesheets.html.twig
      *
      * @return void
      */
@@ -80,7 +80,7 @@ class ViewsControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests blankAction()
+     * Test blankAction()
      *
      * @return void
      */
@@ -94,7 +94,7 @@ class ViewsControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests Resources/views/bundles/TwigBundle/Exception/error404.html.twig
+     * Test Resources/views/bundles/TwigBundle/Exception/error404.html.twig
      *
      * @return void
      */
@@ -115,7 +115,7 @@ class ViewsControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests Resources/views/bundles/TwigBundle/Exception/error404.html.twig
+     * Test Resources/views/bundles/TwigBundle/Exception/error404.html.twig
      *
      * @return void
      */

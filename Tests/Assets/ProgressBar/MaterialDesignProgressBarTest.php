@@ -23,7 +23,7 @@ use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 class MaterialDesignProgressBarTest extends AbstractTestCase {
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

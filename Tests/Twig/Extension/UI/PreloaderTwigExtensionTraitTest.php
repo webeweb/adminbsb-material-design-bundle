@@ -24,7 +24,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\PreloaderTwigExtension;
 class PreloaderTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests setPreloaderTwigExtension()
+     * Test setPreloaderTwigExtension()
      *
      * @return void
      */

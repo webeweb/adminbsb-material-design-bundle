@@ -25,7 +25,7 @@ use WBW\Bundle\CoreBundle\Config\ConfigurationHelper;
 class Configuration implements ConfigurationInterface {
 
     /**
-     * Enumerates the skins.
+     * Enumerate the skins.
      *
      * @return string[] Returns the skins enumeration.
      */

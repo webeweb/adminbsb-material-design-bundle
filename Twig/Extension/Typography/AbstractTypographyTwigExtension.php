@@ -23,7 +23,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension as Bas
 abstract class AbstractTypographyTwigExtension extends BaseTwigExtension {
 
     /**
-     * Displays an AdminBSB bold text.
+     * Display an AdminBSB bold text.
      *
      * @param string|null $content The content.
      * @return string Returns the AdminBSB bold text.
@@ -33,7 +33,7 @@ abstract class AbstractTypographyTwigExtension extends BaseTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB italic text.
+     * Display an AdminBSB italic text.
      *
      * @param string|null $content The content.
      * @return string Returns the AdminBSB italic text.
@@ -43,7 +43,7 @@ abstract class AbstractTypographyTwigExtension extends BaseTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB line through text.
+     * Display an AdminBSB line through text.
      *
      * @param string|null $content The content.
      * @return string Returns the AdminBSB line through text.
@@ -53,7 +53,7 @@ abstract class AbstractTypographyTwigExtension extends BaseTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB overlined text.
+     * Display an AdminBSB overlined text.
      *
      * @param string|null $content The content.
      * @return string Returns the AdminBSB overlined text.
@@ -63,7 +63,7 @@ abstract class AbstractTypographyTwigExtension extends BaseTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB underlined text.
+     * Display an AdminBSB underlined text.
      *
      * @param string|null $content The content.
      * @return string Returns the AdminBSB underlined text.

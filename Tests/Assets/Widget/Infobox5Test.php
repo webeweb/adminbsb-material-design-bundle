@@ -23,7 +23,7 @@ use WBW\Bundle\AdminBSBBundle\Tests\AbstractTestCase;
 class Infobox5Test extends AbstractTestCase {
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

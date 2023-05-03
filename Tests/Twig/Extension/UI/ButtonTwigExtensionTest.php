@@ -27,7 +27,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\ButtonTwigExtension;
 class ButtonTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests adminBSBButtonDangerFunction()
+     * Test adminBSBButtonDangerFunction()
      *
      * @return void
      */
@@ -42,7 +42,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBButtonDangerFunction()
+     * Test adminBSBButtonDangerFunction()
      *
      * @return void
      */
@@ -57,7 +57,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBButtonDefaultFunction()
+     * Test adminBSBButtonDefaultFunction()
      *
      * @return void
      */
@@ -72,7 +72,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBButtonDefaultFunction()
+     * Test adminBSBButtonDefaultFunction()
      *
      * @return void
      */
@@ -87,7 +87,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBButtonInfoFunction()
+     * Test adminBSBButtonInfoFunction()
      *
      * @return void
      */
@@ -102,7 +102,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBButtonInfoFunction()
+     * Test adminBSBButtonInfoFunction()
      *
      * @return void
      */
@@ -117,7 +117,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBButtonMaterialDesignFunction()
+     * Test adminBSBButtonMaterialDesignFunction()
      *
      * @return void
      */
@@ -132,7 +132,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBButtonMaterialDesignFunction()
+     * Test adminBSBButtonMaterialDesignFunction()
      *
      * @return void
      */
@@ -147,7 +147,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBButtonPrimaryFunction()
+     * Test adminBSBButtonPrimaryFunction()
      *
      * @return void
      */
@@ -162,7 +162,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBButtonPrimaryFunction()
+     * Test adminBSBButtonPrimaryFunction()
      *
      * @return void
      */
@@ -177,7 +177,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBButtonSuccessFunction()
+     * Test adminBSBButtonSuccessFunction()
      *
      * @return void
      */
@@ -192,7 +192,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBButtonSuccessFunction()
+     * Test adminBSBButtonSuccessFunction()
      *
      * @return void
      */
@@ -207,7 +207,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBButtonWarningFunction()
+     * Test adminBSBButtonWarningFunction()
      *
      * @return void
      */
@@ -222,7 +222,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBButtonSuccessFunction()
+     * Test adminBSBButtonSuccessFunction()
      *
      * @return void
      */
@@ -237,7 +237,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFilters()
+     * Test getFilters()
      *
      * @return void
      */
@@ -260,7 +260,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFunctions()
+     * Test getFunctions()
      *
      * @return void
      */
@@ -308,7 +308,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

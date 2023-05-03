@@ -24,7 +24,7 @@ use WBW\Library\Types\Helper\StringHelper;
 abstract class AbstractSwitchButtonTwigExtension extends AbstractTwigExtension {
 
     /**
-     * Displays an AdminBSB switch button.
+     * Display an AdminBSB switch button.
      *
      * @param string|null $offLabel The off label.
      * @param string|null $name The name.

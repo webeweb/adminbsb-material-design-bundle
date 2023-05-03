@@ -30,7 +30,7 @@ class InfoboxTwigExtension extends AbstractInfoboxTwigExtension {
     const SERVICE_NAME = "wbw.adminbsb.twig.extension.widget.infobox";
 
     /**
-     * Displays an AdminBSB infobox 1.
+     * Display an AdminBSB infobox 1.
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB infobox 1.
@@ -40,7 +40,7 @@ class InfoboxTwigExtension extends AbstractInfoboxTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB infobox 2.
+     * Display an AdminBSB infobox 2.
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB infobox 2.
@@ -50,7 +50,7 @@ class InfoboxTwigExtension extends AbstractInfoboxTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB infobox 3.
+     * Display an AdminBSB infobox 3.
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB infobox 3.
@@ -60,7 +60,7 @@ class InfoboxTwigExtension extends AbstractInfoboxTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB infobox 4.
+     * Display an AdminBSB infobox 4.
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB infobox 4.
@@ -70,7 +70,7 @@ class InfoboxTwigExtension extends AbstractInfoboxTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB infobox 5.
+     * Display an AdminBSB infobox 5.
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB infobox 5.

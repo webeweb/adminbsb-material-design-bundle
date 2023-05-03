@@ -30,7 +30,7 @@ class PreloaderTwigExtension extends AbstractPreloaderTwigExtension {
     const SERVICE_NAME = "wbw.adminbsb.twig.extension.ui.preloader";
 
     /**
-     * Displays an AdminBSB preloader "Material design" L.
+     * Display an AdminBSB preloader "Material design" L.
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB preloader "Material design" L.
@@ -40,7 +40,7 @@ class PreloaderTwigExtension extends AbstractPreloaderTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB preloader "Material design" S.
+     * Display an AdminBSB preloader "Material design" S.
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB preloader "Material design" S.
@@ -50,7 +50,7 @@ class PreloaderTwigExtension extends AbstractPreloaderTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB preloader "Material design" SM.
+     * Display an AdminBSB preloader "Material design" SM.
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB preloader "Material design" SM.
@@ -60,7 +60,7 @@ class PreloaderTwigExtension extends AbstractPreloaderTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB preloader "Material design" XL.
+     * Display an AdminBSB preloader "Material design" XL.
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB preloader "Material design" XL.
@@ -70,7 +70,7 @@ class PreloaderTwigExtension extends AbstractPreloaderTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB preloader "Material design" XS.
+     * Display an AdminBSB preloader "Material design" XS.
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB preloader "Material design" XS.

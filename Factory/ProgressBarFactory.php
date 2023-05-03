@@ -25,7 +25,7 @@ use WBW\Library\Types\Helper\ArrayHelper;
 class ProgressBarFactory extends BaseFactory {
 
     /**
-     * Creates a new Material Design progress bar.
+     * Create a new Material Design progress bar.
      *
      * @param string $color The color.
      * @return ProgressBarInterface Returns the Material Design progress bar.
@@ -35,7 +35,7 @@ class ProgressBarFactory extends BaseFactory {
     }
 
     /**
-     * Parses a Material Design progress bar.
+     * Parse a Material Design progress bar.
      *
      * @param array $args The arguments.
      * @return ProgressBarInterface Returns the Material Design progress bar.

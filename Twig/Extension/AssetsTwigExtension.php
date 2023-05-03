@@ -41,7 +41,7 @@ class AssetsTwigExtension extends BaseAssetsTwigExtension {
     }
 
     /**
-     * Displays an icon.
+     * Display an icon.
      *
      * @param string|null $name The name.
      * @param string|null $style The style.

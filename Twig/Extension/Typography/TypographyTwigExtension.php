@@ -31,7 +31,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
     const SERVICE_NAME = "wbw.adminbsb.twig.extension.typography";
 
     /**
-     * Displays an AdminBSB bold text.
+     * Display an AdminBSB bold text.
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB bold text.
@@ -41,7 +41,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB italic text.
+     * Display an AdminBSB italic text.
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB italic text.
@@ -51,7 +51,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB line through text.
+     * Display an AdminBSB line through text.
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB line through text.
@@ -61,7 +61,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB overlined text.
+     * Display an AdminBSB overlined text.
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB overlined text.
@@ -71,7 +71,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB underline text.
+     * Display an AdminBSB underline text.
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB underline text.

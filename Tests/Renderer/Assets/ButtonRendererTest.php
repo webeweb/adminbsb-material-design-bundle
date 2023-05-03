@@ -24,7 +24,7 @@ use WBW\Bundle\BootstrapBundle\Assets\Button\DefaultButton;
 class ButtonRendererTest extends AbstractTestCase {
 
     /**
-     * Tests renderCircle()
+     * Test renderCircle()
      *
      * @return void
      */
@@ -39,7 +39,7 @@ class ButtonRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderCircle()
+     * Test renderCircle()
      *
      * @return void
      */
@@ -54,7 +54,7 @@ class ButtonRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderCircle()
+     * Test renderCircle()
      *
      * @return void
      */

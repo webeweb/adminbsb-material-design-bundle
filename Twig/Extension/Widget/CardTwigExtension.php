@@ -30,7 +30,7 @@ class CardTwigExtension extends AbstractCardTwigExtension {
     const SERVICE_NAME = "wbw.adminbsb.twig.extension.widget.card";
 
     /**
-     * Displays an AdminBSB card header.
+     * Display an AdminBSB card header.
      *
      * @param array $args The arguments.
      * @return string Returns the AdminBSB card header.

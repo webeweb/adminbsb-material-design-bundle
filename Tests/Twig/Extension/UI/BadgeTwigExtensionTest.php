@@ -26,7 +26,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\BadgeTwigExtension;
 class BadgeTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests adminBSBButtonBadgeDangerFunction()
+     * Test adminBSBButtonBadgeDangerFunction()
      *
      * @return void
      */
@@ -41,7 +41,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBButtonBadgeDangerFunction()
+     * Test adminBSBButtonBadgeDangerFunction()
      *
      * @return void
      */
@@ -56,7 +56,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBButtonBadgeDefaultFunction()
+     * Test adminBSBButtonBadgeDefaultFunction()
      *
      * @return void
      */
@@ -71,7 +71,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBButtonBadgeDefaultFunction()
+     * Test adminBSBButtonBadgeDefaultFunction()
      *
      * @return void
      */
@@ -86,7 +86,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBButtonBadgeInfoFunction()
+     * Test adminBSBButtonBadgeInfoFunction()
      *
      * @return void
      */
@@ -101,7 +101,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBButtonBadgeInfoFunction()
+     * Test adminBSBButtonBadgeInfoFunction()
      *
      * @return void
      */
@@ -116,7 +116,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBButtonBadgeListFunction()
+     * Test adminBSBButtonBadgeListFunction()
      *
      * @return void
      */
@@ -131,7 +131,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBButtonBadgeListFunction()
+     * Test adminBSBButtonBadgeListFunction()
      *
      * @return void
      */
@@ -146,7 +146,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBButtonBadgeMaterialDesignFunction()
+     * Test adminBSBButtonBadgeMaterialDesignFunction()
      *
      * @return void
      */
@@ -161,7 +161,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBButtonBadgeMaterialDesignFunction()
+     * Test adminBSBButtonBadgeMaterialDesignFunction()
      *
      * @return void
      */
@@ -176,7 +176,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBButtonBadgePrimaryFunction()
+     * Test adminBSBButtonBadgePrimaryFunction()
      *
      * @return void
      */
@@ -191,7 +191,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBButtonBadgePrimaryFunction()
+     * Test adminBSBButtonBadgePrimaryFunction()
      *
      * @return void
      */
@@ -206,7 +206,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBButtonBadgeSuccessFunction()
+     * Test adminBSBButtonBadgeSuccessFunction()
      *
      * @return void
      */
@@ -221,7 +221,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBButtonBadgeSuccessFunction()
+     * Test adminBSBButtonBadgeSuccessFunction()
      *
      * @return void
      */
@@ -236,7 +236,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBButtonBadgeWarningFunction()
+     * Test adminBSBButtonBadgeWarningFunction()
      *
      * @return void
      */
@@ -251,7 +251,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBButtonBadgeWarningFunction()
+     * Test adminBSBButtonBadgeWarningFunction()
      *
      * @return void
      */
@@ -266,7 +266,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFunctions()
+     * Test getFunctions()
      *
      * @return void
      */
@@ -319,7 +319,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

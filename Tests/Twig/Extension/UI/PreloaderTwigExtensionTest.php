@@ -26,7 +26,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\UI\PreloaderTwigExtension;
 class PreloaderTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests adminBSBPreloaderMaterialDesignLFunction()
+     * Test adminBSBPreloaderMaterialDesignLFunction()
      *
      * @return void
      */
@@ -41,7 +41,7 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBPreloaderMaterialDesignLFunction()
+     * Test adminBSBPreloaderMaterialDesignLFunction()
      *
      * @return void
      */
@@ -56,7 +56,7 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBPreloaderMaterialDesignSFunction()
+     * Test adminBSBPreloaderMaterialDesignSFunction()
      *
      * @return void
      */
@@ -71,7 +71,7 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBPreloaderMaterialDesignSFunction()
+     * Test adminBSBPreloaderMaterialDesignSFunction()
      *
      * @return void
      */
@@ -86,7 +86,7 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBPreloaderMaterialDesignSMFunction()
+     * Test adminBSBPreloaderMaterialDesignSMFunction()
      *
      * @return void
      */
@@ -101,7 +101,7 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBPreloaderMaterialDesignSMFunction()
+     * Test adminBSBPreloaderMaterialDesignSMFunction()
      *
      * @return void
      */
@@ -116,7 +116,7 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBPreloaderMaterialDesignXLFunction()
+     * Test adminBSBPreloaderMaterialDesignXLFunction()
      *
      * @return void
      */
@@ -131,7 +131,7 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBPreloaderMaterialDesignXLFunction()
+     * Test adminBSBPreloaderMaterialDesignXLFunction()
      *
      * @return void
      */
@@ -146,7 +146,7 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBPreloaderMaterialDesignXSFunction()
+     * Test adminBSBPreloaderMaterialDesignXSFunction()
      *
      * @return void
      */
@@ -161,7 +161,7 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBPreloaderMaterialDesignXSFunction()
+     * Test adminBSBPreloaderMaterialDesignXSFunction()
      *
      * @return void
      */
@@ -176,7 +176,7 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFunctions()
+     * Test getFunctions()
      *
      * @return void
      */
@@ -214,7 +214,7 @@ class PreloaderTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

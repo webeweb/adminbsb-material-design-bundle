@@ -25,7 +25,7 @@ use WBW\Library\Types\Helper\ArrayHelper;
 class ButtonFactory extends BaseFactory {
 
     /**
-     * Creates a Material Design button.
+     * Create a Material Design button.
      *
      * @param string $color The color.
      * @return ButtonInterface Returns the Material Design button.
@@ -35,7 +35,7 @@ class ButtonFactory extends BaseFactory {
     }
 
     /**
-     * Parses a Material Design button.
+     * Parse a Material Design button.
      *
      * @param array $args The arguments.
      * @return ButtonInterface Returns the Material Design button.

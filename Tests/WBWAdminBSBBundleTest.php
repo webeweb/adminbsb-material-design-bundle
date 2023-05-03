@@ -25,7 +25,7 @@ use WBW\Library\Symfony\Helper\AssetsHelper;
 class WBWAdminBSBBundleTest extends AbstractTestCase {
 
     /**
-     * Tests getAssetsRelativeDirectory()
+     * Test getAssetsRelativeDirectory()
      *
      * @retrun void
      */
@@ -37,7 +37,7 @@ class WBWAdminBSBBundleTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getContainerExtension()
+     * Test getContainerExtension()
      *
      * @return void
      */
@@ -49,7 +49,7 @@ class WBWAdminBSBBundleTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getSkeletonRelativeDirectory()
+     * Test getSkeletonRelativeDirectory()
      *
      * @return void
      */
@@ -62,7 +62,7 @@ class WBWAdminBSBBundleTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getTranslationDomain()
+     * Test getTranslationDomain()
      *
      * @return void
      */
@@ -72,7 +72,7 @@ class WBWAdminBSBBundleTest extends AbstractTestCase {
     }
 
     /**
-     * Tests listAssets()
+     * Test listAssets()
      *
      * @return void
      */
@@ -130,7 +130,7 @@ class WBWAdminBSBBundleTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

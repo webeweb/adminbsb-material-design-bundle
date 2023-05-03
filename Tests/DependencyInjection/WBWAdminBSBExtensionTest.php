@@ -63,7 +63,7 @@ class WBWAdminBSBExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getAlias()
+     * Test getAlias()
      *
      * @return void
      */
@@ -75,7 +75,7 @@ class WBWAdminBSBExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getConfiguration()
+     * Test getConfiguration()
      *
      * @return void
      */
@@ -87,7 +87,7 @@ class WBWAdminBSBExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests load()
+     * Test load()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -136,7 +136,7 @@ class WBWAdminBSBExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests load()
+     * Test load()
      *
      * @return void
      */
@@ -160,7 +160,7 @@ class WBWAdminBSBExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests load()
+     * Test load()
      *
      * @return void
      */
@@ -184,7 +184,7 @@ class WBWAdminBSBExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

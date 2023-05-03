@@ -26,7 +26,7 @@ use WBW\Bundle\AdminBSBBundle\Twig\Extension\Widget\InfoboxTwigExtension;
 class InfoboxTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests adminBSBInfobox1Function()
+     * Test adminBSBInfobox1Function()
      *
      * @return void
      */
@@ -41,7 +41,7 @@ class InfoboxTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBInfobox2Function()
+     * Test adminBSBInfobox2Function()
      *
      * @return void
      */
@@ -56,7 +56,7 @@ class InfoboxTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBInfobox3Function()
+     * Test adminBSBInfobox3Function()
      *
      * @return void
      */
@@ -71,7 +71,7 @@ class InfoboxTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBInfobox4Function()
+     * Test adminBSBInfobox4Function()
      *
      * @return void
      */
@@ -86,7 +86,7 @@ class InfoboxTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests adminBSBInfobox5Function()
+     * Test adminBSBInfobox5Function()
      *
      * @return void
      */
@@ -106,7 +106,7 @@ class InfoboxTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFunctions()
+     * Test getFunctions()
      *
      * @return void
      */
@@ -144,7 +144,7 @@ class InfoboxTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

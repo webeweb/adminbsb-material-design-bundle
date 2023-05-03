@@ -41,7 +41,7 @@ abstract class AbstractCardTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays an AdminBSB card header.
+     * Display an AdminBSB card header.
      *
      * @param string $content The content.
      * @param string|null $description The description.
