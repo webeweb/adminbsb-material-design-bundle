@@ -38,7 +38,7 @@ class MultiLevelMenuTwigExtensionTest extends AbstractTestCase {
     private $navigationTree;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp(): void {
         parent::setUp();

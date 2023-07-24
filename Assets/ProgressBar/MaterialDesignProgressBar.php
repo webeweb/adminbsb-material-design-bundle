@@ -31,7 +31,7 @@ class MaterialDesignProgressBar extends AbstractProgressBar {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getPrefix(): string {
         return "bg-";

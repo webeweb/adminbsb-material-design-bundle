@@ -34,7 +34,7 @@ class ModalTwigExtensionTest extends AbstractTestCase {
     private $typographyTwigExtension;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp(): void {
         parent::setUp();

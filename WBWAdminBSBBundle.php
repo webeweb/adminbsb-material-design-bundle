@@ -33,21 +33,21 @@ class WBWAdminBSBBundle extends Bundle implements AssetsProviderInterface, Skele
     const TRANSLATION_DOMAIN = "WBWAdminBSBBundle";
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getAssetsRelativeDirectory(): string {
         return self::ASSETS_RELATIVE_DIRECTORY;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getContainerExtension(): Extension {
         return new WBWAdminBSBExtension();
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getSkeletonRelativeDirectory(): string {
         return self::SKELETON_RELATIVE_DIRECTORY;

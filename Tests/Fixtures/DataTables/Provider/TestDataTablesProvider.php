@@ -23,56 +23,56 @@ use WBW\Bundle\JQuery\DataTablesBundle\Api\DataTablesColumnInterface;
 class TestDataTablesProvider extends AbstractDataTablesProvider {
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function alignRight(?string $content): string {
         return parent::alignRight($content);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getColumns(): array {
         return [];
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getEntity() {
         return null;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getName(): string {
         return "test";
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getPrefix(): string {
         return "t";
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getView(): ?string {
         return null;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function putItalic(?string $content): string {
         return parent::putItalic($content);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function renderColumn(DataTablesColumnInterface $dtColumn, $entity): ?string {
         return null;

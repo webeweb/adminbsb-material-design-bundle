@@ -52,14 +52,14 @@ class AssetsTwigExtension extends BaseAssetsTwigExtension {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getFilters(): array {
         return [];
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getFunctions(): array {
 
@@ -69,7 +69,7 @@ class AssetsTwigExtension extends BaseAssetsTwigExtension {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public static function renderIcon(Environment $twigEnvironment, ?string $name, string $style = null): ?string {
 

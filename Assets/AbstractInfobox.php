@@ -92,70 +92,70 @@ abstract class AbstractInfobox implements InfoboxInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getClass(): ?string {
         return $this->class;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getColor(): ?string {
         return $this->color;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getContentNumber(): ?string {
         return $this->contentNumber;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getContentText(): ?string {
         return $this->contentText;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getCountTo(): ?array {
         return $this->countTo;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getHoverExpandEffect(): ?bool {
         return $this->hoverExpandEffect;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getHoverZoomEffect(): ?bool {
         return $this->hoverZoomEffect;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getIconColor(): ?string {
         return $this->iconColor;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getIconName(): ?string {
         return $this->iconName;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setClass(?string $class): InfoboxInterface {
         $this->class = $class;
@@ -163,7 +163,7 @@ abstract class AbstractInfobox implements InfoboxInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setColor(?string $color): InfoboxInterface {
         $this->color = $color;
@@ -171,7 +171,7 @@ abstract class AbstractInfobox implements InfoboxInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setContentNumber(?string $contentNumber): InfoboxInterface {
         $this->contentNumber = $contentNumber;
@@ -179,7 +179,7 @@ abstract class AbstractInfobox implements InfoboxInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setContentText(?string $contentText): InfoboxInterface {
         $this->contentText = $contentText;
@@ -187,7 +187,7 @@ abstract class AbstractInfobox implements InfoboxInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setCountTo(?array $countTo): InfoboxInterface {
         $this->countTo = $countTo;
@@ -195,7 +195,7 @@ abstract class AbstractInfobox implements InfoboxInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setHoverExpandEffect(?bool $hoverExpandEffect): InfoboxInterface {
         $this->hoverExpandEffect = $hoverExpandEffect;
@@ -203,7 +203,7 @@ abstract class AbstractInfobox implements InfoboxInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setHoverZoomEffect(?bool $hoverZoomEffect): InfoboxInterface {
         $this->hoverZoomEffect = $hoverZoomEffect;
@@ -211,7 +211,7 @@ abstract class AbstractInfobox implements InfoboxInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setIconColor(?string $iconColor): InfoboxInterface {
         $this->iconColor = $iconColor;
@@ -219,7 +219,7 @@ abstract class AbstractInfobox implements InfoboxInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setIconName(?string $iconName): InfoboxInterface {
         $this->iconName = $iconName;

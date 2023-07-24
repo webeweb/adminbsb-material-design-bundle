@@ -25,7 +25,7 @@ use WBW\Bundle\CoreBundle\Helper\SkeletonHelper;
 class ViewsControllerTest extends AbstractWebTestCase {
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public static function setUpBeforeClass(): void {
         parent::setUpBeforeClass();

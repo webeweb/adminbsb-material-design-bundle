@@ -49,7 +49,7 @@ class WBWAdminBSBExtensionTest extends AbstractTestCase {
     private $configs;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp(): void {
         parent::setUp();

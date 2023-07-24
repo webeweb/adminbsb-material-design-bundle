@@ -31,7 +31,7 @@ class MaterialDesignButton extends AbstractButton {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getPrefix(): string {
         return "bg-";
