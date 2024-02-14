@@ -1,12 +1,13 @@
 adminbsb-material-design-bundle
 ===============================
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/webeweb/adminbsb-material-design-bundle/build.yml?style=flat-square)](https://github.com/webeweb/adminbsb-material-design-bundle/actions)
-[![Coverage Status](https://img.shields.io/coveralls/github/webeweb/adminbsb-material-design-bundle/master.svg?style=flat-square)](https://coveralls.io/github/webeweb/adminbsb-material-design-bundle?branch=master)
-[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/quality/g/webeweb/adminbsb-material-design-bundle/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/webeweb/adminbsb-material-design-bundle/?branch=master)
-[![Latest Stable Version](https://img.shields.io/packagist/v/webeweb/adminbsb-material-design-bundle.svg?style=flat-square)](https://packagist.org/packages/webeweb/adminbsb-material-design-bundle)
-[![License](https://img.shields.io/packagist/l/webeweb/adminbsb-material-design-bundle.svg?style=flat-square)](https://packagist.org/packages/webeweb/adminbsb-material-design-bundle)
-[![composer.lock](https://img.shields.io/badge/.lock-uncommited-important.svg?style=flat-square)](https://packagist.org/packages/webeweb/adminbsb-material-design-bundle)
+[![Github actions workflow status](https://img.shields.io/github/actions/workflow/status/webeweb/adminbsb-material-design-bundle/build.yml?style=for-the-badge&color2088FF&logo=github)](https://github.com/webeweb/adminbsb-material-design-bundle/actions)
+[![Coveralls](https://img.shields.io/coveralls/github/webeweb/adminbsb-material-design-bundle/master.svg?style=for-the-badge&color=3F5767&logo=coveralls)](https://coveralls.io/github/webeweb/adminbsb-material-design-bundle?branch=master)
+[![Scrutinizer quality](https://img.shields.io/scrutinizer/quality/g/webeweb/adminbsb-material-design-bundle/master.svg?style=for-the-badge&color=8A9296&logo=scrutinizer)](https://scrutinizer-ci.com/g/webeweb/adminbsb-material-design-bundle/?branch=master)
+[![Packagist version](https://img.shields.io/packagist/v/webeweb/adminbsb-material-design-bundle.svg?style=for-the-badge&color=F28D1A&logo=packagist)](https://packagist.org/packages/webeweb/adminbsb-material-design-bundle)
+
+![Packagist license](https://img.shields.io/packagist/l/webeweb/adminbsb-material-design-bundle.svg?style=for-the-badge&colorF28D1A&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGRiIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIgZD0ibTMgNiAzIDFtMCAwLTMgOWE1LjAwMiA1LjAwMiAwIDAgMCA2LjAwMSAwTTYgN2wzIDlNNiA3bDYtMm02IDIgMy0xbS0zIDEtMyA5YTUuMDAyIDUuMDAyIDAgMCAwIDYuMDAxIDBNMTggN2wzIDltLTMtOS02LTJtMC0ydjJtMCAxNlY1bTAgMTZIOW0zIDBoMyIvPjwvc3ZnPg==)
+![composer.lock](https://img.shields.io/badge/.lock-uncommited-important.svg?style=for-the-badge&color=885630&logo=composer)
 
 Integrate AdminBSB Material Design theme with Symfony 4 and more.
 
@@ -23,7 +24,7 @@ It's really easy to customize and usage. You can use for from 320px to large
 resolution pixels of new generation screens and mobile devices. (Fully Responsive
 Material Design)
 
-[![Preview AdminBSB Material Design](https://img.shields.io/badge/live%20preview-AdminBSB%20Material%20Design-blue.svg?style=flat-square)](https://gurayyarar.github.io/AdminBSBMaterialDesign/)
+[![Preview AdminBSB Material Design](https://img.shields.io/badge/live%20preview-AdminBSB%20Material%20Design-blue.svg?style=for-the-badge&color=FF7139&logo=firefoxbrowser)](https://gurayyarar.github.io/AdminBSBMaterialDesign/)
 
 <img src="https://raw.githubusercontent.com/webeweb/adminbsb-material-design-bundle/master/Resources/doc/screenshot_promo.png" alt="AdminBSB Material Design bundle" align="right" />
 
@@ -73,12 +74,12 @@ Includes:
 - [Waves 0.7.5](https://github.com/fians/Waves)
 
 If you like this package, pay me a beer (or a coffee)
-[![paypal.me](https://img.shields.io/badge/paypal.me-webeweb-0070ba.svg?style=flat-square&logo=paypal)](https://www.paypal.me/webeweb)
+[![paypal.me](https://img.shields.io/badge/paypal.me-webeweb-003087.svg?style=flat-square&logo=paypal)](https://www.paypal.me/webeweb)
 
 ## Compatibility
 
-[![PHP](https://img.shields.io/badge/php-%5E7.1%7C%5E8.0-blue.svg?style=flat-square)](http://php.net)
-[![Symfony](https://img.shields.io/badge/symfony-%5E4.4%7C%5E5.0%7C%5E6.0-brightness.svg?style=flat-square)](https://symfony.com)
+[![PHP](https://img.shields.io/badge/php-%5E7.1%7C%5E8.0-777BB4.svg?style=for-the-badge&logo=php)](https://php.net)
+[![Symfony](https://img.shields.io/badge/symfony-%5E4.4%7C%5E5.0%7C%5E6.0-000000.svg?style=for-the-badge&logo=symfony)](https://symfony.com)
 
 ## Installation
 
@@ -144,4 +145,4 @@ $ vendor/bin/phpunit
 ## Donate
 
 If you like this work, please consider donating at
-[![paypal.me](https://img.shields.io/badge/paypal.me-webeweb-0070ba.svg?style=flat-square&logo=paypal)](https://www.paypal.me/webeweb)
+[![paypal.me](https://img.shields.io/badge/paypal.me-webeweb-003087.svg?style=flat-square&logo=paypal)](https://www.paypal.me/webeweb)
