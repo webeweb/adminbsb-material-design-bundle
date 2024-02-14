@@ -1,6 +1,8 @@
 adminbsb-material-design-bundle
 ===============================
 
+<div style="text-align: center;">
+
 [![Github actions workflow status](https://img.shields.io/github/actions/workflow/status/webeweb/adminbsb-material-design-bundle/build.yml?style=for-the-badge&color2088FF&logo=github)](https://github.com/webeweb/adminbsb-material-design-bundle/actions)
 [![Coveralls](https://img.shields.io/coveralls/github/webeweb/adminbsb-material-design-bundle/master.svg?style=for-the-badge&color=3F5767&logo=coveralls)](https://coveralls.io/github/webeweb/adminbsb-material-design-bundle?branch=master)
 [![Scrutinizer quality](https://img.shields.io/scrutinizer/quality/g/webeweb/adminbsb-material-design-bundle/master.svg?style=for-the-badge&color=8A9296&logo=scrutinizer)](https://scrutinizer-ci.com/g/webeweb/adminbsb-material-design-bundle/?branch=master)
@@ -8,6 +10,8 @@ adminbsb-material-design-bundle
 
 ![Packagist license](https://img.shields.io/packagist/l/webeweb/adminbsb-material-design-bundle.svg?style=for-the-badge&colorF28D1A&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGRiIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIgZD0ibTMgNiAzIDFtMCAwLTMgOWE1LjAwMiA1LjAwMiAwIDAgMCA2LjAwMSAwTTYgN2wzIDlNNiA3bDYtMm02IDIgMy0xbS0zIDEtMyA5YTUuMDAyIDUuMDAyIDAgMCAwIDYuMDAxIDBNMTggN2wzIDltLTMtOS02LTJtMC0ydjJtMCAxNlY1bTAgMTZIOW0zIDBoMyIvPjwvc3ZnPg==)
 ![composer.lock](https://img.shields.io/badge/.lock-uncommited-important.svg?style=for-the-badge&color=885630&logo=composer)
+
+</div>
 
 Integrate AdminBSB Material Design theme with Symfony 4 and more.
 
